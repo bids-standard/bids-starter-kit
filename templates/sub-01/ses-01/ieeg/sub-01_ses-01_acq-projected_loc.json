@@ -1,0 +1,10 @@
+{
+    "iEEGCoordinateSystem": "mri",
+    "iEEGCoordinateUnits": "mm",
+    "iEEGCoordinateProcessingDescripton": "surface_projection",
+    "IndendedFor": "/anat/sub-01_T1w_pial.R.surf.gii",
+    "AssociatedImageCoordinateSystem": "native-acpc",
+    "AssociatedImageCoordinateUnits": "mm",
+    "AssociatedImageCoordinateSystemDescription": "n/a",
+    "iEEGCoordinateProcessingReference": "Hermes et al., 2010 JNeuroMeth"
+}
