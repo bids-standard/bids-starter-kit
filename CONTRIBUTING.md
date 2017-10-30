@@ -57,7 +57,7 @@ A member of the development team will review your changes to confirm that they c
 
 ## Recognizing contributions
 
-BIDS follows the [all-contributors](https://github.com/kentcdodds/all-contributors#emoji-key) specification, so we welcome and recognize all contributions from documentation to testing to code development.
+BIDS follows the [all-contributors](https://github.com/kentcdodds/all-contributors#emoji-key) specification, so we welcome and recognize all contributions from documentation to testing to code development. You can see a list of current contributors in the [BIDS specification](https://docs.google.com/document/d/1HFUkAEE-pB-angVcYe6pf_-fVf4sCpOHKesUvfb8Grc/edit#heading=h.hds2i7ii7hjo)
 
 
 ## Thank you!
