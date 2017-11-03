@@ -7,7 +7,7 @@
 clear all
 
 root_dir = '.';
-project_label = 'template';
+project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
 task_label = 'Case1';
@@ -23,8 +23,8 @@ fmap_json_name = fullfile(root_dir,project_label,[ 'sub-' sub_label ],...
     '_task-' task_label ...
     '_run-' run_label '_phasediff.json']);
 
-fmap_json.EchoTime1 = ''; 
-fmap_json.EchoTime2 = ''; 
+fmap_json.EchoTime1 = []; 
+fmap_json.EchoTime2 = []; 
 fmap_json.IntendedFor = ''; % Fieldmap data are linked to a specific scan(s) it was acquired for by filling the IntendedFor field. The IntendedFor field may contain one or more filenames with paths relative to the subject subfolder. The pathneeds to use forward slashes instead of backward slashes.
 
 json_options.indent = '    '; % this just makes the json file look prettier when opened in a text editor
@@ -40,7 +40,7 @@ jsonwrite(fmap_json_name,fmap_json,json_options)
 clear all
 
 root_dir = '.';
-project_label = 'template';
+project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
 task_label = 'Case2';
@@ -61,10 +61,10 @@ fmap2_json_name = fullfile(root_dir,project_label,[ 'sub-' sub_label ],...
     '_task-' task_label ...
     '_run-' run_label '_phase2.json']);
 
-fmap1_json.EchoTime = ''; 
+fmap1_json.EchoTime = []; 
 fmap1_json.IntendedFor = ''; 
 
-fmap2_json.EchoTime = ''; 
+fmap2_json.EchoTime = []; 
 fmap2_json.IntendedFor = ''; 
 
 jsonSaveDir = fileparts(fmap1_json_name);
@@ -81,7 +81,7 @@ jsonwrite(fmap2_json_name,fmap2_json,json_options)
 
 clear all
 root_dir = '.';
-project_label = 'template';
+project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
 task_label = 'Case3';
@@ -111,7 +111,7 @@ jsonwrite(fmap_json_name,fmap_json,json_options)
 
 clear all
 root_dir = '.';
-project_label = 'template';
+project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
 task_label = 'Case4';
@@ -129,7 +129,7 @@ fmap_json_name = fullfile(root_dir,project_label,[ 'sub-' sub_label ],...
     '_run-' run_label '_epi.json']);
 
 fmap_json.PhaseEncodingDirection = ''; % This technique combines two or more Spin Echo EPI scans with different phase encoding directions. In such a case, the phase encoding direction is specified in the corresponding JSON file as one of: ?i?, ?j?, ?k?, ?i-?, ?j-, ?k-?
-fmap_json.TotalReadoutTime = ''; % For these differentially phase encoded sequences, one also needs to specify the Total Readout Time defined as the time (in seconds) from the center of the first echo to the center of the last echo
+fmap_json.TotalReadoutTime = []; % For these differentially phase encoded sequences, one also needs to specify the Total Readout Time defined as the time (in seconds) from the center of the first echo to the center of the last echo
 fmap_json.IntendedFor = ''; % Fieldmap data are linked to a specific scan(s) it was acquired for by filling the IntendedFor field. The IntendedFor field may contain one or more filenames with paths relative to the subject subfolder. The pathneeds to use forward slashes instead of backward slashes.
 
 jsonSaveDir = fileparts(fmap_json_name);
