@@ -6,7 +6,7 @@
 
 %%
 clear all
-root_dir = '.';
+root_dir = '../';
 project_label = 'templates';
 
 participants_tsv_name = fullfile(root_dir,project_label,...
@@ -14,9 +14,9 @@ participants_tsv_name = fullfile(root_dir,project_label,...
 
 %% make a participants table and save 
 
-participant_id = {'sub-01';'sub-02'}; % onsets in seconds
-age = [40 50]';
-sex = {'m';'f'}; 
+participant_id = {'sub-01'}; % onsets in seconds
+age = [0]';
+sex = {'m'}; 
 
 t = table(participant_id,age,sex);
 

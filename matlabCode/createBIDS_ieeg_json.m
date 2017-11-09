@@ -7,7 +7,7 @@
 
 clear all
 
-root_dir = '.';
+root_dir = '../';
 ieeg_project = 'templates';
 ieeg_sub = '01';
 ieeg_ses = '01';
@@ -29,7 +29,7 @@ ieeg_json_name = fullfile(root_dir,ieeg_project,[ 'sub-' ieeg_sub ],...
 % General fields, shared with MRI BIDS and MEG BIDS:
 % Required fields:
 ieeg_json.TaskName = ''; % Name of the task (for resting state use the ?rest? prefix). No two tasks should have the same name. Task label is derived from this field by removing all non alphanumeric ([a-zA-Z0-9]) characters. 
-ieeg_json.SamplingFrequency = []; %  Sampling frequency (in Hz) of the recording (e.g. 2400Hz)
+ieeg_json.SamplingFrequency = ''; %  Sampling frequency (in Hz) of the recording (e.g. 2400Hz)
 ieeg_json.Manufacturer = ''; % Manufacturer of the amplifier system  (e.g. "TDT, blackrock")
 % Optional fields:
 ieeg_json.ManufacturersModelName = ''; % Manufacturer?s designation of the iEEG amplifier model (e.g. "TDT"). 
@@ -43,27 +43,27 @@ ieeg_json.DeviceSerialNumber = ''; % The serial number of the equipment that pro
 
 % General fields, shared with MEG BIDS:
 % Required fields:
-ieeg_json.EEGChannelCount = 0; % Number of EEG channels included in the recording (e.g. 0)  
-ieeg_json.EOGChannelCount = 0; % Number of EOG channels included in the recording (e.g. 1)
-ieeg_json.ECGChannelCount = 0; % Number of ECG channels included in the recording (e.g. 1)
-ieeg_json.EMGChannelCount = 0; % Number of EMG channels included in the recording (e.g. 1)
-ieeg_json.MiscChannelCount = 0; % Number of miscellaneous channels included in the recording (e.g. 1)
-ieeg_json.TriggerChannelCount = 0; % Number of channels for digital (TTL bit level) triggers (e.g. 0) 
-ieeg_json.PowerLineFrequency = 60; % Frequency (in Hz) of the power grid where the iEEG recording was done (i.e. 50 or 60) 
+ieeg_json.EEGChannelCount = ''; % Number of EEG channels included in the recording (e.g. 0)  
+ieeg_json.EOGChannelCount = ''; % Number of EOG channels included in the recording (e.g. 1)
+ieeg_json.ECGChannelCount = ''; % Number of ECG channels included in the recording (e.g. 1)
+ieeg_json.EMGChannelCount = ''; % Number of EMG channels included in the recording (e.g. 1)
+ieeg_json.MiscChannelCount = ''; % Number of miscellaneous channels included in the recording (e.g. 1)
+ieeg_json.TriggerChannelCount = ''; % Number of channels for digital (TTL bit level) triggers (e.g. 0) 
+ieeg_json.PowerLineFrequency = ''; % Frequency (in Hz) of the power grid where the iEEG recording was done (i.e. 50 or 60) 
 % Optional fields:
 ieeg_json.SoftwareFilters = ''; % It is recommended to store the unprocessed data. However, if minimal software filtering is done, a list of temporal and/or spatial software filters applied can be listed here. Ideally  key:value pairs of pre-applied software filters and their parameter values (e.g. {"downsample": {"original samplingfrequency": "3050", "new sampling frequency": 1000}}, {"rereference": {"common average reference": channels 1:120}}) 
-ieeg_json.RecordingDuration = []; % Length of the recording in seconds (e.g. 3600)
-ieeg_json.RecordingType = 'continuous'; %  ?continuous?, ?epoched? 
-ieeg_json.EpochLength = 'Inf'; % Duration of individual epochs in seconds (e.g. 1). If recording was continuous, set value to ?Inf?.
+ieeg_json.RecordingDuration = ''; % Length of the recording in seconds (e.g. 3600)
+ieeg_json.RecordingType = ''; %  ?continuous?, ?epoched? 
+ieeg_json.EpochLength = ''; % Duration of individual epochs in seconds (e.g. 1). If recording was continuous, set value to ?Inf?.
 ieeg_json.DeviceSoftwareVersion = ''; % Manufacturer?s designation of the acquisition software.
 ieeg_json.SubjectArtefactDescription = ''; % Freeform description of the observed subject artefact and its possible cause (e.g. ?door open?, ?nurse walked into room at 2 min?, "Vagus Nerve Stimulator", ?non-removable implant?, ?seizure at 10 min?). If this field is left empty, it will be interpreted as absence of artifacts.
 
 % Specific iEEG fields:
 % Required fields:
-ieeg_json.iEEGSurfChannelCount = []; % Number of iEEG surface channels included in the recording (e.g. 120) 
-ieeg_json.iEEGDepthChannelCount = []; % Number of iEEG depth channels included in the recording (e.g. 8) 
+ieeg_json.iEEGSurfChannelCount = ''; % Number of iEEG surface channels included in the recording (e.g. 120) 
+ieeg_json.iEEGDepthChannelCount = ''; % Number of iEEG depth channels included in the recording (e.g. 8) 
 ieeg_json.ChannelUnits = ''; % Units of recording, this should be either microVolt or otherUnits (one of: ?microVolt? or ?otherUnits?)
-ieeg_json.UnitsToMicroVoltFactor = []; % Units to convert recording to microVolt (e.g. ?1? if already in microVolt) 
+ieeg_json.UnitsToMicroVoltFactor = ''; % Units to convert recording to microVolt (e.g. ?1? if already in microVolt) 
 ieeg_json.iEEGReference = ''; % iEEG reference channel (e.g. "left mastoid?, ?CAR?, "bipolar",  ?21? for channel 21, ?intracranial electrode, not included with data?), specific reference scheme is specified below. 
 ieeg_json.HardwareFilters = ''; % List of temporal hardware filters applied in Hz (e.g. 0.01 - 300Hz)
 ieeg_json.iEEGSurfChannelManufacturer = ''; % Manufacturer of the iEEG surface electrodes (e.g. AdTech) 
