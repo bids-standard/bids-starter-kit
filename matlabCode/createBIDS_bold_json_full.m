@@ -6,7 +6,7 @@
 
 %%
 
-root_dir = '.';
+root_dir = '../';
 project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
@@ -17,7 +17,7 @@ run_label = '01';
 
 bold_json_name = fullfile(root_dir,project_label,[ 'sub-' sub_label ],...
     ['ses-' ses_label],...
-    'fmri',...
+    'func',...
     ['sub-' sub_label ...
     '_ses-' ses_label ...
     '_task-' task_label ...
@@ -44,24 +44,24 @@ bold_json.CoilCombinationMethod = '';%  Almost all fMRI studies using phased-arr
 
 bold_json.PulseSequenceType = '';% A general description of the pulse sequence used for the scan (i.e. MPRAGE, Gradient Echo EPI, Spin Echo EPI, Multiband gradient echo EPI). 
 bold_json.PulseSequenceDetails = '';% Information beyond pulse sequence type that identifies the specific pulse sequence used (I.e. "Standard Siemens Sequence distributed with the VB17 software,? ?Siemens WIP ### version #.##,? or ?Sequence written by X using a version compiled on MM/DD/YYYY?).
-bold_json.NumberShots = [];% The number of RF excitations need to reconstruct a slice or volume. Please mind that this is not the same as Echo Train Length which denotes the number of lines of k-space collected after an excitation.
+bold_json.NumberShots = '';% The number of RF excitations need to reconstruct a slice or volume. Please mind that this is not the same as Echo Train Length which denotes the number of lines of k-space collected after an excitation.
 bold_json.ParallelReductionFactorInPlane = '';% The parallel imaging (e.g, GRAPPA) factor. Use the denominator of the fraction of k-space encoded for each slice. For example, 2 means half of k-space is encoded. Corresponds to DICOM Tag 0018, 9069 ?Parallel Reduction Factor In-plane?.
 bold_json.ParallelAcquisitionTechnique = '';% The type of parallel imaging used (e.g. GRAPPA, SENSE). Corresponds to DICOM Tag 0018, 9078 ?Parallel Acquisition Technique?.
 bold_json.PartialFourier = '';% The fraction of partial Fourier information collected. Corresponds to DICOM Tag 0018, 9081 ?Partial Fourier?.
 bold_json.PartialFourierDirection = '';%The direction where only partial Fourier information was collected. Corresponds to DICOM Tag 0018, 9036 ?Partial Fourier Direction?. 
 bold_json.PhaseEncodingDirection  = '';% Possible values: ?i?, ?j?, ?k?, ?i-?, ?j-?, ?k-?. The letters ?i?, ?j?, ?k? correspond to the first, second and third axis of the data in the NIFTI file. The polarity of the phase encoding is assumed to go from zero index to maximum index unless ?-? sign is present (then the order is reversed - starting from the highest index instead of zero). PhaseEncodingDirection is defined as the direction along which phase is was modulated which may result in visible distortions. Note that this is not the same as the DICOM term InPlanePhaseEncodingDirection which can have ?ROW? or ?COL? values. This parameter is required if a corresponding fieldmap data is present or when using multiple runs with different phase encoding directions (which can be later used for field inhomogeneity correction).
-bold_json.EffectiveEchoSpacing  = [];% The sampling interval also known as the dwell time; required for unwarping distortions using field maps; expressed in seconds. See here how to calculate it. This parameter is required if a corresponding fieldmap data is present.
-bold_json.TotalReadoutTime  = []; % defined as the time ( in seconds ) from the center of the first echo to the center of the last echo (aka ?FSL definition? - see here and here how to calculate it). This parameter is required if a corresponding multiple phase encoding directions fieldmap (see 8.9.4) data is present.
+bold_json.EffectiveEchoSpacing  = '';% The sampling interval also known as the dwell time; required for unwarping distortions using field maps; expressed in seconds. See here how to calculate it. This parameter is required if a corresponding fieldmap data is present.
+bold_json.TotalReadoutTime  = ''; % defined as the time ( in seconds ) from the center of the first echo to the center of the last echo (aka ?FSL definition? - see here and here how to calculate it). This parameter is required if a corresponding multiple phase encoding directions fieldmap (see 8.9.4) data is present.
 
-bold_json.EchoTime = [];% The echo time (TE) for the acquisition, specified in seconds. This parameter is required if a corresponding fieldmap data is present or the data comes from a multi echo sequence. Corresponds to DICOM Tag 0018, 0081 ?Echo Time?.
-bold_json.InversionTime = [];% The inversion time (TI) for the acquisition, specified in seconds. Inversion time is the time after the middle of inverting RF pulse to middle of excitation pulse to detect the amount of longitudinal magnetization. Corresponds to DICOM Tag 0018, 0082 ?Inversion Time?.
-bold_json.SliceTiming = [];% The time at which each slice was acquired during the acquisition. Slice timing is not slice order - it describes the time (sec) of each slice acquisition in relation to the beginning of volume acquisition. It is described using a list of times (in JSON format) referring to the acquisition time for each slice. The list goes through slices along the slice axis in the slice encoding dimension (see below). This parameter is required for sparse sequences. In addition without this parameter slice time correction will not be possible.
+bold_json.EchoTime = '';% The echo time (TE) for the acquisition, specified in seconds. This parameter is required if a corresponding fieldmap data is present or the data comes from a multi echo sequence. Corresponds to DICOM Tag 0018, 0081 ?Echo Time?.
+bold_json.InversionTime = '';% The inversion time (TI) for the acquisition, specified in seconds. Inversion time is the time after the middle of inverting RF pulse to middle of excitation pulse to detect the amount of longitudinal magnetization. Corresponds to DICOM Tag 0018, 0082 ?Inversion Time?.
+bold_json.SliceTiming = '';% The time at which each slice was acquired during the acquisition. Slice timing is not slice order - it describes the time (sec) of each slice acquisition in relation to the beginning of volume acquisition. It is described using a list of times (in JSON format) referring to the acquisition time for each slice. The list goes through slices along the slice axis in the slice encoding dimension (see below). This parameter is required for sparse sequences. In addition without this parameter slice time correction will not be possible.
 bold_json.SliceEncodingDirection = ''; % Possible values: ?i?, ?j?, ?k?, ?i-?, ?j-?, ?k-? (corresponding to the first, second and third axis of the data in the NIfTI file; ?-? sign corresponds to reverse order - starting from the highest index instead of zero). The axis of the NIfTI data along which a slices were acquired. This value needs to be consistent with the ?slice_dim? field in the NIfTI header.
-bold_json.NumberOfVolumesDiscardedByScanner = []; %Number of volumes ("dummy scans") discarded by the user (as opposed to those discarded by the user post hoc) before saving the imaging file. For example, a sequence that automatically discards the first 4 volumes before saving would have this field as 4. A sequence that doesn't discard dummy scans would have this set to 0. Please note that the onsets recorded in the _event.tsv file should always refer to the beginning of the acquisition of the first volume in the corresponding imaging file - independent of the value of NumberOfVolumesDiscardedByScanner field.
-bold_json.NumberOfVolumesDiscardedByUser = [];% Number of volumes ("dummy scans") discarded by the user before including the file in the dataset. If possible, including all of the volumes is strongly recommended. Please note that the onsets recorded in the _event.tsv file should always refer to the beginning of the acquisition of the first volume in the corresponding imaging file - independent of the value of NumberOfVolumesDiscardedByUser field.
-bold_json.DelayTime = []; % User specified time (in seconds) to delay the acquisition of data for the following volume. If the field is not present it is assumed to be set to zero. Corresponds to Siemens CSA header field lDelayTimeInTR . This field is compulsory for sparse sequences that do not have the SliceTiming field set to allowed for accurate calculation of "acquisition time".
+bold_json.NumberOfVolumesDiscardedByScanner = ''; %Number of volumes ("dummy scans") discarded by the user (as opposed to those discarded by the user post hoc) before saving the imaging file. For example, a sequence that automatically discards the first 4 volumes before saving would have this field as 4. A sequence that doesn't discard dummy scans would have this set to 0. Please note that the onsets recorded in the _event.tsv file should always refer to the beginning of the acquisition of the first volume in the corresponding imaging file - independent of the value of NumberOfVolumesDiscardedByScanner field.
+bold_json.NumberOfVolumesDiscardedByUser = '';% Number of volumes ("dummy scans") discarded by the user before including the file in the dataset. If possible, including all of the volumes is strongly recommended. Please note that the onsets recorded in the _event.tsv file should always refer to the beginning of the acquisition of the first volume in the corresponding imaging file - independent of the value of NumberOfVolumesDiscardedByUser field.
+bold_json.DelayTime = ''; % User specified time (in seconds) to delay the acquisition of data for the following volume. If the field is not present it is assumed to be set to zero. Corresponds to Siemens CSA header field lDelayTimeInTR . This field is compulsory for sparse sequences that do not have the SliceTiming field set to allowed for accurate calculation of "acquisition time".
 
-bold_json.FlipAngle = [];% Flip angle for the acquisition, specified in degrees. Corresponds to: DICOM Tag 0018, 1314 ?Flip Angle?.
+bold_json.FlipAngle = '';% Flip angle for the acquisition, specified in degrees. Corresponds to: DICOM Tag 0018, 1314 ?Flip Angle?.
 
 bold_json.MultibandAccelerationFactor= ''; % The multiband factor, for multiband acquisitions.
 
