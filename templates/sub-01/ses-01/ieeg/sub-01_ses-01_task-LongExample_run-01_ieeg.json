@@ -1,6 +1,5 @@
 {
     "TaskName": "",
-    "SamplingFrequency": "",
     "Manufacturer": "",
     "ManufacturersModelName": "",
     "TaskDescription": "",
@@ -17,7 +16,6 @@
     "MiscChannelCount": "",
     "TriggerChannelCount": "",
     "PowerLineFrequency": "",
-    "SoftwareFilters": "",
     "RecordingDuration": "",
     "RecordingType": "",
     "EpochLength": "",
@@ -25,14 +23,8 @@
     "SubjectArtefactDescription": "",
     "iEEGSurfChannelCount": "",
     "iEEGDepthChannelCount": "",
-    "ChannelUnits": "",
-    "UnitsToMicroVoltFactor": "",
-    "iEEGReference": "",
-    "HardwareFilters": "",
-    "iEEGSurfChannelManufacturer": "",
-    "iEEGDepthChannelManufacturer": "",
     "iEEGPlacementScheme": "",
     "iEEGReferenceScheme": "",
-    "StimulationParameters": "",
+    "Stimulation": "",
     "Medication": ""
 }
