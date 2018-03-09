@@ -212,9 +212,6 @@ meg_json.EEGReference                    ='';
 
 %%
 
-%Save the json file
-loc_json_name                     = 'test.json'
-
 json_options.indent               = '    '; % this makes the json look pretier when opened in a txt editor
 
 jsonSaveDir = fileparts(meg_json_name);
@@ -223,4 +220,4 @@ if ~isdir(jsonSaveDir)
 end
 
 
-jsonwrite(loc_json_name,meg_json,json_options)
+jsonwrite(meg_json_name,meg_json,json_options)
