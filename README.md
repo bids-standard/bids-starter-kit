@@ -2,7 +2,7 @@
 A community-curated collection of [tutorials, wikis](https://github.com/INCF/bids-starter-kit/wiki),
 and templates to get you started with creating BIDS compliant datasets.
 
-The [repository wiki](https://github.com/INCF/bids-starter-kit/wiki): for first starters, brief text and code snippets to help start with BIDS.
+The [repository wiki](https://github.com/INCF/bids-starter-kit/wiki): Brief text and code snippets to help the first start with BIDS and links to other relevant resources.
 
 Tutorials: code and notebook-style tutorials on that help create a BIDS-compliant dataset.
 
