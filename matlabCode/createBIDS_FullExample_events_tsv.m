@@ -46,5 +46,3 @@ HED= {' '};
 t = table(onset,duration,trial_type,response_time,stim_file,HED);
 
 writetable(t,events_tsv_name,'FileType','text','Delimiter','\t');
-
-
