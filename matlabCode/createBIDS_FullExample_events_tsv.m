@@ -1,4 +1,4 @@
-%% Template Matlab script to create an BIDS compatible sub-01_ses-01_task-balloonanalogrisktask_run-01_events.tsv file
+%% Template Matlab script to create an BIDS compatible sub-01_ses-01_task-FullExample-01_events.tsv file
 % This example lists all required and optional fields.
 % When adding additional metadata please use camelcase
 % 
