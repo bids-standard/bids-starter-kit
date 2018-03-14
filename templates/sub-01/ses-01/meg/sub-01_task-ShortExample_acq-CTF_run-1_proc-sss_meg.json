@@ -1,0 +1,18 @@
+{
+    "TaskName": "",
+    "InstitutionName": "",
+    "InstitutionAddress": "",
+    "Manufacturer": "",
+    "ManufacturersModelName": "",
+    "SoftwareVersions": "",
+    "TaskDescription": "",
+    "Instructions": "",
+    "CogPOID": "",
+    "DeviceSerialNumber": "",
+    "SamplingFrequency": "",
+    "PowerLineFrequency": "",
+    "DewarPosition": "",
+    "SoftwareFilters": "",
+    "DigitizedLandmarks": "",
+    "DigitizedHeadPoints": ""
+}
