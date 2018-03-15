@@ -43,44 +43,6 @@ meg_json_name = fullfile(root_dir,project_label,...
 % characters:
 meg_json.TaskName                        ='';
 
-% The name of the institution in charge of the equipment that
-% produced the composite instances:
-meg_json.InstitutionName                 ='';
-
-% The address of the institution in charge of the equipment that
-% produced the composite instances:
-meg_json.InstitutionAddress              ='';
-
-% Manufacturer of the MEG system (e.g. "CTF", " Elekta/Neuromag ",
-% " 4D/BTi ", " KIT/Yokogawa ", " ITAB ", "KRISS", "Other"):
-meg_json.Manufacturer                    ='';
-
-% Manufacturer’s designation of the MEG scanner model (e.g.
-% "CTF-275"). See Appendix VII with preferred names:
-meg_json.ManufacturersModelName          ='';
-
-% Manufacturer’s designation of the acquisition software.
-meg_json.SoftwareVersions                ='';
-
-% Description of the task:
-meg_json.TaskDescription                 ='';
-
-% Text of the instructions given to participants before the scan. This is
-% not only important for behavioural or cognitive tasks but also in
-% resting state paradigms (e.g. to distinguish between eyes open and
-% eyes closed):
-meg_json.Instructions                    ='';
-
-% URL of the corresponding CogPO term that describes the task (e.g.
-% Rest “http://wiki.cogpo.org/index.php?title=Rest”)
-meg_json.CogPOID                         ='';
-
-% The serial number of the equipment that produced the composite
-% instances. A pseudonym can also be used to prevent the equipment
-% from being identifiable, as long as each pseudonym is unique
-% within the dataset:
-meg_json.DeviceSerialNumber              ='';
-
 %%
 
 % The following MEG specific fields must also be defined:
