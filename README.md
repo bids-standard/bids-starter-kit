@@ -1,6 +1,7 @@
 # bids-starter-kit
 
 [![Join the chat at https://gitter.im/INCF/bids-starter-kit](https://badges.gitter.im/INCF/bids-starter-kit.svg)](https://gitter.im/INCF/bids-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A community-curated collection of [tutorials, wikis](https://github.com/INCF/bids-starter-kit/wiki),
 and templates to get you started with creating BIDS compliant datasets.
 
