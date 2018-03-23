@@ -6,13 +6,11 @@ You **do not** need all these programs to work with BIDS. Choose whichever ones 
 ### MATLAB 
 ***Information***: https://www.mathworks.com/products/matlab.html 
 
+***Free, Open-source equivalent***: Octave (https://www.gnu.org/software/octave/)
+
 **JSONio** (package required to read and write JSON files)
 
-		Install Link: https://github.com/gllmflndn/JSONio
-
-**Octave** (free, open-source equivalent)
-
-		Install Link: https://www.gnu.org/software/octave/ 
+		Install Link: https://github.com/gllmflndn/JSONio 
 
 ### Python
 ***Information***: https://www.python.org/ (Both Python 2 and 3 will work for BIDS)
