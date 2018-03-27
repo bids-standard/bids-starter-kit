@@ -1,31 +1,47 @@
 # BIDS Dependencies List
 The following is a list of **options** available for working with BIDS
 
-You **do not** need all these programs to work with BIDS. Choose whichever ones you are most comfortable with
+BIDS is langauge independent, and can be used with any of the languages listed below. 
+Feel free to choose whichever one you are most comfortable with!
 
-### MATLAB 
-***Information***: https://www.mathworks.com/products/matlab.html 
+Please note that for each choice of language, the additional listed packages are required to work with BIDS.
 
-***Free, Open-source equivalent***: Octave (https://www.gnu.org/software/octave/)
+###  Text editors
 
-**JSONio** (package required to read and write JSON files)
+Code can be written in anything from Notepad(Windows) to TextEdit(macOS) to vim(Linux).
 
-		Install Link: https://github.com/gllmflndn/JSONio 
+But there are some text-editors built specifically for coding that can help with some parts of programming.
+
+One that's free and easy to use is Atom: https://atom.io/. It'll work for all the languages below! 
+
+
+
+### MATLAB / Octave (Free, open source equivalent)
+***MATLAB Information***: https://www.mathworks.com/products/matlab.html 
+
+***Octave Information***: https://www.gnu.org/software/octave/
+
+Required JSON package
+**JSONio** 
+
+	Install Link: https://github.com/gllmflndn/JSONio
+
 
 ### Python
 ***Information***: https://www.python.org/ (Both Python 2 and 3 will work for BIDS)
 
-**Anaconda** (Recommended package to use for installing Python)
+**Anaconda** Recommended package to use for installing Python
 
 	Install Link: https://conda.io/docs/user-guide/install/download.html 
 
-**Pandas** (Data analysis library, included in Anaconda)
+**Pandas** 
+Pandas is already included in Anaconda, but use the link below if you just want the data analysis library.
 
 	Install Link: https://pandas.pydata.org/ 
 
 ### R
 ***Information***: https://www.r-project.org/ 
 
-**Jsonlite** (package required to read and write JSON files)
+**Jsonlite** package required to read and write JSON files
 
-	(https://cran.r-project.org/web/packages/jsonlite/index.html)
+	https://cran.r-project.org/web/packages/jsonlite/index.html
