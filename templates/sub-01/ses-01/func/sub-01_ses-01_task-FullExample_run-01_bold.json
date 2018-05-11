@@ -23,7 +23,7 @@
     "TotalReadoutTime": "",
     "EchoTime": "",
     "InversionTime": "",
-    "SliceTiming": "",
+    "SliceTiming": [],
     "SliceEncodingDirection": "",
     "NumberOfVolumesDiscardedByScanner": "",
     "NumberOfVolumesDiscardedByUser": "",
