@@ -1,6 +1,6 @@
 {
     "TaskName": "",
-    "RepetitionTime": [],
+    "RepetitionTime": ,
     "Manufacturer": "",
     "ManufacturersModelName": "",
     "MagenticFieldStrength": "",
@@ -23,7 +23,7 @@
     "TotalReadoutTime": "",
     "EchoTime": "",
     "InversionTime": "",
-    "SliceTiming": "",
+    "SliceTiming": [],
     "SliceEncodingDirection": "",
     "NumberOfVolumesDiscardedByScanner": "",
     "NumberOfVolumesDiscardedByUser": "",
