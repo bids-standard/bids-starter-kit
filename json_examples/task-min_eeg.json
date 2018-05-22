@@ -1,0 +1,9 @@
+{
+  "TaskName":"Fancy stuff",
+  "PowerLineFrequency":50,
+  "SamplingFrequency": 2400,
+  "EEGChannelCount": 128,
+  "EOGChannelCount": 2,
+  "ECGChannelCount": 1,
+  "EMGChannelCount": 2,
+}
