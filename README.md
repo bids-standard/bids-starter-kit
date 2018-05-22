@@ -1,4 +1,5 @@
-# bids-starter-kit
+# Welcome to the BIDS Starter Kit
+
 
 For discussions: [![Join the chat at https://gitter.im/INCF/bids-starter-kit](https://badges.gitter.im/INCF/bids-starter-kit.svg)](https://gitter.im/INCF/bids-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
