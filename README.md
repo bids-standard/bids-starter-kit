@@ -1,4 +1,4 @@
-<h1 align="center">BIDS Starter Kit</h1>
+<h1 align="center">Welcome to the BIDS Starter Kit</h1>
 
 <div align="center">
   :closed_book::open_file_folder::green_book::open_file_folder::blue_book::open_file_folder::orange_book:
