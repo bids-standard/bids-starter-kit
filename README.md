@@ -40,9 +40,22 @@
   </h3>
 </div>
 
-<h2 align="center">Intro to BIDS Video</h2>
+<h2 align="center">Click to view the intro video!</h2>
 
 <div align="center">
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0" target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg" 
-alt="BIDS Starter Kit Video" width="240" height="180" border="10" /></a>
+alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 </div>
+
+## Table of Contents
+- [Project Summary](#project-summary)
+- [Philosophy](#philosophy)
+
+## Project Summary
+Neuroimaging scans can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but the many different specifications of these acquired images cause portability issues between different labs and scientists. BIDS (Brain Imaging Data Structure) is a framework for organizing data that standardizes file organization and dataset description between different researchers. 
+
+## Philosophy
+The most important part of BIDS are the users: if more people use it, more data will be shared and the more powerful it will become. <strong>We want to make it easy to learn</strong> and more adopted. Since BIDS is platform independent and still an adapting, growing tool, the greater the community, the better it will be.
+
+
+
