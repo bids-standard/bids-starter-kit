@@ -40,5 +40,9 @@
   </h3>
 </div>
 
+<h2 align="center">Intro to BIDS Video</h2>
+
+<div align="center">
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0" target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg" 
 alt="BIDS Starter Kit Video" width="240" height="180" border="10" /></a>
+</div>
