@@ -1,7 +1,5 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 
-<br />
-
 <div align="center">
   :blue_book::file_folder::closed_book::open_file_folder::green_book::open_file_folder::blue_book::open_file_folder::orange_book::file_folder::blue_book:
 </div>
