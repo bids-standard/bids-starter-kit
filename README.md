@@ -24,7 +24,7 @@
       Standard
     </a>
     <span> | </span>
-    <a href="http://reproducibility.stanford.edu/blog/">
+    <a href="https://github.com/INCF/bids-starter-kit/wiki/Tutorials">
       Tutorials
     </a>
     <span> | </span>
