@@ -13,7 +13,7 @@ The point of this starter kit is to **welcome new users and contributors to the 
 * [Contributing through GitHub](#contributing-through-github)
 * [Where to start: wiki, code and templates](#where-to-start-wiki-code-and-templates)
 * [Where to start: labels](#where-to-start-labels)
-* [Make a change](#making-a-change)
+* [Make a change with a pull request](#making-a-change-with-a-pull-request)
 * [Recognizing contributions](#recognizing-contributions)
 
 
@@ -51,7 +51,7 @@ In order to contribute via GitHub you'll need to set up a free account and sign 
 
 GitHub has a helpful page on [getting started with writing and formatting on GitHub](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github).
 
-Most of the writing that you'll do will be in [Markdown][markdown]. You can think of Markdown as a few little symbols around your text that will allow GitHub to render the text with a little bit of formatting. For example you could write words as **bold**, or in *italics*, or as a [link](https://www.youtube.com/watch?v=dQw4w9WgXcQ) to another webpage.
+Most of the writing that you'll do will be in [Markdown][markdown]. You can think of Markdown as a few little symbols around your text that will allow GitHub to render the text with a little bit of formatting. For example you could write words as **bold**, or in *italics*, or as a [link][rick-roll] to another webpage.
 
 ## Where to start: wiki, code and templates
 
@@ -67,13 +67,13 @@ Here's a useful [introduction to GitHub wikis][intro-github-wiki]. Have a read t
 
 This repository is under development, but we hope that it becomes a useful place for people to share and find small snippets of code that are useful for getting started with BIDS.
 
-To contribute to the codebase you'll need to submit a pull request. Check out our [guidelines][#making-a-change] below.
+To contribute to the codebase you'll need to submit a pull request. Check out our [guidelines](#making-a-change-with-a-pull-request) below.
 
 #### [Templates][bids-starterkit-repo]
 
 This repository is under development, but we aim to have two templates for each BIDS sidecar file: one with a full example (all required/recommended/optional fields), and one with a minimal example (only required fields).
 
-To contribute a template you'll need to submit a pull request. Check out our [guidelines][#making-a-change] below.
+To contribute a template you'll need to submit a pull request. Check out our [guidelines](#making-a-change-with-a-pull-request) below.
 
 ## Where to start: labels
 
@@ -92,11 +92,13 @@ The list of labels for current issues can be found [here][bids-starterkit-labels
 
     Please try to make sure that your requested feature is distinct from any others that have already been requested or implemented. If you find one that's similar but there are subtle differences please reference the other request in your issue.
 
-## Making a change
+## Making a change with a pull request
 
 We appreciate all contributions to the BIDS Starter Kit. **THANK YOU** for helping us build this useful resource. :sparkles::star2::dizzy:
 
-The following steps are a guide to help you contribute in a way that will be easy for everyone to review and accept with ease  :sunglasses:.
+:point_right: Remember that if you're adding information to the [wiki](#wiki) you ***don't need to submit a pull request***. You can just log into GitHub, navigate to the [wiki][bids-starterkit-wiki] and click the **edit** button.
+
+If you're updating the [code](#code) or the [templates](#templates), the following steps are a guide to help you contribute in a way that will be easy for everyone to review and accept with ease  :sunglasses:.
 
 #### 1. Comment on an existing issue or open a new issue referencing your addition
 
@@ -124,7 +126,7 @@ A [review][github-review] will probably consist of a few questions to help clari
 
 You can update your [fork][github-fork] of the BIDS Starter Kit [repository][bids-starterkit-repo] and the pull request will automatically update with those changes. You don't need to submit a new pull request when you make a change in response to a review.
 
-GitHub has a [nice introduction][github-flow] to the pull request workflow, but please [get in touch][#get-in-touch] if you have any questions :balloon:.
+GitHub has a [nice introduction][github-flow] to the pull request workflow, but please [get in touch](#get-in-touch) if you have any questions :balloon:.
 
 
 ## Recognizing contributions
@@ -154,6 +156,7 @@ You're awesome. :wave::smiley:
 [github]: https://github.com
 [github-branches]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
 [github-fork]: https://help.github.com/articles/fork-a-repo
+[github-flow]: https://guides.github.com/introduction/flow
 [github-mergeconflicts]: https://help.github.com/articles/about-merge-conflicts
 [github-pullrequest]: https://help.github.com/articles/creating-a-pull-request
 [github-review]: https://help.github.com/articles/about-pull-request-reviews
@@ -163,4 +166,5 @@ You're awesome. :wave::smiley:
 [jerry-maguire]: http://gph.is/1ULS704
 [markdown]: https://daringfireball.net/projects/markdown
 [patrick-github]: https://github.com/Park-Patrick
+[rick-roll]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 [stemm-role-models]: https://github.com/KirstieJane/STEMMRoleModels
