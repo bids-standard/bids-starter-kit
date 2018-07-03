@@ -1,19 +1,45 @@
-# Contributing to bids-starters-kit
+# Contributing to the BIDS Starter Kit
 
-Welcome to the BIDS Starters Kit repository! We're excited you're here and want to contribute.  
+:tada::balloon::cake: **Welcome to the BIDS Starters Kit repository!** :cake::balloon::tada:
 
-These guidelines are designed to make it as easy as possible to get involved. If you have any questions that aren't discussed below, please let us know by opening an [issue](https://github.com/INCF/bids-starter-kit/issues)!
+:dizzy::hatched_chick::sunny: *We're so excited you're here and want to contribute.* :sunny::hatched_chick::dizzy:
 
-Before you start you'll need to set up a free [GitHub](https://github.com/) account and sign in. Here are some [instructions](https://help.github.com/articles/signing-up-for-a-new-github-account/).
+The point of this starter kit is to welcome new users and contributors to the BIDS community. We hope that these guidelines are designed to make it as easy as possible to get involved. If you have any questions that aren't discussed below, please let us know by opening an [issue](https://github.com/INCF/bids-starter-kit/issues).
+
+## Table of contents
+
+* [Joining the BIDS community](#joining-the-community)
+* [Contributing through GitHub](#contributing-through-github)
+* [Where to start: wiki, code and templates](#where-to-start-wiki-code-and-templates)
+* 
 
 ## Joining the community
 
-BIDS is a growing community of neuroimaging enthusiasts, and we want to make our resources accessible to and engaging for as many researchers as possible.
-We therefore require that all contributions adhere to our [Code of Conduct](http://www.brainhack.org/code-of-conduct.html).
+BIDS - the [Brain Imaging Data Structure](http://bids.neuroimaging.io) - is a growing community of neuroimaging enthusiasts, and we want to make our resources accessible to and engaging for as many researchers as possible.
+
+We therefore require that all contributions **adhere to our [Code of Conduct](CODE_OF_CONDUCT.md)**.
+
+How do you know that you're a member of the BIDS community? You're here! You know that BIDS exists! You're officially a member of the community. It's THAT easy! Welcome! :joy::raised_hands:
+
+<img align="right" width="50%" src="https://linuxcentro.com.br/wp-content/uploads/2017/04/github-520x350.jpg" alt="Two github cats working together"/>
+
+## Contributing through GitHub
+
+[git](https://git-scm.com/) is a really useful tool for version control. [GitHub](https://github.com) sits on top of git and supports collaborative and distributed working.
+
+We know that it can be daunting to start using git and GitHub if you haven't worked with them in the past, but the BIDS Starter Kit maintainers are here to help you figure out any of the jargon or confusing instructions you encounter! :heart:
+
+In order to contribute via GitHub you'll need to set up a free account and sign in. Here are some [instructions](https://help.github.com/articles/signing-up-for-a-new-github-account/) to help you get going. Remember that you can ask us any questions you need to along the way.
+
+## Writing in markdown
+
+GitHub has a helpful page on [getting started with writing and formatting on GitHub](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github).
+
+Most of the writing that you'll do will be in [Markdown](https://daringfireball.net/projects/markdown). You can think of Markdown as a few little symbols around your text that will allow GitHub to render the text with a little bit of formatting. For example you could write words as **bold**, or in *italics*, or as a [link](https://www.youtube.com/watch?v=dQw4w9WgXcQ) to another webpage.
 
 ## Where to start: wiki, code and templates
 
-Wiki: The main part of the BIDS starters kit is the wiki. It explains the first steps in creating your own BIDS compatible dataset. 
+[Wiki](https://github.com/INCF/bids-starter-kit/wiki): We hope that the easiest place to find information about BIDS is the starter kit wiki. You only need to be logged in to GitHub to edit the wiki! Here's a useful [introduction to GitHub wikis][intro-github-wiki]
 
 Code: This repository is under development, and should contain the first steps of simple code (Matlab, Python R...) to read and write create BIDS-sidecar files. 
 
@@ -69,3 +95,5 @@ You're awesome. :wave::smiley:
 *&mdash; Based on contributing guidelines from the [STEMMRoleModels](https://github.com/KirstieJane/STEMMRoleModels) project.*
 
 
+[intro-github-wiki][https://help.github.com/articles/about-github-wikis/]
+[][]
