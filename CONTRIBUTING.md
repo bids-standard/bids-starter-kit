@@ -145,6 +145,7 @@ You're awesome. :wave::smiley:
 [bids]: http://bids.neuroimaging.io
 [bids-specification]: https://docs.google.com/document/d/1HFUkAEE-pB-angVcYe6pf_-fVf4sCpOHKesUvfb8Grc/edit#heading=h.hds2i7ii7hjo
 [bids-mailinglist]: https://groups.google.com/forum/#!forum/bids-discussion
+[bids-starterkit-issues]: https://github.com/INCF/bids-starter-kit/issues
 [bids-starterkit-labels]: https://github.com/INCF/bids-starter-kit/labels
 [bids-starterkit-repo]: https://github.com/INCF/bids-starter-kit
 [bids-starterkit-wiki]: https://github.com/INCF/bids-starter-kit/wiki
