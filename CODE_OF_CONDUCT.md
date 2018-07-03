@@ -46,7 +46,7 @@ Project maintainers have the right and responsibility to remove, edit, or reject
 
 Members of the community who violate these rules - no matter how much they have contributed to the BIDS Starter Kit, or how specialised their skill set - will be approached by Kirstie Whitaker. If inappropriate behaviour persists after a discussion with Kirstie, the contributer will be asked to discontinue their participation in the BIDS Starter Kit project.
 
-**To report an issue** please contact [Kirstie Whitaker][kirstie-github]. All communication will be treated as confidential.
+**To report an issue you have with community interactions** please contact [Kirstie Whitaker][kirstie-github]. All communication will be treated as confidential.
 
 ## Attribution
 
