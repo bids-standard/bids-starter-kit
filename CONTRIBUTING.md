@@ -77,11 +77,6 @@ To contribute a template you'll need to submit a pull request. Check out our [gu
 
 ## Where to start: labels
 
-<!--
-  COMMENTED OUT BY KW because she's changed the sentence below!
-  ******* NEED TO CHECK W EMDP *******
-  The list of labels for current issues are the same as for the BIDS [here][bids-starterkit-labels] and include:
--->
 The list of labels for current issues can be found [here][bids-starterkit-labels] and includes:
 
 * ![Help Wanted](https://img.shields.io/badge/-help%20wanted-159818.svg) *These issues contain a task that a member of the team has determined we need additional help with.*
