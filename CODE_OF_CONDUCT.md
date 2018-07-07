@@ -2,7 +2,7 @@
 
 We value the participation of every member of our community and want to ensure an that every contributer has an enjoyable and fulfilling experience. Accordingly, everyone who participates in the BIDS Starter Kit project is expected to show respect and courtesy to other community members at all time.
 
-Chris Gorgolewski, founder of the BIDS project, Chris Holdgraf, Dora Hermes, Elizabeth DuPre and Kirstie Whitaker, lead maintainers of the BIDS Starter Kit project, and contributors to the BIDS Starter Kit project are dedicated to a ***harassment-free experience for everyone***, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age or religion. **We do not tolerate harassment by and/or of members of our community in any form**.
+The lead maintainers of the BIDS Starter Kit ([Chris Gorgolewski][chrisg-github], [Chris Holdgraf][chrish-github], [Dora Hermes][dora-github], [Elizabeth DuPre][elizabeth-github] and [Kirstie Whitaker][kirstie-github]) are dedicated to a ***harassment-free experience for everyone***, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age or religion. **We do not tolerate harassment by and/or of members of our community in any form**.
 
 *We are particularly motivated to support new and/or anxious collaborators, people who are looking to learn and develop their skills, and anyone who has experienced discrimination in the past.*
 
@@ -59,6 +59,10 @@ The BIDS Starter Kit Code of Conduct was developed by [Kirstie Whitaker][kirstie
 [contributor-covenant-version]: http://contributor-covenant.org/version/1/4
 [ccby-link]: https://creativecommons.org/licenses/by/4.0
 [cc0-link]: https://creativecommons.org/publicdomain/zero/1.0
+[chrisg-github]: https://github.com/chrisfilo
+[chrish-github]: https://github.com/choldgraf
+[dora-github]: https://github.com/dorahermes
+[elizabeth-github]: https://github.com/emdupre
 [kirstie-github]: https://github.com/kirstiejane
 [bnip-repo]: https://github.com/WhitakerLab/BrainNetworksInPython
 [bsk-repo]: https://github.com/INCF/bids-starter-kit
