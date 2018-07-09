@@ -18,7 +18,7 @@ data['License'] = ''
 #List of individuals who contributed to the creation/curation of the dataset
 data['Authors'] = ['','','']
 
-#who should be acknowledge in helping to collect the data
+#who should be acknowledged in helping to collect the data
 data['Acknowledgements'] = ''
 
 #Instructions how researchers using this dataset should acknowledge the original authors. This field can also be used to define a publication that should be cited in publications that use the dataset
