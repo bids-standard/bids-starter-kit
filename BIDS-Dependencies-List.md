@@ -1,7 +1,7 @@
 # BIDS Dependencies List
 The following is a list of **options** available for working with BIDS
 
-BIDS is langauge independent, and can be used with any of the languages listed below. 
+BIDS is language independent, and can be used with any of the languages listed below. 
 Feel free to choose whichever one you are most comfortable with!
 
 Please note that for each choice of language, the additional listed packages are required to work with BIDS.
