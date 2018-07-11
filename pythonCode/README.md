@@ -7,7 +7,7 @@ and another for analyzing and manipulating pre-existing BIDS datasets.
 ## Converting your data to BIDS
 
 * [mne-bids](https://github.com/mne-tools/mne-bids) is a collection
-  of tools for converting MNE-python data into BIDS format, as well as some
+  of tools for converting magnetoencephalography (MEG) data into BIDS format, as well as some
   helper functions for creating the folders and metadata needed for a BIDS
   dataset. Check out their [online documentation](http://mne-tools.github.io/mne-bids/)
   and the [examples gallery](https://mne-tools.github.io/mne-bids/auto_examples/index.html)
