@@ -56,6 +56,13 @@ alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 ## Project Summary
 Neuroimaging scans can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but the many different specifications of these acquired images cause portability issues between different labs and scientists. BIDS (Brain Imaging Data Structure) is a framework for organizing data that standardizes file organization and dataset description between different researchers. 
 
+### How do I find information?
+For general information to help you get started with BIDS, we reccommend the [wiki](https://github.com/INCF/bids-starter-kit/wiki). It includes pages such as an overall introduction to the BIDS folder structure, links to tutorials, and a glossary to help you with some of the technical terms.
+
+For metadata file templates or code to help you get started, please scroll up to find the appropriate files that are available in your langauge of choice.
+
+Finally, for more advanced knowledge that may pertain to specific use cases for your data, please refer to the full [BIDS Specification](https://docs.google.com/document/d/1HFUkAEE-pB-angVcYe6pf_-fVf4sCpOHKesUvfb8Grc/edit)
+
 ## Philosophy
 The most important part of BIDS are the users: if more people use it, more data will be shared and the more powerful it will become. <strong>We want to make it easy to learn</strong> and more adopted. Since BIDS is platform independent and still an adapting, growing tool, the greater the community, the better it will be.
 
