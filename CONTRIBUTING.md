@@ -34,8 +34,11 @@ There are lots of ways to get in touch with the team maintaining the BIDS Starte
   * Click [here][brainhack-slack-invite] for an invite to the slack workspace
 * Our [Gitter channel][gitter]
 * The [BIDS mailing list][bids-mailinglist]
+* The [Neurostars Forum][neurostars-forum]. 
+  * This is our preferred way to answer questions so that others who have similar questions can benefit too! Even if your question is not well-defined, just post what you have so far and we will be able to point you in the right direction!
+  * Some examples issue include: [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364) and [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
 
-If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. He'll be monitoring all the channels above and it would really help his project along if you said hello and passed along any feedback you have :purple_heart:.
+If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. He'll be monitoring all the channels above and it would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Don't be shy, the newer you are the more valuable your feedback is :thumbsup:
 
 <img align="right" width="50%" src="https://linuxcentro.com.br/wp-content/uploads/2017/04/github-520x350.jpg" alt="Two github cats working together"/>
 
@@ -51,11 +54,12 @@ In order to contribute via GitHub you'll need to set up a free account and sign 
 
 GitHub has a helpful page on [getting started with writing and formatting on GitHub](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github).
 
-Most of the writing that you'll do will be in [Markdown][markdown]. You can think of Markdown as a few little symbols around your text that will allow GitHub to render the text with a little bit of formatting. For example you could write words as **bold**, or in *italics*, or as a [link][rick-roll] to another webpage.
+Most of the writing that you'll do will be in [Markdown][markdown]. You can think of Markdown as a few little symbols around your text that will allow GitHub to render the text with a little bit of formatting. For example you could write words as bold (\*\*bold**), or in italics (\*italics*), or as a [link][rick-roll] (\[link]\(https://https://youtu.be/dQw4w9WgXcQ)) to another webpage.
 
 ## Where to start: wiki, code and templates
 
-#### [Wiki][bids-starterkit-wiki]
+### Wiki [Link][bids-starterkit-wiki]
+
 
 We hope that the easiest place to find information about BIDS is the [**starter kit wiki**][bids-starterkit-wiki].
 
@@ -63,13 +67,13 @@ You only need to be logged in to GitHub to edit the wiki. So, there's no need fo
 
 Here's a useful [introduction to GitHub wikis][intro-github-wiki]. Have a read through the pages that already exist in the wiki and please EDIT AWAY! :muscle::boom::sparkles:
 
-#### [Code][bids-starterkit-repo]
+### Code [Link][bids-starterkit-repo]
 
 This repository is under development, but we hope that it becomes a useful place for people to share and find small snippets of code that are useful for getting started with BIDS.
 
 To contribute to the codebase you'll need to submit a pull request. Check out our [guidelines](#making-a-change-with-a-pull-request) below.
 
-#### [Templates][bids-starterkit-repo]
+### Templates [Link][bids-starterkit-repo]
 
 This repository is under development, but we aim to have two templates for each BIDS sidecar file: one with a full example (all required/recommended/optional fields), and one with a minimal example (only required fields).
 
@@ -123,6 +127,12 @@ You can update your [fork][github-fork] of the BIDS Starter Kit [repository][bid
 
 GitHub has a [nice introduction][github-flow] to the pull request workflow, but please [get in touch](#get-in-touch) if you have any questions :balloon:.
 
+## Example pull request
+<img align="right" src="https://i.imgur.com/s8yELfK.png" alt="Example-Contribution"/>
+
+<br>
+
+<br>
 
 ## Recognizing contributions
 
@@ -159,8 +169,9 @@ You're awesome. :wave::smiley:
 [github-syncfork]: https://help.github.com/articles/syncing-a-fork
 [gitter]: https://gitter.im/INCF/bids-starter-kit
 [gsoc]: https://summerofcode.withgoogle.com
-[jerry-maguire]: http://gph.is/1ULS704
+[jerry-maguire]: https://media.giphy.com/media/uRb2p09vY8lEs/giphy.gif
 [markdown]: https://daringfireball.net/projects/markdown
+[neurostars-forum]: https://neurostars.org/tags/bids
 [patrick-github]: https://github.com/Park-Patrick
 [rick-roll]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 [stemm-role-models]: https://github.com/KirstieJane/STEMMRoleModels
