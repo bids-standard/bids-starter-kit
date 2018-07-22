@@ -84,7 +84,9 @@ BIDS is for everyone! Programming is not required, it simply makes some processe
 
 ## Contributing
 
-If you have any questions, suggestions, etc please [open an issue](https://github.com/INCF/bids-starter-kit/issues) or make your own addition to the wiki or do a pull request to the code.
+There are many ways to get in touch with us! Please see our [Contact Page](https://github.com/INCF/BIDS-Starter-Kit/wiki/Contact)
+
+To post on this repository about any questions, suggestions, etc please [open an issue](https://github.com/INCF/bids-starter-kit/issues) or make your own addition to the wiki or do a pull request to the code.
 
 ## Acknowledgements
 ![incf](https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM)
