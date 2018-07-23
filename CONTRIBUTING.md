@@ -14,7 +14,7 @@ Been here before? Already know what you're looking for in this guide? Jump to th
 * [Get in touch](#get-in-touch)
 * [Contributing through GitHub](#contributing-through-github)
 * [Where to start: wiki, code and templates](#where-to-start-wiki-code-and-templates)
-* [Where to start: labels](#where-to-start-labels)
+* [Where to start: issue labels](#where-to-start-issue-labels)
 * [Make a change with a pull request](#making-a-change-with-a-pull-request)
   * [Example pull request](#example-pull-request)
 * [Recognizing contributions](#recognizing-contributions)
@@ -37,7 +37,7 @@ There are lots of ways to get in touch with the team maintaining the BIDS Starte
   * Click [here][brainhack-slack-invite] for an invite to the slack workspace
 * Our [Gitter channel][gitter]
 * The [BIDS mailing list][bids-mailinglist]
-* Via the [Neurostars forum][neurostars-forum]. 
+* Via the [Neurostars forum][neurostars-forum].
   * **This is our preferred way to answer questions so that others who have similar questions can benefit too!** Even if your question is not well-defined, just post what you have so far and we will be able to point you in the right direction!
   * Some example questions that have already been answered include: [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364) and [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
 
@@ -81,7 +81,7 @@ This repository is under development, but we aim to have two templates for each 
 
 To contribute a template you'll need to submit a pull request. Check out our [guidelines](#making-a-change-with-a-pull-request) below.
 
-## Where to start: labels
+## Where to start: issue labels
 
 The list of labels for current issues can be found [here][bids-starterkit-labels] and includes:
 
@@ -140,7 +140,7 @@ This allows other members of the BIDS Starter Kit team to confirm that you aren'
 
 This is now your own unique copy of the BIDS Starter Kit. Changes here won't affect anyone else's work, so it's a safe space to explore edits to the code!
 
-Make sure to [keep your fork up to date][github-syncfork] with the master repository, otherwise you can end up with lots of dreaded [merge conflicts][github-mergeconflicts]. 
+Make sure to [keep your fork up to date][github-syncfork] with the master repository, otherwise you can end up with lots of dreaded [merge conflicts][github-mergeconflicts].
 
 #### 3. Make the changes you've discussed
 
