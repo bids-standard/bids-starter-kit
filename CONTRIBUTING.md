@@ -37,9 +37,9 @@ There are lots of ways to get in touch with the team maintaining the BIDS Starte
   * Click [here][brainhack-slack-invite] for an invite to the slack workspace
 * Our [Gitter channel][gitter]
 * The [BIDS mailing list][bids-mailinglist]
-* The [Neurostars Forum][neurostars-forum]. 
-  * This is our preferred way to answer questions so that others who have similar questions can benefit too! Even if your question is not well-defined, just post what you have so far and we will be able to point you in the right direction!
-  * Some examples issues include: [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364) and [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
+* Via the [Neurostars forum][neurostars-forum]. 
+  * **This is our preferred way to answer questions so that others who have similar questions can benefit too!** Even if your question is not well-defined, just post what you have so far and we will be able to point you in the right direction!
+  * Some example questions that have already been answered include: [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364) and [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
 
 If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. He'll be monitoring all the channels above and it would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Don't be shy, the newer you are the more valuable your feedback is :thumbsup:
 
@@ -57,7 +57,7 @@ In order to contribute via GitHub you'll need to set up a free account and sign 
 
 GitHub has a helpful page on [getting started with writing and formatting on GitHub](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github).
 
-Most of the writing that you'll do will be in [Markdown][markdown]. You can think of Markdown as a few little symbols around your text that will allow GitHub to render the text with a little bit of formatting. For example you could write words as bold (\*\*bold**), or in italics (\*italics*), or as a [link][rick-roll] (\[link]\(https://https://youtu.be/dQw4w9WgXcQ)) to another webpage.
+Most of the writing that you'll do will be in [Markdown][markdown]. You can think of Markdown as a few little symbols around your text that will allow GitHub to render the text with a little bit of formatting. For example you could write words as bold (`**bold**`), or in italics (`*italics*`), or as a [link][rick-roll] (`[link](https://https://youtu.be/dQw4w9WgXcQ)`) to another webpage.
 
 ## Where to start: wiki, code and templates
 
