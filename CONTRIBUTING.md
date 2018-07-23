@@ -8,12 +8,15 @@ The point of this starter kit is to **welcome new users and contributors to the 
 
 ## Table of contents
 
+Been here before? Already know what you're looking for in this guide? Jump to the following sections:
+
 * [Joining the BIDS community](#joining-the-community)
 * [Get in touch](#get-in-touch)
 * [Contributing through GitHub](#contributing-through-github)
 * [Where to start: wiki, code and templates](#where-to-start-wiki-code-and-templates)
 * [Where to start: labels](#where-to-start-labels)
 * [Make a change with a pull request](#making-a-change-with-a-pull-request)
+  * [Example pull request](#example-pull-request)
 * [Recognizing contributions](#recognizing-contributions)
 
 
@@ -36,7 +39,7 @@ There are lots of ways to get in touch with the team maintaining the BIDS Starte
 * The [BIDS mailing list][bids-mailinglist]
 * The [Neurostars Forum][neurostars-forum]. 
   * This is our preferred way to answer questions so that others who have similar questions can benefit too! Even if your question is not well-defined, just post what you have so far and we will be able to point you in the right direction!
-  * Some examples issue include: [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364) and [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
+  * Some examples issues include: [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364) and [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
 
 If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. He'll be monitoring all the channels above and it would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Don't be shy, the newer you are the more valuable your feedback is :thumbsup:
 
@@ -58,8 +61,7 @@ Most of the writing that you'll do will be in [Markdown][markdown]. You can thin
 
 ## Where to start: wiki, code and templates
 
-### Wiki [Link][bids-starterkit-wiki]
-
+### Wiki ([link][bids-starterkit-wiki])
 
 We hope that the easiest place to find information about BIDS is the [**starter kit wiki**][bids-starterkit-wiki].
 
@@ -67,13 +69,13 @@ You only need to be logged in to GitHub to edit the wiki. So, there's no need fo
 
 Here's a useful [introduction to GitHub wikis][intro-github-wiki]. Have a read through the pages that already exist in the wiki and please EDIT AWAY! :muscle::boom::sparkles:
 
-### Code [Link][bids-starterkit-repo]
+### Code ([link][bids-starterkit-repo])
 
 This repository is under development, but we hope that it becomes a useful place for people to share and find small snippets of code that are useful for getting started with BIDS.
 
 To contribute to the codebase you'll need to submit a pull request. Check out our [guidelines](#making-a-change-with-a-pull-request) below.
 
-### Templates [Link][bids-starterkit-repo]
+### Templates ([link][bids-starterkit-repo])
 
 This repository is under development, but we aim to have two templates for each BIDS sidecar file: one with a full example (all required/recommended/optional fields), and one with a minimal example (only required fields).
 
@@ -83,13 +85,42 @@ To contribute a template you'll need to submit a pull request. Check out our [gu
 
 The list of labels for current issues can be found [here][bids-starterkit-labels] and includes:
 
-* ![Help Wanted](https://img.shields.io/badge/-help%20wanted-159818.svg) *These issues contain a task that a member of the team has determined we need additional help with.*
+* [![Help Wanted](https://img.shields.io/badge/-help%20wanted-159818.svg)][labels-helpwanted] *These issues contain a task that a member of the team has determined we need additional help with.*
 
     If you feel that you can contribute to one of these issues, we especially encourage you to do so!
 
-* ![Requests](https://img.shields.io/badge/-requests-fbca04.svg) *These issues are asking for new features to be added to the project.*
+* [![Question](https://img.shields.io/badge/-question-cc317c.svg)][labels-question] *These issues contain a question that you'd like to have answered.*
 
-    Please try to make sure that your requested feature is distinct from any others that have already been requested or implemented. If you find one that's similar but there are subtle differences please reference the other request in your issue.
+    There are [lots of ways to ask questions](#get-in-touch) but opening an issue is a great way to start a conversation and get your answer. Ideally, we'll close it out by ***[adding the answer to the wiki][bids-starterkit-wiki]!***
+
+* [![Enhancement](https://img.shields.io/badge/-enhancement-84b6eb.svg)][labels-enhancement] *These issues are suggesting new features that can be added to the project.*
+
+    If you want to ask for something new, please try to make sure that your request is distinct from any others that are already in the queue (or part of the starter kit!). If you find one that's similar but there are subtle differences please reference the other enhancement in your issue.
+
+* [![Documentation](https://img.shields.io/badge/-documentation-ffd700.sv)][labels-documentation] *These issues relate to improving or updating the documentation.*
+
+    These are usually really great issues to help out with: our goal is to make it easy to understand BIDS without having to ask anyone any questions! Documentation is the ultimate solution :trophy:
+
+* [![Community](https://img.shields.io/badge/-community-8605c1.svg)][labels-community] *These issues relate to building and supporting the BIDS community.*
+
+    BIDS won't work if people don't use the standard! YOU are the BIDS community, and we want to know how best to support you.
+
+* [![Bug](https://img.shields.io/badge/-bug-ee0701.svg)][labels-bug] *These issues are reporting a problem or a mistake in the project.*
+
+    The more details you can provide the better! If you know how to fix the bug, please open an issue first and then [submit a pull request](#making-a-change-with-a-pull-request) :sparkles:
+
+* [![Closing Soon](https://img.shields.io/badge/-closing%20soon-ed6186.svg)][labels-closingsoon] *These issues are closing soon...get your opinions in asap!*
+
+    This label is mostly used to indicate that an old issue is about to be closed, or that a final decision is going to be made on a long running discussion. Speak now....or open a new issue when this one is gone :stuck_out_tongue_winking_eye:
+
+* [![Funding](https://img.shields.io/badge/-funding-55e0c2.svg)][labels-funding] *These issues relate to finding money money money to keep building the project*
+
+    We'd love to hear about any opportunities for funding to keep building the BIDS Starter Kit :moneybag:
+
+* [![Logistics](https://img.shields.io/badge/-logistics-deaefc.svg)][labels-logistics] *These issues relate to project management for the BIDS starter kit*
+
+    We like to model best practice, so the BIDS Starter Kit itself is managed through these issues. We may occasionally have some to coordinate some logistics.
+
 
 ## Making a change with a pull request
 
@@ -169,6 +200,16 @@ You're awesome. :wave::smiley:
 [github-syncfork]: https://help.github.com/articles/syncing-a-fork
 [gitter]: https://gitter.im/INCF/bids-starter-kit
 [gsoc]: https://summerofcode.withgoogle.com
+[labels-link]: https://github.com/INCF/BIDS-Starter-Kit/labels
+[labels-bug]: https://github.com/INCF/BIDS-Starter-Kit/labels/bug
+[labels-closingsoon]: https://github.com/INCF/BIDS-Starter-Kit/labels/closing%20soon
+[labels-community]: https://github.com/INCF/BIDS-Starter-Kit/labels/community
+[labels-documentation]: https://github.com/INCF/BIDS-Starter-Kit/labels/documentation
+[labels-enhancement]: https://github.com/INCF/BIDS-Starter-Kit/labels/enhancement
+[labels-funding]: https://github.com/INCF/BIDS-Starter-Kit/labels/funding
+[labels-helpwanted]: https://github.com/INCF/BIDS-Starter-Kit/labels/help%20wanted
+[labels-logistics]: https://github.com/INCF/BIDS-Starter-Kit/labels/logistics
+[labels-question]: https://github.com/INCF/BIDS-Starter-Kit/labels/question
 [jerry-maguire]: https://media.giphy.com/media/uRb2p09vY8lEs/giphy.gif
 [markdown]: https://daringfireball.net/projects/markdown
 [neurostars-forum]: https://neurostars.org/tags/bids
