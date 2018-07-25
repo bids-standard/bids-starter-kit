@@ -41,7 +41,7 @@
 <h2 align="center">Click to view the intro video!</h2>
 
 <div align="center">
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0" target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0" target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg"
 alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 </div>
 
@@ -54,7 +54,7 @@ alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 - [Acknowledgements](#acknowledgements)
 
 ## Project Summary
-Neuroimaging scans can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but the many different specifications of these acquired images cause portability issues between different labs and scientists. BIDS (Brain Imaging Data Structure) is a framework for organizing data that standardizes file organization and dataset description between different researchers. 
+Neuroimaging scans can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but the many different specifications of these acquired images cause portability issues between different labs and scientists. BIDS (Brain Imaging Data Structure) is a framework for organizing data that standardizes file organization and dataset description between different researchers.
 
 ### How do I find information?
 For general information to help you get started with BIDS, we reccommend the [wiki](https://github.com/INCF/bids-starter-kit/wiki). It includes pages such as an overall introduction to the BIDS folder structure, links to tutorials, and a glossary to help you with some of the technical terms.
@@ -84,10 +84,16 @@ BIDS is for everyone! Programming is not required, it simply makes some processe
 
 ## Contributing
 
-There are many ways to get in touch with us! Please see our [Contact Page](https://github.com/INCF/BIDS-Starter-Kit/wiki/Contact)
+There are many ways to get in touch with us! Please see our [Contact Page](https://github.com/INCF/BIDS-Starter-Kit/wiki/Contact) for all the details.
 
-To post on this repository about any questions, suggestions, etc please [open an issue](https://github.com/INCF/bids-starter-kit/issues) or make your own addition to the wiki or do a pull request to the code.
+To find out more about all the different ways to contribute to the BIDS Starter Kit, check out our [**contributing guidelines**](CONTRIBUTING.md). They'll tell you how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful resources to help you [contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or how to make a change [using issues](#where-to-start-issue-labels) and a [pull request](#making-a-change-with-a-pull-request).
+
+If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. It would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Please don't be shy, **the newer you are the more valuable your feedback is** :thumbsup:
 
 ## Acknowledgements
 ![incf](https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM)
 ![gsoc](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png)
+
+
+[gsoc]: https://summerofcode.withgoogle.com
+[patrick-github]: https://github.com/Park-Patrick
