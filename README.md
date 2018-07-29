@@ -91,9 +91,24 @@ To find out more about all the different ways to contribute to the BIDS Starter 
 If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. It would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Please don't be shy, **the newer you are the more valuable your feedback is** :thumbsup:
 
 ## Acknowledgements
-![incf](https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM)
-![gsoc](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png)
 
+### Sponsor Organizations
+
+<img src="https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM" width="200" height="125" /> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png" width="125" height="125" />
+
+### Publications
+
+**Please consider citing the relevant papers when publishing a project that uses BIDS** 
+
+[The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](https://www.nature.com/articles/sdata201644)
+
+>Scientific Data volume 3, Article number: 160044 (2016)
+
+<br>
+
+[MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110)
+
+>Scientific Data volume 5, Article number: 180110 (2018)
 
 [gsoc]: https://summerofcode.withgoogle.com
 [patrick-github]: https://github.com/Park-Patrick
