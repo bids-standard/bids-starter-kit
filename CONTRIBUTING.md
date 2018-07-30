@@ -97,7 +97,7 @@ The list of labels for current issues can be found [here][bids-starterkit-labels
 
     If you want to ask for something new, please try to make sure that your request is distinct from any others that are already in the queue (or part of the starter kit!). If you find one that's similar but there are subtle differences please reference the other enhancement in your issue.
 
-* [![Documentation](https://img.shields.io/badge/-documentation-ffd700.sv)][labels-documentation] *These issues relate to improving or updating the documentation.*
+* [![Documentation](https://img.shields.io/badge/-documentation-ffd700.svg)][labels-documentation] *These issues relate to improving or updating the documentation.*
 
     These are usually really great issues to help out with: our goal is to make it easy to understand BIDS without having to ask anyone any questions! Documentation is the ultimate solution :trophy:
 
