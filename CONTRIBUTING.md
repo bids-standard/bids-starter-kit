@@ -85,13 +85,17 @@ To contribute a template you'll need to submit a pull request. Check out our [gu
 
 The list of labels for current issues can be found [here][bids-starterkit-labels] and includes:
 
-* [![Help Wanted](https://img.shields.io/badge/-help%20wanted-159818.svg)][labels-helpwanted] *These issues contain a task that a member of the team has determined we need additional help with.*
+* [![help-wanted](https://img.shields.io/badge/-help%20wanted-159818.svg)][labels-helpwanted] *These issues contain a task that a member of the team has determined we need additional help with.*
 
     If you feel that you can contribute to one of these issues, we especially encourage you to do so!
 
 * [![Question](https://img.shields.io/badge/-question-cc317c.svg)][labels-question] *These issues contain a question that you'd like to have answered.*
 
     There are [lots of ways to ask questions](#get-in-touch) but opening an issue is a great way to start a conversation and get your answer. Ideally, we'll close it out by ***[adding the answer to the wiki][bids-starterkit-wiki]!***
+
+* [![good-first-issue](https://img.shields.io/badge/-good%20first%20issue-1b3487.svg)][labels-firstissue] *These issues are particularly appropriate if it is your first contribution to the BIDS Starter Kit, or to GitHub overall.*
+
+    If you're not sure about how to go about contributing, these are good places to start. You'll be mentored through the process by the maintainers team. If you're a seasoned contributor, please select a different issue to work from and keep these available for the newer and potentially more anxious team members.
 
 * [![Enhancement](https://img.shields.io/badge/-enhancement-84b6eb.svg)][labels-enhancement] *These issues are suggesting new features that can be added to the project.*
 
@@ -206,6 +210,7 @@ You're awesome. :wave::smiley:
 [labels-community]: https://github.com/INCF/BIDS-Starter-Kit/labels/community
 [labels-documentation]: https://github.com/INCF/BIDS-Starter-Kit/labels/documentation
 [labels-enhancement]: https://github.com/INCF/BIDS-Starter-Kit/labels/enhancement
+[labels-firstissue]: https://github.com/INCF/BIDS-Starter-Kit/labels/good%20first%20issue
 [labels-funding]: https://github.com/INCF/BIDS-Starter-Kit/labels/funding
 [labels-helpwanted]: https://github.com/INCF/BIDS-Starter-Kit/labels/help%20wanted
 [labels-logistics]: https://github.com/INCF/BIDS-Starter-Kit/labels/logistics
