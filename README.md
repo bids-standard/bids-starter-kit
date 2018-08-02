@@ -98,7 +98,12 @@ If you're here during summer 2018 :icecream::palm_tree:, you should reach out to
 
 ### Sponsor Organizations
 
-<img src="https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM" width="200" height="125" /> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png" width="125" height="125" />
+
+
+<a href="https://summerofcode.withgoogle.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png" width="125" height="125" title="GSOC" alt="GSOC"></a>
+<a href="https://www.incf.org/"><img src="https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM" width="200" height="125" title="INCF" alt="INCF"></a>
+<a href="http://www.arnoldfoundation.org/laura-and-john-arnold-foundation-announces-3-8-million-grant-to-stanford-university-to-improve-the-quality-of-neuroscience-research/"><img src="http://www.arnoldfoundation.org/wp-content/themes/arnoldfoundation/images/logo.svg" width="200" height="125" title="LJA-foundation" alt="LJA-foundation"></a>
+<a href="http://grantome.com/grant/NIH/R24-MH114705-01"><img src="http://grantome.com/images/funders/NIH.png" width="125" height="125" title="NIH" alt="NIH"></a>
 
 ### Publications
 
