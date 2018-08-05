@@ -53,8 +53,12 @@ alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 
+## Motivation 
+The primary goal of this project is to simplify the process of learning about the Brain Imaging Data Structure (BIDS). We hope that the resources in this wiki, such as links to tutorials, easy-to-read documentation, and code will make BIDS easier to adopt. In order to remain up to date with the continuously changing BIDS specifications, we have adopted a similarly open model to allow [contributions](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md) from the community. 
+
+
 ## Project Summary
-Neuroimaging scans can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but the many different specifications of these acquired images cause portability issues between different labs and scientists. BIDS (Brain Imaging Data Structure) is a framework for organizing data that standardizes file organization and dataset description between different researchers.
+Neuroimaging and neurophysiology data can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but the many different specifications of these acquired images cause portability issues between different labs and scientists. BIDS is a framework for organizing data that standardizes file organization and dataset description between different researchers.
 
 ### How do I find information?
 For general information to help you get started with BIDS, we reccommend the [wiki](https://github.com/INCF/bids-starter-kit/wiki). It includes pages such as an overall introduction to the BIDS folder structure, links to tutorials, and a glossary to help you with some of the technical terms.
@@ -91,9 +95,29 @@ To find out more about all the different ways to contribute to the BIDS Starter 
 If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. It would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Please don't be shy, **the newer you are the more valuable your feedback is** :thumbsup:
 
 ## Acknowledgements
-![incf](https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM)
-![gsoc](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png)
 
+### Sponsor Organizations
+
+
+
+<a href="https://summerofcode.withgoogle.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png" width="125" height="125" title="GSOC" alt="GSOC"></a>
+<a href="https://www.incf.org/"><img src="https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM" width="200" height="125" title="INCF" alt="INCF"></a>
+<a href="http://www.arnoldfoundation.org/laura-and-john-arnold-foundation-announces-3-8-million-grant-to-stanford-university-to-improve-the-quality-of-neuroscience-research/"><img src="http://www.arnoldfoundation.org/wp-content/themes/arnoldfoundation/images/logo.svg" width="200" height="125" title="LJA-foundation" alt="LJA-foundation"></a>
+<a href="http://grantome.com/grant/NIH/R24-MH114705-01"><img src="http://grantome.com/images/funders/NIH.png" width="125" height="125" title="NIH" alt="NIH"></a>
+
+### Publications
+
+**Please consider citing the relevant papers when publishing a project that uses BIDS** 
+
+[The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](https://www.nature.com/articles/sdata201644)
+
+>Scientific Data volume 3, Article number: 160044 (2016)
+
+<br>
+
+[MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110)
+
+>Scientific Data volume 5, Article number: 180110 (2018)
 
 [gsoc]: https://summerofcode.withgoogle.com
 [patrick-github]: https://github.com/Park-Patrick
