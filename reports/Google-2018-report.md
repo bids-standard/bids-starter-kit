@@ -1,3 +1,7 @@
+Please note this report is regarding the BIDS Starter Kit. 
+
+If you have reached this page from a different source, please visit the front page of the repository at: https://github.com/INCF/BIDS-Starter-Kit
+
 ## The Big Picture
 
 An open source project is one where code and some data is shared publicly. 
