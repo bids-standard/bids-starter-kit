@@ -20,7 +20,16 @@ In neuroscience, data such as magnetic resonance images and physiology readings 
 
 ## My role
 
-The primary goal of this project was to simplify the process of learning about BIDS and engage more users. Well before it was funded by Google, the roots of this initiative were being pioneered by a small group of people around the world that were acting as local BIDS ambassadors in their communities. Many of us were already giving presentations at every workshop and conference possible. However, these were only for a limited audience, and there was a need for central organization. We hoped to create a central repository accessible to everyone that would contain easy to read documentation and a collection of useful resources. 
+The primary goal of this project was to simplify the process of learning about BIDS and engage more users.
+Well before it was funded by Google, the roots of this initiative were being pioneered by a small group of people around the world that were acting as local BIDS ambassadors in their communities.
+Many of us were already giving presentations at every workshop and conference possible.
+However, these were only for a limited audience, and there was a need for central organization.
+We hoped to create a central repository accessible to everyone that would contain easy to read documentation and a collection of useful resources. 
+
+**[ADD A FEW SENTENCES HERE ABOUT WHAT **YOU** (Patrick) did for the starter kit.]**
+
+It was my responsibility over the Google Summer of Code to be the lead maintainer of the repository.
+I was in charge of managing issues and pull requests, and for responding to request from the senior developers and new contributors a like.
 
 
 ## Problem definitions and solutions
@@ -35,19 +44,27 @@ From there, we broke it down into a series of more discrete problems.
 
 :o: **Problem** Which parts of BIDS are people finding most difficult?
 
-:heavy_check_mark: **Solution** Through both formal surveys and informal chats, we got feedback from the newcomers to BIDS. The results showed that people were most confused by the technical jargon and metadata file formats.
+:heavy_check_mark: **Solution** Through both formal surveys and informal chats, I got feedback from the newcomers to BIDS.
+The results showed that people were most confused by the technical jargon and metadata file formats.
 
 <br>
 
 :o: **Problem** The technical documentation about BIDS can be overwhelming.
 
-:heavy_check_mark: **Solution** We developed an easy to read reference called the BIDS Starter Kit Wiki. What started as a two page document quickly grew into a compilation of information, tutorials, examples, a glossary, publications, community resources, and many more.
+:heavy_check_mark: **Solution** I developed an easy to read reference called the [BIDS Starter Kit Wiki](https://github.com/INCF/bids-starter-kit/wiki).
+What started as a two page document quickly grew into a compilation of information, tutorials, examples, a glossary, publications, community resources, and many more.
 
 <br>
 
 :o: **Problem** Engage more users
 
-:heavy_check_mark: **Solution** In person, our team continued to spread the word about the project during any relevant events. Online, we created an animated video to summarize the general idea and make the first step that much easier. We also used the “good-first-issue” principle to periodically leave small mistakes in our repository unfixed, such as a typo or an undefined term in the glossary. Then, we would send out a request and guide a new contributor through the process of using the repository. 
+:heavy_check_mark: **Solution** In person, our team continued to spread the word about the project during any relevant events.
+Online, we created an [animated video](https://camo.githubusercontent.com/aada478abaddf957a3622589a5c370f11bf67642/687474703a2f2f696d672e796f75747562652e636f6d2f76692f425964686a5675427347302f302e6a7067) to summarize the general idea and make the first step that much easier.
+We developed [extensive contribution guidelines](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md) to help new contributors add their expertise to the project.
+We include how to [get in touch](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#get-in-touch), [write in markdown](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#writing-in-markdown), [submit a pull request](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#making-a-change-with-a-pull-request) and explanations of where to put [useful code or links in the wiki](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#where-to-start-wiki-code-and-templates).
+The licence on our repository is CC-BY and these guidelines have already been incorporated into other open source neuroimaging projects such as [NiBetaSeries](https://nibetaseries.readthedocs.io/en/latest/contributing.html).
+We also used the [“good-first-issue” principle](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#where-to-start-issue-labels) to periodically leave small mistakes in our repository unfixed, such as a typo or an undefined term in the glossary.
+Then, we would send out a request and guide a new contributor through the process of using the repository. 
 
 As a result, the number of unique visitors grew from less than 5 to peaks of over 50 per day.
 
@@ -66,7 +83,11 @@ Summarizing an unnecessary meeting into a message is efficient, but familiarity 
 
 ## Personal notes
 
-Four months ago, as an electrical engineer, a community development job might have meant laying power transmission lines to a new town. Now it means making sure people don’t get lost on their way. The toughest part at first was definitely the uncertainty -- a document doesn’t have errors and nobody leaves detailed feedback about why they *didn’t* feel welcomed. But I’m glad to have finally learned the natural continuation of what happens as a tool reaches maturity. To every mentor, collaborator, administrator, and user that has been a part of this project so far, thank you for all the help and feel free to message because I’ll still be staying involved!
+Four months ago, as an electrical engineer, a community development job might have meant laying power transmission lines to a new town.
+Now it means making sure people don’t get lost on their way.
+The toughest part at first was definitely the uncertainty -- a document doesn’t have errors and nobody leaves detailed feedback about why they *didn’t* feel welcomed.
+But I’m glad to have finally learned the natural continuation of what happens as a tool reaches maturity.
+To every mentor, collaborator, administrator, and user that has been a part of this project so far, thank you for all the help and feel free to message because I’ll still be staying involved!
 
 <br>
 
