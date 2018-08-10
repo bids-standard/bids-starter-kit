@@ -15,11 +15,10 @@ prioritize transparency, diversity, and reproducibility to foster collaboration.
 Imagine you are a carrot farmer trying to make dinner. You could make carrot soup by yourself, but you could also share ingredients 
 with the neighbours to make a much tastier soup with onions, greens, and some salt. Some people may be able to contribute more than others -- but everyone benefits.
 
-
-
 In neuroscience, data such as magnetic resonance images and physiology readings can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but incompatible specifications cause portability issues between different labs and scientists. The brain imaging data standard (BIDS) is a framework for organizing data that standardizes datasets across different researchers to enable easier sharing.
 
-## Our role
+
+## My role
 
 The primary goal of this project was to simplify the process of learning about BIDS and engage more users. Well before it was funded by Google, the roots of this initiative were being pioneered by a small group of people around the world that were acting as local BIDS ambassadors in their communities. Many of us were already giving presentations at every workshop and conference possible. However, these were only for a limited audience, and there was a need for central organization. We hoped to create a central repository accessible to everyone that would contain easy to read documentation and a collection of useful resources. 
 
@@ -56,9 +55,14 @@ As a result, the number of unique visitors grew from less than 5 to peaks of ove
 
 :o: **Problem** International project management and communication
 
-:heavy_check_mark: **Solution** The members and collaborators of this project were located in Canada, Britain, the Netherlands, the USA, and India. The strategy for this problem was to work publicly. This meant rather than waiting until completion to share something, we would continuously post our work in progress and incorporate feedback. Specifically, Github milestones and “closing soon” tags were helpful to highlight weekly tasks and mark them for review. 
+:heavy_check_mark: **Solution** The members and collaborators of this project were located in Canada ([Elizabeth DuPre](https://github.com/emdupre)), Britain ([Kirstie Whitaker](https://github.com/KirstieJane)), the Netherlands ([Dora Hermes](https://github.com/dorahermes)), the USA ([Chris Gorgolewski](https://github.com/chrisfilo) and [Chris Holdgraf](https://github.com/choldgraf/)), and India **[PATRICK - who was in India?? I feel terrible that I don't know!]**.
+The strategy for this problem was to work publicly and to demonstrate best practise in open source project leadership.
+This meant rather than waiting until completion to share something, we would continuously post our work in progress and incorporate feedback.
+Specifically, Github milestones and “closing soon” tags on issues were helpful to highlight weekly tasks and mark them for review. 
 
-Despite these strategies, I still felt that the turning point of the project was in June when some of our team finally met in person. Summarizing an unnecessary meeting into a message is efficient, but familiarity is really important too.
+Despite these strategies, I still felt that the turning point of the project was in June when some of our team finally met in person at the [Organization for Human Brain Mapping Hackathon](https://ohbm.github.io/hackathon2018/).
+I was a recipient of a travel award ($500) for this event and it really made a huge difference to effective I was as maintainer and content creator for BIDS Starter Kit.
+Summarizing an unnecessary meeting into a message is efficient, but familiarity is really important too.
 
 ## Personal notes
 
@@ -67,5 +71,5 @@ Four months ago, as an electrical engineer, a community development job might ha
 <br>
 
 Patrick J. Park
-
+[ADD CONTACT DETAILS HERE]
 
