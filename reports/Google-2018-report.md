@@ -1,6 +1,8 @@
-Please note this report is regarding the BIDS Starter Kit. 
+This is Patrick Park's Google Summer of Code final report for his work on the [BIDS Starter Kit](https://github.com/INCF/BIDS-Starter-Kit).
 
-If you have reached this page from a different source, please visit the front page of the repository at: https://github.com/INCF/BIDS-Starter-Kit.
+If you have reached this page from a different source, and want an overview of the project, please check out our README file at https://github.com/INCF/BIDS-Starter-Kit.
+
+The work completed by Patrick Park during the Google Summer of Code is archived on zenodo at: [INSERT DOI] 
 
 ## The Big Picture
 
