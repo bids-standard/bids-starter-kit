@@ -2,7 +2,7 @@ This is Patrick Park's Google Summer of Code final report for his work on the [B
 
 If you have reached this page from a different source, and want an overview of the project, please check out our README file at https://github.com/INCF/BIDS-Starter-Kit.
 
-The work completed by Patrick Park during the Google Summer of Code is archived on zenodo at: [INSERT DOI] 
+The work completed by Patrick Park during the Google Summer of Code is archived on zenodo at: [![DOI](https://zenodo.org/badge/102141901.svg)](https://zenodo.org/badge/latestdoi/102141901) 
 
 ## The Big Picture
 
@@ -26,10 +26,7 @@ Many of us were already giving presentations at every workshop and conference po
 However, these were only for a limited audience, and there was a need for central organization.
 We hoped to create a central repository accessible to everyone that would contain easy to read documentation and a collection of useful resources. 
 
-**[ADD A FEW SENTENCES HERE ABOUT WHAT **YOU** (Patrick) did for the starter kit.]**
-
-It was my responsibility over the Google Summer of Code to be the lead maintainer of the repository.
-I was in charge of managing issues and pull requests, and for responding to request from the senior developers and new contributors a like.
+It way my responsibility over the Google Summer of Code to be the lead developer and maintainer of the repository. When responding to requests from both senior developers and new contributors alike, this meant breaking down requested features into action items that could be assigned to either myself or the relevant expert. Periodically, I would then go through the list of issues to make sure progress on them “die out”. As a content creator, my work was primarily focused on the README and wiki. This included writing content and enhancing user experience by designing a clear framework. 
 
 
 ## Problem definitions and solutions
@@ -72,7 +69,7 @@ As a result, the number of unique visitors grew from less than 5 to peaks of ove
 
 :o: **Problem** International project management and communication
 
-:heavy_check_mark: **Solution** The members and collaborators of this project were located in Canada ([Elizabeth DuPre](https://github.com/emdupre)), Britain ([Kirstie Whitaker](https://github.com/KirstieJane)), the Netherlands ([Dora Hermes](https://github.com/dorahermes)), the USA ([Chris Gorgolewski](https://github.com/chrisfilo) and [Chris Holdgraf](https://github.com/choldgraf/)), and India **[PATRICK - who was in India?? I feel terrible that I don't know!]**.
+:heavy_check_mark: **Solution** The members of this project were located in Canada ([Elizabeth DuPre](https://github.com/emdupre)), Britain ([Kirstie Whitaker](https://github.com/KirstieJane)), the Netherlands ([Dora Hermes](https://github.com/dorahermes)), the USA ([Chris Gorgolewski](https://github.com/chrisfilo) and [Chris Holdgraf](https://github.com/choldgraf/)), as well as a collaborator from India ([Madhur Tandon](https://github.com/madhur-tandon)).
 The strategy for this problem was to work publicly and to demonstrate best practise in open source project leadership.
 This meant rather than waiting until completion to share something, we would continuously post our work in progress and incorporate feedback.
 Specifically, Github milestones and “closing soon” tags on issues were helpful to highlight weekly tasks and mark them for review. 
@@ -92,5 +89,11 @@ To every mentor, collaborator, administrator, and user that has been a part of t
 <br>
 
 Patrick J. Park
-[ADD CONTACT DETAILS HERE]
+
+
+Senior undergraduate student in Electrical Engineering (BESc) at Western University, Canada
+
+parkpatrickj@gmail.com
+
+Github: [Park-Patrick](https://github.com/Park-Patrick)
 
