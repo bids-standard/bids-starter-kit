@@ -20,7 +20,7 @@
       Wiki
     </a>
      <span> | </span>
-    <a href="https://docs.google.com/document/d/1HFUkAEE-pB-angVcYe6pf_-fVf4sCpOHKesUvfb8Grc/edit">
+    <a href="http://bids.neuroimaging.io/bids_spec.pdf">
       Standard
     </a>
     <span> | </span>
