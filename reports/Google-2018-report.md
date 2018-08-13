@@ -82,7 +82,7 @@ This meant rather than waiting until completion to share something, we would con
 Specifically, Github milestones and “closing soon” tags on issues were helpful to highlight weekly tasks and mark them for review. 
 
 Despite these strategies, I still felt that the turning point of the project was in June when some of our team finally met in person at the [Organization for Human Brain Mapping Hackathon](https://ohbm.github.io/hackathon2018/).
-I was a recipient of a travel award ($500) for this event and it really made a huge difference to in my effectiveness as maintainer and content creator for BIDS Starter Kit.
+I was a recipient of a travel award ($500) for this event and it really made a huge difference in my effectiveness as maintainer and content creator for BIDS Starter Kit.
 Summarizing an unnecessary meeting into a message is efficient, but familiarity is really important too.
 
 
