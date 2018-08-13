@@ -12,10 +12,13 @@ prioritize transparency, diversity, and reproducibility to foster collaboration.
 
 <img align="right" width="35%" src="https://i.imgur.com/zxmd6W5.jpg" alt="sharing-pot"/>
 
-Imagine you are a carrot farmer trying to make dinner. You could make carrot soup by yourself, but you could also share ingredients 
-with the neighbours to make a much tastier soup with onions, greens, and some salt. Some people may be able to contribute more than others -- but everyone benefits.
+Imagine you are a carrot farmer trying to make dinner. You could make carrot soup by yourself, but you could also share ingredients with the neighbours to make a much tastier soup with onions, greens, and some salt.
+Some people may be able to contribute more than others -- but everyone benefits.
 
-In neuroscience, data such as magnetic resonance images and physiology readings can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but incompatible specifications cause portability issues between different labs and scientists. The brain imaging data standard (BIDS) is a framework for organizing data that standardizes datasets across different researchers to enable easier sharing.
+In neuroscience, data such as magnetic resonance images and physiology readings can be costly in both time and money to acquire.
+This creates a barrier for many underfunded researchers without access to the required equipment.
+Responsible data sharing can level the playing field, but incompatible specifications cause portability issues between different labs and scientists.
+The brain imaging data standard (BIDS) is a framework for organizing data that standardizes datasets across different researchers to enable easier sharing.
 
 
 ## My role
@@ -23,11 +26,15 @@ In neuroscience, data such as magnetic resonance images and physiology readings 
 The primary goal of this project was to simplify the process of learning about BIDS and engage more users.
 Well before it was funded by Google, the roots of this initiative were being pioneered by a small group of people around the world that were acting as local BIDS ambassadors in their communities.
 Many of us were already giving presentations at every workshop and conference possible.
-However, these were only for a limited audience, and there was a need for central organization.
+However, these were only for a limited audience, and there was a need for central organization of these resources.
 We hoped to create a central repository accessible to everyone that would contain easy to read documentation and a collection of useful resources. 
 
-It way my responsibility over the Google Summer of Code to be the lead developer and maintainer of the repository. When responding to requests from both senior developers and new contributors alike, this meant breaking down requested features into action items that could be assigned to either myself or the relevant expert. Periodically, I would then go through the list of issues to make sure progress on them “die out”. As a content creator, my work was primarily focused on the README and wiki. This included writing content and enhancing user experience by designing a clear framework. 
-
+It was my responsibility over the Google Summer of Code to be the lead developer and maintainer of the repository.
+When responding to requests from both senior developers and new contributors alike, this meant breaking down requested features into action items that could be assigned to either myself or the relevant expert.
+Periodically, I would then go through the list of issues to make sure progress on them did not “die out”.
+As a content creator, my work was primarily focused on the README and wiki.
+This included writing content and enhancing user experience by designing a clear framework. 
+Although much of this work was documentation, I had to be able to understand the specification to a high technical standard - including the [BIDS Apps software](http://bids-apps.neuroimaging.io/apps/) that are built from docker images - in order to communicate the information to new users.
 
 ## Problem definitions and solutions
 
@@ -90,10 +97,9 @@ To every mentor, collaborator, administrator, and user that has been a part of t
 
 Patrick J. Park
 
-
 Senior undergraduate student in Electrical Engineering (BESc) at Western University, Canada
 
-parkpatrickj@gmail.com
+Email: parkpatrickj@gmail.com
 
 Github: [Park-Patrick](https://github.com/Park-Patrick)
 
