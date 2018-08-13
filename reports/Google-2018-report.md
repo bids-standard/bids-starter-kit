@@ -88,9 +88,8 @@ Summarizing an unnecessary meeting into a message is efficient, but familiarity 
 
 ## Personal notes
 
-Four months ago, as an electrical engineer, a community development job might have meant laying power transmission lines to a new town.
-Now it means making sure people don’t get lost on their way.
-The toughest part at first was definitely the uncertainty -- a document doesn’t have errors and nobody leaves detailed feedback about why they *didn’t* feel welcomed.
+
+As my first foray into community development and international project handling, the toughest part at first was definitely the uncertainty -- a document doesn’t have errors and nobody leaves detailed feedback about why they *didn’t* feel welcomed.
 But I’m glad to have finally learned the natural continuation of what happens as a tool reaches maturity.
 To every mentor, collaborator, administrator, and user that has been a part of this project so far, thank you for all the help and feel free to message because I’ll still be staying involved!
 
