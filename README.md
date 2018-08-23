@@ -90,9 +90,12 @@ BIDS is for everyone! Programming is not required, it simply makes some processe
 
 There are many ways to get in touch with us! Please see our [Contact Page](https://github.com/INCF/BIDS-Starter-Kit/wiki/Contact) for all the details.
 
-To find out more about all the different ways to contribute to the BIDS Starter Kit, check out our [**contributing guidelines**](CONTRIBUTING.md). They'll tell you how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful resources to help you [contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or how to make a change [using issues](#where-to-start-issue-labels) and a [pull request](#making-a-change-with-a-pull-request).
+To find out more about all the different ways to contribute to the BIDS Starter Kit, check out our [**contributing guidelines**](CONTRIBUTING.md).
+They'll tell you how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful resources to help you [contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or how to make a change [using issues](CONTRIBUTING.md#where-to-start-issue-labels) (you can also check out GitHub's help on [issues](https://help.github.com/articles/about-issues)) and a [pull request](CONTRIBUTING.md#making-a-change-with-a-pull-request).
 
-If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. It would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Please don't be shy, **the newer you are the more valuable your feedback is** :thumbsup:
+If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github].
+It would really help his project along if you said hello and passed along any feedback you have :purple_heart:.
+Please don't be shy, **the newer you are the more valuable your feedback is** :thumbsup:
 
 ## Acknowledgements
 
