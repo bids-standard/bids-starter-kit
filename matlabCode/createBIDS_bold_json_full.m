@@ -1,8 +1,10 @@
 %% Template Matlab script to create an BIDS compatible _bold.json file
 % This example lists all required and optional fields.
-% When adding additional metadata please use the camelcase version of DICOM ontology terms whenever possible.
+% When adding additional metadata please use CamelCase 
+% Use version of DICOM ontology terms whenever possible.
 %
 % DHermes, 2017
+% modified RG 201809
 
 %%
 
@@ -14,7 +16,6 @@ task_label = 'FullExample';
 run_label = '01';
 
 % you can also have acq- and proc-, but these are optional
-
 bold_json_name = fullfile(root_dir,project_label,[ 'sub-' sub_label ],...
     ['ses-' ses_label],...
     'func',...
@@ -23,57 +24,321 @@ bold_json_name = fullfile(root_dir,project_label,[ 'sub-' sub_label ],...
     '_task-' task_label ...
     '_run-' run_label '_bold.json']);
 
-%%
 
-% General fields, shared with MRI BIDS and MEG BIDS:
-% Required fields:
-bold_json.TaskName = ''; % Name of the task (for resting state use the ?rest? prefix). No two tasks should have the same name. Task label is derived from this field by removing all non alphanumeric ([a-zA-Z0-9]) characters. 
-bold_json.RepetitionTime = []; % The time in seconds between the beginning of an acquisition of one volume and the beginning of acquisition of the volume following it (TR). Please note that this definition includes time between scans (when no data has been acquired) in case of sparse acquisition schemes. This value needs to be consistent with the ?pixdim[4]? field (after accounting for units stored in ?xyzt_units? field) in the NIfTI header 
 
-% Recommended fields:
-bold_json.Manufacturer = ''; % Manufacturer of the equipment that produced the composite instances. Corresponds to DICOM Tag 0008, 0070 ?Manufacturer? .
-bold_json.ManufacturersModelName = ''; % Manufacturer`s model name of the equipment that produced the composite instances. Corresponds to DICOM Tag 0008, 1090 ?Manufacturers Model Name?.
-bold_json.MagenticFieldStrength = ''; % Nominal field strength of MR magnet in Tesla. Corresponds to DICOM Tag 0018,0087 ?Magnetic Field Strength? .
-bold_json.DeviceSerialNumber = ''; % The serial number of the equipment that produced the composite instances. A pseudonym can also be used to prevent the equipment from being identifiable, as long as each pseudonym is unique within the dataset.
-bold_json.SoftwareVersions = ''; % Manufacturer?s designation of software version of the equipment that produced the composite instances. Corresponds to DICOM Tag 0018, 1020 ?Software Versions?
-bold_json.ReceiveCoilName = '';% Information describing the receiver coil (Note: This isn?t a consistent field name across vendors. This name is the dcmstack output from a GE dataset, but it doesn?t seem to be simply coded into the dcmstack output for a Siemens scan). This doesn?t correspond to a term in the DICOM ontology
-bold_json.GradientSetType = '';% It should be possible to infer the gradient coil from the scanner model. If not, because of a custom upgrade or use of a gradient insert set, then the specifications of the actual gradient coil should be reported independently.
-bold_json.MRTransmitCoilSequence = '';% This is a relevant field if a non-standard transmit coil is used. Corresponds to DICOM Tag 0018, 9049 ?MR Transmit Coil Sequence?
-bold_json.MatrixCoilMode = '';% (If used) A method for reducing the number of independent channels by combining in analog the signals from multiple coil elements. There are typically different default modes when using un-accelerated or accelerated ( GRAPPA, SENSE) imaging.
-bold_json.CoilCombinationMethod = '';%  Almost all fMRI studies using phased-array coils use root-sum-of-squares (rSOS) combination, but other methods exist. The image reconstruction is changed by the coil combination method (as for the matrix coil mode above), so anything non-standard should be reported.
+%% Required fields
+% REQUIRED Name of the task (for resting state use the ?rest? prefix). No two tasks 
+% should have the same name. Task label is derived from this field by 
+% removing all non alphanumeric ([a-zA-Z0-9]) characters. 
+bold_json.TaskName = ''; 
 
-bold_json.PulseSequenceType = '';% A general description of the pulse sequence used for the scan (i.e. MPRAGE, Gradient Echo EPI, Spin Echo EPI, Multiband gradient echo EPI). 
-bold_json.PulseSequenceDetails = '';% Information beyond pulse sequence type that identifies the specific pulse sequence used (I.e. "Standard Siemens Sequence distributed with the VB17 software,? ?Siemens WIP ### version #.##,? or ?Sequence written by X using a version compiled on MM/DD/YYYY?).
-bold_json.NumberShots = '';% The number of RF excitations need to reconstruct a slice or volume. Please mind that this is not the same as Echo Train Length which denotes the number of lines of k-space collected after an excitation.
-bold_json.ParallelReductionFactorInPlane = '';% The parallel imaging (e.g, GRAPPA) factor. Use the denominator of the fraction of k-space encoded for each slice. For example, 2 means half of k-space is encoded. Corresponds to DICOM Tag 0018, 9069 ?Parallel Reduction Factor In-plane?.
-bold_json.ParallelAcquisitionTechnique = '';% The type of parallel imaging used (e.g. GRAPPA, SENSE). Corresponds to DICOM Tag 0018, 9078 ?Parallel Acquisition Technique?.
-bold_json.PartialFourier = '';% The fraction of partial Fourier information collected. Corresponds to DICOM Tag 0018, 9081 ?Partial Fourier?.
-bold_json.PartialFourierDirection = '';%The direction where only partial Fourier information was collected. Corresponds to DICOM Tag 0018, 9036 ?Partial Fourier Direction?. 
-bold_json.PhaseEncodingDirection  = '';% Possible values: ?i?, ?j?, ?k?, ?i-?, ?j-?, ?k-?. The letters ?i?, ?j?, ?k? correspond to the first, second and third axis of the data in the NIFTI file. The polarity of the phase encoding is assumed to go from zero index to maximum index unless ?-? sign is present (then the order is reversed - starting from the highest index instead of zero). PhaseEncodingDirection is defined as the direction along which phase is was modulated which may result in visible distortions. Note that this is not the same as the DICOM term InPlanePhaseEncodingDirection which can have ?ROW? or ?COL? values. This parameter is required if a corresponding fieldmap data is present or when using multiple runs with different phase encoding directions (which can be later used for field inhomogeneity correction).
-bold_json.EffectiveEchoSpacing  = '';% The sampling interval also known as the dwell time; required for unwarping distortions using field maps; expressed in seconds. See here how to calculate it. This parameter is required if a corresponding fieldmap data is present.
-bold_json.TotalReadoutTime  = ''; % defined as the time ( in seconds ) from the center of the first echo to the center of the last echo (aka ?FSL definition? - see here and here how to calculate it). This parameter is required if a corresponding multiple phase encoding directions fieldmap (see 8.9.4) data is present.
 
-bold_json.EchoTime = '';% The echo time (TE) for the acquisition, specified in seconds. This parameter is required if a corresponding fieldmap data is present or the data comes from a multi echo sequence. Corresponds to DICOM Tag 0018, 0081 ?Echo Time?.
-bold_json.InversionTime = '';% The inversion time (TI) for the acquisition, specified in seconds. Inversion time is the time after the middle of inverting RF pulse to middle of excitation pulse to detect the amount of longitudinal magnetization. Corresponds to DICOM Tag 0018, 0082 ?Inversion Time?.
-bold_json.SliceTiming = '';% The time at which each slice was acquired during the acquisition. Slice timing is not slice order - it describes the time (sec) of each slice acquisition in relation to the beginning of volume acquisition. It is described using a list of times (in JSON format) referring to the acquisition time for each slice. The list goes through slices along the slice axis in the slice encoding dimension (see below). This parameter is required for sparse sequences. In addition without this parameter slice time correction will not be possible.
-bold_json.SliceEncodingDirection = ''; % Possible values: ?i?, ?j?, ?k?, ?i-?, ?j-?, ?k-? (corresponding to the first, second and third axis of the data in the NIfTI file; ?-? sign corresponds to reverse order - starting from the highest index instead of zero). The axis of the NIfTI data along which a slices were acquired. This value needs to be consistent with the ?slice_dim? field in the NIfTI header.
-bold_json.NumberOfVolumesDiscardedByScanner = ''; %Number of volumes ("dummy scans") discarded by the user (as opposed to those discarded by the user post hoc) before saving the imaging file. For example, a sequence that automatically discards the first 4 volumes before saving would have this field as 4. A sequence that doesn't discard dummy scans would have this set to 0. Please note that the onsets recorded in the _event.tsv file should always refer to the beginning of the acquisition of the first volume in the corresponding imaging file - independent of the value of NumberOfVolumesDiscardedByScanner field.
-bold_json.NumberOfVolumesDiscardedByUser = '';% Number of volumes ("dummy scans") discarded by the user before including the file in the dataset. If possible, including all of the volumes is strongly recommended. Please note that the onsets recorded in the _event.tsv file should always refer to the beginning of the acquisition of the first volume in the corresponding imaging file - independent of the value of NumberOfVolumesDiscardedByUser field.
-bold_json.DelayTime = ''; % User specified time (in seconds) to delay the acquisition of data for the following volume. If the field is not present it is assumed to be set to zero. Corresponds to Siemens CSA header field lDelayTimeInTR . This field is compulsory for sparse sequences that do not have the SliceTiming field set to allowed for accurate calculation of "acquisition time".
+% REQUIRED The time in seconds between the beginning of an acquisition of 
+% one volume and the beginning of acquisition of the volume following it 
+% (TR). Please note that this definition includes time between scans 
+% (when no data has been acquired) in case of sparse acquisition schemes. 
+% This value needs to be consistent with the pixdim[4] field 
+% (after accounting for units stored in xyzt_units field) in the NIfTI header 
+bold_json.RepetitionTime = []; 
 
-bold_json.FlipAngle = '';% Flip angle for the acquisition, specified in degrees. Corresponds to: DICOM Tag 0018, 1314 ?Flip Angle?.
+%REQUIRED This field is mutually exclusive with RepetitionTime and DelayTime. 
+% If defined, this requires acquisition time (TA) be defined via either SliceTiming 
+% or AcquisitionDuration be defined.
+%
+% The time at which each volume was acquired during the acquisition. 
+% It is described using a list of times (in JSON format) referring to the 
+% onset of each volume in the BOLD series. The list must have the same length 
+% as the BOLD series, and the values must be non-negative and monotonically 
+% increasing. 
+bold_json.VolumeTiming = []; 
 
-bold_json.MultibandAccelerationFactor= ''; % The multiband factor, for multiband acquisitions.
+%RECOMMENDED This field is mutually exclusive with VolumeTiming.
+%
+% User specified time (in seconds) to delay the acquisition of 
+% data for the following volume. If the field is not present it is assumed 
+% to be set to zero. Corresponds to Siemens CSA header field lDelayTimeInTR.  
+% This field is REQUIRED for sparse sequences using the RepetitionTime field 
+% that do not have the SliceTiming field set to allowed for accurate calculation 
+% of "acquisition time". 
+bold_json.DelayTime = [];
 
-bold_json.Instructions = ''; % Text of the instructions given to participants before the scan. This is especially important in context of resting state fMRI and distinguishing between eyes open and eyes closed paradigms.
-bold_json.TaskDescription = '';% Longer description of the task.
-bold_json.CogAtlasID = '';% URL of the corresponding Cognitive Atlas Task term.
-bold_json.CogPOID = '';% URL of the corresponding CogPO term.
+%REQUIRED for sparse sequences that do not have the DelayTime field set. 
+% This parameter is required for sparse sequences. In addition without this 
+% parameter slice time correction will not be possible.
+%
+% In addition without this parameter slice time correction will not be possible.
+% The time at which each slice was acquired within each volume (frame) of  the acquisition. 
+% The time at which each slice was acquired during the acquisition. Slice 
+% timing is not slice order - it describes the time (sec) of each slice 
+% acquisition in relation to the beginning of volume acquisition. It is 
+% described using a list of times (in JSON format) referring to the acquisition 
+% time for each slice. The list goes through slices along the slice axis in the 
+% slice encoding dimension. 
+bold_json.SliceTiming = '';
 
-bold_json.InstitutionName = '';% The name of the institution in charge of the equipment that produced the composite instances. Corresponds to DICOM Tag 0008, 0080 ?InstitutionName?.
-bold_json.InstitutionAddress = '';% The address of the institution in charge of the equipment that produced the composite instances. Corresponds to DICOM Tag 0008, 0081 ?InstitutionAddress?.
+%RECOMMENDED This field is REQUIRED for sequences that are described with 
+% the VolumeTiming field and that not have the SliceTiming field set to allowed 
+% for accurate calculation of "acquisition time". This field is mutually 
+% exclusive with RepetitionTime.
+% 
+% Duration (in seconds) of volume acquisition. Corresponds to 
+% DICOM Tag 0018,9073 “Acquisition Duration”. 
+bold_json.AcquisitionDuration = [];
 
-json_options.indent = '    '; % this just makes the json file look prettier when opened in a text editor
+
+
+%% Required fields if using a fieldmap
+%REQUIRED if corresponding fieldmap data is present or when using multiple 
+% runs with different phase encoding directions PhaseEncodingDirection is 
+% defined as the direction along which phase is was modulated which may 
+% result in visible distortions.
+bold_json.PhaseEncodingDirection = '';
+
+%REQUIRED if corresponding fieldmap data is present. 
+% The effective sampling interval, specified in seconds, between lines in 
+% the phase-encoding direction, defined based on the size of the reconstructed 
+% image in the phase direction.  
+bold_json.EffectiveEchoSpacing = '';
+
+%REQUIRED if corresponding fieldmap data is present or the data comes from 
+% a multi echo sequence. The echo time (TE) for the acquisition, specified in seconds. 
+%Corresponds to DICOM Tag 0018, 0081 Echo Time
+bold_json.EchoTime = '';
+
+
+
+
+%% Recommended fields:
+
+
+%% Scanner Hardware metadata fields
+
+%RECOMMENDED Manufacturer of the equipment that produced the composite instances.
+bold_json.Manufacturer = '';
+
+%RECOMMENDED Manufacturer`s model name of the equipment that produced the 
+% composite instances. Corresponds to DICOM Tag 0008, 1090 Manufacturers Model Name.
+bold_json.ManufacturersModelName = '';
+
+%RECOMMENDED Nominal field strength of MR magnet in Tesla. Corresponds to 
+% DICOM Tag 0018,0087 Magnetic Field Strength.
+bold_json.MagneticFieldStrength = '';
+
+%RECOMMENDED The serial number of the equipment that produced the composite 
+% instances. Corresponds to DICOM Tag 0018, 1000 DeviceSerialNumber. 
+bold_json.DeviceSerialNumber = '';
+
+%RECOMMENDED Institution defined name of the machine that produced the composite 
+% instances. Corresponds to DICOM Tag 0008, 1010 Station Name
+bold_json.StationName= ' '; 
+
+%RECOMMENDED Manufacturer's designation of software version of the equipment 
+% that produced the composite instances. Corresponds to 
+% DICOM Tag 0018, 1020 Software Versions.
+bold_json.SoftwareVersions= ' ';
+
+%RECOMMENDED (Deprecated) Manufacturer's designation of the software of the 
+% device that created this Hardcopy Image (the printer). Corresponds to 
+% DICOM Tag 0018, 101A Hardcopy Device Software Version.
+bold_json.HardcopyDeviceSoftwareVersion = '';
+
+%RECOMMENDED Information describing the receiver coil
+bold_json.ReceiveCoilName= ' ' ;
+
+%RECOMMENDED Information describing the active/selected elements of the receiver coil. 
+anat_json.ReceiveCoilActiveElements = '';
+
+%RECOMMENDED the specifications of the actual gradient coil from the scanner model
+bold_json.GradientSetType = '';
+
+%RECOMMENDED This is a relevant field if a non-standard transmit coil is used. 
+% Corresponds to DICOM Tag 0018, 9049 MR Transmit Coil Sequence.
+bold_json.MRTransmitCoilSequence = '';
+
+%RECOMMENDED A method for reducing the number of independent channels by 
+% combining in analog the signals from multiple coil elements. There are 
+% typically different default modes when using un-accelerated or accelerated 
+% (e.g. GRAPPA, SENSE) imaging
+bold_json.MatrixCoilMode = '';
+
+%RECOMMENDED Almost all fMRI studies using phased-array coils use 
+% root-sum-of-squares (rSOS) combination, but other methods exist. 
+% The image reconstruction is changed by the coil combination method 
+% (as for the matrix coil mode above), so anything non-standard should be reported.
+bold_json.CoilCombinationMethod = '';
+
+
+
+%% Sequence Specifics metadata fields
+
+%RECOMMENDED A general description of the pulse sequence used for the scan 
+% (i.e. MPRAGE, Gradient Echo EPI, Spin Echo EPI, Multiband gradient echo EPI).
+bold_json.PulseSequenceType = '';
+
+%RECOMMENDED Description of the type of data acquired. Corresponds to 
+% DICOM Tag 0018, 0020 Sequence Sequence.
+bold_json.ScanningSequence = '';
+
+%RECOMMENDED Variant of the ScanningSequence. Corresponds to 
+% DICOM Tag 0018, 0021 Sequence Variant.
+bold_json.SequenceVariant = '';
+
+%RECOMMENDED Parameters of ScanningSequence. Corresponds to 
+% DICOM Tag 0018, 0022 Scan Options.
+bold_json.ScanOptions = '';
+
+%RECOMMENDED Manufacturer's designation of the sequence name. Corresponds 
+% to DICOM Tag 0018, 0024 Sequence Name.
+bold_json.SequenceName = '';
+
+%RECOMMENDED Information beyond pulse sequence type that identifies the 
+% specific pulse sequence used
+bold_json.PulseSequenceDetails = '';
+
+%RECOMMENDED Boolean stating if the image saved  has been corrected for 
+% gradient nonlinearities by the scanner sequence. 
+bold_json.NonlinearGradientCorrection = '';
+
+
+
+%% In-Plane Spatial Encoding metadata fields
+
+%RECOMMENDED The number of RF excitations need to reconstruct a slice or volume. 
+% Please mind that  this is not the same as Echo Train Length which denotes 
+% the number of lines of k-space collected after an excitation. 
+bold_json.NumberShots = '';
+
+%RECOMMENDED The parallel imaging (e.g, GRAPPA) factor. Use the denominator 
+% of the fraction of k-space encoded for each slice.
+bold_json.ParallelReductionFactorInPlane = '';
+
+%RECOMMENDED The type of parallel imaging used (e.g. GRAPPA, SENSE). 
+% Corresponds to DICOM Tag 0018, 9078 Parallel Acquisition Technique. 
+bold_json.ParallelAcquisitionTechnique = '';
+
+%RECOMMENDED The fraction of partial Fourier information collected. 
+% Corresponds to DICOM Tag 0018, 9081 Partial Fourier.
+bold_json.PartialFourier = '';
+
+%RECOMMENDED The direction where only partial Fourier information was collected. 
+% Corresponds to DICOM Tag 0018, 9036 Partial Fourier Direction
+bold_json.PartialFourierDirection = '';
+
+%RECOMMENDED defined as the displacement of the water signal with respect to 
+% fat signal in the image. Water-fat shift (WFS) is expressed in number of pixels 
+bold_json.WaterFatShift = '';
+
+%RECOMMENDED Number of lines in k-space acquired per excitation per image.
+bold_json.EchoTrainLength = '';
+
+
+
+%% Timing Parameters metadata fields
+
+%RECOMMENDED The inversion time (TI) for the acquisition, specified in seconds. 
+% Inversion time is the time after the middle of inverting RF pulse to middle 
+% of excitation pulse to detect the amount of longitudinal magnetization
+bold_json.InversionTime = '';
+
+%RECOMMENDED  Possible values: i, j, k, i-, j-, k- (the axis of the NIfTI data 
+% along which slices were acquired, and the direction in which SliceTiming 
+% is  defined with respect to). "i", "j", "k" identifiers correspond to the 
+% first, second and third axis of the data in the NIfTI file. When present 
+% ,the axis defined by SliceEncodingDirection  needs to be consistent with 
+% the slice_dim field in the NIfTI header.
+bold_json.SliceEncodingDirection = '';
+
+%RECOMMENDED Actual dwell time (in seconds) of the receiver per point in the 
+% readout direction, including any oversampling.  For Siemens, this corresponds 
+% to DICOM field (0019,1018) (in ns).   
+bold_json.DwellTime = '';
+
+%RECOMMENDED TotalReadoutTime defined as the time ( in seconds ) from the center of the first echo to 
+% the center of the last echo (aka ?FSL definition? - see here and here how 
+% to calculate it). This parameter is required if a corresponding multiple 
+% phase encoding directions fieldmap (see 8.9.4) data is present.
+bold_json.TotalReadoutTime = ''; 
+
+%RECOMMENDED Duration (in seconds) from trigger delivery to scan onset. 
+% This delay is commonly caused by adjustments and loading times. This specification 
+% is entirely independent of NumberOfVolumesDiscardedByScanner or 
+% NumberOfVolumesDiscardedByUser, as the delay precedes the acquisition.
+bold_json.DelayAfterTrigger = [];
+
+%RECOMMENDED Number of volumes ("dummy scans") discarded by the user (as opposed to those 
+% discarded by the user post hoc) before saving the imaging file. For example, 
+% a sequence that automatically discards the first 4 volumes before saving 
+% would have this field as 4. A sequence that doesn't discard dummy scans would 
+% have this set to 0. Please note that the onsets recorded in the _event.tsv 
+% file should always refer to the beginning of the acquisition of the first 
+% volume in the corresponding imaging file - independent of the value of 
+% NumberOfVolumesDiscardedByScanner field.
+bold_json.NumberOfVolumesDiscardedByScanner = ''; 
+
+%RECOMMENDED Number of volumes ("dummy scans") discarded by the user before including 
+% the file in the dataset. If possible, including all of the volumes is 
+% strongly recommended. Please note that the onsets recorded in the _event.tsv 
+% file should always refer to the beginning of the acquisition of the first 
+% volume in the corresponding imaging file - independent of the value of 
+% NumberOfVolumesDiscardedByUser field.
+bold_json.NumberOfVolumesDiscardedByUser = '';
+
+
+%% RF & Contrast metadata field
+
+%RECOMMENDED Flip angle for the acquisition, specified in degrees. 
+% Corresponds to: DICOM Tag 0018, 1314 Flip Angle.
+bold_json.FlipAngle = '';
+
+
+
+%% Slice Acceleration metadata field
+
+%RECOMMENDED The multiband factor, for multiband acquisitions.
+bold_json.MultibandAccelerationFactor = '';
+
+
+
+%% Task metadata field
+
+%RECOMMENDED Text of the instructions given to participants before the scan. 
+% This is especially important in context of resting state fMRI and 
+% distinguishing between eyes open and eyes closed paradigms.
+bold_json.Instructions = ''; 
+
+%RECOMMENDED Longer description of the task.
+bold_json.TaskDescription = '';
+
+%RECOMMENDED URL of the corresponding Cognitive Atlas Task term.
+bold_json.CogAtlasID = '';
+
+%RECOMMENDED URL of the corresponding CogPO term.
+bold_json.CogPOID = '';
+
+
+
+%% Institution information metadata fields
+
+%RECOMMENDED The name of the institution in charge of the equipment that 
+% produced the composite instances. Corresponds to 
+% DICOM Tag 0008, 0080 InstitutionName.
+bold_json.InstitutionName = '';
+
+%RECOMMENDED The address of the institution in charge of the equipment that 
+% produced the composite instances. Corresponds to 
+% DICOM Tag 0008, 0081 InstitutionAddress
+bold_json.InstitutionAddress = '';
+
+%RECOMMENDED The department in the  institution in charge of the equipment 
+% that produced the composite instances. Corresponds to 
+% DICOM Tag 0008, 1040 Institutional Department Name.
+bold_json.InstitutionalDepartmentName = '';
+
+
+
+%% Write
+% this just makes the json file look prettier when opened in a text editor
+json_options.indent = '    '; 
 
 jsonSaveDir = fileparts(bold_json_name);
 if ~isdir(jsonSaveDir)
