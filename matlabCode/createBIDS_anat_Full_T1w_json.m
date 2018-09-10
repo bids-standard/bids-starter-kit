@@ -47,29 +47,29 @@ anat_json_name = fullfile(root_dir,project_label,...
 anat_json.Manufacturer=' ';
 
 %RECOMMENDED Manufacturer`s model name of the equipment that produced the 
-% composite instances. Corresponds to DICOM Tag 0008, 1090 Manufacturers Model Name.
+% composite instances. Corresponds to DICOM Tag 0008, 1090 "Manufacturers Model Name".
 anant_json.ManufacturersModelName=' ';
 
 %RECOMMENDED Nominal field strength of MR magnet in Tesla. Corresponds to 
-% DICOM Tag 0018,0087 Magnetic Field Strength.
+% DICOM Tag 0018,0087 "Magnetic Field Strength".
 anat_json.MagneticFieldStrength=' ';
 
 %RECOMMENDED The serial number of the equipment that produced the composite 
-% instances. Corresponds to DICOM Tag 0018, 1000 DeviceSerialNumber. 
+% instances. Corresponds to DICOM Tag 0018, 1000 "DeviceSerialNumber". 
 anat_json.DeviceSerialNumber=' ';
 
 %RECOMMENDED Institution defined name of the machine that produced the composite 
-% instances. Corresponds to DICOM Tag 0008, 1010 Station Name
+% instances. Corresponds to DICOM Tag 0008, 1010 "Station Name"
 anat_json.StationName= ' '; 
 
 %RECOMMENDED Manufacturer's designation of software version of the equipment 
 % that produced the composite instances. Corresponds to 
-% DICOM Tag 0018, 1020 Software Versions.
+% DICOM Tag 0018, 1020 "Software Versions".
 anat_json.SoftwareVersions= ' ';
 
 %RECOMMENDED (Deprecated) Manufacturer's designation of the software of the 
 % device that created this Hardcopy Image (the printer). Corresponds to 
-% DICOM Tag 0018, 101A Hardcopy Device Software Version.
+% DICOM Tag 0018, 101 "Hardcopy Device Software Version".
 anat_json.HardcopyDeviceSoftwareVersion=' ';
 
 %RECOMMENDED Information describing the receiver coil
@@ -82,7 +82,7 @@ anat_json.ReceiveCoilActiveElements=' ';
 anat_json.GradientSetType=' ';
 
 %RECOMMENDED This is a relevant field if a non-standard transmit coil is used. 
-% Corresponds to DICOM Tag 0018, 9049 MR Transmit Coil Sequence.
+% Corresponds to DICOM Tag 0018, 9049 "MR Transmit Coil Sequence".
 anat_json.MRTransmitCoilSequence=' ';
 
 %RECOMMENDED A method for reducing the number of independent channels by 
@@ -106,19 +106,19 @@ anat_json.CoilCombinationMethod=' ';
 anat_json.PulseSequenceType=' ';
 
 %RECOMMENDED Description of the type of data acquired. Corresponds to 
-% DICOM Tag 0018, 0020 Sequence Sequence.
+% DICOM Tag 0018, 0020 "Sequence Sequence".
 anat_json.ScanningSequence=' ';
 
 %RECOMMENDED Variant of the ScanningSequence. Corresponds to 
-% DICOM Tag 0018, 0021 Sequence Variant.
+% DICOM Tag 0018, 0021 "Sequence Variant".
 anat_json.SequenceVariant=' ';
 
 %RECOMMENDED Parameters of ScanningSequence. Corresponds to 
-% DICOM Tag 0018, 0022 Scan Options.
+% DICOM Tag 0018, 0022 "Scan Options".
 anat_json.ScanOptions=' ';
 
 %RECOMMENDED Manufacturer's designation of the sequence name. Corresponds 
-% to DICOM Tag 0018, 0024 Sequence Name.
+% to DICOM Tag 0018, 0024 "Sequence Name".
 anat_json.SequenceName=' ';
 
 %RECOMMENDED Information beyond pulse sequence type that identifies the 
@@ -143,15 +143,15 @@ anat_json.NumberShots=' ';
 anat_json.ParallelReductionFactorInPlane=' ';
 
 %RECOMMENDED The type of parallel imaging used (e.g. GRAPPA, SENSE). 
-% Corresponds to DICOM Tag 0018, 9078 Parallel Acquisition Technique. 
+% Corresponds to DICOM Tag 0018, 9078 "Parallel Acquisition Technique". 
 anat_json.ParallelAcquisitionTechnique=' ';
 
 %RECOMMENDED The fraction of partial Fourier information collected. 
-% Corresponds to DICOM Tag 0018, 9081 Partial Fourier.
+% Corresponds to DICOM Tag 0018, 9081 "Partial Fourier".
 anat_json.PartialFourier=' ';
 
 %RECOMMENDED The direction where only partial Fourier information was collected. 
-% Corresponds to DICOM Tag 0018, 9036 Partial Fourier Direction
+% Corresponds to DICOM Tag 0018, 9036 "Partial Fourier Direction"
 anat_json.PartialFourierDirection=' ';
 
 %RECOMMENDED defined as the displacement of the water signal with respect to 
@@ -167,7 +167,7 @@ anat_json.EchoTrainLength=' ';
 
 %REQUIRED if corresponding fieldmap data is present or the data comes from 
 % a multi echo sequence. The echo time (TE) for the acquisition, specified in seconds. 
-%Corresponds to DICOM Tag 0018, 0081 Echo Time
+%Corresponds to DICOM Tag 0018, 0081 "Echo Time"
 anat_json.EchoTime=' ';
 
 
@@ -177,7 +177,7 @@ anat_json.EchoTime=' ';
 % of excitation pulse to detect the amount of longitudinal magnetization
 anat_json.InversionTime=' ';
 
-%RECOMMENDED  Possible values: i, j, k, i-, j-, k- (the axis of the NIfTI data 
+%RECOMMENDED  Possible values: "i", "j", "k", "i-", "j-", "k-" (the axis of the NIfTI data 
 % along which slices were acquired, and the direction in which SliceTiming 
 % is  defined with respect to). "i", "j", "k" identifiers correspond to the 
 % first, second and third axis of the data in the NIfTI file. When present 
@@ -195,7 +195,7 @@ anat_json.DwellTime=' ';
 %% RF & Contrast metadata field
 
 %RECOMMENDED Flip angle for the acquisition, specified in degrees. 
-% Corresponds to: DICOM Tag 0018, 1314 Flip Angle.
+% Corresponds to: DICOM Tag 0018, 1314 "Flip Angle".
 anat_json.FlipAngle=' ';
 
 
@@ -219,17 +219,17 @@ anat_json.AnatomicalLandmarkCoordinates=' ';
 
 %RECOMMENDED The name of the institution in charge of the equipment that 
 % produced the composite instances. Corresponds to 
-% DICOM Tag 0008, 0080 InstitutionName.
+% DICOM Tag 0008, 0080 "InstitutionName".
 anat_json.InstitutionName=' ';
 
 %RECOMMENDED The address of the institution in charge of the equipment that 
 % produced the composite instances. Corresponds to 
-% DICOM Tag 0008, 0081 InstitutionAddress
+% DICOM Tag 0008, 0081 "InstitutionAddress"
 anat_json.InstitutionAddress=' ';
 
 %RECOMMENDED The department in the  institution in charge of the equipment 
 % that produced the composite instances. Corresponds to 
-% DICOM Tag 0008, 1040 Institutional Department Name.
+% DICOM Tag 0008, 1040 "Institutional Department Name".
 anat_json.InstitutionalDepartmentName=' ';
 
 

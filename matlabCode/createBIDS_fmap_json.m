@@ -139,7 +139,7 @@ task_label = 'Case4';
 run_label = '01';
 
 dir_label = 'LR'; %dir_label value can be set to arbitrary alphanumeric 
-% label ([a-zA-Z0-9]+ for example ?LR? or ?AP?) that can help users to 
+% label ([a-zA-Z0-9]+ for example "LR" or "AP") that can help users to 
 % distinguish between different files, but should not be used to infer any 
 % scanning parameters (such as phase encoding directions) of the corresponding sequence.
 

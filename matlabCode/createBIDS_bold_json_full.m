@@ -82,7 +82,7 @@ bold_json.SliceTiming = '';
 % exclusive with RepetitionTime.
 % 
 % Duration (in seconds) of volume acquisition. Corresponds to 
-% DICOM Tag 0018,9073 “Acquisition Duration”. 
+% DICOM Tag 0018,9073 "Acquisition Duration". 
 bold_json.AcquisitionDuration = [];
 
 
@@ -102,7 +102,7 @@ bold_json.EffectiveEchoSpacing = '';
 
 %REQUIRED if corresponding fieldmap data is present or the data comes from 
 % a multi echo sequence. The echo time (TE) for the acquisition, specified in seconds. 
-%Corresponds to DICOM Tag 0018, 0081 Echo Time
+%Corresponds to DICOM Tag 0018, 0081 "Echo Time"
 bold_json.EchoTime = '';
 
 
@@ -117,15 +117,16 @@ bold_json.EchoTime = '';
 bold_json.Manufacturer = '';
 
 %RECOMMENDED Manufacturer`s model name of the equipment that produced the 
-% composite instances. Corresponds to DICOM Tag 0008, 1090 Manufacturers Model Name.
+% composite instances. Corresponds to DICOM Tag 0008, 1090 "Manufacturers
+% Model Name"
 bold_json.ManufacturersModelName = '';
 
 %RECOMMENDED Nominal field strength of MR magnet in Tesla. Corresponds to 
-% DICOM Tag 0018,0087 Magnetic Field Strength.
+% DICOM Tag 0018,0087 "Magnetic Field Strength".
 bold_json.MagneticFieldStrength = '';
 
 %RECOMMENDED The serial number of the equipment that produced the composite 
-% instances. Corresponds to DICOM Tag 0018, 1000 DeviceSerialNumber. 
+% instances. Corresponds to DICOM Tag 0018, 1000 "DeviceSerialNumber". 
 bold_json.DeviceSerialNumber = '';
 
 %RECOMMENDED Institution defined name of the machine that produced the composite 
@@ -134,12 +135,12 @@ bold_json.StationName= ' ';
 
 %RECOMMENDED Manufacturer's designation of software version of the equipment 
 % that produced the composite instances. Corresponds to 
-% DICOM Tag 0018, 1020 Software Versions.
+% DICOM Tag 0018, 1020 "Software Versions".
 bold_json.SoftwareVersions= ' ';
 
 %RECOMMENDED (Deprecated) Manufacturer's designation of the software of the 
 % device that created this Hardcopy Image (the printer). Corresponds to 
-% DICOM Tag 0018, 101A Hardcopy Device Software Version.
+% DICOM Tag 0018, 101 "Hardcopy Device Software Version".
 bold_json.HardcopyDeviceSoftwareVersion = '';
 
 %RECOMMENDED Information describing the receiver coil
@@ -152,7 +153,7 @@ anat_json.ReceiveCoilActiveElements = '';
 bold_json.GradientSetType = '';
 
 %RECOMMENDED This is a relevant field if a non-standard transmit coil is used. 
-% Corresponds to DICOM Tag 0018, 9049 MR Transmit Coil Sequence.
+% Corresponds to DICOM Tag 0018, 9049 "MR Transmit Coil Sequence".
 bold_json.MRTransmitCoilSequence = '';
 
 %RECOMMENDED A method for reducing the number of independent channels by 
@@ -176,19 +177,19 @@ bold_json.CoilCombinationMethod = '';
 bold_json.PulseSequenceType = '';
 
 %RECOMMENDED Description of the type of data acquired. Corresponds to 
-% DICOM Tag 0018, 0020 Sequence Sequence.
+% DICOM Tag 0018, 0020 "Sequence Sequence".
 bold_json.ScanningSequence = '';
 
 %RECOMMENDED Variant of the ScanningSequence. Corresponds to 
-% DICOM Tag 0018, 0021 Sequence Variant.
+% DICOM Tag 0018, 0021 "Sequence Variant".
 bold_json.SequenceVariant = '';
 
 %RECOMMENDED Parameters of ScanningSequence. Corresponds to 
-% DICOM Tag 0018, 0022 Scan Options.
+% DICOM Tag 0018, 0022 "Scan Options".
 bold_json.ScanOptions = '';
 
 %RECOMMENDED Manufacturer's designation of the sequence name. Corresponds 
-% to DICOM Tag 0018, 0024 Sequence Name.
+% to DICOM Tag 0018, 0024 "Sequence Name".
 bold_json.SequenceName = '';
 
 %RECOMMENDED Information beyond pulse sequence type that identifies the 
@@ -213,15 +214,15 @@ bold_json.NumberShots = '';
 bold_json.ParallelReductionFactorInPlane = '';
 
 %RECOMMENDED The type of parallel imaging used (e.g. GRAPPA, SENSE). 
-% Corresponds to DICOM Tag 0018, 9078 Parallel Acquisition Technique. 
+% Corresponds to DICOM Tag 0018, 9078 "Parallel Acquisition Technique". 
 bold_json.ParallelAcquisitionTechnique = '';
 
 %RECOMMENDED The fraction of partial Fourier information collected. 
-% Corresponds to DICOM Tag 0018, 9081 Partial Fourier.
+% Corresponds to DICOM Tag 0018, 9081 "Partial Fourier".
 bold_json.PartialFourier = '';
 
 %RECOMMENDED The direction where only partial Fourier information was collected. 
-% Corresponds to DICOM Tag 0018, 9036 Partial Fourier Direction
+% Corresponds to DICOM Tag 0018, 9036 "Partial Fourier Direction"
 bold_json.PartialFourierDirection = '';
 
 %RECOMMENDED defined as the displacement of the water signal with respect to 
@@ -240,7 +241,7 @@ bold_json.EchoTrainLength = '';
 % of excitation pulse to detect the amount of longitudinal magnetization
 bold_json.InversionTime = '';
 
-%RECOMMENDED  Possible values: i, j, k, i-, j-, k- (the axis of the NIfTI data 
+%RECOMMENDED  Possible values: "i", "j", "k", "i-", "j-", "k-" (the axis of the NIfTI data 
 % along which slices were acquired, and the direction in which SliceTiming 
 % is  defined with respect to). "i", "j", "k" identifiers correspond to the 
 % first, second and third axis of the data in the NIfTI file. When present 
@@ -254,7 +255,7 @@ bold_json.SliceEncodingDirection = '';
 bold_json.DwellTime = '';
 
 %RECOMMENDED TotalReadoutTime defined as the time ( in seconds ) from the center of the first echo to 
-% the center of the last echo (aka ?FSL definition? - see here and here how 
+% the center of the last echo (aka "FSL definition" - see here and here how 
 % to calculate it). This parameter is required if a corresponding multiple 
 % phase encoding directions fieldmap (see 8.9.4) data is present.
 bold_json.TotalReadoutTime = ''; 
@@ -287,7 +288,7 @@ bold_json.NumberOfVolumesDiscardedByUser = '';
 %% RF & Contrast metadata field
 
 %RECOMMENDED Flip angle for the acquisition, specified in degrees. 
-% Corresponds to: DICOM Tag 0018, 1314 Flip Angle.
+% Corresponds to: DICOM Tag 0018, 1314 "Flip Angle".
 bold_json.FlipAngle = '';
 
 
@@ -321,17 +322,17 @@ bold_json.CogPOID = '';
 
 %RECOMMENDED The name of the institution in charge of the equipment that 
 % produced the composite instances. Corresponds to 
-% DICOM Tag 0008, 0080 InstitutionName.
+% DICOM Tag 0008, 0080 "InstitutionName".
 bold_json.InstitutionName = '';
 
 %RECOMMENDED The address of the institution in charge of the equipment that 
 % produced the composite instances. Corresponds to 
-% DICOM Tag 0008, 0081 InstitutionAddress
+% DICOM Tag 0008, 0081 "InstitutionAddress"
 bold_json.InstitutionAddress = '';
 
 %RECOMMENDED The department in the  institution in charge of the equipment 
 % that produced the composite instances. Corresponds to 
-% DICOM Tag 0008, 1040 Institutional Department Name.
+% DICOM Tag 0008, 1040 "Institutional Department Name".
 bold_json.InstitutionalDepartmentName = '';
 
 

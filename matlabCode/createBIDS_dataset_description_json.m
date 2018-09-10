@@ -31,7 +31,7 @@ dd_json.BIDSVersion = '1.0.2'; % The version of the BIDS standard that was used
 
 %%  Recommended fields:
 
-dd_json.License = '';% what license is this dataset distributed under? The 
+dd_json.License = '';% what license is this dataset distributed under The 
 % use of license name abbreviations is suggested for specifying a license. 
 % A list of common licenses with suggested abbreviations can be found in appendix III.
 

@@ -29,7 +29,7 @@ bold_json_name = fullfile(root_dir,project_label,[ 'sub-' sub_label ],...
 
 
 %% Required fields
-% REQUIRED Name of the task (for resting state use the ?rest? prefix). No two tasks 
+% REQUIRED Name of the task (for resting state use the "rest" prefix). No two tasks 
 % should have the same name. Task label is derived from this field by 
 % removing all non alphanumeric ([a-zA-Z0-9]) characters. 
 bold_json.TaskName = ''; 
@@ -104,7 +104,7 @@ bold_json.EffectiveEchoSpacing = '';
 
 %REQUIRED if corresponding fieldmap data is present or the data comes from 
 % a multi echo sequence. The echo time (TE) for the acquisition, specified in seconds. 
-%Corresponds to DICOM Tag 0018, 0081 Echo Time
+%Corresponds to DICOM Tag 0018, 0081 "Echo Time"
 bold_json.EchoTime = '';
 
 

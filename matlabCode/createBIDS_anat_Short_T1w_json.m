@@ -68,7 +68,7 @@ anat_json.TotalReadoutTime=' ';
 
 %REQUIRED if corresponding fieldmap data is present or the data comes from a multi echo sequence
 %The echo time (TE) for the acquisition, specified in seconds. 
-%Corresponds to DICOM Tag 0018, 0081 â€œEcho Timeâ€? 
+%Corresponds to DICOM Tag 0018, 0081 "Echo Time" 
 anat_json.EchoTime=' ';
 
 %REQUIRED for sparse sequences that do not have the DelayTime field set. 
