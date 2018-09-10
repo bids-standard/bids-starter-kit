@@ -31,7 +31,7 @@ name = {''}; % Name of the electrode
 x = [0]';
 y = [0]';
 z = [0]';
-size = [0]'; % Diameter in mm 
+Size = [0]'; % Diameter in mm 
 type = [0]'; % Type of intracranial electrode, one of [?surface?,  ?depth? , ?dbs?] 
 
 
@@ -55,3 +55,5 @@ grid_size = {''}; % Optional field to specify the dimensions of the grid the
 t = table(name,x,y,z,size,type,material,tissue,manufacturer,grid_size);
 
 writetable(t,electrodes_tsv_name,'FileType','text','Delimiter','\t');
+
+clear Size
