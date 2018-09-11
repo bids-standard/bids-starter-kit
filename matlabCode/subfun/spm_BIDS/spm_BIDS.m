@@ -160,6 +160,7 @@ if exist(pth,'dir')
         %------------------------------------------------------------------
         p = parse_filename(f{i}, {'sub','ses','acq','ce','rec','fa','echo','inv','run'});
         subject.anat = [subject.anat p];
+        subject.anat(end).meta = get_metadata(fullfile(pth,f{i}));
         
     end
 end
