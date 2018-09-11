@@ -179,8 +179,7 @@ if exist(pth,'dir')
         
         p = parse_filename(f{i}, {'sub','ses','task','acq','rec','fa','echo','inv','run','recording', 'meta'});
         subject.func = [subject.func p];
-        subject.func(end).meta = struct([]); % ?
-        
+        subject.func(end).meta = get_metadata(fullfile(pth,f{i}));
     end
     
     %-Task events file
