@@ -9,9 +9,10 @@ function bids_report(path2BIDS, Subj, Ses, Run, ReadGZ)
 % - Subj: Specifies which subject(s) to take as template. TO DO: Can be a vector
 % - Ses: Specifies which session(s) to take as template. TO DO: Can be a vector
 % - Run: Specifies which BOLD run(s) to take as template. TO DO: Can be a vector
+%
 % Unless specified the function will only read the data from the first
-% subject, session, and run (for each task of BOLD).
-% This can be an issue if different subjects/sessions contain very different data.
+% subject, session, and run (for each task of BOLD). This can be an issue
+% if different subjects/sessions contain very different data.
 %
 % - ReadGZ. If set to 1 (default) the function will try to read the *.nii.gz file to get more
 % information.
@@ -19,6 +20,11 @@ function bids_report(path2BIDS, Subj, Ses, Run, ReadGZ)
 % This function relies on some SPM functions. If the relevant version of SPM
 % (>= SPM12 - v7219) is not installed, the subfun folder containing the dependencies
 % will be added to the matlab path.
+%
+% tested on:
+% - windows 10 / matlab 2017a
+% - on all the empty raw data files from BIDS-examples
+% - on ds006 and ds114 with data from BIDS-examples
 %
 %
 % Example
@@ -29,11 +35,12 @@ function bids_report(path2BIDS, Subj, Ses, Run, ReadGZ)
 % RG 2018-09
 
 %TO DO
-% - deal with fieldmaps and DWI
-% - write output to a txt file
-% - deal with EEG and MEG
+% - deal with DWI bval
+% - write output to a txt file?
+% - deal with EEG / MEG / events
 % - check if all subjects have the same content?
 % - adapts for several sessions? Subjects? Runs?
+% - take care of other recommended metafield in BIDS specs or COBIDAS
 
 % check inputs
 if nargin<1
@@ -75,11 +82,11 @@ fprintf('Done.\n\n')
 
 
 subjs_ls = spm_BIDS(BIDS,'subjects');
-mods_ls = spm_BIDS(BIDS,'modalities')
-sess_ls = spm_BIDS(BIDS,'sessions');
-types_ls = spm_BIDS(BIDS,'types')
-tasks_ls = spm_BIDS(BIDS,'tasks');
+sess_ls = spm_BIDS(BIDS,'sessions', 'sub', subjs_ls(Subj));
+types_ls = spm_BIDS(BIDS,'types', 'sub', subjs_ls(Subj), 'ses', sess_ls(Ses));
+tasks_ls = spm_BIDS(BIDS,'tasks', 'sub', subjs_ls(Subj), 'ses', sess_ls(Ses));
 
+% mods_ls = spm_BIDS(BIDS,'modalities');
 
 %% Scanner details
 
@@ -92,6 +99,7 @@ for iType = 1:numel(types_ls)
     switch types_ls{iType}
         
         case {'T1w' 'inplaneT2' 'T1map' 'FLASH'}
+            
             %% Anatomical
             fprintf('Working on anat...\n')
             
@@ -114,6 +122,7 @@ for iType = 1:numel(types_ls)
                 acq_param.fov, acq_param.ms, acq_param.vs);
             fprintf('\n')
             
+            
         case 'bold'
             %% Functional
             fprintf('Working on func...\n')
@@ -122,7 +131,7 @@ for iType = 1:numel(types_ls)
             func_text = cat(2, ...
                 '%s run(s) of %s %s %s fMRI data were collected (%s slices acquired in a %s fashion; repetition time, TR= %s ms; \n', ...
                 'echo time, TE= %s ms; flip angle, FA= %s deg; field of view, FOV= %s mm; matrix size= %s; \n', ...
-                'voxel size= %s mm; multiband factor=%s; in-plane acceleration factor=%s). Each run was %s minutes in length, during which \n', ...
+                'voxel size= %s mm; multiband factor= %s; in-plane acceleration factor= %s). Each run was %s minutes in length, during which \n', ...
                 '%s functional volumes were acquired. \n\n');
             
             % loop through the tasks
@@ -146,7 +155,7 @@ for iType = 1:numel(types_ls)
                 end
                 
                 % set run duration
-                if ~strcmp(acq_param.tr,'[XXXX]') || ~strcmp(acq_param.n_vols,'[XXXX]')
+                if ~strcmp(acq_param.tr,'[XXXX]') && ~strcmp(acq_param.n_vols,'[XXXX]')
                     acq_param.length = num2str(str2double(acq_param.tr)/1000 * str2double(acq_param.n_vols) / 60);
                 end
                 
@@ -163,31 +172,87 @@ for iType = 1:numel(types_ls)
                 fprintf('\n\n')
             end
             
-
-            %% Fieldmap
+            
         case 'phasediff'
-            %            A {variants} {seqs} field map (phase encoding:
-            %            {dir_}; {n_slices} slices; repetition time, TR={tr}ms;
-            %            echo time, TE={te}ms; flip angle, FA={fa}<deg>;
-            %            field of view, FOV={fov}mm; matrix size={ms};
-            %            voxel size={vs}mm) was acquired{for_str}.
+            %% Fieldmap
+            fprintf('Working on fmap...\n')
+            
+            % func text template
+            fmap_text = cat(2, ...
+                'A %s %s field map (phase encoding: %s; %s slices; repetition time, TR= %s ms; \n',...
+                'echo time 1 / 2, TE 1/2= %s ms; flip angle, FA= %s deg; field of view, FOV= %s mm; matrix size= %s; \n',...
+                'voxel size= %s mm) was acquired; multiband factor= %s. \n\n');
+            
+            % loop through the tasks
+            for iTask = 1:numel(tasks_ls)
+                
+                runs_ls = spm_BIDS(BIDS,'runs','sub', subjs_ls{Subj}, 'ses', sess_ls{Ses}, ...
+                    'type', 'phasediff');
+                
+                if isempty(runs_ls)
+                    % get the parameters for that task
+                    acq_param = get_acq_param(BIDS, subjs_ls{Subj}, sess_ls{Ses}, ...
+                        'phasediff', '', '', ReadGZ);
+                else
+                    % get the parameters for that task
+                    acq_param = get_acq_param(BIDS, subjs_ls{Subj}, sess_ls{Ses}, ...
+                        'phasediff', '', runs_ls{Run}, ReadGZ);
+                end
+                
+                % goes through task list to check which fieldmap is for which
+                % run
+                acq_param.for = [];
+                nb_run = [];
+                nb_run(iTask) = sum( ~cellfun('isempty', ...
+                    strfind(acq_param.for_str,tasks_ls{iTask},'ForceCellOutput',1) ) ); %#ok<AGROW>
+                acq_param.for = sprintf('for %i runs of %s, ', nb_run, tasks_ls{iTask});
+                
+                % print output
+                fprintf('\n FMAP REPORT \n')
+                fprintf(fmap_text,...
+                    acq_param.variants, acq_param.seqs, acq_param.phs_enc_dir, acq_param.n_slices, acq_param.tr, ...
+                    acq_param.te, acq_param.fa, acq_param.fov, acq_param.ms, ...
+                    acq_param.vs, acq_param.for);
+                fprintf('\n\n')
+                
+            end
             
             
-            %% DWI
+            
         case 'dwi'
-            %
-            %            One run of {variants} {seqs} diffusion-weighted (dMRI) data were collected
-            %            ({n_slices} slices{so_str}; repetition time, TR={tr}ms;
-            %            echo time, TE={te}ms; flip angle, FA={fa}<deg>;
-            %            field of view, FOV={fov}mm; matrix size={ms}; voxel size={vs}mm;
-            %            b-values of {bval_str} acquired;
-            %            {n_vecs} diffusion directions{mb_str}).
+            %% DWI
+            fprintf('Working on dwi...\n')
+            
+            % func text template
+            fmap_text = cat(2, ...
+                'One run of %s %s diffusion-weighted (dMRI) data were collected (%s  slices %s ; repetition time, TR= %s ms \n', ...
+                'echo time, TE= %s ms; flip angle, FA= %s deg; field of view, FOV= %s mm; matrix size= %s ; voxel size= %s mm \n', ...
+                'b-values of %s acquired; %s diffusion directions %s ). \n\n');
+            
+            % get the parameters
+            acq_param = get_acq_param(BIDS, subjs_ls{Subj}, sess_ls{Ses}, ...
+                'dwi', '', '', ReadGZ);
+            
+            % dirty hack need to look into the BIDS structure as spm_BIDS does not
+            % support looking for bval anb bvec
+            acq_param.n_vecs = num2str(size(BIDS.subjects(Subj).dwi.bval,2));
+%             acq_param.bval_str = ???
+            
+            % print output
+            fprintf('\n DWI REPORT \n')
+            fprintf(fmap_text,...
+                acq_param.variants, acq_param.seqs, acq_param.n_slices, acq_param.so_str, acq_param.tr,...
+                acq_param.te, acq_param.fa, acq_param.fov, acq_param.ms, acq_param.vs, ...
+                acq_param.bval_str, acq_param.n_vecs, acq_param.mb_str);
+            fprintf('\n\n')
+            
             
         case 'physio'
+            warning('physio not supported yet')
         case {'headshape' 'meg' 'eeg' 'channels'}
             warning('MEEG not supported yet')
         case 'events'
-            
+            warning('events not supported yet')
     end
 end
 
@@ -216,6 +281,12 @@ acq_param.mb_str  = '[XXXX]'; % multiband
 acq_param.pr_str  = '[XXXX]'; % parallel imaging
 acq_param.length  = '[XXXX]';
 
+acq_param.for_str = '[XXXX]'; % for fmap: for which run this fmap is for.
+acq_param.phs_enc_dir = '[XXXX]'; % phase encoding direction.
+
+acq_param.bval_str = '[XXXX]'; 
+acq_param.n_vecs = '[XXXX]';
+
 acq_param.fov = '[XXXX]';
 acq_param.n_slices = '[XXXX]';
 acq_param.ms = '[XXXX]'; % matrix size
@@ -236,12 +307,24 @@ elseif strcmp(type, 'bold')
     metadata = spm_BIDS(BIDS, 'metadata', 'sub', subj, 'ses', sess, 'type', type, ...
         'task', task, 'run', run);
     
+elseif strcmp(type, 'phasediff')
+    
+    filename = spm_BIDS(BIDS, 'data', 'sub', subj, 'ses', sess, 'type', type, 'run', run);
+    metadata = spm_BIDS(BIDS, 'metadata', 'sub', subj, 'ses', sess, 'type', type, 'run', run);
+    
+elseif strcmp(type, 'dwi')
+    
+    filename = spm_BIDS(BIDS, 'data', 'sub', subj, 'ses', sess, 'type', type);
+    metadata = spm_BIDS(BIDS, 'metadata', 'sub', subj, 'ses', sess, 'type', type);
+    
 end
 
 fprintf(' - %s\n', filename{1})
 
 if isfield(metadata, 'EchoTime')
     acq_param.te = num2str(metadata.EchoTime*1000);
+elseif isfield(metadata, 'EchoTime1') && isfield(metadata, 'EchoTime2')
+    acq_param.te = [num2str(metadata.EchoTime1*1000) ' / '  num2str(metadata.EchoTime2*1000)];
 end
 
 if isfield(metadata, 'RepetitionTime')
@@ -256,6 +339,13 @@ if isfield(metadata, 'SliceTiming')
     acq_param.so_str = define_slice_timing(metadata.SliceTiming);
 end
 
+if isfield(metadata, 'PhaseEncodingDirection')
+    acq_param.phs_enc_dir = metadata.PhaseEncodingDirection;
+end
+
+if isfield(metadata, 'IntendedFor')
+    acq_param.for_str = metadata.IntendedFor;
+end
 
 %% try to read the relevant .nii.gz file to get more info from it
 if ReadGZ
