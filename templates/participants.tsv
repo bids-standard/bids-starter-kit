@@ -1,2 +1,2 @@
-participant_id	age	sex
-sub-01	0	m
+participant_id	age	handedness	sex
+sub-01	18	r	m
