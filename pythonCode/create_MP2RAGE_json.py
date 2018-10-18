@@ -6,9 +6,9 @@ latest version of the specs to make sure this is accurate.
 
 This script will create the JSON files required for an MP2RAGE file.
 To function it requires a BIDS data set with properly named image files:
-The script will through all the folders of a BIDS data set and will create
+The script will go through all the folders of a BIDS data set and will create
 the JSON files in every folder where it finds a file ending
-with '_MPRAGE.nii.gz'.
+with '_inv-1_part-mag_MPRAGE.nii.gz'.
 
 Created by RG 2018-10-03
 """
@@ -97,40 +97,44 @@ for iSubj in subj_ls:
     # go through all the files for that subject
     for path, subdirs, files in subj_dir:
         for name in files:
-            # creates the json files in the folder where the the MP2RAGE file is found
-            if '_MPRAGE.nii.gz' in name:
+            # creates the json files in the folder where the magnitude image of the first inversion is found
+            if '_inv-1_part-mag_MPRAGE.nii.gz' in name:
                 print(os.path.join(path, name))
 
                 json_folder = path
 
                 # creating JSON file for the first inversion image
-                json_name = name[:12] + '_inv-1_MPRAGE.json'
+                json_name = name[:-29] + '_inv-1_MPRAGE.json'
                 # create the file
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_inv_1, ff, sort_keys=False, indent=4)
 
                 # creating JSON file for the second inversion image
-                json_name = name[:12] + '_inv-2_MPRAGE.json'
+                json_name = name[:-29] + '_inv-2_MPRAGE.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_inv_2, ff, sort_keys=False, indent=4)
 
                 # creating main JSON file for the MP2RAGE
-                json_name = name[:12] + '_MPRAGE.json'
+                json_name = name[:-29] + '_MPRAGE.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_MP2RAGE, ff, sort_keys=False, indent=4)
 
                 # adding content to JSON files for the T1w and T1map as its content is subject dependent
+                name_inv1_mag_img = os.path.join('anat', name[:-29] + '_inv1_part-mag_MPRAGE.nii.gz')
+                name_inv1_phs_img = os.path.join('anat', name[:-29] + '_inv1_part-phase_MPRAGE.nii.gz')
+                name_inv2_mag_img = os.path.join('anat', name[:-29] + '_inv1_part-mag_MPRAGE.nii.gz')
+                name_inv2_phs_img = os.path.join('anat', name[:-29] + '_inv1_part-phase_MPRAGE.nii.gz')
                 data_T1['BasedOn'] = \
-                    os.path.join('anat', name[:12] + '_inv1_part-mag_MPRAGE.nii.gz') + ', ' + \
-                    os.path.join('anat', name[:12] + '_inv1_part-phase_MPRAGE.nii.gz') + ', ' + \
-                    os.path.join('anat', name[:12] + '_inv1_part-mag_MPRAGE.nii.gz') + ', ' + \
-                    os.path.join('anat', name[:12] + '_inv1_part-phase_MPRAGE.nii.gz') + ', '
+                    name_inv1_mag_img + ', ' + \
+                    name_inv1_phs_img + ', ' + \
+                    name_inv2_mag_img + ', ' + \
+                    name_inv2_phs_img + ', '
 
                 # creating JSON files for the T1w and T1map
-                json_name = name[:12] + '_T1map.json'
+                json_name = name[:-29] + '_T1map.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_T1, ff, sort_keys=False, indent=4)
 
-                json_name = name[:12] + '_T1w.json'
+                json_name = name[:-29] + '_T1w.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_T1, ff, sort_keys=False, indent=4)
