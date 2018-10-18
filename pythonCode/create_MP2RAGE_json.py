@@ -22,65 +22,68 @@ from collections import OrderedDict
 # DEFINE CONTENT OF JSON FILES
 
 # sub-*_inv-1_MPRAGE.json
-data_inv_1 = OrderedDict()
-data_inv_1['InversionTime'] = '900'  # ms
-data_inv_1['FlipAngle'] = '5'
+data_inv_1 = OrderedDict([
+    ('InversionTime', '900'),
+    ('FlipAngle', '5') # ms
+])
 
 # sub-*_inv-2_MPRAGE.json
-data_inv_2 = OrderedDict()
-data_inv_2['InversionTime'] = '2750'  # ms
-data_inv_2['FlipAngle'] = '3'
+data_inv_2 = OrderedDict([
+    ('InversionTime', '2750'),
+    ('FlipAngle', '3') # ms
+])
 
 # sub-*_T1map.json
 # sub-*_T1w.json
-data_T1 = OrderedDict()
-data_T1['EstimationMethod'] = 'Marques et al., 2013'
+data_T1 = OrderedDict([
+    ('EstimationMethod', 'Marques et al., 2013'),
+])
 
 
 # sub-*_MPRAGE.json
-data_MP2RAGE = OrderedDict()
-data_MP2RAGE['MagneticFieldStrength'] = ''
-data_MP2RAGE['ExcitationRepetitionTime'] = ''
-data_MP2RAGE['InversionRepetitionTime'] = ''
-data_MP2RAGE['NumberShots'] = ''
-data_MP2RAGE['Manufacturer'] = ''
-data_MP2RAGE['ManufacturersModelName'] = ''
-data_MP2RAGE['DeviceSerialNumber'] = ''
-data_MP2RAGE['SoftwareVersions'] = ''
-data_MP2RAGE['StationName'] = ''
-data_MP2RAGE['InstitutionName'] = ''
-data_MP2RAGE['InstitutionAddress'] = ''
-data_MP2RAGE['InstitutionalDepartmentName'] = ''
-data_MP2RAGE['ReceiveCoilName'] = ''
-data_MP2RAGE['ReceiveCoilActiveElements'] = ''
-data_MP2RAGE['GradientSetType'] = ''
-data_MP2RAGE['MRTransmitCoilSequence'] = ''
-data_MP2RAGE['MatrixCoilMode'] = ''
-data_MP2RAGE['CoilCombinationMethod'] = ''
-data_MP2RAGE['NonlinearGradientCorrection'] = ''
-data_MP2RAGE['WaterFatShift'] = ''
-data_MP2RAGE['EchoTrainLength'] = ''
-data_MP2RAGE['DwellTime'] = ''
-data_MP2RAGE['MultibandAccelerationFactor'] = ''
-data_MP2RAGE['AnatomicalLandmarkCoordinates'] = ''
-data_MP2RAGE['MRAcquisitionType'] = ''
-data_MP2RAGE['ScanningSequence'] = ''
-data_MP2RAGE['SequenceVariant'] = ''
-data_MP2RAGE['ScanOptions'] = ''
-data_MP2RAGE['SequenceName'] = ''
-data_MP2RAGE['PulseSequenceType'] = 'MP2RAGE'
-data_MP2RAGE['PulseSequenceDetails'] = ''
-data_MP2RAGE['ParallelReductionFactorInPlane'] = ''
-data_MP2RAGE['ParallelAcquisitionTechnique'] = ''
-data_MP2RAGE['PartialFourier'] = ''
-data_MP2RAGE['PartialFourierDirection'] = ''
-data_MP2RAGE['EffectiveEchoSpacing'] = ''
-data_MP2RAGE['TotalReadoutTime'] = ''
-data_MP2RAGE['PhaseEncodingDirection'] = ''
-data_MP2RAGE['EchoTime1'] = ''  # sec
-data_MP2RAGE['EchoTime2'] = ''  # sec
-data_MP2RAGE['SliceThickness'] = ''  # mm
-
+data_MP2RAGE = OrderedDict([
+    ('MagneticFieldStrength',  ''),
+    ('ExcitationRepetitionTime',  ''),
+    ('InversionRepetitionTime',  ''),
+    ('NumberShots',  ''),
+    ('Manufacturer',  ''),
+    ('ManufacturersModelName',  ''),
+    ('DeviceSerialNumber',  ''),
+    ('SoftwareVersions',  ''),
+    ('StationName',  ''),
+    ('InstitutionName',  ''),
+    ('InstitutionAddress',  ''),
+    ('InstitutionalDepartmentName',  ''),
+    ('ReceiveCoilName',  ''),
+    ('ReceiveCoilActiveElements',  ''),
+    ('GradientSetType',  ''),
+    ('MRTransmitCoilSequence',  ''),
+    ('MatrixCoilMode',  ''),
+    ('CoilCombinationMethod',  ''),
+    ('NonlinearGradientCorrection',  ''),
+    ('WaterFatShift',  ''),
+    ('EchoTrainLength',  ''),
+    ('DwellTime',  ''),
+    ('MultibandAccelerationFactor',  ''),
+    ('AnatomicalLandmarkCoordinates',  ''),
+    ('MRAcquisitionType',  ''),
+    ('ScanningSequence',  ''),
+    ('SequenceVariant',  ''),
+    ('ScanOptions',  ''),
+    ('SequenceName',  ''),
+    ('PulseSequenceType',  'MP2RAGE'),
+    ('PulseSequenceDetails',  ''),
+    ('ParallelReductionFactorInPlane',  ''),
+    ('ParallelAcquisitionTechnique',  ''),
+    ('PartialFourier',  ''),
+    ('PartialFourierDirection',  ''),
+    ('EffectiveEchoSpacing',  ''),
+    ('TotalReadoutTime',  ''),
+    ('PhaseEncodingDirection',  ''),
+    ('EchoTime1',  ''),  # sec
+    ('EchoTime2',  ''),  # sec
+    ('SliceThickness',  '')  # mm
+])
 
 # WRITE THEM
 
