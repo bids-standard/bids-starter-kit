@@ -18,9 +18,9 @@ import json
 from shutil import copyfile
 from collections import OrderedDict
 
-'''
-DEFINE CONTENT OF JSON FILES
-'''
+
+# DEFINE CONTENT OF JSON FILES
+
 # sub-*_inv-1_MPRAGE.json
 data_inv_1 = OrderedDict()
 data_inv_1['InversionTime'] = '900'  # ms
@@ -82,9 +82,8 @@ data_MP2RAGE['EchoTime2'] = ''  # sec
 data_MP2RAGE['SliceThickness'] = ''  # mm
 
 
-'''
-WRITE THEM
-'''
+# WRITE THEM
+
 start_dir = ""  # insert here path to your BIDS data set
 
 # list all subjects
