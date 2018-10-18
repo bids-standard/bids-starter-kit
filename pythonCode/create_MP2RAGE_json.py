@@ -21,26 +21,24 @@ from collections import OrderedDict
 
 # DEFINE CONTENT OF JSON FILES
 
-# sub-*_inv-1_MPRAGE.json
+# defining the content of the JSON file for the first inversion image (sub-*_inv-1_MPRAGE.json)
 data_inv_1 = OrderedDict([
     ('InversionTime', '900'),
     ('FlipAngle', '5') # ms
 ])
 
-# sub-*_inv-2_MPRAGE.json
+# defining the content of the JSON file for the second inversion image (sub-*_inv-2_MPRAGE.json)
 data_inv_2 = OrderedDict([
     ('InversionTime', '2750'),
     ('FlipAngle', '3') # ms
 ])
 
-# sub-*_T1map.json
-# sub-*_T1w.json
+# defining the content of the JSON files for the T1w (sub-*_T1w.json) and the T1map (sub-*_T1map.json)
 data_T1 = OrderedDict([
     ('EstimationMethod', 'Marques et al., 2013'),
 ])
 
-
-# sub-*_MPRAGE.json
+# defining the content of the main JSON file (sub-*_MPRAGE.json)
 data_MP2RAGE = OrderedDict([
     ('MagneticFieldStrength',  ''),
     ('ExcitationRepetitionTime',  ''),
@@ -87,7 +85,7 @@ data_MP2RAGE = OrderedDict([
 
 # WRITE THEM
 
-start_dir = ""  # insert here path to your BIDS data set
+start_dir = "D:\\BIDS\\7t_mp2rage"  # insert here path to your BIDS data set
 
 # list all subjects
 subj_ls = next(os.walk(start_dir))[1]
@@ -105,30 +103,30 @@ for iSubj in subj_ls:
 
                 json_folder = path
 
-                # _inv-1_MPRAGE.json
+                # creating JSON file for the first inversion image
                 json_name = name[:12] + '_inv-1_MPRAGE.json'
                 # create the file
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_inv_1, ff, sort_keys=False, indent=4)
 
-                # _inv-2_MPRAGE.json
+                # creating JSON file for the second inversion image
                 json_name = name[:12] + '_inv-2_MPRAGE.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_inv_2, ff, sort_keys=False, indent=4)
 
-                # _MPRAGE.json
+                # creating main JSON file for the MP2RAGE
                 json_name = name[:12] + '_MPRAGE.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_MP2RAGE, ff, sort_keys=False, indent=4)
 
-                # sub-01_T1map.json
-                # sub-01_T1w.json
+                # adding content to JSON files for the T1w and T1map as its content is subject dependent
                 data_T1['BasedOn'] = \
                     os.path.join('anat', name[:12] + '_inv1_part-mag_MPRAGE.nii.gz') + ', ' + \
                     os.path.join('anat', name[:12] + '_inv1_part-phase_MPRAGE.nii.gz') + ', ' + \
                     os.path.join('anat', name[:12] + '_inv1_part-mag_MPRAGE.nii.gz') + ', ' + \
                     os.path.join('anat', name[:12] + '_inv1_part-phase_MPRAGE.nii.gz') + ', '
 
+                # creating JSON files for the T1w and T1map
                 json_name = name[:12] + '_T1map.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_T1, ff, sort_keys=False, indent=4)
