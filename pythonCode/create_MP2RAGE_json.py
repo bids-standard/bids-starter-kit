@@ -15,7 +15,6 @@ Created by RG 2018-10-03
 
 import os
 import json
-from shutil import copyfile
 from collections import OrderedDict
 
 
