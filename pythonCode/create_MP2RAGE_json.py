@@ -86,8 +86,6 @@ data_MP2RAGE = OrderedDict([
 
 indent = 4
 
-filename_index = -29
-
 start_dir = "D:\\BIDS\\7t_mp2rage"  # insert here path to your BIDS data set
 
 # list all subjects
@@ -104,29 +102,31 @@ for iSubj in subj_ls:
             if '_inv-1_part-mag_MPRAGE.nii.gz' in name:
                 print(os.path.join(path, name))
 
+                basename = '_'.join(name.split('_')[:-3])  # excludes last three key-value pairs
+
                 json_folder = path
 
                 # creating JSON file for the first inversion image
-                json_name = name[:filename_index] + '_inv-1_MPRAGE.json'
+                json_name = basename + '_inv-1_MPRAGE.json'
                 # create the file
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_inv_1, ff, sort_keys=False, indent=indent)
 
                 # creating JSON file for the second inversion image
-                json_name = name[:filename_index] + '_inv-2_MPRAGE.json'
+                json_name = basename + '_inv-2_MPRAGE.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_inv_2, ff, sort_keys=False, indent=indent)
 
                 # creating main JSON file for the MP2RAGE
-                json_name = name[:filename_index] + '_MPRAGE.json'
+                json_name = basename + '_MPRAGE.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_MP2RAGE, ff, sort_keys=False, indent=indent)
 
                 # adding content to JSON files for the T1w and T1map as its content is subject dependent
-                name_inv1_mag_img = os.path.join('anat', name[:-29] + '_inv1_part-mag_MPRAGE.nii.gz')
-                name_inv1_phs_img = os.path.join('anat', name[:-29] + '_inv1_part-phase_MPRAGE.nii.gz')
-                name_inv2_mag_img = os.path.join('anat', name[:-29] + '_inv1_part-mag_MPRAGE.nii.gz')
-                name_inv2_phs_img = os.path.join('anat', name[:-29] + '_inv1_part-phase_MPRAGE.nii.gz')
+                name_inv1_mag_img = os.path.join('anat', basename + '_inv1_part-mag_MPRAGE.nii.gz')
+                name_inv1_phs_img = os.path.join('anat', basename + '_inv1_part-phase_MPRAGE.nii.gz')
+                name_inv2_mag_img = os.path.join('anat', basename + '_inv1_part-mag_MPRAGE.nii.gz')
+                name_inv2_phs_img = os.path.join('anat', basename + '_inv1_part-phase_MPRAGE.nii.gz')
                 data_T1['BasedOn'] = \
                     name_inv1_mag_img + ', ' + \
                     name_inv1_phs_img + ', ' + \
@@ -134,10 +134,10 @@ for iSubj in subj_ls:
                     name_inv2_phs_img + ', '
 
                 # creating JSON files for the T1w and T1map
-                json_name = name[:filename_index] + '_T1map.json'
+                json_name = basename + '_T1map.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_T1, ff, sort_keys=False, indent=indent)
 
-                json_name = name[:filename_index] + '_T1w.json'
+                json_name = basename + '_T1w.json'
                 with open(os.path.join(json_folder, json_name), 'w') as ff:
                     json.dump(data_T1, ff, sort_keys=False, indent=indent)
