@@ -18,6 +18,8 @@ import json
 import glob
 from collections import OrderedDict
 
+start_dir = ''  # insert here path to your BIDS data set
+
 # DEFINE CONTENT OF JSON FILES
 
 # defining the content of the JSON file for the
@@ -88,8 +90,6 @@ data_MP2RAGE = OrderedDict([
 # WRITE THEM
 
 indent = 4
-
-start_dir = ''  # insert here path to your BIDS data set
 
 # list all subjects and  create iterator with full path for subjects folder
 file_ls = glob.glob(os.path.join(start_dir, 'sub*', '**', '*_inv-1_part-mag_MPRAGE.nii.gz'),
