@@ -86,9 +86,7 @@ data_MP2RAGE = OrderedDict([
 ])
 
 # WRITE THEM
-
 indent = 4
-
 start_dir = ''  # insert here path to your BIDS data set
 
 # list all subjects and  create iterator with full path for subjects folder
@@ -103,37 +101,24 @@ for f in file_ls:
     #  define filename, excluding last three key-value pairs
     sid = '_'.join(fname.split('_')[:-3])
 
-    # creating JSON file for the first inversion image
-    json_name = '{}_inv-1_MPRAGE.json'.format(sid)
-    # create the file
-    with open(os.path.join(path, json_name), 'w') as ff:
-        json.dump(data_inv_1, ff, sort_keys=False, indent=indent)
-
-    # creating JSON file for the second inversion image
-    json_name = '{}_inv-2_MPRAGE.json'.format(sid)
-    with open(os.path.join(path, json_name), 'w') as ff:
-        json.dump(data_inv_2, ff, sort_keys=False, indent=indent)
-
-    # creating main JSON file for the MP2RAGE
-    json_name = '{}_MPRAGE.json'.format(sid)
-    with open(os.path.join(path, json_name), 'w') as ff:
-        json.dump(data_MP2RAGE, ff, sort_keys=False, indent=indent)
-
     # adding content to JSON files for the T1w and T1map
     # as its content is subject dependent
     inv1_mag = os.path.join('anat', '{}_inv1_part-mag_MPRAGE.nii.gz'.format(sid))
     inv1_phs = os.path.join('anat', '{}_inv1_part-phase_MPRAGE.nii.gz'.format(sid))
-    inv2_mag = os.path.join('anat', '{}_inv1_part-mag_MPRAGE.nii.gz'.format(sid))
-    inv2_phs = os.path.join('anat', '{}_inv1_part-phase_MPRAGE.nii.gz'.format(sid))
+    inv2_mag = os.path.join('anat', '{}_inv2_part-mag_MPRAGE.nii.gz'.format(sid))
+    inv2_phs = os.path.join('anat', '{}_inv2_part-phase_MPRAGE.nii.gz'.format(sid))
 
     data_T1['BasedOn'] = '{0}, {1}, {2}, {3}, '.format(inv1_mag, inv1_phs,
                                                        inv2_mag, inv2_phs)
 
-    # creating JSON files for the T1w and T1map
-    json_name = '{}_T1map.json'.format(sid)
-    with open(os.path.join(path, json_name), 'w') as ff:
-        json.dump(data_T1, ff, sort_keys=False, indent=indent)
+    # define json files for all image types
+    json_names = ['{}_inv-1_MPRAGE.json', '{}_inv-2_MPRAGE.json', '{}_MPRAGE.json',
+                  '{}_T1map.json', '{}_T1w.json']
+    data_types = [data_inv_1, data_inv_2, data_MP2RAGE,
+                  data_T1, data_T1]
+    out_files = zip(json_names, data_types)
 
-    json_name = '{}_T1w.json'.format(sid)
-    with open(os.path.join(path, json_name), 'w') as ff:
-        json.dump(data_T1, ff, sort_keys=False, indent=indent)
+    for i, out_file in enumerate(out_files):
+        json_name, data_type = out_file[0], out_file[1]
+        with open(os.path.join(path, json_name.format(sid)), 'w') as ff:
+            json.dump(data_type, ff, sort_keys=False, indent=indent)
