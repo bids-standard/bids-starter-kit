@@ -1,6 +1,12 @@
 function bids_report(path2BIDS, Subj, Ses, Run, ReadGZ)
 %bids_report Creates a short summary of the acquisition parameters of a
 % BIDS data set. This is an adaptation of the pybids report module.
+% 
+%
+%                       !!!!    WARNING    !!!!
+% This function is no longer maintained or developped here: it has been
+% moved to: https://github.com/bids-standard/bids-matlab.
+%
 %
 % INPUTS:
 % - BIDS: path to a valid BIDS data set. Make sure you have validated it @
