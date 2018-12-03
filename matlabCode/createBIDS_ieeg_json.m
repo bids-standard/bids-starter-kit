@@ -3,7 +3,7 @@
 % When adding additional metadata please use CamelCase
 %
 % DHermes, 2017
-% modified RG 201809
+% modified Jaap van der Aar & Giulio Castegnaro 30.11.18
 
 %%
 
@@ -37,11 +37,26 @@ ieeg_json.TaskName = ''; % Name of the task (for resting state use the rest
 % prefix). No two tasks should have the same name. Task label is derived 
 % from this field by removing all non alphanumeric ([a-zA-Z0-9]) characters. 
 
+ieeg_json.SamplingFrequency = ''; %Sampling frequency (in Hz) of all the iEEG channels 
+% in the recording (e.g., 2400). All other channels should have frequency specified 
+% as well in the channels.tsv file.
+
+ieeg_json.PowerLineFrequency = ''; %Frequency (in Hz) of the power grid where the 
+% iEEG recording was done (i.e., 50 or 60).
+
+ieeg_json.SoftwareFilters = ''; %  List of temporal software filters applied or 
+% ideally  key:value pairs of pre-applied filters and their parameter values.
+% (n/a if none). E.g., “{'HighPass': {'HalfAmplitudeCutOffHz': 1, 'RollOff: '6dB/Octave'}}”.
+
+ieeg_json.DCOffsetCorrection = ''; % A description of the method (if any) used to correct for 
+% a DC offset.If the method used was subtracting the mean value for each channel, use “mean”.
+
+%% Recommended fields:
+
+ieeg_json.HardwareFilters = ''; % List of hardware (amplifier) filters applied
+% with  key:value pairs of filter parameters and their values. 
+
 ieeg_json.Manufacturer = ''; % Manufacturer of the amplifier system  (e.g. "TDT, blackrock")
-
-
-
-%% Optional fields:
 
 ieeg_json.ManufacturersModelName = ''; % Manufacturer's designation of the 
 %iEEG amplifier model (e.g. "TDT"). 
@@ -67,82 +82,79 @@ ieeg_json.DeviceSerialNumber = ''; % The serial number of the equipment that
 % the equipment from being identifiable, as long as each pseudonym is unique 
 % within the dataset.
 
+ieeg_json.ECOGChannelCount = ''; % Number of iEEG surface channels included in the recording (e.g. 120) 
 
+ieeg_json.SEEGChannelCount = ''; % Number of iEEG depth channels included in the recording (e.g. 8)
 
-%% General fields, shared with MEG BIDS:
+ieeg_json.EEGChannelCount = ''; % Number of scalp EEG channels recorded simultaneously (e.g., 21)
 
+ieeg_json.EOGChannelCount = ''; % Number of EOG channels
 
+ieeg_json.ECGChannelCount = ''; % Number of ECG channels
 
-%%  Required fields:
+ieeg_json.EMGChannelCount = ''; % Number of EMG channels
 
-ieeg_json.EEGChannelCount = ''; % Number of EEG channels included in the recording (e.g. 0) 
+ieeg_json.MiscChannelCount = ''; % Number of miscellaneous analog channels for auxiliary  signals
 
-ieeg_json.EOGChannelCount = ''; % Number of EOG channels included in the recording (e.g. 1)
+ieeg_json.TriggerChannelCount = ''; % Number of channels for digital (TTL bit level) triggers. 
 
-ieeg_json.ECGChannelCount = ''; % Number of ECG channels included in the recording (e.g. 1)
-
-ieeg_json.EMGChannelCount = ''; % Number of EMG channels included in the recording (e.g. 1)
-
-ieeg_json.MiscChannelCount = ''; % Number of miscellaneous channels included in 
-% the recording (e.g. 1)
-
-ieeg_json.TriggerChannelCount = ''; % Number of channels for digital (TTL bit level) 
-% triggers (e.g. 0) 
-
-ieeg_json.PowerLineFrequency = ''; % Frequency (in Hz) of the power grid where 
-% the iEEG recording was done (i.e. 50 or 60) 
-
-
-
-%% Optional fields:
 ieeg_json.RecordingDuration = ''; % Length of the recording in seconds (e.g. 3600)
 
-ieeg_json.RecordingType = ''; % continuous, epoched 
+ieeg_json.RecordingType = ''; % continuous or epoched 
 
 ieeg_json.EpochLength = ''; % Duration of individual epochs in seconds (e.g. 1).
-% If recording was continuous, set value to Inf.
-
-ieeg_json.DeviceSoftwareVersion = ''; % Manufacturer's designation of the acquisition software.
+% If recording was continuous, leave out the field.
 
 ieeg_json.SubjectArtefactDescription = ''; % Freeform description of the observed 
 % subject artefact and its possible cause (e.g. door open, nurse walked into room at 2 min, 
 % "Vagus Nerve Stimulator", non-removable implant, seizure at 10 min). 
 % If this field is left empty, it will be interpreted as absence of artifacts.
 
+ieeg_json.SoftwareVersions = ''; % Manufacturer's designation of the acquisition software.
+
 
 
 %% Specific iEEG fields:
 
 
+% If mixed types of references, manufacturers or electrodes are used, please
+% specify in the corresponding table in the _electrodes.tsv file
 
 %% Required fields:
-ieeg_json.iEEGSurfChannelCount = ''; % Number of iEEG surface channels included 
-% in the recording (e.g. 120) 
 
-ieeg_json.iEEGDepthChannelCount = ''; % Number of iEEG depth channels included 
-% in the recording (e.g. 8) 
+ieeg_json.iEEGReference = ''; % General description of the reference scheme used and 
+% (when applicable) of location of the reference electrode in the raw recordings 
+% (e.g., "left mastoid”, “bipolar”, “T01” for electrode with name T01, “intracranial electrode
+% on top of a grid, not included with data”, “upside down electrode”).
 
+%% Recommended fields:
 
+ieeg_json.ElectrodeManufacturer = ''; % can be used if all electrodes are of the same manufacturer 
+%(e.g., AD-TECH, DIXI).
 
-%% Optional fields:
+ieeg_json.ElectrodeManufacturersModelName = ''; % Specify model name
+
+ieeg_json.iEEGGround = ''; % Description of the location of the ground electrode 
+% (“placed on right mastoid (M2)”).
 
 ieeg_json.iEEGPlacementScheme = ''; % General description of the placement 
 % of the iEEG electrodes. Left/right/bilateral/depth/surface 
-% (e.g. ?left frontal grid and bilateral hippocampal depth? or ?surface strip 
-% and STN depth?).
+% (e.g. "left frontal grid and bilateral hippocampal depth" or "surface strip 
+% and STN depth")
 
-ieeg_json.iEEGReferenceScheme = ''; % Specify reference scheme if more complex 
-% than one channel or CAR.
+ieeg_json.iEEGElectrodeGroups = ''; % Field to describe the way electrodes are grouped 
+% into strips, grids or depth probes e.g., {'grid1': "10x8 grid on left temporal pole",
+% 'strip2': "1x8 electrode strip on xxx"}.
 
-ieeg_json.Stimulation = ''; % Optional field to specify if electrical stimulation 
-% was done during the recording (options are 1 for yes, 0 for no). Parameters 
-% for event-like stimulation should be specified in the _events.tsv file 
-% (see example underneath). Continuous parameters that change across ?scans? 
-% can be indicated in the the _scans.tsv file.
+%% Optional fields:
 
-ieeg_json.Medication = ''; %  Optional field to add medication that the patient 
-% was on during a recording. 
+ieeg_json.ElectricalStimulation = ''; % Boolean field to specify if electrical stimulation 
+% was done during the recording (options are “true” or “false”). Parameters for event-like
+% stimulation should be specified in the _events.tsv file (see example underneath).
 
+ieeg_json.ElectricalStimulationParameters = ''; % Free form description of stimulation parameters, 
+% such as frequency, shape etc. Specific onsets can be specified in the _events.tsv file.
+% Specific shapes can be described here in freeform text.
 
 
 %% write
