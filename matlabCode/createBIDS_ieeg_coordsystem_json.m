@@ -4,6 +4,7 @@
 % When adding additional metadata please use CamelCase 
 %
 % DHermes, 2017
+% modified RG 201809
 % modified Jaap van der Aar 30.11.18
 
 %%
