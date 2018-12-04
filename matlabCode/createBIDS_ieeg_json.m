@@ -147,7 +147,7 @@ ieeg_json.iEEGGround = ''; % Description of the location of the ground electrode
 
 ieeg_json.iEEGPlacementScheme = ''; % Freeform description of the placement of the iEEG electrodes.
 % Left/right/bilateral/depth/surface(e.g. "left frontal grid and bilateral hippocampal depth" or 
-% "surface strip and STN depth" or “clinical indication bitemporal, bilateral temporal strips and left grid”). )
+% "surface strip and STN depth" or “clinical indication bitemporal, bilateral temporal strips and left grid”).
 
 ieeg_json.iEEGElectrodeGroups = ''; % Field to describe the way electrodes are grouped 
 % into strips, grids or depth probes e.g., {'grid1': "10x8 grid on left temporal pole",
