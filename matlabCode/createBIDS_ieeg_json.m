@@ -37,6 +37,8 @@ ieeg_json_name = fullfile(root_dir,ieeg_project,[ 'sub-' ieeg_sub ],...
 ieeg_json.TaskName = ''; % Name of the task (for resting state use the rest
 % prefix). No two tasks should have the same name. Task label is derived 
 % from this field by removing all non alphanumeric ([a-zA-Z0-9]) characters. 
+% Note this does not have to be a “behavioral task” that subjects perform, but can reflect some
+% information about the conditions present when the data was acquired (e.g., “rest” or “sleep”).
 
 ieeg_json.SamplingFrequency = ''; %Sampling frequency (in Hz) of all the iEEG channels 
 % in the recording (e.g., 2400). All other channels should have frequency specified 
@@ -134,17 +136,18 @@ ieeg_json.iEEGReference = ''; % General description of the reference scheme used
 %% Recommended fields:
 
 ieeg_json.ElectrodeManufacturer = ''; % can be used if all electrodes are of the same manufacturer 
-%(e.g., AD-TECH, DIXI).
+%(e.g., AD-TECH, DIXI). If electrodes of different manufacturers are used, please use the corresponding
+% table in the _electrodes.tsv file. 
 
-ieeg_json.ElectrodeManufacturersModelName = ''; % Specify model name
+ieeg_json.ElectrodeManufacturersModelName = ''; % Specify model name. If different electrode types are used, 
+%  please use the corresponding table in the _electrodes.tsv file
 
 ieeg_json.iEEGGround = ''; % Description of the location of the ground electrode 
 % (“placed on right mastoid (M2)”).
 
-ieeg_json.iEEGPlacementScheme = ''; % General description of the placement 
-% of the iEEG electrodes. Left/right/bilateral/depth/surface 
-% (e.g. "left frontal grid and bilateral hippocampal depth" or "surface strip 
-% and STN depth")
+ieeg_json.iEEGPlacementScheme = ''; % Freeform description of the placement of the iEEG electrodes.
+% Left/right/bilateral/depth/surface(e.g. "left frontal grid and bilateral hippocampal depth" or 
+% "surface strip and STN depth" or “clinical indication bitemporal, bilateral temporal strips and left grid”). )
 
 ieeg_json.iEEGElectrodeGroups = ''; % Field to describe the way electrodes are grouped 
 % into strips, grids or depth probes e.g., {'grid1': "10x8 grid on left temporal pole",

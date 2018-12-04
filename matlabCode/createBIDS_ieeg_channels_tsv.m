@@ -54,6 +54,7 @@ reference = {''}; % Specification of the reference (e.g., ‘mastoid’, ’ElectrodeN
 
 group = {''}; % Which group of channels (grid/strip/probe) this channel belongs to. 
 % One group has one wire and noise can be shared. This can be a name or number.
+% Note that any groups specified in `_electrodes.tsv` must match those present here.
 
 
 %% optional  columns
@@ -64,13 +65,14 @@ description = {''}; % Brief free-text description of the channel, or other infor
 % interest (e.g. position (e.g., 'left lateral temporal surface', 'unipolar/bipolar', etc.)).
 
 notch = [0]; % Frequencies used for the notch filter applied to the channel, 
-% in Hz. If no notch filter applied, use n/a (required). 
+% in Hz. If no notch filter applied, use n/a. 
 
 status = {''}; % Data quality observed on the channel (good/bad). A channel is considered bad 
 % if its data quality is compromised by excessive noise. Description of noise type SHOULD be 
 % provided in [status_description].
 
-status_description = {''}; % Freeform text to specify subtle noise, or why a channel is bad.
+status_description = {''}; % Freeform text description of noise or artifact affecting data 
+% quality on the channel. It is meant to explain why the channel was declared bad in [status].
 
 
 %% write

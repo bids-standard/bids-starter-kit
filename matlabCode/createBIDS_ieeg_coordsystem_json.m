@@ -45,6 +45,11 @@ loc_json.IndendedFor = ''; % This can be an MRI/CT or a file containing the oper
 % or drawing with path relative to the project folder. If only a surface reconstruction is available,
 % this should point to the surface reconstruction file. Note that this file should have the same coordinate 
 % system specified in iEEGCoordinateSystem. (e.g. "sub-<label>/ses-<label>/anat/sub-01_T1w.nii.gz")
+% for example 
+% T1: "/sub-<label>/ses-<label>/anat/sub-01_T1w.nii.gz"
+% Surface: "/derivatives/surfaces/sub-<label>/ses-<label>/anat/sub-01_T1w_pial.R.surf.gii" 
+% Operative photo: "/sub-<label>/ses-<label>/ieeg/sub-0001_ses-01_acq-photo1_photo.jpg" 
+% Talairach: "/derivatives/surfaces/sub-Talairach/ses-01/anat/sub-Talairach_T1w_pial.R.surf.gii”
 
 loc_json.iEEGCoordinateProcessingDescription = ''; % Has any projection been done on the electrode positions 
 % (e.g., “surface_projection”,  “none”).
