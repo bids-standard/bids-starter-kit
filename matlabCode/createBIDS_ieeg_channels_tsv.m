@@ -28,18 +28,15 @@ channels_tsv_name = fullfile(root_dir,project_label,...
 
 
 %% required columns
-name = {''}; % Label of the channel, only contains letters and numbers. 
-% The label must correspond to _electrodes.tsv name and all ieeg type channels 
-% are required to have a position. In case of bipolar recordings where the 
-% channels are plugged into the hardware in bipolar manner, the channel name 
-% must be ?Name01-Name02? with a dash between the two electrode names. The
-% reference channel name MUST be provided in the reference column
+name = {''}; % Label of the channel, only contains letters and numbers. The label must 
+% correspond to _electrodes.tsv name and all ieeg type channels are required to have \
+% a position. The reference channel name MUST be provided in the reference column
 
-type = {''}; % Type of channel e.g. SEEG, ECOG. 
+type = {''}; % Type of channel, see below for adequate keywords in this field 
 
-units = {''}; % Physical unit of the value represented in this channel,
-% e.g. V for Volt, specified according to the SI unit symbol and possibly 
-% prefix (e.g. milliV, microV), see BIDS spec for Units and Prefixes.
+units = {''}; % Physical unit of the value represented in this channel, e.g., V for Volt, 
+% specified according to the SI unit symbol and possibly prefix symbol (e.g., mV, ?V), 
+% see the BIDS spec (section 15 Appendix V: Units) for guidelines for Units and Prefixes.
 
 low_cutoff = [0]; %Frequencies used for the low pass filter applied to the 
 % channel in Hz. If no low pass filter was applied, use n/a. Note that 
@@ -69,9 +66,9 @@ description = {''}; % Brief free-text description of the channel, or other infor
 notch = [0]; % Frequencies used for the notch filter applied to the channel, 
 % in Hz. If no notch filter applied, use n/a (required). 
 
-status = {''}; %: Has good or bad: good channels can be taken into analysis. Bad indicates that
-% the channel does not measure physiology: it is excessively noisy or broken or sitting on top 
-% of another grid, throughout the whole recording. More subtle descriptions should go in status_description.
+status = {''}; % Data quality observed on the channel (good/bad). A channel is considered bad 
+% if its data quality is compromised by excessive noise. Description of noise type SHOULD be 
+% provided in [status_description].
 
 status_description = {''}; % Freeform text to specify subtle noise, or why a channel is bad.
 

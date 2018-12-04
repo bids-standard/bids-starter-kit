@@ -101,7 +101,8 @@ ieeg_json.TriggerChannelCount = ''; % Number of channels for digital (TTL bit le
 
 ieeg_json.RecordingDuration = ''; % Length of the recording in seconds (e.g. 3600)
 
-ieeg_json.RecordingType = ''; % continuous or epoched 
+ieeg_json.RecordingType = ''; % Defines whether the recording is “continuous” or “epoched”; this latter 
+% limited to time windows about events of interest (e.g., stimulus presentations, subject responses etc.)
 
 ieeg_json.EpochLength = ''; % Duration of individual epochs in seconds (e.g. 1).
 % If recording was continuous, leave out the field.
@@ -126,7 +127,9 @@ ieeg_json.SoftwareVersions = ''; % Manufacturer's designation of the acquisition
 ieeg_json.iEEGReference = ''; % General description of the reference scheme used and 
 % (when applicable) of location of the reference electrode in the raw recordings 
 % (e.g., "left mastoid”, “bipolar”, “T01” for electrode with name T01, “intracranial electrode
-% on top of a grid, not included with data”, “upside down electrode”).
+% on top of a grid, not included with data”, “upside down electrode”). If different channels have
+% a different reference, this field should have a general description and the channel specific 
+% reference should be defined in the _channels.tsv file.
 
 %% Recommended fields:
 
