@@ -4,7 +4,14 @@
     "PowerLineFrequency": "",
     "SoftwareFilters": "",
     "DCOffsetCorrection": "",
-    "HardwareFilters": "",
+    "HardwareFilters": {
+        "HighpassFilter": {
+            "CutoffFrequency": []
+        },
+        "LowpassFilter": {
+            "CutoffFrequency": []
+        }
+    },
     "Manufacturer": "",
     "ManufacturersModelName": "",
     "TaskDescription": "",
