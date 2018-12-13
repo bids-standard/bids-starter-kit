@@ -56,8 +56,14 @@ ieeg_json.DCOffsetCorrection = ''; % A description of the method (if any) used t
 
 %% Recommended fields:
 
-ieeg_json.HardwareFilters = ''; % List of hardware (amplifier) filters applied
-% with  key:value pairs of filter parameters and their values. 
+HardwareFilters.HighpassFilter.CutoffFrequency = []; % Contains the high pass hardware filter
+% cut off frequency. 
+
+HardwareFilters.LowpassFilter.CutoffFrequency = []; % Contains the low pass hardware filter
+% cut off frequency. 
+
+ieeg_json.HardwareFilters = HardwareFilters; % Cutoff frequencies of high and low pass filter
+% are stored in this variable automatically. No further input necessary. 
 
 ieeg_json.Manufacturer = ''; % Manufacturer of the amplifier system  (e.g. "TDT, blackrock")
 
