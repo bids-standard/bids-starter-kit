@@ -65,7 +65,7 @@ For general information to help you get started with BIDS, we reccommend the [wi
 
 For metadata file templates or code to help you get started, please scroll up to find the appropriate files that are available in your langauge of choice.
 
-Finally, for more advanced knowledge that may pertain to specific use cases for your data, please refer to the full [BIDS Specification](https://bids-specification.readthedocs.io/en/latest/)
+Finally, for more advanced knowledge that may pertain to specific use cases for your data, please refer to the full [BIDS Specification](https://bids-specification.readthedocs.io/en/stable/)
 
 ## Philosophy
 The most important part of BIDS are the users: if more people use it, more data will be shared and the more powerful it will become. <strong>We want to make it easy to learn</strong> and more adopted. Since BIDS is platform independent and still an adapting, growing tool, the greater the community, the better it will be.
