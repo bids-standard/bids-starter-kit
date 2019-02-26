@@ -112,15 +112,17 @@ Please don't be shy, **the newer you are the more valuable your feedback is** :t
 
 **Please consider citing the relevant papers when publishing a project that uses BIDS** 
 
+All publications are listed in our wiki: https://github.com/bids-standard/bids-starter-kit/wiki/Publications
+
+You'll almost always want to cite the original paper:
+
 [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](https://www.nature.com/articles/sdata201644)
 
 >Scientific Data volume 3, Article number: 160044 (2016)
 
 <br>
 
-[MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110)
-
->Scientific Data volume 5, Article number: 180110 (2018)
+But there are also modality specific extension papers for [MEG](https://doi.org/10.1038/sdata.2018.110), [EEG](https://doi.org/10.31234/osf.io/63a4y) and [iEEG](https://doi.org/10.31234/osf.io/r7vc2), or the [BIDS-Apps](https://doi.org/10.1371/journal.pcbi.1005209) paper that should be referenced if you're using data of that type.
 
 [gsoc]: https://summerofcode.withgoogle.com
 [patrick-github]: https://github.com/Park-Patrick
