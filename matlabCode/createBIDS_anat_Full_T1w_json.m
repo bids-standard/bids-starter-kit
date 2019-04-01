@@ -1,6 +1,8 @@
 %% Template Matlab script to create an BIDS compatible sub-01_ses-01_acq-FullExample_run-01_T1w.json file
 % This example lists all required  RECOMMENDED and optional fields.
 % When adding additional metadata please use CamelCase 
+%
+% Writing json files relies 
 % 
 % anushkab, 2018
 % modified RG 201809
@@ -241,11 +243,23 @@ anat_json.ContrastBolusIngredient=' ';
 
 
 %% Write JSON
-json_options.indent = '    '; % this makes the json look pretier when opened in a txt editor
+% this makes the json look pretier when opened in a txt editor
+json_options.indent = '    '; 
 
 jsonSaveDir = fileparts(anat_json_name);
 if ~isdir(jsonSaveDir)
     fprintf('Warning: directory to save json file does not exist, create: %s \n',jsonSaveDir)
 end
 
-jsonwrite(anat_json_name,anat_json,json_options)
+try
+    % bids.util.jsonencode(anat_json_name, anat_json)
+    jsonwrite(anat_json_name,anat_json,json_options)
+catch
+    str = sprintf('%s\n%s\n%s\n%s',...
+        'Writing the JSON file seems to have failed.', ...
+        'Make sure that the following libraries are in the matlab/octave path:', ...
+        '-https://github.com/gllmflndn/JSONio', ...
+        '-https://github.com/bids-standard/bids-matlab');
+    warning(str)
+end
+
