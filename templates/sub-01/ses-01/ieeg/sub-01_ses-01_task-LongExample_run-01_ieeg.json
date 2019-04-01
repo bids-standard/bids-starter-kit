@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "TaskName": "",
     "SamplingFrequency": "",
@@ -42,4 +43,35 @@
     "iEEGElectrodeGroups": "",
     "ElectricalStimulation": "",
     "ElectricalStimulationParameters": ""
+=======
+{
+    "TaskName": "",
+    "Manufacturer": "",
+    "ManufacturersModelName": "",
+    "TaskDescription": "",
+    "Instructions": "",
+    "CogAtlasID": "",
+    "CogPOID": "",
+    "InstitutionName": "",
+    "InstitutionAddress": "",
+    "DeviceSerialNumber": "",
+    "EEGChannelCount": "",
+    "EOGChannelCount": "",
+    "ECGChannelCount": "",
+    "EMGChannelCount": "",
+    "MiscChannelCount": "",
+    "TriggerChannelCount": "",
+    "PowerLineFrequency": "",
+    "RecordingDuration": "",
+    "RecordingType": "",
+    "EpochLength": "",
+    "DeviceSoftwareVersion": "",
+    "SubjectArtefactDescription": "",
+    "iEEGSurfChannelCount": "",
+    "iEEGDepthChannelCount": "",
+    "iEEGPlacementScheme": "",
+    "iEEGReferenceScheme": "",
+    "Stimulation": "",
+    "Medication": ""
+>>>>>>> Stashed changes
 }

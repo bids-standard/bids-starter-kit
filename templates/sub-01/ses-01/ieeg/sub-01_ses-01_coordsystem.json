@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "iEEGCoordinateSystem": "",
     "iEEGCoordinateUnits": "",
@@ -5,4 +6,15 @@
     "IndendedFor": "",
     "iEEGCoordinateProcessingDescription": "",
     "iEEGCoordinateProcessingReference": ""
+=======
+{
+    "iEEGCoordinateSystem": "",
+    "iEEGCoordinateUnits": "",
+    "iEEGCoordinateProcessingDescripton": "",
+    "IndendedFor": "",
+    "AssociatedImageCoordinateSystem": "",
+    "AssociatedImageCoordinateUnits": "",
+    "AssociatedImageCoordinateSystemDescription": "",
+    "iEEGCoordinateProcessingReference": ""
+>>>>>>> Stashed changes
 }
