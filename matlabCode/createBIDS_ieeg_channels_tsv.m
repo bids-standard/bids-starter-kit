@@ -48,8 +48,8 @@ high_cutoff = [0]; % Frequencies used for the high pass filter applied to
 
 %% recommended columns:
 
-reference = {''}; % Specification of the reference (e.g., ‘mastoid’, ’ElectrodeName01’,
-% ‘intracranial’, ’CAR’, ’other’, ‘n/a’). If the channel is not an electrode channel 
+reference = {''}; % Specification of the reference (e.g., "mastoid", "ElectrodeName01",
+% "intracranial", "CAR", "other", "n/a"). If the channel is not an electrode channel 
 % (e.g., a microphone channel) use `n/a`.
 
 group = {''}; % Which group of channels (grid/strip/probe) this channel belongs to. 

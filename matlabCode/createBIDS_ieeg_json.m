@@ -41,8 +41,8 @@ ieeg_json_name = fullfile(root_dir,ieeg_project,[ 'sub-' ieeg_sub ],...
 ieeg_json.TaskName = ''; % Name of the task (for resting state use the rest
 % prefix). No two tasks should have the same name. Task label is derived
 % from this field by removing all non alphanumeric ([a-zA-Z0-9]) characters.
-% Note this does not have to be a �behavioral task� that subjects perform, but can reflect some
-% information about the conditions present when the data was acquired (e.g., �rest� or �sleep�).
+% Note this does not have to be a "behavioral task" that subjects perform, but can reflect some
+% information about the conditions present when the data was acquired (e.g., "rest" or "sleep").
 
 ieeg_json.SamplingFrequency = ''; %Sampling frequency (in Hz) of all the iEEG channels
 % in the recording (e.g., 2400). All other channels should have frequency specified
@@ -53,10 +53,10 @@ ieeg_json.PowerLineFrequency = ''; %Frequency (in Hz) of the power grid where th
 
 ieeg_json.SoftwareFilters = ''; %  List of temporal software filters applied or
 % ideally  key:value pairs of pre-applied filters and their parameter values.
-% (n/a if none). E.g., �{'HighPass': {'HalfAmplitudeCutOffHz': 1, 'RollOff: '6dB/Octave'}}�.
+% (n/a if none). E.g., "{'HighPass': {'HalfAmplitudeCutOffHz': 1, 'RollOff: '6dB/Octave'}}".
 
 ieeg_json.DCOffsetCorrection = ''; % A description of the method (if any) used to correct for
-% a DC offset.If the method used was subtracting the mean value for each channel, use �mean�.
+% a DC offset.If the method used was subtracting the mean value for each channel, use "mean".
 
 %% Recommended fields:
 
@@ -113,7 +113,7 @@ ieeg_json.TriggerChannelCount = ''; % Number of channels for digital (TTL bit le
 
 ieeg_json.RecordingDuration = ''; % Length of the recording in seconds (e.g. 3600)
 
-ieeg_json.RecordingType = ''; % Defines whether the recording is �continuous� or �epoched�; this latter
+ieeg_json.RecordingType = ''; % Defines whether the recording is "continuous" or "epoched"; this latter
 % limited to time windows about events of interest (e.g., stimulus presentations, subject responses etc.)
 
 ieeg_json.EpochLength = ''; % Duration of individual epochs in seconds (e.g. 1).
@@ -138,8 +138,8 @@ ieeg_json.SoftwareVersions = ''; % Manufacturer's designation of the acquisition
 
 ieeg_json.iEEGReference = ''; % General description of the reference scheme used and
 % (when applicable) of location of the reference electrode in the raw recordings
-% (e.g., "left mastoid�, �bipolar�, �T01� for electrode with name T01, �intracranial electrode
-% on top of a grid, not included with data�, �upside down electrode�). If different channels have
+% (e.g., "left mastoid", "bipolar", "T01" for electrode with name T01, "intracranial electrode
+% on top of a grid, not included with data", "upside down electrode"). If different channels have
 % a different reference, this field should have a general description and the channel specific
 % reference should be defined in the _channels.tsv file.
 
@@ -153,11 +153,11 @@ ieeg_json.ElectrodeManufacturersModelName = ''; % Specify model name. If differe
 %  please use the corresponding table in the _electrodes.tsv file
 
 ieeg_json.iEEGGround = ''; % Description of the location of the ground electrode
-% (�placed on right mastoid (M2)�).
+% ("placed on right mastoid (M2)").
 
 ieeg_json.iEEGPlacementScheme = ''; % Freeform description of the placement of the iEEG electrodes.
 % Left/right/bilateral/depth/surface(e.g. "left frontal grid and bilateral hippocampal depth" or
-% "surface strip and STN depth" or �clinical indication bitemporal, bilateral temporal strips and left grid�).
+% "surface strip and STN depth" or "clinical indication bitemporal, bilateral temporal strips and left grid").
 
 ieeg_json.iEEGElectrodeGroups = ''; % Field to describe the way electrodes are grouped
 % into strips, grids or depth probes e.g., {'grid1': "10x8 grid on left temporal pole",
@@ -166,7 +166,7 @@ ieeg_json.iEEGElectrodeGroups = ''; % Field to describe the way electrodes are g
 %% Optional fields:
 
 ieeg_json.ElectricalStimulation = ''; % Boolean field to specify if electrical stimulation
-% was done during the recording (options are �true� or �false�). Parameters for event-like
+% was done during the recording (options are "true" or "false"). Parameters for event-like
 % stimulation should be specified in the _events.tsv file (see example underneath).
 
 ieeg_json.ElectricalStimulationParameters = ''; % Free form description of stimulation parameters,

@@ -29,21 +29,21 @@ electrodes_json_name = fullfile(root_dir,ieeg_project,...
 %%  Required fields
 
 loc_json.iEEGCoordinateSystem  = '';% Defines the coordinate system for the iEEG electrodes.
-% For example, �ACPC�. See Appendix VIII: preferred names of Coordinate systems.
+% For example, "ACPC". See Appendix VIII: preferred names of Coordinate systems.
 % If "Other" (e.g., individual subject MRI), provide definition of the coordinate system in iEEGCoordinateSystemDescription
 % If positions correspond to pixel indices in a 2D image (of either a volume-rendering,
-% surface-rendering, operative photo, or operative drawing), this must be �pixels�.
+% surface-rendering, operative photo, or operative drawing), this must be "pixels".
 % See section 3.4.1: Electrode locations for more information on electrode locations.
 
-loc_json.iEEGCoordinateUnits  = '';% Units of the _electrodes.tsv, MUST be �m�, �mm�, �cm� or �pixels�.
+loc_json.iEEGCoordinateUnits  = '';% Units of the _electrodes.tsv, MUST be "m", "mm", "cm" or "pixels".
 
 
 %% Recommended fields
 
 loc_json.iEEGCoordinateProcessingDescripton = ''; % Freeform text description or link to document
-% describing the iEEG coordinate system system in detail (e.g., �Coordinate system with the origin
+% describing the iEEG coordinate system system in detail (e.g., "Coordinate system with the origin
 % at anterior commissure (AC), negative y-axis going through the posterior commissure (PC), z-axis
-% going to a mid-hemisperic point which lies superior to the AC-PC line, x-axis going to the right�)
+% going to a mid-hemisperic point which lies superior to the AC-PC line, x-axis going to the right")
 
 loc_json.IndendedFor = ''; % This can be an MRI/CT or a file containing the operative photo, x-ray
 % or drawing with path relative to the project folder. If only a surface reconstruction is available,
@@ -53,10 +53,10 @@ loc_json.IndendedFor = ''; % This can be an MRI/CT or a file containing the oper
 % T1: "/sub-<label>/ses-<label>/anat/sub-01_T1w.nii.gz"
 % Surface: "/derivatives/surfaces/sub-<label>/ses-<label>/anat/sub-01_T1w_pial.R.surf.gii"
 % Operative photo: "/sub-<label>/ses-<label>/ieeg/sub-0001_ses-01_acq-photo1_photo.jpg"
-% Talairach: "/derivatives/surfaces/sub-Talairach/ses-01/anat/sub-Talairach_T1w_pial.R.surf.gii�
+% Talairach: "/derivatives/surfaces/sub-Talairach/ses-01/anat/sub-Talairach_T1w_pial.R.surf.gii"
 
 loc_json.iEEGCoordinateProcessingDescription = ''; % Has any projection been done on the electrode positions
-% (e.g., �surface_projection�,  �none�).
+% (e.g., "surface_projection",  "none").
 
 loc_json.iEEGCoordinateProcessingReference = ''; % A reference to a paper that defines in more detail
 % the method used to project or localize the electrodes
