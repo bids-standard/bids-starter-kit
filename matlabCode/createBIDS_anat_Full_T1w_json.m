@@ -2,8 +2,10 @@
 % This example lists all required  RECOMMENDED and optional fields.
 % When adding additional metadata please use CamelCase 
 %
-% Writing json files relies 
-% 
+% Writing json files relies on the JSONio library
+% https://github.com/gllmflndn/JSONio
+% Make sure it is in the matab/octave path
+%
 % anushkab, 2018
 % modified RG 201809
 
@@ -252,14 +254,11 @@ if ~isdir(jsonSaveDir)
 end
 
 try
-    % bids.util.jsonencode(anat_json_name, anat_json)
-    jsonwrite(anat_json_name,anat_json,json_options)
+    jsonwrite(anat_json_name, anat_json, json_options)
 catch
-    str = sprintf('%s\n%s\n%s\n%s',...
+    warning( '%s\n%s\n%s\n%s',...
         'Writing the JSON file seems to have failed.', ...
-        'Make sure that the following libraries are in the matlab/octave path:', ...
-        '-https://github.com/gllmflndn/JSONio', ...
-        '-https://github.com/bids-standard/bids-matlab');
-    warning(str)
+        'Make sure that the following library is in the matlab/octave path:', ...
+        'https://github.com/gllmflndn/JSONio') 
 end
 

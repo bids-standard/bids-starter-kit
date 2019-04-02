@@ -6,6 +6,10 @@
 % conventions use folders which contain data files of various nature: e.g., CTF’s .ds format, or 4D/BTi.
 % Please refer to Appendix VI for examples from a selection of MEG manufacturers
 %
+% Writing json files relies on the JSONio library
+% https://github.com/gllmflndn/JSONio
+% Make sure it is in the matab/octave path
+%
 % By @Cofficer, Created 9/03/2018
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -14,8 +18,8 @@ root_dir        = './';
 project_label   = 'templates';
 sub_id          = '01';
 ses_id          = '01';
-task_id         = 'FullExample'
-acq_id          = 'CTF'
+task_id         = 'FullExample';
+acq_id          = 'CTF';
 run_id          = '1';
 
 % A “proc” (processed) label has been added, especially useful for files coming from Maxfilter (e.g. sss,
@@ -25,13 +29,13 @@ proc_id         = 'sss';
 acquisition     = 'meg';
 
 meg_json_name = fullfile(root_dir,project_label,...
-              ['sub-' sub_id],...
-              ['ses-' ses_id],acquisition,...
-              ['sub-' sub_id ...
-              '_task-' task_id ...
-              '_acq-' acq_id ...
-              '_run-' run_id ...
-              '_proc-' proc_id '_meg.json']);
+    ['sub-' sub_id],...
+    ['ses-' ses_id],acquisition,...
+    ['sub-' sub_id ...
+    '_task-' task_id ...
+    '_acq-' acq_id ...
+    '_run-' run_id ...
+    '_proc-' proc_id '_meg.json']);
 
 % Assign the fields in the Matlab structure that can be saved as a json.
 %The following fields must be defined:
@@ -219,5 +223,11 @@ if ~isdir(jsonSaveDir)
     fprintf('Warning: directory to save json file does not exist, create: %s \n',jsonSaveDir)
 end
 
-
-jsonwrite(meg_json_name,meg_json,json_options)
+try
+    jsonwrite(meg_json_name,meg_json,json_options)
+catch
+    warning( '%s\n%s\n%s\n%s',...
+        'Writing the JSON file seems to have failed.', ...
+        'Make sure that the following library is in the matlab/octave path:', ...
+        'https://github.com/gllmflndn/JSONio')
+end
