@@ -80,7 +80,7 @@ meg_json.DigitizedLandmarks              ='';
 meg_json.DigitizedHeadPoints             ='';
 
 
-json_options.indent               = '    '; % this makes the json look pretier when opened in a txt editor
+json_options.indent               = '    '; % this makes the json look prettier when opened in a txt editor
 
 jsonSaveDir = fileparts(meg_json_name);
 if ~isdir(jsonSaveDir)

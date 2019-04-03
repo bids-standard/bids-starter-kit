@@ -245,7 +245,7 @@ anat_json.ContrastBolusIngredient=' ';
 
 
 %% Write JSON
-% this makes the json look pretier when opened in a txt editor
+% this makes the json look prettier when opened in a txt editor
 json_options.indent = '    '; 
 
 jsonSaveDir = fileparts(anat_json_name);
