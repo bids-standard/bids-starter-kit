@@ -48,7 +48,7 @@ anat_json.Manufacturer=' ';
 
 %RECOMMENDED Manufacturer`s model name of the equipment that produced the 
 % composite instances. Corresponds to DICOM Tag 0008, 1090 "Manufacturers Model Name".
-anant_json.ManufacturersModelName=' ';
+anat_json.ManufacturersModelName=' ';
 
 %RECOMMENDED Nominal field strength of MR magnet in Tesla. Corresponds to 
 % DICOM Tag 0018,0087 "Magnetic Field Strength".
