@@ -41,7 +41,7 @@ manufacturer = {''}; % Optional field to specify the electrode manufacturer
 group = {''}; %Optional field to specify the group that  the electrode is a part of. 
 %Note that any group specified here should match a group specified in `_channels.tsv`
 hemisphere = {''}; %Optional field to specify the hemisphere in which 
-%the electrode is placed, one of [‘L’ or ‘R’] (use capital).
+%the electrode is placed, one of ["L" or "R"] (use capital).
 
 %% optional columns
 type = {''}; %Optional type of the electrode,e.g.,cup, ring, clip-on, wire, needle, ...
