@@ -16,19 +16,19 @@
       BIDS Homepage
     </a>
     <span> | </span>
-    <a href=https://github.com/INCF/bids-starter-kit/wiki>
+    <a href=https://github.com/bids-standard/bids-starter-kit/wiki>
       Wiki
     </a>
      <span> | </span>
-    <a href="http://bids.neuroimaging.io/bids_spec.pdf">
+    <a href="http://bids-specification.readthedocs.io/">
       Standard
     </a>
     <span> | </span>
-    <a href="https://github.com/INCF/bids-starter-kit/wiki/Tutorials">
+    <a href="https://github.com/bids-standard/bids-starter-kit/wiki/Tutorials">
       Tutorials
     </a>
     <span> | </span>
-    <a href="https://gitter.im/INCF/bids-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+    <a href="https://gitter.im/bids-standard/bids-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
       Chat
     </a>
     <span> | </span>
@@ -54,14 +54,14 @@ alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 - [Acknowledgements](#acknowledgements)
 
 ## Motivation 
-The primary goal of this project is to simplify the process of learning about the Brain Imaging Data Structure (BIDS). We hope that the resources in this wiki, such as links to tutorials, easy-to-read documentation, and code will make BIDS easier to adopt. In order to remain up to date with the continuously changing BIDS specifications, we have adopted a similarly open model to allow [contributions](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md) from the community. 
+The primary goal of this project is to simplify the process of learning about the Brain Imaging Data Structure (BIDS). We hope that the resources in this wiki, such as links to tutorials, easy-to-read documentation, and code will make BIDS easier to adopt. In order to remain up to date with the continuously changing BIDS specifications, we have adopted a similarly open model to allow [contributions](https://github.com/bids-standard/bids-starter-kit/blob/master/CONTRIBUTING.md) from the community. 
 
 
 ## Project Summary
 Neuroimaging and neurophysiology data can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but the many different specifications of these acquired images cause portability issues between different labs and scientists. BIDS is a framework for organizing data that standardizes file organization and dataset description between different researchers.
 
 ### How do I find information?
-For general information to help you get started with BIDS, we reccommend the [wiki](https://github.com/INCF/bids-starter-kit/wiki). It includes pages such as an overall introduction to the BIDS folder structure, links to tutorials, and a glossary to help you with some of the technical terms.
+For general information to help you get started with BIDS, we reccommend the [wiki](https://github.com/bids-standard/bids-starter-kit/wiki). It includes pages such as an overall introduction to the BIDS folder structure, links to tutorials, and a glossary to help you with some of the technical terms.
 
 For metadata file templates or code to help you get started, please scroll up to find the appropriate files that are available in your langauge of choice.
 
@@ -88,20 +88,16 @@ BIDS is for everyone! Programming is not required, it simply makes some processe
 
 ## Contributing
 
-There are many ways to get in touch with us! Please see our [Contact Page](https://github.com/INCF/BIDS-Starter-Kit/wiki/Contact) for all the details.
+There are many ways to get in touch with us! Please see our [Contact Page](https://github.com/bids-standard/bids-starter-kit/wiki/Contact) for all the details.
 
 To find out more about all the different ways to contribute to the BIDS Starter Kit, check out our [**contributing guidelines**](CONTRIBUTING.md).
 They'll tell you how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful resources to help you [contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or how to make a change [using issues](CONTRIBUTING.md#where-to-start-issue-labels) (you can also check out GitHub's help on [issues](https://help.github.com/articles/about-issues)) and a [pull request](CONTRIBUTING.md#making-a-change-with-a-pull-request).
 
-If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github].
-It would really help his project along if you said hello and passed along any feedback you have :purple_heart:.
-Please don't be shy, **the newer you are the more valuable your feedback is** :thumbsup:
+If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. It would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Please don't be shy, **the newer you are the more valuable your feedback is** :thumbsup:
 
 ## Acknowledgements
 
 ### Sponsor Organizations
-
-
 
 <a href="https://summerofcode.withgoogle.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png" width="125" height="125" title="GSOC" alt="GSOC"></a>
 <a href="https://www.incf.org/"><img src="https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM" width="200" height="125" title="INCF" alt="INCF"></a>
