@@ -4,6 +4,7 @@
         "TermURL": "",
         "Citation": "Scheffer, I. E., Berkovic, S., Capovilla, G., Connolly, M. B., French, J., Guilhoto, L., ... & Nordli, D. R. (2017). ILAE classification of the epilepsies: position paper of the ILAE Commission for Classification and Terminology. Epilepsia, 58(4), 512-521."
     },
+    
     "SeizureType": {
         "LongName": "Seizure type",
         "Description": "Seizures are classified by onset: Generalised, Focal and Unknown",
@@ -20,7 +21,7 @@
                 "Non-motor": [
                     "Typical Absence",
                     "Atypical Absence",
-                    "Myoclonic absence",
+                    "Myoclonic Absence",
                     "Absence with eyelid myoclonia"
                 ]
             },
@@ -40,7 +41,7 @@
                     "Focal hyperkinetic seizure",
                     "Focal automatism seizure",
                     "Focal motor seizure with dysarthria / anarthria",
-                    "Focal motor seizure with negative myoclonus ",
+                    "Focal motor seizure with negative myoclonus",
                     "Focal motor seizure with version",
                     "Focal bilateral motor seizure"
                 ],
@@ -109,79 +110,9 @@
                     "Unclassified"
                 ]
             }
-        },
-        "Etiology": {
-            "LongName": "Epilepsy etiology",
-            "Description": "At each stage, etiology (cause and comorbidities) should be identified. These are divided into six categories:",
-            "Levels": {
-                "Genetic": {
-                    "LongName": "Genetic Etiology",
-                    "Description": "The concept of genetic epilepsy is that the epilepsy is, as best we understand, the direct result of a known or presumed genetic defect(s) in which seizures are the core symptom of the disorder.",
-                    "Levels": [
-                        "Chromosomal abnormalities",
-                        "Gene abnormalities"
-                    ]
-                },
-                "Structural": {
-                    "LongName": "Structural Etiology",
-                    "Description": "Structural epilepsies are conceptualized as having a distinct structural brain abnormality that has been demonstrated to be associated with a substantially increased risk of epilepsy in appropriately designed studies.",
-                    "Levels": [
-                        "Malformations of cortical development",
-                        "Vascular malformations",
-                        "Hippocampal sclerosis",
-                        "Hypoxic-ischemic structural abnormalities",
-                        "Traumatic Brain Injury",
-                        "Tumors",
-                        "Porencephalic cyst"
-                    ]
-                },
-                "Metabolic": {
-                    "LongName": "Metabolic Etiology",
-                    "Description": "Metabolic epilepsies are conceptualized as having a distinct metabolic abnormality that has been demonstrated to be associated with a substantially increased risk of developing epilepsy in appropriately designed studies.",
-                    "Levels": [
-                        "Biotinidase and holocarboxylase synthase deficiency",
-                        "Cerebral folate deficiency",
-                        "Creatine disorders",
-                        "Folinic acid responsive seizures",
-                        "Glucose transporter 1 (GLUT1) deficiency",
-                        "Mitochondrial disorders",
-                        "Peroxisomal Disorders",
-                        "Pyridoxine dependent epilepsy/PNPO deficiency"
-                    ]
-                },
-                "Immune": {
-                    "LongName": "Immune Etiology",
-                    "Description": "Immune epilepsies are conceptualized as having a distinct immune-mediated etiology with evidence of central nervous system inflammation, that has been demonstrated to be associated with a substantially increased risk of developing epilepsy.",
-                    "Levels": [
-                        "Rasmussen syndrome",
-                        "Antibody mediated etiologies"
-                    ]
-                },
-                "Infectious": {
-                    "LongName": "Infectious Etiology",
-                    "Description": "The commonest etiology for epilepsy worldwide is infectious, especially in developing countries. Infections in the central nervous system can cause both acute symptomatic seizures (which occur closely related to the timing of the initial infection) and epilepsy.",
-                    "Levels": [
-                        "Bacterial Meningitis",
-                        "Cerebral Malaria",
-                        "Cerebral Toxoplasmosis",
-                        "CMV",
-                        "HIV",
-                        "Neurocysticercosis",
-                        "Tuberculosis",
-                        "Viral Encephalitis",
-                        "Other infections"
-                    ]
-                },
-                "Unknown": {
-                    "LongName": "Unknown Etiology",
-                    "Description": "'Unknown' is meant to be viewed neutrally and to designate that the nature of the underlying cause of the epilepsy is as yet unknown; it may have a fundamental genetic defect at its core or there may be a separate as yet unrecognized disorder.",
-                    "Levels": [
-                        "Febrile infection related epilepsy syndrome (FIRES)"
-                    ]
-                }
-            }
         }
     },
+
     "EpilepsyType": {
         "LongName": "Epilepsy type",
         "Description": "Epilepsy types are divided into four categories: Generalised Epilepsy, Focal Epilepsy, Combined generalised and focal Epilepsy and Unknown Epilepsy",
@@ -202,79 +133,9 @@
                 "LongName": "Unknown Epilepsy",
                 "Description": "The term 'unknown' is used to denote where it is understood that the patient has epilepsy, but it is not possible to denote whether it is focal, generalized, or combined focal and generalized. This may occur due to insufficient information to classify the epilepsy, for example if the EEG is normal/uninformative."
             }
-        },
-        "Etiology": {
-            "LongName": "Epilepsy etiology",
-            "Description": "At each stage, etiology (cause and comorbidities) should be identified. These are divided into six categories:",
-            "Levels": {
-                "Genetic": {
-                    "LongName": "Genetic Etiology",
-                    "Description": "The concept of genetic epilepsy is that the epilepsy is, as best we understand, the direct result of a known or presumed genetic defect(s) in which seizures are the core symptom of the disorder.",
-                    "Levels": [
-                        "Chromosomal abnormalities",
-                        "Gene abnormalities"
-                    ]
-                },
-                "Structural": {
-                    "LongName": "Structural Etiology",
-                    "Description": "Structural epilepsies are conceptualized as having a distinct structural brain abnormality that has been demonstrated to be associated with a substantially increased risk of epilepsy in appropriately designed studies.",
-                    "Levels": [
-                        "Malformations of cortical development",
-                        "Vascular malformations",
-                        "Hippocampal sclerosis",
-                        "Hypoxic-ischemic structural abnormalities",
-                        "Traumatic Brain Injury",
-                        "Tumors",
-                        "Porencephalic cyst"
-                    ]
-                },
-                "Metabolic": {
-                    "LongName": "Metabolic Etiology",
-                    "Description": "Metabolic epilepsies are conceptualized as having a distinct metabolic abnormality that has been demonstrated to be associated with a substantially increased risk of developing epilepsy in appropriately designed studies.",
-                    "Levels": [
-                        "Biotinidase and holocarboxylase synthase deficiency",
-                        "Cerebral folate deficiency",
-                        "Creatine disorders",
-                        "Folinic acid responsive seizures",
-                        "Glucose transporter 1 (GLUT1) deficiency",
-                        "Mitochondrial disorders",
-                        "Peroxisomal Disorders",
-                        "Pyridoxine dependent epilepsy/PNPO deficiency"
-                    ]
-                },
-                "Immune": {
-                    "LongName": "Immune Etiology",
-                    "Description": "Immune epilepsies are conceptualized as having a distinct immune-mediated etiology with evidence of central nervous system inflammation, that has been demonstrated to be associated with a substantially increased risk of developing epilepsy.",
-                    "Levels": [
-                        "Rasmussen syndrome",
-                        "Antibody mediated etiologies"
-                    ]
-                },
-                "Infectious": {
-                    "LongName": "Infectious Etiology",
-                    "Description": "The commonest etiology for epilepsy worldwide is infectious, especially in developing countries. Infections in the central nervous system can cause both acute symptomatic seizures (which occur closely related to the timing of the initial infection) and epilepsy.",
-                    "Levels": [
-                        "Bacterial Meningitis",
-                        "Cerebral Malaria",
-                        "Cerebral Toxoplasmosis",
-                        "CMV",
-                        "HIV",
-                        "Neurocysticercosis",
-                        "Tuberculosis",
-                        "Viral Encephalitis",
-                        "Other infections"
-                    ]
-                },
-                "Unknown": {
-                    "LongName": "Unknown Etiology",
-                    "Description": "'Unknown' is meant to be viewed neutrally and to designate that the nature of the underlying cause of the epilepsy is as yet unknown; it may have a fundamental genetic defect at its core or there may be a separate as yet unrecognized disorder.",
-                    "Levels": [
-                        "Febrile infection related epilepsy syndrome (FIRES)"
-                    ]
-                }
-            }
         }
     },
+
     "EpilepsySyndrome": {
         "LongName": "Epilepsy Syndrome",
         "Description": "Epilepsies are organized by reliably identifying common clinical and electrical characteristics into epilepsy syndromes. Such syndromes have a typical age of seizure onset, specific seizure types and EEG characteristics and often other features which when taken together allow the specific epilepsy syndrome diagnosis.",
@@ -318,8 +179,9 @@
                 "Reflex epilepsies",
                 "Progressive myoclonus epilepsies"
             ]
-        },
-        "Etiology": {
+        }        
+    },
+    "Etiology": {
             "LongName": "Epilepsy etiology",
             "Description": "At each stage, etiology (cause and comorbidities) should be identified. These are divided into six categories:",
             "Levels": {
@@ -390,5 +252,4 @@
                 }
             }
         }
-    }
 }
