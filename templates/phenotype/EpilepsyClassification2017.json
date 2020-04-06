@@ -1,255 +1,262 @@
 {
-    "EpilepsyClassification":{
+    "EpilepsyClassification": {
         "Description": "ILAE classification of the epilepsies",
         "TermURL": "",
-        "Citation": "Scheffer, I. E., Berkovic, S., Capovilla, G., Connolly, M. B., French, J., Guilhoto, L., ... & Nordli, D. R. (2017). ILAE classification of the epilepsies: position paper of the ILAE Commission for Classification and Terminology. Epilepsia, 58(4), 512-521."
-    },
-    
-    "SeizureType": {
-        "LongName": "Seizure type",
-        "Description": "Seizures are classified by onset: Generalised, Focal and Unknown",
+        "Citation": "Scheffer, I. E., Berkovic, S., Capovilla, G., Connolly, M. B., French, J., Guilhoto, L., ... & Nordli, D. R. (2017). ILAE classification of the epilepsies: position paper of the ILAE Commission for Classification and Terminology. Epilepsia, 58(4), 512-521.",
         "Levels": {
-            "Generalised": {
-                "Motor": [
-                    "Generalized tonic-clonic and variants",
-                    "Generalized tonic",
-                    "Generalized atonic",
-                    "Myoclonic",
-                    "Myoclonic-atonic",
-                    "Epileptic spasms"
-                ],
-                "Non-motor": [
-                    "Typical Absence",
-                    "Atypical Absence",
-                    "Myoclonic Absence",
-                    "Absence with eyelid myoclonia"
-                ]
+            "SeizureType": {
+                "LongName": "Seizure type",
+                "Description": "Seizures are classified by onset: Generalised, Focal and Unknown",
+                "Levels": {
+                    "Generalised": {
+                        "Levels": {
+                            "Motor": [
+                                "GeneralizedTonicClonicAndVariants",
+                                "GeneralizedTonic",
+                                "GeneralizedAtonic",
+                                "Myoclonic",
+                                "MyoclonicAtonic",
+                                "EpilepticSpasms"
+                            ],
+                            "NonMotor": [
+                                "TypicalAbsence",
+                                "AtypicalAbsence",
+                                "MyoclonicAbsence",
+                                "AbsenceWithEyelidMyoclonia"
+                            ]
+                        }
+                    },
+                    "Focal": {
+                        "Levels": {
+                            "Awareness": [
+                                "Aware",
+                                "ImpairedAwareness"
+                            ],
+                            "Motor": [
+                                "FocalClonicSeizure",
+                                "FocalTonicSeizure",
+                                "FocalMotorSeizureWithDystonia",
+                                "FocalMyoclonicSeizure",
+                                "FocalAtonicSeizure",
+                                "FocalMotorSeizureWithParesisOrParalysis",
+                                "FocalEpilepticSpasms",
+                                "FocalHyperkineticSeizure",
+                                "FocalAutomatismSeizure",
+                                "FocalMotorSeizureWithDysarthriaOrAnarthria",
+                                "FocalMotorSeizureWithNegativeMyoclonus",
+                                "FocalMotorSeizureWithVersion",
+                                "FocalBilateralMotorSeizure"
+                            ],
+                            "NonMotor": {
+                                "Levels": {
+                                    "FocalSensorySeizure": [
+                                        "FocalSomatosensorySeizure",
+                                        "FocalSensoryVisualSeizure",
+                                        "FocalSensoryAuditorySeizure",
+                                        "FocalSensoryOlfactorySeizure",
+                                        "FocalSensoryGustatorySeizure",
+                                        "FocalSensoryVestibularSeizure",
+                                        "FocalSensorySeizureWithHotOrColdSensations",
+                                        "FocalSensorySeizureWithCephalicSensation"
+                                    ],
+                                    "FocalCognitiveSeizure": [
+                                        "FocalCognitiveSeizureWithExpressiveDysphasiaOrAphasia",
+                                        "FocalCognitiveSeizureWithAnomia",
+                                        "FocalCognitiveSeizureWithReceptiveDysphasiaOrAphasia",
+                                        "FocalCognitiveSeizureWithAuditoryAgnosia",
+                                        "FocalCognitiveSeizureWithConductionDysphasiaOrAphasia",
+                                        "FocalCognitiveSeizureWithDyslexiaOrAlexia",
+                                        "FocalCognitiveSeizureWithMemoryIpairment",
+                                        "FocalCognitiveSeizureWithDejaVuOrJamaisVu",
+                                        "FocalCognitiveSeizureWithHallucination",
+                                        "FocalCognitiveSeizureWithIllusion",
+                                        "FocalCognitiveSeizureWithDissociation",
+                                        "FocalCognitiveSeizureWithForcedThinking",
+                                        "FocalCognitiveSeizureWithDyscalculiaOrAcalculia",
+                                        "FocalCognitiveSeizureWithDysgraphiaOrAgraphia",
+                                        "FocalCognitiveSeizureWithLeftRightConfusion",
+                                        "FocalCognitiveSeizureWithNeglect"
+                                    ],
+                                    "FocalEmotionalSeizure": [
+                                        "FocalEmotionalSeizureWithFearOrAnxietyOrPanic",
+                                        "FocalEmotionalSeizureWithLaughingGelastic",
+                                        "FocalEmotionalSeizureWithCryingDacrystic",
+                                        "FocalEmotionalSeizureWithPleasure",
+                                        "FocalEmotionalSeizureWithAnger"
+                                    ],
+                                    "FocalAutonomicSeizure": [
+                                        "FocalAutonomicSeizureWithPalpitationsOrTachycardiaOrBradycardiaOrAsystole",
+                                        "FocalAutonomicSeizureWithEpigastricSensation",
+                                        "FocalAutonomicSeizureWithPallorOrFlushing",
+                                        "FocalAutonomicSeizureWithHypoventilationOrHyperventilationOrAlteredRespiration",
+                                        "FocalAutonomicSeizureWithPiloerection",
+                                        "FocalAutonomicSeizureWithErection",
+                                        "FocalAutonomicSeizureWithUrgeToUrinateOrDefecate",
+                                        "FocalAutonomicSeizureWithLacrimation",
+                                        "FocalAutonomicSeizureWithPupillaryDilationOrConstriction"
+                                    ],
+                                    "FocalBehaviouralArrestSeizure": [
+                                        "FocalBehaviouralArrestSeizure"
+                                    ]
+                                }
+                            },
+                            "FocalToBilateralTonicClonicSeizure": [
+                                "FocalToBilateralTonicClonicSeizure"
+                            ]
+                        }
+                    },
+                    "Unknown": {
+                        "Levels": {
+                            "Motor": [
+                                "TonicClonic",
+                                "EpilepticSpasms"
+                            ],
+                            "NonMotor": [
+                                "BehaviourArrest",
+                                "Unclassified"
+                            ]
+                        }
+                    }
+                }
             },
-            "Focal": {
-                "Awareness": [
-                    "Aware",
-                    "Impaired Awareness"
-                ],
-                "Motor": [
-                    "Focal clonic seizure",
-                    "Focal tonic seizure",
-                    "Focal motor seizure with dystonia",
-                    "Focal myoclonic seizure",
-                    "Focal atonic seizure",
-                    "Focal motor seizure with paresis/paralysis",
-                    "Focal epileptic spasms",
-                    "Focal hyperkinetic seizure",
-                    "Focal automatism seizure",
-                    "Focal motor seizure with dysarthria / anarthria",
-                    "Focal motor seizure with negative myoclonus",
-                    "Focal motor seizure with version",
-                    "Focal bilateral motor seizure"
-                ],
-                "Non-motor": {
-                    "Focal sensory seizure": [
-                        "Focal somatosensory seizure",
-                        "Focal sensory visual seizure",
-                        "Focal sensory auditory seizure",
-                        "Focal sensory olfactory seizure",
-                        "Focal sensory gustatory seizure",
-                        "Focal sensory vestibular seizure",
-                        "Focal sensory seizure with hot-cold sensations",
-                        "Focal sensory seizure with cephalic sensation"
+            "EpilepsyType": {
+                "LongName": "Epilepsy type",
+                "Description": "Epilepsy types are divided into four categories: Generalised Epilepsy, Focal Epilepsy, Combined generalised and focal Epilepsy and Unknown Epilepsy",
+                "Levels": {
+                    "Generalised": {
+                        "LongName": "Generalised Epilepsy",
+                        "Description": "Patients with generalized epilepsy have generalized seizure types, and may have typical interictal and/or ictal EEG findings that accompany generalized seizure types (for example generalized spike and wave)."
+                    },
+                    "Focal": {
+                        "LongName": "Focal Epilepsy",
+                        "Description": "Patients with focal epilepsy have focal seizure types, and may have typical interictal and/or ictal EEG findings that accompany focal seizure types (such as focal sharp waves or focal interictal slowing)."
+                    },
+                    "Combined": {
+                        "LongName": "Combined generalised and focal Epilepsy",
+                        "Description": "Patients may have both generalized and focal seizure types, with interictal and/or ictal EEG findings that accompany both seizure types."
+                    },
+                    "Unknown": {
+                        "LongName": "Unknown Epilepsy",
+                        "Description": "The term 'unknown' is used to denote where it is understood that the patient has epilepsy, but it is not possible to denote whether it is focal, generalized, or combined focal and generalized. This may occur due to insufficient information to classify the epilepsy, for example if the EEG is normal/uninformative."
+                    }
+                }
+            },
+            "EpilepsySyndrome": {
+                "LongName": "Epilepsy Syndrome",
+                "Description": "Epilepsies are organized by reliably identifying common clinical and electrical characteristics into epilepsy syndromes. Such syndromes have a typical age of seizure onset, specific seizure types and EEG characteristics and often other features which when taken together allow the specific epilepsy syndrome diagnosis.",
+                "Levels": {
+                    "NeonatalInfantile": [
+                        "SelfLimitedNeonatalSeizuresAndSelfLimitedFamilialNeonatalEpilepsy",
+                        "SelfLimitedFamilialAndNonFamilialInfantileEpilepsy",
+                        "EarlyMyoclonicEncephalopathy",
+                        "OhtaharaSyndrome",
+                        "WestSyndrome",
+                        "DravetSyndrome",
+                        "MyoclonicEpilepsyInInfancy",
+                        "EpilepsyOfInfancyWithMigratingFocalSeizures",
+                        "MyoclonicEncephalopathyInNonProgressiveDisorders",
+                        "FebrileSeizuresPlusGeneticEpilepsyWithFebrileSeizuresPlus"
                     ],
-                    "Focal cognitive seizure": [
-                        "Focal cognitive seizure with expressive dysphasia / aphasia",
-                        "Focal cognitive seizure with anomia",
-                        "Focal cognitive seizure with receptive dysphasia / aphasia",
-                        "Focal cognitive seizure with auditory agnosia",
-                        "Focal cognitive seizure with conduction dysphasia / aphasia",
-                        "Focal cognitive seizure with dyslexia/alexia",
-                        "Focal cognitive seizure with memory impairment",
-                        "Focal cognitive seizure with deja vu / jamais vu",
-                        "Focal cognitive seizure with hallucination",
-                        "Focal cognitive seizure with illusion",
-                        "Focal cognitive seizure with dissociation",
-                        "Focal cognitive seizure with forced thinking",
-                        "Focal cognitive seizure with dyscalculia/acalculia",
-                        "Focal cognitive seizure with dysgraphia/agraphia",
-                        "Focal cognitive seizure with left-right confusion",
-                        "Focal cognitive seizure with neglect"
+                    "Childhood": [
+                        "EpilepsyWithMyoclonicAtonicSeizures",
+                        "EpilepsyWithEyelidMyoclonias",
+                        "LennoxGastautSyndrome",
+                        "ChildhoodAbsenceEpilepsy",
+                        "EpilepsyWithMyoclonicAbsences",
+                        "PanayiotopoulosSyndrome",
+                        "ChildhoodOccipitalEpilepsyGastautType",
+                        "PhotosensitiveOccipitalLobeEpilepsy",
+                        "ChildhoodEpilepsyWithCentrotemporalSpikes",
+                        "AtypicalChildhoodEpilepsyWithCentrotemporalSpikes",
+                        "EpilepticEncephalopathyWithContinuousSpikeAndWaveDuringSleep",
+                        "LandauKleffnerSyndrome",
+                        "AutosomalDominantNocturnalFrontalLobeEpilepsy"
                     ],
-                    "Focal emotional seizure": [
-                        "Focal emotional seizure with fear/anxiety/panic",
-                        "Focal emotional seizure with laughing (gelastic)",
-                        "Focal emotional seizure with crying (dacrystic)",
-                        "Focal emotional seizure with pleasure",
-                        "Focal emotional seizure with anger"
+                    "AdolescentAdult": [
+                        "JuvenileAbsenceEpilepsy",
+                        "JuvenileMyoclonicEpilepsy",
+                        "EpilepsyWithGeneralizedTonicClonicSeizuresAlone",
+                        "AutosomalDominantEpilepsyWithAuditoryFeatures",
+                        "OtherFamilialTemporalLobeEpilepsies"
                     ],
-                    "Focal autonomic seizure": [
-                        "Focal autonomic seizure with palpitations / tachycardia / bradycardia / asystole",
-                        "Focal autonomic seizure with epigastric sensation",
-                        "Focal autonomic seizure with pallor / flushing",
-                        "Focal autonomic seizure with hypoventilation / hyperventilation / altered respiration",
-                        "Focal autonomic seizure with piloerection",
-                        "Focal autonomic seizure with erection",
-                        "Focal autonomic seizure with urge to urinate / defecate",
-                        "Focal autonomic seizure with lacrimation",
-                        "Focal autonomic seizure with pupillary dilation / constriction"
-                    ],
-                    "Focal behavioural arrest seizure": [
-                        "Focal behavioural arrest seizure"
+                    "AnyAge": [
+                        "FamilialFocalEpilepsyWithVariableFoci",
+                        "ReflexEpilepsies",
+                        "ProgressiveMyoclonusEpilepsies"
                     ]
-                },
-                "Focal to bilateral tonic-clonic seizure": [
-                    "Focal to bilateral tonic-clonic seizure"
-                ]
+                }
             },
-            "Unknown": {
-                "Motor": [
-                    "Tonic–clonic",
-                    "Epileptic spasms"
-                ],
-                "Non-motor": [
-                    "Behaviour arrest",
-                    "Unclassified"
-                ]
-            }
-        }
-    },
-
-    "EpilepsyType": {
-        "LongName": "Epilepsy type",
-        "Description": "Epilepsy types are divided into four categories: Generalised Epilepsy, Focal Epilepsy, Combined generalised and focal Epilepsy and Unknown Epilepsy",
-        "Levels": {
-            "Generalised": {
-                "LongName": "Generalised Epilepsy",
-                "Description": "Patients with generalized epilepsy have generalized seizure types, and may have typical interictal and/or ictal EEG findings that accompany generalized seizure types (for example generalized spike and wave)."
-            },
-            "Focal": {
-                "LongName": "Focal Epilepsy",
-                "Description": "Patients with focal epilepsy have focal seizure types, and may have typical interictal and/or ictal EEG findings that accompany focal seizure types (such as focal sharp waves or focal interictal slowing)."
-            },
-            "Combined": {
-                "LongName": "Combined generalised and focal Epilepsy",
-                "Description": "Patients may have both generalized and focal seizure types, with interictal and/or ictal EEG findings that accompany both seizure types."
-            },
-            "Unknown": {
-                "LongName": "Unknown Epilepsy",
-                "Description": "The term 'unknown' is used to denote where it is understood that the patient has epilepsy, but it is not possible to denote whether it is focal, generalized, or combined focal and generalized. This may occur due to insufficient information to classify the epilepsy, for example if the EEG is normal/uninformative."
-            }
-        }
-    },
-
-    "EpilepsySyndrome": {
-        "LongName": "Epilepsy Syndrome",
-        "Description": "Epilepsies are organized by reliably identifying common clinical and electrical characteristics into epilepsy syndromes. Such syndromes have a typical age of seizure onset, specific seizure types and EEG characteristics and often other features which when taken together allow the specific epilepsy syndrome diagnosis.",
-        "Levels": {
-            "Neonatal/Infantile": [
-                "Self-limited neonatal seizures and Self-limited familial neonatal epilepsy",
-                "Self limited familial and non-familial infantile epilepsy",
-                "Early myoclonic encephalopathy",
-                "Ohtahara syndrome",
-                "West syndrome",
-                "Dravet syndrome",
-                "Myoclonic epilepsy in infancy",
-                "Epilepsy of infancy with migrating focal seizures",
-                "Myoclonic encephalopathy in non-progressive disorders",
-                "Febrile seizures plus, genetic epilepsy with febrile seizures plus"
-            ],
-            "Childhood": [
-                "Epilepsy with myoclonic-atonic seizures",
-                "Epilepsy with eyelid myoclonias",
-                "Lennox-Gastaut syndrome",
-                "Childhood absence epilepsy",
-                "Epilepsy with myoclonic absences",
-                "Panayiotopoulos syndrome",
-                "Childhood occipital epilepsy (Gastaut type)",
-                "Photosensitive occipital lobe epilepsy",
-                "Childhood epilepsy with centrotemporal spikes",
-                "Atypical childhood epilepsy with centrotemporal spikes",
-                "Epileptic encephalopathy with continuous spike-and-wave during sleep",
-                "Landau-Kleffner syndrome",
-                "Autosomal dominant nocturnal frontal lobe epilepsy"
-            ],
-            "Adolescent/Adult": [
-                "Juvenile absence epilepsy",
-                "Juvenile myoclonic epilepsy",
-                "Epilepsy with generalized tonic-clonic seizures alone",
-                "Autosomal dominant epilepsy with auditory features",
-                "Other familial temporal lobe epilepsies"
-            ],
-            "Any Age": [
-                "Familial focal epilepsy with variable foci",
-                "Reflex epilepsies",
-                "Progressive myoclonus epilepsies"
-            ]
-        }        
-    },
-    "Etiology": {
-            "LongName": "Epilepsy etiology",
-            "Description": "At each stage, etiology (cause and comorbidities) should be identified. These are divided into six categories:",
-            "Levels": {
-                "Genetic": {
-                    "LongName": "Genetic Etiology",
-                    "Description": "The concept of genetic epilepsy is that the epilepsy is, as best we understand, the direct result of a known or presumed genetic defect(s) in which seizures are the core symptom of the disorder.",
-                    "Levels": [
-                        "Chromosomal abnormalities",
-                        "Gene abnormalities"
-                    ]
-                },
-                "Structural": {
-                    "LongName": "Structural Etiology",
-                    "Description": "Structural epilepsies are conceptualized as having a distinct structural brain abnormality that has been demonstrated to be associated with a substantially increased risk of epilepsy in appropriately designed studies.",
-                    "Levels": [
-                        "Malformations of cortical development",
-                        "Vascular malformations",
-                        "Hippocampal sclerosis",
-                        "Hypoxic-ischemic structural abnormalities",
-                        "Traumatic Brain Injury",
-                        "Tumors",
-                        "Porencephalic cyst"
-                    ]
-                },
-                "Metabolic": {
-                    "LongName": "Metabolic Etiology",
-                    "Description": "Metabolic epilepsies are conceptualized as having a distinct metabolic abnormality that has been demonstrated to be associated with a substantially increased risk of developing epilepsy in appropriately designed studies.",
-                    "Levels": [
-                        "Biotinidase and holocarboxylase synthase deficiency",
-                        "Cerebral folate deficiency",
-                        "Creatine disorders",
-                        "Folinic acid responsive seizures",
-                        "Glucose transporter 1 (GLUT1) deficiency",
-                        "Mitochondrial disorders",
-                        "Peroxisomal Disorders",
-                        "Pyridoxine dependent epilepsy/PNPO deficiency"
-                    ]
-                },
-                "Immune": {
-                    "LongName": "Immune Etiology",
-                    "Description": "Immune epilepsies are conceptualized as having a distinct immune-mediated etiology with evidence of central nervous system inflammation, that has been demonstrated to be associated with a substantially increased risk of developing epilepsy.",
-                    "Levels": [
-                        "Rasmussen syndrome",
-                        "Antibody mediated etiologies"
-                    ]
-                },
-                "Infectious": {
-                    "LongName": "Infectious Etiology",
-                    "Description": "The commonest etiology for epilepsy worldwide is infectious, especially in developing countries. Infections in the central nervous system can cause both acute symptomatic seizures (which occur closely related to the timing of the initial infection) and epilepsy.",
-                    "Levels": [
-                        "Bacterial Meningitis",
-                        "Cerebral Malaria",
-                        "Cerebral Toxoplasmosis",
-                        "CMV",
-                        "HIV",
-                        "Neurocysticercosis",
-                        "Tuberculosis",
-                        "Viral Encephalitis",
-                        "Other infections"
-                    ]
-                },
-                "Unknown": {
-                    "LongName": "Unknown Etiology",
-                    "Description": "'Unknown' is meant to be viewed neutrally and to designate that the nature of the underlying cause of the epilepsy is as yet unknown; it may have a fundamental genetic defect at its core or there may be a separate as yet unrecognized disorder.",
-                    "Levels": [
-                        "Febrile infection related epilepsy syndrome (FIRES)"
-                    ]
+            "Etiology": {
+                "LongName": "Epilepsy etiology",
+                "Description": "At each stage, etiology (cause and comorbidities) should be identified. These are divided into six categories.",
+                "Levels": {
+                    "Genetic": {
+                        "LongName": "Genetic Etiology",
+                        "Description": "The concept of genetic epilepsy is that the epilepsy is, as best we understand, the direct result of a known or presumed genetic defect(s) in which seizures are the core symptom of the disorder.",
+                        "Levels": [
+                            "ChromosomalAbnormalities",
+                            "GeneAbnormalities"
+                        ]
+                    },
+                    "Structural": {
+                        "LongName": "Structural Etiology",
+                        "Description": "Structural epilepsies are conceptualized as having a distinct structural brain abnormality that has been demonstrated to be associated with a substantially increased risk of epilepsy in appropriately designed studies.",
+                        "Levels": [
+                            "MalformationsOfCorticalDevelopment",
+                            "VascularMalformations",
+                            "HippocampalSclerosis",
+                            "HypoxicIschemicStructuralAbnormalities",
+                            "TraumaticBrainInjury",
+                            "Tumors",
+                            "PorencephalicCyst"
+                        ]
+                    },
+                    "Metabolic": {
+                        "LongName": "Metabolic Etiology",
+                        "Description": "Metabolic epilepsies are conceptualized as having a distinct metabolic abnormality that has been demonstrated to be associated with a substantially increased risk of developing epilepsy in appropriately designed studies.",
+                        "Levels": [
+                            "BiotinidaseAndHolocarboxylaseSynthaseDeficiency",
+                            "CerebralFolateDeficiency",
+                            "CreatineDisorders",
+                            "FolinicAcidResponsiveSeizures",
+                            "GlucoseTransporter1Deficiency",
+                            "MitochondrialDisorders",
+                            "PeroxisomalDisorders",
+                            "PyridoxineDependentEpilepsy"
+                        ]
+                    },
+                    "Immune": {
+                        "LongName": "Immune Etiology",
+                        "Description": "Immune epilepsies are conceptualized as having a distinct immune-mediated etiology with evidence of central nervous system inflammation, that has been demonstrated to be associated with a substantially increased risk of developing epilepsy.",
+                        "Levels": [
+                            "RasmussenSyndrome",
+                            "AntibodyMediatedEtiologies"
+                        ]
+                    },
+                    "Infectious": {
+                        "LongName": "Infectious Etiology",
+                        "Description": "The commonest etiology for epilepsy worldwide is infectious, especially in developing countries. Infections in the central nervous system can cause both acute symptomatic seizures (which occur closely related to the timing of the initial infection) and epilepsy.",
+                        "Levels": [
+                            "BacterialMeningitis",
+                            "CerebralMalaria",
+                            "CerebralToxoplasmosis",
+                            "CMV",
+                            "HIV",
+                            "Neurocysticercosis",
+                            "Tuberculosis",
+                            "ViralEncephalitis",
+                            "OtherInfections"
+                        ]
+                    },
+                    "Unknown": {
+                        "LongName": "Unknown Etiology",
+                        "Description": "'Unknown' is meant to be viewed neutrally and to designate that the nature of the underlying cause of the epilepsy is as yet unknown; it may have a fundamental genetic defect at its core or there may be a separate as yet unrecognized disorder.",
+                        "Levels": [
+                            "FebrileInfectionRelatedEpilepsySyndrome"
+                        ]
+                    }
                 }
             }
         }
+    }
 }
