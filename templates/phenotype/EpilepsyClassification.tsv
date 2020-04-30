@@ -1,3 +1,3 @@
-participant_id  Seizure_Type Epilepsy_Type    Epilepsy_Syndrome Etiology
+participant_id  seizure_type epilepsy_type    epilepsy_syndrome etiology
 sub-01  /Generalised/NonMotor/AtypicalAbsence, /Generalised/Motor/GeneralizedTonic, /Generalised/Motor/GeneralizedAtonic  /Generalised     /Childhood/LennoxGastautSyndrome    /Structural/TraumaticBrainInjury
 sub-02  /Focal/Motor/FocalClonicSeizure, /Generalised/Motor/Myoclonic /Combined   /NeonatalInfantile/DravetSyndrome  /Genetic/GeneAbnormalities 
