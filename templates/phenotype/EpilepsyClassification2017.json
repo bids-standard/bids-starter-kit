@@ -1,10 +1,11 @@
 {
-    "EpilepsyClassification": {
+    "epilepsy_classification": {
+        "LongName": "Epilepsy Classification",
         "Description": "ILAE classification of the epilepsies",
         "TermURL": "",
         "Citation": "Scheffer, I. E., Berkovic, S., Capovilla, G., Connolly, M. B., French, J., Guilhoto, L., ... & Nordli, D. R. (2017). ILAE classification of the epilepsies: position paper of the ILAE Commission for Classification and Terminology. Epilepsia, 58(4), 512-521.",
         "Levels": {
-            "SeizureType": {
+            "seizure_type": {
                 "LongName": "Seizure type",
                 "Description": "Seizures are classified by onset: Generalised, Focal and Unknown",
                 "Levels": {
@@ -119,7 +120,7 @@
                     }
                 }
             },
-            "EpilepsyType": {
+            "epilepsy_type": {
                 "LongName": "Epilepsy type",
                 "Description": "Epilepsy types are divided into four categories: Generalised Epilepsy, Focal Epilepsy, Combined generalised and focal Epilepsy and Unknown Epilepsy",
                 "Levels": {
@@ -141,7 +142,7 @@
                     }
                 }
             },
-            "EpilepsySyndrome": {
+            "epilepsy_syndrome": {
                 "LongName": "Epilepsy Syndrome",
                 "Description": "Epilepsies are organized by reliably identifying common clinical and electrical characteristics into epilepsy syndromes. Such syndromes have a typical age of seizure onset, specific seizure types and EEG characteristics and often other features which when taken together allow the specific epilepsy syndrome diagnosis.",
                 "Levels": {
@@ -186,7 +187,7 @@
                     ]
                 }
             },
-            "Etiology": {
+            "etiology": {
                 "LongName": "Epilepsy etiology",
                 "Description": "At each stage, etiology (cause and comorbidities) should be identified. These are divided into six categories.",
                 "Levels": {
