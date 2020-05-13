@@ -14,7 +14,7 @@
 %% 8.9.1 Case 1: Phase difference image and at least one magnitude image
 clear
 
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
@@ -52,7 +52,7 @@ jsonwrite(fmap_json_name,fmap_json,json_options)
 %% 8.9.2 Case 2: Two phase images and two magnitude images
 clear
 
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
@@ -88,19 +88,20 @@ fmap2_json.IntendedFor = ''; % Fieldmap data are linked to a specific scan(s)
 
 json_options.indent = '    '; % this just makes the json file look prettier
 % when opened in a text editor
-jsonSaveDir = fileparts(fmap_json_name);
+jsonSaveDir = fileparts(fmap1_json_name);
 if ~isdir(jsonSaveDir)
     fprintf('Warning: directory to save json file does not exist, create: %s \n',jsonSaveDir)
 end
-jsonwrite(fmap1_json_name,fmap1_json,json_options)
-jsonwrite(fmap2_json_name,fmap2_json,json_options)
+
+jsonwrite(fmap1_json_name, fmap1_json, json_options)
+jsonwrite(fmap2_json_name, fmap2_json, json_options)
 
 
 
 %% 8.9.3 Case 3: A single, real fieldmap image (showing the field inhomogeneity in each voxel)
 
 clear
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
@@ -135,7 +136,7 @@ jsonwrite(fmap_json_name,fmap_json,json_options)
 %% 8.9.4 Case 4: Multiple phase encoded directions (topup)
 
 clear
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
@@ -147,7 +148,7 @@ dir_label = 'LR'; %dir_label value can be set to arbitrary alphanumeric
 % distinguish between different files, but should not be used to infer any
 % scanning parameters (such as phase encoding directions) of the corresponding sequence.
 
-fmap_json_name = fullfile(root_dir,project_label,[ 'sub-' sub_label ],...
+fmap_json_name = fullfile(root_dir, project_label, [ 'sub-' sub_label ],...
     ['ses-' ses_label],...
     'fmap',...
     ['sub-' sub_label ...
@@ -178,7 +179,7 @@ if ~isdir(jsonSaveDir)
 end
 
 try
-    jsonwrite(fmap_json_name,fmap_json,json_options)
+    jsonwrite(fmap_json_name, fmap_json, json_options)
 catch
     warning( '%s\n%s\n%s\n%s',...
         'Writing the JSON file seems to have failed.', ...

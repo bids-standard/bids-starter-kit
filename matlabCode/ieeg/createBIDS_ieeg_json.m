@@ -14,7 +14,7 @@
 
 clear
 
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 ieeg_project = 'templates';
 ieeg_sub = '01';
 ieeg_ses = '01';

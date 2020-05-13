@@ -11,7 +11,7 @@
 
 %%
 clear
-root_dir = '.';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 json_label = 'dataset_description';
 

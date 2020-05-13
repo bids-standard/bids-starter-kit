@@ -11,7 +11,7 @@
 
 %%
 clear
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 sub_id = '01';
 ses_id = '01';

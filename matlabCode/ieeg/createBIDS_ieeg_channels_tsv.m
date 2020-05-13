@@ -8,7 +8,7 @@
 
 %%
 clear
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 ieeg_sub = '01';
 ieeg_ses = '01';

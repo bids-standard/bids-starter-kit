@@ -12,7 +12,7 @@
 
 %%
 
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 sub_label = '01';
 ses_label = '01';
