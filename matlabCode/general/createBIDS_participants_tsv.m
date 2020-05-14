@@ -7,7 +7,7 @@
 
 %%
 clear
-root_dir = '../';
+root_dir = ['..' filesep '..'];
 project_label = 'templates';
 
 participants_tsv_name = fullfile(root_dir,project_label,...
