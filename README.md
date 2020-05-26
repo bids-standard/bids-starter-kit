@@ -116,6 +116,16 @@ You'll almost always want to cite the original paper:
 
 >Scientific Data volume 3, Article number: 160044 (2016)
 
+```bibtex
+@article{gorgolewski2016brain,
+  title={The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments},
+  author={Gorgolewski, K. and Auer, T. and Calhoun, V. and others},
+  journal={Scientific Data},
+  year={2016},
+  volume={3}, 
+}
+```
+
 <br>
 
 But there are also modality specific extension papers for [MEG](https://doi.org/10.1038/sdata.2018.110), [EEG](https://doi.org/10.31234/osf.io/63a4y) and [iEEG](https://doi.org/10.31234/osf.io/r7vc2), or the [BIDS-Apps](https://doi.org/10.1371/journal.pcbi.1005209) paper that should be referenced if you're using data of that type.
