@@ -12,7 +12,7 @@
 
 %%
 
-clear
+clear;
 
 root_dir = ['..' filesep '..'];
 ieeg_project = 'templates';
@@ -23,19 +23,15 @@ ieeg_run = '01';
 
 % you can also have acq- and proc-, but these are optional
 
-ieeg_json_name = fullfile(root_dir,ieeg_project,[ 'sub-' ieeg_sub ],...
-    ['ses-' ieeg_ses],...
-    'ieeg',...
-    ['sub-' ieeg_sub ...
-    '_ses-' ieeg_ses ...
-    '_task-' ieeg_task ...
-    '_run-' ieeg_run '_ieeg.json']);
-
-
+ieeg_json_name = fullfile(root_dir, ieeg_project, ['sub-' ieeg_sub], ...
+                          ['ses-' ieeg_ses], ...
+                          'ieeg', ...
+                          ['sub-' ieeg_sub ...
+                           '_ses-' ieeg_ses ...
+                           '_task-' ieeg_task ...
+                           '_run-' ieeg_run '_ieeg.json']);
 
 %% General fields, shared with MRI BIDS and MEG BIDS:
-
-
 
 %% Required fields:
 ieeg_json.TaskName = ''; % Name of the task (for resting state use the rest
@@ -44,11 +40,11 @@ ieeg_json.TaskName = ''; % Name of the task (for resting state use the rest
 % Note this does not have to be a "behavioral task" that subjects perform, but can reflect some
 % information about the conditions present when the data was acquired (e.g., "rest" or "sleep").
 
-ieeg_json.SamplingFrequency = ''; %Sampling frequency (in Hz) of all the iEEG channels
+ieeg_json.SamplingFrequency = ''; % Sampling frequency (in Hz) of all the iEEG channels
 % in the recording (e.g., 2400). All other channels should have frequency specified
 % as well in the channels.tsv file.
 
-ieeg_json.PowerLineFrequency = ''; %Frequency (in Hz) of the power grid where the
+ieeg_json.PowerLineFrequency = ''; % Frequency (in Hz) of the power grid where the
 % iEEG recording was done (i.e., 50 or 60).
 
 ieeg_json.SoftwareFilters = ''; %  List of temporal software filters applied or
@@ -72,7 +68,7 @@ ieeg_json.HardwareFilters = HardwareFilters; % Cutoff frequencies of high and lo
 ieeg_json.Manufacturer = ''; % Manufacturer of the amplifier system  (e.g. "TDT, blackrock")
 
 ieeg_json.ManufacturersModelName = ''; % Manufacturer's designation of the
-%iEEG amplifier model (e.g. "TDT").
+% iEEG amplifier model (e.g. "TDT").
 
 ieeg_json.TaskDescription = ''; % Longer description of the task.
 
@@ -126,10 +122,7 @@ ieeg_json.SubjectArtefactDescription = ''; % Freeform description of the observe
 
 ieeg_json.SoftwareVersions = ''; % Manufacturer's designation of the acquisition software.
 
-
-
 %% Specific iEEG fields:
-
 
 % If mixed types of references, manufacturers or electrodes are used, please
 % specify in the corresponding table in the _electrodes.tsv file
@@ -146,7 +139,7 @@ ieeg_json.iEEGReference = ''; % General description of the reference scheme used
 %% Recommended fields:
 
 ieeg_json.ElectrodeManufacturer = ''; % can be used if all electrodes are of the same manufacturer
-%(e.g., AD-TECH, DIXI). If electrodes of different manufacturers are used, please use the corresponding
+% (e.g., AD-TECH, DIXI). If electrodes of different manufacturers are used, please use the corresponding
 % table in the _electrodes.tsv file.
 
 ieeg_json.ElectrodeManufacturersModelName = ''; % Specify model name. If different electrode types are used,
@@ -173,21 +166,20 @@ ieeg_json.ElectricalStimulationParameters = ''; % Free form description of stimu
 % such as frequency, shape etc. Specific onsets can be specified in the _events.tsv file.
 % Specific shapes can be described here in freeform text.
 
-
 %% write
 jsonSaveDir = fileparts(ieeg_json_name);
 if ~isdir(jsonSaveDir)
-    fprintf('Warning: directory to save json file does not exist, create: %s \n',jsonSaveDir)
+    fprintf('Warning: directory to save json file does not exist, create: %s \n', jsonSaveDir);
 end
 
 json_options.indent = '    '; % this just makes the json file look prettier
 % when opened in a text editor
 
 try
-    jsonwrite(ieeg_json_name,ieeg_json,json_options)
+    jsonwrite(ieeg_json_name, ieeg_json, json_options);
 catch
-    warning( '%s\n%s\n%s\n%s',...
-        'Writing the JSON file seems to have failed.', ...
-        'Make sure that the following library is in the matlab/octave path:', ...
-        'https://github.com/gllmflndn/JSONio')
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/gllmflndn/JSONio');
 end
