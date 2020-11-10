@@ -31,7 +31,7 @@ dd_json.Name = ''; % name of the dataset
 
 dd_json.BIDSVersion = '1.0.2'; % The version of the BIDS standard that was used
 
-
+dd_json.DatasetType = ''; % The interpretation of the dataset. MUST be one of "raw" or "derivative". For backwards compatibility, the default value is "raw".
 
 %%  Recommended fields:
 
@@ -50,6 +50,8 @@ dd_json.HowToAcknowledge = ''; % Instructions how researchers using this
 % dataset.
 
 dd_json.Funding = {'','',''}; % sources of funding (grant numbers)
+
+dd_json.EthicsApprovals = ''; % List of ethics committee approvals of the research protocols and/or protocol identifiers.
 
 dd_json.ReferencesAndLinks = {'','',''};% a list of references to
 % publication that contain information on the dataset, or links.
