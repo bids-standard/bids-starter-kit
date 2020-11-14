@@ -3,22 +3,23 @@ The README is usually the starting point for researchers using your data
 and serves as a guidepost for users of your data. A clear and informative
 README makes your data much more usable.
 
-**Overview:** 
-* A paragraph giving an overview of the experiment. This should include the 
+Overview
+
+A paragraph giving an overview of the experiment. This should include the 
 goals or purpose and a discussion about how the experiment tries to achieve
 these goals.
 
-* A brief overview of the tasks in the experiment.
+A brief overview of the tasks in the experiment.
 
-* A brief discussion of condition variables (sometimes called contrasts
+A brief discussion of condition variables (sometimes called contrasts
 or independent variables) that were varied across the experiment.
 
-* A brief discussion of the response variables (sometimes called the
+A brief discussion of the response variables (sometimes called the
 dependent variables) that were measured and or calculated to assess
 the effects of varying the condition variables. This might also include
 questionnaires administered to assess behavioral aspects of the experiment.
 
-* A brief discussion of the control variables --- that is what aspects 
+A brief discussion of the control variables --- that is what aspects 
 were explicitly controlled in this experiment. The control variables might 
 include subject pool, environmental conditions, set up, or other things 
 that were explicitly controlled.
@@ -26,30 +27,34 @@ that were explicitly controlled.
 More details on all of this should be included in the Methods section.
 
 
-### Methods   
+Methods  
 
-**Subjects:** A brief sentence about the subject pool in this experiment.
+Subjects: A brief sentence about the subject pool in this experiment.
  
-**Apparatus:**  A summary of the equipment and environment setup for the
+Apparatus: A summary of the equipment and environment setup for the
 experiment. For example, was the experiment performed in a shielded room
 with the subject seated in a fixed position.
 
-**Initial setup:** A summary of what setup was performed when a subject arrived.
+Initial setup: A summary of what setup was performed when a subject arrived.
 
-**Task organization:** How the tasks were organized for a session.
+Task organization: How the tasks were organized for a session.
 This is particularly important because BIDS datasets usually have task data
-separrated into different files.)
-What was the order that tasks were performed? 
-Was task order counter-balanced?  
-What other activities were interspersed because the tasks?  
+separated into different files.) What was the order that tasks were performed? 
+Was task order counter-balanced?  What other activities were interspersed 
+because the tasks?  
 
-**Task details:**  As much detail as possible about the task and the
+Task details: As much detail as possible about the task and the
 events that were recorded. 
 
+Additional data acquired: A brief indication of data other than the
+imaging data that was acquired as part of this experiment. In addition
+to data from other modalities and behavioral data, this might include
+questionnaires and surveys, swabs, and clinical information. Indicate
+the availability of this data.
 
-**Additional data acquired:** 
+Experimental Location: This should include the geographical 
+location and facility.
 
-**Experimental Location:** 
-
-**Notes:**
+Notes: Any additional information or pointers to information that
+might be helpful to users of the dataset.
 
