@@ -12,31 +12,28 @@
 % modified Jaap van der Aar 30.11.18
 
 %%
-clear
-root_dir = '../';
+clear;
+root_dir = ['..' filesep '..'];
 ieeg_project = 'templates';
 ieeg_sub = '01';
 ieeg_ses = '01';
 
-electrodes_json_name = fullfile(root_dir,ieeg_project,...
-    ['sub-' ieeg_sub ],['ses-' ieeg_ses],'ieeg',...
-    ['sub-' ieeg_sub ...
-    '_ses-' ieeg_ses ...
-    '_coordsystem.json']);
-
-
+electrodes_json_name = fullfile(root_dir, ieeg_project, ...
+                                ['sub-' ieeg_sub], ['ses-' ieeg_ses], 'ieeg', ...
+                                ['sub-' ieeg_sub ...
+                                 '_ses-' ieeg_ses ...
+                                 '_coordsystem.json']);
 
 %%  Required fields
 
-loc_json.iEEGCoordinateSystem  = '';% Defines the coordinate system for the iEEG electrodes.
+loc_json.iEEGCoordinateSystem  = ''; % Defines the coordinate system for the iEEG electrodes.
 % For example, "ACPC". See Appendix VIII: preferred names of Coordinate systems.
 % If "Other" (e.g., individual subject MRI), provide definition of the coordinate system in iEEGCoordinateSystemDescription
 % If positions correspond to pixel indices in a 2D image (of either a volume-rendering,
 % surface-rendering, operative photo, or operative drawing), this must be "pixels".
 % See section 3.4.1: Electrode locations for more information on electrode locations.
 
-loc_json.iEEGCoordinateUnits  = '';% Units of the _electrodes.tsv, MUST be "m", "mm", "cm" or "pixels".
-
+loc_json.iEEGCoordinateUnits  = ''; % Units of the _electrodes.tsv, MUST be "m", "mm", "cm" or "pixels".
 
 %% Recommended fields
 
@@ -61,21 +58,20 @@ loc_json.iEEGCoordinateProcessingDescription = ''; % Has any projection been don
 loc_json.iEEGCoordinateProcessingReference = ''; % A reference to a paper that defines in more detail
 % the method used to project or localize the electrodes
 
-
 %% Write
 jsonSaveDir = fileparts(electrodes_json_name);
 if ~isdir(jsonSaveDir)
-    fprintf('Warning: directory to save json file does not exist, create: %s \n',jsonSaveDir)
+    fprintf('Warning: directory to save json file does not exist, create: %s \n', jsonSaveDir);
 end
 
 json_options.indent = '    '; % this just makes the json file look prettier
 % when opened in a text editor
 
 try
-    jsonwrite(electrodes_json_name,loc_json,json_options)
+    jsonwrite(electrodes_json_name, loc_json, json_options);
 catch
-    warning( '%s\n%s\n%s\n%s',...
-        'Writing the JSON file seems to have failed.', ...
-        'Make sure that the following library is in the matlab/octave path:', ...
-        'https://github.com/gllmflndn/JSONio')
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/gllmflndn/JSONio');
 end

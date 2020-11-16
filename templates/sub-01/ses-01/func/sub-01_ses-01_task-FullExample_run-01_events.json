@@ -1,0 +1,23 @@
+{
+    "trial_type": {
+        "LongName": "",
+        "Description": "Emotion image type",
+        "Levels": {
+            "afraid": "A face showing fear is displayed",
+            "angry": "A face showing anger is displayed"
+        },
+        "Units": "",
+        "TermURL": ""
+    },
+    "identifier": {
+        "LongName": "Unique identifier from Karolinska (KDEF) database",
+        "Description": "ID from KDEF database used to identify the displayed image"
+    },
+    "StimulusPresentation": {
+        "OperatingSystem": "Linux Ubuntu 18.04.5",
+        "SoftwareName": "Psychtoolbox",
+        "SoftwareRRID": "SCR_002881",
+        "SoftwareVersion": "3.0.14",
+        "Code": "doi:10.5281/zenodo.3361717"
+    }
+}
