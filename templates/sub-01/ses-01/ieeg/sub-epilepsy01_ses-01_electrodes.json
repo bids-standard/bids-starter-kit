@@ -18,12 +18,11 @@
         "LongName": "Seizure onset zone",
         "Description": "final conclusion drawn by an epileptologist on the electrodes involved in the seizures",
         "Levels": {
-            "SOZ": "Seizure Onset Zone, the region where the clinical seizures originate.",
-            "NonSOZ": "Non Seizure Onset Zone, normal brain tissue",
+            "SOZ": "Seizure Onset Zone, the region where the recorded clinical seizures originated during the recording period.",
             "IrritativeZone": "Region of cortex that generates interictal epileptiform discharges, but not seizures",
-            "EarlyPropagationZone": "Region of cortex that generates the initial seizure symptoms. Not seizure onset, but the propagation of seizure from SOZ into this region.",
+            "EarlyPropagationZone": "Region of cortex that generates the initial seizure symptoms. Not seizure onset, but the propagation of seizure from SOZ into this region within first 3 seconds from seizure onset.",
             "Resected": "Region of cortex that was resected",
-            "ResectedEdge": "Region of cortex that is on the edge of the resected area"
+            "ResectedEdge": "Region of cortex that is within 1 cm of the edge of the resected area."
         }
     }
 }
