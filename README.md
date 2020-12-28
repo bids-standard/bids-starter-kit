@@ -154,7 +154,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://whitakerlab.github.io"><img src="https://avatars1.githubusercontent.com/u/3626306?v=4" width="100px;" alt=""/><br /><sub><b>Kirstie Whitaker</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3AKirstieJane" title="Reviewed Pull Requests">👀</a> <a href="#ideas-KirstieJane" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/Park-Patrick"><img src="https://avatars3.githubusercontent.com/u/12662110?v=4" width="100px;" alt=""/><br /><sub><b>Park-Patrick</b></sub></a><br /><a href="#ideas-Park-Patrick" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-Park-Patrick" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Park-Patrick"><img src="https://avatars3.githubusercontent.com/u/12662110?v=4" width="100px;" alt=""/><br /><sub><b>Park-Patrick</b></sub></a><br /><a href="#ideas-Park-Patrick" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-Park-Patrick" title="Content">🖋</a> <a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3APark-Patrick" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
