@@ -164,6 +164,17 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "JaapVanDerAar",
+      "name": "Jaap van der Aar",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/32334327?v=4",
+      "profile": "https://github.com/JaapVanDerAar",
+      "contributions": [
+        "code",
+        "content",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

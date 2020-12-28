@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -164,6 +164,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://remi-gau.github.io/"><img src="https://avatars3.githubusercontent.com/u/6961185?v=4" width="100px;" alt=""/><br /><sub><b>Remi Gau</b></sub></a><br /><a href="#content-Remi-Gau" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/JaapVanDerAar"><img src="https://avatars3.githubusercontent.com/u/32334327?v=4" width="100px;" alt=""/><br /><sub><b>Jaap van der Aar</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=JaapVanDerAar" title="Code">💻</a> <a href="#content-JaapVanDerAar" title="Content">🖋</a> <a href="#ideas-JaapVanDerAar" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
