@@ -205,6 +205,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "pvdemael",
+      "name": "Pieter Vandemaele",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37624277?v=4",
+      "profile": "https://github.com/pvdemael",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
