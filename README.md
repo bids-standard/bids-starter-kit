@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -161,6 +161,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ilkayisik.github.io"><img src="https://avatars1.githubusercontent.com/u/22478219?v=4" width="100px;" alt=""/><br /><sub><b>Ilkay Isik</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3Ailkayisik" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://teonbrooks.com"><img src="https://avatars1.githubusercontent.com/u/1578674?v=4" width="100px;" alt=""/><br /><sub><b>Teon L Brooks</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3Ateonbrooks" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/bayab"><img src="https://avatars0.githubusercontent.com/u/16117420?v=4" width="100px;" alt=""/><br /><sub><b>ayab</b></sub></a><br /><a href="#content-bayab" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://remi-gau.github.io/"><img src="https://avatars3.githubusercontent.com/u/6961185?v=4" width="100px;" alt=""/><br /><sub><b>Remi Gau</b></sub></a><br /><a href="#content-Remi-Gau" title="Content">🖋</a></td>
   </tr>
 </table>
 
