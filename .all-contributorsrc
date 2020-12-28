@@ -54,6 +54,17 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "anushkab",
+      "name": "Utmost Happiness",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20943511?v=4",
+      "profile": "https://github.com/anushkab",
+      "contributions": [
+        "code",
+        "content",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
