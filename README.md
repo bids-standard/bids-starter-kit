@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -152,6 +152,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://emdupre.me"><img src="https://avatars3.githubusercontent.com/u/15017191?v=4" width="100px;" alt=""/><br /><sub><b>Elizabeth DuPre</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Aemdupre" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/anushkab"><img src="https://avatars0.githubusercontent.com/u/20943511?v=4" width="100px;" alt=""/><br /><sub><b>Utmost Happiness</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=anushkab" title="Code">💻</a> <a href="#content-anushkab" title="Content">🖋</a> <a href="#ideas-anushkab" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://whitakerlab.github.io"><img src="https://avatars1.githubusercontent.com/u/3626306?v=4" width="100px;" alt=""/><br /><sub><b>Kirstie Whitaker</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3AKirstieJane" title="Reviewed Pull Requests">👀</a> <a href="#ideas-KirstieJane" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Park-Patrick"><img src="https://avatars3.githubusercontent.com/u/12662110?v=4" width="100px;" alt=""/><br /><sub><b>Park-Patrick</b></sub></a><br /><a href="#ideas-Park-Patrick" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-Park-Patrick" title="Content">🖋</a></td>
   </tr>
 </table>
 
