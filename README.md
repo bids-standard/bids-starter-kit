@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -174,6 +174,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/robertoostenveld"><img src="https://avatars1.githubusercontent.com/u/899043?v=4" width="100px;" alt=""/><br /><sub><b>Robert Oostenveld</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3Arobertoostenveld" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/HappyFacade"><img src="https://avatars0.githubusercontent.com/u/54226355?v=4" width="100px;" alt=""/><br /><sub><b>Happy</b></sub></a><br /><a href="#content-HappyFacade" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/tal-pal-attia-201373b0/"><img src="https://avatars1.githubusercontent.com/u/24300712?v=4" width="100px;" alt=""/><br /><sub><b>Tal Pal Attia</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=tpatpa" title="Code">💻</a></td>
   </tr>
 </table>
 
