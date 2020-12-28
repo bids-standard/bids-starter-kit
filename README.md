@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -148,6 +148,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/dorahermes"><img src="https://avatars1.githubusercontent.com/u/4977351?v=4" width="100px;" alt=""/><br /><sub><b>dorahermes</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=dorahermes" title="Code">💻</a> <a href="#content-dorahermes" title="Content">🖋</a> <a href="#ideas-dorahermes" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Adorahermes" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://chrisgorgolewski.org"><img src="https://avatars2.githubusercontent.com/u/238759?v=4" width="100px;" alt=""/><br /><sub><b>Chris Gorgolewski</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Achrisgorgo" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://chrisholdgraf.com"><img src="https://avatars1.githubusercontent.com/u/1839645?v=4" width="100px;" alt=""/><br /><sub><b>Chris Holdgraf</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Acholdgraf" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://chrisgahnstrom.wordpress.com/"><img src="https://avatars1.githubusercontent.com/u/12600386?v=4" width="100px;" alt=""/><br /><sub><b>Chris Gahnström</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=cofficer" title="Code">💻</a> <a href="#content-cofficer" title="Content">🖋</a> <a href="#ideas-cofficer" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
