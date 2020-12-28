@@ -34,6 +34,17 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "cofficer",
+      "name": "Chris Gahnström",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/12600386?v=4",
+      "profile": "https://chrisgahnstrom.wordpress.com/",
+      "contributions": [
+        "code",
+        "content",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
