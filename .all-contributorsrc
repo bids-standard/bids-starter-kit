@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "dorahermes",
+      "name": "dorahermes",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4977351?v=4",
+      "profile": "https://github.com/dorahermes",
+      "contributions": [
+        "code",
+        "content",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "bids-starter-kit",
+  "projectOwner": "bids-standard",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
