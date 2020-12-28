@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -156,6 +156,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/Park-Patrick"><img src="https://avatars3.githubusercontent.com/u/12662110?v=4" width="100px;" alt=""/><br /><sub><b>Park-Patrick</b></sub></a><br /><a href="#ideas-Park-Patrick" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-Park-Patrick" title="Content">🖋</a> <a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3APark-Patrick" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://peerherholz.github.io"><img src="https://avatars0.githubusercontent.com/u/20129524?v=4" width="100px;" alt=""/><br /><sub><b>Peer Herholz</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=PeerHerholz" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.sbirc.ed.ac.uk/cyril/"><img src="https://avatars2.githubusercontent.com/u/4772878?v=4" width="100px;" alt=""/><br /><sub><b>Cyril Pernet</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=CPernet" title="Code">💻</a></td>
   </tr>
 </table>
 
