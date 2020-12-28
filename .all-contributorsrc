@@ -15,6 +15,15 @@
         "content",
         "ideas"
       ]
+    },
+    {
+      "login": "chrisgorgo",
+      "name": "Chris Gorgolewski",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/238759?v=4",
+      "profile": "http://chrisgorgolewski.org",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
