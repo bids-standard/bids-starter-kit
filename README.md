@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -169,6 +169,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/franklin-feingold"><img src="https://avatars1.githubusercontent.com/u/35307458?v=4" width="100px;" alt=""/><br /><sub><b>Franklin Feingold</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3Afranklin-feingold" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://www.nisox.org"><img src="https://avatars3.githubusercontent.com/u/5155907?v=4" width="100px;" alt=""/><br /><sub><b>Thomas Nichols</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Anicholst" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/pvdemael"><img src="https://avatars1.githubusercontent.com/u/37624277?v=4" width="100px;" alt=""/><br /><sub><b>Pieter Vandemaele</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3Apvdemael" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/gllmflndn"><img src="https://avatars0.githubusercontent.com/u/5950855?v=4" width="100px;" alt=""/><br /><sub><b>Guillaume</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Agllmflndn" title="Reviewed Pull Requests">👀</a> <a href="#ideas-gllmflndn" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
