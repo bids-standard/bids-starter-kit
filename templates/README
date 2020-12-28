@@ -1,9 +1,10 @@
-### Introduction
+# README
+
 The README is usually the starting point for researchers using your data
 and serves as a guidepost for users of your data. A clear and informative
 README makes your data much more usable.
 
-Overview
+## Overview
 
 A paragraph giving an overview of the experiment. This should include the 
 goals or purpose and a discussion about how the experiment tries to achieve
@@ -26,35 +27,48 @@ that were explicitly controlled.
 
 More details on all of this should be included in the Methods section.
 
+## Methods  
 
-Methods  
+### Subjects
 
-Subjects: A brief sentence about the subject pool in this experiment.
+A brief sentence about the subject pool in this experiment.
  
-Apparatus: A summary of the equipment and environment setup for the
+### Apparatus
+
+A summary of the equipment and environment setup for the
 experiment. For example, was the experiment performed in a shielded room
 with the subject seated in a fixed position.
 
-Initial setup: A summary of what setup was performed when a subject arrived.
+### Initial setup
 
-Task organization: How the tasks were organized for a session.
+A summary of what setup was performed when a subject arrived.
+
+### Task organization
+
+How the tasks were organized for a session.
 This is particularly important because BIDS datasets usually have task data
 separated into different files.) What was the order that tasks were performed? 
 Was task order counter-balanced?  What other activities were interspersed 
 because the tasks?  
 
-Task details: As much detail as possible about the task and the
-events that were recorded. 
+### Task details
 
-Additional data acquired: A brief indication of data other than the
+As much detail as possible about the task and the events that were recorded. 
+
+### Additional data acquired
+
+A brief indication of data other than the
 imaging data that was acquired as part of this experiment. In addition
 to data from other modalities and behavioral data, this might include
 questionnaires and surveys, swabs, and clinical information. Indicate
 the availability of this data.
 
-Experimental Location: This should include the geographical 
-location and facility.
+### Experimental Location
 
-Notes: Any additional information or pointers to information that
+This should include the geographical location and facility.
+
+### Notes
+
+Any additional information or pointers to information that
 might be helpful to users of the dataset.
 
