@@ -75,6 +75,16 @@
         "review",
         "ideas"
       ]
+    },
+    {
+      "login": "Park-Patrick",
+      "name": "Park-Patrick",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12662110?v=4",
+      "profile": "https://github.com/Park-Patrick",
+      "contributions": [
+        "ideas",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
