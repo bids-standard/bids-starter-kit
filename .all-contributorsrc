@@ -87,6 +87,15 @@
         "content",
         "review"
       ]
+    },
+    {
+      "login": "PeerHerholz",
+      "name": "Peer Herholz",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20129524?v=4",
+      "profile": "http://peerherholz.github.io",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
