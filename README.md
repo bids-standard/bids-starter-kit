@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -159,6 +159,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.sbirc.ed.ac.uk/cyril/"><img src="https://avatars2.githubusercontent.com/u/4772878?v=4" width="100px;" alt=""/><br /><sub><b>Cyril Pernet</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=CPernet" title="Code">💻</a></td>
     <td align="center"><a href="https://www.stefanappelhoff.com"><img src="https://avatars1.githubusercontent.com/u/9084751?v=4" width="100px;" alt=""/><br /><sub><b>Stefan Appelhoff</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Asappelhoff" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://ilkayisik.github.io"><img src="https://avatars1.githubusercontent.com/u/22478219?v=4" width="100px;" alt=""/><br /><sub><b>Ilkay Isik</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3Ailkayisik" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://teonbrooks.com"><img src="https://avatars1.githubusercontent.com/u/1578674?v=4" width="100px;" alt=""/><br /><sub><b>Teon L Brooks</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3Ateonbrooks" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
