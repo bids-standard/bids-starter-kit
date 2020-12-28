@@ -14,7 +14,9 @@
         "code",
         "content",
         "ideas",
-        "review"
+        "review",
+        "maintenance",
+        "doc"
       ]
     },
     {
@@ -23,7 +25,9 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/238759?v=4",
       "profile": "http://chrisgorgolewski.org",
       "contributions": [
-        "review"
+        "review",
+        "maintenance",
+        "bug"
       ]
     },
     {
@@ -33,7 +37,8 @@
       "profile": "http://chrisholdgraf.com",
       "contributions": [
         "review",
-        "content"
+        "content",
+        "maintenance"
       ]
     },
     {
@@ -53,7 +58,11 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/15017191?v=4",
       "profile": "http://emdupre.me",
       "contributions": [
-        "review"
+        "review",
+        "maintenance",
+        "ideas",
+        "content",
+        "doc"
       ]
     },
     {
@@ -74,7 +83,10 @@
       "profile": "https://whitakerlab.github.io",
       "contributions": [
         "review",
-        "ideas"
+        "ideas",
+        "maintenance",
+        "content",
+        "doc"
       ]
     },
     {
@@ -114,6 +126,42 @@
       "contributions": [
         "review",
         "code",
+        "content"
+      ]
+    },
+    {
+      "login": "ilkayisik",
+      "name": "Ilkay Isik",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/22478219?v=4",
+      "profile": "https://ilkayisik.github.io",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "teonbrooks",
+      "name": "Teon L Brooks",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1578674?v=4",
+      "profile": "https://teonbrooks.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "bayab",
+      "name": "ayab",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16117420?v=4",
+      "profile": "https://github.com/bayab",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Remi-Gau",
+      "name": "Remi Gau",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6961185?v=4",
+      "profile": "https://remi-gau.github.io/",
+      "contributions": [
         "content"
       ]
     }
