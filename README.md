@@ -146,7 +146,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/dorahermes"><img src="https://avatars1.githubusercontent.com/u/4977351?v=4" width="100px;" alt=""/><br /><sub><b>dorahermes</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=dorahermes" title="Code">💻</a> <a href="#content-dorahermes" title="Content">🖋</a> <a href="#ideas-dorahermes" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="http://chrisgorgolewski.org"><img src="https://avatars2.githubusercontent.com/u/238759?v=4" width="100px;" alt=""/><br /><sub><b>Chris Gorgolewski</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Achrisgorgo" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="http://chrisgorgolewski.org"><img src="https://avatars2.githubusercontent.com/u/238759?v=4" width="100px;" alt=""/><br /><sub><b>Chris Gorgolewski</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Achrisgorgo" title="Reviewed Pull Requests">👀</a> <a href="#maintenance-chrisgorgo" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
