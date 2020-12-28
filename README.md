@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -150,6 +150,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://chrisholdgraf.com"><img src="https://avatars1.githubusercontent.com/u/1839645?v=4" width="100px;" alt=""/><br /><sub><b>Chris Holdgraf</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Acholdgraf" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://chrisgahnstrom.wordpress.com/"><img src="https://avatars1.githubusercontent.com/u/12600386?v=4" width="100px;" alt=""/><br /><sub><b>Chris Gahnström</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=cofficer" title="Code">💻</a> <a href="#content-cofficer" title="Content">🖋</a> <a href="#ideas-cofficer" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://emdupre.me"><img src="https://avatars3.githubusercontent.com/u/15017191?v=4" width="100px;" alt=""/><br /><sub><b>Elizabeth DuPre</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/pulls?q=is%3Apr+reviewed-by%3Aemdupre" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/anushkab"><img src="https://avatars0.githubusercontent.com/u/20943511?v=4" width="100px;" alt=""/><br /><sub><b>Utmost Happiness</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=anushkab" title="Code">💻</a> <a href="#content-anushkab" title="Content">🖋</a> <a href="#ideas-anushkab" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
