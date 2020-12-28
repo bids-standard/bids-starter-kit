@@ -196,6 +196,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "nicholst",
+      "name": "Thomas Nichols",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5155907?v=4",
+      "profile": "http://www.nisox.org",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
