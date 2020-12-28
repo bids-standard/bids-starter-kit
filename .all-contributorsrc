@@ -125,6 +125,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "ilkayisik",
+      "name": "Ilkay Isik",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/22478219?v=4",
+      "profile": "https://ilkayisik.github.io",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
