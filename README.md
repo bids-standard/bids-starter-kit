@@ -1,4 +1,7 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
   :blue_book::file_folder::closed_book::open_file_folder::green_book::open_file_folder::blue_book::open_file_folder::orange_book::file_folder::blue_book:
@@ -132,3 +135,22 @@ But there are also modality specific extension papers for [MEG](https://doi.org/
 
 [gsoc]: https://summerofcode.withgoogle.com
 [patrick-github]: https://github.com/Park-Patrick
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/dorahermes"><img src="https://avatars1.githubusercontent.com/u/4977351?v=4" width="100px;" alt=""/><br /><sub><b>dorahermes</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=dorahermes" title="Code">💻</a> <a href="#content-dorahermes" title="Content">🖋</a> <a href="#ideas-dorahermes" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
