@@ -32,7 +32,8 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/1839645?v=4",
       "profile": "http://chrisholdgraf.com",
       "contributions": [
-        "review"
+        "review",
+        "content"
       ]
     },
     {
@@ -54,6 +55,65 @@
       "contributions": [
         "review",
         "maintenance"
+      ]
+    },
+    {
+      "login": "anushkab",
+      "name": "Utmost Happiness",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20943511?v=4",
+      "profile": "https://github.com/anushkab",
+      "contributions": [
+        "code",
+        "content",
+        "ideas"
+      ]
+    },
+    {
+      "login": "KirstieJane",
+      "name": "Kirstie Whitaker",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3626306?v=4",
+      "profile": "https://whitakerlab.github.io",
+      "contributions": [
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "Park-Patrick",
+      "name": "Park-Patrick",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12662110?v=4",
+      "profile": "https://github.com/Park-Patrick",
+      "contributions": [
+        "ideas",
+        "content",
+        "review"
+      ]
+    },
+    {
+      "login": "PeerHerholz",
+      "name": "Peer Herholz",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20129524?v=4",
+      "profile": "http://peerherholz.github.io",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "CPernet",
+      "name": "Cyril Pernet",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4772878?v=4",
+      "profile": "http://www.sbirc.ed.ac.uk/cyril/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sappelhoff",
+      "name": "Stefan Appelhoff",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/9084751?v=4",
+      "profile": "https://www.stefanappelhoff.com",
+      "contributions": [
+        "review"
       ]
     }
   ],
