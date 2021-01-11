@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-28-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -179,6 +179,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://erasmus-synclab.nl/"><img src="https://avatars1.githubusercontent.com/u/41283173?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Eduard Klapwijk</b></sub></a><br /><a href="#ideas-eduardklap" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/DorienHuijser"><img src="https://avatars1.githubusercontent.com/u/58177697?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dorien Huijser</b></sub></a><br /><a href="#ideas-DorienHuijser" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://cmn.nimh.nih.gov/dsst"><img src="https://avatars1.githubusercontent.com/u/10297203?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arshitha Basavaraj</b></sub></a><br /><a href="#ideas-Arshitha" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://lennartwittkuhn.com"><img src="https://avatars0.githubusercontent.com/u/42233065?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lennart Wittkuhn</b></sub></a><br /><a href="#ideas-lnnrtwttkhn" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
