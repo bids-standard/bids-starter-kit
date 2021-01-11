@@ -254,6 +254,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "VisLab",
+      "name": "VisLab",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1189050?v=4",
+      "profile": "https://github.com/VisLab",
+      "contributions": [
+        "ideas",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
