@@ -1,0 +1,34 @@
+{
+    "PlasmaAvail": true,
+	"WholeBloodAvail": true,
+	"MetaboliteAvail": true,
+	"MetaboliteMethod": "HPLC",
+	"MetaboliteRecoveryCorrectionApplied": false,
+    "DispersionCorrected": false,
+    
+    "time": {
+        "Description": "Time in relation to time zero defined by the _pet.json",
+        "Units": "s"
+    },
+    "plasma_radioactivity": {
+        "Description": "Radioactivity in plasma samples. Measured using COBRA counter.", 
+        "Units": "kBq/ml"
+    },
+    "whole_blood_radioactivity": {
+        "Description": "Radioactivity in whole blood samples. Measured using COBRA counter.",
+        "Units": "kBq/ml"
+    },
+    "metabolite_parent_fraction": {
+        "Description": "Parent fraction of the radiotracer.",
+        "Units": "unitless"
+    },
+    "metabolite_polar_fraction": {
+        "Description": "Polar metabolite fraction of the radiotracer.",
+        "Units": "unitless"
+    },
+    "metabolite_lipophilic_fraction": {
+        "Description": "Lipophilic metabolite fraction of the radiotracer.",
+        "Units": "unitless"
+    }
+}
+

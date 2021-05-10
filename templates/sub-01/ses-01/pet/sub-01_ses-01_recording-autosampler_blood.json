@@ -1,0 +1,16 @@
+{
+    "PlasmaAvail": false,
+	"WholeBloodAvail": true,
+	"MetaboliteAvail": false,
+    "DispersionCorrected": false,
+    
+    "time": {
+        "Description": "Time in relation to time zero defined by the _pet.json",
+        "Units": "s"
+    },
+    "whole_blood_radioactivity": {
+        "Description": "Radioactivity in uncorrected whole blood samples from Allogg autosampler.",
+        "Units": "kBq/ml"
+    }
+}
+
