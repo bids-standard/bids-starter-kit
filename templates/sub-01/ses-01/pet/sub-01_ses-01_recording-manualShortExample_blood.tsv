@@ -1,2 +1,2 @@
-time	plasma_radioactivity	whole_blood_radioactivity	metabolite_parent_fraction	metabolite_polar_fraction	metabolite_lipophilic_fraction
-0	0	0	0	0	0
+time	metabolite_parent_fraction
+0	0
