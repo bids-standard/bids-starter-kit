@@ -5,14 +5,19 @@ an that every contributer has an enjoyable and fulfilling experience.
 Accordingly, everyone who participates in the BIDS Starter Kit project is
 expected to show respect and courtesy to other community members at all time.
 
-The lead maintainers of the BIDS Starter Kit ([Chris
-Gorgolewski][chrisg-github], [Chris Holdgraf][chrish-github], [Dora
-Hermes][dora-github], [Elizabeth DuPre][elizabeth-github] and [Kirstie
-Whitaker][kirstie-github]) are dedicated to a **_harassment-free experience for
-everyone_**, regardless of gender, gender identity and expression, sexual
-orientation, disability, physical appearance, body size, race, age or religion.
-**We do not tolerate harassment by and/or of members of our community in any
-form**.
+The lead maintainers of the BIDS Starter Kit:
+
+-   [Chris Gorgolewski][chrisg-github],
+-   [Chris Holdgraf][chrish-github],
+-   [Dora Hermes][dora-github],
+-   [Elizabeth DuPre][elizabeth-github],
+-   [Kirstie Whitaker][kirstie-github]),
+-   [Remi Gau][remi-github]
+
+are dedicated to a **_harassment-free experience for everyone_**, regardless of
+gender, gender identity and expression, sexual orientation, disability, physical
+appearance, body size, race, age or religion. **We do not tolerate harassment by
+and/or of members of our community in any form**.
 
 _We are particularly motivated to support new and/or anxious collaborators,
 people who are looking to learn and develop their skills, and anyone who has
@@ -111,6 +116,7 @@ without seeking additional permission, so long as it is attributed back to the
 [dora-github]: https://github.com/dorahermes
 [elizabeth-github]: https://github.com/emdupre
 [kirstie-github]: https://github.com/kirstiejane
+[remi-github]: https://github.com/Remi-Gau
 [bnip-repo]: https://github.com/WhitakerLab/BrainNetworksInPython
 [bsk-repo]: https://github.com/INCF/bids-starter-kit
 [mozilla-science-home]: https://science.mozilla.org/
