@@ -2,7 +2,7 @@
 %
 %   sub-01_ses-01_task-ShortExample_pet.json
 %
-% This example lists all required  RECOMMENDED and OPTIONAL fields.
+% This example lists all REQUIRED fields.
 %
 % Writing json files relies on bids-matlab
 % https://github.com/bids-standard/bids-matlab
