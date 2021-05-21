@@ -26,9 +26,9 @@ dd_json.Name = ''; % name of the dataset
 
 dd_json.BIDSVersion = '1.0.2'; % The version of the BIDS standard that was used
 
-% The interpretation of the dataset. MUST be one of "raw" or "derivative". 
+% The interpretation of the dataset. MUST be one of "raw" or "derivative".
 % For backwards compatibility, the default value is "raw".
-dd_json.DatasetType = ''; 
+dd_json.DatasetType = '';
 
 %%  Recommended fields:
 
@@ -49,11 +49,11 @@ dd_json.HowToAcknowledge = ''; % Instructions how researchers using this
 dd_json.Funding = {'', '', ''}; % sources of funding (grant numbers)
 
 % List of ethics committee approvals of the research protocols and/or protocol identifiers.
-dd_json.EthicsApprovals = ''; 
+dd_json.EthicsApprovals = '';
 
 % a list of references to
 % publication that contain information on the dataset, or links.
-dd_json.ReferencesAndLinks = {'', '', ''}; 
+dd_json.ReferencesAndLinks = {'', '', ''};
 
 dd_json.DatasetDOI = ''; % the Document Object Identifier of the dataset
 % (not the corresponding paper).
@@ -62,7 +62,7 @@ dd_json.DatasetDOI = ''; % the Document Object Identifier of the dataset
 
 % this just makes the json file look prettier
 % when opened in a text editor
-json_options.indent = '    '; 
+json_options.indent = '    ';
 
 jsonSaveDir = fileparts(dataset_description_json_name);
 if ~isdir(jsonSaveDir)

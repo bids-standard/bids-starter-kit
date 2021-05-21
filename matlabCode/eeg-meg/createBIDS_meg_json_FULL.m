@@ -21,7 +21,7 @@ task_id         = 'FullExample';
 acq_id          = 'CTF';
 run_id          = '1';
 
-% A “proc” (processed) label has been added, especially useful for files coming from Maxfilter 
+% A “proc” (processed) label has been added, especially useful for files coming from Maxfilter
 % (e.g. sss, tsss, trans, quat, mc, etc.)
 proc_id         = 'sss';
 
