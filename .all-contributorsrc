@@ -311,6 +311,16 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "Athanasiamo",
+      "name": "Athanasia Monika Mowinckel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14014329?v=4",
+      "profile": "http://DrMowinckels.io",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
