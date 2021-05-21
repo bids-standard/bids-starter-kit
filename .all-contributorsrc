@@ -301,6 +301,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "bendhouseart",
+      "name": "Anthony Galassi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28850131?v=4",
+      "profile": "https://github.com/bendhouseart",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
