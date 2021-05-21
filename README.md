@@ -84,8 +84,10 @@ For general information to help you get started with BIDS, we reccommend the
 pages such as an overall introduction to the BIDS folder structure, links to
 tutorials, and a glossary to help you with some of the technical terms.
 
+**Make sure to check our [FAQ](./FAQ.md) !!!**
+
 For metadata file templates or code to help you get started, please scroll up to
-find the appropriate files that are available in your langauge of choice.
+find the appropriate files that are available in your language of choice.
 
 Finally, for more advanced knowledge that may pertain to specific use cases for
 your data, please refer to the full
