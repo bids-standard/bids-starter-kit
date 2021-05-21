@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-30-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -182,6 +182,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://lennartwittkuhn.com"><img src="https://avatars0.githubusercontent.com/u/42233065?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lennart Wittkuhn</b></sub></a><br /><a href="#ideas-lnnrtwttkhn" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/bendhouseart"><img src="https://avatars.githubusercontent.com/u/28850131?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anthony Galassi</b></sub></a><br /><a href="#ideas-bendhouseart" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/bids-standard/bids-starter-kit/commits?author=bendhouseart" title="Code">💻</a></td>
   </tr>
 </table>
 
