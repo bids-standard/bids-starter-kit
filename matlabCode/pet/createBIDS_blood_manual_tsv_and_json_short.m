@@ -17,7 +17,7 @@ project_label = 'templates';
 
 sub_id = '01';
 ses_id = '01';
-recording = 'ManualFullExample';
+recording = 'ManualShortExample';
 suffix = '_blood';
 data_type = 'pet';
 extension = '.tsv';
@@ -30,11 +30,7 @@ file_name = fullfile(root_dir, project_label, ...
 
 %% Write TSV
 content.time = 0;
-content.plasma_radioactivity = 0;
 content.metabolite_parent_fraction = 0;
-content.metabolite_polar_fraction = 0;
-content.hplc_recovery_fractions = 0;
-content.whole_blood_radioactivity = 0;
 
 bids.util.tsvwrite(file_name, content);
 
@@ -56,34 +52,14 @@ content.PlasmaAvail = '';
 content.MetaboliteAvail = '';
 content.WholeBloodAvail = '';
 content.DispersionCorrected = '';
-content.WithdrawalRate = '';
-content.TubingType = '';
-content.TubingLength = '';
-content.DispersionConstant = '';
-content.Haematocrit = '';
-content.BloodDensity = '';
-content.PlasmaFreeFraction = '';
-content.PlasmaFreeFractionMethod = '';
 content.MetaboliteMethod = '';
 content.MetaboliteRecoveryCorrectionApplied = '';
 content.time = struct('Description', ...
                       'Time in relation to time zero defined by the _pet.json', ...
                       'Units', 's');
-content.plasma_radioactivity = struct('Description', ...
-                                      'Radioactivity in plasma samples. Measured using COBRA counter.', ...
-                                      'Units', 'kBq/ml');
 content.metabolite_parent_fraction = struct('Description', ...
                                             'Parent fraction of the radiotracer.', ...
                                             'Units', 'unitless');
-content.metabolite_polar_fraction = struct('Description', ...
-                                           'Polar metabolite fraction of the radiotracer.', ...
-                                           'Units', 'unitless');
-content.hplc_recovery_fractions = struct('Description', ...
-                                         'The fraction of activity that get loaded onto the HPLC.', ...
-                                         'Units', 'unitless');
-content.whole_blood_radioactivity = struct('Description', ...
-                                           'Radioactivity in whole blood samples. Measured using COBRA counter.', ...
-                                           'Units', 'kBq/ml');
 
 jsonSaveDir = fileparts(file_name);
 if ~isdir(jsonSaveDir)
