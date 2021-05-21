@@ -118,6 +118,12 @@ started with BIDS.
 To contribute to the codebase you'll need to submit a pull request. Check out
 our [guidelines](#making-a-change-with-a-pull-request) below.
 
+#### Matlab / Octave
+
+We are using the Miss_hit linter to help us keep out matlab "clean". You can
+find more information on how to set it up and use it on the bids-matlab
+[contributing guidelines](https://github.com/bids-standard/bids-matlab/blob/master/CONTRIBUTING.md#matlab-code-style-guide-and-quality).
+
 ### Templates ([link][bids-starterkit-repo])
 
 This repository is under development, but we aim to have two templates for each

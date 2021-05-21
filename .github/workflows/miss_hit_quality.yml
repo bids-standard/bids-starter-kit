@@ -1,4 +1,4 @@
-name: miss_hit_quality
+name: matlab_code_quality
 
 on:
   push:

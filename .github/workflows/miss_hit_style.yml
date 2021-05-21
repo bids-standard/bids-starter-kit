@@ -1,4 +1,4 @@
-name: miss_hit_style
+name: matlab_code_style
 
 on:
   push:
