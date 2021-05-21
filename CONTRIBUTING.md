@@ -3,8 +3,8 @@
 :tada::balloon::cake: **Welcome to the BIDS Starters Kit repository!**
 :cake::balloon::tada:
 
-:dizzy::hatched_chick::sunny: _We're so excited you're here and want to
-contribute._ :sunny::hatched_chick::dizzy:
+:dizzy::hatched*chick::sunny: \_We're so excited you're here and want to
+contribute.* :sunny::hatched_chick::dizzy:
 
 The point of this starter kit is to **welcome new users and contributors to the
 BIDS community**. We hope that these guidelines are designed to make it as easy
@@ -229,9 +229,9 @@ The list of labels for current issues can be found
 We appreciate all contributions to the BIDS Starter Kit. **THANK YOU** for
 helping us build this useful resource. :sparkles::star2::dizzy:
 
-:point_right: Remember that if you're adding information to the [wiki](#wiki)
-you **_don't need to submit a pull request_**. You can just log into GitHub,
-navigate to the [wiki][bids-starterkit-wiki] and click the **edit** button.
+:point\*right: Remember that if you're adding information to the [wiki](#wiki)
+you \*\*\_don't need to submit a pull request**\*. You can just log into GitHub,
+navigate to the [wiki][bids-starterkit-wiki] and click the **edit\*\* button.
 
 If you're updating the [code](#code) or the [templates](#templates), the
 following steps are a guide to help you contribute in a way that will be easy
