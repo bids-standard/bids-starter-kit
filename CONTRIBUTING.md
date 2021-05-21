@@ -121,8 +121,19 @@ our [guidelines](#making-a-change-with-a-pull-request) below.
 ### Templates ([link][bids-starterkit-repo])
 
 This repository is under development, but we aim to have two templates for each
-BIDS sidecar file: one with a full example (all required/recommended/optional
-fields), and one with a minimal example (only required fields).
+BIDS sidecar file:
+
+-   one with a `full` example (all required/recommended/optional fields),
+-   one with a `short` example (only required fields).
+
+If possible try to provide a script (python, octave, matlab) to generate those
+templates.
+
+Try to name your scrip as follow: `createBIDS_<suffix>_<extension>_*.[py|m]`
+
+```
+createBIDS_T1w_json_short.m
+```
 
 To contribute a template you'll need to submit a pull request. Check out our
 [guidelines](#making-a-change-with-a-pull-request) below.
