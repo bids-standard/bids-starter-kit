@@ -119,5 +119,5 @@ without seeking additional permission, so long as it is attributed back to the
 [remi-github]: https://github.com/Remi-Gau
 [bnip-repo]: https://github.com/WhitakerLab/BrainNetworksInPython
 [bsk-repo]: https://github.com/INCF/bids-starter-kit
-[mozilla-science-home]: https://science.mozilla.org/
+[mozilla-science-home]: https://github.com/mozillascience
 [mozilla-science-coc]: https://github.com/mozillascience/code_of_conduct
