@@ -321,6 +321,15 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "yonestar",
+      "name": "Yoni Ashar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4513934?v=4",
+      "profile": "https://github.com/yonestar",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
