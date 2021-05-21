@@ -3,35 +3,55 @@ function files_out = bids_spreadsheet2participants(varargin)
     % routine to takes an spreadsheet file (e.g. excel) as input and export as participants.tsv
     % and participants.json
     %
-    % FORMAT files_out = bids_spreadsheet2participants(file_in,'ignore','field1','filed2',...)
+    % FORMAT files_out = bids_spreadsheet2participants(file_in,'ignore','field1','field2',...)
     %
-    % INPUTS if empty user is prompted
-    % file_in is the excel file, with at least the 3 BIDS mandatory fields
-    % participant_id, age, gender present in the 1st sheet
-    % A second sheet can be used to specify variables for the
-    % json file (column format: variable name (same as shhet 1),
-    % description, values (optional))
-    % 'ignore' is the key to ignore specific fields (columns) in the excel
-    % file e.g. 'ignore', 'variableX', 'variableY'
-    % 'export_dir' is the directory to save output files
+    % INPUTS if empty user is prompted:
     %
-    % OUTPUT files_out is a cell array with files_out{1} the full name of the particpiants.tsv
-    % files_out{2} the full name of the particpiants.json
+    %   - 'file_in' is the excel file, with at least the 3 BIDS mandatory fields in the 1st sheet:
+    %       - participant_id, 
+    %       - age, 
+    %       - gender 
     %
-    % Example: files_out = bids_spreadsheet2participants('D:\icpsr_subset.xlsx','ignore','EEGtesttime')
-    % the spreadsheet must have worksheet 1 with data, each column has a variable name and values
-    % -- note missing values MUST be n/a or nill
-    % worksheet 2 is optional with columns variables, Description, Levels, Units to describe worksheet 1
-    % variables similar to
+    %     A second sheet can be used to specify variables for the json file column format: 
+    %       - variable name (same as sheet 1),
+    %       - description, 
+    %       - values (optional)
+    % 
+    %   - 'ignore' is the key to ignore specific fields (columns) in the excel file 
+    %     e.g. 'ignore', 'variableX', 'variableY'
+    %
+    %   - 'export_dir' is the directory to save output files
+    %
+    % OUTPUT:
+    %
+    %   - 'files_out' is a cell array with:
+    %       - files_out{1} the full name of the particpiants.tsv
+    %       - files_out{2} the full name of the particpiants.json
+    %
+    % EXAMPLE: 
+    %
+    %   files_out = bids_spreadsheet2participants('D:\icpsr_subset.xlsx','ignore','EEGtesttime')
+    %
+    % the spreadsheet must have:
+    %   worksheet 1 with data, each column has a variable name and values
+    %       -- note missing values MUST be n/a or nill
+    %   worksheet 2 is optional with columns variables, Description, Levels, Units to describe worksheet 1
+    %   variables similar to
     % https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file
-    % -- note the order of 'Levels' names should match the order of apparition in the data
-    % to have an exact match
+    %       -- note the order of 'Levels' names should match the order of apparition in the data
+    %          to have an exact match
+    %
+    % Requires matlab 2018a or above
     %
     % Cyril Pernet - March 2021
     % ---------------------------------
+    
+    if verLessThan('matlab', '9.4')
+        error('This function requires matlab 2018a or above.')
+    end
 
     files_out = cell(2, 1);
-    % check libray
+    % check library
     if ~exist('jsonwrite.m', 'file')
         if exist(fullfile(fileparts(which('bids_spreadsheet2participants.m')), 'JSONio'), 'dir')
             addpath(fullfile(fileparts(which('bids_spreadsheet2participants.m')), 'JSONio'));

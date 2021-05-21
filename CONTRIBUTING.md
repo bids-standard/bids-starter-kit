@@ -118,6 +118,10 @@ started with BIDS.
 To contribute to the codebase you'll need to submit a pull request. Check out
 our [guidelines](#making-a-change-with-a-pull-request) below.
 
+In general if you are contributing some code that requires some inputs, either
+provide that input or a link on how to access it, and an example on how to run
+that code.
+
 #### Matlab / Octave
 
 We are using the Miss_hit linter to help us keep out matlab "clean". You can
