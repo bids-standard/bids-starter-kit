@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-39-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-40-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -252,6 +252,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/effigies"><img src="https://avatars.githubusercontent.com/u/83442?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chris Markiewicz</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=effigies" title="Documentation">📖</a></td>
     <td align="center"><a href="https://ankiitgupta7.github.io/"><img src="https://avatars.githubusercontent.com/u/25341569?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ankit Gupta</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=ankiitgupta7" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/alexvonlautz"><img src="https://avatars.githubusercontent.com/u/44004062?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex von Lautz</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=alexvonlautz" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/AlexandreHutton"><img src="https://avatars.githubusercontent.com/u/50920802?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lex</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=AlexandreHutton" title="Documentation">📖</a></td>
   </tr>
 </table>
 
