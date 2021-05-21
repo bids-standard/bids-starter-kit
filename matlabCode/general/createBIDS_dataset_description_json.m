@@ -7,7 +7,6 @@
 % Make sure it is in the matab/octave path
 %
 % DHermes, 2017
-% modified RG 201809
 
 %%
 clear;
@@ -20,7 +19,7 @@ dataset_description_json_name = fullfile(root_dir, project_label, ...
 
 %% General fields, shared with MRI BIDS and MEG BIDS:
 
-%%  Required fields:
+%% Required fields:
 
 dd_json.Name = ''; % name of the dataset
 
@@ -30,7 +29,7 @@ dd_json.BIDSVersion = '1.0.2'; % The version of the BIDS standard that was used
 % For backwards compatibility, the default value is "raw".
 dd_json.DatasetType = '';
 
-%%  Recommended fields:
+%% Recommended fields:
 
 dd_json.License = ''; % what license is this dataset distributed under? The
 % use of license name abbreviations is suggested for specifying a license.
@@ -62,7 +61,7 @@ dd_json.DatasetDOI = ''; % the Document Object Identifier of the dataset
 
 % this just makes the json file look prettier
 % when opened in a text editor
-json_options.indent = '    ';
+json_options.indent = ' ';
 
 jsonSaveDir = fileparts(dataset_description_json_name);
 if ~isdir(jsonSaveDir)

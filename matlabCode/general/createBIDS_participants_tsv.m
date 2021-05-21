@@ -3,7 +3,6 @@
 % When adding additional metadata please use CamelCase
 %
 % DHermes, 2017
-% modified RG 201809
 
 %%
 clear;
@@ -51,7 +50,7 @@ dd_json.handedness.Levels = struct( ...
 
 %% Write JSON
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 
 jsonSaveDir = fileparts(participants_tsv_name);

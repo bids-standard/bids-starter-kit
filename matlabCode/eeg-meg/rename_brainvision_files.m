@@ -4,7 +4,7 @@ function rename_brainvision_files(varargin)
     % file, vmrk marker file and a data file that usually has the extension dat, eeg or seg.
     %
     % Use as
-    %   rename_brainvision_files(oldname, newname, 'rmf', 'on')
+    % rename_brainvision_files(oldname, newname, 'rmf', 'on')
     % where both the old and the new filename should be strings corresponding to the
     % header file, i.e. including the vhdr extension.
     % 'rmf' option indicates to remove old files and can be turned 'on' of 'off' (default)

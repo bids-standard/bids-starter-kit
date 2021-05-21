@@ -1,5 +1,5 @@
 %% Template Matlab script to create an BIDS compatible sub-01_ses-01_acq-ShortExample_run-01_T1w.json file
-% This example lists only the required  fields.
+% This example lists only the REQUIRED fields.
 % When adding additional metadata please use CamelCase
 %
 % Writing json files relies on the JSONio library
@@ -7,7 +7,6 @@
 % Make sure it is in the matab/octave path
 %
 % anushkab, 2018
-% modified RG 201809
 
 %%
 clear;
@@ -77,7 +76,7 @@ anat_json.SliceTiming = ' ';
 
 %% Write JSON
 % this makes the json look prettier when opened in a txt editor
-json_options.indent = '    ';
+json_options.indent = '  ';
 
 jsonSaveDir = fileparts(anat_json_name);
 if ~isdir(jsonSaveDir)

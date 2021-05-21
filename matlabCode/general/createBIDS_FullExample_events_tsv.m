@@ -3,7 +3,6 @@
 % When adding additional metadata please use CamelCase
 %
 % anushkab, 2018
-% modified RG 201809
 
 %%
 clear;
@@ -27,14 +26,14 @@ events_tsv_name = fullfile(root_dir, project_label, ...
 %% make an event table and save
 
 %% CONTAINS a set of REQUIRED and OPTIONAL columns
-% REQUIRED Onset (in seconds) of the event  measured from the beginning of
+% REQUIRED Onset (in seconds) of the event measured from the beginning of
 % the acquisition of the first volume in the corresponding task imaging data file.
 % If any acquired scans have been discarded before forming the imaging data file,
 % ensure that a time of 0 corresponds to the first image stored. In other words
 % negative numbers in onset are allowed.
 onset = [0]';
 
-% REQUIRED. Duration of the event (measured  from onset) in seconds.
+% REQUIRED. Duration of the event (measured from onset) in seconds.
 % Must always be either zero or positive. A "duration" value of zero implies
 % that the delta function or event is so short as to be effectively modeled as an impulse.
 duration = [0]';
@@ -85,7 +84,7 @@ dd_json.StimulusPresentation.Code = 'doi:10.5281/zenodo.3361717';
 
 %% Write JSON
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 
 jsonSaveDir = fileparts(events_tsv_name);

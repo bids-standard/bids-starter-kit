@@ -8,7 +8,6 @@
 % Make sure it is in the matab/octave path
 %
 % DHermes, 2017
-% modified RG 201809
 
 %% 8.9.1 Case 1: Phase difference image and at least one magnitude image
 clear;
@@ -38,7 +37,7 @@ fmap_json.EchoTime2 = '';
 % The pathneeds to use forward slashes instead of backward slashes.
 fmap_json.IntendedFor = '';
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 jsonSaveDir = fileparts(fmap_json_name);
 if ~isdir(jsonSaveDir)
@@ -85,7 +84,7 @@ fmap2_json.EchoTime = '';
 % The pathneeds to use forward slashes instead of backward slashes.
 fmap2_json.IntendedFor = '';
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 jsonSaveDir = fileparts(fmap1_json_name);
 if ~isdir(jsonSaveDir)
@@ -120,7 +119,7 @@ fmap_json.Units = ''; % The possible options are: Hz, rad/s, or Tesla.
 % The pathneeds to use forward slashes instead of backward slashes.
 fmap_json.IntendedFor = '';
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 jsonSaveDir = fileparts(fmap_json_name);
 if ~isdir(jsonSaveDir)
@@ -173,7 +172,7 @@ fmap_json.IntendedFor = '';
 
 % this just makes the json file look prettier
 % when opened in a text editor
-json_options.indent = '    ';
+json_options.indent = ' ';
 
 jsonSaveDir = fileparts(fmap_json_name);
 if ~isdir(jsonSaveDir)

@@ -1,29 +1,31 @@
 function files_out = bids_spreadsheet2participants(varargin)
-
+    %
     % routine to takes an spreadsheet file (e.g. excel) as input and export as participants.tsv
     % and participants.json
     %
     % FORMAT files_out = bids_spreadsheet2participants(file_in,'ignore','field1','filed2',...)
     %
     % INPUTS if empty user is prompted
-    %        file_in is the excel file, with at least the 3 BIDS mandatory fields
-    %                participant_id,    age, gender present in the 1st sheet
-    %                A second sheet can be used to specify variables for the
-    %                json file (column format: variable name (same as shhet 1),
-    %                description, values (optional))
-    %        'ignore' is the key to ignore specific fields (columns) in the excel
-    %                 file e.g. 'ignore', 'variableX', 'variableY'
-    %        'export_dir' is the directory to save output files
+    % file_in is the excel file, with at least the 3 BIDS mandatory fields
+    % participant_id, age, gender present in the 1st sheet
+    % A second sheet can be used to specify variables for the
+    % json file (column format: variable name (same as shhet 1),
+    % description, values (optional))
+    % 'ignore' is the key to ignore specific fields (columns) in the excel
+    % file e.g. 'ignore', 'variableX', 'variableY'
+    % 'export_dir' is the directory to save output files
     %
     % OUTPUT files_out is a cell array with files_out{1} the full name of the particpiants.tsv
-    %                                       files_out{2} the full name of the particpiants.json
+    % files_out{2} the full name of the particpiants.json
     %
     % Example: files_out = bids_spreadsheet2participants('D:\icpsr_subset.xlsx','ignore','EEGtesttime')
-    %          the spreadsheet must have worksheet 1 with data, each column has a variable name and values
-    %          -- note missing values MUST be n/a or nill
-    %          worksheet 2 is optional with columns variables, Description, Levels, Units to describe worksheet 1 variables
-    %          similar to https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file
-    %          -- note the order of 'Levels' names should match the order of apparition in the data to have an exact match
+    % the spreadsheet must have worksheet 1 with data, each column has a variable name and values
+    % -- note missing values MUST be n/a or nill
+    % worksheet 2 is optional with columns variables, Description, Levels, Units to describe worksheet 1
+    % variables similar to
+    % https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file
+    % -- note the order of 'Levels' names should match the order of apparition in the data
+    % to have an exact match
     %
     % Cyril Pernet - March 2021
     % ---------------------------------
@@ -34,7 +36,8 @@ function files_out = bids_spreadsheet2participants(varargin)
         if exist(fullfile(fileparts(which('bids_spreadsheet2participants.m')), 'JSONio'), 'dir')
             addpath(fullfile(fileparts(which('bids_spreadsheet2participants.m')), 'JSONio'));
         else
-            error('JSONio library needed, avaiable with EEGLAB bids-matlab-tools or at https://github.com/gllmflndn/JSONio');
+            error(['JSONio library needed, avaiable with EEGLAB bids-matlab-tools or', ...
+                   'at https://github.com/gllmflndn/JSONio']);
         end
     end
 
@@ -66,7 +69,8 @@ function files_out = bids_spreadsheet2participants(varargin)
 
     %% quickly check other arguments are valid
     if nargin > 1
-        if ~any(contains(varargin, 'ignore', 'IgnoreCase', true)) || ~any(contains(varargin, 'export', 'IgnoreCase', true))
+        if ~any(contains(varargin, 'ignore', 'IgnoreCase', true)) || ...
+          ~any(contains(varargin, 'export', 'IgnoreCase', true))
             error('key input arguments in are missing ''ignore'' and/or ''export_dir''');
         else
             if any(contains(varargin, 'export', 'IgnoreCase', true))
@@ -75,8 +79,10 @@ function files_out = bids_spreadsheet2participants(varargin)
 
             if any(contains(varargin, 'ignore', 'IgnoreCase', true))
                 if any(contains(varargin, 'export', 'IgnoreCase', true))
-                    if find(contains(varargin, 'ignore', 'IgnoreCase', true)) < find(contains(varargin, 'export', 'IgnoreCase', true))
-                        ignore_var = find(contains(varargin, 'ignore', 'IgnoreCase', true)) + 1:find(contains(varargin, 'export', 'IgnoreCase', true)) - 1;
+                    if find(contains(varargin, 'ignore', 'IgnoreCase', true)) < ...
+                      find(contains(varargin, 'export', 'IgnoreCase', true))
+                        ignore_var = find(contains(varargin, 'ignore', 'IgnoreCase', true)) + ...
+                          1:find(contains(varargin, 'export', 'IgnoreCase', true)) - 1;
                     else
                         ignore_var = find(contains(varargin, 'ignore', 'IgnoreCase', true)) + 1:nargin;
                     end
@@ -92,7 +98,7 @@ function files_out = bids_spreadsheet2participants(varargin)
 
     % 1st check mandatory/recommended fields are presents
     participant_idvar = any(strcmpi(Data.Properties.VariableNames, 'participant_id'));
-    idvar             = any(strcmpi(Data.Properties.VariableNames, 'id'));
+    idvar = any(strcmpi(Data.Properties.VariableNames, 'id'));
     if idvar == 0 && participant_idvar == 0
         error('no participant ID variable detected, invalid file');
     elseif idvar == 1 && participant_idvar == 0
@@ -113,7 +119,7 @@ function files_out = bids_spreadsheet2participants(varargin)
     if any(strcmp(Data.Properties.VariableNames, 'Sex'))
         Data.Properties.VariableNames(strcmpi(Data.Properties.VariableNames, 'Sex')) = {'sex'};
     end
-    sexvar    = any(strcmpi(Data.Properties.VariableNames, 'sex'));
+    sexvar = any(strcmpi(Data.Properties.VariableNames, 'sex'));
     gendervar = any(strcmpi(Data.Properties.VariableNames, 'gender'));
     if gendervar == 1 && sexvar == 0
         disp('gender variable detected - the recommended optional field is ''sex'' but ok using gender');
@@ -129,7 +135,7 @@ function files_out = bids_spreadsheet2participants(varargin)
             for v = 1:length(Data.age)
                 Data.age{v} = str2double(Data.age{v});
             end
-            Data.age = cell2mat(Data.age);  % ensure age treated as number
+            Data.age = cell2mat(Data.age); % ensure age treated as number
         end
     end
 
@@ -152,7 +158,7 @@ function files_out = bids_spreadsheet2participants(varargin)
     % last check variable values (also useful for metadata)
     if any(~contains(Data.participant_id, 'sub-'))
         disp('participant_id should incude ''sub-'', adding it to curent IDs');
-        for  sub = 1:length(Data.participant_id)
+        for sub = 1:length(Data.participant_id)
             if ~contains(Data.participant_id{sub}, 'sub-')
                 Data.participant_id{sub} = ['sub-' Data.participant_id{sub}];
             end
@@ -168,7 +174,8 @@ function files_out = bids_spreadsheet2participants(varargin)
     export_data = Data;
     for v = 1:length(export_data.Properties.VariableNames)
         if strcmp(class(export_data.(cell2mat(export_data.Properties.VariableNames(v)))), 'double')
-            export_data.(cell2mat(export_data.Properties.VariableNames(v))) = num2cell(export_data.(cell2mat(export_data.Properties.VariableNames(v))));
+            export_data.(cell2mat(export_data.Properties.VariableNames(v))) = ...
+              num2cell(export_data.(cell2mat(export_data.Properties.VariableNames(v))));
             for n = 1:size(export_data.(cell2mat(export_data.Properties.VariableNames(v))), 1)
                 if isnan(export_data.(cell2mat(export_data.Properties.VariableNames(v))){n})
                     export_data.(cell2mat(export_data.Properties.VariableNames(v))){n} = 'n/a';
@@ -198,9 +205,11 @@ function files_out = bids_spreadsheet2participants(varargin)
         GivenMetaData = readtable(filein, sheet2_opts);
 
         if any(contains(GivenMetaData.Properties.VariableNames, 'Variable'))
-            GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'Variable')) = {'variables'};
+            GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'Variable')) = ...
+              {'variables'};
         elseif any(contains(GivenMetaData.Properties.VariableNames, 'variable'))
-            GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'variable')) = {'variables'};
+            GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'variable')) = ...
+              {'variables'};
         end
 
         if ~any(strcmpi('variables', GivenMetaData.Properties.VariableNames))
@@ -210,15 +219,20 @@ function files_out = bids_spreadsheet2participants(varargin)
             if ~any(contains(GivenMetaData.Properties.VariableNames, 'description', 'IgnoreCase', true))
                 warning('metadata sheet provided but ''description of variables'' not found - using worksheet 1');
             else
-                matched_var = cellfun(@(x) find(strcmpi(x, Data.Properties.VariableNames)), GivenMetaData.variables, 'UniformOutput', false);
+                matched_var = cellfun(@(x) find(strcmpi(x, Data.Properties.VariableNames)), GivenMetaData.variables, ...
+                                      'UniformOutput', false);
                 matched_var(cellfun(@(x) isempty(x), matched_var')) = {0}; % mark empty as 0
                 try
                     matched_var = cell2mat(matched_var); % works if unique, ie one value per cell
                     if any(contains(GivenMetaData.Properties.VariableNames, 'description'))
-                        GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'description')) = {'Description'};
+                        GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, ...
+                                                                       'description')) = ...
+                          {'Description'};
                     end
                 catch matched_var_err
-                    warning('variable names between worksheets likely not unique, skipping provided metadata \n%s\n', matched_var_err.message);  %#ok<MEXCEP>
+                    warning(['variable names between worksheets likely not unique,', ...
+                             ' skipping provided metadata \n%s\n'], ...
+                            matched_var_err.message); %#ok<MEXCEP>
                 end
             end
 
@@ -227,9 +241,13 @@ function files_out = bids_spreadsheet2participants(varargin)
                 warning('metadata sheet provided but ''levels'' not found - using worksheet 1');
             else
                 if any(contains(GivenMetaData.Properties.VariableNames, 'level'))
-                    GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'level')) = {'Levels'};
+                    GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, ...
+                                                                   'level')) = ...
+                      {'Levels'};
                 elseif any(contains(GivenMetaData.Properties.VariableNames, 'levels'))
-                    GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'levels')) = {'Levels'};
+                    GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, ...
+                                                                   'levels')) = ...
+                      {'Levels'};
                 end
             end
 
@@ -238,9 +256,13 @@ function files_out = bids_spreadsheet2participants(varargin)
                 warning('metadata sheet provided but ''Units'' of variables not found');
             else
                 if any(contains(GivenMetaData.Properties.VariableNames, 'unit'))
-                    GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'unit')) = {'Units'};
+                    GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, ...
+                                                                   'unit')) = ...
+                      {'Units'};
                 elseif any(contains(GivenMetaData.Properties.VariableNames, 'units'))
-                    GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, 'units')) = {'Units'};
+                    GivenMetaData.Properties.VariableNames(strcmpi(GivenMetaData.Properties.VariableNames, ...
+                                                                   'units')) = ...
+                      {'Units'};
                 end
             end
         end
@@ -261,7 +283,8 @@ function files_out = bids_spreadsheet2participants(varargin)
             if ismember(var, matched_var)
                 if any(contains(GivenMetaData.Properties.VariableNames, 'Description'))
                     if ~isempty(GivenMetaData.Description{matched_var == var})
-                        json.(Data.Properties.VariableNames{var}).Description = GivenMetaData.Description{matched_var == var};
+                        json.(Data.Properties.VariableNames{var}).Description = ...
+                          GivenMetaData.Description{matched_var == var};
                     else
                         json.(Data.Properties.VariableNames{var}).Description = [];
                     end
@@ -274,12 +297,12 @@ function files_out = bids_spreadsheet2participants(varargin)
             if strcmpi(value_types{var}, 'cell') % likely Levels
                 if ismember(var, matched_var) && any(contains(GivenMetaData.Properties.VariableNames, 'Levels'))
                     if ~isempty(GivenMetaData.Levels{matched_var == var})
-                        tmp        = lower(GivenMetaData.Levels{matched_var == var});
-                        tmp        = regexprep(tmp, '\t', ';'); % in case tab is used
+                        tmp = lower(GivenMetaData.Levels{matched_var == var});
+                        tmp = regexprep(tmp, '\t', ';'); % in case tab is used
                         tmp(isspace(tmp)) = []; % deblank as well
                         separators = sort([strfind(tmp, ';') strfind(tmp, ',') length(tmp)]);
-                        index1     = 1;
-                        index2     = separators(1) - 1;
+                        index1 = 1;
+                        index2 = separators(1) - 1;
                         for l = 1:length(separators)
                             Levels{l} = tmp(index1:index2);
                             if l < length(separators)
@@ -289,10 +312,11 @@ function files_out = bids_spreadsheet2participants(varargin)
                         end
 
                         tmp = values{var};
-                        tmp(strcmpi(tmp, 'n/a'))  = [];
+                        tmp(strcmpi(tmp, 'n/a')) = [];
                         tmp(strcmpi(tmp, 'nill')) = [];
                         if length(tmp) ~= length(Levels)
-                            warning('Levels of ''%s'' between data and metadata don''t match', Data.Properties.VariableNames{var});
+                            warning('Levels of ''%s'' between data and metadata don''t match', ...
+                                    Data.Properties.VariableNames{var});
                             % only write fields
                             for v = 1:length(tmp)
                                 json.(Data.Properties.VariableNames{var}).Levels.(tmp{v}) = [];
@@ -312,7 +336,8 @@ function files_out = bids_spreadsheet2participants(varargin)
             else % likely units
                 if ismember(var, matched_var) && any(contains(GivenMetaData.Properties.VariableNames, 'Units'))
                     if ~isempty(GivenMetaData.Levels{var})
-                        json.(Data.Properties.VariableNames{var}).Units = lower(GivenMetaData.Units{matched_var == var});
+                        json.(Data.Properties.VariableNames{var}).Units = ...
+                          lower(GivenMetaData.Units{matched_var == var});
                     else
                         json.(Data.Properties.VariableNames{var}).Units = [];
                     end
@@ -324,10 +349,11 @@ function files_out = bids_spreadsheet2participants(varargin)
     end
 
     try
-        jsonwrite([export_dir filesep 'participants.json'], json, struct('indent', '  '));
+        jsonwrite([export_dir filesep 'participants.json'], json, struct('indent', ' '));
         files_out{2} = fullfile(export_dir, 'participants.json');
         fprintf('participants.json file saved in %s\n', export_dir);
-        warndlg(sprintf('json file created, do check it ! \n it is almost certain it needs editing'), 'BIDS spec', 'modal');
+        warndlg(sprintf('json file created, do check it ! \n it is almost certain it needs editing'), ...
+                'BIDS spec', 'modal');
     catch json_err
         files_out{2} = 'particpants.json file not created';
         error('participants.json not saved %s\n', json_err.mewsage);
