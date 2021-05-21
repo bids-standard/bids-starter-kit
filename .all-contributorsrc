@@ -357,6 +357,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Islast",
+      "name": "Isla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23707851?v=4",
+      "profile": "http://isla.st",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
