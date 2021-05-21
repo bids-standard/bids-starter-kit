@@ -100,8 +100,7 @@ and explanations of where to put
 [useful code or links in the wiki](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#where-to-start-wiki-code-and-templates).
 The licence on our repository is CC-BY and these guidelines have already been
 incorporated into other open source neuroimaging projects such as
-[NiBetaSeries](https://nibetaseries.readthedocs.io/en/latest/contributing.html).
-We also used the
+[NiBetaSeries](https://nibetaseries.readthedocs.io/en/stable/). We also used the
 [“good-first-issue” principle](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#where-to-start-issue-labels)
 to periodically leave small mistakes in our repository unfixed, such as a typo
 or an undefined term in the glossary. Then, we would send out a request and
@@ -118,7 +117,7 @@ over 50 per day.
 Canada ([Elizabeth DuPre](https://github.com/emdupre)), Britain
 ([Kirstie Whitaker](https://github.com/KirstieJane)), the Netherlands
 ([Dora Hermes](https://github.com/dorahermes)), the USA
-([Chris Gorgolewski](https://github.com/chrisfilo) and
+([Chris Gorgolewski](https://github.com/chrisgorgo) and
 [Chris Holdgraf](https://github.com/choldgraf/)), as well as a collaborator from
 India ([Madhur Tandon](https://github.com/madhur-tandon)). The strategy for this
 problem was to work publicly and to demonstrate best practise in open source

@@ -11,8 +11,8 @@ and another for analyzing and manipulating pre-existing BIDS datasets.
     as some helper functions for creating the folders and metadata needed for a
     BIDS dataset. Check out their
     [online documentation](http://mne-tools.github.io/mne-bids/) and the
-    [examples gallery](https://mne-tools.github.io/mne-bids/auto_examples/index.html)
-    to learn how to use this package.
+    [examples gallery](https://mne.tools/mne-bids/stable/index.html) to learn
+    how to use this package.
 -   In addition, this repository contains some helper scripts to facilitate
     creating your BIDS dataset. See the `.py` files in this folder for the most
     up-to-date set of scripts.

@@ -44,9 +44,9 @@ easy! Welcome! :joy::raised_hands:
 There are lots of ways to get in touch with the team maintaining the BIDS
 Starter Kit.
 
--   Our channel in the [BrainHack slack team][brainhack-slack-starterkit]
-    -   Click [here][brainhack-slack-invite] for an invite to the slack
-        workspace
+-   Our channel in the
+    [BrainHack mattermost](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit)
+    for an invite to the Mattermost server .
 -   Our [Gitter channel][gitter]
 -   The [BIDS mailing list][bids-mailinglist]
 -   Via the [Neurostars forum][neurostars-forum].

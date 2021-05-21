@@ -111,7 +111,7 @@ without seeking additional permission, so long as it is attributed back to the
 [contributor-covenant-version]: http://contributor-covenant.org/version/1/4
 [ccby-link]: https://creativecommons.org/licenses/by/4.0
 [cc0-link]: https://creativecommons.org/publicdomain/zero/1.0
-[chrisg-github]: https://github.com/chrisfilo
+[chrisg-github]: https://github.com/chrisgorgo
 [chrish-github]: https://github.com/choldgraf
 [dora-github]: https://github.com/dorahermes
 [elizabeth-github]: https://github.com/emdupre
