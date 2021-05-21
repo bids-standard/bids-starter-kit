@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-32-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -243,6 +243,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/bendhouseart"><img src="https://avatars.githubusercontent.com/u/28850131?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anthony Galassi</b></sub></a><br /><a href="#ideas-bendhouseart" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/bids-standard/bids-starter-kit/commits?author=bendhouseart" title="Code">💻</a></td>
     <td align="center"><a href="http://DrMowinckels.io"><img src="https://avatars.githubusercontent.com/u/14014329?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Athanasia Monika Mowinckel</b></sub></a><br /><a href="#ideas-Athanasiamo" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/bids-standard/bids-starter-kit/commits?author=Athanasiamo" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/yonestar"><img src="https://avatars.githubusercontent.com/u/4513934?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yoni Ashar</b></sub></a><br /><a href="#ideas-yonestar" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/dkp"><img src="https://avatars.githubusercontent.com/u/965184?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dkp</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3Adkp" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
