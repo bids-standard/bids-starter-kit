@@ -348,6 +348,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "cfxb",
+      "name": "Chris Benjamin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39246257?v=4",
+      "profile": "https://github.com/cfxb",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
