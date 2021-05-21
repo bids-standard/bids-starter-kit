@@ -384,6 +384,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "alexvonlautz",
+      "name": "Alex von Lautz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44004062?v=4",
+      "profile": "https://github.com/alexvonlautz",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
