@@ -3,7 +3,6 @@
 % When adding additional metadata please use CamelCase
 %
 % DHermes, 2017
-% modified RG 201809
 % modified Giulio Castegnaro 201811
 
 %%
@@ -33,7 +32,7 @@ Size = [0]'; % Diameter in mm^2
 material = {''}; % Material of the electrodes
 manufacturer = {''}; % Optional field to specify the electrode manufacturer
 % for each electrode. Can be used if electrodes were manufactured by more than one company.
-group = {''}; % Optional field to specify the group that  the electrode is a part of.
+group = {''}; % Optional field to specify the group that the electrode is a part of.
 % Note that any group specified here should match a group specified in `_channels.tsv`
 hemisphere = {''}; % Optional field to specify the hemisphere in which
 % the electrode is placed, one of ["L" or "R"] (use capital).

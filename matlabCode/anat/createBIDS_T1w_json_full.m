@@ -1,5 +1,5 @@
 %% Template Matlab script to create an BIDS compatible sub-01_ses-01_acq-FullExample_run-01_T1w.json file
-% This example lists all required  RECOMMENDED and optional fields.
+% This example lists all REQUIRED RECOMMENDED and optional fields.
 % When adding additional metadata please use CamelCase
 %
 % Writing json files relies on the JSONio library
@@ -7,7 +7,6 @@
 % Make sure it is in the matab/octave path
 %
 % anushkab, 2018
-% modified RG 201809
 
 %%
 clear all;
@@ -125,14 +124,14 @@ anat_json.SequenceName = ' ';
 % specific pulse sequence used
 anat_json.PulseSequenceDetails = ' ';
 
-% RECOMMENDED Boolean stating if the image saved  has been corrected for
+% RECOMMENDED Boolean stating if the image saved has been corrected for
 % gradient nonlinearities by the scanner sequence.
 anat_json.NonlinearGradientCorrection = ' ';
 
 %% In-Plane Spatial Encoding metadata fields
 
 % RECOMMENDED The number of RF excitations need to reconstruct a slice or volume.
-% Please mind that  this is not the same as Echo Train Length which denotes
+% Please mind that this is not the same as Echo Train Length which denotes
 % the number of lines of k-space collected after an excitation.
 anat_json.NumberShots = ' ';
 
@@ -171,16 +170,16 @@ anat_json.EchoTime = ' ';
 % of excitation pulse to detect the amount of longitudinal magnetization
 anat_json.InversionTime = ' ';
 
-% RECOMMENDED  Possible values: "i", "j", "k", "i-", "j-", "k-" (the axis of the NIfTI data
+% RECOMMENDED Possible values: "i", "j", "k", "i-", "j-", "k-" (the axis of the NIfTI data
 % along which slices were acquired, and the direction in which SliceTiming
-% is  defined with respect to). "i", "j", "k" identifiers correspond to the
+% is defined with respect to). "i", "j", "k" identifiers correspond to the
 % first, second and third axis of the data in the NIfTI file. When present
-% ,the axis defined by SliceEncodingDirection  needs to be consistent with
+% ,the axis defined by SliceEncodingDirection needs to be consistent with
 % the slice_dim field in the NIfTI header.
 anat_json.SliceEncodingDirection = ' ';
 
 % RECOMMENDED Actual dwell time (in seconds) of the receiver per point in the
-% readout direction, including any oversampling.  For Siemens, this corresponds
+% readout direction, including any oversampling. For Siemens, this corresponds
 % to DICOM field (0019,1018) (in ns).
 anat_json.DwellTime = ' ';
 
@@ -213,19 +212,19 @@ anat_json.InstitutionName = ' ';
 % DICOM Tag 0008, 0081 "InstitutionAddress"
 anat_json.InstitutionAddress = ' ';
 
-% RECOMMENDED The department in the  institution in charge of the equipment
+% RECOMMENDED The department in the institution in charge of the equipment
 % that produced the composite instances. Corresponds to
 % DICOM Tag 0008, 1040 "Institutional Department Name".
 anat_json.InstitutionalDepartmentName = ' ';
 
 % OPTIONAL JSON field specific to anatomical scans
-% Active ingredient of agent.  Values MUST be one of: IODINE, GADOLINIUM,
+% Active ingredient of agent. Values MUST be one of: IODINE, GADOLINIUM,
 % CARBON DIOXIDE, BARIUM, XENON Corresponds to DICOM Tag 0018,1048.
 anat_json.ContrastBolusIngredient = ' ';
 
 %% Write JSON
 % this makes the json look prettier when opened in a txt editor
-json_options.indent = '    ';
+json_options.indent = ' ';
 
 jsonSaveDir = fileparts(anat_json_name);
 if ~isdir(jsonSaveDir)

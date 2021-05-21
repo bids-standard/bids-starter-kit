@@ -49,54 +49,104 @@ alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 </div>
 
 ## Table of Contents
-- [Project Summary](#project-summary)
-- [Philosophy](#philosophy)
-- [Benefits](#benefits)
-- [Users](#users)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
 
-## Motivation 
-The primary goal of this project is to simplify the process of learning about the Brain Imaging Data Structure (BIDS). We hope that the resources in this wiki, such as links to tutorials, easy-to-read documentation, and code will make BIDS easier to adopt. In order to remain up to date with the continuously changing BIDS specifications, we have adopted a similarly open model to allow [contributions](https://github.com/bids-standard/bids-starter-kit/blob/master/CONTRIBUTING.md) from the community. 
+-   [Project Summary](#project-summary)
+-   [Philosophy](#philosophy)
+-   [Benefits](#benefits)
+-   [Users](#users)
+-   [Contributing](#contributing)
+-   [Acknowledgements](#acknowledgements)
 
+## Motivation
+
+The primary goal of this project is to simplify the process of learning about
+the Brain Imaging Data Structure (BIDS). We hope that the resources in this
+wiki, such as links to tutorials, easy-to-read documentation, and code will make
+BIDS easier to adopt. In order to remain up to date with the continuously
+changing BIDS specifications, we have adopted a similarly open model to allow
+[contributions](https://github.com/bids-standard/bids-starter-kit/blob/master/CONTRIBUTING.md)
+from the community.
 
 ## Project Summary
-Neuroimaging and neurophysiology data can be costly in both time and money to acquire. This creates a barrier for many underfunded researchers without access to the required equipment. Responsible data sharing can level the playing field, but the many different specifications of these acquired images cause portability issues between different labs and scientists. BIDS is a framework for organizing data that standardizes file organization and dataset description between different researchers.
+
+Neuroimaging and neurophysiology data can be costly in both time and money to
+acquire. This creates a barrier for many underfunded researchers without access
+to the required equipment. Responsible data sharing can level the playing field,
+but the many different specifications of these acquired images cause portability
+issues between different labs and scientists. BIDS is a framework for organizing
+data that standardizes file organization and dataset description between
+different researchers.
 
 ### How do I find information?
-For general information to help you get started with BIDS, we reccommend the [wiki](https://github.com/bids-standard/bids-starter-kit/wiki). It includes pages such as an overall introduction to the BIDS folder structure, links to tutorials, and a glossary to help you with some of the technical terms.
 
-For metadata file templates or code to help you get started, please scroll up to find the appropriate files that are available in your langauge of choice.
+For general information to help you get started with BIDS, we reccommend the
+[wiki](https://github.com/bids-standard/bids-starter-kit/wiki). It includes
+pages such as an overall introduction to the BIDS folder structure, links to
+tutorials, and a glossary to help you with some of the technical terms.
 
-Finally, for more advanced knowledge that may pertain to specific use cases for your data, please refer to the full [BIDS Specification](https://bids-specification.readthedocs.io/en/stable/)
+For metadata file templates or code to help you get started, please scroll up to
+find the appropriate files that are available in your langauge of choice.
+
+Finally, for more advanced knowledge that may pertain to specific use cases for
+your data, please refer to the full
+[BIDS Specification](https://bids-specification.readthedocs.io/en/stable/)
 
 ## Philosophy
-The most important part of BIDS are the users: if more people use it, more data will be shared and the more powerful it will become. <strong>We want to make it easy to learn</strong> and more adopted. Since BIDS is platform independent and still an adapting, growing tool, the greater the community, the better it will be.
+
+The most important part of BIDS are the users: if more people use it, more data
+will be shared and the more powerful it will become. <strong>We want to make it
+easy to learn</strong> and more adopted. Since BIDS is platform independent and
+still an adapting, growing tool, the greater the community, the better it will
+be.
 
 ## Benefits
+
 #### For the public good
-+ Lowers scientific waste
-+ Gives opportunity to less-funded researchers
-+ Improves efficiency
-+ Spurs innovation
+
+-   Lowers scientific waste
+-   Gives opportunity to less-funded researchers
+-   Improves efficiency
+-   Spurs innovation
 
 #### For yourself
-+ You are likely the future user of the data and data analysis pipelines you’ve developed
-+ Enables and simplifies collaboration
-+ Reviewers and funding agencies like to see reproducible results
-+ Open-science based funding opportunities and awards available (i.e. OHBM Replication Award, Mozilla Open Science Fellowship, Google Summer of Code, etc.)
+
+-   You are likely the future user of the data and data analysis pipelines
+    you’ve developed
+-   Enables and simplifies collaboration
+-   Reviewers and funding agencies like to see reproducible results
+-   Open-science based funding opportunities and awards available (i.e. OHBM
+    Replication Award, Mozilla Open Science Fellowship, Google Summer of Code,
+    etc.)
 
 ## Users
-BIDS is for everyone! Programming is not required, it simply makes some processes more efficient. All users can take part in the benefits such as organized data, reproducible research, and data sharing. ![users](https://i.imgur.com/0iAMuJ8.png)
+
+BIDS is for everyone! Programming is not required, it simply makes some
+processes more efficient. All users can take part in the benefits such as
+organized data, reproducible research, and data sharing.
+![users](https://i.imgur.com/0iAMuJ8.png)
 
 ## Contributing
 
-There are many ways to get in touch with us! Please see our [Contact Page](https://github.com/bids-standard/bids-starter-kit/wiki/Contact) for all the details.
+There are many ways to get in touch with us! Please see our
+[Contact Page](https://github.com/bids-standard/bids-starter-kit/wiki/Contact)
+for all the details.
 
-To find out more about all the different ways to contribute to the BIDS Starter Kit, check out our [**contributing guidelines**](CONTRIBUTING.md).
-They'll tell you how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful resources to help you [contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or how to make a change [using issues](CONTRIBUTING.md#where-to-start-issue-labels) (you can also check out GitHub's help on [issues](https://help.github.com/articles/about-issues)) and a [pull request](CONTRIBUTING.md#making-a-change-with-a-pull-request).
+To find out more about all the different ways to contribute to the BIDS Starter
+Kit, check out our [**contributing guidelines**](CONTRIBUTING.md). They'll tell
+you how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful
+resources to help you
+[contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you
+can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or
+how to make a change [using issues](CONTRIBUTING.md#where-to-start-issue-labels)
+(you can also check out GitHub's help on
+[issues](https://help.github.com/articles/about-issues)) and a
+[pull request](CONTRIBUTING.md#making-a-change-with-a-pull-request).
 
-If you're here during summer 2018 :icecream::palm_tree:, you should reach out to our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github]. It would really help his project along if you said hello and passed along any feedback you have :purple_heart:. Please don't be shy, **the newer you are the more valuable your feedback is** :thumbsup:
+If you're here during summer 2018 :icecream::palm_tree:, you should reach out to
+our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github].
+It would really help his project along if you said hello and passed along any
+feedback you have :purple_heart:. Please don't be shy, **the newer you are the
+more valuable your feedback is** :thumbsup:
 
 ## Acknowledgements
 
@@ -109,15 +159,17 @@ If you're here during summer 2018 :icecream::palm_tree:, you should reach out to
 
 ### Publications
 
-**Please consider citing the relevant papers when publishing a project that uses BIDS** 
+**Please consider citing the relevant papers when publishing a project that uses
+BIDS**
 
-All publications are listed in our wiki: https://github.com/bids-standard/bids-starter-kit/wiki/Publications
+All publications are listed in our wiki:
+https://github.com/bids-standard/bids-starter-kit/wiki/Publications
 
 You'll almost always want to cite the original paper:
 
 [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](https://www.nature.com/articles/sdata201644)
 
->Scientific Data volume 3, Article number: 160044 (2016)
+> Scientific Data volume 3, Article number: 160044 (2016)
 
 ```bibtex
 @article{gorgolewski2016brain,
@@ -125,20 +177,26 @@ You'll almost always want to cite the original paper:
   author={Gorgolewski, K. and Auer, T. and Calhoun, V. and others},
   journal={Scientific Data},
   year={2016},
-  volume={3}, 
+  volume={3},
 }
 ```
 
 <br>
 
-But there are also modality specific extension papers for [MEG](https://doi.org/10.1038/sdata.2018.110), [EEG](https://doi.org/10.31234/osf.io/63a4y) and [iEEG](https://doi.org/10.31234/osf.io/r7vc2), or the [BIDS-Apps](https://doi.org/10.1371/journal.pcbi.1005209) paper that should be referenced if you're using data of that type.
+But there are also modality specific extension papers for
+[MEG](https://doi.org/10.1038/sdata.2018.110),
+[EEG](https://doi.org/10.31234/osf.io/63a4y) and
+[iEEG](https://doi.org/10.31234/osf.io/r7vc2), or the
+[BIDS-Apps](https://doi.org/10.1371/journal.pcbi.1005209) paper that should be
+referenced if you're using data of that type.
 
 [gsoc]: https://summerofcode.withgoogle.com
 [patrick-github]: https://github.com/Park-Patrick
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people
+([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -191,4 +249,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the
+[all-contributors](https://github.com/all-contributors/all-contributors)
+specification. Contributions of any kind welcome!

@@ -3,7 +3,6 @@
 % When adding additional metadata please use CamelCase
 %
 % DHermes, 2017
-% modified RG 201809
 % modified Jaap van der Aar 30.11.18
 
 %%
@@ -52,7 +51,7 @@ group = {''}; % Which group of channels (grid/strip/probe) this channel belongs 
 % One group has one wire and noise can be shared. This can be a name or number.
 % Note that any groups specified in `_electrodes.tsv` must match those present here.
 
-%% optional  columns
+%% optional columns
 
 sampling_frequency = [0]; % Sampling rate of the channel in Hz.
 
