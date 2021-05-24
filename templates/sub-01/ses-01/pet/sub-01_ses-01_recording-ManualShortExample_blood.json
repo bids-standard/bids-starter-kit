@@ -3,10 +3,8 @@
     "MetaboliteAvail": "",
     "WholeBloodAvail": "",
     "DispersionCorrected": "",
-	"MetaboliteMethod": "",
-	"MetaboliteRecoveryCorrectionApplied": "",
-    
-    
+    "MetaboliteMethod": "",
+    "MetaboliteRecoveryCorrectionApplied": "",
     "time": {
         "Description": "Time in relation to time zero defined by the _pet.json",
         "Units": "s"
@@ -16,4 +14,3 @@
         "Units": "unitless"
     }
 }
-

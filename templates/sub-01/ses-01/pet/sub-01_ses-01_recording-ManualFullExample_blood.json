@@ -12,15 +12,13 @@
     "PlasmaFreeFraction": "",
     "PlasmaFreeFractionMethod": "",
     "MetaboliteMethod": "",
-	"MetaboliteRecoveryCorrectionApplied": "",
-    
-    
+    "MetaboliteRecoveryCorrectionApplied": "",
     "time": {
         "Description": "Time in relation to time zero defined by the _pet.json",
         "Units": "s"
     },
     "plasma_radioactivity": {
-        "Description": "Radioactivity in plasma samples. Measured using COBRA counter.", 
+        "Description": "Radioactivity in plasma samples. Measured using COBRA counter.",
         "Units": "kBq/ml"
     },
     "metabolite_parent_fraction": {
@@ -40,4 +38,3 @@
         "Units": "kBq/ml"
     }
 }
-
