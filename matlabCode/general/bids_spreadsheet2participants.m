@@ -8,16 +8,16 @@ function files_out = bids_spreadsheet2participants(varargin)
     % INPUTS if empty user is prompted:
     %
     %   - 'file_in' is the excel file, with at least the 3 BIDS mandatory fields in the 1st sheet:
-    %       - participant_id, 
-    %       - age, 
-    %       - gender 
+    %       - participant_id,
+    %       - age,
+    %       - gender
     %
-    %     A second sheet can be used to specify variables for the json file column format: 
+    %     A second sheet can be used to specify variables for the json file column format:
     %       - variable name (same as sheet 1),
-    %       - description, 
+    %       - description,
     %       - values (optional)
-    % 
-    %   - 'ignore' is the key to ignore specific fields (columns) in the excel file 
+    %
+    %   - 'ignore' is the key to ignore specific fields (columns) in the excel file
     %     e.g. 'ignore', 'variableX', 'variableY'
     %
     %   - 'export_dir' is the directory to save output files
@@ -28,7 +28,7 @@ function files_out = bids_spreadsheet2participants(varargin)
     %       - files_out{1} the full name of the particpiants.tsv
     %       - files_out{2} the full name of the particpiants.json
     %
-    % EXAMPLE: 
+    % EXAMPLE:
     %
     %   files_out = bids_spreadsheet2participants('D:\icpsr_subset.xlsx','ignore','EEGtesttime')
     %
@@ -45,9 +45,9 @@ function files_out = bids_spreadsheet2participants(varargin)
     %
     % Cyril Pernet - March 2021
     % ---------------------------------
-    
+
     if verLessThan('matlab', '9.4')
-        error('This function requires matlab 2018a or above.')
+        error('This function requires matlab 2018a or above.');
     end
 
     files_out = cell(2, 1);

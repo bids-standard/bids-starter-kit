@@ -26,7 +26,7 @@ x = [0]'; % X position. The positions of the center of each electrode in xyz spa
 % Units are in millimeters or pixels and are specified in _*space-<label>_electrode.json.
 y = [0]'; % Y position.
 z = [0]'; % Z position. If electrodes are in 2D space this should be a column of n/a values.
-Size = [0]'; % Diameter in mm^2
+Size = [0]'; % Surface area in mm^2
 
 %% recommended columns
 material = {''}; % Material of the electrodes
