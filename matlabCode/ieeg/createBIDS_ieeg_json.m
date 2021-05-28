@@ -50,9 +50,6 @@ ieeg_json.SoftwareFilters = ''; % List of temporal software filters applied or
 % ideally key:value pairs of pre-applied filters and their parameter values.
 % (n/a if none). E.g., "{'HighPass': {'HalfAmplitudeCutOffHz': 1, 'RollOff: '6dB/Octave'}}".
 
-ieeg_json.DCOffsetCorrection = ''; % A description of the method (if any) used to correct for
-% a DC offset.If the method used was subtracting the mean value for each channel, use "mean".
-
 %% Recommended fields:
 
 HardwareFilters.HighpassFilter.CutoffFrequency = []; % Contains the high pass hardware filter
