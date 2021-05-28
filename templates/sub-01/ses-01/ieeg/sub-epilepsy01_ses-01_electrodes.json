@@ -1,0 +1,28 @@
+{
+    "name": {
+        "Description": "REQUIRED. Name of the electrode contact point."
+    },
+    "x": {
+        "Description": "REQUIRED. X position. The positions of the center of each electrode in xyz space. Units are specified in space-<label>_coordsystem.json."
+    },
+    "y": {
+        "Description": "REQUIRED. Y position."
+    },
+    "z": {
+        "Description": "REQUIRED. Z position. If electrodes are in 2D space this should be a column of n/a values."
+    },
+    "size": {
+        "Description": "REQUIRED. Surface area of the electrode, units MUST be in mm^2."
+    },
+    "seizure_zone": {
+        "LongName": "Seizure onset zone",
+        "Description": "final conclusion drawn by an epileptologist on the electrodes involved in the seizures",
+        "Levels": {
+            "SOZ": "Seizure Onset Zone, the region where the recorded clinical seizures originated during the recording period.",
+            "IrritativeZone": "Region of cortex that generates interictal epileptiform discharges, but not seizures",
+            "EarlyPropagationZone": "Region of cortex that generates the initial seizure symptoms. Not seizure onset, but the propagation of seizure from SOZ into this region within first 3 seconds from seizure onset.",
+            "Resected": "Region of cortex that was resected",
+            "ResectedEdge": "Region of cortex that is within 1 cm of the edge of the resected area."
+        }
+    }
+}
