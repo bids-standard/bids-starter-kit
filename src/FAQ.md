@@ -20,7 +20,9 @@ maximise the different ways of finding out more about BIDS.
     -   [Can I import an Excel file with participants information?](#how-to-import-excel-files)
 
 -   [MRI specific questions](#mri-specific-questions)
+
     -   [How can I anonymize the structural image of my data set? What defacing tools can I use?](#what-defacing-tools-can-i-use)
+
 -   [EEG specific questions](#eeg-specific-questions)
 
     -   [How to format Hardware and Software filter fields in a .json?](#how-to-format-hardware-and-software-filter-fields-in-a-json)
