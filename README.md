@@ -35,7 +35,7 @@
       FAQ
     </a>
     <span> | </span>
-    <a href="https://gitter.im/bids-standard/bids-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+    <a href="https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit">
       Chat
     </a>
     <span> | </span>

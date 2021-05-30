@@ -41,31 +41,36 @@ easy! Welcome! :joy::raised_hands:
 
 ## Get in touch
 
-There are lots of ways to get in touch with the team maintaining the BIDS
-Starter Kit.
+We have lots of different ways of staying in touch!
 
--   Our channel in the
-    [BrainHack mattermost](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit)
-    for an invite to the Mattermost server .
--   Our [Gitter channel][gitter]
--   The [BIDS mailing list][bids-mailinglist]
--   Via the [Neurostars forum][neurostars-forum].
-    -   **This is our preferred way to answer questions so that others who have
-        similar questions can benefit too!** Even if your question is not
-        well-defined, just post what you have so far and we will be able to
-        point you in the right direction!
-    -   Some example questions that have already been answered include:
-        [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
-        and
-        [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
+**Our preferred way to answer questions** is via our forum
+[Neurostars](https://neurostars.org/tags/bids) (we have a 90%+ answer rate!)
 
-If you're here during summer 2018 :icecream::palm_tree:, you should reach out to
-our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github].
-He'll be monitoring all the channels above and it would really help his project
-along if you said hello and passed along any feedback you have :purple_heart:.
-Don't be shy, the newer you are the more valuable your feedback is :thumbsup:
+We understand that posting a question on a forum can seem a bit uncertain and
+intimidating. However, if _you_ have a question it's almost certain that
+somebody else will too, and this way we can avoid answering the same question
+multiple times. Even if your question is not well-defined, just post what you
+have so far and we will be able to point you in the right direction!
 
-<img align="right" width="50%" src="https://linuxcentro.com.br/wp-content/uploads/2017/04/github-520x350.jpg" alt="Two github cats working together"/>
+Some example questions that have already been answered include:
+
+-   [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
+-   [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
+
+---
+
+You can also come chat on the
+[Brainhack mattermost](https://mattermost.brainhack.org/):
+
+-   on the
+    [`~bids_general`](https://mattermost.brainhack.org/brainhack/channels/bids_general)
+    channel
+-   or on the
+    [`~starter-kit`](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit)
+
+We'd love for you to join the mailing list (bids-discussion@googlegroups.com,
+click [here](https://groups.google.com/forum/#!forum/bids-discussion) to join).
+You might find some helpful answers and discussions there.
 
 ## Contributing through GitHub
 
