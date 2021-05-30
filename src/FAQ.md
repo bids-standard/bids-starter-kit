@@ -95,7 +95,7 @@ If you want to keep track of what data was acquired when you can use the
 [`scans.tsv` files](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#scans-file).
 
 For some examples, see this
-[issue in the bidsstater kit](https://github.com/bids-standard/bids-starter-kit/issues/193).
+[issue in the bids-starter kit](https://github.com/bids-standard/bids-starter-kit/issues/193).
 
 # MRI specific questions
 
