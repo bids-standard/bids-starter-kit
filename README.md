@@ -31,6 +31,10 @@
       Tutorials
     </a>
     <span> | </span>
+    <a href="https://github.com/bids-standard/BIDS-Starter-Kit/src/FAQ.md">
+      FAQ
+    </a>
+    <span> | </span>
     <a href="https://gitter.im/bids-standard/bids-starter-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
       Chat
     </a>
@@ -84,7 +88,7 @@ For general information to help you get started with BIDS, we reccommend the
 pages such as an overall introduction to the BIDS folder structure, links to
 tutorials, and a glossary to help you with some of the technical terms.
 
-**Make sure to check our [FAQ](./FAQ.md) !!!**
+**Make sure to check our [FAQ](./src/FAQ.md) !!!**
 
 For metadata file templates or code to help you get started, please scroll up to
 find the appropriate files that are available in your language of choice.
