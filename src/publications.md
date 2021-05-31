@@ -4,6 +4,8 @@ You can find a listing of the main publications for BIDS and the BIDS extension
 proposals directly on the
 [BIDS specification website](https://bids-specification.readthedocs.io/en/stable/01-introduction.html#original-publication)
 
+Other relevant publications are listed below.
+
 ## 2018
 
 > Gilmore, R. O., Kennedy, J. L., & Adolph, K. E. (2018). Practical Solutions
