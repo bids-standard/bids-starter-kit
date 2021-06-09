@@ -6,10 +6,11 @@ function files_out = bids_spreadsheet2participants(varargin)
 % FORMAT files_out = bids_spreadsheet2participants(file_in,'ignore','field1','filed2',...)
 %
 % INPUTS if empty user is prompted
-%        file_in is the excel file, with at least the 3 BIDS mandatory fields
-%                participant_id,	age, gender present in the 1st sheet
+%        file_in is a spreadshhet file, with at least the 3 BIDS mandatory fields
+%                participant_id, age, gender present in the 1st sheet
+%             MSSING VALUES MUST be n/a or nill
 %                A second sheet can be used to specify variables for the
-%                json file (column format: variable name (same as shhet 1),
+%                json file (column format: variable name (same as sheet 1),
 %                description, values (optional))
 %        'ignore' is the key to ignore specific fields (columns) in the excel
 %                 file e.g. 'ignore', 'variableX', 'variableY'
@@ -18,9 +19,8 @@ function files_out = bids_spreadsheet2participants(varargin)
 % OUTPUT files_out is a cell array with files_out{1} the full name of the particpiants.tsv
 %                                       files_out{2} the full name of the particpiants.json
 %
-% Example: files_out = bids_spreadsheet2participants('D:\icpsr_subset.xlsx','ignore','EEGtesttime')
+% Example: files_out = bids_spreadsheet2participants('spreadsheet_to_convert.xlsx','ignore','EEGtesttime','export_dir',pwd)
 %          the spreadsheet must have worksheet 1 with data, each column has a variable name and values
-%          -- note missing values MUST be n/a or nill
 %          worksheet 2 is optional with columns variables, Description, Levels, Units to describe worksheet 1 variables
 %          similar to https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file
 %          -- note the order of 'Levels' names should match the order of apparition in the data to have an exact match
@@ -65,7 +65,7 @@ end
 
 %% quickly check other arguments are valid
 if nargin > 1
-    if ~any(contains(varargin,'ignore','IgnoreCase',true)) || ~any(contains(varargin,'export','IgnoreCase',true))
+    if ~any(contains(varargin,{'ignore','export'},'IgnoreCase',true)) 
         error('key input arguments in are missing ''ignore'' and/or ''export_dir''')
     else
         if any(contains(varargin,'export','IgnoreCase',true))
