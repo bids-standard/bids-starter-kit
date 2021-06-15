@@ -1,0 +1,35 @@
+{
+ "collectionIssues": {
+  "Description": [],
+  "Levels": [
+   "broken trigger cable, no EEG codes",
+   "nill",
+   "no EEG",
+   "no MRI",
+   "none"
+  ]
+ },
+ "CognitiveTest1": {
+  "Description": [],
+  "Units": []
+ },
+ "CognitiveTest2": {
+  "Description": [],
+  "Units": []
+ },
+ "testdate": {
+  "Description": "data collection start time",
+  "Units": []
+ },
+ "age": {
+  "Description": "Age in years",
+  "Units": []
+ },
+ "sex": {
+  "Description": "Sex",
+  "Levels": {
+   "Female": "male",
+   "Male": "female"
+  }
+ }
+}
