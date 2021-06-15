@@ -50,6 +50,7 @@ function files_out = bids_spreadsheet2participants(varargin)
         error('This function requires matlab 2018a or above.');
     end
 
+
     files_out = cell(2, 1);
     % check library
     if ~exist('jsonwrite.m', 'file')
@@ -87,15 +88,14 @@ function files_out = bids_spreadsheet2participants(varargin)
         sheet2_opts = [];
     end
 
-    %% quickly check other arguments are valid
-    if nargin > 1
-        if ~any(contains(varargin, 'ignore', 'IgnoreCase', true)) || ...
-          ~any(contains(varargin, 'export', 'IgnoreCase', true))
-            error('key input arguments in are missing ''ignore'' and/or ''export_dir''');
-        else
-            if any(contains(varargin, 'export', 'IgnoreCase', true))
-                export_dir = varargin{find(contains(varargin, 'export', 'IgnoreCase', true)) + 1};
-            end
+%% quickly check other arguments are valid
+if nargin > 1
+    if ~any(contains(varargin,{'ignore','export'},'IgnoreCase',true)) 
+        error('key input arguments in are missing ''ignore'' and/or ''export_dir''')
+    else
+        if any(contains(varargin,'export','IgnoreCase',true))
+            export_dir = varargin{find(contains(varargin,'export','IgnoreCase',true))+1};
+        end
 
             if any(contains(varargin, 'ignore', 'IgnoreCase', true))
                 if any(contains(varargin, 'export', 'IgnoreCase', true))
