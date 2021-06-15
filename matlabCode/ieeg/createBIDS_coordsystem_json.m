@@ -8,7 +8,6 @@
 % Make sure it is in the matab/octave path
 %
 % DHermes, 2017
-% modified RG 201809
 % modified Jaap van der Aar 30.11.18
 
 %%
@@ -24,16 +23,17 @@ electrodes_json_name = fullfile(root_dir, ieeg_project, ...
                                  '_ses-' ieeg_ses ...
                                  '_coordsystem.json']);
 
-%%  Required fields
+%% Required fields
 
-loc_json.iEEGCoordinateSystem  = ''; % Defines the coordinate system for the iEEG electrodes.
+loc_json.iEEGCoordinateSystem = ''; % Defines the coordinate system for the iEEG electrodes.
 % For example, "ACPC". See Appendix VIII: preferred names of Coordinate systems.
-% If "Other" (e.g., individual subject MRI), provide definition of the coordinate system in iEEGCoordinateSystemDescription
+% If "Other" (e.g., individual subject MRI), provide definition of the coordinate system
+% in iEEGCoordinateSystemDescription.
 % If positions correspond to pixel indices in a 2D image (of either a volume-rendering,
 % surface-rendering, operative photo, or operative drawing), this must be "pixels".
 % See section 3.4.1: Electrode locations for more information on electrode locations.
 
-loc_json.iEEGCoordinateUnits  = ''; % Units of the _electrodes.tsv, MUST be "m", "mm", "cm" or "pixels".
+loc_json.iEEGCoordinateUnits = ''; % Units of the _electrodes.tsv, MUST be "m", "mm", "cm" or "pixels".
 
 %% Recommended fields
 
@@ -53,7 +53,7 @@ loc_json.IndendedFor = ''; % This can be an MRI/CT or a file containing the oper
 % Talairach: "/derivatives/surfaces/sub-Talairach/ses-01/anat/sub-Talairach_T1w_pial.R.surf.gii"
 
 loc_json.iEEGCoordinateProcessingDescription = ''; % Has any projection been done on the electrode positions
-% (e.g., "surface_projection",  "none").
+% (e.g., "surface_projection", "none").
 
 loc_json.iEEGCoordinateProcessingReference = ''; % A reference to a paper that defines in more detail
 % the method used to project or localize the electrodes
@@ -64,7 +64,7 @@ if ~isdir(jsonSaveDir)
     fprintf('Warning: directory to save json file does not exist, create: %s \n', jsonSaveDir);
 end
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 
 try

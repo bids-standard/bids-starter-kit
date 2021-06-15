@@ -8,7 +8,6 @@
 % Make sure it is in the matab/octave path
 %
 % DHermes, 2017
-% modified RG 201809
 
 %%
 
@@ -71,7 +70,7 @@ bold_json.DelayTime = [];
 % parameter slice time correction will not be possible.
 %
 % In addition without this parameter slice time correction will not be possible.
-% The time at which each slice was acquired within each volume (frame) of  the acquisition.
+% The time at which each slice was acquired within each volume (frame) of the acquisition.
 % The time at which each slice was acquired during the acquisition. Slice
 % timing is not slice order - it describes the time (sec) of each slice
 % acquisition in relation to the beginning of volume acquisition. It is
@@ -86,7 +85,7 @@ bold_json.SliceTiming = '';
 % exclusive with RepetitionTime.
 %
 % Duration (in seconds) of volume acquisition. Corresponds to
-% DICOM Tag 0018,9073 �Acquisition Duration�.
+% DICOM Tag 0018,9073 "Acquisition Duration".
 bold_json.AcquisitionDuration = [];
 
 %% Required fields if using a fieldmap
@@ -109,7 +108,7 @@ bold_json.EchoTime = '';
 
 %% Write
 % this just makes the json file look prettier when opened in a text editor
-json_options.indent = '    ';
+json_options.indent = ' ';
 
 jsonSaveDir = fileparts(bold_json_name);
 if ~isdir(jsonSaveDir)

@@ -8,7 +8,6 @@
 % Make sure it is in the matab/octave path
 %
 % DHermes, 2017
-% modified RG 201809
 
 %% 8.9.1 Case 1: Phase difference image and at least one magnitude image
 clear;
@@ -36,9 +35,9 @@ fmap_json.EchoTime2 = '';
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The pathneeds to use forward slashes instead of backward slashes.
-fmap_json.IntendedFor = ''; 
+fmap_json.IntendedFor = '';
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 jsonSaveDir = fileparts(fmap_json_name);
 if ~isdir(jsonSaveDir)
@@ -76,16 +75,16 @@ fmap1_json.EchoTime = '';
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The pathneeds to use forward slashes instead of backward slashes.
-fmap1_json.IntendedFor = ''; 
+fmap1_json.IntendedFor = '';
 
 fmap2_json.EchoTime = '';
 % Fieldmap data are linked to a specific scan(s)
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The pathneeds to use forward slashes instead of backward slashes.
-fmap2_json.IntendedFor = ''; 
+fmap2_json.IntendedFor = '';
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 jsonSaveDir = fileparts(fmap1_json_name);
 if ~isdir(jsonSaveDir)
@@ -118,9 +117,9 @@ fmap_json.Units = ''; % The possible options are: Hz, rad/s, or Tesla.
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The pathneeds to use forward slashes instead of backward slashes.
-fmap_json.IntendedFor = ''; 
+fmap_json.IntendedFor = '';
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 jsonSaveDir = fileparts(fmap_json_name);
 if ~isdir(jsonSaveDir)
@@ -142,7 +141,7 @@ run_label = '01';
 % label ([a-zA-Z0-9]+ for example "LR" or "AP") that can help users to
 % distinguish between different files, but should not be used to infer any
 % scanning parameters (such as phase encoding directions) of the corresponding sequence.
-dir_label = 'LR'; 
+dir_label = 'LR';
 
 fmap_json_name = fullfile(root_dir, project_label, ['sub-' sub_label], ...
                           ['ses-' ses_label], ...
@@ -157,13 +156,13 @@ fmap_json_name = fullfile(root_dir, project_label, ['sub-' sub_label], ...
 % Spin Echo EPI scans with different phase encoding directions. In such a case,
 % the phase encoding direction is specified in the corresponding JSON file as
 % one of: i, j, k, i-, j-, k-
-fmap_json.PhaseEncodingDirection = ''; 
+fmap_json.PhaseEncodingDirection = '';
 
 % For these differentially phase encoded
 % sequences, one also needs to specify the Total Readout Time defined as
 % the time (in seconds) from the center of the first echo to the center
 % of the last echo
-fmap_json.TotalReadoutTime = ''; 
+fmap_json.TotalReadoutTime = '';
 
 % Fieldmap data are linked to a specific scan(s)
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
@@ -173,7 +172,7 @@ fmap_json.IntendedFor = '';
 
 % this just makes the json file look prettier
 % when opened in a text editor
-json_options.indent = '    '; 
+json_options.indent = ' ';
 
 jsonSaveDir = fileparts(fmap_json_name);
 if ~isdir(jsonSaveDir)

@@ -7,7 +7,6 @@
 % Make sure it is in the matab/octave path
 %
 % DHermes, 2017
-% modified RG 201809
 % modified Jaap van der Aar & Giulio Castegnaro 30.11.18
 
 %%
@@ -47,12 +46,9 @@ ieeg_json.SamplingFrequency = ''; % Sampling frequency (in Hz) of all the iEEG c
 ieeg_json.PowerLineFrequency = ''; % Frequency (in Hz) of the power grid where the
 % iEEG recording was done (i.e., 50 or 60).
 
-ieeg_json.SoftwareFilters = ''; %  List of temporal software filters applied or
-% ideally  key:value pairs of pre-applied filters and their parameter values.
+ieeg_json.SoftwareFilters = ''; % List of temporal software filters applied or
+% ideally key:value pairs of pre-applied filters and their parameter values.
 % (n/a if none). E.g., "{'HighPass': {'HalfAmplitudeCutOffHz': 1, 'RollOff: '6dB/Octave'}}".
-
-ieeg_json.DCOffsetCorrection = ''; % A description of the method (if any) used to correct for
-% a DC offset.If the method used was subtracting the mean value for each channel, use "mean".
 
 %% Recommended fields:
 
@@ -65,7 +61,7 @@ HardwareFilters.LowpassFilter.CutoffFrequency = []; % Contains the low pass hard
 ieeg_json.HardwareFilters = HardwareFilters; % Cutoff frequencies of high and low pass filter
 % are stored in this variable automatically. No further input necessary.
 
-ieeg_json.Manufacturer = ''; % Manufacturer of the amplifier system  (e.g. "TDT, blackrock")
+ieeg_json.Manufacturer = ''; % Manufacturer of the amplifier system (e.g. "TDT, blackrock")
 
 ieeg_json.ManufacturersModelName = ''; % Manufacturer's designation of the
 % iEEG amplifier model (e.g. "TDT").
@@ -78,9 +74,9 @@ ieeg_json.Instructions = ''; % Text of the instructions given to participants
 
 ieeg_json.CogAtlasID = ''; % URL of the corresponding Cognitive Atlas Task term
 
-ieeg_json.CogPOID = ''; %  URL of the corresponding CogPO term
+ieeg_json.CogPOID = ''; % URL of the corresponding CogPO term
 
-ieeg_json.InstitutionName = ''; %  The name of the institution in charge of
+ieeg_json.InstitutionName = ''; % The name of the institution in charge of
 % the equipment that produced the composite instances.
 
 ieeg_json.InstitutionAddress = ''; % The address of the institution in charge
@@ -103,7 +99,7 @@ ieeg_json.ECGChannelCount = ''; % Number of ECG channels
 
 ieeg_json.EMGChannelCount = ''; % Number of EMG channels
 
-ieeg_json.MiscChannelCount = ''; % Number of miscellaneous analog channels for auxiliary  signals
+ieeg_json.MiscChannelCount = ''; % Number of miscellaneous analog channels for auxiliary signals
 
 ieeg_json.TriggerChannelCount = ''; % Number of channels for digital (TTL bit level) triggers.
 
@@ -143,7 +139,7 @@ ieeg_json.ElectrodeManufacturer = ''; % can be used if all electrodes are of the
 % table in the _electrodes.tsv file.
 
 ieeg_json.ElectrodeManufacturersModelName = ''; % Specify model name. If different electrode types are used,
-%  please use the corresponding table in the _electrodes.tsv file
+% please use the corresponding table in the _electrodes.tsv file
 
 ieeg_json.iEEGGround = ''; % Description of the location of the ground electrode
 % ("placed on right mastoid (M2)").
@@ -172,7 +168,7 @@ if ~isdir(jsonSaveDir)
     fprintf('Warning: directory to save json file does not exist, create: %s \n', jsonSaveDir);
 end
 
-json_options.indent = '    '; % this just makes the json file look prettier
+json_options.indent = ' '; % this just makes the json file look prettier
 % when opened in a text editor
 
 try

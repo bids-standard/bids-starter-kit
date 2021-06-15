@@ -301,6 +301,107 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "bendhouseart",
+      "name": "Anthony Galassi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28850131?v=4",
+      "profile": "https://github.com/bendhouseart",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "Athanasiamo",
+      "name": "Athanasia Monika Mowinckel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14014329?v=4",
+      "profile": "http://DrMowinckels.io",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "yonestar",
+      "name": "Yoni Ashar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4513934?v=4",
+      "profile": "https://github.com/yonestar",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "dkp",
+      "name": "dkp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/965184?v=4",
+      "profile": "https://github.com/dkp",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jdkent",
+      "name": "James Kent",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12564882?v=4",
+      "profile": "https://jdkent.github.io/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "cfxb",
+      "name": "Chris Benjamin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39246257?v=4",
+      "profile": "https://github.com/cfxb",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Islast",
+      "name": "Isla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23707851?v=4",
+      "profile": "http://isla.st",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "effigies",
+      "name": "Chris Markiewicz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83442?v=4",
+      "profile": "https://github.com/effigies",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ankiitgupta7",
+      "name": "Ankit Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25341569?v=4",
+      "profile": "https://ankiitgupta7.github.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "alexvonlautz",
+      "name": "Alex von Lautz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44004062?v=4",
+      "profile": "https://github.com/alexvonlautz",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "AlexandreHutton",
+      "name": "Lex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50920802?v=4",
+      "profile": "https://github.com/AlexandreHutton",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -8,7 +8,6 @@
 % Make sure it is in the matab/octave path
 %
 % DHermes, 2017
-% modified RG 201809
 
 %%
 
@@ -68,7 +67,7 @@ bold_json.DelayTime = [];
 % parameter slice time correction will not be possible.
 %
 % In addition without this parameter slice time correction will not be possible.
-% The time at which each slice was acquired within each volume (frame) of  the acquisition.
+% The time at which each slice was acquired within each volume (frame) of the acquisition.
 % The time at which each slice was acquired during the acquisition. Slice
 % timing is not slice order - it describes the time (sec) of each slice
 % acquisition in relation to the beginning of volume acquisition. It is
@@ -189,14 +188,14 @@ bold_json.SequenceName = '';
 % specific pulse sequence used
 bold_json.PulseSequenceDetails = '';
 
-% RECOMMENDED Boolean stating if the image saved  has been corrected for
+% RECOMMENDED Boolean stating if the image saved has been corrected for
 % gradient nonlinearities by the scanner sequence.
 bold_json.NonlinearGradientCorrection = '';
 
 %% In-Plane Spatial Encoding metadata fields
 
 % RECOMMENDED The number of RF excitations need to reconstruct a slice or volume.
-% Please mind that  this is not the same as Echo Train Length which denotes
+% Please mind that this is not the same as Echo Train Length which denotes
 % the number of lines of k-space collected after an excitation.
 bold_json.NumberShots = '';
 
@@ -230,16 +229,16 @@ bold_json.EchoTrainLength = '';
 % of excitation pulse to detect the amount of longitudinal magnetization
 bold_json.InversionTime = '';
 
-% RECOMMENDED  Possible values: "i", "j", "k", "i-", "j-", "k-" (the axis of the NIfTI data
+% RECOMMENDED Possible values: "i", "j", "k", "i-", "j-", "k-" (the axis of the NIfTI data
 % along which slices were acquired, and the direction in which SliceTiming
-% is  defined with respect to). "i", "j", "k" identifiers correspond to the
+% is defined with respect to). "i", "j", "k" identifiers correspond to the
 % first, second and third axis of the data in the NIfTI file. When present
-% ,the axis defined by SliceEncodingDirection  needs to be consistent with
+% ,the axis defined by SliceEncodingDirection needs to be consistent with
 % the slice_dim field in the NIfTI header.
 bold_json.SliceEncodingDirection = '';
 
 % RECOMMENDED Actual dwell time (in seconds) of the receiver per point in the
-% readout direction, including any oversampling.  For Siemens, this corresponds
+% readout direction, including any oversampling. For Siemens, this corresponds
 % to DICOM field (0019,1018) (in ns).
 bold_json.DwellTime = '';
 
@@ -312,14 +311,14 @@ bold_json.InstitutionName = '';
 % DICOM Tag 0008, 0081 "InstitutionAddress"
 bold_json.InstitutionAddress = '';
 
-% RECOMMENDED The department in the  institution in charge of the equipment
+% RECOMMENDED The department in the institution in charge of the equipment
 % that produced the composite instances. Corresponds to
 % DICOM Tag 0008, 1040 "Institutional Department Name".
 bold_json.InstitutionalDepartmentName = '';
 
 %% Write
 % this just makes the json file look prettier when opened in a text editor
-json_options.indent = '    ';
+json_options.indent = ' ';
 
 jsonSaveDir = fileparts(bold_json_name);
 if ~isdir(jsonSaveDir)

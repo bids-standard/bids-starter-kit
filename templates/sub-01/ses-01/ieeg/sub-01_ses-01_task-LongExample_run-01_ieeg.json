@@ -3,7 +3,6 @@
     "SamplingFrequency": "",
     "PowerLineFrequency": "",
     "SoftwareFilters": "",
-    "DCOffsetCorrection": "",
     "HardwareFilters": {
         "HighpassFilter": {
             "CutoffFrequency": []

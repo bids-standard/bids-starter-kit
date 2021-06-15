@@ -1,5 +1,5 @@
 %
-%      %%%%% save data as BrainVision BIDS %%%%%
+% %%%%% save data as BrainVision BIDS %%%%%
 %
 % Sample script that calls Fieldtrip functions to write a Brainvision dataset
 % Added fields are examples, read these from the raw data
