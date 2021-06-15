@@ -50,7 +50,6 @@ function files_out = bids_spreadsheet2participants(varargin)
         error('This function requires matlab 2018a or above.');
     end
 
-
     files_out = cell(2, 1);
     % check library
     if ~exist('jsonwrite.m', 'file')
@@ -88,14 +87,14 @@ function files_out = bids_spreadsheet2participants(varargin)
         sheet2_opts = [];
     end
 
-%% quickly check other arguments are valid
-if nargin > 1
-    if ~any(contains(varargin,{'ignore','export'},'IgnoreCase',true)) 
-        error('key input arguments in are missing ''ignore'' and/or ''export_dir''')
-    else
-        if any(contains(varargin,'export','IgnoreCase',true))
-            export_dir = varargin{find(contains(varargin,'export','IgnoreCase',true))+1};
-        end
+    %% quickly check other arguments are valid
+    if nargin > 1
+        if ~any(contains(varargin, {'ignore', 'export'}, 'IgnoreCase', true))
+            error('key input arguments in are missing ''ignore'' and/or ''export_dir''');
+        else
+            if any(contains(varargin, 'export', 'IgnoreCase', true))
+                export_dir = varargin{find(contains(varargin, 'export', 'IgnoreCase', true)) + 1};
+            end
 
             if any(contains(varargin, 'ignore', 'IgnoreCase', true))
                 if any(contains(varargin, 'export', 'IgnoreCase', true))
@@ -190,19 +189,7 @@ if nargin > 1
         values{v} = unique(Data.(Data.Properties.VariableNames{v}));
     end
 
-    % make sure to export NaN as n/a
-    export_data = Data;
-    for v = 1:length(export_data.Properties.VariableNames)
-        if strcmp(class(export_data.(cell2mat(export_data.Properties.VariableNames(v)))), 'double')
-            export_data.(cell2mat(export_data.Properties.VariableNames(v))) = ...
-              num2cell(export_data.(cell2mat(export_data.Properties.VariableNames(v))));
-            for n = 1:size(export_data.(cell2mat(export_data.Properties.VariableNames(v))), 1)
-                if isnan(export_data.(cell2mat(export_data.Properties.VariableNames(v))){n})
-                    export_data.(cell2mat(export_data.Properties.VariableNames(v))){n} = 'n/a';
-                end
-            end
-        end
-    end
+    export_data = convert_NAN_to_na(Data);
 
     if ~exist('export_dir', 'var')
         export_dir = uigetdir(fileparts(filein), 'Select directory to save exported files');
@@ -378,3 +365,23 @@ if nargin > 1
         files_out{2} = 'particpants.json file not created';
         error('participants.json not saved %s\n', json_err.mewsage);
     end
+
+end
+
+function export_data = convert_NAN_to_na(Data)
+
+    % make sure to export NaN as n/a
+    export_data = Data;
+    for v = 1:length(export_data.Properties.VariableNames)
+        if strcmp(class(export_data.(cell2mat(export_data.Properties.VariableNames(v)))), 'double')
+            export_data.(cell2mat(export_data.Properties.VariableNames(v))) = ...
+              num2cell(export_data.(cell2mat(export_data.Properties.VariableNames(v))));
+            for n = 1:size(export_data.(cell2mat(export_data.Properties.VariableNames(v))), 1)
+                if isnan(export_data.(cell2mat(export_data.Properties.VariableNames(v))){n})
+                    export_data.(cell2mat(export_data.Properties.VariableNames(v))){n} = 'n/a';
+                end
+            end
+        end
+    end
+
+end
