@@ -3,7 +3,7 @@
 :tada::balloon::cake: **Welcome to the BIDS Starters Kit repository!**
 :cake::balloon::tada:
 
-:dizzy::hatched*chick::sunny: \_We're so excited you're here and want to
+:dizzy::hatched_chick::sunny: \_We're so excited you're here and want to
 contribute.* :sunny::hatched_chick::dizzy:
 
 The point of this starter kit is to **welcome new users and contributors to the
