@@ -368,20 +368,26 @@ function files_out = bids_spreadsheet2participants(varargin)
 
 end
 
-function export_data = convert_NAN_to_na(Data)
+function export_data = convert_NAN_to_na(data)
 
     % make sure to export NaN as n/a
-    export_data = Data;
+    export_data = data;
+
     for v = 1:length(export_data.Properties.VariableNames)
+
         if strcmp(class(export_data.(cell2mat(export_data.Properties.VariableNames(v)))), 'double')
+
             export_data.(cell2mat(export_data.Properties.VariableNames(v))) = ...
               num2cell(export_data.(cell2mat(export_data.Properties.VariableNames(v))));
+
             for n = 1:size(export_data.(cell2mat(export_data.Properties.VariableNames(v))), 1)
                 if isnan(export_data.(cell2mat(export_data.Properties.VariableNames(v))){n})
                     export_data.(cell2mat(export_data.Properties.VariableNames(v))){n} = 'n/a';
                 end
             end
+
         end
+
     end
 
 end
