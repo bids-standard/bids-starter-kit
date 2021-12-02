@@ -38,7 +38,6 @@ maximise the different ways of finding out more about BIDS.
     -   [How to store subject phenotypes?](#how-to-store-subject-phenotypes)
     -   [Is there a standard for epilepsy phenotypes?](#is-there-a-standard-for-epilepsy-phenotypes)
 
----
 
 # General questions
 
