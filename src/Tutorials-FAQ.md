@@ -1,6 +1,7 @@
 ## Example dataset permission error
 
-I'm getting this error when trying to download the NITRC dataset, what should I do?
+I'm getting this error when trying to download the NITRC dataset, what should I
+do?
 ![](https://user-images.githubusercontent.com/22478219/45544974-28066100-b819-11e8-86ff-b2342c8917e5.png)
 
 Here are a list of steps you can follow to request access

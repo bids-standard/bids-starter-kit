@@ -2,33 +2,39 @@
 
 ## History
 
-The PET modality is one of the newest additions to the BIDS standard with its introduction via BEP 009. If you're
-interested in seeing exactly what and how something gets added to BIDS see the pull request for
-[BEP 009 here](https://github.com/bids-standard/bids-specification/pull/633). The results of that extension proposal can
-be
-read [here](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#positron-emission-tomography)
+The PET modality is one of the newest additions to the BIDS standard with its
+introduction via BEP 009. If you're interested in seeing exactly what and how
+something gets added to BIDS see the pull request for
+[BEP 009 here](https://github.com/bids-standard/bids-specification/pull/633).
+The results of that extension proposal can be read
+[here](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#positron-emission-tomography)
 in the bids standard.
 
 ## Conversion
 
-Presently, PET does not have the same level of support when it comes to conversion from raw
-data into BIDS format like MR imaging. Much of the work in converting from a raw PET dataset
-into a bids PET dataset will be incumbent on the user. Some useful tools and resources 
-that will be used in this document are as follows: 
+Presently, PET does not have the same level of support when it comes to
+conversion from raw data into BIDS format like MR imaging. Much of the work in
+converting from a raw PET dataset into a bids PET dataset will be incumbent on
+the user. Some useful tools and resources that will be used in this document are
+as follows:
 
-- [BIDS Validator](https://github.com/bids-standard/bids-validator), which fully supports PET
+-   [BIDS Validator](https://github.com/bids-standard/bids-validator), which
+    fully supports PET
 
-- [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library containing (among many others) PET tools
-such as `ecat2nii` that will be used below to convert the imaging data from a PET dataset into nifti format. 
-  The Turku PET Centre site can be found [here](https://turkupetcentre.fi/) for additional information on anything PET.
-    
-- a [BIDS PET Template](https://github.com/bids-standard/bids-starter-kit/tree/master/templates)
-from this starter kit to initially populate and translate text/tabulature/csv blood data into
-  BIDS PET compliant `.tsv` and `.json` files.
-  
-- [dcm2niix](https://github.com/rordenlab/dcm2niix) can be used if your raw pet data happens to be in a dicom format.
-Additionally this opens up the use of tools such as [dcmdump](https://support.dcmtk.org/docs/dcmdump.html) from the 
-  [dcmtk](https://support.dcmtk.org/docs/) to help in your conversion.
+-   [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library
+    containing (among many others) PET tools such as `ecat2nii` that will be
+    used below to convert the imaging data from a PET dataset into nifti format.
+    The Turku PET Centre site can be found [here](https://turkupetcentre.fi/)
+    for additional information on anything PET.
+-   a
+    [BIDS PET Template](https://github.com/bids-standard/bids-starter-kit/tree/master/templates)
+    from this starter kit to initially populate and translate
+    text/tabulature/csv blood data into BIDS PET compliant `.tsv` and `.json`
+    files.
+-   [dcm2niix](https://github.com/rordenlab/dcm2niix) can be used if your raw
+    pet data happens to be in a dicom format. Additionally this opens up the use
+    of tools such as [dcmdump](https://support.dcmtk.org/docs/dcmdump.html) from
+    the [dcmtk](https://support.dcmtk.org/docs/) to help in your conversion.
 
 ### What we're starting with
 
@@ -49,25 +55,30 @@ OldNotBidsPETDataSet/
 
 3 directories, 7 files
 ```
-By the end of this document our starting dataset will be fully bids compliant and resemble the dataset seen
-[here]() in the bids spec.
-  
+
+By the end of this document our starting dataset will be fully bids compliant
+and resemble the dataset seen [here]() in the bids spec.
+
 ### Setting the layout
 
-This starter kit provides several template/example files that can be a great starting place to help
-get set up for the conversion process. PET specific text data files can be viewed at 
+This starter kit provides several template/example files that can be a great
+starting place to help get set up for the conversion process. PET specific text
+data files can be viewed at
 [this location](https://github.com/bids-standard/bids-starter-kit/tree/master/templates/sub-01/ses-01/pet).
-And easily collected via this [link](https://github.com/bids-standard/bids-starter-kit/archive/refs/heads/master.zip)
+And easily collected via this
+[link](https://github.com/bids-standard/bids-starter-kit/archive/refs/heads/master.zip)
 or be cloned and extracted via git at the command line via:
 
 ```bash
 git clone git@github.com:bids-standard/bids-starter-kit.git
 ```
 
-The `templates/` folder in `bids-starter-kit/` contains a single subject and examples of every BIDS modality
-text and `.json` file for that subject. Additionally, there exists a `Short` and a `Full` example for each
-text/json file. The `Short` files contain only the required BIDS fields for each modality and the `Full` 
-example files contain *every* field included within the BIDS standard.
+The `templates/` folder in `bids-starter-kit/` contains a single subject and
+examples of every BIDS modality text and `.json` file for that subject.
+Additionally, there exists a `Short` and a `Full` example for each text/json
+file. The `Short` files contain only the required BIDS fields for each modality
+and the `Full` example files contain _every_ field included within the BIDS
+standard.
 
 ```bash
 templates/
@@ -121,8 +132,9 @@ templates/
 machine:bids-starter-kit user$
 ```
 
-For the purposes of this exercise we will only be focusing on obtaining the minimum required fields, thus
-we collect and copy the following to our own BIDS folder.
+For the purposes of this exercise we will only be focusing on obtaining the
+minimum required fields, thus we collect and copy the following to our own BIDS
+folder.
 
 ```bash
 # create the new bids folder
@@ -130,14 +142,15 @@ mkdir -p /NewBidsDataSet/sub-01/ses-01/pet
 cp -r /path/to/bids-starter-kit/templates/sub-01/ses-01/pet/* /NewBidsDataSet/sub-01/pet/
 ```
 
-Oops, we forgot to include our dataset specific files. Let's make it easy on ourselves and include the 
-templates for those too.
+Oops, we forgot to include our dataset specific files. Let's make it easy on
+ourselves and include the templates for those too.
 
 ```bash
 cp /path/to/bids-starter-kit/templates/* /NewBidsDataSet/
 ```
 
 Our skeleton of a data set should now look like this:
+
 ```bash
 machine: Projects user$ tree NewBidsDataSet/
 NewBidsDataSet/
@@ -184,16 +197,18 @@ NewBidsDataSet/
 machine:Projects user$
 ```
 
-That certainly looks less daunting, now let's change the filenames of the templates so that they make more
-sense for our data set (aka remove ShortExample from each filename). **Note:** if you have multiple PET image files you 
-can distinguish between them by creating a session folder with a unique name and then applying the `ses-<label>` label to each
-file therein. If there's a single pet scan you may omit the additional folder and corresponding label(s) from the filename. For more information on labeling see 
+That certainly looks less daunting, now let's change the filenames of the
+templates so that they make more sense for our data set (aka remove ShortExample
+from each filename). **Note:** if you have multiple PET image files you can
+distinguish between them by creating a session folder with a unique name and
+then applying the `ses-<label>` label to each file therein. If there's a single
+pet scan you may omit the additional folder and corresponding label(s) from the
+filename. For more information on labeling see
 [this link](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#pet-recording-data).
-
 
 ```bash
 # for those of you in bash land
-machine:Projects user$ cd NewBidsDataSet/sub-01/ses-01/pet 
+machine:Projects user$ cd NewBidsDataSet/sub-01/ses-01/pet
 machine:pet user$ for i in *ShortExample*; do mv "$i" "`echo $i | sed 's/ShortExample//'`"; done
 # Since we "don't" know if there are multiple PET image files we will omit the task label for our PET .json
 # file for now.
@@ -222,36 +237,40 @@ NewBidsDataSet/
 machine:Projects user$
 ```
 
-Ok great, but where do the imaging files go? And what format should they be in? And there's at least 2 `.v` pet files shouldn't there be
-multiple sessions?
+Ok great, but where do the imaging files go? And what format should they be in?
+And there's at least 2 `.v` pet files shouldn't there be multiple sessions?
 
-Well yes, yes, and yes. but before we add more sessions/directories we're going to make sure we have images to place in them.
-
+Well yes, yes, and yes. but before we add more sessions/directories we're going
+to make sure we have images to place in them.
 
 ### Collecting and installing TPCCLIB
 
-Since our raw imaging files are in ECAT format, we'll be using the ecat2nii tool it the TPCCLIIB as
-it's very handy at converting PET ECAT images into the more bids friendly nifti format. If you're imaging
-files are in `.IMG` you can use **<\insert converter>\** or if they're in dicom dcm2niix is an excellent tool to 
-transform `.dcm` files into `.nii`
+Since our raw imaging files are in ECAT format, we'll be using the ecat2nii tool
+it the TPCCLIIB as it's very handy at converting PET ECAT images into the more
+bids friendly nifti format. If you're imaging files are in `.IMG` you can use
+\*\*<\insert converter>\*\* or if they're in dicom dcm2niix is an excellent tool
+to transform `.dcm` files into `.nii`
 
-Before we proceed we will need to collect and install the ecat2nii tool from the TPCCLIIB (if you're on a non-posix based OS, I 
-suggest you use WSL (windows subsystem for linux), a container, or a VM if you want to continue following
+Before we proceed we will need to collect and install the ecat2nii tool from the
+TPCCLIIB (if you're on a non-posix based OS, I suggest you use WSL (windows
+subsystem for linux), a container, or a VM if you want to continue following
 along.
 
-1) Visit https://gitlab.utu.fi/vesoik/tpcclib
-2) Download tpcclib via your download link of choice, ours is 
+1. Visit https://gitlab.utu.fi/vesoik/tpcclib
+2. Download tpcclib via your download link of choice, ours is
    [here](https://gitlab.utu.fi/vesoik/tpcclib/-/archive/master/tpcclib-master.zip)
-3) Once downloaded extract and place ecat2nii in an appropriate place
+3. Once downloaded extract and place ecat2nii in an appropriate place
 
 If you're using bash/posix step 3 will resemble something like the following:
 
 ```bash
-machine:Downloads user$ unzip tpcclib-master.zip 
+machine:Downloads user$ unzip tpcclib-master.zip
 machine:Dowloads user$ mv tpcclib-master /some/directory/you/are/fond/of/ # could be /usr/bin if you so choose
 ```
 
-Now you can choose to add `tpcclib` to your path or not, in bash land we do the following:
+Now you can choose to add `tpcclib` to your path or not, in bash land we do the
+following:
+
 ```bash
 machine:Downloads user$ echo "export PATH=$PATH:/some/directory/you/are/fond/of/tpcclib-master" >> ~/.bashrc
 # reload bash shell and verify that library is available
@@ -302,9 +321,11 @@ machine:Downloads user$ ecat2nii
   https://gitlab.utu.fi/vesoik/tpcclib.git
 ```
 
-Congrats, you've installed ecat2nii, you're one step closer to bidsifying your dataset
+Congrats, you've installed ecat2nii, you're one step closer to bidsifying your
+dataset
 
-Now, let's convert one of our PET ecat images and move it to its final destination with ecat2nii that we just installed.
+Now, let's convert one of our PET ecat images and move it to its final
+destination with ecat2nii that we just installed.
 
 ```bash
 # first create nifti's from the ecat images
@@ -355,21 +376,22 @@ machine:NewBidsDataSet user$ tree
 3 directories, 11 files
 ```
 
-Before we get too carried away, lets use populate our `*_pet.json` files with the relevant information from our ecat
-and dataset. 
+Before we get too carried away, lets use populate our `*_pet.json` files with
+the relevant information from our ecat and dataset.
 
-This writer used a python tool specifically created to parse Ecat's for header and subheader info 
-[ecatdump](https://github.com/bendhouseart/ecatdump), all it does is use Python libraries Nibabel and 
-Argparse to collect and spit out the header information from an Ecat file. If you prefer to use Matlab or create your 
-own tool/reader I would direct you to the converter [here](https://github.com/openneuropet/BIDS-converter) as an 
-excellent resource.
+This writer used a python tool specifically created to parse Ecat's for header
+and subheader info [ecatdump](https://github.com/bendhouseart/ecatdump), all it
+does is use Python libraries Nibabel and Argparse to collect and spit out the
+header information from an Ecat file. If you prefer to use Matlab or create your
+own tool/reader I would direct you to the converter
+[here](https://github.com/openneuropet/BIDS-converter) as an excellent resource.
 
 You can use and install it via pip and use it on your command line like below:
 
 ```bash
 pip install ecatdump
 # use the --json argument to extract all metadata contained in the ecat including subheaders
-ecatdump  anon_sub01_8.v --json > sub01_8_anon.headerdata 
+ecatdump  anon_sub01_8.v --json > sub01_8_anon.headerdata
 # using it without the --json argument will produce this output
 ecat dump anon_sub01_8.v
 magic_number: MATRIX72v
@@ -512,8 +534,9 @@ septa_state               : 1
 fill                      : b''
 ```
 
-Using your wits, the available tools, and data you should be able to produce a sidecar file like the following for your
-nifti image. Repeat this process for each image file/nifti you're including while reusing the filename for each image
+Using your wits, the available tools, and data you should be able to produce a
+sidecar file like the following for your nifti image. Repeat this process for
+each image file/nifti you're including while reusing the filename for each image
 and while substituting the extention to `.json` instead of `.nii`.
 
 ```json
@@ -542,88 +565,61 @@ and while substituting the extention to `.json` instead of `.nii`.
     "TimeZero": "17:28:40",
     "ScanStart": 0,
     "InjectionStart": 0,
-    "FrameDuration": [20, 20, 20, 60, 60, 60, 120, 120, 120, 300, 300.066, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600],
-    "FrameTimesStart": [0, 20, 40, 60, 120, 180, 240, 360, 480, 600, 900, 1200.066, 1800.066, 2400.066, 3000.066, 3600.066, 4200.066, 4800.066, 5400.066, 6000.066, 6600.066],
+    "FrameDuration": [
+        20, 20, 20, 60, 60, 60, 120, 120, 120, 300, 300.066, 600, 600, 600, 600,
+        600, 600, 600, 600, 600, 600
+    ],
+    "FrameTimesStart": [
+        0, 20, 40, 60, 120, 180, 240, 360, 480, 600, 900, 1200.066, 1800.066,
+        2400.066, 3000.066, 3600.066, 4200.066, 4800.066, 5400.066, 6000.066,
+        6600.066
+    ],
     "ReconMethodParameterLabels": [
         "lower_threshold",
         "upper_threshold",
         "recon_zoom"
     ],
-    "ReconMethodParameterUnits": [
-        "keV",
-        "keV",
-        "none"
-    ],
-    "ReconMethodParameterValues": [
-        350,
-        650,
-        3
-    ],
+    "ReconMethodParameterUnits": ["keV", "keV", "none"],
+    "ReconMethodParameterValues": [350, 650, 3],
     "ScaleFactor": [
-        8.548972374455843e-08,
-        1.7544691388593492e-07,
-        1.3221580275057931e-07,
-        1.2703590357432404e-07,
-        1.1155360368775291e-07,
-        2.2050951997698576e-07,
-        2.184752503353593e-07,
-        1.7056818535365892e-07,
-        1.6606901453997125e-07,
-        1.5532630470715958e-07,
-        2.19175134930083e-07,
-        2.0248222654117853e-07,
-        2.277063231304055e-07,
-        2.425933018912474e-07,
-        2.3802238047210267e-07,
-        2.514642005735368e-07,
-        2.802861729378492e-07,
-        2.797820570776821e-07,
-        3.5299004252919985e-07,
-        4.6313422785715375e-07,
-        4.904185857412813e-07
+        8.548972374455843e-8, 1.7544691388593492e-7, 1.3221580275057931e-7,
+        1.2703590357432404e-7, 1.1155360368775291e-7, 2.2050951997698576e-7,
+        2.184752503353593e-7, 1.7056818535365892e-7, 1.6606901453997125e-7,
+        1.5532630470715958e-7, 2.19175134930083e-7, 2.0248222654117853e-7,
+        2.277063231304055e-7, 2.425933018912474e-7, 2.3802238047210267e-7,
+        2.514642005735368e-7, 2.802861729378492e-7, 2.797820570776821e-7,
+        3.5299004252919985e-7, 4.6313422785715375e-7, 4.904185857412813e-7
     ],
-    "ScatterFraction": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "ScatterFraction": [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    ],
     "DecayCorrectionFactor": [
-        1.0056782960891724,
-        1.0171427726745605,
-        1.0287377834320068,
-        1.0522810220718384,
-        1.0886797904968262,
-        1.1263376474380493,
-        1.1851094961166382,
-        1.2685142755508423,
-        1.3577889204025269,
-        1.5278561115264893,
-        1.811025857925415,
-        2.328737735748291,
-        3.271937131881714,
-        4.597157001495361,
-        6.459125518798828,
-        9.075239181518555,
-        12.750947952270508,
-        17.915414810180664,
-        25.1716251373291,
-        35.36678695678711,
-        49.69125747680664
+        1.0056782960891724, 1.0171427726745605, 1.0287377834320068,
+        1.0522810220718384, 1.0886797904968262, 1.1263376474380493,
+        1.1851094961166382, 1.2685142755508423, 1.3577889204025269,
+        1.5278561115264893, 1.811025857925415, 2.328737735748291,
+        3.271937131881714, 4.597157001495361, 6.459125518798828,
+        9.075239181518555, 12.750947952270508, 17.915414810180664,
+        25.1716251373291, 35.36678695678711, 49.69125747680664
     ],
-    "PromptRate": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "RandomRate": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "SinglesRate": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "PromptRate": [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    ],
+    "RandomRate": [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    ],
+    "SinglesRate": [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    ],
     "ReconMethodName": "Vendor",
-    "ReconFilterType": [
-        "Shepp 0.5",
-        "All-pass 0.4"
-    ],
-    "ReconFilterSize": [
-        2.5,
-        2
-    ],
+    "ReconFilterType": ["Shepp 0.5", "All-pass 0.4"],
+    "ReconFilterSize": [2.5, 2],
     "AttenuationCorrection": "transmission scan"
 }
 ```
 
-Alright, now we're getting somewhere, let's rename these nifti's so that it's easier to distinguish between them and
-so that they're both bids compliant.
+Alright, now we're getting somewhere, let's rename these nifti's so that it's
+easier to distinguish between them and so that they're both bids compliant.
 
 ```bash
 # first lets divide the scans into their own sessions
@@ -661,8 +657,9 @@ machine:NewBidsDataSet user$ tree
 
 ```
 
-That looks better, but we need to do something about our tabular/text data. Since we're only dealing with manual blood 
-samples we can omit the autosampler files from our data structure.
+That looks better, but we need to do something about our tabular/text data.
+Since we're only dealing with manual blood samples we can omit the autosampler
+files from our data structure.
 
 ```bash
 machine:NewBidsDataSet user$ rm -rf sub-01/ses-retestscan/pet/*Auto*
@@ -689,13 +686,14 @@ machine:NewBidsDataSet user$ tree
 
 ```
 
-That looks better, now that we've got our nifti's sorted let's do something about filling out our `*_blood.tsv`
-files and our `*_blood.json` files.
+That looks better, now that we've got our nifti's sorted let's do something
+about filling out our `*_blood.tsv` files and our `*_blood.json` files.
 
 Here's are the contents of `sub01_7_PLASMA.txt`:
 ![sub01_7_PLASMA.txt screenshot of excell](https://i.imgur.com/xBgDZcI.png)
 
-Since our plasma data is available we need to indicate as such in our `*_blood.json` files so we do so now:
+Since our plasma data is available we need to indicate as such in our
+`*_blood.json` files so we do so now:
 
 ```json
 {
@@ -720,26 +718,32 @@ Since our plasma data is available we need to indicate as such in our `*_blood.j
 }
 ```
 
-Additionally, we can open our `*_blood.tsv` and add the plasma series of data to it from our base text file:
+Additionally, we can open our `*_blood.tsv` and add the plasma series of data to
+it from our base text file:
 
 ![screenshot of unconverted sub-01_ses-testscan_recording-Manual_blood.tsv](https://i.imgur.com/VdFqh6H.png)
 
-Whoops, these numbers aren't in SI units, so we quickly convert time from minutes to seconds and Microcurie to 
-Becquerel to conform  to the spec. Note: if you're wondering what method was used to determine what units these unlabeled columns
-were in I can only tell you that prior knowledge, access to the associated publishing, 
-or experience/domain knowledge coupled with a bit of guesswork are required to make that determination. One of the aims of adding PET to BIDS
-is to help to avoid confusion at this level of the process and instead allow researchers to reserve that confusion for
-use at some other point during the research process.
+Whoops, these numbers aren't in SI units, so we quickly convert time from
+minutes to seconds and Microcurie to Becquerel to conform to the spec. Note: if
+you're wondering what method was used to determine what units these unlabeled
+columns were in I can only tell you that prior knowledge, access to the
+associated publishing, or experience/domain knowledge coupled with a bit of
+guesswork are required to make that determination. One of the aims of adding PET
+to BIDS is to help to avoid confusion at this level of the process and instead
+allow researchers to reserve that confusion for use at some other point during
+the research process.
 
-After a bit of conversion and the inclusion of the metabolite parent fraction (which if present is 
+After a bit of conversion and the inclusion of the metabolite parent fraction
+(which if present is
 [recommended](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#blood-recording-data)
 to be included):
 
 ![screenshot of converted and minimally complete manual_blood.tsv](https://i.imgur.com/nWXcFsw.png)
 
-Now just repeat this process for each required field in the `*_blood.json` file and/or for each recommended field that
-you wish to include from your non-bids dataset into this bidsified one. The final results of our efforts leads us to having
-this final `*blood_.json`:
+Now just repeat this process for each required field in the `*_blood.json` file
+and/or for each recommended field that you wish to include from your non-bids
+dataset into this bidsified one. The final results of our efforts leads us to
+having this final `*blood_.json`:
 
 ```json
 {
@@ -768,12 +772,14 @@ this final `*blood_.json`:
 
 ### Last Pass
 
-If you're thinking that we failed to document or include our T1 image from the start you would be correct. There are
-many resources documenting that process see:
+If you're thinking that we failed to document or include our T1 image from the
+start you would be correct. There are many resources documenting that process
+see:
 
-*TODO* add resources here
+_TODO_ add resources here
 
-Once you've handled converting your MR images into bids your directory should look like the following:
+Once you've handled converting your MR images into bids your directory should
+look like the following:
 
 ```bash
 
@@ -795,25 +801,26 @@ machine:NewBidsDataSet user$ tree
         │   ├── sub-01_ses-testscan_T1w.json
         │   └── sub-01_ses-testscan_T1w.nii
         └── pet
-            ├── sub-01_ses-testscan_pet.json 
+            ├── sub-01_ses-testscan_pet.json
             ├── sub-01_ses-testscan_recording-Manual_blood.json
             ├── sub-01_ses-testscan_recording-Manual_blood.tsv
             └── sub-01_ses-testscan_pet.nii
 ```
 
-### Last Steps 
+### Last Steps
 
 #### Installing the validator
 
-The above structure is a valid bids dataset, however the bids-validator is a much more accurate and trustworthy method
-for making that determination. Follow the instructions 
-[here](https://github.com/bids-standard/bids-validator#quickstart)
-to collect and install the validator.
+The above structure is a valid bids dataset, however the bids-validator is a
+much more accurate and trustworthy method for making that determination. Follow
+the instructions
+[here](https://github.com/bids-standard/bids-validator#quickstart) to collect
+and install the validator.
 
 #### Validating your new dataset
 
-Using the validator installed above in the previous step point it at your data and check to see if your conversion 
-was successful:
+Using the validator installed above in the previous step point it at your data
+and check to see if your conversion was successful:
 
 ```bash
 machine:Projects user$ bids-validator NewBidsDataSet/
@@ -823,7 +830,7 @@ bids-validator@1.7.2
 		./dataset_description.json
 			Evidence: .DatasetType should be equal to one of the allowed values
 		./dataset_description.json
-			Evidence: .EthicsApprovals should be array 
+			Evidence: .EthicsApprovals should be array
 
 	Please visit https://neurostars.org/search?q=DATASET_DESCRIPTION_JSON_MISSING for existing conversations about this issue.
 
@@ -837,15 +844,16 @@ bids-validator@1.7.2
 	If you have any questions, please post on https://neurostars.org/tags/bids.
 ```
 
-Good enough! But, in all seriousness the error messages and output from the bids-validator are **invaluable** during
-the conversion process. The error messages will guide you to the correct format; do not fear them. Running the validator
-during the conversion process will help to increase your familiarity with the specification and ensure that your data
-is properly formatted.
-
+Good enough! But, in all seriousness the error messages and output from the
+bids-validator are **invaluable** during the conversion process. The error
+messages will guide you to the correct format; do not fear them. Running the
+validator during the conversion process will help to increase your familiarity
+with the specification and ensure that your data is properly formatted.
 
 ## Final thoughts
 
-If this seems like a daunting and tedious process to you, then you are correct in your observation. PET is new to the bids 
-standard, but at this very moment there are people working on stream-lining data collection and conversion to help move
-PET into this standard. Heck, if you're reading this you've just become one of those people.
-
+If this seems like a daunting and tedious process to you, then you are correct
+in your observation. PET is new to the bids standard, but at this very moment
+there are people working on stream-lining data collection and conversion to help
+move PET into this standard. Heck, if you're reading this you've just become one
+of those people.

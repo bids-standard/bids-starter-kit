@@ -14,11 +14,11 @@ have so far and we will be able to point you in the right direction!
 You can also come chat on the
 [Brainhack mattermost](https://mattermost.brainhack.org/):
 
-- on the
-  [`~bids_general`](https://mattermost.brainhack.org/brainhack/channels/bids_general)
-  channel
-- or on the
-  [`~starter-kit`](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit)
+-   on the
+    [`~bids_general`](https://mattermost.brainhack.org/brainhack/channels/bids_general)
+    channel
+-   or on the
+    [`~starter-kit`](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit)
 
 We'd love for you to join the mailing list (bids-discussion@googlegroups.com,
 click [here](https://groups.google.com/forum/#!forum/bids-discussion) to join).
