@@ -26,11 +26,9 @@ as follows:
     used below to convert the imaging data from a PET dataset into nifti format.
     The Turku PET Centre site can be found [here](https://turkupetcentre.fi/)
     for additional information on anything PET.
--   a
-    [BIDS PET Template](https://github.com/bids-standard/bids-starter-kit/tree/master/templates)
-    from this starter kit to initially populate and translate
-    text/tabulature/csv blood data into BIDS PET compliant `.tsv` and `.json`
-    files.
+-   a [BIDS PET Template](../templates) from this starter kit to initially
+    populate and translate text/tabulature/csv blood data into BIDS PET
+    compliant `.tsv` and `.json` files.
 -   [dcm2niix](https://github.com/rordenlab/dcm2niix) can be used if your raw
     pet data happens to be in a dicom format. Additionally this opens up the use
     of tools such as [dcmdump](https://support.dcmtk.org/docs/dcmdump.html) from
@@ -63,10 +61,9 @@ and resemble the dataset seen [here]() in the bids spec.
 
 This starter kit provides several template/example files that can be a great
 starting place to help get set up for the conversion process. PET specific text
-data files can be viewed at
-[this location](https://github.com/bids-standard/bids-starter-kit/tree/master/templates/sub-01/ses-01/pet).
-And easily collected via this
-[link](https://github.com/bids-standard/bids-starter-kit/archive/refs/heads/master.zip)
+data files can be viewed at [this location](../templates/sub-01/ses-01/pet). And
+easily collected via this
+[link](https://github.com/bids-standard/bids-starter-kit/archive/refs/heads/main.zip)
 or be cloned and extracted via git at the command line via:
 
 ```bash
@@ -689,6 +686,8 @@ machine:NewBidsDataSet user$ tree
 That looks better, now that we've got our nifti's sorted let's do something
 about filling out our `*_blood.tsv` files and our `*_blood.json` files.
 
+<!-- TODO grab that image and add to the repo -->
+
 Here's are the contents of `sub01_7_PLASMA.txt`:
 ![sub01_7_PLASMA.txt screenshot of excell](https://i.imgur.com/xBgDZcI.png)
 
@@ -721,6 +720,8 @@ Since our plasma data is available we need to indicate as such in our
 Additionally, we can open our `*_blood.tsv` and add the plasma series of data to
 it from our base text file:
 
+<!-- TODO grab that image and add to the repo -->
+
 ![screenshot of unconverted sub-01_ses-testscan_recording-Manual_blood.tsv](https://i.imgur.com/VdFqh6H.png)
 
 Whoops, these numbers aren't in SI units, so we quickly convert time from
@@ -737,6 +738,8 @@ After a bit of conversion and the inclusion of the metabolite parent fraction
 (which if present is
 [recommended](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#blood-recording-data)
 to be included):
+
+<!-- TODO grab that image and add to the repo -->
 
 ![screenshot of converted and minimally complete manual_blood.tsv](https://i.imgur.com/nWXcFsw.png)
 

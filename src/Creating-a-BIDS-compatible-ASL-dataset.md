@@ -15,7 +15,7 @@ signal averages (NSA) as GE sums instead of averages them.
 Typically, Philips ASL datasets use the standard DICOM rescale tags only to
 rescale data for viewing, whereas private rescale tags are used for scaling to
 acquisition values needed for proper quantification. The procedure for using
-both the scaling types is described previously [1](reference), although the
+both the scaling types is described previously [**reference required**], although the
 authors did not mention that three DICOM fields are typically used for this
 purpose - `(2005, 100e)`, `(2005, 110e)`, or `(2005, 120e)`. It may also occur
 that the RescaleSlope `(0028, 1053)` is set to `1` and RescaleSlopeOriginal

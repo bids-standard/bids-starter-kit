@@ -225,8 +225,8 @@ df.to_csv('my_new_file.csv', sep='\t')
 ## Excel
 
 -   Create a file with the following columns (at least, for other values see
-    paragraph 8.11 in
-    [BIDS spec 1.0.2](http://bids.neuroimaging.io/bids_spec1.0.2.pdf))
+    paragraph the
+    [BIDS spec](https://bids-specification.readthedocs.io/en/latest/03-modality-agnostic-files.html#participants-file))
     -   participant_id
     -   age
     -   sex
