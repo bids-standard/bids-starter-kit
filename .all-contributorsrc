@@ -402,6 +402,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "AbrrenC",
+      "name": "Abrren_C",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54808990?v=4",
+      "profile": "http://Abrren_Chen",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
