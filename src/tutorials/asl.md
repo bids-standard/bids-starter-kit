@@ -15,14 +15,14 @@ signal averages (NSA) as GE sums instead of averages them.
 Typically, Philips ASL datasets use the standard DICOM rescale tags only to
 rescale data for viewing, whereas private rescale tags are used for scaling to
 acquisition values needed for proper quantification. The procedure for using
-both the scaling types is described previously [**reference required**], although the
-authors did not mention that three DICOM fields are typically used for this
-purpose - `(2005, 100e)`, `(2005, 110e)`, or `(2005, 120e)`. It may also occur
-that the RescaleSlope `(0028, 1053)` is set to `1` and RescaleSlopeOriginal
-`(2005, 140a)` needs to be used instead. Note that DICOM to NIfTI conversion
-software may omit the private slopes, in which cases the private slope needs to
-be applied after running the conversion. An exception is the
-[dcm2nii(X)](https://github.com/rordenlab/dcm2niix) software that does take
+both the scaling types is described previously [**reference required**],
+although the authors did not mention that three DICOM fields are typically used
+for this purpose - `(2005, 100e)`, `(2005, 110e)`, or `(2005, 120e)`. It may
+also occur that the RescaleSlope `(0028, 1053)` is set to `1` and
+RescaleSlopeOriginal `(2005, 140a)` needs to be used instead. Note that DICOM to
+NIfTI conversion software may omit the private slopes, in which cases the
+private slope needs to be applied after running the conversion. An exception is
+the [dcm2nii(X)](https://github.com/rordenlab/dcm2niix) software that does take
 private scale slopes into account in most cases. The
 [dcm2nii(X)](https://github.com/rordenlab/dcm2niix) versions released between
 2018 and 20190902 can correctly scale the NIfTI according to the private scale
@@ -58,6 +58,6 @@ of the i’th dimension, `pixdim[i]` specifies the voxel width along dimension
 `i`. For images with a single repetition, where `pixdim[4]` specifies the
 temporal width, the BIDS validator requires that the image is defined as 4D with
 `dim[0] == 4`, even though the image has a single repetition `dim[4] == 1`.
-Defining (`dim[0] == 3`) for a 44D volume with a single repetition (i.e. a 3D
-image) is common and correct, however, it is considered invalid by the
-validator.
+Defining (`dim[0] == 3`) for a 44D volume with a single repetition (for
+instance: a 3D image) is common and correct, however, it is considered invalid
+by the validator.

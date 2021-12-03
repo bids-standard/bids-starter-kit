@@ -16,14 +16,14 @@ vim(Linux).
 But there are some text-editors built specifically for coding that can help with
 some parts of programming.
 
-One that's free and easy to use is Atom: https://atom.io/. It'll work for all
+One that's free and easy to use is Atom: <https://atom.io/>. It'll work for all
 the languages below!
 
 ### MATLAB / Octave (Free, open source equivalent)
 
-**_MATLAB Information_**: https://www.mathworks.com/products/matlab.html
+**_MATLAB Information_**: <https://www.mathworks.com/products/matlab.html>
 
-**_Octave Information_**: https://www.gnu.org/software/octave/
+**_Octave Information_**: <https://www.gnu.org/software/octave/>
 
 Required JSON package **JSONio**
 
@@ -31,7 +31,7 @@ Required JSON package **JSONio**
 
 ### Python
 
-**_Information_**: https://www.python.org/ (Both Python 2 and 3 will work for
+**_Information_**: <https://www.python.org/> (Both Python 2 and 3 will work for
 BIDS)
 
 **Anaconda** Recommended package to use for installing Python
@@ -45,7 +45,7 @@ just want the data analysis library.
 
 ### R
 
-**_Information_**: https://www.r-project.org/
+**_Information_**: <https://www.r-project.org/>
 
 **Jsonlite** package required to read and write JSON files
 

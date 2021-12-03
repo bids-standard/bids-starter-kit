@@ -38,7 +38,6 @@ maximise the different ways of finding out more about BIDS.
     -   [How to store subject phenotypes?](#how-to-store-subject-phenotypes)
     -   [Is there a standard for epilepsy phenotypes?](#is-there-a-standard-for-epilepsy-phenotypes)
 
-
 # General questions
 
 ### What is a `json` file?
@@ -161,8 +160,8 @@ this
 ### How to specify units in microVolt?
 
 BIDS requires physical units to be specified according to the SI unit symbol and
-possibly prefix symbol (e.g., mV, μV for milliVolt and microVolt). In Matlab use
-`native2unicode(181,'latin1')` to get the correct symbol for micro.
+possibly prefix symbol (for example: mV, μV for milliVolt and microVolt). In
+Matlab use `native2unicode(181,'latin1')` to get the correct symbol for micro.
 
 # BIDS and NWB
 

@@ -64,7 +64,7 @@ to perform a series of tasks.
 
 ##### **derivatives**:
 
-processed (i.e. non-raw) data
+processed (for instance: non-raw) data
 
 ##### **dataset**: a
 
@@ -80,7 +80,7 @@ touching the brain (iEEG). This should not be confused with the EEG or iEGG
 
 ##### **extensions**:
 
-branches of BIDS that are for specific types of data (i.e. PET)
+branches of BIDS that are for specific types of data (for instance: PET)
 
 #### F
 
@@ -103,9 +103,9 @@ A file that can sort your data into categories based on naming patterns
 
 ##### **inheritance**:
 
-Any metadata file (.json, .bvec, .tsv, etc.) may be defined at any directory
-level. The values from the top level are inherited by all lower levels unless
-they are overridden by a file at the lower level.
+Any metadata file (.json, .bvec, .tsv, and so on.) may be defined at any
+directory level. The values from the top level are inherited by all lower levels
+unless they are overridden by a file at the lower level.
 
 #### J
 
@@ -128,11 +128,11 @@ Example: {"firstName": "John", "lastName": "Smith"}.
 
 ##### **metadata**:
 
-Supporting data that describes your main data (i.e. data about data). For
-example if your main data is an MRI image your metadata might be information
+Supporting data that describes your main data (for instance: data about data).
+For example if your main data is an MRI image your metadata might be information
 about the date and time of imaging, the image type, the machine serial number
-etc. An example: "Scan Date" would be metadata that describes the date at which
-you acquired the actual data.
+and so on. An example: "Scan Date" would be metadata that describes the date at
+which you acquired the actual data.
 
 #### N
 
@@ -148,7 +148,8 @@ from.
 ##### **parameter**:
 
 generally speaking, a parameter is numerical variable that we (scientists,
-computer programs, etc) are able to manipulate in order to change outcomes.
+computer programs, and so on) are able to manipulate in order to change
+outcomes.
 
 #### Q
 
@@ -175,7 +176,7 @@ corresponds to a lab visit. See also this
 
 a combination of settings on the MR scanner that determine the way the MR data
 is acquired. This includes the TE, TR, FOV, in-plane resolution, slice spacing,
-etc.
+and so on.
 
 ##### **sidecar** (as in json sidecar):
 
@@ -185,9 +186,9 @@ contains the image and the json contains various [metadata](#m).
 
 ##### **sourcedata**:
 
-raw data (or metadata) in its original format prior to conversion to BIDS, e.g.
-images in DICOM format, EEG data in a proprietary format or presentation log
-files.
+raw data (or metadata) in its original format prior to conversion to BIDS, for
+example: images in DICOM format, EEG data in a proprietary format or
+presentation log files.
 
 #### T
 

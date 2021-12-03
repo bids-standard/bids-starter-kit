@@ -3,10 +3,10 @@ This is Patrick Park's Google Summer of Code final report for his work on the
 
 If you have reached this page from a different source, and want an overview of
 the project, please check out our README file at
-https://github.com/INCF/BIDS-Starter-Kit.
+<https://github.com/INCF/BIDS-Starter-Kit>.
 
 The work completed by Patrick Park during the Google Summer of Code is archived
-on zenodo as v1.0.2 under DOI 1344669 at https://doi.org/10.5281/zenodo.1344669
+on zenodo as v1.0.2 under DOI 1344669 at <https://doi.org/10.5281/zenodo.1344669>
 
 ## The Big Picture
 

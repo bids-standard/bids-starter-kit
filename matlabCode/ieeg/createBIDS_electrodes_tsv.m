@@ -38,7 +38,7 @@ hemisphere = {''}; % Optional field to specify the hemisphere in which
 % the electrode is placed, one of ["L" or "R"] (use capital).
 
 %% optional columns
-type = {''}; % Optional type of the electrode,e.g.,cup, ring, clip-on, wire, needle, ...
+type = {''}; % Optional type of the electrode,for example:cup, ring, clip-on, wire, needle, ...
 impedance = {''}; % Impedance of the electrode in kOhm.
 
 %% write

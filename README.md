@@ -1,5 +1,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-41-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
@@ -55,12 +57,20 @@ alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 
 ## Table of Contents
 
+-   [Table of Contents](#table-of-contents)
+-   [Motivation](#motivation)
 -   [Project Summary](#project-summary)
+    -   [How do I find information?](#how-do-i-find-information)
 -   [Philosophy](#philosophy)
 -   [Benefits](#benefits)
+    -   [For the public good](#for-the-public-good)
+    -   [For yourself](#for-yourself)
 -   [Users](#users)
 -   [Contributing](#contributing)
 -   [Acknowledgements](#acknowledgements)
+    -   [Sponsor Organizations](#sponsor-organizations)
+    -   [Publications](#publications)
+-   [Contributors ✨](#contributors-)
 
 ## Motivation
 
@@ -121,9 +131,9 @@ be.
     you’ve developed
 -   Enables and simplifies collaboration
 -   Reviewers and funding agencies like to see reproducible results
--   Open-science based funding opportunities and awards available (i.e. OHBM
-    Replication Award, Mozilla Open Science Fellowship, Google Summer of Code,
-    etc.)
+-   Open-science based funding opportunities and awards available (for instance:
+    OHBM Replication Award, Mozilla Open Science Fellowship, Google Summer of
+    Code, and so on.)
 
 ## Users
 
@@ -170,7 +180,7 @@ more valuable your feedback is** :thumbsup:
 BIDS**
 
 All publications are listed in our wiki:
-https://github.com/bids-standard/bids-starter-kit/wiki/Publications
+<https://github.com/bids-standard/bids-starter-kit/wiki/Publications>
 
 You'll almost always want to cite the original paper:
 

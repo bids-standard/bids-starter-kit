@@ -6,7 +6,7 @@ function rename_brainvision_files(varargin)
     % Use as
     % rename_brainvision_files(oldname, newname, 'rmf', 'on')
     % where both the old and the new filename should be strings corresponding to the
-    % header file, i.e. including the vhdr extension.
+    % header file, for instance: including the vhdr extension.
     % 'rmf' option indicates to remove old files and can be turned 'on' of 'off' (default)
     %
     % See also http://www.fieldtriptoolbox.org/ and https://sccn.ucsd.edu/wiki/EEGLAB for

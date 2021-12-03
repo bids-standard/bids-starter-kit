@@ -17,14 +17,33 @@ below, please let us know through one of the many ways to
 Been here before? Already know what you're looking for in this guide? Jump to
 the following sections:
 
--   [Joining the BIDS community](#joining-the-community)
--   [Get in touch](#get-in-touch)
--   [Contributing through GitHub](#contributing-through-github)
--   [Where to start: wiki, code and templates](#where-to-start-wiki-code-and-templates)
--   [Where to start: issue labels](#where-to-start-issue-labels)
--   [Make a change with a pull request](#making-a-change-with-a-pull-request)
+- [Contributing to the BIDS Starter Kit](#contributing-to-the-bids-starter-kit)
+    - [Table of contents](#table-of-contents)
+    - [Joining the community](#joining-the-community)
+    - [Get in touch](#get-in-touch)
+    - [Contributing through GitHub](#contributing-through-github)
+    - [Writing in markdown](#writing-in-markdown)
+    - [Where to start: wiki, code and templates](#where-to-start-wiki-code-and-templates)
+        - [Wiki (link)](#wiki-link)
+        - [Code (link)](#code-link)
+            - [Matlab / Octave](#matlab--octave)
+        - [Templates (link)](#templates-link)
+    - [Where to start: issue labels](#where-to-start-issue-labels)
+    - [Making a change with a pull request](#making-a-change-with-a-pull-request)
+            - [1. Comment on an existing issue or open a new issue referencing your addition](#1-comment-on-an-existing-issue-or-open-a-new-issue-referencing-your-addition)
+            - [2. Fork to your profile](#2-fork-the-bids-starter-kit-repositorybids-starterkit-repo-to-your-profile)
+            - [3. Make the changes you've discussed](#3-make-the-changes-youve-discussed)
+            - [4. Submit a pull request](#4-submit-a-pull-request)
+    - [Example pull request](#example-pull-request)
+    - [Recognizing contributions](#recognizing-contributions)
+    - [Thank you](#thank-you)
+        [1. Comment on an existing issue or open a new issue referencing your addition](#1-comment-on-an-existing-issue-or-open-a-new-issue-referencing-your-addition) -
+        [2. Fork to your profile](#2-fork-the-bids-starter-kit-repositorybids-starterkit-repo-to-your-profile) -
+        [3. Make the changes you've discussed](#3-make-the-changes-youve-discussed) -
+        [4. Submit a pull request](#4-submit-a-pull-request)
     -   [Example pull request](#example-pull-request)
--   [Recognizing contributions](#recognizing-contributions)
+    -   [Recognizing contributions](#recognizing-contributions)
+    -   [Thank you](#thank-you)
 
 ## Joining the community
 
@@ -56,8 +75,6 @@ Some example questions that have already been answered include:
 
 -   [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
 -   [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
-
----
 
 You can also come chat on the
 [Brainhack mattermost](https://mattermost.brainhack.org/):
@@ -240,7 +257,7 @@ helping us build this useful resource. :sparkles::star2::dizzy:
 
 :point\*right: Remember that if you're adding information to the [wiki](#wiki)
 you \*\*\_don't need to submit a pull request**\*. You can just log into GitHub,
-navigate to the [wiki][bids-starterkit-wiki] and click the **edit\*\* button.
+navigate to the [wiki][bids-starterkit-wiki] and click the**edit\*\* button.
 
 If you're updating the [code](#code) or the [templates](#templates), the
 following steps are a guide to help you contribute in a way that will be easy
@@ -306,7 +323,7 @@ welcome and recognize all contributions from documentation to testing to code
 development. You can see a list of current contributors in the [BIDS
 specification][bids-specification].
 
-## Thank you!
+## Thank you
 
 You're awesome. :wave::smiley:
 

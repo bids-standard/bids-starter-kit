@@ -1,8 +1,8 @@
 Metadata are stored in .json and .tsv files. These files are language-agnostic,
-meaning you can work with them in, e.g., Python, Matlab, or R. This page covers
-common ways to read/write these files in common languages for neuroscience
-analysis. More extensive example templates for creating these BIDS metadata
-files can be found in the
+meaning you can work with them in, for example: Python, Matlab, or R. This page
+covers common ways to read/write these files in common languages for
+neuroscience analysis. More extensive example templates for creating these BIDS
+metadata files can be found in the
 [Matlab code templates](https://github.com/bids-standard/bids-starter-kit/tree/master/matlabCode)
 and
 [Python code templates](https://github.com/bids-standard/bids-starter-kit/tree/master/pythonCode)

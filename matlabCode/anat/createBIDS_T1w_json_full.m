@@ -89,7 +89,7 @@ anat_json.MRTransmitCoilSequence = ' ';
 % RECOMMENDED A method for reducing the number of independent channels by
 % combining in analog the signals from multiple coil elements. There are
 % typically different default modes when using un-accelerated or accelerated
-% (e.g. GRAPPA, SENSE) imaging
+% (for example: GRAPPA, SENSE) imaging
 anat_json.MatrixCoilMode = ' ';
 
 % RECOMMENDED Almost all fMRI studies using phased-array coils use
@@ -101,7 +101,7 @@ anat_json.CoilCombinationMethod = ' ';
 %% Sequence Specifics metadata fields
 
 % RECOMMENDED A general description of the pulse sequence used for the scan
-% (i.e. MPRAGE, Gradient Echo EPI, Spin Echo EPI, Multiband gradient echo EPI).
+% (for instance: MPRAGE, Gradient Echo EPI, Spin Echo EPI, Multiband gradient echo EPI).
 anat_json.PulseSequenceType = ' ';
 
 % RECOMMENDED Description of the type of data acquired. Corresponds to
@@ -139,7 +139,7 @@ anat_json.NumberShots = ' ';
 % of the fraction of k-space encoded for each slice.
 anat_json.ParallelReductionFactorInPlane = ' ';
 
-% RECOMMENDED The type of parallel imaging used (e.g. GRAPPA, SENSE).
+% RECOMMENDED The type of parallel imaging used (for example: GRAPPA, SENSE).
 % Corresponds to DICOM Tag 0018, 9078 "Parallel Acquisition Technique".
 anat_json.ParallelAcquisitionTechnique = ' ';
 

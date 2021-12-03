@@ -9,8 +9,8 @@ within a container ([Docker](https://www.docker.com/) or
 
 -   [BIDS Apps home page](http://bids-apps.neuroimaging.io/)
 -   BIDS Apps tutorials
-    -   http://bids-apps.neuroimaging.io/tutorial/
-    -   https://github.com/fliem/bids_apps_intro
+    -   <http://bids-apps.neuroimaging.io/tutorial/>
+    -   <https://github.com/fliem/bids_apps_intro>
 -   [Example BIDS App repository](https://github.com/BIDS-Apps/example) : A
     minimalist example of a BIDS App consisting of a Dockerfile and a simple
     entry point script (written in this case in Python) accepting the standard
@@ -45,12 +45,12 @@ perform.
 **I noticed that there are 2 kinds of analysis levels --> `participant` and
 `group`. What does this mean?**
 
-Generally, "participant" means individual level analysis (i.e. single subject)
-The group level analysis can be thought of as the second step, where the input
-becomes the output of the "participant" level analysis. For example, generating
-statistic maps of each subject's brain could be considered "participant", while
-generating the average of these maps across the dataset could be considered
-"group".
+Generally, "participant" means individual level analysis (for instance: single
+subject) The group level analysis can be thought of as the second step, where
+the input becomes the output of the "participant" level analysis. For example,
+generating statistic maps of each subject's brain could be considered
+"participant", while generating the average of these maps across the dataset
+could be considered "group".
 
 **What do we do if our application does not have any use for the group level
 analysis?**
@@ -65,20 +65,20 @@ valid for the analysis_level argument (see
 BIDS-validator?**
 
 It is an extremely helpful feature to have validation of the dataset as part of
-your tool. However, it's not considered mandatory. (i.e. I know of many apps
-that just simply fail with an error message if the dataset is not BIDS
+your tool. However, it's not considered mandatory. (for instance: I know of many
+apps that just simply fail with an error message if the dataset is not BIDS
 compliant)
 
 <br>
 
-**How do I upload my BIDS App to the BIDS-App Github org? (i.e. so that it shows
-up [here](http://bids-apps.neuroimaging.io/apps/))**
+**How do I upload my BIDS App to the BIDS-App Github org? (for instance: so that
+it shows up [here](http://bids-apps.neuroimaging.io/apps/))**
 
 You can release BIDS Apps using your own or your lab's account. However, if you
 want to be added to the BIDS docker hub, please message Chris Gorgolewski to
 have a repo created for you.
 
-If you base your code on https://github.com/BIDS-Apps/example deployment on
+If you base your code on <https://github.com/BIDS-Apps/example> deployment on
 docker hub will happen automatically via circleci
 
 ## Testing Data
