@@ -7,16 +7,16 @@ within a container ([Docker](https://www.docker.com/) or
 
 ## Helpful Links
 
--   [BIDS Apps home page](http://bids-apps.neuroimaging.io/)
--   BIDS Apps tutorials
-    -   http://bids-apps.neuroimaging.io/tutorial/
-    -   https://github.com/fliem/bids_apps_intro
--   [Example BIDS App repository](https://github.com/BIDS-Apps/example) : A
+- [BIDS Apps home page](http://bids-apps.neuroimaging.io/)
+- BIDS Apps tutorials
+  - <http://bids-apps.neuroimaging.io/tutorial/>
+  - <https://github.com/fliem/bids_apps_intro>
+- [Example BIDS App repository](https://github.com/BIDS-Apps/example) : A
     minimalist example of a BIDS App consisting of a Dockerfile and a simple
     entry point script (written in this case in Python) accepting the standard
     BIDS Apps command line arguments. This repository can be used as a template
     for new BIDS Apps.
--   BIDS apps: Improving ease of use, accessibility, and reproducibility of
+- BIDS apps: Improving ease of use, accessibility, and reproducibility of
     neuroimaging data analysis methods (Gorgolewski et al, Plos Comp Bio, 2017)
     doi:
     [10.1371/journal.pcbi.1005209](https://doi.org/10.1371/journal.pcbi.1005209)
@@ -78,7 +78,7 @@ You can release BIDS Apps using your own or your lab's account. However, if you
 want to be added to the BIDS docker hub, please message Chris Gorgolewski to
 have a repo created for you.
 
-If you base your code on https://github.com/BIDS-Apps/example deployment on
+If you base your code on <https://github.com/BIDS-Apps/example> deployment on
 docker hub will happen automatically via circleci
 
 ## Testing Data

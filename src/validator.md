@@ -3,10 +3,10 @@ that checks if a dataset is compliant with the BIDS standard. The validator is
 available for use within several different environments to best suit individual
 user preferences and use cases, those versions are:
 
--   A web browser based version
--   Command line version
--   Docker based version
--   A python library installable via pip
+- A web browser based version
+- Command line version
+- Docker based version
+- A python library installable via pip
 
 Instructions to install and use these versions can be found within the
 [quickstart guide](https://github.com/bids-standard/bids-validator#quickstart)
@@ -22,7 +22,7 @@ there is no file uploading as part of the validation.
 ## Browser Version
 
 1. The BIDS Validator can be found at
-   http://bids-standard.github.io/bids-validator/. It requires that you use the
+   <http://bids-standard.github.io/bids-validator/>. It requires that you use the
    Chrome or Firefox browser, since those are the only ones in which you can
    select a whole folder rather than individual files.
 
@@ -109,16 +109,16 @@ messages and correct until bids-validator returns 0 errors after running.
 user@host:~/bids-examples$ bids-validator sub001
 bids-validator@1.7.1
 
-	1: [ERR] Invalid JSON file. The file is not formatted according the schema. (code: 55 - JSON_SCHEMA_VALIDATION_ERROR)
-		./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
-			Evidence:  should have property InjectedRadioactivityUnits when property InjectedRadioactivity is present
-		./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
-			Evidence:  should have required property 'InjectedMassUnits'
-		...
+ 1: [ERR] Invalid JSON file. The file is not formatted according the schema. (code: 55 - JSON_SCHEMA_VALIDATION_ERROR)
+  ./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
+   Evidence:  should have property InjectedRadioactivityUnits when property InjectedRadioactivity is present
+  ./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
+   Evidence:  should have required property 'InjectedMassUnits'
+  ...
                 ...
-		... and 3 more files having this issue (Use --verbose to see them all).
+  ... and 3 more files having this issue (Use --verbose to see them all).
 
-	Please visit https://neurostars.org/search?q=JSON_SCHEMA_VALIDATION_ERROR for existing conversations about this issue.
+ Please visit https://neurostars.org/search?q=JSON_SCHEMA_VALIDATION_ERROR for existing conversations about this issue.
 
 
         Summary:                Available Tasks:        Available Modalities:
@@ -127,7 +127,7 @@ bids-validator@1.7.1
         2 - Sessions                                    events
 
 
-	If you have any questions, please post on https://neurostars.org/tags/bids.
+ If you have any questions, please post on https://neurostars.org/tags/bids.
 ```
 
 #### Warn
@@ -142,12 +142,12 @@ user@host:~/bids-examples$ bids-validator sub001/
 bids-validator@1.7.1
 
 1: [WARN] Tabular file contains custom columns not described in a data dictionary (code: 82 - CUSTOM_COLUMN_WITHOUT_DESCRIPTION)
-		./sub-01/func/sub-01_task-balloonanalogrisktask_run-01_events.tsv
+  ./sub-01/func/sub-01_task-balloonanalogrisktask_run-01_events.tsv
                 ...
                 ...
 ... and 38 more files having this issue (Use --verbose to see them all).
 
-	Please visit https://neurostars.org/search?q=CUSTOM_COLUMN_WITHOUT_DESCRIPTION for existing conversations about this issue.
+ Please visit https://neurostars.org/search?q=CUSTOM_COLUMN_WITHOUT_DESCRIPTION for existing conversations about this issue.
 
 
         Summary:                   Available Tasks:                Available Modalities:
@@ -157,7 +157,7 @@ bids-validator@1.7.1
                                                                    events
 
 
-	If you have any questions, please post on https://neurostars.org/tags/bids.
+ If you have any questions, please post on https://neurostars.org/tags/bids.
 ```
 
 #### Success
@@ -176,5 +176,5 @@ This dataset appears to be BIDS compatible.
         1 - Session                                       blood
 
 
-	If you have any questions, please post on https://neurostars.org/tags/bids
+ If you have any questions, please post on https://neurostars.org/tags/bids
 ```
