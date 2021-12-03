@@ -1,6 +1,6 @@
 function files_out = bids_spreadsheet2participants(varargin)
     %
-    % routine to takes an spreadsheet file (e.g. excel) as input and export as participants.tsv
+    % routine to takes an spreadsheet file (for example: excel) as input and export as participants.tsv
     % and participants.json
     %
     % FORMAT files_out = bids_spreadsheet2participants(file_in,'ignore','field1','field2',...)
@@ -18,7 +18,7 @@ function files_out = bids_spreadsheet2participants(varargin)
     %       - values (optional)
     %
     %   - 'ignore' is the key to ignore specific fields (columns) in the excel file
-    %     e.g. 'ignore', 'variableX', 'variableY'
+    %     for example: 'ignore', 'variableX', 'variableY'
     %
     %   - 'export_dir' is the directory to save output files
     %
@@ -281,7 +281,7 @@ function files_out = bids_spreadsheet2participants(varargin)
     % 'values' are the unique values read on the data
     % 'value_types' gives an indication if we want to use Level or Unit
     % we can complement with GivenMetaData.Descrition, GivenMetaData.Levels and GivenMetaData.Units
-    % using 'matched_var' i.e. variables names match between worksheet
+    % using 'matched_var' for instance: variables names match between worksheet
 
     json = struct;
     for var = 1:length(Data.Properties.VariableNames)

@@ -27,14 +27,14 @@ def parse_args():
     return parser.parse_args()
 
 
-def get_files_from_pr(pr_num):
+def get_files_from_pr(pr_num: str) -> list:
     """Return a list of changed files from a GitHub Pull Request
 
     Arguments:
-        pr_num {str} -- Pull Request number to get modified files from
+        pr_num -- Pull Request number to get modified files from
 
     Returns:
-        {list} -- List of modified filenames
+        List of modified filenames
     """
     pr_url = f"https://api.github.com/repos/bids-standard/bids-starter-kit/pulls/{pr_num}/files"
     resp = requests.get(pr_url)
@@ -42,18 +42,18 @@ def get_files_from_pr(pr_num):
     return [item["filename"] for item in resp.json()]
 
 
-def filter_files(pr_num, start_phrase="src"):
+def filter_files(pr_num: str, start_phrase="src") -> list:
     """Filter modified files from a Pull Request by a start phrase
 
     Arguments:
-        pr_num {str} -- Number of the Pull Request to get modified files from
+        pr_num -- Number of the Pull Request to get modified files from
 
     Keyword Arguments:
-        start_phrase {str} -- Start phrase to filter changed files by
-                              (default: {"src"})
+        start_phrase -- Start phrase to filter changed files by
+                        (default: {"src"})
 
     Returns:
-        {list} -- List of filenames that begin with the desired start phrase
+        List of filenames that begin with the desired start phrase
     """
     files = get_files_from_pr(pr_num)
     return [filename for filename in files if filename.startswith(start_phrase)]

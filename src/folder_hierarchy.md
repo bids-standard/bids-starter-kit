@@ -8,8 +8,8 @@ These are the three main types of files you'll find in a BIDS dataset:
 
 1. `.json` files that contain `key: value` metadata
 2. `.tsv` files that contain tables of metadata
-3. Raw data files (e.g., `.jpg` files for images or `.nii.gz` files for fMRI
-   data.)
+3. Raw data files (for example: `.jpg` files for images or `.nii.gz` files for
+   fMRI data.)
 
 These three types of files are organized into a hierarchy of folders that have
 specific naming conventions. The rest of this page describes how these folders
@@ -276,9 +276,9 @@ pipeline1/
 ```
 
 The `space` entity indicates that a file is aligned to some reference space. For
-standard templates, this is sufficient. For custom templates (e.g., individual
-or study-specific), additional `SpatialReference` metadata is required in the
-JSON sidecar files.
+standard templates, this is sufficient. For custom templates (for example:
+individual or study-specific), additional `SpatialReference` metadata is
+required in the JSON sidecar files.
 
 The `desc` (description) entity allows for unrestricted alphanumeric labels, in
 the absence of a more appropriate entity to distinguish one file from another.

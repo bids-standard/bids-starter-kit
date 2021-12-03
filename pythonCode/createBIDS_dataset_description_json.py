@@ -11,7 +11,9 @@ data["Name"] = ""
 data["BIDSVersion"] = "1.0.2"
 
 # Recommended fields:
-# what license is this dataset distributed under? The use of license name abbreviations is suggested for specifying a license. A list of common licenses with suggested abbreviations can be found in appendix III.
+# what license is this dataset distributed under?
+# The use of license name abbreviations is suggested for specifying a license.
+# A list of common licenses with suggested abbreviations can be found in appendix III.
 data["License"] = ""
 
 
@@ -21,7 +23,8 @@ data["Authors"] = ["", "", ""]
 # who should be acknowledged in helping to collect the data
 data["Acknowledgements"] = ""
 
-# Instructions how researchers using this dataset should acknowledge the original authors. This field can also be used to define a publication that should be cited in publications that use the dataset
+# Instructions how researchers using this dataset should acknowledge the original authors.
+# This field can also be used to define a publication that should be cited in publications that use the dataset
 data["HowToAcknowledge"] = ""
 
 # sources of funding (grant numbers)

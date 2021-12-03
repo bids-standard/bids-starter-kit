@@ -13,7 +13,7 @@ from pull_files import filter_files
 
 HERE = os.getcwd()
 ABSOLUTE_HERE = os.path.dirname(HERE)
-IGNORE_LIST = ["CHANGES.md", "01-contributors.md", "pregh-changes.md"]
+IGNORE_LIST = ["CHANGES.md"]
 
 
 def parse_args():
@@ -31,42 +31,42 @@ def parse_args():
     return parser.parse_args()
 
 
-def remove_comments(text_string):
+def remove_comments(text_string: str) -> str:
     """Function to omit  html comment identifiers in a text string using
     regular expression matches
 
     Arguments:
-        text_string {string} -- The text to be matched
+        text_string -- The text to be matched
 
     Returns:
-        {string} -- The input text string with html comments removed
+        The input text string with html comments removed
     """
     return re.sub("(?s)<!--(.*?)-->", "", text_string)
 
 
-def get_lines(text_string, sub_string):
+def get_lines(text_string: str, sub_string: str) -> list:
     """Get individual lines in a text file
 
     Arguments:
-        text_string {string} -- The text string to test
-        sub_string {string} -- The conditional string to perform splitting on
+        text_string -- The text string to test
+        sub_string -- The conditional string to perform splitting on
 
     Returns:
-        {list} -- A list of split strings
+        A list of split strings
     """
     return [line for line in text_string.split("\n") if sub_string in line]
 
 
-def construct_error_message(files_dict):
+def construct_error_message(files_dict: dict) -> str:
     """Function to construct an error message pointing out where bad latin
     phrases appear in lines of text
 
     Arguments:
-        files_dict {dictionary} -- Dictionary of failing files containing the
-                                   bad latin phrases and offending lines
+        files_dict -- Dictionary of failing files containing the
+                      bad latin phrases and offending lines
 
     Returns:
-        {string} -- The error message to be raised
+        The error message to be raised
     """
     error_message = ["Bad latin found in the following files:\n"]
 
@@ -78,18 +78,18 @@ def construct_error_message(files_dict):
     return "\n".join(error_message)
 
 
-def read_and_check_files(files):
+def read_and_check_files(files: list) -> dict:
     """Function to read in files, remove html comments and check for bad latin
     phrases
 
     Arguments:
-        files {list} -- List of filenames to be checked
+        files -- List of filenames to be checked
 
     Returns:
-        {dict} -- Dictionary: Top level keys are absolute filepaths to files
-                  that failed the check. Each of these has two keys:
-                  'latin_type' containing the unwanted latin phrase, and 'line'
-                  containing the offending line.
+        Dictionary: Top level keys are absolute filepaths to files
+        that failed the check. Each of these has two keys:
+        'latin_type' containing the unwanted latin phrase, and 'line'
+        containing the offending line.
     """
     failing_files = {}
     bad_latin = ["i.e.", "i.e ", " ie ", "e.g.", "e.g ", "e.t.c.", " etc", "et cetera"]
@@ -119,14 +119,14 @@ def read_and_check_files(files):
     return failing_files
 
 
-def get_all_files(directory=os.path.join(ABSOLUTE_HERE, "src")):
+def get_all_files(directory=os.path.join(ABSOLUTE_HERE, "src")) -> list:
     """Get a list of files to be checked. Ignores images, javascript, css files.
 
     Keyword Arguments:
         directory {string} -- The directory containing the files to check
 
     Returns:
-        {list} -- List of files to check
+        List of files to check
     """
     files = []
     filetypes_to_ignore = (".png", ".jpg", ".js", ".css")

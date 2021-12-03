@@ -18,18 +18,18 @@ converting from a raw PET dataset into a bids PET dataset will be incumbent on
 the user. Some useful tools and resources that will be used in this document are
 as follows:
 
-- [BIDS Validator](https://github.com/bids-standard/bids-validator), which
+-   [BIDS Validator](https://github.com/bids-standard/bids-validator), which
     fully supports PET
 
-- [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library
+-   [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library
     containing (among many others) PET tools such as `ecat2nii` that will be
     used below to convert the imaging data from a PET dataset into nifti format.
-    The Turku PET Centre site can be found [here](https://turkupetcentre.fi/)
-    for additional information on anything PET.
-- a [BIDS PET Template](../templates) from this starter kit to initially
+    The Turku PET Centre site can be found [here](https://turkupand so
+    onentre.fi/) for additional information on anything PET.
+-   a [BIDS PET Template](../templates) from this starter kit to initially
     populate and translate text/tabulature/csv blood data into BIDS PET
     compliant `.tsv` and `.json` files.
-- [dcm2niix](https://github.com/rordenlab/dcm2niix) can be used if your raw
+-   [dcm2niix](https://github.com/rordenlab/dcm2niix) can be used if your raw
     pet data happens to be in a dicom format. Additionally this opens up the use
     of tools such as [dcmdump](https://support.dcmtk.org/docs/dcmdump.html) from
     the [dcmtk](https://support.dcmtk.org/docs/) to help in your conversion.

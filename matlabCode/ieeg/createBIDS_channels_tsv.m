@@ -30,8 +30,8 @@ name = {''}; % Label of the channel, only contains letters and numbers. The labe
 
 type = {''}; % Type of channel, see below for adequate keywords in this field
 
-units = {''}; % Physical unit of the value represented in this channel, e.g., V for Volt,
-% specified according to the SI unit symbol and possibly prefix symbol (e.g., mV, ?V),
+units = {''}; % Physical unit of the value represented in this channel, for example: V for Volt,
+% specified according to the SI unit symbol and possibly prefix symbol (for example: mV, ?V),
 % see the BIDS spec (section 15 Appendix V: Units) for guidelines for Units and Prefixes.
 
 low_cutoff = [0]; % Frequencies used for the low pass filter applied to the
@@ -43,9 +43,9 @@ high_cutoff = [0]; % Frequencies used for the high pass filter applied to
 
 %% recommended columns:
 
-reference = {''}; % Specification of the reference (e.g., "mastoid", "ElectrodeName01",
+reference = {''}; % Specification of the reference (for example: "mastoid", "ElectrodeName01",
 % "intracranial", "CAR", "other", "n/a"). If the channel is not an electrode channel
-% (e.g., a microphone channel) use `n/a`.
+% (for example: a microphone channel) use `n/a`.
 
 group = {''}; % Which group of channels (grid/strip/probe) this channel belongs to.
 % One group has one wire and noise can be shared. This can be a name or number.
@@ -56,7 +56,7 @@ group = {''}; % Which group of channels (grid/strip/probe) this channel belongs 
 sampling_frequency = [0]; % Sampling rate of the channel in Hz.
 
 description = {''}; % Brief free-text description of the channel, or other information of
-% interest (e.g. position (e.g., 'left lateral temporal surface', 'unipolar/bipolar', etc.)).
+% interest (for example: position (for example: 'left lateral temporal surface', 'unipolar/bipolar', etc.)).
 
 notch = [0]; % Frequencies used for the notch filter applied to the channel,
 % in Hz. If no notch filter applied, use n/a.

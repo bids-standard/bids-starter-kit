@@ -5,7 +5,7 @@
 % If multiple Tasks were performed within a single Run, the task description can be set to "task-multitask".
 % The _meg.json SHOULD contain details on the Tasks.
 % Some manufacturers data storage conventions use folders which contain data files of various nature:
-% e.g., CTF's .ds format, or 4D/BTi.
+% for example: CTF's .ds format, or 4D/BTi.
 % Please refer to Appendix VI for examples from a selection of MEG manufacturers
 %
 % Writing json files relies on the JSONio library
@@ -24,7 +24,7 @@ acq_id = 'CTF';
 run_id = '1';
 
 % A "proc" (processed) label has been added, especially useful for files coming from Maxfilter
-% (e.g. sss, tsss, trans, quat, mc, etc.)
+% (for example: sss, tsss, trans, quat, mc, etc.)
 proc_id = 'sss';
 
 acquisition = 'meg';
@@ -53,11 +53,11 @@ meg_json.TaskName = '';
 % The following MEG specific fields must also be defined:
 
 % Sampling frequency (in Hz) of all the data in the recording,
-% regardless of their type (e.g., 2400):
+% regardless of their type (for example: 2400):
 meg_json.SamplingFrequency = '';
 
 % Frequency (in Hz) of the power grid at the geographical location of
-% the MEG instrument (i.e. 50 or 60):
+% the MEG instrument (for instance: 50 or 60):
 meg_json.PowerLineFrequency = '';
 
 % Position of the dewar during the MEG scan: "upright", "supine" or
@@ -67,13 +67,13 @@ meg_json.DewarPosition = '';
 
 % List of temporal and/or spatial software filters applied, or ideally
 % key:value pairs of pre-applied software filters and their parameter
-% values: e.g., {"SSS": {"frame": "head", "badlimit": 7}},
+% values: for example: {"SSS": {"frame": "head", "badlimit": 7}},
 % {"SpatialCompensation": {"GradientOrder": Order of the gradient
 % compensation}}. Write "n/a" if no software filters applied.
 meg_json.SoftwareFilters = '';
 
 % Boolean ("true" or "false") value indicating whether anatomical
-% landmark points (i.e. fiducials) are contained within this recording.
+% landmark points (for instance: fiducials) are contained within this recording.
 meg_json.DigitizedLandmarks = '';
 
 % Boolean ("true" or "false") value indicating whether head points
