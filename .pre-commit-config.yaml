@@ -8,3 +8,18 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
       - id: check-json
+
+  - repo: https://github.com/psf/black
+    rev: 21.9b0
+    hooks:
+      - id: black
+
+  - repo: https://github.com/ikamensh/flynt/
+    rev: '0.69'
+    hooks:
+      - id: flynt
+
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.6.0
+    hooks:
+      - id: reorder-python-imports
