@@ -14,9 +14,11 @@ jupyter:
 <h1 align="center">Welcome to the BIDS Starter Kit</h1>
 
 <div align="center">
+  :blue_book::file_folder::closed_book::open_file_folder::green_book::open_file_folder::blue_book::open_file_folder::orange_book::file_folder::blue_book:
+</div>
+<div align="center">
   <strong>How to get started with the Brain Imaging Data Structure</strong>
 </div>
-
 <div align="center">
   A community-curated collection of tutorials, wikis, and templates to get you started with creating BIDS compliant datasets.
 </div>
@@ -39,6 +41,10 @@ jupyter:
       Tutorials
     </a>
     <span> | </span>
+    <a href="https://github.com/bids-standard/BIDS-Starter-Kit/src/FAQ.md">
+      FAQ
+    </a>
+    <span> | </span>
     <a href="https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit">
       Chat
     </a>
@@ -49,23 +55,42 @@ jupyter:
   </h3>
 </div>
 
-<br>
+<h2 align="center">Click to view the intro video!</h2>
 
 <div align="center">
-
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/BYdhjVuBsG0"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0" target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg"
+alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 </div>
 
-# BIDS starter kit
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Motivation](#motivation)
+- [Project Summary](#project-summary)
+    - [How do I find information?](#how-do-i-find-information)
+- [Philosophy](#philosophy)
+- [Benefits](#benefits)
+        - [For the public good](#for-the-public-good)
+        - [For yourself](#for-yourself)
+- [Users](#users)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+    - [Sponsor Organizations](#sponsor-organizations)
+    - [Publications](#publications)
+    [For yourself](#for-yourself)
+- [Table of Contents](#table-of-contents)
+- [Motivation](#motivation)
+- [Project Summary](#project-summary)
+    - [How do I find information?](#how-do-i-find-information)
+- [Philosophy](#philosophy)
+- [Benefits](#benefits)
+        - [For the public good](#for-the-public-good)
+        - [For yourself](#for-yourself)
+- [Users](#users)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+    - [Sponsor Organizations](#sponsor-organizations)
+    - [Publications](#publications)
 
 ## Motivation
 
@@ -94,7 +119,7 @@ For general information to help you get started with BIDS, we reccommend the
 pages such as an overall introduction to the BIDS folder structure, links to
 tutorials, and a glossary to help you with some of the technical terms.
 
-**Make sure to check our [FAQ](./FAQ.md) !!!**
+**Make sure to check our [FAQ](./src/FAQ.md) !!!**
 
 For metadata file templates or code to help you get started, please scroll up to
 find the appropriate files that are available in your language of choice.
@@ -113,22 +138,22 @@ be.
 
 ## Benefits
 
-### For the public good
+#### For the public good
 
 -   Lowers scientific waste
 -   Gives opportunity to less-funded researchers
 -   Improves efficiency
 -   Spurs innovation
 
-### For yourself
+#### For yourself
 
 -   You are likely the future user of the data and data analysis pipelines
     you’ve developed
 -   Enables and simplifies collaboration
 -   Reviewers and funding agencies like to see reproducible results
--   Open-science based funding opportunities and awards available (i.e. OHBM
-    Replication Award, Mozilla Open Science Fellowship, Google Summer of Code,
-    etc.)
+-   Open-science based funding opportunities and awards available (for instance:
+    OHBM Replication Award, Mozilla Open Science Fellowship, Google Summer of
+    Code, and so on.)
 
 ## Users
 
@@ -164,46 +189,10 @@ more valuable your feedback is** :thumbsup:
 
 ### Sponsor Organizations
 
-<br>
-
-<div align="center">
-
-  <a href="https://summerofcode.withgoogle.com/">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png"
-    width="125"
-    height="125"
-    title="GSOC"
-    alt="GSOC">
-  </a>
-
-  <a href="https://www.incf.org/">
-    <img src="https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM"
-    width="200"
-    height="125"
-    title="INCF"
-    alt="INCF">
-  </a>
-
-  <a href="https://www.arnoldventures.org/newsroom/laura-and-john-arnold-foundation-announces-3-8-million-grant-to-stanford-university-to-improve-the-quality-of-neuroscience-research">
-    <img
-    src="https://www.arnoldventures.org/static/img/logo-on-light.svg"
-    width="200"
-    height="125"
-    title="Arnold Ventures"
-    alt="Arnold Ventures">
-  </a>
-
-  <a href="http://grantome.com/grant/NIH/R24-MH114705-01">
-    <img src="http://grantome.com/images/funders/NIH.png"
-    width="125"
-    height="125"
-    title="NIH"
-    alt="NIH">
-  </a>
-
-</div>
-
-<br>
+<a href="https://summerofcode.withgoogle.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png" width="125" height="125" title="GSOC" alt="GSOC"></a>
+<a href="https://www.incf.org/"><img src="https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM" width="200" height="125" title="INCF" alt="INCF"></a>
+<a href="https://www.arnoldventures.org/newsroom/laura-and-john-arnold-foundation-announces-3-8-million-grant-to-stanford-university-to-improve-the-quality-of-neuroscience-research"><img src="https://www.arnoldventures.org/static/img/logo-on-light.svg" width="200" height="125" title="Arnold Ventures" alt="Arnold Ventures"></a>
+<a href="http://grantome.com/grant/NIH/R24-MH114705-01"><img src="http://grantome.com/images/funders/NIH.png" width="125" height="125" title="NIH" alt="NIH"></a>
 
 ### Publications
 
@@ -211,11 +200,12 @@ more valuable your feedback is** :thumbsup:
 BIDS**
 
 All publications are listed in our wiki:
-[https://github.com/bids-standard/bids-starter-kit/wiki/Publications](https://github.com/bids-standard/bids-starter-kit/wiki/Publications)
+<https://github.com/bids-standard/bids-starter-kit/wiki/Publications>
 
 You'll almost always want to cite the original paper:
 
-> [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](https://www.nature.com/articles/sdata201644)
+[The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](https://www.nature.com/articles/sdata201644)
+
 > Scientific Data volume 3, Article number: 160044 (2016)
 
 ```bibtex
