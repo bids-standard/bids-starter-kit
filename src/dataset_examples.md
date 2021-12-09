@@ -22,15 +22,15 @@ source data are converted to BIDS.
     to run the validator on or simply compare to your own _bidsified_ data try
     searching here. Datasets here are (by and large) publicly available and
     conform to BIDS.
-    -   [anat](https://openneuro.org/search/anat),
-        [beh](https://openneuro.org/search/beh),
-        [dwi](https://openneuro.org/search/dwi),
-        [eeg](https://openneuro.org/search/eeg),
-        [fmap](https://openneuro.org/search/fmap),
-        [func](https://openneuro.org/search/func),
-        [ieeg](https://openneuro.org/search/ieeg),
-        [meg](https://openneuro.org/search/meg),
-        [pet](https://openneuro.org/search/pet)
+    - [anat](https://openneuro.org/search/anat)
+    - [beh](https://openneuro.org/search/beh)
+    - [dwi](https://openneuro.org/search/dwi)
+    - [eeg](https://openneuro.org/search/eeg)
+    - [fmap](https://openneuro.org/search/fmap)
+    - [func](https://openneuro.org/search/func)
+    - [ieeg](https://openneuro.org/search/ieeg)
+    - [meg](https://openneuro.org/search/meg)
+    - [pet](https://openneuro.org/search/pet)
 
 ## Mother of unification studies
 

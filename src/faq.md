@@ -11,33 +11,6 @@ and it should be in the repository.
 Ideally the questions will link to an answer elsewhere in the repository to
 maximise the different ways of finding out more about BIDS.
 
--   [General questions](#general-questions)
-
-    -   [What is a `json` file?](#what-is-a-json-file)
-    -   [What does [this word] mean?](#what-does-this-word-mean)
-    -   [How to specify the micro sign in Matlab?](#how-to-specify-the-micro-sign-in-matlab)
-    -   [Is your data type not covered in the current BIDS specification?](#is-your-data-type-not-covered-in-the-current-bids-specification)
-    -   [Can I import an Excel file with participants information?](#how-to-import-excel-files)
-
--   [MRI specific questions](#mri-specific-questions)
-
-    -   [How can I anonymize the structural image of my data set? What defacing tools can I use?](#what-defacing-tools-can-i-use)
-
--   [EEG specific questions](#eeg-specific-questions)
-
-    -   [How to format Hardware and Software filter fields in a .json?](#how-to-format-hardware-and-software-filter-fields-in-a-json)
-    -   [How to specify EEGReference and EEGGround for Biosemi referencing scheme?](#how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme)
-    -   [How to specify units in microVolt?](#how-to-specify-units-in-microVolt)
-
--   [BIDS and NWB](#BIDS-NWB)
-
-    -   [Are BIDS and NWB compatible?](#are-bids-and-nwb-compatible)
-    -   [How to combine BIDS and NWB?](#how-to-combine-bids-and-nwb)
-
--   [Phenotypes](#Phenotypes)
-    -   [How to store subject phenotypes?](#how-to-store-subject-phenotypes)
-    -   [Is there a standard for epilepsy phenotypes?](#is-there-a-standard-for-epilepsy-phenotypes)
-
 ## General questions
 
 ### What is a `json` file?

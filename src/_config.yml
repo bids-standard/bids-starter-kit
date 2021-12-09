@@ -9,7 +9,7 @@ title                       : "BIDS starter kit"  # The title of the book. Will 
 author                      :  The BIDS community  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 # logo                        : "static/brainhack-logo.png"  # A path to the book logo
-exclude_patterns            : ["*README.md"]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : ["**README.md"]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
 # Execution settings

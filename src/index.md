@@ -8,14 +8,11 @@ jupyter:
         language: python
         name: python3
     repository:
-        url: https://github.com/Remi-Gau/BIDS-Starter-Kit
+        url: https://github.com/bids-standard/BIDS-Starter-Kit
 ---
 
 # Welcome to the BIDS Starter Kit
 
-<div align="center">
-  :blue_book::file_folder::closed_book::open_file_folder::green_book::open_file_folder::blue_book::open_file_folder::orange_book::file_folder::blue_book:
-</div>
 <div align="center">
   <strong>How to get started with the Brain Imaging Data Structure</strong>
 </div>
@@ -28,20 +25,16 @@ jupyter:
     <a href="http://bids.neuroimaging.io/">
       BIDS Homepage
     </a>
-    <span> | </span>
-    <a href=https://github.com/bids-standard/bids-starter-kit/wiki>
-      Wiki
-    </a>
      <span> | </span>
     <a href="http://bids-specification.readthedocs.io/">
       Standard
     </a>
     <span> | </span>
-    <a href="https://github.com/bids-standard/bids-starter-kit/wiki/Tutorials">
+    <a href="https://github.com/bids-standard/bids-starter-kit/src/tutorials">
       Tutorials
     </a>
     <span> | </span>
-    <a href="https://github.com/bids-standard/BIDS-Starter-Kit/src/FAQ.md">
+    <a href="https://github.com/bids-standard/BIDS-Starter-Kit/src/faq.md">
       FAQ
     </a>
     <span> | </span>
@@ -58,8 +51,12 @@ jupyter:
 <h2 align="center">Click to view the intro video!</h2>
 
 <div align="center">
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0" target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg"
-alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0"
+   target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg"
+   alt="BIDS Starter Kit Video"
+   width="480"
+   height="360"
+   border="10" /></a>
 </div>
 
 ## Motivation
@@ -84,12 +81,10 @@ different researchers.
 
 ### How do I find information?
 
-For general information to help you get started with BIDS, we reccommend the
-[wiki](https://github.com/bids-standard/bids-starter-kit/wiki). It includes
-pages such as an overall introduction to the BIDS folder structure, links to
-tutorials, and a glossary to help you with some of the technical terms.
-
-**Make sure to check our [FAQ](./src/FAQ.md) !!!**
+For general information to help you get started with BIDS, we recommend browsing
+this book. It includes pages such as an overall introduction to the BIDS folder
+structure, links to tutorials, and a glossary to help you with some of the
+technical terms.
 
 For metadata file templates or code to help you get started, please scroll up to
 find the appropriate files that are available in your language of choice.
@@ -131,29 +126,6 @@ BIDS is for everyone! Programming is not required, it simply makes some
 processes more efficient. All users can take part in the benefits such as
 organized data, reproducible research, and data sharing.
 ![users](https://i.imgur.com/0iAMuJ8.png)
-
-## Contributing
-
-There are many ways to get in touch with us! Please see our
-[Contact Page](https://github.com/bids-standard/bids-starter-kit/wiki/Contact)
-for all the details.
-
-To find out more about all the different ways to contribute to the BIDS Starter
-Kit, check out our [**contributing guidelines**][contributing]. They'll tell you
-how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful
-resources to help you
-[contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you
-can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or
-how to make a change [using issues](CONTRIBUTING.md#where-to-start-issue-labels)
-(you can also check out GitHub's help on
-[issues](https://help.github.com/articles/about-issues)) and a
-[pull request](CONTRIBUTING.md#making-a-change-with-a-pull-request).
-
-If you're here during summer 2018 :icecream::palm_tree:, you should reach out to
-our lovely [Google Summer of Code][gsoc] student [Patrick Park][patrick-github].
-It would really help his project along if you said hello and passed along any
-feedback you have :purple_heart:. Please don't be shy, **the newer you are the
-more valuable your feedback is** :thumbsup:
 
 ## Acknowledgements
 
