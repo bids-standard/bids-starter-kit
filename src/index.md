@@ -66,7 +66,7 @@ the Brain Imaging Data Structure (BIDS). We hope that the resources in this
 wiki, such as links to tutorials, easy-to-read documentation, and code will make
 BIDS easier to adopt. In order to remain up to date with the continuously
 changing BIDS specifications, we have adopted a similarly open model to allow
-[contributions](https://github.com/bids-standard/bids-starter-kit/blob/master/CONTRIBUTING.md)
+[contributions](https://github.com/bids-standard/bids-starter-kit/blob/main/CONTRIBUTING.md)
 from the community.
 
 ## Project Summary
@@ -172,4 +172,4 @@ referenced if you're using data of that type.
 [gsoc]: https://summerofcode.withgoogle.com
 [patrick-github]: https://github.com/Park-Patrick
 [contributing]:
-    https://github.com/bids-standard/bids-starter-kit/blob/master/CONTRIBUTING.md
+    https://github.com/bids-standard/bids-starter-kit/blob/main/CONTRIBUTING.md

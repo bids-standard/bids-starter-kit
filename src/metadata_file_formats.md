@@ -5,9 +5,9 @@ meaning you can work with them in, for example: Python, Matlab, or R. This page
 covers common ways to read/write these files in common languages for
 neuroscience analysis. More extensive example templates for creating these BIDS
 metadata files can be found in the
-[Matlab code templates](https://github.com/bids-standard/bids-starter-kit/tree/master/matlabCode)
+[Matlab code templates](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode)
 and
-[Python code templates](https://github.com/bids-standard/bids-starter-kit/tree/master/pythonCode)
+[Python code templates](https://github.com/bids-standard/bids-starter-kit/tree/main/pythonCode)
 
 ## JSON Files
 

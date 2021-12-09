@@ -6,7 +6,8 @@ the project, please check out our README file at
 <https://github.com/INCF/BIDS-Starter-Kit>.
 
 The work completed by Patrick Park during the Google Summer of Code is archived
-on zenodo as v1.0.2 under DOI 1344669 at <https://doi.org/10.5281/zenodo.1344669>
+on zenodo as v1.0.2 under DOI 1344669 at
+<https://doi.org/10.5281/zenodo.1344669>
 
 ## The Big Picture
 
@@ -91,17 +92,17 @@ about the project during any relevant events. Online, we created an
 [animated video](https://camo.githubusercontent.com/aada478abaddf957a3622589a5c370f11bf67642/687474703a2f2f696d672e796f75747562652e636f6d2f76692f425964686a5675427347302f302e6a7067)
 to summarize the general idea and make the first step that much easier. We
 developed
-[extensive contribution guidelines](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md)
+[extensive contribution guidelines](https://github.com/INCF/bids-starter-kit/blob/main/CONTRIBUTING.md)
 to help new contributors add their expertise to the project. We include how to
-[get in touch](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#get-in-touch),
-[write in markdown](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#writing-in-markdown),
-[submit a pull request](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#making-a-change-with-a-pull-request)
+[get in touch](https://github.com/INCF/bids-starter-kit/blob/main/CONTRIBUTING.md#get-in-touch),
+[write in markdown](https://github.com/INCF/bids-starter-kit/blob/main/CONTRIBUTING.md#writing-in-markdown),
+[submit a pull request](https://github.com/INCF/bids-starter-kit/blob/main/CONTRIBUTING.md#making-a-change-with-a-pull-request)
 and explanations of where to put
-[useful code or links in the wiki](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#where-to-start-wiki-code-and-templates).
+[useful code or links in the wiki](https://github.com/INCF/bids-starter-kit/blob/main/CONTRIBUTING.md#where-to-start-wiki-code-and-templates).
 The licence on our repository is CC-BY and these guidelines have already been
 incorporated into other open source neuroimaging projects such as
 [NiBetaSeries](https://nibetaseries.readthedocs.io/en/stable/). We also used the
-[“good-first-issue” principle](https://github.com/INCF/BIDS-Starter-Kit/blob/master/CONTRIBUTING.md#where-to-start-issue-labels)
+[“good-first-issue” principle](https://github.com/INCF/bids-starter-kit/blob/main/CONTRIBUTING.md#where-to-start-issue-labels)
 to periodically leave small mistakes in our repository unfixed, such as a typo
 or an undefined term in the glossary. Then, we would send out a request and
 guide a new contributor through the process of using the repository.

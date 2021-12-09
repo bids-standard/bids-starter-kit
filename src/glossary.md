@@ -105,9 +105,8 @@ unless they are overridden by a file at the lower level.
 A JSON file can be thought of as a form or as a list of name-value pairs.
 Example: {"firstName": "John", "lastName": "Smith"}.
 
--   You can find more information about `json` files in the
-    [Metadata file formats] (TODO: ADD INTERNAL LINK)
-    wiki page.
+-   You can find more information about `json` files in the [Metadata file
+    formats] (TODO: ADD INTERNAL LINK) wiki page.
 
 ### L
 
@@ -182,10 +181,6 @@ presentation log files.
 tsv stands for **t**ab **s**eparated **v**alues. A .tsv file contains a table
 (like a simple excel spreadsheet) containing text. Table values are separated by
 tabs.
-
--   You can find more information about `tsv` files in the
-    [Metadata file formats](https://github.com/bids-standard/bids-starter-kit/wiki/Metadata-file-formats)
-    wiki page.
 
 ### U
 

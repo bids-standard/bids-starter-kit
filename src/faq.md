@@ -113,7 +113,7 @@ the data. Generally, there are two accepted formats for that:
 
 For a formatted example on how to deal with this in the BIDS context, please see
 this
-[template](https://github.com/bids-standard/bids-starter-kit/blob/master/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-FilterExample_eeg.json).
+[template](https://github.com/bids-standard/bids-starter-kit/blob/main/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-FilterExample_eeg.json).
 
 ### How to specify EEGReference and EEGGround for Biosemi referencing scheme?
 
@@ -128,7 +128,7 @@ electrode. This is the case for Biosemi, as further documented on
 
 For a formatted example on how to deal with this in the BIDS context, please see
 this
-[template](https://github.com/bids-standard/bids-starter-kit/blob/master/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-ReferenceExample_eeg.json).
+[template](https://github.com/bids-standard/bids-starter-kit/blob/main/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-ReferenceExample_eeg.json).
 
 ### How to specify units in microVolt?
 
@@ -169,6 +169,6 @@ In the phenotype folder, according to the details provided for
 ### Is there a standard for epilepsy phenotypes?
 
 Yes, open this
-[epilepsyClassification2017](https://github.com/bids-standard/bids-starter-kit/blob/master/interactiveTreeVisualization/epilepsyClassification2017/tree.html)
+[epilepsyClassification2017](https://github.com/bids-standard/bids-starter-kit/blob/main/interactiveTreeVisualization/epilepsyClassification2017/tree.html)
 and follow the examples in the
-[phenotype templates](https://github.com/bids-standard/bids-starter-kit/tree/master/templates/phenotype).
+[phenotype templates](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/phenotype).
