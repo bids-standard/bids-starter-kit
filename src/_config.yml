@@ -9,14 +9,14 @@ title                       : "BIDS starter kit"  # The title of the book. Will 
 author                      :  The BIDS community  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 # logo                        : "static/brainhack-logo.png"  # A path to the book logo
-exclude_patterns            : ["**README.md"]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : ["**README.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
 
 #######################################################################################
 # Execution settings
 execute:
   execute_notebooks         : auto  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
   cache                     : ""  # A path to the jupyter cache that will be used to store execution artifacs. Defaults to `_build/.jupyter_cache/`
-  exclude_patterns          : []  # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
+  exclude_patterns          : []  # A list of patterns to *skip* in execution (for example a notebook that takes a really long time)
 #######################################################################################
 # HTML-specific settings
 html:
@@ -28,14 +28,14 @@ html:
   extra_footer              : ""  # Will be displayed underneath the footer.
   google_analytics_id       : ""  # A GA id that can be used to track book views.
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
-  baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links.for example: https://mypage.com/mybook/
   comments:
     hypothesis: true
 #######################################################################################
 # Launch button settings
 launch_buttons:
   notebook_interface        : "classic"  # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url             : "https://mybinder.org"  # The URL of the BinderHub (e.g., https://mybinder.org)
+  binderhub_url             : "https://mybinder.org"  # The URL of the BinderHub (for example, https://mybinder.org)
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
 
 repository:
