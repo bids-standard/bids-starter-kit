@@ -11,17 +11,21 @@ on:
 
 jobs:
   deploy-book:
+    if: (github.event.pull_request) && !contains(github.head_ref, 'all-contributors')
+
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
 
     # Install dependencies
-    - name: Set up Python 3.7
+    - name: Set up Python
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: 3.9
     - name: Install dependencies
       run: |
+        python -m pip install --upgrade pip setuptools wheel
         pip install -r requirements.txt
 
     # Build the book
