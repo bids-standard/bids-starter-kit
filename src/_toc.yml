@@ -1,24 +1,27 @@
 format: jb-book
-root: index
+root: index.md
 parts:
 - caption: Hierarchy
   chapters:
-  - file: folders.md
-  - file: files.md
+  - file: folder_hierarchy.md
+  - file: metadata_file_formats.md
 - caption: Tutorials
   chapters:
-  - file: creating_iEEG_dataset.md
-  - file: tutorials.md
+  - file: tutorials/tutorials.md
+  - file: tutorials/ieeg.md
+  - file: tutorials/asl.md
+  - file: tutorials/pet.md
+  - file: tutorials/tutorials_faq.md
 - caption: Ressources
   chapters:
-  - file: examples.md
-  - file: videos.md
+  - file: dataset_examples.md
+  - file: talks.md
   - file: publications.md
   - file: links.md
 - caption: Others
   chapters:
   - file: validator.md
   - file: apps.md
-  - file: FAQ.md
+  - file: faq.md
   - file: glossary.md
   - file: contact.md
