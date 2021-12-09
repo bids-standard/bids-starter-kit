@@ -20,13 +20,6 @@ anyway and add an asterix(\*) to signal that you want it reviewed.**
 
 ## General resources
 
-We aren't covering all words associated with brain imaging (that might be rather
-overwhelming) so we're also collecting together some more general resources
-here:
-
--   MIT Brain Research's glossary of brain imaging terminology:
-    http://mindhive.mit.edu/node/71
-
 ## BIDS Terms
 
 ### 0-9
@@ -113,7 +106,7 @@ A JSON file can be thought of as a form or as a list of name-value pairs.
 Example: {"firstName": "John", "lastName": "Smith"}.
 
 -   You can find more information about `json` files in the
-    [Metadata file formats](https://github.com/bids-standard/bids-starter-kit/wiki/Metadata-file-formats)
+    [Metadata file formats] (TODO: ADD INTERNAL LINK)
     wiki page.
 
 ### L
