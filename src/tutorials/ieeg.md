@@ -95,7 +95,7 @@ TSV file with amplifier metadata (<raw-data-filename>\_channels.tsv).
     bids-starter-kit
     [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_channels.tsv)
     or find the Matlab script to more automatically populate the required fields
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_ieeg_channels_tsv.m).
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_channels_tsv.m).
 
 ## Step 4. Add electrode-specific metadata
 
@@ -116,11 +116,11 @@ contain files like structural volume data or electrode placement photos.
 -   `_electrodes.tsv`: Download a template in the bids-starter-kit
     [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_electrodes.tsv)
     or find the Matlab script to more automatically populate the required fields
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_ieeg_electrodes_tsv.m).
+    [here](https://github.com/bids-standard/bids-starter-kit/blob/main/matlabCode/ieeg/createBIDS_electrodes_tsv.m).
 -   `_coordsystem.json`: Download a template in the bids-starter-kit
     [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_coordsystem.json)
     or find the Matlab script to more automatically populate the required fields
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_ieeg_coordsystem_json.m).
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_coordsystem_json.m).
 
 ## Step 5. Add optional metadata
 
