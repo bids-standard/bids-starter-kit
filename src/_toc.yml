@@ -1,0 +1,24 @@
+format: jb-book
+root: index
+parts:
+- caption: Hierarchy
+  chapters:
+  - file: folders.md
+  - file: files.md
+- caption: Tutorials
+  chapters:
+  - file: creating_iEEG_dataset.md
+  - file: tutorials.md
+- caption: Ressources
+  chapters:
+  - file: examples.md
+  - file: videos.md
+  - file: publications.md
+  - file: links.md
+- caption: Others
+  chapters:
+  - file: validator.md
+  - file: apps.md
+  - file: FAQ.md
+  - file: glossary.md
+  - file: contact.md
