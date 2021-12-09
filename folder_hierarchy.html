@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the BIDS folder hierarchy &#8212; BIDS starter kit</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Metadata and file formats" href="metadata_file_formats.html" />
+    <link rel="prev" title="Welcome to the BIDS Starter Kit" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Welcome to the BIDS Starter Kit
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hierarchy
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   the BIDS folder hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="metadata_file_formats.html">
+   Metadata and file formats
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/tutorials.html">
+   BIDS Tutorial Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/ieeg.html">
+   creating an iEEG dataset in BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/asl.html">
+   Scaling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/pet.html">
+   PET to BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/tutorials_faq.html">
+   Example dataset permission error
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dataset_examples.html">
+   BIDS data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="talks.html">
+   Talks and slides about BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="publications.html">
+   Publications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dependencies.html">
+   BIDS Dependencies List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="links.html">
+   A collection of links to useful code / other repositories relevant to BIDS
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="validator.html">
+   BIDS validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="apps.html">
+   What is a BIDS App?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   BIDS jargon busting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contact.html">
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/folder_hierarchy.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bids-standard/bids-starter-kit"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ffolder_hierarchy.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/folder_hierarchy.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project">
+   project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subject">
+   subject
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#session">
+   session
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datatype">
+   datatype
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bids-folder-example">
+   BIDS folder example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-bids-folder-hierarchy">
+   Creating a BIDS folder hierarchy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-the-folder-hierarchy-and-top-level-metadata-file">
+     Create the folder hierarchy and top-level metadata file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-subject-s-folder">
+     Create a subject’s folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#populate-the-datatype-folder">
+     Populate the datatype folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bids-source-rawdata-derivatives">
+   BIDS: source, rawdata, derivatives
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bids-derivatives">
+     BIDS Derivatives
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tour-of-a-bids-derivative">
+     Tour of a BIDS Derivative
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#preprocessed-data">
+       Preprocessed data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#derivative-data-types">
+       Derivative data types
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#unspecified-data-types">
+       Unspecified data types
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#organizing-datasets-and-their-derivatives">
+     Organizing datasets and their derivatives
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-bids-folder-hierarchy">
+<h1>the BIDS folder hierarchy<a class="headerlink" href="#the-bids-folder-hierarchy" title="Permalink to this headline">¶</a></h1>
+<p>The BIDS format is essentially a way to structure your data / metadata within a
+hierarchy of folders. This makes it easy to browse from a computer, as well as
+to automatically parse a BIDS folder with a program. The BIDS structure makes
+minimal assumptions about the tools needed to interact with the data that’s
+inside.</p>
+<p>These are the three main types of files you’ll find in a BIDS dataset:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.json</span></code> files that contain <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code> metadata</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.tsv</span></code> files that contain tables of metadata</p></li>
+<li><p>Raw data files (for example: <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> files for images or <code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code> files for
+fMRI data.)</p></li>
+</ol>
+<p>These three types of files are organized into a hierarchy of folders that have
+specific naming conventions. The rest of this page describes how these folders
+are structured.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>There are four main levels of the folder hierarchy, these are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
+└── subject
+    └── session
+        └── datatype
+</pre></div>
+</div>
+<p>With the exception of the top-level <code class="docutils literal notranslate"><span class="pre">project</span></code> folder, all sub-folders have a
+specific structure to their name (described below). Here’s an example of how
+this hierarchy looks:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>myProject/
+└── sub-01
+    └── ses-01
+        └── anat
+</pre></div>
+</div>
+<p>Here is the folder name structure of each level:</p>
+</div>
+<div class="section" id="project">
+<h2>project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p>Can have any name, this should be descriptive for the dataset contained in the
+folder.</p>
+</div>
+<div class="section" id="subject">
+<h2>subject<a class="headerlink" href="#subject" title="Permalink to this headline">¶</a></h2>
+<p>Structure: <code class="docutils literal notranslate"><span class="pre">sub-&lt;participant</span> <span class="pre">label&gt;</span></code></p>
+<p>One folder per subject in this dataset. Labels should be unique for each
+subject.</p>
+</div>
+<div class="section" id="session">
+<h2>session<a class="headerlink" href="#session" title="Permalink to this headline">¶</a></h2>
+<p>Structure: <code class="docutils literal notranslate"><span class="pre">ses-&lt;session</span> <span class="pre">label&gt;</span></code></p>
+<p>Represents a recording session. You might have multiple sessions per subject if
+you collected data from them on different days. If there is only a single
+session per subject, this level of the hierarchy may be omitted.</p>
+</div>
+<div class="section" id="datatype">
+<h2>datatype<a class="headerlink" href="#datatype" title="Permalink to this headline">¶</a></h2>
+<p>Represents different types of data. Must be one of:</p>
+<ul class="simple">
+<li><p>‘func’, ‘dwi’, ‘fmap’, ‘anat’, ‘meg’, ‘eeg’, ‘ieeg’, ‘beh’, ‘pet’</p></li>
+</ul>
+<p>The name for the datatype depends on the recording modality.</p>
+</div>
+<div class="section" id="bids-folder-example">
+<h2>BIDS folder example<a class="headerlink" href="#bids-folder-example" title="Permalink to this headline">¶</a></h2>
+<p>Below is the folder hierarchy for one of the
+<a class="reference external" href="https://github.com/INCF/BIDS-examples">BIDS example datasets</a>. It has multiple
+subjects of data, and includes metadata files (<code class="docutils literal notranslate"><span class="pre">.tsv</span></code> and <code class="docutils literal notranslate"><span class="pre">.json</span></code>) both between-
+and within-subjects.</p>
+<p>Note that it has one session per subject, so this level is omitted.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ds001
+├── dataset_description.json
+├── participants.tsv
+├── sub-01
+│   ├── anat
+│   │   ├── sub-01_inplaneT2.nii.gz
+│   │   └── sub-01_T1w.nii.gz
+│   └── func
+│       ├── sub-01_task-balloonanalogrisktask_run-01_bold.nii.gz
+│       ├── sub-01_task-balloonanalogrisktask_run-01_events.tsv
+│       ├── sub-01_task-balloonanalogrisktask_run-02_bold.nii.gz
+│       ├── sub-01_task-balloonanalogrisktask_run-02_events.tsv
+│       ├── sub-01_task-balloonanalogrisktask_run-03_bold.nii.gz
+│       └── sub-01_task-balloonanalogrisktask_run-03_events.tsv
+├── sub-02
+│   ├── anat
+│   │   ├── sub-02_inplaneT2.nii.gz
+│   │   └── sub-02_T1w.nii.gz
+│   └── func
+│       ├── sub-02_task-balloonanalogrisktask_run-01_bold.nii.gz
+│       ├── sub-02_task-balloonanalogrisktask_run-01_events.tsv
+│       ├── sub-02_task-balloonanalogrisktask_run-02_bold.nii.gz
+│       ├── sub-02_task-balloonanalogrisktask_run-02_events.tsv
+│       ├── sub-02_task-balloonanalogrisktask_run-03_bold.nii.gz
+│       └── sub-02_task-balloonanalogrisktask_run-03_events.tsv
+...
+...
+└── task-balloonanalogrisktask_bold.json
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-a-bids-folder-hierarchy">
+<h2>Creating a BIDS folder hierarchy<a class="headerlink" href="#creating-a-bids-folder-hierarchy" title="Permalink to this headline">¶</a></h2>
+<p>Next we’ll step through a sample process one might follow when creating a BIDS
+hierarchy for a new dataset.</p>
+<div class="section" id="create-the-folder-hierarchy-and-top-level-metadata-file">
+<h3>Create the folder hierarchy and top-level metadata file<a class="headerlink" href="#create-the-folder-hierarchy-and-top-level-metadata-file" title="Permalink to this headline">¶</a></h3>
+<p>First we’ll create the folder hierarchy to be used in this format.</p>
+<ul class="simple">
+<li><p>Create the top-level project folder (<code class="docutils literal notranslate"><span class="pre">myProject/</span></code>)</p></li>
+<li><p>Create a top-level metadata files (<code class="docutils literal notranslate"><span class="pre">myProject/participants.tsv</span></code> and
+<code class="docutils literal notranslate"><span class="pre">myProject/task-mytask.json</span></code>)</p></li>
+</ul>
+</div>
+<div class="section" id="create-a-subject-s-folder">
+<h3>Create a subject’s folder<a class="headerlink" href="#create-a-subject-s-folder" title="Permalink to this headline">¶</a></h3>
+<p>Next we’ll add the folder hierarchy for one subject:</p>
+<ul class="simple">
+<li><p>Create the <code class="docutils literal notranslate"><span class="pre">&lt;Project&gt;/&lt;Subject&gt;/&lt;Session&gt;/</span></code> folder
+(<code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/</span></code>)</p></li>
+</ul>
+</div>
+<div class="section" id="populate-the-datatype-folder">
+<h3>Populate the datatype folder<a class="headerlink" href="#populate-the-datatype-folder" title="Permalink to this headline">¶</a></h3>
+<p>Next we’ll populate the first subject’s folder with datatype folders. We’ll have
+one per data modality. We’ll include a number of different modalities to
+describe their associated metadata below, though most likely you won’t have all
+of these for a single subject (if you do, please make sure to open-source your
+data ;-) ).</p>
+<p><strong>NOTE</strong> all <code class="docutils literal notranslate"><span class="pre">run-</span></code> and <code class="docutils literal notranslate"><span class="pre">echo-</span></code> labels must only contain integers</p>
+<p>Here’s a list of these folders:</p>
+<ul class="simple">
+<li><p><strong>anat</strong>: Anatomical MRI data (<code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/anat/</span></code>)</p>
+<ul>
+<li><p>Data:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_T1w.nii.gz</span></code></p></li>
+</ul>
+</li>
+<li><p>Metadata:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_T1w.json</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>fmri</strong>: Functional MRI data (<code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/func/</span></code>)</p>
+<ul>
+<li><p>Data:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_bold.nii.gz</span></code></p></li>
+</ul>
+</li>
+<li><p>Metadata:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_bold.json</span></code></p></li>
+</ul>
+</li>
+<li><p>Events:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_events.tsv</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>fmap</strong>: Fieldmap MRI data (<code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/fmap/</span></code>)</p>
+<ul>
+<li><p>Data:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_phasediff.nii.gz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_magnitude1.nii.gz</span></code></p></li>
+</ul>
+</li>
+<li><p>Metadata:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_phasediff.json</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>meg</strong>: MEG data (<code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/meg/</span></code>)</p>
+<ul>
+<li><p>Data:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_proc-&lt;&gt;_meg.extension</span></code></p></li>
+</ul>
+</li>
+<li><p>Metadata:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_proc-&lt;&gt;_meg.json</span></code></p></li>
+</ul>
+</li>
+<li><p>Channel information:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;</span> <span class="pre">_proc-&lt;&gt;_channels.tsv</span></code></p></li>
+</ul>
+</li>
+<li><p>Events:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;</span> <span class="pre">_proc-&lt;&gt;_events.tsv</span></code></p></li>
+</ul>
+</li>
+<li><p>Sensor positions:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_photo.jpg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_fid.json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_fidinfo.txt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_headshape.extension</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>ieeg</strong>: intracranial EEG data (<code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/ieeg/</span></code>)</p>
+<ul>
+<li><p>Data:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_ieeg.extension</span></code></p></li>
+</ul>
+</li>
+<li><p>Metadata:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_ieeg.json</span></code></p></li>
+</ul>
+</li>
+<li><p>Channel information:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_channels.tsv</span></code></p></li>
+</ul>
+</li>
+<li><p>Events:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_events.tsv</span></code></p></li>
+</ul>
+</li>
+<li><p>Electrode locations:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_electrodes.tsv</span></code> <em>electrode xyz coordinates</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_coordsystem.json</span></code> <em>coordinate metadata</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_photo.jpg</span></code> <em>operative photo</em></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>dwi</strong>: Diffusion Imaging Data (<code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/dwi/</span></code>)</p>
+<ul>
+<li><p>Data:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;</span> <span class="pre">&gt;_ses-&lt;</span> <span class="pre">&gt;_acq-&lt;</span> <span class="pre">&gt;_run-&lt;</span> <span class="pre">&gt;_dwi.nii.gz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;</span> <span class="pre">&gt;_ses-&lt;</span> <span class="pre">&gt;_acq-&lt;</span> <span class="pre">&gt;_run-&lt;</span> <span class="pre">&gt;_dwi.bval</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;</span> <span class="pre">&gt;_ses-&lt;</span> <span class="pre">&gt;_acq-&lt;</span> <span class="pre">&gt;_run-&lt;</span> <span class="pre">&gt;_dwi.bvec</span></code></p></li>
+</ul>
+</li>
+<li><p>Metadata:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;</span> <span class="pre">&gt;_ses-&lt;</span> <span class="pre">&gt;_acq-&lt;</span> <span class="pre">&gt;_run-&lt;</span> <span class="pre">&gt;_dwi.json</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>pet</strong> Positron Emission Tomography Data (<code class="docutils literal notranslate"><span class="pre">myProject/sub-01/pet/</span></code>)</p>
+<ul>
+<li><p>Data:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;</span> <span class="pre">&gt;_ses-&lt;</span> <span class="pre">&gt;_pet.json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;</span> <span class="pre">&gt;_ses-&lt;</span> <span class="pre">&gt;_pet.nii.gz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;</span> <span class="pre">&gt;_ses-&lt;</span> <span class="pre">&gt;_recording-&lt;</span> <span class="pre">&gt;_blood.json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;</span> <span class="pre">&gt;_ses-&lt;</span> <span class="pre">&gt;_recording-&lt;</span> <span class="pre">&gt;_blood.tsv</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="bids-source-rawdata-derivatives">
+<h2>BIDS: source, rawdata, derivatives<a class="headerlink" href="#bids-source-rawdata-derivatives" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bids-derivatives">
+<h3>BIDS Derivatives<a class="headerlink" href="#bids-derivatives" title="Permalink to this headline">¶</a></h3>
+<p>Derivatives are outputs of (pre-)processing pipelines, capturing data and
+meta-data sufficient for a researcher to understand and (critically) reuse those
+outputs in subsequent processing. Standardizing derivatives is motivated by use
+cases where formalized machine-readable access to processed data enables higher
+level processing.</p>
+<p>A derivative dataset is a collection of derivatives, or files that have been
+generated from the data. Broadly, a derivative can be considered to be
+preprocessed or processed, such that the data type is unchanged or changed,
+respectively, from that of the source data file(s).</p>
+<p>BIDS Derivatives was finalized in version 1.4.0 of the BIDS specification.</p>
+</div>
+<div class="section" id="tour-of-a-bids-derivative">
+<h3>Tour of a BIDS Derivative<a class="headerlink" href="#tour-of-a-bids-derivative" title="Permalink to this headline">¶</a></h3>
+<p>As with BIDS datasets, all conformant derivative datasets contain a
+<code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code>. New fields include <code class="docutils literal notranslate"><span class="pre">DatasetType</span></code>, which
+distinguishes <code class="docutils literal notranslate"><span class="pre">&quot;derivative&quot;</span></code> datasets from <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot;</span></code>; <code class="docutils literal notranslate"><span class="pre">GeneratedBy</span></code>, a list of
+processes that generated the data; <code class="docutils literal notranslate"><span class="pre">SourceDatasets</span></code>, a list of datasets used to
+generate the derivative.</p>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">{</span>
+  <span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;FMRIPREP</span><span class="nv"> </span><span class="s">Outputs&quot;</span><span class="p p-Indicator">,</span>
+  <span class="s">&quot;BIDSVersion&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;1.4.0&quot;</span><span class="p p-Indicator">,</span>
+  <span class="s">&quot;DatasetType&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;derivative&quot;</span><span class="p p-Indicator">,</span>
+  <span class="s">&quot;GeneratedBy&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
+    <span class="p p-Indicator">{</span>
+      <span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;fmriprep&quot;</span><span class="p p-Indicator">,</span>
+      <span class="s">&quot;Version&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;1.4.1&quot;</span><span class="p p-Indicator">,</span>
+      <span class="s">&quot;Container&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+        <span class="s">&quot;Type&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;docker&quot;</span><span class="p p-Indicator">,</span>
+        <span class="s">&quot;Tag&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;poldracklab/fmriprep:1.4.1&quot;</span>
+        <span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">},</span>
+    <span class="p p-Indicator">{</span>
+      <span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Manual&quot;</span><span class="p p-Indicator">,</span>
+      <span class="s">&quot;Description&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Re-added</span><span class="nv"> </span><span class="s">RepetitionTime</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">bold.json</span><span class="nv"> </span><span class="s">files&quot;</span>
+    <span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">],</span>
+  <span class="s">&quot;SourceDatasets&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
+    <span class="p p-Indicator">{</span>
+      <span class="s">&quot;DOI&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;10.18112/openneuro.ds000114.v1.0.1&quot;</span><span class="p p-Indicator">,</span>
+      <span class="s">&quot;URL&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://openneuro.org/datasets/ds000114/versions/1.0.1&quot;</span><span class="p p-Indicator">,</span>
+      <span class="s">&quot;Version&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;1.0.1&quot;</span>
+    <span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">]</span>
+<span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+<div class="section" id="preprocessed-data">
+<h4>Preprocessed data<a class="headerlink" href="#preprocessed-data" title="Permalink to this headline">¶</a></h4>
+<p>Data is considered to be <em>preprocessed</em> if it is fundamentally similar to the
+source data. Artifact removal, motion correction and resampling to a template
+space are examples of preprocessing.</p>
+<p>An example of a subject with simultaneous EEG/fMRI resting state scan, aligned
+along with a T1w image to the MNI305 template:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipeline1</span><span class="o">/</span>
+  <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+    <span class="n">anat</span><span class="o">/</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_space</span><span class="o">-</span><span class="n">MNI305_T1w</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_space</span><span class="o">-</span><span class="n">MNI305_T1w</span><span class="o">.</span><span class="n">json</span>
+    <span class="n">eeg</span><span class="o">/</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_task</span><span class="o">-</span><span class="n">rest_desc</span><span class="o">-</span><span class="n">filtered_eeg</span><span class="o">.</span><span class="n">edf</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_task</span><span class="o">-</span><span class="n">rest_desc</span><span class="o">-</span><span class="n">filtered_eeg</span><span class="o">.</span><span class="n">json</span>
+    <span class="n">func</span><span class="o">/</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_task</span><span class="o">-</span><span class="n">rest_space</span><span class="o">-</span><span class="n">MNI305_desc</span><span class="o">-</span><span class="n">preproc_bold</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_task</span><span class="o">-</span><span class="n">rest_space</span><span class="o">-</span><span class="n">MNI305_desc</span><span class="o">-</span><span class="n">preproc_bold</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">space</span></code> entity indicates that a file is aligned to some reference space. For
+standard templates, this is sufficient. For custom templates (for example:
+individual or study-specific), additional <code class="docutils literal notranslate"><span class="pre">SpatialReference</span></code> metadata is
+required in the JSON sidecar files.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">desc</span></code> (description) entity allows for unrestricted alphanumeric labels, in
+the absence of a more appropriate entity to distinguish one file from another.</p>
+</div>
+<div class="section" id="derivative-data-types">
+<h4>Derivative data types<a class="headerlink" href="#derivative-data-types" title="Permalink to this headline">¶</a></h4>
+<p>Data is considered to be <em>processed</em> if it is fundamentally different to the
+source data. Processed data may differ substantially in BIDS datatypes from the
+original input data.</p>
+<p>The initial offering of BIDS Derivatives only specifies anatomical derivatives
+that are of general use: masks and segmentations.</p>
+<p>Mask images are binary images with 1 representing the region of interest and all
+other voxels containing 0. The following example shows a manually constructed
+lesion mask:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manual_masks</span><span class="o">/</span>
+  <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+    <span class="n">anat</span><span class="o">/</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_desc</span><span class="o">-</span><span class="n">lesion_mask</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_desc</span><span class="o">-</span><span class="n">lesion_mask</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>A mask of the functionally-defined area fusiform face area could be encoded:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">localizer</span><span class="o">/</span>
+  <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+    <span class="n">func</span><span class="o">/</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_task</span><span class="o">-</span><span class="n">loc_space</span><span class="o">-</span><span class="n">individual_label</span><span class="o">-</span><span class="n">FFA_mask</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_task</span><span class="o">-</span><span class="n">loc_space</span><span class="o">-</span><span class="n">individual_label</span><span class="o">-</span><span class="n">FFA_mask</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>BIDS Derivatives introduces “discrete segmentations” and “probabilisitic
+segmentations”.</p>
+<blockquote>
+<div><p>A <em>segmentation</em> is a labeling of regions of an image such that each location
+(for example, a voxel or a surface vertex) is identified with a label or a
+combination of labels. Labeled regions may include anatomical structures (such
+as tissue class, Brodmann area or white matter tract), discontiguous,
+functionally-defined networks, tumors or lesions.</p>
+<p>A <em>discrete segmentation</em> represents each region with a unique integer label.
+A <em>probabilistic segmentation</em> represents each region as values between 0 and
+1 (inclusive) at each location in the image, and one volume/frame per
+structure may be concatenated in a single file.</p>
+</div></blockquote>
+<p>A BIDS App that calculates ROIs in BOLD space from the automated anatomical
+labeling (AAL, doi:[10.1006/nimg.2001.0978]) could store discrete and
+probabilistic (or partial volume) segmentations as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tissue_segmentation</span><span class="o">/</span>
+  <span class="n">desc</span><span class="o">-</span><span class="n">AAL_dseg</span><span class="o">.</span><span class="n">tsv</span>
+  <span class="n">desc</span><span class="o">-</span><span class="n">AAL_probseg</span><span class="o">.</span><span class="n">json</span>
+  <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+    <span class="n">func</span><span class="o">/</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_task</span><span class="o">-</span><span class="n">rest_desc</span><span class="o">-</span><span class="n">AAL_dseg</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_task</span><span class="o">-</span><span class="n">rest_desc</span><span class="o">-</span><span class="n">AAL_probseg</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">dseg.tsv</span></code> file is a lookup table for interpreting a discrete segmentation
+and <code class="docutils literal notranslate"><span class="pre">probseg.json</span></code> contains a list identifying the labels for each consecutive
+volume.</p>
+</div>
+<div class="section" id="unspecified-data-types">
+<h4>Unspecified data types<a class="headerlink" href="#unspecified-data-types" title="Permalink to this headline">¶</a></h4>
+<p>Derivatives can never be fully specified, as new methods can always be
+developed, requiring new data representations. BIDS recognizes this and
+encourages adopting “BIDS-style naming conventions”:</p>
+<blockquote>
+<div><p>Additional files and folders containing raw data MAY be added as needed for
+special cases. All non-standard file entities SHOULD conform to BIDS-style
+naming conventions, including alphabetic entities and suffixes and
+alphanumeric labels/indices. Non-standard suffixes SHOULD reflect the nature
+of the data, and existing entities SHOULD be used when appropriate.</p>
+</div></blockquote>
+<p>This recommendation remains in force for derivatives datasets. Additionally,
+BIDS Derivatives acknowledges that it may be desirable to distribute derivatives
+generated by non-compliant applications, for the sake of reproducibility and
+non-duplication of effort. Therefore,</p>
+<blockquote>
+<div><p>if a BIDS dataset contains a <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> sub-directory, the contents of
+that directory may be a heterogeneous mix of BIDS Derivatives datasets and
+non-compliant derivatives.</p>
+</div></blockquote>
+<p>One example of such a non-compliant derivative dataset would be FreeSurfer
+reconstructions of subject surfaces:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bids</span><span class="o">-</span><span class="n">root</span><span class="o">/</span>
+  <span class="n">derivatives</span><span class="o">/</span>
+    <span class="n">freesurfer</span><span class="o">/</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+         <span class="n">label</span><span class="o">/</span>
+         <span class="n">mri</span><span class="o">/</span>
+         <span class="o">...</span>
+      <span class="o">...</span>
+  <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+    <span class="n">anat</span><span class="o">/</span>
+      <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_T1w</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
+  <span class="o">...</span>
+</pre></div>
+</div>
+<p>Note that subject directory names conform to BIDS conventions, but contents are
+determined by the generating application, in this case, FreeSurfer.</p>
+</div>
+</div>
+<div class="section" id="organizing-datasets-and-their-derivatives">
+<h3>Organizing datasets and their derivatives<a class="headerlink" href="#organizing-datasets-and-their-derivatives" title="Permalink to this headline">¶</a></h3>
+<p>BIDS Derivatives datasets are intended to be interpretable and distributable
+with or without the datasets used to generate them. This is necessary for
+storage and bandwidth constraints, as well as to permit the distribution of
+derivatives when the source data are restricted.</p>
+<p>This independence affords flexibility in the relative organization of datasets.
+The following examples show three ways to organize, relative to each other, a
+raw BIDS dataset, a preprocessed derivative dataset, and an analysis that uses
+both as inputs.</p>
+<p>A collection of derivative datasets may be stored in the <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code>
+subdirectory of a BIDS (or BIDS Derivatives) dataset:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_dataset</span><span class="o">/</span>
+  <span class="n">derivatives</span><span class="o">/</span>
+    <span class="n">preprocessed</span><span class="o">/</span>
+    <span class="n">analysis</span><span class="o">/</span>
+  <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+  <span class="o">...</span>
+</pre></div>
+</div>
+<p>A BIDS Derivatives dataset may contain references to its input datasets in the
+<code class="docutils literal notranslate"><span class="pre">sourcedata/</span></code> subdirectory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_analysis</span><span class="o">/</span>
+  <span class="n">sourcedata</span><span class="o">/</span>
+    <span class="n">raw</span><span class="o">/</span>
+    <span class="n">preprocessed</span><span class="o">/</span>
+  <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+  <span class="o">...</span>
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">sourcedata/</span></code> and <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> subdirectories constitute dataset
+boundaries. Any contents of these directories may be validated independently,
+but their contents must not affect the interpretation of the nested or
+containing datasets.</p>
+<p>Unnested datasets are also possible. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_study</span><span class="o">/</span>
+  <span class="n">raw_data</span><span class="o">/</span>
+    <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
+    <span class="o">...</span>
+  <span class="n">derivatives</span><span class="o">/</span>
+    <span class="n">preprocessed</span><span class="o">/</span>
+    <span class="n">analysis</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to the BIDS Starter Kit</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="metadata_file_formats.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Metadata and file formats</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By The BIDS community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

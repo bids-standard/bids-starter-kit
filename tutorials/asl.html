@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scaling &#8212; BIDS starter kit</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PET to BIDS" href="pet.html" />
+    <link rel="prev" title="creating an iEEG dataset in BIDS" href="ieeg.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome to the BIDS Starter Kit
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hierarchy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folder_hierarchy.html">
+   the BIDS folder hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metadata_file_formats.html">
+   Metadata and file formats
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials.html">
+   BIDS Tutorial Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ieeg.html">
+   creating an iEEG dataset in BIDS
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Scaling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pet.html">
+   PET to BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials_faq.html">
+   Example dataset permission error
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dataset_examples.html">
+   BIDS data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../talks.html">
+   Talks and slides about BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publications.html">
+   Publications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dependencies.html">
+   BIDS Dependencies List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../links.html">
+   A collection of links to useful code / other repositories relevant to BIDS
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../validator.html">
+   BIDS validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apps.html">
+   What is a BIDS App?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   BIDS jargon busting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact.html">
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorials/asl.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bids-standard/bids-starter-kit"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ftutorials/asl.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/tutorials/asl.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ge">
+   GE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#philips">
+   Philips
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#siemens">
+   Siemens
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pixdim">
+     PIXDIM
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="scaling">
+<h1>Scaling<a class="headerlink" href="#scaling" title="Permalink to this headline">¶</a></h1>
+<p>This paragraph discusses the specific scaling issues for GE, Philips, and
+Siemens. Beware that these issues are occurring at the time of the release of
+<a class="reference external" href="https://bids-specification.readthedocs.io/en/v1.5.0/">version 1.5.0</a>, and might
+be resolved in the future.</p>
+<div class="section" id="ge">
+<h2>GE<a class="headerlink" href="#ge" title="Permalink to this headline">¶</a></h2>
+<p>GE applies an RF amplifier factor that should be multiplied by the number of
+signal averages (NSA) as GE sums instead of averages them.</p>
+</div>
+<div class="section" id="philips">
+<h2>Philips<a class="headerlink" href="#philips" title="Permalink to this headline">¶</a></h2>
+<p>Typically, Philips ASL datasets use the standard DICOM rescale tags only to
+rescale data for viewing, whereas private rescale tags are used for scaling to
+acquisition values needed for proper quantification. The procedure for using
+both the scaling types is described previously [<strong>reference required</strong>],
+although the authors did not mention that three DICOM fields are typically used
+for this purpose - <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">100e)</span></code>, <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code>, or <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code>. It may
+also occur that the RescaleSlope <code class="docutils literal notranslate"><span class="pre">(0028,</span> <span class="pre">1053)</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1</span></code> and
+RescaleSlopeOriginal <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">140a)</span></code> needs to be used instead. Note that DICOM to
+NIfTI conversion software may omit the private slopes, in which cases the
+private slope needs to be applied after running the conversion. An exception is
+the <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> software that does take
+private scale slopes into account in most cases. The
+<a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> versions released between
+2018 and 20190902 can correctly scale the NIfTI according to the private scale
+slopes - if run with parameter <code class="docutils literal notranslate"><span class="pre">‘-p’</span></code> - and indicates this by setting
+<code class="docutils literal notranslate"><span class="pre">‘UsePhilipsFloatNotDisplayScaling==1’</span></code> in the accompanying json file. Two
+exceptions apply, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> does not
+support DICOM tags <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code> and <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code> that still need to be read
+and applied additionally. Furthermore, the field RealWorldValueSlope
+<code class="docutils literal notranslate"><span class="pre">(0040,9225)</span></code> is sometimes provided as an alternative to RescaleSlope
+<code class="docutils literal notranslate"><span class="pre">(0028,1053)</span></code>. In this case, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a>
+outputs a field <code class="docutils literal notranslate"><span class="pre">PhilipsRWVSlope</span></code> and sets
+<code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code>. This is deceiving because the standard
+RescaleSlope is applied instead of private-field scale slopes and this still
+needs to be corrected manually. Note that this last-mentioned behavior is
+corrected in the newest dcm2nii version and general caution is recommended when
+dealing with Philips scale slopes. Also, Philips has recently implemented the
+option to apply these scaling factors upon export. The scaling of
+acquired/reconstructed ASL images may differ between control, label, and M0
+images.</p>
+</div>
+<div class="section" id="siemens">
+<h2>Siemens<a class="headerlink" href="#siemens" title="Permalink to this headline">¶</a></h2>
+<p>Several implementations of Siemens ASL WIP have a scaling between ASL and M0.
+This can be only modified and obtained at the scanner console and it is set to
+<code class="docutils literal notranslate"><span class="pre">10</span></code> by default.</p>
+<div class="section" id="pixdim">
+<h3>PIXDIM<a class="headerlink" href="#pixdim" title="Permalink to this headline">¶</a></h3>
+<p>The so-called PIXDIM error appears to be specific for files with a single
+repetition, more specifically the separately acquired <code class="docutils literal notranslate"><span class="pre">‘m0scan’</span></code>. In the NIfTI
+header, <code class="docutils literal notranslate"><span class="pre">dim[0]</span></code> defines the number of dimensions, <code class="docutils literal notranslate"><span class="pre">dim[i]</span></code> defines the length
+of the i’th dimension, <code class="docutils literal notranslate"><span class="pre">pixdim[i]</span></code> specifies the voxel width along dimension
+<code class="docutils literal notranslate"><span class="pre">i</span></code>. For images with a single repetition, where <code class="docutils literal notranslate"><span class="pre">pixdim[4]</span></code> specifies the
+temporal width, the BIDS validator requires that the image is defined as 4D with
+<code class="docutils literal notranslate"><span class="pre">dim[0]</span> <span class="pre">==</span> <span class="pre">4</span></code>, even though the image has a single repetition <code class="docutils literal notranslate"><span class="pre">dim[4]</span> <span class="pre">==</span> <span class="pre">1</span></code>.
+Defining (<code class="docutils literal notranslate"><span class="pre">dim[0]</span> <span class="pre">==</span> <span class="pre">3</span></code>) for a 44D volume with a single repetition (for
+instance: a 3D image) is common and correct, however, it is considered invalid
+by the validator.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ieeg.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">creating an iEEG dataset in BIDS</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="pet.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">PET to BIDS</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By The BIDS community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

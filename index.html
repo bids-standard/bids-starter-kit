@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to the BIDS Starter Kit &#8212; BIDS starter kit</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="the BIDS folder hierarchy" href="folder_hierarchy.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="#">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
+   Welcome to the BIDS Starter Kit
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hierarchy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="folder_hierarchy.html">
+   the BIDS folder hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="metadata_file_formats.html">
+   Metadata and file formats
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/tutorials.html">
+   BIDS Tutorial Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/ieeg.html">
+   creating an iEEG dataset in BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/asl.html">
+   Scaling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/pet.html">
+   PET to BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/tutorials_faq.html">
+   Example dataset permission error
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dataset_examples.html">
+   BIDS data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="talks.html">
+   Talks and slides about BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="publications.html">
+   Publications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dependencies.html">
+   BIDS Dependencies List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="links.html">
+   A collection of links to useful code / other repositories relevant to BIDS
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="validator.html">
+   BIDS validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="apps.html">
+   What is a BIDS App?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   BIDS jargon busting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contact.html">
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/index.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bids-standard/bids-starter-kit"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/index.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation">
+   Motivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-summary">
+   Project Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-do-i-find-information">
+     How do I find information?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#philosophy">
+   Philosophy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#benefits">
+   Benefits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-the-public-good">
+     For the public good
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-yourself">
+     For yourself
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#users">
+   Users
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sponsor-organizations">
+     Sponsor Organizations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#publications">
+     Publications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="welcome-to-the-bids-starter-kit">
+<h1>Welcome to the BIDS Starter Kit<a class="headerlink" href="#welcome-to-the-bids-starter-kit" title="Permalink to this headline">¶</a></h1>
+<div align="center">
+  <strong>How to get started with the Brain Imaging Data Structure</strong>
+</div>
+<div align="center">
+  A community-curated collection of tutorials, wikis, and templates to get you started with creating BIDS compliant datasets.
+</div>
+<div align="center">
+  <h3>
+    <a href="http://bids.neuroimaging.io/">
+      BIDS Homepage
+    </a>
+     <span> | </span>
+    <a href="http://bids-specification.readthedocs.io/">
+      Standard
+    </a>
+    <span> | </span>
+    <a href="https://github.com/bids-standard/bids-starter-kit/src/tutorials">
+      Tutorials
+    </a>
+    <span> | </span>
+    <a href="https://github.com/bids-standard/BIDS-Starter-Kit/src/faq.md">
+      FAQ
+    </a>
+    <span> | </span>
+    <a href="https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit">
+      Chat
+    </a>
+    <span> | </span>
+    <a href=https://neurostars.org/tags/bids>
+      Forum
+    </a>
+  </h3>
+</div>
+<h2 align="center">Click to view the intro video!</h2>
+<div align="center">
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0"
+   target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg"
+   alt="BIDS Starter Kit Video"
+   width="480"
+   height="360"
+   border="10" /></a>
+</div>
+<div class="section" id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<p>The primary goal of this project is to simplify the process of learning about
+the Brain Imaging Data Structure (BIDS). We hope that the resources in this
+wiki, such as links to tutorials, easy-to-read documentation, and code will make
+BIDS easier to adopt. In order to remain up to date with the continuously
+changing BIDS specifications, we have adopted a similarly open model to allow
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/blob/main/CONTRIBUTING.md">contributions</a>
+from the community.</p>
+</div>
+<div class="section" id="project-summary">
+<h2>Project Summary<a class="headerlink" href="#project-summary" title="Permalink to this headline">¶</a></h2>
+<p>Neuroimaging and neurophysiology data can be costly in both time and money to
+acquire. This creates a barrier for many underfunded researchers without access
+to the required equipment. Responsible data sharing can level the playing field,
+but the many different specifications of these acquired images cause portability
+issues between different labs and scientists. BIDS is a framework for organizing
+data that standardizes file organization and dataset description between
+different researchers.</p>
+<div class="section" id="how-do-i-find-information">
+<h3>How do I find information?<a class="headerlink" href="#how-do-i-find-information" title="Permalink to this headline">¶</a></h3>
+<p>For general information to help you get started with BIDS, we recommend browsing
+this book. It includes pages such as an overall introduction to the BIDS folder
+structure, links to tutorials, and a glossary to help you with some of the
+technical terms.</p>
+<p>For metadata file templates or code to help you get started, please scroll up to
+find the appropriate files that are available in your language of choice.</p>
+<p>Finally, for more advanced knowledge that may pertain to specific use cases for
+your data, please refer to the full
+<a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/">BIDS Specification</a></p>
+</div>
+</div>
+<div class="section" id="philosophy">
+<h2>Philosophy<a class="headerlink" href="#philosophy" title="Permalink to this headline">¶</a></h2>
+<p>The most important part of BIDS are the users: if more people use it, more data
+will be shared and the more powerful it will become. <strong>We want to make it
+easy to learn</strong> and more adopted. Since BIDS is platform independent and
+still an adapting, growing tool, the greater the community, the better it will
+be.</p>
+</div>
+<div class="section" id="benefits">
+<h2>Benefits<a class="headerlink" href="#benefits" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="for-the-public-good">
+<h3>For the public good<a class="headerlink" href="#for-the-public-good" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Lowers scientific waste</p></li>
+<li><p>Gives opportunity to less-funded researchers</p></li>
+<li><p>Improves efficiency</p></li>
+<li><p>Spurs innovation</p></li>
+</ul>
+</div>
+<div class="section" id="for-yourself">
+<h3>For yourself<a class="headerlink" href="#for-yourself" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>You are likely the future user of the data and data analysis pipelines
+you’ve developed</p></li>
+<li><p>Enables and simplifies collaboration</p></li>
+<li><p>Reviewers and funding agencies like to see reproducible results</p></li>
+<li><p>Open-science based funding opportunities and awards available (for instance:
+OHBM Replication Award, Mozilla Open Science Fellowship, Google Summer of
+Code, and so on.)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
+<p>BIDS is for everyone! Programming is not required, it simply makes some
+processes more efficient. All users can take part in the benefits such as
+organized data, reproducible research, and data sharing.
+<img alt="users" src="https://i.imgur.com/0iAMuJ8.png" /></p>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sponsor-organizations">
+<h3>Sponsor Organizations<a class="headerlink" href="#sponsor-organizations" title="Permalink to this headline">¶</a></h3>
+<p><a href="https://summerofcode.withgoogle.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/GSoC.png/220px-GSoC.png" width="125" height="125" title="GSOC" alt="GSOC"></a>
+<a href="https://www.incf.org/"><img src="https://www.eudat.eu/sites/default/files/styles/medium/public/logo/INCF_0.png?itok=uRT54XCM" width="200" height="125" title="INCF" alt="INCF"></a>
+<a href="https://www.arnoldventures.org/newsroom/laura-and-john-arnold-foundation-announces-3-8-million-grant-to-stanford-university-to-improve-the-quality-of-neuroscience-research"><img src="https://www.arnoldventures.org/static/img/logo-on-light.svg" width="200" height="125" title="Arnold Ventures" alt="Arnold Ventures"></a>
+<a href="http://grantome.com/grant/NIH/R24-MH114705-01"><img src="http://grantome.com/images/funders/NIH.png" width="125" height="125" title="NIH" alt="NIH"></a></p>
+</div>
+<div class="section" id="publications">
+<h3>Publications<a class="headerlink" href="#publications" title="Permalink to this headline">¶</a></h3>
+<p><strong>Please consider citing the relevant papers when publishing a project that uses
+BIDS</strong></p>
+<p>All publications are listed in our wiki:
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/wiki/Publications">https://github.com/bids-standard/bids-starter-kit/wiki/Publications</a></p>
+<p>You’ll almost always want to cite the original paper:</p>
+<p><a class="reference external" href="https://www.nature.com/articles/sdata201644">The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments</a></p>
+<blockquote>
+<div><p>Scientific Data volume 3, Article number: 160044 (2016)</p>
+</div></blockquote>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">gorgolewski2016brain</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">{The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments}</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">{Gorgolewski, K. and Auer, T. and Calhoun, V. and others}</span><span class="p">,</span>
+  <span class="na">journal</span><span class="p">=</span><span class="s">{Scientific Data}</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">{2016}</span><span class="p">,</span>
+  <span class="na">volume</span><span class="p">=</span><span class="s">{3}</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<br>
+<p>But there are also modality specific extension papers for
+<a class="reference external" href="https://doi.org/10.1038/sdata.2018.110">MEG</a>,
+<a class="reference external" href="https://doi.org/10.31234/osf.io/63a4y">EEG</a> and
+<a class="reference external" href="https://doi.org/10.31234/osf.io/r7vc2">iEEG</a>, or the
+<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1005209">BIDS-Apps</a> paper that should be
+referenced if you’re using data of that type.</p>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="folder_hierarchy.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">the BIDS folder hierarchy</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By The BIDS community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

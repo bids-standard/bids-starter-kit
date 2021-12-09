@@ -1,9 +1,0 @@
-{
-    "HardwareFilters": {
-        "Highpass RC filter": {
-            "Half amplitude cutoff (Hz)": 0.0159,
-            "Roll-off": "6dB/Octave"
-        }
-    },
-    "SoftwareFilters": "n/a"
-}

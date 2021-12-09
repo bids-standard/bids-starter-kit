@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>creating an iEEG dataset in BIDS &#8212; BIDS starter kit</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scaling" href="asl.html" />
+    <link rel="prev" title="BIDS Tutorial Series" href="tutorials.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome to the BIDS Starter Kit
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hierarchy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folder_hierarchy.html">
+   the BIDS folder hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metadata_file_formats.html">
+   Metadata and file formats
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials.html">
+   BIDS Tutorial Series
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   creating an iEEG dataset in BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="asl.html">
+   Scaling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pet.html">
+   PET to BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials_faq.html">
+   Example dataset permission error
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dataset_examples.html">
+   BIDS data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../talks.html">
+   Talks and slides about BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publications.html">
+   Publications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dependencies.html">
+   BIDS Dependencies List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../links.html">
+   A collection of links to useful code / other repositories relevant to BIDS
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../validator.html">
+   BIDS validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apps.html">
+   What is a BIDS App?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   BIDS jargon busting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact.html">
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorials/ieeg.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bids-standard/bids-starter-kit"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ftutorials/ieeg.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/tutorials/ieeg.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-folder-structure">
+   Step 1: Folder structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-add-raw-ieeg-data">
+   Step 2. Add raw iEEG data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3-add-ieeg-amplifier-metadata">
+   Step 3. Add iEEG amplifier metadata
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-4-add-electrode-specific-metadata">
+   Step 4. Add electrode-specific metadata
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-5-add-optional-metadata">
+   Step 5. Add optional metadata
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-6-validate-the-ieeg-bids-data">
+   Step 6. Validate the iEEG-BIDS data
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="creating-an-ieeg-dataset-in-bids">
+<h1>creating an iEEG dataset in BIDS<a class="headerlink" href="#creating-an-ieeg-dataset-in-bids" title="Permalink to this headline">¶</a></h1>
+<p>Here, we briefly describe the first steps in creating an iEEG dataset in BIDS
+format. The process can be summarized by the following main steps:</p>
+<ol class="simple">
+<li><p>structure your files in the proper folder hierarchy</p></li>
+<li><p>rename files such that they adhere to the BIDS naming specification,</p></li>
+<li><p>extract the necessary metadata from your raw data and experimental notes</p></li>
+<li><p>add electrode-specific information needed for localization</p></li>
+</ol>
+<div class="section" id="step-1-folder-structure">
+<h2>Step 1: Folder structure<a class="headerlink" href="#step-1-folder-structure" title="Permalink to this headline">¶</a></h2>
+<p>At the highest level, BIDS is a specification for how to structure your files in
+folders, and how to name files such that one can easily infer their contents.
+Thus, the first step is to create the proper folder/file hierarchies, which
+looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
+└── subject
+    └── session
+        └── acquisition
+</pre></div>
+</div>
+<p>The top level (project) of a BIDS folder must contain a dataset_description.json
+file, a README, and a CHANGES file. In addition, there are a set of sub-folders,
+one per subject, that contain all data from a given subject. These must be named
+according to the convention “sub-<label>”. Within these folders there is an
+optional “session” folder (called “ses-<label>”) and finally a collection of
+“acquisition folders” that correspond to datasets from different modalities
+(such as functional imaging, EEG, and iEEG data) that corresponds to this
+dataset. In our example, there is a folder called “ieeg” that stores all iEEG
+data for the subject, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>iEEGProject
+├── dataset_description.json
+├── participants.tsv
+├── README
+├── CHANGES
+├── sub-01
+│   ├── anat
+│   │   └── sub-01_T1w.nii.gz
+│   └── ieeg
+│       ├── sub-01_task-visualtask_run-01_ieeg.edf
+│       ├── sub-01_task-visualtask_run-01_ieeg.json
+│       ├── sub-01_task-visualtask_run-01_channels.tsv
+│       ├── sub-01_task-visualtask_run-01_events.tsv
+│       ├── sub-01_electrodes.tsv
+│       └── sub-01_coordsystem.tsv
+├── sub-02
+│   ├── anat
+│   │   └── sub-02_T1w.nii.gz
+│   └── ieeg
+│       ├── sub-02_task-visualtask_run-01_ieeg.edf
+│       ├── sub-02_task-visualtask_run-01_ieeg.json
+│       ├── sub-02_task-visualtask_run-01_channels.tsv
+│       ├── sub-02_task-visualtask_run-01_events.tsv
+│       ├── sub-02_electrodes.tsv
+│       └── sub-02_cooordsystem.tsv
+...
+└── visualtask_ieeg.json
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-add-raw-ieeg-data">
+<h2>Step 2. Add raw iEEG data<a class="headerlink" href="#step-2-add-raw-ieeg-data" title="Permalink to this headline">¶</a></h2>
+<p>Once a folder hierarchy is defined, the folders can be populated with the
+correct files. Here we focus on the files relevant for iEEG data. Within the
+“ieeg” folder, we first copy the raw iEEG data and renamed such that they adhere
+to the BIDS file naming scheme (for example:
+“sub-<subjectlabel>_ses-<sessionlabel>_task-<tasklabel>_run-<runlabel>_ieeg.<extension>”).
+These data are unprocessed and can have one of several file formats (for
+example: BrainVision and EDF formats are supported, NWB, EEGLab and MEF3 formats
+are allowed).</p>
+</div>
+<div class="section" id="step-3-add-ieeg-amplifier-metadata">
+<h2>Step 3. Add iEEG amplifier metadata<a class="headerlink" href="#step-3-add-ieeg-amplifier-metadata" title="Permalink to this headline">¶</a></h2>
+<p>BIDS datasets should specify all of the metadata needed to analyze and
+understand a dataset, and these are all contained within text-based JavaScript
+Object Notation (JSON, field-value) and Tab Separated Value (TSV) metadata
+files. The iEEG amplifier metadata are stored for each run in a JSON file with
+the same name structure as the raw data (<raw-data-filename>_ieeg.json) and a
+TSV file with amplifier metadata (<raw-data-filename>_channels.tsv).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_ieeg.json</span></code>: contains the metadata that are the same for
+all the data in this run, such as the task name and description, the
+amplifier brand, and where the experiments were performed. Download a
+template in the bids-starter-kit
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_ieeg.json">here</a>
+or find the Matlab script to more automatically populate the required fields
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_ieeg_json.m">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_channels.tsv</span></code>: The TSV file contains all the settings
+that differ between iEEG channels such as the units and type of channel
+(ECOG, SEEG, ECG, EMG, EOG and so on). Download a template in the
+bids-starter-kit
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_channels.tsv">here</a>
+or find the Matlab script to more automatically populate the required fields
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_channels_tsv.m">here</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="step-4-add-electrode-specific-metadata">
+<h2>Step 4. Add electrode-specific metadata<a class="headerlink" href="#step-4-add-electrode-specific-metadata" title="Permalink to this headline">¶</a></h2>
+<p>In iEEG recordings, each channel in the amplifier is sampled from a specific
+electrode implanted in the brain. The metadata on the type of electrodes and
+their coordinates is stored in a TSV file with a row for each metallic electrode
+contact (_electrodes.tsv). The names of each electrode are used in the
+amplifier metadata to specify the recorded channel and reference to link these
+two files. In order to interpret the position of each electrode, the coordinate
+system is defined in a JSON file (_coordsystem.json). The _coordsystem.json
+file specifies a reference image file, which can be an MRI, surface rendering,
+standard space (for example: MNI) or operative photo, such that electrode
+positions can be displayed. In addition, any raw data collected for the purpose
+of localizing electrodes is stored in a corresponding anatomy folder (called
+“anat”) that lives at the same folder level as the “ieeg” folder. This can
+contain files like structural volume data or electrode placement photos.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_electrodes.tsv</span></code>: Download a template in the bids-starter-kit
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_electrodes.tsv">here</a>
+or find the Matlab script to more automatically populate the required fields
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/blob/main/matlabCode/ieeg/createBIDS_electrodes_tsv.m">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_coordsystem.json</span></code>: Download a template in the bids-starter-kit
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_coordsystem.json">here</a>
+or find the Matlab script to more automatically populate the required fields
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_coordsystem_json.m">here</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="step-5-add-optional-metadata">
+<h2>Step 5. Add optional metadata<a class="headerlink" href="#step-5-add-optional-metadata" title="Permalink to this headline">¶</a></h2>
+<p>There are several optional data types that can be stored in BIDS. The way in
+which events, stimuli, continuous physiology data, and participant information
+are stored is the same as for BIDS MRI data. These optional metadata are stored
+within TSV and JSON files as well as any task-specific stimulation files (for
+example: photos or sounds that were presented to the subject during the task, or
+videos of the subject and experimental setup). Some examples are shown here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>iEEGProject
+├── dataset_description.json
+├── participants.tsv
+├── README
+├── CHANGES
+├── sub-01
+│   ├── stimuli
+│   │   └── PresentedPhoto1.png
+│   │   └── PresentedSound1.wav
+│   └── ieeg
+│       ├── sub-01_photo.jpg
+│       ├── sub-01_task-visualtask_run-01_physio.tsv.gz
+│       ├── sub-01_task-visualtask_run-01_physio.json
+│       ├── sub-01_task-visualtask_run-01_stim.tsv.gz
+│       ├── sub-01_task-visualtask_run-01_stim.json
+...
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-6-validate-the-ieeg-bids-data">
+<h2>Step 6. Validate the iEEG-BIDS data<a class="headerlink" href="#step-6-validate-the-ieeg-bids-data" title="Permalink to this headline">¶</a></h2>
+<p>In order to verify that a dataset adheres to the BIDS specification, we need to
+validate the structure, naming conventions, and information inside the dataset.
+The <a class="reference external" href="https://github.com/bids-standard/bids-validator">BIDS validator</a> is a web-
+and command line-based tool that can validate whether a dataset is BIDS
+compliant. As a part of the iEEG extension to the BIDS specification, this
+validator has been updated to check for new conventions related to iEEG data.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tutorials.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">BIDS Tutorial Series</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="asl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Scaling</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By The BIDS community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

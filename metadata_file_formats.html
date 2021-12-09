@@ -1,0 +1,854 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metadata and file formats &#8212; BIDS starter kit</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="BIDS Tutorial Series" href="tutorials/tutorials.html" />
+    <link rel="prev" title="the BIDS folder hierarchy" href="folder_hierarchy.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Welcome to the BIDS Starter Kit
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Hierarchy
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="folder_hierarchy.html">
+   the BIDS folder hierarchy
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Metadata and file formats
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/tutorials.html">
+   BIDS Tutorial Series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/ieeg.html">
+   creating an iEEG dataset in BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/asl.html">
+   Scaling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/pet.html">
+   PET to BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/tutorials_faq.html">
+   Example dataset permission error
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dataset_examples.html">
+   BIDS data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="talks.html">
+   Talks and slides about BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="publications.html">
+   Publications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dependencies.html">
+   BIDS Dependencies List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="links.html">
+   A collection of links to useful code / other repositories relevant to BIDS
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="validator.html">
+   BIDS validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="apps.html">
+   What is a BIDS App?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   BIDS jargon busting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contact.html">
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/metadata_file_formats.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bids-standard/bids-starter-kit"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Fmetadata_file_formats.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/metadata_file_formats.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Metadata and file formats
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#json-files">
+     JSON Files
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#online">
+     Online
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matlab-octave">
+     Matlab / Octave
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reading-a-json-file">
+       Reading a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .json
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#writing-a-json-file">
+       Writing a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .json
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     Python
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Reading a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .json
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Writing a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .json
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#r">
+     R
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#installing-required-package">
+       Installing required package
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Reading a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .json
+        </span>
+       </code>
+       file:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Writing a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .json
+        </span>
+       </code>
+       file:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tsv-files">
+   TSV files
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matlab">
+     Matlab
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reading-a-tsv-file">
+       Reading a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .tsv
+        </span>
+       </code>
+       file:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#writing-a-tsv-file">
+       Writing a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .tsv
+        </span>
+       </code>
+       file:
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id5">
+         Matlab
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#octave">
+         Octave
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Python
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Reading a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .tsv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Writing a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .tsv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excel">
+     Excel
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     R
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Reading a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .tsv
+        </span>
+       </code>
+       file:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Writing a
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .tsv
+        </span>
+       </code>
+       file:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="metadata-and-file-formats">
+<h1>Metadata and file formats<a class="headerlink" href="#metadata-and-file-formats" title="Permalink to this headline">¶</a></h1>
+<p>Metadata are stored in .json and .tsv files. These files are language-agnostic,
+meaning you can work with them in, for example: Python, Matlab, or R. This page
+covers common ways to read/write these files in common languages for
+neuroscience analysis. More extensive example templates for creating these BIDS
+metadata files can be found in the
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode">Matlab code templates</a>
+and
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/pythonCode">Python code templates</a></p>
+<div class="section" id="json-files">
+<h2>JSON Files<a class="headerlink" href="#json-files" title="Permalink to this headline">¶</a></h2>
+<p>JSON files are text files that take the following structure:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="nt">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span> <span class="nt">&quot;key3&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;subkey1&quot;</span><span class="p">:</span> <span class="s2">&quot;subvalue1&quot;</span> <span class="p">}</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that they can be nested (curly brackets within curly brackets). Here are
+some common ways to read / write these files.</p>
+</div>
+<div class="section" id="online">
+<h2>Online<a class="headerlink" href="#online" title="Permalink to this headline">¶</a></h2>
+<p>To read/write JSON online, we recommend the following website:</p>
+<p><a class="reference external" href="http://jsoneditoronline.org/">http://jsoneditoronline.org/</a></p>
+</div>
+<div class="section" id="matlab-octave">
+<h2>Matlab / Octave<a class="headerlink" href="#matlab-octave" title="Permalink to this headline">¶</a></h2>
+<p>There are many toolboxes in Matlab for reading / writing JSON files.</p>
+<p>Since MATLAB R2016b, you can use the built-in functions <code class="docutils literal notranslate"><span class="pre">jsonencode</span></code> (to write)
+and <code class="docutils literal notranslate"><span class="pre">jsondecode</span></code> (to read) JSON files. Hopefully they should be available in
+Octave 6.1 next year.</p>
+<p>The <a class="reference external" href="https://github.com/gllmflndn/JSONio">JSONio library</a> will allow you to read
+and write JSON files with matlab and octave (see examples below to use
+<code class="docutils literal notranslate"><span class="pre">jsonwrite</span></code> and <code class="docutils literal notranslate"><span class="pre">jsonread</span></code>).</p>
+<p>SPM12 uses the JSONio library by calling <code class="docutils literal notranslate"><span class="pre">spm_jsonwrite</span></code> and <code class="docutils literal notranslate"><span class="pre">spm_jsonread</span></code> and
+it has
+<a class="reference external" href="https://en.wikibooks.org/wiki/SPM/BIDS">other interesting functions to help you with BIDS</a>.</p>
+<p><a class="reference external" href="https://github.com/bids-standard/bids-matlab">bids-matlab</a> has 2 functions
+(<code class="docutils literal notranslate"><span class="pre">bids.util.jsonencode</span></code> and <code class="docutils literal notranslate"><span class="pre">bids.util.decode</span></code>) that act as wrappers and will
+use whatever implementation (SPM, JSONio, MATLAB) is available.</p>
+<p>The examples below are for the
+<a class="reference external" href="https://github.com/gllmflndn/JSONio">JSONio library</a>:</p>
+<div class="section" id="reading-a-json-file">
+<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#reading-a-json-file" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">jsonread</span><span class="p">([</span><span class="n">filename</span><span class="p">])</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="writing-a-json-file">
+<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#writing-a-json-file" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;./&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">project</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sub_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">ses_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">acquisition</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;anat&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">anat_json_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="n">project</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="s">&#39;ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
+<span class="w">        </span><span class="n">acquisition</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="w"> </span><span class="s">&#39;_ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="w"> </span><span class="s">&#39;_T1W.json&#39;</span><span class="p">]);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c">% Assign the fields in the Matlab structure that can be saved as a json:</span><span class="w"></span>
+<span class="w">    </span><span class="n">anat_json</span><span class="p">.</span><span class="n">Manufacturer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;GE&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">anat_json</span><span class="p">.</span><span class="n">ManufacturersModelName</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="s">&#39;Discovery MR750&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">anat_json</span><span class="p">.</span><span class="n">MagneticFieldStrength</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">anat_json</span><span class="p">.</span><span class="n">PulseSequence</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;T1 weighted SPGR&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">json_options</span><span class="p">.</span><span class="n">indent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;    &#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% this makes the json look pretier when opened in a txt editor</span><span class="w"></span>
+<span class="w">    </span><span class="n">jsonwrite</span><span class="p">(</span><span class="n">loc_json_name</span><span class="p">,</span><span class="n">anat_json</span><span class="p">,</span><span class="n">json_options</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>In Python, JSON support is built into the core library, meaning you don’t need
+to install anything to read/write JSON files. In addition, the structure of JSON
+is almost identical to that of Python dictionaries (assuming you are only
+storing text / numbers in the dictionary). To that extent.</p>
+<div class="section" id="id1">
+<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;myfile.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ff</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">ff</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;field1&#39;</span><span class="p">:</span> <span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;field2&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;field3&#39;</span><span class="p">:</span> <span class="s1">&#39;field3&#39;</span><span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_output_file.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ff</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ff</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="r">
+<h2>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h2>
+<p>There is a new package to help intract with BIDS datasets:
+<a class="reference external" href="https://github.com/bbuchsbaum/bidser">https://github.com/bbuchsbaum/bidser</a></p>
+<p>There are several packages for reading and writing JSON files from R. In this
+example, we will be using jsonlite. Remember to install and call a package
+before using it.</p>
+<p><a class="reference external" href="https://github.com/jeroen/jsonlite">https://github.com/jeroen/jsonlite</a></p>
+<div class="section" id="installing-required-package">
+<h3>Installing required package<a class="headerlink" href="#installing-required-package" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span>    <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;jsonlite&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span>    <span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="nf">fromJSON</span><span class="p">(</span><span class="s">&#39;myfile.json&#39;</span><span class="p">,</span> <span class="n">pretty</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span>    <span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s">&#39;{&quot;field1&quot;: &quot;value1&quot;, &quot;field2&quot;: 3, &quot;field3&quot;: &quot;field3&quot;}&#39;</span>
+    <span class="nf">writeLines</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s">&quot;myData.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tsv-files">
+<h1>TSV files<a class="headerlink" href="#tsv-files" title="Permalink to this headline">¶</a></h1>
+<p>A Tab-Separate Values (TSV) file is a text file where tab characters (<code class="docutils literal notranslate"><span class="pre">\t</span></code>)
+separate fields that are in the file. It is structured as a table, with each
+column representing a field of interest, and each row representing a single
+datapoint.</p>
+<p>Below are ways to read / write TSV files in common languages.</p>
+<div class="section" id="matlab">
+<h2>Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="reading-a-tsv-file">
+<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#reading-a-tsv-file" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">readtable</span><span class="p">([</span><span class="n">filename</span><span class="p">],</span><span class="w"></span>
+<span class="w">               </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">               </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">               </span><span class="s">&#39;TreatAsEmpty&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;N/A&#39;</span><span class="p">,</span><span class="s">&#39;n/a&#39;</span><span class="p">}</span><span class="w"></span>
+<span class="w">             </span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="writing-a-tsv-file">
+<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#writing-a-tsv-file" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>Matlab<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span> <span class="o">=</span> <span class="s1">&#39;MyRootDir&#39;</span><span class="p">;</span>
+<span class="n">bidsProject</span> <span class="o">=</span> <span class="s1">&#39;temp&#39;</span><span class="p">;</span>
+<span class="n">bids_particpants_name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;participants.tsv&#39;</span><span class="p">];</span>
+
+<span class="n">participant_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sub-01&#39;</span><span class="p">;</span> <span class="s1">&#39;sub-02&#39;</span><span class="p">];</span> <span class="o">%</span> <span class="n">onsets</span> <span class="ow">in</span> <span class="n">seconds</span>
+<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span> <span class="mi">30</span><span class="p">]</span><span class="s1">&#39;;</span>
+<span class="n">sex</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">;</span><span class="s1">&#39;f&#39;</span><span class="p">];</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">table</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">sex</span><span class="p">);</span>
+<span class="n">writetable</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">bidsProject</span><span class="p">,</span> <span class="n">bids_particpants_name</span><span class="p">),</span>
+              <span class="s1">&#39;FileType&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Delimiter&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="octave">
+<h4>Octave<a class="headerlink" href="#octave" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">writetable</span></code> function is not implemented in older version of Octave (e.g
+4.2.2) and the <code class="docutils literal notranslate"><span class="pre">table</span></code> function differs from its matlab counterpart. These are
+still in development for future
+<a class="reference external" href="https://github.com/apjanke/octave-tablicious">releases</a> so some of the scripts
+provided in the BIDS starter-kit repository in the matlab code folder to create
+.tsv might not work with octave because of that reason.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Python<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>In Python, the easiest way to work with TSV files is to use the Pandas library.
+This provides a high-level structure to organize, manipulate, clean, and
+visualize tabular data. You can install <code class="docutils literal notranslate"><span class="pre">pandas</span></code> with the following command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
+<div class="section" id="id7">
+<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>There are many ways to read a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file in Pandas. One option is the
+following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./ds001/participants.tsv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that this function will default to using <code class="docutils literal notranslate"><span class="pre">,</span></code> as a delimiter, so we
+explicitly give it the tab character.</p>
+</div>
+<div class="section" id="id8">
+<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>You can write to a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file using the <code class="docutils literal notranslate"><span class="pre">to_csv</span></code> method of a pandas DataFrame:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./ds001/participants.tsv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add an extra column for demonstration</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;subject_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+
+<span class="c1"># Show contents of the dataframe</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+    <span class="n">Out</span><span class="p">:</span>
+          <span class="n">participant_id</span> <span class="n">sex</span>  <span class="n">age</span>  <span class="n">subject_id</span>
+    <span class="mi">0</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">01</span>   <span class="n">F</span>   <span class="mi">26</span>           <span class="mi">0</span>
+    <span class="mi">1</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">02</span>   <span class="n">M</span>   <span class="mi">24</span>           <span class="mi">1</span>
+    <span class="mi">2</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">03</span>   <span class="n">F</span>   <span class="mi">27</span>           <span class="mi">2</span>
+    <span class="mi">3</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">04</span>   <span class="n">F</span>   <span class="mi">20</span>           <span class="mi">3</span>
+    <span class="mi">4</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">05</span>   <span class="n">M</span>   <span class="mi">22</span>           <span class="mi">4</span>
+
+<span class="c1"># Save as a CSV file</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;my_new_file.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="excel">
+<h2>Excel<a class="headerlink" href="#excel" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Create a file with the following columns (at least, for other values see
+paragraph the
+<a class="reference external" href="https://bids-specification.readthedocs.io/en/latest/03-modality-agnostic-files.html#participants-file">BIDS spec</a>)</p>
+<ul>
+<li><p>participant_id</p></li>
+<li><p>age</p></li>
+<li><p>sex</p></li>
+</ul>
+</li>
+<li><p>Save as tab separated <code class="docutils literal notranslate"><span class="pre">.txt</span></code> and change extension to <code class="docutils literal notranslate"><span class="pre">.tsv</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h2>R<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Reading and writing tab separated files comes natively in R, no need for extra
+packages.</p>
+<div class="section" id="id10">
+<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>In this example, we assume the .tsv includes column names (headers), and
+explicitly set column separator (delimitor) to tab (‘\t’)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;myFile.tsv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>When writing files, column and row names are always saved, we remove row names,
+and quotes from the outpur explicitly by setting them to FALSE.</p>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="nf">cbind.data.frame</span><span class="p">(</span>
+  <span class="n">participant_id</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;sub-01&#39;</span><span class="p">,</span> <span class="s">&#39;sub-02&#39;</span><span class="p">),</span>
+  <span class="n">age</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">30</span><span class="p">),</span>
+  <span class="n">sex</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;m&#39;</span><span class="p">,</span><span class="s">&#39;f&#39;</span><span class="p">))</span>
+
+<span class="nf">write.table</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s">&#39;myData.tsv&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;\t&#39;</span><span class="p">,</span>
+  <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">quote</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="folder_hierarchy.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">the BIDS folder hierarchy</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tutorials/tutorials.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">BIDS Tutorial Series</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By The BIDS community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
