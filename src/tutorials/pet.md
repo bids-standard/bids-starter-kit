@@ -26,9 +26,11 @@ as follows:
     used below to convert the imaging data from a PET dataset into nifti format.
     The Turku PET Centre site can be found [here](https://turkupand so
     onentre.fi/) for additional information on anything PET.
--   a [BIDS PET Template](../templates) from this starter kit to initially
-    populate and translate text/tabulature/csv blood data into BIDS PET
-    compliant `.tsv` and `.json` files.
+-   a
+    [BIDS PET Template](https://github.com/bids-standard/bids-starter-kit/tree/main/templates)
+    from this starter kit to initially populate and translate
+    text/tabulature/csv blood data into BIDS PET compliant `.tsv` and `.json`
+    files.
 -   [dcm2niix](https://github.com/rordenlab/dcm2niix) can be used if your raw
     pet data happens to be in a dicom format. Additionally this opens up the use
     of tools such as [dcmdump](https://support.dcmtk.org/docs/dcmdump.html) from
@@ -55,14 +57,16 @@ OldNotBidsPETDataSet/
 ```
 
 By the end of this document our starting dataset will be fully bids compliant
-and resemble the dataset seen [here]() in the bids spec.
+and similar to the dataset seen
+[here](https://github.com/bids-standard/bids-examples/tree/master/pet001).
 
 ### Setting the layout
 
 This starter kit provides several template/example files that can be a great
 starting place to help get set up for the conversion process. PET specific text
-data files can be viewed at [this location](../templates/sub-01/ses-01/pet). And
-easily collected via this
+data files can be viewed at
+[this location](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/pet).
+And easily collected via this
 [link](https://github.com/bids-standard/bids-starter-kit/archive/refs/heads/main.zip)
 or be cloned and extracted via git at the command line via:
 

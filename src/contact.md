@@ -1,3 +1,5 @@
+# Contact
+
 We have lots of different ways of staying in touch!
 
 **Our preferred way to answer questions** is via our forum
@@ -9,15 +11,13 @@ somebody else will too, and this way we can avoid answering the same question
 multiple times. Even if your question is not well-defined, just post what you
 have so far and we will be able to point you in the right direction!
 
----
-
 You can also come chat on the
 [Brainhack mattermost](https://mattermost.brainhack.org/):
 
-- on the
+-   on the
     [`~bids_general`](https://mattermost.brainhack.org/brainhack/channels/bids_general)
     channel
-- or on the
+-   or on the
     [`~starter-kit`](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit)
 
 We'd love for you to join the mailing list (bids-discussion@googlegroups.com,

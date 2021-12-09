@@ -1,4 +1,4 @@
-**A collection of links to useful code / other repositories relevant to BIDS**
+# A collection of links to useful code / other repositories relevant to BIDS
 
 ## Converting to BIDS using Python
 
@@ -6,23 +6,15 @@
 format, see the installation instructions
 [here](https://github.com/nejaz1/bidsify)
 
-<br>
-
 [bidskit](https://github.com/jmtyszka/bidskit) - convert from DICOM to BIDS and
 NDAR-compliant formats
-
-<br>
 
 [Dcm2Bids](https://github.com/cbedetti/Dcm2Bids) - reorganise NIfTI files from
 dcm2niix into BIDS
 
-<br>
-
 [BIDS tools](https://github.com/robertoostenveld/bids) - some command-line tools
 to support a general BIDS workflow and some
 [Donders](https://www.ru.nl/donders/) specific documentation
-
-<br>
 
 ## Converting to BIDS using MATLAB
 
@@ -34,8 +26,6 @@ function to convert existing MEG, EEG, iEEG but also MRI datasets to BIDS. See
 
 [bids-matlab](https://github.com/bids-standard/bids-matlab) - functions that
 allow you to crawl through your BIDS dataset and get info about it
-
-<br>
 
 ## SPM
 

@@ -1,3 +1,5 @@
+# Talks and slides about BIDS
+
 **This is a collection of resources from the community including slideshows /
 presentations / graphics / and so on.**
 

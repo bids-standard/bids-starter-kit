@@ -8,7 +8,7 @@ below. Feel free to choose whichever one you are most comfortable with!
 Please note that for each choice of language, the additional listed packages are
 required to work with BIDS.
 
-### Text editors
+## Text editors
 
 Code can be written in anything from Notepad(Windows) to TextEdit(macOS) to
 vim(Linux).
@@ -19,7 +19,7 @@ some parts of programming.
 One that's free and easy to use is Atom: <https://atom.io/>. It'll work for all
 the languages below!
 
-### MATLAB / Octave (Free, open source equivalent)
+## MATLAB / Octave (Free, open source equivalent)
 
 **_MATLAB Information_**: <https://www.mathworks.com/products/matlab.html>
 
@@ -29,7 +29,7 @@ Required JSON package **JSONio**
 
     Install Link: https://github.com/gllmflndn/JSONio
 
-### Python
+## Python
 
 **_Information_**: <https://www.python.org/> (Both Python 2 and 3 will work for
 BIDS)
@@ -43,7 +43,7 @@ just want the data analysis library.
 
     Install Link: https://pandas.pydata.org/
 
-### R
+## R
 
 **_Information_**: <https://www.r-project.org/>
 

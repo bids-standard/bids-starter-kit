@@ -11,34 +11,7 @@ and it should be in the repository.
 Ideally the questions will link to an answer elsewhere in the repository to
 maximise the different ways of finding out more about BIDS.
 
--   [General questions](#general-questions)
-
-    -   [What is a `json` file?](#what-is-a-json-file)
-    -   [What does [this word] mean?](#what-does-this-word-mean)
-    -   [How to specify the micro sign in Matlab?](#how-to-specify-the-micro-sign-in-matlab)
-    -   [Is your data type not covered in the current BIDS specification?](#is-your-data-type-not-covered-in-the-current-bids-specification)
-    -   [Can I import an Excel file with participants information?](#how-to-import-excel-files)
-
--   [MRI specific questions](#mri-specific-questions)
-
-    -   [How can I anonymize the structural image of my data set? What defacing tools can I use?](#what-defacing-tools-can-i-use)
-
--   [EEG specific questions](#eeg-specific-questions)
-
-    -   [How to format Hardware and Software filter fields in a .json?](#how-to-format-hardware-and-software-filter-fields-in-a-json)
-    -   [How to specify EEGReference and EEGGround for Biosemi referencing scheme?](#how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme)
-    -   [How to specify units in microVolt?](#how-to-specify-units-in-microVolt)
-
--   [BIDS and NWB](#BIDS-NWB)
-
-    -   [Are BIDS and NWB compatible?](#are-bids-and-nwb-compatible)
-    -   [How to combine BIDS and NWB?](#how-to-combine-bids-and-nwb)
-
--   [Phenotypes](#Phenotypes)
-    -   [How to store subject phenotypes?](#how-to-store-subject-phenotypes)
-    -   [Is there a standard for epilepsy phenotypes?](#is-there-a-standard-for-epilepsy-phenotypes)
-
-# General questions
+## General questions
 
 ### What is a `json` file?
 
@@ -95,7 +68,7 @@ If you want to keep track of what data was acquired when you can use the
 For some examples, see this
 [issue in the bids-starter kit](https://github.com/bids-standard/bids-starter-kit/issues/193).
 
-# MRI specific questions
+## MRI specific questions
 
 ### What defacing tools can I use?
 
@@ -119,7 +92,7 @@ Otherwise you can also use:
 -   SPM8 and SPM12: when in the batch editor fo to --> SPM menu --> Util -->
     De-face
 
-# EEG specific questions
+## EEG specific questions
 
 ### How to format Hardware and Software filter fields in a .json?
 
@@ -140,7 +113,7 @@ the data. Generally, there are two accepted formats for that:
 
 For a formatted example on how to deal with this in the BIDS context, please see
 this
-[template](https://github.com/bids-standard/bids-starter-kit/blob/master/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-FilterExample_eeg.json).
+[template](https://github.com/bids-standard/bids-starter-kit/blob/main/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-FilterExample_eeg.json).
 
 ### How to specify EEGReference and EEGGround for Biosemi referencing scheme?
 
@@ -155,7 +128,7 @@ electrode. This is the case for Biosemi, as further documented on
 
 For a formatted example on how to deal with this in the BIDS context, please see
 this
-[template](https://github.com/bids-standard/bids-starter-kit/blob/master/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-ReferenceExample_eeg.json).
+[template](https://github.com/bids-standard/bids-starter-kit/blob/main/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-ReferenceExample_eeg.json).
 
 ### How to specify units in microVolt?
 
@@ -163,7 +136,7 @@ BIDS requires physical units to be specified according to the SI unit symbol and
 possibly prefix symbol (for example: mV, μV for milliVolt and microVolt). In
 Matlab use `native2unicode(181,'latin1')` to get the correct symbol for micro.
 
-# BIDS and NWB
+## BIDS and NWB
 
 ### Are BIDS and NWB compatible?
 
@@ -185,7 +158,7 @@ The same subject can have another session (CCC) with raw fMRI data in BIDS:
 /sub-AAA/ses-CCC/func/sub-AAA_ses-CCC_task-rest_bold.nii.gz
 ```
 
-# Phenotypes
+## Phenotypes
 
 ### How to store subject phenotypes?
 
@@ -196,6 +169,6 @@ In the phenotype folder, according to the details provided for
 ### Is there a standard for epilepsy phenotypes?
 
 Yes, open this
-[epilepsyClassification2017](https://github.com/bids-standard/bids-starter-kit/blob/master/interactiveTreeVisualization/epilepsyClassification2017/tree.html)
+[epilepsyClassification2017](https://github.com/bids-standard/bids-starter-kit/blob/main/interactiveTreeVisualization/epilepsyClassification2017/tree.html)
 and follow the examples in the
-[phenotype templates](https://github.com/bids-standard/bids-starter-kit/tree/master/templates/phenotype).
+[phenotype templates](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/phenotype).

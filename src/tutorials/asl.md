@@ -1,4 +1,4 @@
-### Scaling
+# Scaling
 
 This paragraph discusses the specific scaling issues for GE, Philips, and
 Siemens. Beware that these issues are occurring at the time of the release of

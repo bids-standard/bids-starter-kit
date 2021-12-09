@@ -1,3 +1,5 @@
+# creating an iEEG dataset in BIDS
+
 Here, we briefly describe the first steps in creating an iEEG dataset in BIDS
 format. The process can be summarized by the following main steps:
 
@@ -6,7 +8,7 @@ format. The process can be summarized by the following main steps:
 3. extract the necessary metadata from your raw data and experimental notes
 4. add electrode-specific information needed for localization
 
-### Step 1: Folder structure
+## Step 1: Folder structure
 
 At the highest level, BIDS is a specification for how to structure your files in
 folders, and how to name files such that one can easily infer their contents.
@@ -60,7 +62,7 @@ iEEGProject
 └── visualtask_ieeg.json
 ```
 
-### Step 2. Add raw iEEG data
+## Step 2. Add raw iEEG data
 
 Once a folder hierarchy is defined, the folders can be populated with the
 correct files. Here we focus on the files relevant for iEEG data. Within the
@@ -71,7 +73,7 @@ These data are unprocessed and can have one of several file formats (for
 example: BrainVision and EDF formats are supported, NWB, EEGLab and MEF3 formats
 are allowed).
 
-### Step 3. Add iEEG amplifier metadata
+## Step 3. Add iEEG amplifier metadata
 
 BIDS datasets should specify all of the metadata needed to analyze and
 understand a dataset, and these are all contained within text-based JavaScript
@@ -84,18 +86,18 @@ TSV file with amplifier metadata (<raw-data-filename>\_channels.tsv).
     all the data in this run, such as the task name and description, the
     amplifier brand, and where the experiments were performed. Download a
     template in the bids-starter-kit
-    [here](../templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_ieeg.json)
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_ieeg.json)
     or find the Matlab script to more automatically populate the required fields
-    [here](../matlabCode/ieeg/createBIDS_ieeg_json.m).
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_ieeg_json.m).
 -   `<raw-data-filename>_channels.tsv`: The TSV file contains all the settings
     that differ between iEEG channels such as the units and type of channel
     (ECOG, SEEG, ECG, EMG, EOG and so on). Download a template in the
     bids-starter-kit
-    [here](../templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_channels.tsv)
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_channels.tsv)
     or find the Matlab script to more automatically populate the required fields
-    [here](../matlabCode/ieeg/createBIDS_ieeg_channels_tsv.m).
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_channels_tsv.m).
 
-### Step 4. Add electrode-specific metadata
+## Step 4. Add electrode-specific metadata
 
 In iEEG recordings, each channel in the amplifier is sampled from a specific
 electrode implanted in the brain. The metadata on the type of electrodes and
@@ -112,15 +114,15 @@ of localizing electrodes is stored in a corresponding anatomy folder (called
 contain files like structural volume data or electrode placement photos.
 
 -   `_electrodes.tsv`: Download a template in the bids-starter-kit
-    [here](../templates/sub-01/ses-01/ieeg/sub-01_ses-01_electrodes.tsv) or find
-    the Matlab script to more automatically populate the required fields
-    [here](../matlabCode/ieeg/createBIDS_ieeg_electrodes_tsv.m).
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_electrodes.tsv)
+    or find the Matlab script to more automatically populate the required fields
+    [here](https://github.com/bids-standard/bids-starter-kit/blob/main/matlabCode/ieeg/createBIDS_electrodes_tsv.m).
 -   `_coordsystem.json`: Download a template in the bids-starter-kit
-    [here](../templates/sub-01/ses-01/ieeg/sub-01_ses-01_coordsystem.json) or
-    find the Matlab script to more automatically populate the required fields
-    [here](../matlabCode/ieeg/createBIDS_ieeg_coordsystem_json.m).
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_coordsystem.json)
+    or find the Matlab script to more automatically populate the required fields
+    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_coordsystem_json.m).
 
-### Step 5. Add optional metadata
+## Step 5. Add optional metadata
 
 There are several optional data types that can be stored in BIDS. The way in
 which events, stimuli, continuous physiology data, and participant information
@@ -148,7 +150,7 @@ iEEGProject
 ...
 ```
 
-### Step 6. Validate the iEEG-BIDS data
+## Step 6. Validate the iEEG-BIDS data
 
 In order to verify that a dataset adheres to the BIDS specification, we need to
 validate the structure, naming conventions, and information inside the dataset.
