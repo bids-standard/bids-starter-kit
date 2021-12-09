@@ -1,3 +1,5 @@
+# Metadata and file formats
+
 Metadata are stored in .json and .tsv files. These files are language-agnostic,
 meaning you can work with them in, for example: Python, Matlab, or R. This page
 covers common ways to read/write these files in common languages for
@@ -7,10 +9,13 @@ metadata files can be found in the
 and
 [Python code templates](https://github.com/bids-standard/bids-starter-kit/tree/master/pythonCode)
 
-# JSON Files
+## JSON Files
 
 JSON files are text files that take the following structure:
-`{'key': 'value', 'key2': 'value2', 'key3': {'subkey1': 'subvalue1'}}`.
+
+```json
+{ "key": "value", "key2": "value2", "key3": { "subkey1": "subvalue1" } }
+```
 
 Note that they can be nested (curly brackets within curly brackets). Here are
 some common ways to read / write these files.
@@ -94,7 +99,6 @@ with open('myfile.json', 'r') as ff:
 ### Writing a `.json` file
 
 ```python
-
 import json
 data = {'field1': 'value1', 'field2': 3, 'field3': 'field3'}
 with open('my_output_file.json', 'w') as ff:
@@ -147,7 +151,11 @@ Below are ways to read / write TSV files in common languages.
 ### Reading a `.tsv` file:
 
 ```matlab
-    readtable([filename],'FileType','text','Delimiter','\t','TreatAsEmpty',{'N/A','n/a'});
+    readtable([filename],
+               'FileType', 'text',
+               'Delimiter', '\t',
+               'TreatAsEmpty', {'N/A','n/a'}
+             );
 ```
 
 ### Writing a `.tsv` file:
@@ -164,7 +172,9 @@ age = [20 30]';
 sex = ['m';'f'];
 
 t = table(participant_id,age,sex);
-writetable(t,fullfile(root_dir,bidsProject,bids_particpants_name),'FileType','text','Delimiter','\t');
+writetable(t, fullfile(root_dir, bidsProject, bids_particpants_name),
+              'FileType', 'text',
+              'Delimiter', '\t');
 ```
 
 #### Octave

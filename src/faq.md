@@ -38,7 +38,7 @@ maximise the different ways of finding out more about BIDS.
     -   [How to store subject phenotypes?](#how-to-store-subject-phenotypes)
     -   [Is there a standard for epilepsy phenotypes?](#is-there-a-standard-for-epilepsy-phenotypes)
 
-# General questions
+## General questions
 
 ### What is a `json` file?
 
@@ -95,7 +95,7 @@ If you want to keep track of what data was acquired when you can use the
 For some examples, see this
 [issue in the bids-starter kit](https://github.com/bids-standard/bids-starter-kit/issues/193).
 
-# MRI specific questions
+## MRI specific questions
 
 ### What defacing tools can I use?
 
@@ -119,7 +119,7 @@ Otherwise you can also use:
 -   SPM8 and SPM12: when in the batch editor fo to --> SPM menu --> Util -->
     De-face
 
-# EEG specific questions
+## EEG specific questions
 
 ### How to format Hardware and Software filter fields in a .json?
 
@@ -163,7 +163,7 @@ BIDS requires physical units to be specified according to the SI unit symbol and
 possibly prefix symbol (for example: mV, μV for milliVolt and microVolt). In
 Matlab use `native2unicode(181,'latin1')` to get the correct symbol for micro.
 
-# BIDS and NWB
+## BIDS and NWB
 
 ### Are BIDS and NWB compatible?
 
@@ -185,7 +185,7 @@ The same subject can have another session (CCC) with raw fMRI data in BIDS:
 /sub-AAA/ses-CCC/func/sub-AAA_ses-CCC_task-rest_bold.nii.gz
 ```
 
-# Phenotypes
+## Phenotypes
 
 ### How to store subject phenotypes?
 

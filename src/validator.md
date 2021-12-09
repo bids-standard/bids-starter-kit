@@ -1,12 +1,14 @@
+# BIDS validation
+
 The [BIDS Validator](https://github.com/bids-standard/bids-validator) is a tool
 that checks if a dataset is compliant with the BIDS standard. The validator is
 available for use within several different environments to best suit individual
 user preferences and use cases, those versions are:
 
-- A web browser based version
-- Command line version
-- Docker based version
-- A python library installable via pip
+-   A web browser based version
+-   Command line version
+-   Docker based version
+-   A python library installable via pip
 
 Instructions to install and use these versions can be found within the
 [quickstart guide](https://github.com/bids-standard/bids-validator#quickstart)
@@ -17,16 +19,15 @@ at the BIDS Validator repository.
 Please note that the web app is entirely browser(not server) based. As such,
 there is no file uploading as part of the validation.
 
-# How to use
-
 ## Browser Version
 
 1. The BIDS Validator can be found at
-   <http://bids-standard.github.io/bids-validator/>. It requires that you use the
-   Chrome or Firefox browser, since those are the only ones in which you can
+   <http://bids-standard.github.io/bids-validator/>. It requires that you use
+   the Chrome or Firefox browser, since those are the only ones in which you can
    select a whole folder rather than individual files.
 
 <!-- TODO grab that image and add to the repo -->
+
 ![home](https://i.imgur.com/YD38eTE.png)
 
 2. You can then choose the **folder** that you wish to validate
@@ -39,6 +40,7 @@ This response indicates that your dataset is not BIDS compliant. Try following
 the suggestions listed to make the appropriate corrections
 
 <!-- TODO grab that image and add to the repo -->
+
 ![Error](https://i.imgur.com/PEz9hbd.png)
 
 #### Warning
@@ -48,6 +50,7 @@ non-critical problems (such as optional fields missing, or differences between
 participants)
 
 <!-- TODO grab that image and add to the repo -->
+
 ![Warning](https://i.imgur.com/Gqwc1q9.png)
 
 #### Success
@@ -55,6 +58,7 @@ participants)
 This response indicates that your folder contains a valid BIDS Dataset!
 
 <!-- TODO grab that image and add to the repo -->
+
 ![Valid](https://i.imgur.com/DPFVXOR.png)
 
 ## Command Line Version
@@ -130,7 +134,7 @@ bids-validator@1.7.1
  If you have any questions, please post on https://neurostars.org/tags/bids.
 ```
 
-#### Warn
+#### Warning
 
 As stated with the browser version above, one may elect to ignore warnings, but
 the information provided via the validator should help to pinpoint where and how

@@ -1,3 +1,5 @@
+# the BIDS folder hierarchy
+
 The BIDS format is essentially a way to structure your data / metadata within a
 hierarchy of folders. This makes it easy to browse from a computer, as well as
 to automatically parse a BIDS folder with a program. The BIDS structure makes
@@ -15,7 +17,7 @@ These three types of files are organized into a hierarchy of folders that have
 specific naming conventions. The rest of this page describes how these folders
 are structured.
 
-# Overview of the BIDS folder hierarchy
+## Overview
 
 There are four main levels of the folder hierarchy, these are:
 
@@ -67,7 +69,7 @@ Represents different types of data. Must be one of:
 
 The name for the datatype depends on the recording modality.
 
-# BIDS folder example
+## BIDS folder example
 
 Below is the folder hierarchy for one of the
 [BIDS example datasets](https://github.com/INCF/BIDS-examples). It has multiple
@@ -107,12 +109,12 @@ ds001
 └── task-balloonanalogrisktask_bold.json
 ```
 
-# Creating a BIDS folder hierarchy
+## Creating a BIDS folder hierarchy
 
 Next we'll step through a sample process one might follow when creating a BIDS
 hierarchy for a new dataset.
 
-## Create the folder hierarchy and top-level metadata file
+### Create the folder hierarchy and top-level metadata file
 
 First we'll create the folder hierarchy to be used in this format.
 
@@ -120,14 +122,14 @@ First we'll create the folder hierarchy to be used in this format.
 -   Create a top-level metadata files (`myProject/participants.tsv` and
     `myProject/task-mytask.json`)
 
-## Create a subject's folder
+### Create a subject's folder
 
 Next we'll add the folder hierarchy for one subject:
 
 -   Create the `<Project>/<Subject>/<Session>/` folder
     (`myProject/sub-01/ses-01/`)
 
-## Populate the datatype folder
+### Populate the datatype folder
 
 Next we'll populate the first subject's folder with datatype folders. We'll have
 one per data modality. We'll include a number of different modalities to
@@ -198,9 +200,9 @@ Here's a list of these folders:
         -   `sub-< >_ses-< >_recording-< >_blood.json`
         -   `sub-< >_ses-< >_recording-< >_blood.tsv`
 
-# BIDS: source, rawdata, derivatives
+## BIDS: source, rawdata, derivatives
 
-## BIDS Derivatives
+### BIDS Derivatives
 
 Derivatives are outputs of (pre-)processing pipelines, capturing data and
 meta-data sufficient for a researcher to understand and (critically) reuse those

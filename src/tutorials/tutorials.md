@@ -1,4 +1,4 @@
-## BIDS Tutorial Series:
+# BIDS Tutorial Series
 
 -   [Part 1a: Introductory Walkthrough](http://reproducibility.stanford.edu/bids-tutorial-series-part-1a/)
 -   [Part 1b: Automate the Introductory Walkthrough](http://reproducibility.stanford.edu/bids-tutorial-series-part-1b/)

@@ -11,7 +11,7 @@ jupyter:
         url: https://github.com/Remi-Gau/BIDS-Starter-Kit
 ---
 
-<h1 align="center">Welcome to the BIDS Starter Kit</h1>
+# Welcome to the BIDS Starter Kit
 
 <div align="center">
   :blue_book::file_folder::closed_book::open_file_folder::green_book::open_file_folder::blue_book::open_file_folder::orange_book::file_folder::blue_book:
@@ -62,36 +62,6 @@ jupyter:
 alt="BIDS Starter Kit Video" width="480" height="360" border="10" /></a>
 </div>
 
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Motivation](#motivation)
-- [Project Summary](#project-summary)
-    - [How do I find information?](#how-do-i-find-information)
-- [Philosophy](#philosophy)
-- [Benefits](#benefits)
-        - [For the public good](#for-the-public-good)
-        - [For yourself](#for-yourself)
-- [Users](#users)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-    - [Sponsor Organizations](#sponsor-organizations)
-    - [Publications](#publications)
-    [For yourself](#for-yourself)
-- [Table of Contents](#table-of-contents)
-- [Motivation](#motivation)
-- [Project Summary](#project-summary)
-    - [How do I find information?](#how-do-i-find-information)
-- [Philosophy](#philosophy)
-- [Benefits](#benefits)
-        - [For the public good](#for-the-public-good)
-        - [For yourself](#for-yourself)
-- [Users](#users)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-    - [Sponsor Organizations](#sponsor-organizations)
-    - [Publications](#publications)
-
 ## Motivation
 
 The primary goal of this project is to simplify the process of learning about
@@ -138,14 +108,14 @@ be.
 
 ## Benefits
 
-#### For the public good
+### For the public good
 
 -   Lowers scientific waste
 -   Gives opportunity to less-funded researchers
 -   Improves efficiency
 -   Spurs innovation
 
-#### For yourself
+### For yourself
 
 -   You are likely the future user of the data and data analysis pipelines
     you’ve developed
@@ -169,8 +139,8 @@ There are many ways to get in touch with us! Please see our
 for all the details.
 
 To find out more about all the different ways to contribute to the BIDS Starter
-Kit, check out our [**contributing guidelines**](CONTRIBUTING.md). They'll tell
-you how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful
+Kit, check out our [**contributing guidelines**][contributing]. They'll tell you
+how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful
 resources to help you
 [contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you
 can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or
@@ -229,3 +199,5 @@ referenced if you're using data of that type.
 
 [gsoc]: https://summerofcode.withgoogle.com
 [patrick-github]: https://github.com/Park-Patrick
+[contributing]:
+    https://github.com/bids-standard/bids-starter-kit/blob/master/CONTRIBUTING.md

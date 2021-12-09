@@ -17,6 +17,7 @@ parts:
   - file: dataset_examples.md
   - file: talks.md
   - file: publications.md
+  - file: dependencies.md
   - file: links.md
 - caption: Others
   chapters:

@@ -1,3 +1,5 @@
+# Contact
+
 We have lots of different ways of staying in touch!
 
 **Our preferred way to answer questions** is via our forum
