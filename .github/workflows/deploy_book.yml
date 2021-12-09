@@ -11,8 +11,6 @@ on:
 
 jobs:
   deploy-book:
-    if: (github.event.pull_request) && !contains(github.head_ref, 'all-contributors')
-
     runs-on: ubuntu-latest
 
     steps:
