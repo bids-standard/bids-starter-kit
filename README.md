@@ -5,7 +5,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
-  <h1>The BIDS starter-kit jupyter book</h1>
+  <h1>The BIDS starter-kit</h1>
   <h2><a href="https://bids-standard.github.io/bids-starter-kit/">
                https://bids-standard.github.io/bids-starter-kit/</a>
   </h2>
