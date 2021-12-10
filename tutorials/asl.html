@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scaling &#8212; BIDS starter kit</title>
+    <title>ASL data conversion &#8212; BIDS starter kit</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PET to BIDS" href="pet.html" />
-    <link rel="prev" title="creating an iEEG dataset in BIDS" href="ieeg.html" />
+    <link rel="next" title="PET data conversion" href="pet.html" />
+    <link rel="prev" title="iEEG data conversion" href="ieeg.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,12 +101,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../folder_hierarchy.html">
-   the BIDS folder hierarchy
+   BIDS folders
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../metadata_file_formats.html">
-   Metadata and file formats
+   BIDS metadata and file formats
   </a>
  </li>
 </ul>
@@ -122,29 +122,29 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="tutorials_faq.html">
+   Example dataset permission error
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="ieeg.html">
-   creating an iEEG dataset in BIDS
+   iEEG data conversion
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Scaling
+   ASL data conversion
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="pet.html">
-   PET to BIDS
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorials_faq.html">
-   Example dataset permission error
+   PET data conversion
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Ressources
+  Resources
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -294,25 +294,37 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ge">
-   GE
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   ASL data conversion
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#philips">
-   Philips
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scaling">
+   Scaling
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#siemens">
-   Siemens
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pixdim">
-     PIXDIM
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ge">
+     GE
     </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#philips">
+     Philips
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#siemens">
+     Siemens
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pixdim">
+       PIXDIM
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -327,7 +339,10 @@
         
               <div>
                 
-  <div class="section" id="scaling">
+  <div class="section" id="asl-data-conversion">
+<h1>ASL data conversion<a class="headerlink" href="#asl-data-conversion" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="scaling">
 <h1>Scaling<a class="headerlink" href="#scaling" title="Permalink to this headline">¶</a></h1>
 <p>This paragraph discusses the specific scaling issues for GE, Philips, and
 Siemens. Beware that these issues are occurring at the time of the release of
@@ -342,34 +357,35 @@ signal averages (NSA) as GE sums instead of averages them.</p>
 <h2>Philips<a class="headerlink" href="#philips" title="Permalink to this headline">¶</a></h2>
 <p>Typically, Philips ASL datasets use the standard DICOM rescale tags only to
 rescale data for viewing, whereas private rescale tags are used for scaling to
-acquisition values needed for proper quantification. The procedure for using
-both the scaling types is described previously [<strong>reference required</strong>],
-although the authors did not mention that three DICOM fields are typically used
-for this purpose - <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">100e)</span></code>, <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code>, or <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code>. It may
-also occur that the RescaleSlope <code class="docutils literal notranslate"><span class="pre">(0028,</span> <span class="pre">1053)</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1</span></code> and
+acquisition values needed for proper quantification.</p>
+<p>The procedure for using both the scaling types is described previously
+[<strong>reference required</strong>], although the authors did not mention that three DICOM
+fields are typically used for this purpose - <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">100e)</span></code>, <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code>.</p>
+<p>It may also occur that the RescaleSlope <code class="docutils literal notranslate"><span class="pre">(0028,</span> <span class="pre">1053)</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1</span></code> and
 RescaleSlopeOriginal <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">140a)</span></code> needs to be used instead. Note that DICOM to
 NIfTI conversion software may omit the private slopes, in which cases the
-private slope needs to be applied after running the conversion. An exception is
-the <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> software that does take
-private scale slopes into account in most cases. The
+private slope needs to be applied after running the conversion.</p>
+<p>An exception is the <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> software
+that does take private scale slopes into account in most cases. The
 <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> versions released between
-2018 and 20190902 can correctly scale the NIfTI according to the private scale
-slopes - if run with parameter <code class="docutils literal notranslate"><span class="pre">‘-p’</span></code> - and indicates this by setting
-<code class="docutils literal notranslate"><span class="pre">‘UsePhilipsFloatNotDisplayScaling==1’</span></code> in the accompanying json file. Two
-exceptions apply, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> does not
-support DICOM tags <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code> and <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code> that still need to be read
-and applied additionally. Furthermore, the field RealWorldValueSlope
+2018 and 2019-09-02 can correctly scale the NIfTI according to the private scale
+slopes - if run with parameter <code class="docutils literal notranslate"><span class="pre">-p</span></code> - and indicates this by setting
+<code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code> in the accompanying json file.</p>
+<p>Two exceptions apply, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> does
+not support DICOM tags <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code> and <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code> that still need to be
+read and applied additionally. Furthermore, the field RealWorldValueSlope
 <code class="docutils literal notranslate"><span class="pre">(0040,9225)</span></code> is sometimes provided as an alternative to RescaleSlope
 <code class="docutils literal notranslate"><span class="pre">(0028,1053)</span></code>. In this case, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a>
 outputs a field <code class="docutils literal notranslate"><span class="pre">PhilipsRWVSlope</span></code> and sets
 <code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code>. This is deceiving because the standard
 RescaleSlope is applied instead of private-field scale slopes and this still
-needs to be corrected manually. Note that this last-mentioned behavior is
-corrected in the newest dcm2nii version and general caution is recommended when
-dealing with Philips scale slopes. Also, Philips has recently implemented the
-option to apply these scaling factors upon export. The scaling of
-acquired/reconstructed ASL images may differ between control, label, and M0
-images.</p>
+needs to be corrected manually.</p>
+<p>Note that this last-mentioned behavior is corrected in the newest dcm2nii
+version and general caution is recommended when dealing with Philips scale
+slopes. Also, Philips has recently implemented the option to apply these scaling
+factors upon export. The scaling of acquired/reconstructed ASL images may differ
+between control, label, and M0 images.</p>
 </div>
 <div class="section" id="siemens">
 <h2>Siemens<a class="headerlink" href="#siemens" title="Permalink to this headline">¶</a></h2>
@@ -379,7 +395,7 @@ This can be only modified and obtained at the scanner console and it is set to
 <div class="section" id="pixdim">
 <h3>PIXDIM<a class="headerlink" href="#pixdim" title="Permalink to this headline">¶</a></h3>
 <p>The so-called PIXDIM error appears to be specific for files with a single
-repetition, more specifically the separately acquired <code class="docutils literal notranslate"><span class="pre">‘m0scan’</span></code>. In the NIfTI
+repetition, more specifically the separately acquired <code class="docutils literal notranslate"><span class="pre">m0scan</span></code>. In the NIfTI
 header, <code class="docutils literal notranslate"><span class="pre">dim[0]</span></code> defines the number of dimensions, <code class="docutils literal notranslate"><span class="pre">dim[i]</span></code> defines the length
 of the i’th dimension, <code class="docutils literal notranslate"><span class="pre">pixdim[i]</span></code> specifies the voxel width along dimension
 <code class="docutils literal notranslate"><span class="pre">i</span></code>. For images with a single repetition, where <code class="docutils literal notranslate"><span class="pre">pixdim[4]</span></code> specifies the
@@ -421,13 +437,13 @@ by the validator.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">creating an iEEG dataset in BIDS</p>
+            <p class="prev-next-title">iEEG data conversion</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="pet.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">PET to BIDS</p>
+        <p class="prev-next-title">PET data conversion</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -1,4 +1,4 @@
-# creating an iEEG dataset in BIDS
+# iEEG data conversion
 
 Here, we briefly describe the first steps in creating an iEEG dataset in BIDS
 format. The process can be summarized by the following main steps:
@@ -25,11 +25,11 @@ project/
 The top level (project) of a BIDS folder must contain a dataset_description.json
 file, a README, and a CHANGES file. In addition, there are a set of sub-folders,
 one per subject, that contain all data from a given subject. These must be named
-according to the convention “sub-<label>”. Within these folders there is an
-optional “session” folder (called “ses-<label>”) and finally a collection of
-“acquisition folders” that correspond to datasets from different modalities
+according to the convention `sub-<label>`. Within these folders there is an
+optional "session" folder (called `ses-<label>`) and finally a collection of
+"acquisition folders" that correspond to datasets from different modalities
 (such as functional imaging, EEG, and iEEG data) that corresponds to this
-dataset. In our example, there is a folder called “ieeg” that stores all iEEG
+dataset. In our example, there is a folder called `ieeg` that stores all iEEG
 data for the subject, for example:
 
 ```
@@ -66,9 +66,13 @@ iEEGProject
 
 Once a folder hierarchy is defined, the folders can be populated with the
 correct files. Here we focus on the files relevant for iEEG data. Within the
-“ieeg” folder, we first copy the raw iEEG data and renamed such that they adhere
-to the BIDS file naming scheme (for example:
-“sub-<subjectlabel>\_ses-<sessionlabel>\_task-<tasklabel>\_run-<runlabel>\_ieeg.<extension>”).
+`ieeg` folder, we first copy the raw iEEG data and renamed such that they adhere
+to the BIDS file naming scheme. For example:
+
+```
+sub-<subjectlabel>\_ses-<sessionlabel>\_task-<tasklabel>\_run-<runlabel>\_ieeg.<extension>
+```
+
 These data are unprocessed and can have one of several file formats (for
 example: BrainVision and EDF formats are supported, NWB, EEGLab and MEF3 formats
 are allowed).
@@ -79,8 +83,8 @@ BIDS datasets should specify all of the metadata needed to analyze and
 understand a dataset, and these are all contained within text-based JavaScript
 Object Notation (JSON, field-value) and Tab Separated Value (TSV) metadata
 files. The iEEG amplifier metadata are stored for each run in a JSON file with
-the same name structure as the raw data (<raw-data-filename>\_ieeg.json) and a
-TSV file with amplifier metadata (<raw-data-filename>\_channels.tsv).
+the same name structure as the raw data (`<raw-data-filename>_ieeg.json`) and a
+TSV file with amplifier metadata (`<raw-data-filename>_channels.tsv`).
 
 -   `<raw-data-filename>_ieeg.json`: contains the metadata that are the same for
     all the data in this run, such as the task name and description, the
@@ -102,15 +106,15 @@ TSV file with amplifier metadata (<raw-data-filename>\_channels.tsv).
 In iEEG recordings, each channel in the amplifier is sampled from a specific
 electrode implanted in the brain. The metadata on the type of electrodes and
 their coordinates is stored in a TSV file with a row for each metallic electrode
-contact (\_electrodes.tsv). The names of each electrode are used in the
+contact (`_electrodes.tsv`). The names of each electrode are used in the
 amplifier metadata to specify the recorded channel and reference to link these
 two files. In order to interpret the position of each electrode, the coordinate
-system is defined in a JSON file (\_coordsystem.json). The \_coordsystem.json
+system is defined in a JSON file (`_coordsystem.json`). The `_coordsystem.json`
 file specifies a reference image file, which can be an MRI, surface rendering,
 standard space (for example: MNI) or operative photo, such that electrode
 positions can be displayed. In addition, any raw data collected for the purpose
 of localizing electrodes is stored in a corresponding anatomy folder (called
-“anat”) that lives at the same folder level as the “ieeg” folder. This can
+`anat`) that lives at the same folder level as the `ieeg` folder. This can
 contain files like structural volume data or electrode placement photos.
 
 -   `_electrodes.tsv`: Download a template in the bids-starter-kit

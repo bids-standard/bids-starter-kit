@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>creating an iEEG dataset in BIDS &#8212; BIDS starter kit</title>
+    <title>iEEG data conversion &#8212; BIDS starter kit</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Scaling" href="asl.html" />
-    <link rel="prev" title="BIDS Tutorial Series" href="tutorials.html" />
+    <link rel="next" title="ASL data conversion" href="asl.html" />
+    <link rel="prev" title="Example dataset permission error" href="tutorials_faq.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,12 +101,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../folder_hierarchy.html">
-   the BIDS folder hierarchy
+   BIDS folders
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../metadata_file_formats.html">
-   Metadata and file formats
+   BIDS metadata and file formats
   </a>
  </li>
 </ul>
@@ -121,30 +121,30 @@
    BIDS Tutorial Series
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   creating an iEEG dataset in BIDS
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="asl.html">
-   Scaling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pet.html">
-   PET to BIDS
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tutorials_faq.html">
    Example dataset permission error
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   iEEG data conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="asl.html">
+   ASL data conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pet.html">
+   PET data conversion
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Ressources
+  Resources
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -335,8 +335,8 @@
         
               <div>
                 
-  <div class="section" id="creating-an-ieeg-dataset-in-bids">
-<h1>creating an iEEG dataset in BIDS<a class="headerlink" href="#creating-an-ieeg-dataset-in-bids" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ieeg-data-conversion">
+<h1>iEEG data conversion<a class="headerlink" href="#ieeg-data-conversion" title="Permalink to this headline">¶</a></h1>
 <p>Here, we briefly describe the first steps in creating an iEEG dataset in BIDS
 format. The process can be summarized by the following main steps:</p>
 <ol class="simple">
@@ -360,11 +360,11 @@ looks like this:</p>
 <p>The top level (project) of a BIDS folder must contain a dataset_description.json
 file, a README, and a CHANGES file. In addition, there are a set of sub-folders,
 one per subject, that contain all data from a given subject. These must be named
-according to the convention “sub-<label>”. Within these folders there is an
-optional “session” folder (called “ses-<label>”) and finally a collection of
+according to the convention <code class="docutils literal notranslate"><span class="pre">sub-&lt;label&gt;</span></code>. Within these folders there is an
+optional “session” folder (called <code class="docutils literal notranslate"><span class="pre">ses-&lt;label&gt;</span></code>) and finally a collection of
 “acquisition folders” that correspond to datasets from different modalities
 (such as functional imaging, EEG, and iEEG data) that corresponds to this
-dataset. In our example, there is a folder called “ieeg” that stores all iEEG
+dataset. In our example, there is a folder called <code class="docutils literal notranslate"><span class="pre">ieeg</span></code> that stores all iEEG
 data for the subject, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>iEEGProject
 ├── dataset_description.json
@@ -400,10 +400,12 @@ data for the subject, for example:</p>
 <h2>Step 2. Add raw iEEG data<a class="headerlink" href="#step-2-add-raw-ieeg-data" title="Permalink to this headline">¶</a></h2>
 <p>Once a folder hierarchy is defined, the folders can be populated with the
 correct files. Here we focus on the files relevant for iEEG data. Within the
-“ieeg” folder, we first copy the raw iEEG data and renamed such that they adhere
-to the BIDS file naming scheme (for example:
-“sub-<subjectlabel>_ses-<sessionlabel>_task-<tasklabel>_run-<runlabel>_ieeg.<extension>”).
-These data are unprocessed and can have one of several file formats (for
+<code class="docutils literal notranslate"><span class="pre">ieeg</span></code> folder, we first copy the raw iEEG data and renamed such that they adhere
+to the BIDS file naming scheme. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subjectlabel</span><span class="o">&gt;</span>\<span class="n">_ses</span><span class="o">-&lt;</span><span class="n">sessionlabel</span><span class="o">&gt;</span>\<span class="n">_task</span><span class="o">-&lt;</span><span class="n">tasklabel</span><span class="o">&gt;</span>\<span class="n">_run</span><span class="o">-&lt;</span><span class="n">runlabel</span><span class="o">&gt;</span>\<span class="n">_ieeg</span><span class="o">.&lt;</span><span class="n">extension</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>These data are unprocessed and can have one of several file formats (for
 example: BrainVision and EDF formats are supported, NWB, EEGLab and MEF3 formats
 are allowed).</p>
 </div>
@@ -413,8 +415,8 @@ are allowed).</p>
 understand a dataset, and these are all contained within text-based JavaScript
 Object Notation (JSON, field-value) and Tab Separated Value (TSV) metadata
 files. The iEEG amplifier metadata are stored for each run in a JSON file with
-the same name structure as the raw data (<raw-data-filename>_ieeg.json) and a
-TSV file with amplifier metadata (<raw-data-filename>_channels.tsv).</p>
+the same name structure as the raw data (<code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_ieeg.json</span></code>) and a
+TSV file with amplifier metadata (<code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_channels.tsv</span></code>).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_ieeg.json</span></code>: contains the metadata that are the same for
 all the data in this run, such as the task name and description, the
@@ -437,15 +439,15 @@ or find the Matlab script to more automatically populate the required fields
 <p>In iEEG recordings, each channel in the amplifier is sampled from a specific
 electrode implanted in the brain. The metadata on the type of electrodes and
 their coordinates is stored in a TSV file with a row for each metallic electrode
-contact (_electrodes.tsv). The names of each electrode are used in the
+contact (<code class="docutils literal notranslate"><span class="pre">_electrodes.tsv</span></code>). The names of each electrode are used in the
 amplifier metadata to specify the recorded channel and reference to link these
 two files. In order to interpret the position of each electrode, the coordinate
-system is defined in a JSON file (_coordsystem.json). The _coordsystem.json
+system is defined in a JSON file (<code class="docutils literal notranslate"><span class="pre">_coordsystem.json</span></code>). The <code class="docutils literal notranslate"><span class="pre">_coordsystem.json</span></code>
 file specifies a reference image file, which can be an MRI, surface rendering,
 standard space (for example: MNI) or operative photo, such that electrode
 positions can be displayed. In addition, any raw data collected for the purpose
 of localizing electrodes is stored in a corresponding anatomy folder (called
-“anat”) that lives at the same folder level as the “ieeg” folder. This can
+<code class="docutils literal notranslate"><span class="pre">anat</span></code>) that lives at the same folder level as the <code class="docutils literal notranslate"><span class="pre">ieeg</span></code> folder. This can
 contain files like structural volume data or electrode placement photos.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">_electrodes.tsv</span></code>: Download a template in the bids-starter-kit
@@ -521,17 +523,17 @@ validator has been updated to check for new conventions related to iEEG data.</p
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="tutorials.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tutorials_faq.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">BIDS Tutorial Series</p>
+            <p class="prev-next-title">Example dataset permission error</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="asl.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Scaling</p>
+        <p class="prev-next-title">ASL data conversion</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
