@@ -1,5 +1,8 @@
 # BIDS Tutorial Series
 
+<!-- TODO add internal link -->
+If you are having problems to download the dataset for this tutorial, see our Tutorial FAQ.
+
 -   [Part 1a: Introductory Walkthrough](http://reproducibility.stanford.edu/bids-tutorial-series-part-1a/)
 -   [Part 1b: Automate the Introductory Walkthrough](http://reproducibility.stanford.edu/bids-tutorial-series-part-1b/)
 -   [Part 2a: HeuDiConv Walkthrough](http://reproducibility.stanford.edu/bids-tutorial-series-part-2a/)
@@ -11,7 +14,6 @@
 
 ## Other tutorials
 
--   [How to create an iEEG-BIDS dataset](https://github.com/bids-standard/bids-starter-kit/wiki/Creating-a-BIDS-compatible-iEEG-dataset)
 -   [Converting an example EEG dataset for sharing in BIDS](http://www.fieldtriptoolbox.org/example/bids_eeg/)
 -   [Converting an EEG dataset from the University of Cambridge Repository to BIDS](http://www.fieldtriptoolbox.org/workshop/madrid2019/bids_sedation/)
 -   [Converting a combined MEG/fMRI dataset for sharing in BIDS on the Donders Repository](http://www.fieldtriptoolbox.org/example/bids_mous/)

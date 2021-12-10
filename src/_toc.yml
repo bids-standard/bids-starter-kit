@@ -8,11 +8,11 @@ parts:
 - caption: Tutorials
   chapters:
   - file: tutorials/tutorials.md
+  - file: tutorials/tutorials_faq.md
   - file: tutorials/ieeg.md
   - file: tutorials/asl.md
   - file: tutorials/pet.md
-  - file: tutorials/tutorials_faq.md
-- caption: Ressources
+- caption: Resources
   chapters:
   - file: dataset_examples.md
   - file: talks.md

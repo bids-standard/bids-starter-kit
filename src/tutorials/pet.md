@@ -1,4 +1,4 @@
-# PET to BIDS
+# PET data conversion
 
 ## History
 
@@ -200,7 +200,9 @@ machine:Projects user$
 
 That certainly looks less daunting, now let's change the filenames of the
 templates so that they make more sense for our data set (aka remove ShortExample
-from each filename). **Note:** if you have multiple PET image files you can
+from each filename).
+
+**Note:** if you have multiple PET image files you can
 distinguish between them by creating a session folder with a unique name and
 then applying the `ses-<label>` label to each file therein. If there's a single
 pet scan you may omit the additional folder and corresponding label(s) from the

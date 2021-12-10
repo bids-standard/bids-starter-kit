@@ -1,4 +1,4 @@
-# Metadata and file formats
+# BIDS metadata and file formats
 
 Metadata are stored in .json and .tsv files. These files are language-agnostic,
 meaning you can work with them in, for example: Python, Matlab, or R. This page
