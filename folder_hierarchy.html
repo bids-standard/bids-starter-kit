@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -251,7 +251,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -287,7 +287,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -393,7 +393,116 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>BIDS folders</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project">
+   project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subject">
+   subject
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#session">
+   session
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datatype">
+   datatype
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bids-folder-example">
+   BIDS folder example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-bids-folder-hierarchy">
+   Creating a BIDS folder hierarchy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-the-folder-hierarchy-and-top-level-metadata-file">
+     Create the folder hierarchy and top-level metadata file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-subject-s-folder">
+     Create a subject’s folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#populate-the-datatype-folder">
+     Populate the datatype folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bids-source-rawdata-derivatives">
+   BIDS: source, rawdata, derivatives
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bids-derivatives">
+     BIDS Derivatives
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tour-of-a-bids-derivative">
+     Tour of a BIDS Derivative
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#preprocessed-data">
+       Preprocessed data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#derivative-data-types">
+       Derivative data types
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#unspecified-data-types">
+       Unspecified data types
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#organizing-datasets-and-their-derivatives">
+     Organizing datasets and their derivatives
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="bids-folders">
@@ -692,32 +801,32 @@ respectively, from that of the source data file(s).</p>
 distinguishes <code class="docutils literal notranslate"><span class="pre">&quot;derivative&quot;</span></code> datasets from <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot;</span></code>; <code class="docutils literal notranslate"><span class="pre">GeneratedBy</span></code>, a list of
 processes that generated the data; <code class="docutils literal notranslate"><span class="pre">SourceDatasets</span></code>, a list of datasets used to
 generate the derivative.</p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">{</span>
-  <span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;FMRIPREP</span><span class="nv"> </span><span class="s">Outputs&quot;</span><span class="p p-Indicator">,</span>
-  <span class="s">&quot;BIDSVersion&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;1.4.0&quot;</span><span class="p p-Indicator">,</span>
-  <span class="s">&quot;DatasetType&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;derivative&quot;</span><span class="p p-Indicator">,</span>
-  <span class="s">&quot;GeneratedBy&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
-    <span class="p p-Indicator">{</span>
-      <span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;fmriprep&quot;</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;Version&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;1.4.1&quot;</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;Container&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
-        <span class="s">&quot;Type&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;docker&quot;</span><span class="p p-Indicator">,</span>
-        <span class="s">&quot;Tag&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;poldracklab/fmriprep:1.4.1&quot;</span>
-        <span class="p p-Indicator">}</span>
-    <span class="p p-Indicator">},</span>
-    <span class="p p-Indicator">{</span>
-      <span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Manual&quot;</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;Description&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Re-added</span><span class="nv"> </span><span class="s">RepetitionTime</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">bold.json</span><span class="nv"> </span><span class="s">files&quot;</span>
-    <span class="p p-Indicator">}</span>
-  <span class="p p-Indicator">],</span>
-  <span class="s">&quot;SourceDatasets&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
-    <span class="p p-Indicator">{</span>
-      <span class="s">&quot;DOI&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;10.18112/openneuro.ds000114.v1.0.1&quot;</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;URL&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;https://openneuro.org/datasets/ds000114/versions/1.0.1&quot;</span><span class="p p-Indicator">,</span>
-      <span class="s">&quot;Version&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;1.0.1&quot;</span>
-    <span class="p p-Indicator">}</span>
-  <span class="p p-Indicator">]</span>
-<span class="p p-Indicator">}</span>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">{</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;FMRIPREP</span><span class="nv"> </span><span class="s">Outputs&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;BIDSVersion&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;1.4.0&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;DatasetType&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;derivative&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;GeneratedBy&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">{</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;fmriprep&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;Version&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;1.4.1&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;Container&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;Type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;docker&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;Tag&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;poldracklab/fmriprep:1.4.1&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">},</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">{</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;Name&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Manual&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;Description&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Re-added</span><span class="nv"> </span><span class="s">RepetitionTime</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">bold.json</span><span class="nv"> </span><span class="s">files&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">],</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;SourceDatasets&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">{</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;DOI&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;10.18112/openneuro.ds000114.v1.0.1&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;URL&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;https://openneuro.org/datasets/ds000114/versions/1.0.1&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot;Version&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;1.0.1&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="p p-Indicator">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="preprocessed-data">
@@ -912,8 +1021,8 @@ containing datasets.</p>
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -930,19 +1039,17 @@ containing datasets.</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By The BIDS community<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By The BIDS community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

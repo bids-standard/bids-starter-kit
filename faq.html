@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -251,7 +251,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -287,7 +287,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -413,7 +413,136 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Frequently Asked Questions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-questions">
+   General questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-json-file">
+     What is a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       json
+      </span>
+     </code>
+     file?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-does-this-word-mean">
+     What does [this word] mean?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-specify-the-micro-sign-in-matlab">
+     How to specify the micro sign in Matlab?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#is-your-data-type-not-covered-in-the-current-bids-specification">
+     Is your data type not covered in the current BIDS specification?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-import-excel-files">
+     How to import Excel files?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">
+     I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mri-specific-questions">
+   MRI specific questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-defacing-tools-can-i-use">
+     What defacing tools can I use?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eeg-specific-questions">
+   EEG specific questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-format-hardware-and-software-filter-fields-in-a-json">
+     How to format Hardware and Software filter fields in a .json?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">
+     How to specify EEGReference and EEGGround for Biosemi referencing scheme?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-specify-units-in-microvolt">
+     How to specify units in microVolt?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bids-and-nwb">
+   BIDS and NWB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#are-bids-and-nwb-compatible">
+     Are BIDS and NWB compatible?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-combine-bids-and-nwb">
+     How to combine BIDS and NWB?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#phenotypes">
+   Phenotypes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-store-subject-phenotypes">
+     How to store subject phenotypes?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#is-there-a-standard-for-epilepsy-phenotypes">
+     Is there a standard for epilepsy phenotypes?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="frequently-asked-questions">
@@ -525,7 +654,7 @@ contains key-value pairs to describe filter parameters. As per BIDS, all
 frequencies SHOULD be in Hz. For example a single hardware filter could be
 specified as:</p></li>
 </ol>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HardwareFilters&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;HighpassFilter&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;CutoffFrequency&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">}}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HardwareFilters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;HighpassFilter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;CutoffFrequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">}}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For a formatted example on how to deal with this in the BIDS context, please see
@@ -612,8 +741,8 @@ and follow the examples in the
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="apps.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -630,19 +759,17 @@ and follow the examples in the
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By The BIDS community<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By The BIDS community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
