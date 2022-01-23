@@ -14,7 +14,13 @@ and
 JSON files are text files that take the following structure:
 
 ```json
-{ "key": "value", "key2": "value2", "key3": { "subkey1": "subvalue1" } }
+{
+    "key": "value",
+    "key2": "value2",
+    "key3": {
+        "subkey1": "subvalue1"
+    }
+}
 ```
 
 Note that they can be nested (curly brackets within curly brackets). Here are
