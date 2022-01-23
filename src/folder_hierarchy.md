@@ -65,7 +65,15 @@ session per subject, this level of the hierarchy may be omitted.
 
 Represents different types of data. Must be one of:
 
--   'func', 'dwi', 'fmap', 'anat', 'meg', 'eeg', 'ieeg', 'beh', 'pet'
+-   func 
+-   dwi
+-   fmap
+-   anat
+-   meg
+-   eeg
+-   ieeg
+-   beh
+-   pet
 
 The name for the datatype depends on the recording modality.
 
