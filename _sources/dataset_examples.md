@@ -4,16 +4,9 @@ Here are some links to BIDS compliant data. Sourcedata (pre-BIDS) are sometimes
 also available, these can be used to just see (or to build tutorials) of how
 source data are converted to BIDS.
 
-## Brainhack Western 2018 dataset
-
--   sourcedata:
-    [ds001](https://drive.google.com/drive/folders/15GiGHqit0gFFblOUuL2hSoWEJVw6q1M5)
--   rawdata:
-    [ds001_BIDS](https://drive.google.com/drive/folders/1A3TbarHbtXqx7FfW0UbWWuY1GflF3630)
-
 ## BIDS examples with empty raw data files
 
--   Many MRI, fMRI, MEG, EEG and iEEG examples can be found
+-   Many examples can be found
     [here](https://github.com/bids-standard/bids-examples)
 
 ## BIDS examples with data files
@@ -31,6 +24,13 @@ source data are converted to BIDS.
     -   [ieeg](https://openneuro.org/search/ieeg)
     -   [meg](https://openneuro.org/search/meg)
     -   [pet](https://openneuro.org/search/pet)
+
+## Brainhack Western 2018 dataset
+
+-   sourcedata:
+    [ds001](https://drive.google.com/drive/folders/15GiGHqit0gFFblOUuL2hSoWEJVw6q1M5)
+-   rawdata:
+    [ds001_BIDS](https://drive.google.com/drive/folders/1A3TbarHbtXqx7FfW0UbWWuY1GflF3630)
 
 ## Mother of unification studies
 

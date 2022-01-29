@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A collection of links to useful code / other repositories relevant to BIDS &#8212; BIDS starter kit</title>
+    <title>Links and resources &#8212; BIDS starter kit</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -50,7 +50,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="BIDS validation" href="validator.html" />
@@ -95,18 +95,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Hierarchy
+  Folders and files
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="folder_hierarchy.html">
+  <a class="reference internal" href="folders_and_files/folders.html">
    BIDS folders
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="metadata_file_formats.html">
+  <a class="reference internal" href="folders_and_files/files.html">
+   BIDS filenames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="folders_and_files/metadata.html">
    BIDS metadata and file formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="folders_and_files/derivatives.html">
+   BIDS Derivatives
   </a>
  </li>
 </ul>
@@ -118,7 +128,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tutorials/tutorials.html">
-   BIDS Tutorial Series
+   Tutorials
   </a>
  </li>
  <li class="toctree-l1">
@@ -170,7 +180,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   A collection of links to useful code / other repositories relevant to BIDS
+   Links and resources
   </a>
  </li>
 </ul>
@@ -295,19 +305,26 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#converting-to-bids-using-python">
-   Converting to BIDS using Python
+  <a class="reference internal nav-link" href="#converters">
+   Converters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#converting-to-bids-using-matlab">
-   Converting to BIDS using MATLAB
+  <a class="reference internal nav-link" href="#python-tools">
+   Python tools
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spm">
-   SPM
+  <a class="reference internal nav-link" href="#matlab-tools">
+   MATLAB tools
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spm">
+     SPM
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -319,7 +336,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>A collection of links to useful code / other repositories relevant to BIDS</h1>
+                <h1>Links and resources</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -330,19 +347,26 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#converting-to-bids-using-python">
-   Converting to BIDS using Python
+  <a class="reference internal nav-link" href="#converters">
+   Converters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#converting-to-bids-using-matlab">
-   Converting to BIDS using MATLAB
+  <a class="reference internal nav-link" href="#python-tools">
+   Python tools
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spm">
-   SPM
+  <a class="reference internal nav-link" href="#matlab-tools">
+   MATLAB tools
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spm">
+     SPM
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -353,33 +377,33 @@
             
               <div>
                 
-  <div class="section" id="a-collection-of-links-to-useful-code-other-repositories-relevant-to-bids">
-<h1>A collection of links to useful code / other repositories relevant to BIDS<a class="headerlink" href="#a-collection-of-links-to-useful-code-other-repositories-relevant-to-bids" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="converting-to-bids-using-python">
-<h2>Converting to BIDS using Python<a class="headerlink" href="#converting-to-bids-using-python" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/spinoza-rec/bidsify">BIDSIFY</a> - convert raw data to BIDS
-format, see the installation instructions
-<a class="reference external" href="https://github.com/nejaz1/bidsify">here</a></p>
-<p><a class="reference external" href="https://github.com/jmtyszka/bidskit">bidskit</a> - convert from DICOM to BIDS and
-NDAR-compliant formats</p>
-<p><a class="reference external" href="https://github.com/cbedetti/Dcm2Bids">Dcm2Bids</a> - reorganise NIfTI files from
-dcm2niix into BIDS</p>
+  <div class="section" id="links-and-resources">
+<h1>Links and resources<a class="headerlink" href="#links-and-resources" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="converters">
+<h2>Converters<a class="headerlink" href="#converters" title="Permalink to this headline">¶</a></h2>
+<p>If you are looking for tools to convert your data into BIDS, please see the
+<a class="reference external" href="https://bids.neuroimaging.io/benefits.html#converters">list of converters on the BIDS website</a></p>
+</div>
+<div class="section" id="python-tools">
+<h2>Python tools<a class="headerlink" href="#python-tools" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/bids-standard/pybids">Pybids</a> - Python tools for querying
+and manipulating BIDS datasets.</p>
 <p><a class="reference external" href="https://github.com/robertoostenveld/bids">BIDS tools</a> - some command-line tools
 to support a general BIDS workflow and some
 <a class="reference external" href="https://www.ru.nl/donders/">Donders</a> specific documentation</p>
 </div>
-<div class="section" id="converting-to-bids-using-matlab">
-<h2>Converting to BIDS using MATLAB<a class="headerlink" href="#converting-to-bids-using-matlab" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="matlab-tools">
+<h2>MATLAB tools<a class="headerlink" href="#matlab-tools" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/bids-standard/bids-matlab">bids-matlab</a> - functions that
+allow you to crawl through your BIDS dataset and get info about it</p>
 <p>FieldTrip <a class="reference external" href="http://www.fieldtriptoolbox.org/reference/data2bids/">data2bids</a>
 function to convert existing MEG, EEG, iEEG but also MRI datasets to BIDS. See
 <a class="reference external" href="http://www.fieldtriptoolbox.org/example/bids/">here</a> for examples.</p>
 <p><a class="reference external" href="https://github.com/lorenzomagazzini/mat-meg-bids">MATLAB code for MEG-BIDS</a></p>
-<p><a class="reference external" href="https://github.com/bids-standard/bids-matlab">bids-matlab</a> - functions that
-allow you to crawl through your BIDS dataset and get info about it</p>
-</div>
 <div class="section" id="spm">
-<h2>SPM<a class="headerlink" href="#spm" title="Permalink to this headline">¶</a></h2>
+<h3>SPM<a class="headerlink" href="#spm" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://en.wikibooks.org/wiki/SPM/BIDS">BIDS tools in SPM</a></p>
+</div>
 </div>
 </div>
 

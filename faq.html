@@ -50,7 +50,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="BIDS jargon busting" href="glossary.html" />
@@ -95,18 +95,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Hierarchy
+  Folders and files
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="folder_hierarchy.html">
+  <a class="reference internal" href="folders_and_files/folders.html">
    BIDS folders
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="metadata_file_formats.html">
+  <a class="reference internal" href="folders_and_files/files.html">
+   BIDS filenames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="folders_and_files/metadata.html">
    BIDS metadata and file formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="folders_and_files/derivatives.html">
+   BIDS Derivatives
   </a>
  </li>
 </ul>
@@ -118,7 +128,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tutorials/tutorials.html">
-   BIDS Tutorial Series
+   Tutorials
   </a>
  </li>
  <li class="toctree-l1">
@@ -170,7 +180,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="links.html">
-   A collection of links to useful code / other repositories relevant to BIDS
+   Links and resources
   </a>
  </li>
 </ul>
@@ -547,7 +557,7 @@
                 
   <div class="section" id="frequently-asked-questions">
 <h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
-<p>As this wiki grows it gets harder to know where to find information, so this
+<p>As this starter-kit grows it gets harder to know where to find information, so this
 page is a collection of frequently asked questions.</p>
 <p>Please add to this list! It will always be :construction: <strong>in construction</strong>
 :construction: and we really encourage everyone to update it to be more useful.
@@ -560,18 +570,17 @@ maximise the different ways of finding out more about BIDS.</p>
 <div class="section" id="what-is-a-json-file">
 <h3>What is a <code class="docutils literal notranslate"><span class="pre">json</span></code> file?<a class="headerlink" href="#what-is-a-json-file" title="Permalink to this headline">¶</a></h3>
 <p>You can find more information about <code class="docutils literal notranslate"><span class="pre">json</span></code> (and <code class="docutils literal notranslate"><span class="pre">tsv</span></code>) files in the
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/wiki/Metadata-file-formats">Metadata-file-formats</a>
-page of this wiki.</p>
+<a class="reference internal" href="folders_and_files/metadata.html"><span class="doc std std-doc">Metadata-file-formats</span></a> page.</p>
 </div>
 <div class="section" id="what-does-this-word-mean">
 <h3>What does [this word] mean?<a class="headerlink" href="#what-does-this-word-mean" title="Permalink to this headline">¶</a></h3>
 <p>We’re building a glossary to de-jargonise some of the terms you need to know to
-work with data in BIDS format. Check it out at
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/wiki/Glossary">https://github.com/bids-standard/bids-starter-kit/wiki/Glossary</a>.</p>
+work with data in BIDS format. Check it out <a class="reference internal" href="glossary.html"><span class="doc std std-doc">here</span></a>.</p>
 </div>
 <div class="section" id="how-to-specify-the-micro-sign-in-matlab">
 <h3>How to specify the micro sign in Matlab?<a class="headerlink" href="#how-to-specify-the-micro-sign-in-matlab" title="Permalink to this headline">¶</a></h3>
-<p>The symbol used to indicate µ has unicode U+00B5, which is in Matlab char(181).</p>
+<p>The symbol used to indicate <code class="docutils literal notranslate"><span class="pre">µ</span></code> has unicode U+00B5, which is in Matlab
+char(181).</p>
 </div>
 <div class="section" id="is-your-data-type-not-covered-in-the-current-bids-specification">
 <h3>Is your data type not covered in the current BIDS specification?<a class="headerlink" href="#is-your-data-type-not-covered-in-the-current-bids-specification" title="Permalink to this headline">¶</a></h3>
@@ -586,7 +595,7 @@ found in the
 <a class="reference external" href="https://docs.google.com/document/d/1pWmEEY-1-WuwBPNy5tDAxVJYQ9Een4hZJM06tQZg8X4/edit">BIDS Extension Proposals Guide</a>.</p>
 <p>If only part of your data is covered under BIDS, an option to allow additional
 files currently not covered in BIDS to pass the validator is the
-<a class="reference external" href="https://github.com/bids-standard/bids-validator#bidsignore">.bidsignore</a> file,
+<a class="reference external" href="https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md#bidsignore">.bidsignore</a> file,
 which works just like <a class="reference external" href="https://git-scm.com/docs/gitignore">.gitignore</a>. It
 allows you to list all the files (or directories, with wildcards) that are not
 BIDS compliant and should be ignored by the validator. Of course you should

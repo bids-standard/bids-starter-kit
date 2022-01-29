@@ -50,7 +50,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="BIDS data" href="../dataset_examples.html" />
@@ -95,18 +95,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Hierarchy
+  Folders and files
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../folder_hierarchy.html">
+  <a class="reference internal" href="../folders_and_files/folders.html">
    BIDS folders
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../metadata_file_formats.html">
+  <a class="reference internal" href="../folders_and_files/files.html">
+   BIDS filenames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folders_and_files/metadata.html">
    BIDS metadata and file formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folders_and_files/derivatives.html">
+   BIDS Derivatives
   </a>
  </li>
 </ul>
@@ -118,7 +128,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tutorials.html">
-   BIDS Tutorial Series
+   Tutorials
   </a>
  </li>
  <li class="toctree-l1">
@@ -170,7 +180,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../links.html">
-   A collection of links to useful code / other repositories relevant to BIDS
+   Links and resources
   </a>
  </li>
 </ul>
@@ -456,8 +466,8 @@ fully supports PET</p></li>
 <li><p><a class="reference external" href="https://gitlab.utu.fi/vesoik/tpcclib">TPCCLIIB</a> is a command line library
 containing (among many others) PET tools such as <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code> that will be
 used below to convert the imaging data from a PET dataset into nifti format.
-The Turku PET Centre site can be found [here](<a class="reference external" href="https://turkupand">https://turkupand</a> so
-<a class="reference external" href="http://onentre.fi/">onentre.fi/</a>) for additional information on anything PET.</p></li>
+The Turku PET Centre site can be found <a class="reference external" href="https://turkupetcentre.fi/">here</a>
+for additional information on anything PET.</p></li>
 <li><p>a
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS PET Template</a>
 from this starter kit to initially populate and translate
@@ -619,11 +629,11 @@ machine:Projects user$
 <p>That certainly looks less daunting, now let’s change the filenames of the
 templates so that they make more sense for our data set (aka remove ShortExample
 from each filename).</p>
-<p><strong>Note:</strong> if you have multiple PET image files you can
-distinguish between them by creating a session folder with a unique name and
-then applying the <code class="docutils literal notranslate"><span class="pre">ses-&lt;label&gt;</span></code> label to each file therein. If there’s a single
-pet scan you may omit the additional folder and corresponding label(s) from the
-filename. For more information on labeling see
+<p><strong>Note:</strong> if you have multiple PET image files you can distinguish between them
+by creating a session folder with a unique name and then applying the
+<code class="docutils literal notranslate"><span class="pre">ses-&lt;label&gt;</span></code> label to each file therein. If there’s a single pet scan you may
+omit the additional folder and corresponding label(s) from the filename. For
+more information on labeling see
 <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#pet-recording-data">this link</a>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for those of you in bash land</span>
 machine:Projects user$ <span class="nb">cd</span> NewBidsDataSet/sub-01/ses-01/pet
@@ -860,79 +870,81 @@ fill:
 </pre></div>
 </div>
 <p>Using nibabel directly also works great:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>machine:retest_scan_anon_sub01_8 user$ python3
+<!--
+machine:retest_scan_anon_sub01_8 user$ python3
 Python 3.7.3 (default, Mar 27 2019, 09:23:15)
 [Clang 10.0.1 (clang-1001.0.46.3)] on darwin
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt; import nibabel
-&gt;&gt;&gt; ecat_file = nibabel.ecat.load(&#39;anon_sub01_8_43e5_1b831_de2_anon.v&#39;)
-&gt;&gt;&gt; print(ecat_file.get_header())
-__main__:1: DeprecationWarning: get_header method is deprecated.
-Please use the ``img.header`` property instead.
+Type "help", "copyright", "credits" or "license" for more information.
+-->
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">nibabel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ecat_file</span> <span class="o">=</span> <span class="n">nibabel</span><span class="o">.</span><span class="n">ecat</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;anon_sub01_8_43e5_1b831_de2_anon.v&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ecat_file</span><span class="o">.</span><span class="n">get_header</span><span class="p">())</span>
+<span class="go">__main__:1: DeprecationWarning: get_header method is deprecated.</span>
+<span class="go">Please use the ``img.header`` property instead.</span>
 
-* deprecated from version: 2.1
-* Will raise &lt;class &#39;nibabel.deprecator.ExpiredDeprecationError&#39;&gt; as of version: 4.0
-&lt;class &#39;nibabel.ecat.EcatHeader&#39;&gt; object, endian=&#39;&gt;&#39;
-magic_number              : b&#39;MATRIX72v&#39;
-original_filename         : b&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;
-sw_version                : 72
-system_type               : 962
-file_type                 : 7
-serial_number             : b&#39;hrplus&#39;
-scan_start_time           : 1111111111
-isotope_name              : b&#39;C-11&#39;
-isotope_halflife          : 1223.0
-radiopharmaceutical       : b&#39;C-11 Flumazenil&#39;
-gantry_tilt               : 0.0
-gantry_rotation           : 0.0
-bed_elevation             : 82.652
-intrinsic_tilt            : 0.0
-wobble_speed              : 0
-transm_source_type        : 2
-distance_scanned          : 15.52
-transaxial_fov            : 58.3
-angular_compression       : 1
-coin_samp_mode            : 0
-axial_samp_mode           : 0
-ecat_calibration_factor   : 9698905.0
-calibration_unitS         : 1
-calibration_units_type    : 1
-compression_code          : 0
-study_type                : b&#39;XXXXXXXXXXXX&#39;
-patient_id                : b&#39;0000000000000000&#39;
-patient_name              : b&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;
-patient_sex               : b&#39;F&#39;
-patient_dexterity         : b&#39;U&#39;
-patient_age               : 0.0
-patient_height            : 0.0
-patient_weight            : 0.0
-patient_birth_date        : 0
-physician_name            : b&#39;&#39;
-operator_name             : b&#39;&#39;
-study_description         : b&#39;C-11 Dynamic-1&#39;
-acquisition_type          : 4
-patient_orientation       : 3
-facility_name             : b&#39;ECAT&#39;
-num_planes                : 63
-num_frames                : 20
-num_gates                 : 1
-num_bed_pos               : 0
-init_bed_position         : 50.617
-bed_position              : [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
-plane_separation          : 0.2425
-lwr_sctr_thres            : 0
-lwr_true_thres            : 350
-upr_true_thres            : 650
-user_process_code         : b&#39;&#39;
-acquisition_mode          : 0
-bin_size                  : 0.225
-branching_fraction        : 1.0
-dose_start_time           : 1111111111111
-dosage                    : 0.0
-well_counter_corr_factor  : 1.0
-data_units                : b&#39;&#39;
-septa_state               : 1
-fill                      : b&#39;&#39;
+<span class="go">* deprecated from version: 2.1</span>
+<span class="go">* Will raise &lt;class &#39;nibabel.deprecator.ExpiredDeprecationError&#39;&gt; as of version: 4.0</span>
+<span class="go">&lt;class &#39;nibabel.ecat.EcatHeader&#39;&gt; object, endian=&#39;&gt;&#39;</span>
+<span class="go">magic_number              : b&#39;MATRIX72v&#39;</span>
+<span class="go">original_filename         : b&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+<span class="go">sw_version                : 72</span>
+<span class="go">system_type               : 962</span>
+<span class="go">file_type                 : 7</span>
+<span class="go">serial_number             : b&#39;hrplus&#39;</span>
+<span class="go">scan_start_time           : 1111111111</span>
+<span class="go">isotope_name              : b&#39;C-11&#39;</span>
+<span class="go">isotope_halflife          : 1223.0</span>
+<span class="go">radiopharmaceutical       : b&#39;C-11 Flumazenil&#39;</span>
+<span class="go">gantry_tilt               : 0.0</span>
+<span class="go">gantry_rotation           : 0.0</span>
+<span class="go">bed_elevation             : 82.652</span>
+<span class="go">intrinsic_tilt            : 0.0</span>
+<span class="go">wobble_speed              : 0</span>
+<span class="go">transm_source_type        : 2</span>
+<span class="go">distance_scanned          : 15.52</span>
+<span class="go">transaxial_fov            : 58.3</span>
+<span class="go">angular_compression       : 1</span>
+<span class="go">coin_samp_mode            : 0</span>
+<span class="go">axial_samp_mode           : 0</span>
+<span class="go">ecat_calibration_factor   : 9698905.0</span>
+<span class="go">calibration_unitS         : 1</span>
+<span class="go">calibration_units_type    : 1</span>
+<span class="go">compression_code          : 0</span>
+<span class="go">study_type                : b&#39;XXXXXXXXXXXX&#39;</span>
+<span class="go">patient_id                : b&#39;0000000000000000&#39;</span>
+<span class="go">patient_name              : b&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+<span class="go">patient_sex               : b&#39;F&#39;</span>
+<span class="go">patient_dexterity         : b&#39;U&#39;</span>
+<span class="go">patient_age               : 0.0</span>
+<span class="go">patient_height            : 0.0</span>
+<span class="go">patient_weight            : 0.0</span>
+<span class="go">patient_birth_date        : 0</span>
+<span class="go">physician_name            : b&#39;&#39;</span>
+<span class="go">operator_name             : b&#39;&#39;</span>
+<span class="go">study_description         : b&#39;C-11 Dynamic-1&#39;</span>
+<span class="go">acquisition_type          : 4</span>
+<span class="go">patient_orientation       : 3</span>
+<span class="go">facility_name             : b&#39;ECAT&#39;</span>
+<span class="go">num_planes                : 63</span>
+<span class="go">num_frames                : 20</span>
+<span class="go">num_gates                 : 1</span>
+<span class="go">num_bed_pos               : 0</span>
+<span class="go">init_bed_position         : 50.617</span>
+<span class="go">bed_position              : [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]</span>
+<span class="go">plane_separation          : 0.2425</span>
+<span class="go">lwr_sctr_thres            : 0</span>
+<span class="go">lwr_true_thres            : 350</span>
+<span class="go">upr_true_thres            : 650</span>
+<span class="go">user_process_code         : b&#39;&#39;</span>
+<span class="go">acquisition_mode          : 0</span>
+<span class="go">bin_size                  : 0.225</span>
+<span class="go">branching_fraction        : 1.0</span>
+<span class="go">dose_start_time           : 1111111111111</span>
+<span class="go">dosage                    : 0.0</span>
+<span class="go">well_counter_corr_factor  : 1.0</span>
+<span class="go">data_units                : b&#39;&#39;</span>
+<span class="go">septa_state               : 1</span>
+<span class="go">fill                      : b&#39;&#39;</span>
 </pre></div>
 </div>
 <p>Using your wits, the available tools, and data you should be able to produce a
@@ -1196,7 +1208,7 @@ look like the following:</p>
 <p>The above structure is a valid bids dataset, however the bids-validator is a
 much more accurate and trustworthy method for making that determination. Follow
 the instructions
-<a class="reference external" href="https://github.com/bids-standard/bids-validator#quickstart">here</a> to collect
+<a class="reference external" href="https://github.com/bids-standard/bids-validator#Quickstart">here</a> to collect
 and install the validator.</p>
 </div>
 <div class="section" id="validating-your-new-dataset">

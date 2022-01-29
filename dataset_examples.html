@@ -50,7 +50,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Talks and slides about BIDS" href="talks.html" />
@@ -95,18 +95,28 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Hierarchy
+  Folders and files
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="folder_hierarchy.html">
+  <a class="reference internal" href="folders_and_files/folders.html">
    BIDS folders
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="metadata_file_formats.html">
+  <a class="reference internal" href="folders_and_files/files.html">
+   BIDS filenames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="folders_and_files/metadata.html">
    BIDS metadata and file formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="folders_and_files/derivatives.html">
+   BIDS Derivatives
   </a>
  </li>
 </ul>
@@ -118,7 +128,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tutorials/tutorials.html">
-   BIDS Tutorial Series
+   Tutorials
   </a>
  </li>
  <li class="toctree-l1">
@@ -170,7 +180,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="links.html">
-   A collection of links to useful code / other repositories relevant to BIDS
+   Links and resources
   </a>
  </li>
 </ul>
@@ -295,11 +305,6 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#brainhack-western-2018-dataset">
-   Brainhack Western 2018 dataset
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bids-examples-with-empty-raw-data-files">
    BIDS examples with empty raw data files
   </a>
@@ -307,6 +312,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bids-examples-with-data-files">
    BIDS examples with data files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#brainhack-western-2018-dataset">
+   Brainhack Western 2018 dataset
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -340,11 +350,6 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#brainhack-western-2018-dataset">
-   Brainhack Western 2018 dataset
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bids-examples-with-empty-raw-data-files">
    BIDS examples with empty raw data files
   </a>
@@ -352,6 +357,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bids-examples-with-data-files">
    BIDS examples with data files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#brainhack-western-2018-dataset">
+   Brainhack Western 2018 dataset
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -378,19 +388,10 @@
 <p>Here are some links to BIDS compliant data. Sourcedata (pre-BIDS) are sometimes
 also available, these can be used to just see (or to build tutorials) of how
 source data are converted to BIDS.</p>
-<div class="section" id="brainhack-western-2018-dataset">
-<h2>Brainhack Western 2018 dataset<a class="headerlink" href="#brainhack-western-2018-dataset" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>sourcedata:
-<a class="reference external" href="https://drive.google.com/drive/folders/15GiGHqit0gFFblOUuL2hSoWEJVw6q1M5">ds001</a></p></li>
-<li><p>rawdata:
-<a class="reference external" href="https://drive.google.com/drive/folders/1A3TbarHbtXqx7FfW0UbWWuY1GflF3630">ds001_BIDS</a></p></li>
-</ul>
-</div>
 <div class="section" id="bids-examples-with-empty-raw-data-files">
 <h2>BIDS examples with empty raw data files<a class="headerlink" href="#bids-examples-with-empty-raw-data-files" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Many MRI, fMRI, MEG, EEG and iEEG examples can be found
+<li><p>Many examples can be found
 <a class="reference external" href="https://github.com/bids-standard/bids-examples">here</a></p></li>
 </ul>
 </div>
@@ -413,6 +414,15 @@ conform to BIDS.</p>
 <li><p><a class="reference external" href="https://openneuro.org/search/pet">pet</a></p></li>
 </ul>
 </li>
+</ul>
+</div>
+<div class="section" id="brainhack-western-2018-dataset">
+<h2>Brainhack Western 2018 dataset<a class="headerlink" href="#brainhack-western-2018-dataset" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>sourcedata:
+<a class="reference external" href="https://drive.google.com/drive/folders/15GiGHqit0gFFblOUuL2hSoWEJVw6q1M5">ds001</a></p></li>
+<li><p>rawdata:
+<a class="reference external" href="https://drive.google.com/drive/folders/1A3TbarHbtXqx7FfW0UbWWuY1GflF3630">ds001_BIDS</a></p></li>
 </ul>
 </div>
 <div class="section" id="mother-of-unification-studies">

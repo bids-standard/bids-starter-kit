@@ -7,54 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BIDS metadata and file formats &#8212; BIDS starter kit</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.png"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="BIDS Tutorial Series" href="tutorials/tutorials.html" />
-    <link rel="prev" title="BIDS folders" href="folder_hierarchy.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BIDS Derivatives" href="derivatives.html" />
+    <link rel="prev" title="BIDS filenames" href="files.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -74,39 +74,49 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
       
       
       <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
+  <a class="reference internal" href="../index.html">
    Welcome to the BIDS Starter Kit
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Hierarchy
+  Folders and files
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="folder_hierarchy.html">
+  <a class="reference internal" href="folders.html">
    BIDS folders
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   BIDS filenames
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    BIDS metadata and file formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivatives.html">
+   BIDS Derivatives
   </a>
  </li>
 </ul>
@@ -117,27 +127,27 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/tutorials.html">
-   BIDS Tutorial Series
+  <a class="reference internal" href="../tutorials/tutorials.html">
+   Tutorials
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/tutorials_faq.html">
+  <a class="reference internal" href="../tutorials/tutorials_faq.html">
    Tutorial FAQ
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/ieeg.html">
+  <a class="reference internal" href="../tutorials/ieeg.html">
    iEEG data conversion
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/asl.html">
+  <a class="reference internal" href="../tutorials/asl.html">
    ASL data conversion
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/pet.html">
+  <a class="reference internal" href="../tutorials/pet.html">
    PET data conversion
   </a>
  </li>
@@ -149,28 +159,28 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="dataset_examples.html">
+  <a class="reference internal" href="../dataset_examples.html">
    BIDS data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="talks.html">
+  <a class="reference internal" href="../talks.html">
    Talks and slides about BIDS
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="publications.html">
+  <a class="reference internal" href="../publications.html">
    Publications
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="dependencies.html">
+  <a class="reference internal" href="../dependencies.html">
    BIDS Dependencies List
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="links.html">
-   A collection of links to useful code / other repositories relevant to BIDS
+  <a class="reference internal" href="../links.html">
+   Links and resources
   </a>
  </li>
 </ul>
@@ -181,27 +191,27 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="validator.html">
+  <a class="reference internal" href="../validator.html">
    BIDS validation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="apps.html">
+  <a class="reference internal" href="../apps.html">
    What is a BIDS App?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="faq.html">
+  <a class="reference internal" href="../faq.html">
    Frequently Asked Questions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="glossary.html">
+  <a class="reference internal" href="../glossary.html">
    BIDS jargon busting
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="contact.html">
+  <a class="reference internal" href="../contact.html">
    Contact
   </a>
  </li>
@@ -246,7 +256,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/metadata_file_formats.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/folders_and_files/metadata.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -266,10 +276,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Fmetadata_file_formats.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ffolders_and_files/metadata.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/metadata_file_formats.md"><button
+        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/folders_and_files/metadata.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -818,26 +828,26 @@ use whatever implementation (SPM, JSONio, MATLAB) is available.</p>
 </div>
 <div class="section" id="writing-a-json-file">
 <h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#writing-a-json-file" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;./&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">project</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">sub_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">ses_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">acquisition</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;anat&#39;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;./&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">project</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">sub_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">ses_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">acquisition</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;anat&#39;</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">anat_json_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="n">project</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
-<span class="w">        </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
-<span class="w">        </span><span class="p">[</span><span class="s">&#39;ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
-<span class="w">        </span><span class="n">acquisition</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
-<span class="w">        </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="w"> </span><span class="s">&#39;_ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="w"> </span><span class="s">&#39;_T1W.json&#39;</span><span class="p">]);</span><span class="w"></span>
+<span class="n">anat_json_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="n">project</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">                            </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
+<span class="w">                            </span><span class="p">[</span><span class="s">&#39;ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
+<span class="w">                            </span><span class="n">acquisition</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">                            </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="w"> </span><span class="s">&#39;_ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="w"> </span><span class="s">&#39;_T1W.json&#39;</span><span class="p">]);</span><span class="w"></span>
 
-<span class="w">    </span><span class="c">% Assign the fields in the Matlab structure that can be saved as a json:</span><span class="w"></span>
-<span class="w">    </span><span class="n">anat_json</span><span class="p">.</span><span class="n">Manufacturer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;GE&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">anat_json</span><span class="p">.</span><span class="n">ManufacturersModelName</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="s">&#39;Discovery MR750&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">anat_json</span><span class="p">.</span><span class="n">MagneticFieldStrength</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">anat_json</span><span class="p">.</span><span class="n">PulseSequence</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;T1 weighted SPGR&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="c">% Assign the fields in the Matlab structure that can be saved as a json:</span><span class="w"></span>
+<span class="n">anat_json</span><span class="p">.</span><span class="n">Manufacturer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;GE&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">anat_json</span><span class="p">.</span><span class="n">ManufacturersModelName</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="s">&#39;Discovery MR750&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">anat_json</span><span class="p">.</span><span class="n">MagneticFieldStrength</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">anat_json</span><span class="p">.</span><span class="n">PulseSequence</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;T1 weighted SPGR&#39;</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">json_options</span><span class="p">.</span><span class="n">indent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;    &#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% this makes the json look pretier when opened in a txt editor</span><span class="w"></span>
-<span class="w">    </span><span class="n">jsonwrite</span><span class="p">(</span><span class="n">loc_json_name</span><span class="p">,</span><span class="n">anat_json</span><span class="p">,</span><span class="n">json_options</span><span class="p">)</span><span class="w"></span>
+<span class="n">json_options</span><span class="p">.</span><span class="n">indent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;    &#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% this makes the json look pretier when opened in a txt editor</span><span class="w"></span>
+<span class="n">jsonwrite</span><span class="p">(</span><span class="n">loc_json_name</span><span class="p">,</span><span class="n">anat_json</span><span class="p">,</span><span class="n">json_options</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -909,11 +919,11 @@ datapoint.</p>
 <h2>Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="reading-a-tsv-file">
 <h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#reading-a-tsv-file" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nb">readtable</span><span class="p">([</span><span class="n">filename</span><span class="p">],</span><span class="w"></span>
-<span class="w">               </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">               </span><span class="s">&#39;TreatAsEmpty&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;N/A&#39;</span><span class="p">,</span><span class="s">&#39;n/a&#39;</span><span class="p">}</span><span class="w"></span>
-<span class="w">             </span><span class="p">);</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">readtable</span><span class="p">([</span><span class="n">filename</span><span class="p">],</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="s">&#39;TreatAsEmpty&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;N/A&#39;</span><span class="p">,</span><span class="s">&#39;n/a&#39;</span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -921,18 +931,18 @@ datapoint.</p>
 <h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#writing-a-tsv-file" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id5">
 <h4>Matlab<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span> <span class="o">=</span> <span class="s1">&#39;MyRootDir&#39;</span><span class="p">;</span>
-<span class="n">bidsProject</span> <span class="o">=</span> <span class="s1">&#39;temp&#39;</span><span class="p">;</span>
-<span class="n">bids_particpants_name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;participants.tsv&#39;</span><span class="p">];</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;MyRootDir&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">bidsProject</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">bids_particpants_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;participants.tsv&#39;</span><span class="p">];</span><span class="w"></span>
 
-<span class="n">participant_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sub-01&#39;</span><span class="p">;</span> <span class="s1">&#39;sub-02&#39;</span><span class="p">];</span> <span class="o">%</span> <span class="n">onsets</span> <span class="ow">in</span> <span class="n">seconds</span>
-<span class="n">age</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span> <span class="mi">30</span><span class="p">]</span><span class="s1">&#39;;</span>
-<span class="n">sex</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">;</span><span class="s1">&#39;f&#39;</span><span class="p">];</span>
+<span class="n">participant_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;sub-01&#39;</span><span class="p">;</span><span class="w"> </span><span class="s">&#39;sub-02&#39;</span><span class="p">];</span><span class="w"> </span><span class="c">% onsets in seconds</span><span class="w"></span>
+<span class="n">age</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">20</span><span class="w"> </span><span class="mi">30</span><span class="p">]</span><span class="o">&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">sex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;m&#39;</span><span class="p">;</span><span class="s">&#39;f&#39;</span><span class="p">];</span><span class="w"></span>
 
-<span class="n">t</span> <span class="o">=</span> <span class="n">table</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">sex</span><span class="p">);</span>
-<span class="n">writetable</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">bidsProject</span><span class="p">,</span> <span class="n">bids_particpants_name</span><span class="p">),</span>
-              <span class="s1">&#39;FileType&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Delimiter&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">);</span>
+<span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">table</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">sex</span><span class="p">);</span><span class="w"></span>
+<span class="nb">writetable</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="w"> </span><span class="n">bidsProject</span><span class="p">,</span><span class="w"> </span><span class="n">bids_particpants_name</span><span class="p">),</span><span class="w"></span>
+<span class="w">              </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1012,7 +1022,7 @@ packages.</p>
 <h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>In this example, we assume the .tsv includes column names (headers), and
 explicitly set column separator (delimitor) to tab (‘\t’)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s1">&#39;myFile.tsv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;myFile.tsv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;\t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1046,7 +1056,7 @@ and quotes from the outpur explicitly by setting them to FALSE.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./folders_and_files"
         },
         predefinedOutput: true
     }
@@ -1058,17 +1068,17 @@ and quotes from the outpur explicitly by setting them to FALSE.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="folder_hierarchy.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="files.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">BIDS folders</p>
+            <p class="prev-next-title">BIDS filenames</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tutorials/tutorials.html" title="next page">
+    <a class='right-next' id="next-link" href="derivatives.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">BIDS Tutorial Series</p>
+        <p class="prev-next-title">BIDS Derivatives</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -1090,7 +1100,7 @@ and quotes from the outpur explicitly by setting them to FALSE.</p>
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
