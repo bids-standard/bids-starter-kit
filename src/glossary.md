@@ -4,8 +4,12 @@
 
 **_Simple definitions for any BIDS related terms_**
 
+Make sure to also check the
+[official glossary](https://bids-specification.readthedocs.io/en/latest/99-appendices/14-glossary.html)
+that lists all the terms of the BIDS specification.
+
 We know that when you're getting started with something new there are often
-jargon-y words that make understanding everthing that's going on kinda hard.
+jargon-y words that make understanding everything that's going on kinda hard.
 
 The point of this list is to give you a place to go to figure out some of those
 terms that "everyone" seems to know.
