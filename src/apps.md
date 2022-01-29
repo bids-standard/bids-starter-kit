@@ -45,7 +45,7 @@ generating statistic maps of each subject's brain could be considered
 "participant", while generating the average of these maps across the dataset
 could be considered "group".
 
-### What do we do if our application does not have any use for the group level analysis?**
+### What do we do if our application does not have any use for the group level analysis?\*\*
 
 If your pipeline has no need for group level analysis, it is fine if it is only
 valid for the analysis_level argument (see
@@ -58,7 +58,7 @@ your tool. However, it's not considered mandatory. (for instance: I know of many
 apps that just simply fail with an error message if the dataset is not BIDS
 compliant)
 
-### How do I upload my BIDS App to the BIDS-App Github org? (for instance: so that it shows up [here](http://bids-apps.neuroimaging.io/apps/))**
+### How do I upload my BIDS App to the BIDS-App Github org? (for instance: so that it shows up [here](http://bids-apps.neuroimaging.io/apps/))\*\*
 
 You can release BIDS Apps using your own or your lab's account. However, if you
 want to be added to the BIDS docker hub, please message Chris Gorgolewski to
@@ -71,4 +71,4 @@ docker hub will happen automatically via circleci
 
 For both lightweight and full datasets to test your BIDS App, choose from one of
 these
-[example datasets](https://github.com/INCF/BIDS-Starter-Kit/wiki/Dataset-Examples)
+[example datasets](https://github.com/bids-standard/bids-starter-kit/wiki/Dataset-Examples)

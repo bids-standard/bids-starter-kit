@@ -44,6 +44,13 @@ the following sections:
     -   [Example pull request](#example-pull-request)
     -   [Recognizing contributions](#recognizing-contributions)
     -   [Thank you](#thank-you)
+        [1. Comment on an existing issue or open a new issue referencing your addition](#1-comment-on-an-existing-issue-or-open-a-new-issue-referencing-your-addition) -
+        [2. Fork to your profile](#2-fork-the-bids-starter-kit-repositorybids-starterkit-repo-to-your-profile) -
+        [3. Make the changes you've discussed](#3-make-the-changes-youve-discussed) -
+        [4. Submit a pull request](#4-submit-a-pull-request)
+    -   [Example pull request](#example-pull-request)
+    -   [Recognizing contributions](#recognizing-contributions)
+    -   [Thank you](#thank-you)
 
 ## Joining the community
 
@@ -337,10 +344,12 @@ _&mdash; Based on contributing guidelines from the
 [bids-specification]:
     https://docs.google.com/document/d/1HFUkAEE-pB-angVcYe6pf_-fVf4sCpOHKesUvfb8Grc/edit#heading=h.hds2i7ii7hjo
 [bids-mailinglist]: https://groups.google.com/forum/#!forum/bids-discussion
-[bids-starterkit-issues]: https://github.com/INCF/bids-starter-kit/issues
-[bids-starterkit-labels]: https://github.com/INCF/bids-starter-kit/labels
-[bids-starterkit-repo]: https://github.com/INCF/bids-starter-kit
-[bids-starterkit-wiki]: https://github.com/INCF/bids-starter-kit/wiki
+[bids-starterkit-issues]:
+    https://github.com/bids-standard/bids-starter-kit/issues
+[bids-starterkit-labels]:
+    https://github.com/bids-standard/bids-starter-kit/labels
+[bids-starterkit-repo]: https://github.com/bids-standard/bids-starter-kit
+[bids-starterkit-wiki]: https://github.com/bids-standard/bids-starter-kit/wiki
 [brainhack-slack-starterkit]: https://brainhack.slack.com/messages/C8RG7F6PN
 [brainhack-slack-invite]: https://brainhack-slack-invite.herokuapp.com
 [intro-github-wiki]: https://help.github.com/articles/about-github-wikis
@@ -358,22 +367,26 @@ _&mdash; Based on contributing guidelines from the
 [github-syncfork]: https://help.github.com/articles/syncing-a-fork
 [gitter]: https://gitter.im/INCF/bids-starter-kit
 [gsoc]: https://summerofcode.withgoogle.com
-[labels-link]: https://github.com/INCF/BIDS-Starter-Kit/labels
-[labels-bug]: https://github.com/INCF/BIDS-Starter-Kit/labels/bug
+[labels-link]: https://github.com/bids-standard/bids-starter-kit/labels
+[labels-bug]: https://github.com/bids-standard/bids-starter-kit/labels/bug
 [labels-closingsoon]:
-    https://github.com/INCF/BIDS-Starter-Kit/labels/closing%20soon
-[labels-community]: https://github.com/INCF/BIDS-Starter-Kit/labels/community
+    https://github.com/bids-standard/bids-starter-kit/labels/closing%20soon
+[labels-community]:
+    https://github.com/bids-standard/bids-starter-kit/labels/community
 [labels-documentation]:
-    https://github.com/INCF/BIDS-Starter-Kit/labels/documentation
+    https://github.com/bids-standard/bids-starter-kit/labels/documentation
 [labels-enhancement]:
-    https://github.com/INCF/BIDS-Starter-Kit/labels/enhancement
+    https://github.com/bids-standard/bids-starter-kit/labels/enhancement
 [labels-firstissue]:
-    https://github.com/INCF/BIDS-Starter-Kit/labels/good%20first%20issue
-[labels-funding]: https://github.com/INCF/BIDS-Starter-Kit/labels/funding
+    https://github.com/bids-standard/bids-starter-kit/labels/good%20first%20issue
+[labels-funding]:
+    https://github.com/bids-standard/bids-starter-kit/labels/funding
 [labels-helpwanted]:
-    https://github.com/INCF/BIDS-Starter-Kit/labels/help%20wanted
-[labels-logistics]: https://github.com/INCF/BIDS-Starter-Kit/labels/logistics
-[labels-question]: https://github.com/INCF/BIDS-Starter-Kit/labels/question
+    https://github.com/bids-standard/bids-starter-kit/labels/help%20wanted
+[labels-logistics]:
+    https://github.com/bids-standard/bids-starter-kit/labels/logistics
+[labels-question]:
+    https://github.com/bids-standard/bids-starter-kit/labels/question
 [jerry-maguire]: https://media.giphy.com/media/uRb2p09vY8lEs/giphy.gif
 [markdown]: https://daringfireball.net/projects/markdown
 [neurostars-forum]: https://neurostars.org/tags/bids

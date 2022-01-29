@@ -70,7 +70,7 @@ correct files. Here we focus on the files relevant for iEEG data. Within the
 to the BIDS file naming scheme. For example:
 
 ```
-sub-<subjectlabel>\_ses-<sessionlabel>\_task-<tasklabel>\_run-<runlabel>\_ieeg.<extension>
+sub-<subjectlabel>_ses-<sessionlabel>_task-<tasklabel>_run-<runlabel>_ieeg.<extension>
 ```
 
 These data are unprocessed and can have one of several file formats (for
