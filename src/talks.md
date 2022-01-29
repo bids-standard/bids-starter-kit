@@ -25,7 +25,7 @@ direct online viewing or [Dropbox](https://www.dropbox.com/) /
 > Making Open Neuroscience Infrastructure Interoperable (MONII 2.0), Montreal
 > CA - C Markiewicz (2019)
 
-[Brain Imaging Data Structure - Open Science Working Group](https://github.com/INCF/bids-starter-kit/files/2068336/Brain.Imaging.Data.Structure.-.OSWG.pptx)
+[Brain Imaging Data Structure - Open Science Working Group](https://github.com/bids-standard/bids-starter-kit/files/2068336/Brain.Imaging.Data.Structure.-.OSWG.pptx)
 
 > Aston University, Birmingham England - A Shephard (2018)
 
