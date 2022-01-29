@@ -6,7 +6,8 @@ source data are converted to BIDS.
 
 ## BIDS examples with empty raw data files
 
--   Many examples can be found [here](https://github.com/bids-standard/bids-examples)
+-   Many examples can be found
+    [here](https://github.com/bids-standard/bids-examples)
 
 ## BIDS examples with data files
 
