@@ -4,7 +4,7 @@
 > Multiband Imaging Test-Retest Pilot Dataset" dataset from NITRC, what should I
 > do?
 
-![](.Pic_1.png)
+![](./media/Pic_1.png)
 
 Here are a list of steps you can follow to request access
 

@@ -51,6 +51,13 @@ the following sections:
     -   [Example pull request](#example-pull-request)
     -   [Recognizing contributions](#recognizing-contributions)
     -   [Thank you](#thank-you)
+        [1. Comment on an existing issue or open a new issue referencing your addition](#1-comment-on-an-existing-issue-or-open-a-new-issue-referencing-your-addition) -
+        [2. Fork to your profile](#2-fork-the-bids-starter-kit-repositorybids-starterkit-repo-to-your-profile) -
+        [3. Make the changes you've discussed](#3-make-the-changes-youve-discussed) -
+        [4. Submit a pull request](#4-submit-a-pull-request)
+    -   [Example pull request](#example-pull-request)
+    -   [Recognizing contributions](#recognizing-contributions)
+    -   [Thank you](#thank-you)
 
 ## Joining the community
 
@@ -126,10 +133,10 @@ webpage.
 
 ## Where to start: wiki, code and templates
 
-### Wiki ([link][bids-starterkit-wiki])
+### Wiki ([link][bids-starterkit-book])
 
 We hope that the easiest place to find information about BIDS is the [**starter
-kit wiki**][bids-starterkit-wiki].
+kit wiki**][bids-starterkit-book].
 
 You only need to be logged in to GitHub to edit the wiki. So, there's no need
 for a pull request if you just want to fix a typo or add a useful link!
@@ -195,7 +202,7 @@ The list of labels for current issues can be found
     There are [lots of ways to ask questions](#get-in-touch) but opening an
     issue is a great way to start a conversation and get your answer. Ideally,
     we'll close it out by **_[adding the answer to the
-    wiki][bids-starterkit-wiki]!_**
+    wiki][bids-starterkit-book]!_**
 
 -   [![good-first-issue](https://img.shields.io/badge/-good%20first%20issue-1b3487.svg)][labels-firstissue]
     _These issues are particularly appropriate if it is your first contribution
@@ -264,7 +271,7 @@ helping us build this useful resource. :sparkles::star2::dizzy:
 
 :point\*right: Remember that if you're adding information to the [wiki](#wiki)
 you \*\*\_don't need to submit a pull request**\*. You can just log into GitHub,
-navigate to the [wiki][bids-starterkit-wiki] and click the**edit\*\* button.
+navigate to the [wiki][bids-starterkit-book] and click the**edit\*\* button.
 
 If you're updating the [code](#code) or the [templates](#templates), the
 following steps are a guide to help you contribute in a way that will be easy
@@ -349,7 +356,7 @@ _&mdash; Based on contributing guidelines from the
 [bids-starterkit-labels]:
     https://github.com/bids-standard/bids-starter-kit/labels
 [bids-starterkit-repo]: https://github.com/bids-standard/bids-starter-kit
-[bids-starterkit-wiki]: https://github.com/bids-standard/bids-starter-kit/wiki
+[bids-starterkit-book]: https://bids-standard.github.io/bids-starter-kit/
 [brainhack-slack-starterkit]: https://brainhack.slack.com/messages/C8RG7F6PN
 [brainhack-slack-invite]: https://brainhack-slack-invite.herokuapp.com
 [intro-github-wiki]: https://help.github.com/articles/about-github-wikis

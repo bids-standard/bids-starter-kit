@@ -50,8 +50,8 @@ direct online viewing or [Dropbox](https://www.dropbox.com/) /
 
 ## Other
 
-[Graphical Representation of BIDS](https://drive.google.com/drive/folders/1xlfeAFpp8iOH12bXONfD9OsRGLFFSLD-) -
-work in progress, viewable with draw.io (a Google Drive extension)
+<!-- [Graphical Representation of BIDS](https://drive.google.com/drive/folders/1xlfeAFpp8iOH12bXONfD9OsRGLFFSLD-) -
+work in progress, viewable with draw.io (a Google Drive extension) -->
 
 [Updated version](https://cogneuro.net/bids)
 

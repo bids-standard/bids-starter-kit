@@ -64,26 +64,26 @@ The examples below are for the
 ### Writing a `.json` file
 
 ```matlab
-    root_dir = './';
-    project = 'temp';
-    sub_id = '01';
-    ses_id = '01';
-    acquisition = 'anat';
+root_dir = './';
+project = 'temp';
+sub_id = '01';
+ses_id = '01';
+acquisition = 'anat';
 
-    anat_json_name = fullfile(root_dir,project,...
-        ['sub-' sub_id],...
-        ['ses-' ses_id],...
-        acquisition,...
-        ['sub-' sub_id '_ses-' ses_id '_T1W.json']);
+anat_json_name = fullfile(root_dir,project,...
+                            ['sub-' sub_id],...
+                            ['ses-' ses_id],...
+                            acquisition,...
+                            ['sub-' sub_id '_ses-' ses_id '_T1W.json']);
 
-    % Assign the fields in the Matlab structure that can be saved as a json:
-    anat_json.Manufacturer = 'GE';
-    anat_json.ManufacturersModelName =  'Discovery MR750';
-    anat_json.MagneticFieldStrength = 3;
-    anat_json.PulseSequence = 'T1 weighted SPGR';
+% Assign the fields in the Matlab structure that can be saved as a json:
+anat_json.Manufacturer = 'GE';
+anat_json.ManufacturersModelName =  'Discovery MR750';
+anat_json.MagneticFieldStrength = 3;
+anat_json.PulseSequence = 'T1 weighted SPGR';
 
-    json_options.indent = '    '; % this makes the json look pretier when opened in a txt editor
-    jsonwrite(loc_json_name,anat_json,json_options)
+json_options.indent = '    '; % this makes the json look pretier when opened in a txt editor
+jsonwrite(loc_json_name,anat_json,json_options)
 ```
 
 ## Python
@@ -157,18 +157,18 @@ Below are ways to read / write TSV files in common languages.
 ### Reading a `.tsv` file:
 
 ```matlab
-    readtable([filename],
-               'FileType', 'text',
-               'Delimiter', '\t',
-               'TreatAsEmpty', {'N/A','n/a'}
-             );
+readtable([filename],
+          'FileType', 'text',
+          'Delimiter', '\t',
+          'TreatAsEmpty', {'N/A','n/a'}
+          );
 ```
 
 ### Writing a `.tsv` file:
 
 #### Matlab
 
-```
+```matlab
 root_dir = 'MyRootDir';
 bidsProject = 'temp';
 bids_particpants_name = ['participants.tsv'];
@@ -258,7 +258,7 @@ packages.
 In this example, we assume the .tsv includes column names (headers), and
 explicitly set column separator (delimitor) to tab ('\t')
 
-```
+```R
 data = read.table('myFile.tsv', header=TRUE, sep='\t')
 ```
 

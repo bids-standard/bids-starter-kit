@@ -1,4 +1,4 @@
-# BIDS Tutorial Series
+# Tutorials
 
 <!-- TODO add internal link -->
 If you are having problems to download the dataset for this tutorial, see our Tutorial FAQ.
