@@ -1,10 +1,12 @@
 format: jb-book
 root: index.md
 parts:
-- caption: Hierarchy
+- caption: Folders and files
   chapters:
-  - file: folder_hierarchy.md
-  - file: metadata_file_formats.md
+  - file: folders_and_files/folders.md
+  - file: folders_and_files/files.md
+  - file: folders_and_files/metadata.md
+  - file: folders_and_files/derivatives
 - caption: Tutorials
   chapters:
   - file: tutorials/tutorials.md
