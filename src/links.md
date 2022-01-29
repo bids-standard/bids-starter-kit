@@ -1,4 +1,4 @@
-# A collection of links to useful code / other repositories relevant to BIDS
+# Links and resources
 
 ## Converters
 

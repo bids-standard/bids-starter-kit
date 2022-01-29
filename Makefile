@@ -1,6 +1,10 @@
-book :
+.PHONY all clean
+
+clean:
+	rm -fr src/_build/
+
+book: src
 	jupyter-book build src
 
-
-clean :
-	rm -fr src/_build/
+test:
+	jupyter-book build src -W --builder linkcheck

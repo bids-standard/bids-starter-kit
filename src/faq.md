@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-As this wiki grows it gets harder to know where to find information, so this
+As this starter-kit grows it gets harder to know where to find information, so this
 page is a collection of frequently asked questions.
 
 Please add to this list! It will always be :construction: **in construction**
@@ -16,18 +16,17 @@ maximise the different ways of finding out more about BIDS.
 ### What is a `json` file?
 
 You can find more information about `json` (and `tsv`) files in the
-[Metadata-file-formats](https://github.com/bids-standard/bids-starter-kit/wiki/Metadata-file-formats)
-page of this wiki.
+[Metadata-file-formats](./folders_and_files/metadata.md) page.
 
 ### What does [this word] mean?
 
 We're building a glossary to de-jargonise some of the terms you need to know to
-work with data in BIDS format. Check it out at
-[https://github.com/bids-standard/bids-starter-kit/wiki/Glossary](https://github.com/bids-standard/bids-starter-kit/wiki/Glossary).
+work with data in BIDS format. Check it out [here](./glossary.md).
 
 ### How to specify the micro sign in Matlab?
 
-The symbol used to indicate µ has unicode U+00B5, which is in Matlab char(181).
+The symbol used to indicate `µ` has unicode U+00B5, which is in Matlab
+char(181).
 
 ### Is your data type not covered in the current BIDS specification?
 
@@ -43,7 +42,7 @@ found in the
 
 If only part of your data is covered under BIDS, an option to allow additional
 files currently not covered in BIDS to pass the validator is the
-[.bidsignore](https://github.com/bids-standard/bids-validator#bidsignore) file,
+[.bidsignore](https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md#bidsignore) file,
 which works just like [.gitignore](https://git-scm.com/docs/gitignore). It
 allows you to list all the files (or directories, with wildcards) that are not
 BIDS compliant and should be ignored by the validator. Of course you should

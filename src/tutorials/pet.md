@@ -24,8 +24,8 @@ as follows:
 -   [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library
     containing (among many others) PET tools such as `ecat2nii` that will be
     used below to convert the imaging data from a PET dataset into nifti format.
-    The Turku PET Centre site can be found [here](https://turkupand so
-    onentre.fi/) for additional information on anything PET.
+    The Turku PET Centre site can be found [here](https://turkupetcentre.fi/)
+    for additional information on anything PET.
 -   a
     [BIDS PET Template](https://github.com/bids-standard/bids-starter-kit/tree/main/templates)
     from this starter kit to initially populate and translate
@@ -202,11 +202,11 @@ That certainly looks less daunting, now let's change the filenames of the
 templates so that they make more sense for our data set (aka remove ShortExample
 from each filename).
 
-**Note:** if you have multiple PET image files you can
-distinguish between them by creating a session folder with a unique name and
-then applying the `ses-<label>` label to each file therein. If there's a single
-pet scan you may omit the additional folder and corresponding label(s) from the
-filename. For more information on labeling see
+**Note:** if you have multiple PET image files you can distinguish between them
+by creating a session folder with a unique name and then applying the
+`ses-<label>` label to each file therein. If there's a single pet scan you may
+omit the additional folder and corresponding label(s) from the filename. For
+more information on labeling see
 [this link](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#pet-recording-data).
 
 ```bash
@@ -461,11 +461,14 @@ fill:
 
 Using nibabel directly also works great:
 
-```python
+<!--
 machine:retest_scan_anon_sub01_8 user$ python3
 Python 3.7.3 (default, Mar 27 2019, 09:23:15)
 [Clang 10.0.1 (clang-1001.0.46.3)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
+-->
+
+```python
 >>> import nibabel
 >>> ecat_file = nibabel.ecat.load('anon_sub01_8_43e5_1b831_de2_anon.v')
 >>> print(ecat_file.get_header())
@@ -823,7 +826,7 @@ machine:NewBidsDataSet user$ tree
 The above structure is a valid bids dataset, however the bids-validator is a
 much more accurate and trustworthy method for making that determination. Follow
 the instructions
-[here](https://github.com/bids-standard/bids-validator#quickstart) to collect
+[here](https://github.com/bids-standard/bids-validator#Quickstart) to collect
 and install the validator.
 
 #### Validating your new dataset
