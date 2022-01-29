@@ -136,38 +136,7 @@ organized data, reproducible research, and data sharing.
 <a href="https://www.arnoldventures.org/newsroom/laura-and-john-arnold-foundation-announces-3-8-million-grant-to-stanford-university-to-improve-the-quality-of-neuroscience-research"><img src="https://www.arnoldventures.org/static/img/logo-on-light.svg" width="200" height="125" title="Arnold Ventures" alt="Arnold Ventures"></a>
 <a href="http://grantome.com/grant/NIH/R24-MH114705-01"><img src="http://grantome.com/images/funders/NIH.png" width="125" height="125" title="NIH" alt="NIH"></a>
 
-### Publications
-
-**Please consider citing the relevant papers when publishing a project that uses
-BIDS**
-
-All publications are listed in our wiki:
-<https://github.com/bids-standard/bids-starter-kit/wiki/Publications>
-
-You'll almost always want to cite the original paper:
-
-[The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](https://www.nature.com/articles/sdata201644)
-
-> Scientific Data volume 3, Article number: 160044 (2016)
-
-```bibtex
-@article{gorgolewski2016brain,
-  title={The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments},
-  author={Gorgolewski, K. and Auer, T. and Calhoun, V. and others},
-  journal={Scientific Data},
-  year={2016},
-  volume={3},
-}
-```
-
 <br>
-
-But there are also modality specific extension papers for
-[MEG](https://doi.org/10.1038/sdata.2018.110),
-[EEG](https://doi.org/10.31234/osf.io/63a4y) and
-[iEEG](https://doi.org/10.31234/osf.io/r7vc2), or the
-[BIDS-Apps](https://doi.org/10.1371/journal.pcbi.1005209) paper that should be
-referenced if you're using data of that type.
 
 [gsoc]: https://summerofcode.withgoogle.com
 [patrick-github]: https://github.com/Park-Patrick
