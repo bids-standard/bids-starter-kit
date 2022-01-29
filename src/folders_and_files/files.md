@@ -18,17 +18,31 @@ Source: Datalad RDM course
 https://psychoinformatics-de.github.io/rdm-course/02-structuring-data/index.html
 -->
 
-##
+## Filename template
+
+<h3 style="padding: 40px; text-align:center; width: 100%; border-style: solid">
+    <span style="color: blue">key1</span>
+    <span style="color: black">-</span>
+    <span style="color: cyan">value1</span>
+    <span style="color: green">_</span>
+    <span style="color: blue">key2</span>
+    <span style="color: black">-</span>
+    <span style="color: cyan">value2</span>
+    <span style="color: green">_</span>
+    <span style="color: red">suffix</span>
+    <span style="color: grey">.extension</span>
+</h3>
 
 <p>
-key1-value_key2-value_suffix.extension
-</p>
+    <ul>
+        <li><span style="color: red">Suffixes</span> are preceded by an <span style="color: green">underscore</span></li>
+        <li>Entities are composed of <span style="color: blue">key</span><span style="color: black">-</span><span style="color: cyan">value</span> pairs separated by <span style="color: green">underscores</span></li>
+        <li>For a given <span style="color: red">suffix</span>, some entities are required and some others are [optional].</li>
+        <li>Entity <span style="color: blue">key</span><span style="color: black">-</span><span style="color: cyan">value</span> pairs have a specific order in which they must appear in filename.</li>
+    </ul>
+<p>
 
--   Suffix preceded by an underscore
--   Entities are composed of key-label pairs separated by underscores
-
-For a given suffix, some entities are required and some others are [optional].
-Entity-label pairs have a specific order in which they must appear in filename.
+<!-- TODO how to read the filename templates in the specification -->
 
 ## Modalities
 
