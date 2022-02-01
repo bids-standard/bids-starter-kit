@@ -2,6 +2,7 @@
 
 Annotation refers to metadata that is directly associated with  data.
 Without adequate annotation, your valuable shared data may be of limited use to other researchers and to you in the future. 
+
 While the BIDS requirements for annotation are limited, 
 BIDS supports a framework for inserting comprehensive
 data annotation at several levels in the dataset.
@@ -9,31 +10,36 @@ This tutorial provides a step-by-step process for data annotation in the BIDS fr
 
 ### Required BIDS annotation files
 
-BIDS requires the following annotation files:
-
 #### Dataset sourcing (`dataset_description.json`)
-`dataset_description.json` is a top-level file that gives details about the source of the dataset, funding, and citation information.
-This file does not provide any actual description of the data.
-You can fill in this blank [dataset description template](../../templates/dataset_description.json) or use it as a guide.
+
+> `dataset_description.json` is a top-level file that gives details about the source of the dataset, funding, and citation information.
+> This file does not provide any actual description of the data.
+> 
+> You can fill in this blank [dataset description template](../../templates/dataset_description.json) or use it as a guide.
 
 #### Dataset description (`README`)
-`README` file is a top-level text file that gives the actual overview of the dataset.
-You can edit the [README template](../../templates/README) with the vital information
-needed for others to analyze your dataset. 
-A comprehensive `README` is essential for users of your data.
+> `README` file is a top-level text file that gives the actual overview of the dataset.
+> A comprehensive `README` is essential for users of your data.
+> 
+> You can edit the [README template](../../templates/README) with the vital information needed for others to analyze your dataset.
+
 
 #### Subject information (`participants.tsv` and `participants.json`)
-`participants.tsv` is a top-level tab-separated value file that provides subject information such as age, sex, and handedness.
+>`participants.tsv` is a top-level tab-separated value file that provides subject information such as age, sex, and handedness.
 Each subject in the dataset should have a row in `participants.tsv`.
-Each type of metadata is provided in a column in this file,
+>
+> Each type of metadata is provided in a column in this file,
 and the nature of the column data is described in the top-level
-`participant.json` file. You can edit the [participants.tsv template](../../templates/participants.tsv) and the corresponding 
+`participant.json` file. 
+>
+> Other subject information such as diagnosis or group may be provided
+in the `participants.tsv` and its corresponding `participants.json` files.
+Any such information makes your data more valuable to users. 
+>
+> You can edit the [participants.tsv template](../../templates/participants.tsv) and the corresponding 
 [participants.json template](../../templates/participants.json)
 to provide this information.
 
-Other subject information such as diagnosis or group may be provided
-in the `participants.tsv` and its corresponding `participants.json` files.
-Any such information makes your data more valuable to would be users. 
 
 
 ## Event annotation
@@ -47,9 +53,9 @@ and feedback, events can also mark the initiation and termination of tasks and e
 
 Events are annotated, by providing `_events.tsv` files associated with
 data recordings. The tab-separated `_events.tsv` files have rows corresponding to the individual events and columns corresponding to
-information about the corresponding event. BIDS events require `onset`
+information about the corresponding event. BIDS `_events.tsv` files require `onset`
 and `duration` columns, but users are free to include other columns.
-These additional columns are critical for identifying what each event
+These additional columns may be critical for identifying what each event
 actually represents.
 
 Associated with the `_events.tsv` file is a `_events.json` file that describes
@@ -69,7 +75,7 @@ assures consistency in event annotation.
 
 #### Step 1: Create a `_events.json`
 
-There are several tools available to make event annotation available.
+There are several tools available to make event annotation easier.
 The **Extract sidecar tool** available online at 
 [https://hedtools.ucsd.edu/hed/events](https://hedtools.ucsd.edu/hed/events)
 allows you to upload an event file and produces a dummy `_events.json` file based on the
