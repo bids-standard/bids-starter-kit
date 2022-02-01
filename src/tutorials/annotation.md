@@ -11,166 +11,79 @@ This tutorial provides a step-by-step process for data annotation in the BIDS fr
 
 BIDS requires the following annotation files:
 
-1. `dataset_description.json` is a top-level file that gives details about the source of the dataset, funding, and citation information.
+#### Dataset sourcing (`dataset_description.json`)
+`dataset_description.json` is a top-level file that gives details about the source of the dataset, funding, and citation information.
 This file does not provide any actual description of the data.
 You can fill in this blank [dataset description template](../../templates/dataset_description.json) or use it as a guide.
-2. `README` file is a top-level text file that gives the actual overview of the dataset.
+
+#### Dataset description (`README`)
+`README` file is a top-level text file that gives the actual overview of the dataset.
 You can edit the [README template](../../templates/README) with the vital information
-needed for others to analyze your dataset.
-3. The `participant.tsv` is a top-level tab-separated value file that provides informationextract the necessary metadata from your raw data and experimental notes
-4. add electrode-specific information needed for localization
+needed for others to analyze your dataset. 
+A comprehensive `README` is essential for users of your data.
 
-## Step 1: Folder structure
+#### Subject information (`participants.tsv` and `participants.json`)
+`participants.tsv` is a top-level tab-separated value file that provides subject information such as age, sex, and handedness.
+Each subject in the dataset should have a row in `participants.tsv`.
+Each type of metadata is provided in a column in this file,
+and the nature of the column data is described in the top-level
+`participant.json` file. You can edit the [participants.tsv template](../../templates/participants.tsv) and the corresponding 
+[participants.json template](../../templates/participants.json)
+to provide this information.
 
-At the highest level, BIDS is a specification for how to structure your files in
-folders, and how to name files such that one can easily infer their contents.
-Thus, the first step is to create the proper folder/file hierarchies, which
-looks like this:
+Other subject information such as diagnosis or group may be provided
+in the `participants.tsv` and its corresponding `participants.json` files.
+Any such information makes your data more valuable to would be users. 
 
-```
-project/
-└── subject
-    └── session
-        └── acquisition
-```
 
-The top level (project) of a BIDS folder must contain a dataset_description.json
-file, a README, and a CHANGES file. In addition, there are a set of sub-folders,
-one per subject, that contain all data from a given subject. These must be named
-according to the convention `sub-<label>`. Within these folders there is an
-optional "session" folder (called `ses-<label>`) and finally a collection of
-"acquisition folders" that correspond to datasets from different modalities
-(such as functional imaging, EEG, and iEEG data) that corresponds to this
-dataset. In our example, there is a folder called `ieeg` that stores all iEEG
-data for the subject, for example:
+## Event annotation
 
-```
-iEEGProject
-├── dataset_description.json
-├── participants.tsv
-├── README
-├── CHANGES
-├── sub-01
-│   ├── anat
-│   │   └── sub-01_T1w.nii.gz
-│   └── ieeg
-│       ├── sub-01_task-visualtask_run-01_ieeg.edf
-│       ├── sub-01_task-visualtask_run-01_ieeg.json
-│       ├── sub-01_task-visualtask_run-01_channels.tsv
-│       ├── sub-01_task-visualtask_run-01_events.tsv
-│       ├── sub-01_electrodes.tsv
-│       └── sub-01_coordsystem.tsv
-├── sub-02
-│   ├── anat
-│   │   └── sub-02_T1w.nii.gz
-│   └── ieeg
-│       ├── sub-02_task-visualtask_run-01_ieeg.edf
-│       ├── sub-02_task-visualtask_run-01_ieeg.json
-│       ├── sub-02_task-visualtask_run-01_channels.tsv
-│       ├── sub-02_task-visualtask_run-01_events.tsv
-│       ├── sub-02_electrodes.tsv
-│       └── sub-02_cooordsystem.tsv
-...
-└── visualtask_ieeg.json
-```
+Events provide the crucial linkage between what happens in the experiment
+and the data itself. 
+Without the information provided by the dataset events,
+many types of datasets cannot be analyzed.
+Beyond marking experimental stimuli, participant responses, instructions,
+and feedback, events can also mark the initiation and termination of tasks and experimental conditions.
 
-## Step 2. Add raw iEEG data
+Events are annotated, by providing `_events.tsv` files associated with
+data recordings. The tab-separated `_events.tsv` files have rows corresponding to the individual events and columns corresponding to
+information about the corresponding event. BIDS events require `onset`
+and `duration` columns, but users are free to include other columns.
+These additional columns are critical for identifying what each event
+actually represents.
 
-Once a folder hierarchy is defined, the folders can be populated with the
-correct files. Here we focus on the files relevant for iEEG data. Within the
-`ieeg` folder, we first copy the raw iEEG data and renamed such that they adhere
-to the BIDS file naming scheme. For example:
+Associated with the `_events.tsv` file is a `_events.json` file that describes
+the meaning of the columns in the corresponding `_events.tsv` file.
 
-```
-sub-<subjectlabel>_ses-<sessionlabel>_task-<tasklabel>_run-<runlabel>_ieeg.<extension>
-```
+It is generally recommended that the meanings of the events file columns and their
+contents should be the same for all the recordings in the dataset.
+If this is the case, you can create a single `_events.json` file and place
+it at the top level in the dataset.
+The single  `_events.json` file approach is not only easier,
+assures consistency in event annotation.
 
-These data are unprocessed and can have one of several file formats (for
-example: BrainVision and EDF formats are supported, NWB, EEGLab and MEF3 formats
-are allowed).
+### Basic event annotation
 
-## Step 3. Add iEEG amplifier metadata
+1. Create a `_events.json` sidecar in the correct form from your `_events.tsv` using an extraction tool.
+2. Fill in a descriptions of each element. 
 
-BIDS datasets should specify all of the metadata needed to analyze and
-understand a dataset, and these are all contained within text-based JavaScript
-Object Notation (JSON, field-value) and Tab Separated Value (TSV) metadata
-files. The iEEG amplifier metadata are stored for each run in a JSON file with
-the same name structure as the raw data (`<raw-data-filename>_ieeg.json`) and a
-TSV file with amplifier metadata (`<raw-data-filename>_channels.tsv`).
+#### Step 1: Create a `_events.json`
 
--   `<raw-data-filename>_ieeg.json`: contains the metadata that are the same for
-    all the data in this run, such as the task name and description, the
-    amplifier brand, and where the experiments were performed. Download a
-    template in the bids-starter-kit
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_ieeg.json)
-    or find the Matlab script to more automatically populate the required fields
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_ieeg_json.m).
--   `<raw-data-filename>_channels.tsv`: The TSV file contains all the settings
-    that differ between iEEG channels such as the units and type of channel
-    (ECOG, SEEG, ECG, EMG, EOG and so on). Download a template in the
-    bids-starter-kit
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_channels.tsv)
-    or find the Matlab script to more automatically populate the required fields
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_channels_tsv.m).
+There are several tools available to make event annotation available.
+The **Extract sidecar tool** available online at 
+[https://hedtools.ucsd.edu/hed/events](https://hedtools.ucsd.edu/hed/events)
+allows you to upload an event file and produces a dummy `_events.json` file based on the
+contents of the event file.
+A step-by-step guide on how to use this tool is available at [not yet done link].
 
-## Step 4. Add electrode-specific metadata
+#### Step 2: Fill in the dummy `_events.json` file
 
-In iEEG recordings, each channel in the amplifier is sampled from a specific
-electrode implanted in the brain. The metadata on the type of electrodes and
-their coordinates is stored in a TSV file with a row for each metallic electrode
-contact (`_electrodes.tsv`). The names of each electrode are used in the
-amplifier metadata to specify the recorded channel and reference to link these
-two files. In order to interpret the position of each electrode, the coordinate
-system is defined in a JSON file (`_coordsystem.json`). The `_coordsystem.json`
-file specifies a reference image file, which can be an MRI, surface rendering,
-standard space (for example: MNI) or operative photo, such that electrode
-positions can be displayed. In addition, any raw data collected for the purpose
-of localizing electrodes is stored in a corresponding anatomy folder (called
-`anat`) that lives at the same folder level as the `ieeg` folder. This can
-contain files like structural volume data or electrode placement photos.
+The description of each element in this file should be clear.
 
--   `_electrodes.tsv`: Download a template in the bids-starter-kit
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_electrodes.tsv)
-    or find the Matlab script to more automatically populate the required fields
-    [here](https://github.com/bids-standard/bids-starter-kit/blob/main/matlabCode/ieeg/createBIDS_electrodes_tsv.m).
--   `_coordsystem.json`: Download a template in the bids-starter-kit
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_coordsystem.json)
-    or find the Matlab script to more automatically populate the required fields
-    [here](https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_coordsystem_json.m).
+### Machine-actionable annotation
 
-## Step 5. Add optional metadata
-
-There are several optional data types that can be stored in BIDS. The way in
-which events, stimuli, continuous physiology data, and participant information
-are stored is the same as for BIDS MRI data. These optional metadata are stored
-within TSV and JSON files as well as any task-specific stimulation files (for
-example: photos or sounds that were presented to the subject during the task, or
-videos of the subject and experimental setup). Some examples are shown here:
-
-```
-iEEGProject
-├── dataset_description.json
-├── participants.tsv
-├── README
-├── CHANGES
-├── sub-01
-│   ├── stimuli
-│   │   └── PresentedPhoto1.png
-│   │   └── PresentedSound1.wav
-│   └── ieeg
-│       ├── sub-01_photo.jpg
-│       ├── sub-01_task-visualtask_run-01_physio.tsv.gz
-│       ├── sub-01_task-visualtask_run-01_physio.json
-│       ├── sub-01_task-visualtask_run-01_stim.tsv.gz
-│       ├── sub-01_task-visualtask_run-01_stim.json
-...
-```
-
-## Step 6. Validate the iEEG-BIDS data
-
-In order to verify that a dataset adheres to the BIDS specification, we need to
-validate the structure, naming conventions, and information inside the dataset.
-The [BIDS validator](https://github.com/bids-standard/bids-validator) is a web-
-and command line-based tool that can validate whether a dataset is BIDS
-compliant. As a part of the iEEG extension to the BIDS specification, this
-validator has been updated to check for new conventions related to iEEG data.
+The difficulty with the minimal event annotation is that the event descriptions
+are useful to readers of your data, but cannot be used in computation.
+BIDS supports [Hierarchical Event Descriptors (HED)](https://github.com/hed-standard)
+which is an infrastructure and a controlled vocabulary that allows you to annotate
+your events in manner that can be used directly by tools. 
