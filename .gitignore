@@ -9,3 +9,9 @@ env
 .ipynb_checkpoints
 
 src/_build
+
+.DS_Store
+desktop.ini
+
+.idea/
+venv/
