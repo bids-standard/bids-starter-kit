@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip setuptools
-        pip3 install -r requirements.txt
+        pip3 install -r requirements_dev.txt
 
     - name: MISS_HIT Metrics
       run: |
