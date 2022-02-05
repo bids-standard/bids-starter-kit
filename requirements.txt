@@ -1,5 +1,4 @@
 miss_hit==0.9.30
 pre-commit
 black
-click~=7.1
-jupyter-book==0.11.3
+jupyter-book
