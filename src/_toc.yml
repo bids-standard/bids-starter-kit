@@ -6,6 +6,8 @@ parts:
   - file: folders_and_files/folders.md
   - file: folders_and_files/files.md
   - file: folders_and_files/metadata.md
+  - url: https://github.com/bids-standard/bids-starter-kit/tree/main/templates
+    title: BIDS files templates
   - file: folders_and_files/derivatives
 - caption: Tutorials
   chapters:

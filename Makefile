@@ -1,9 +1,9 @@
-.PHONY all clean
+.PHONY: all clean
 
 clean:
 	rm -fr src/_build/
 
-book: src
+book:
 	jupyter-book build src
 
 test:
