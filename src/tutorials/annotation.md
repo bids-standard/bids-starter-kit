@@ -64,17 +64,55 @@ many types of datasets cannot be analyzed.
 Beyond marking experimental stimuli, participant responses, instructions,
 and feedback, events can also mark the initiation and termination of tasks and experimental conditions.
 
-Events are annotated by providing `events.tsv` files associated with
-data recordings.
-These tab-separated files have rows corresponding to the individual events and columns corresponding to
-information about the corresponding event.
+#### BIDS minimum requirements
+
+Events in BIDS are marked by providing `events.tsv` files associated with data recordings.
+These tab-separated files have rows corresponding to the individual events and 
+columns corresponding to information about the corresponding event.
+
+BIDS requires that `events.tsv` files have an `onset` column marking the
+time of the time that the event occurred in seconds relative to the start
+of the correspondingly named data recording file.
+The `events.tsv` files must also have a `duration` column indicating
+the duration of the event in seconds.
+At the present time, many datasets model events as instantaneous
+and use `n\a` in the duration column.
+
+Usually, `events.tsv` files have additional columns containing
+information about the events. Optional columns include `sample`,
+`trial_type`, `response_time`, `value`, and `HED`.
+The `events.tsv` files may contain an arbitrary number of additional columns.
+All of these optional columns are dataset-specific,
+and without additional documentation will be meaningless to dataset users.
+
+BIDS **allows**, but **does not require** documentation about the meanings
+of the `events.tsv` file columns and their meanings in a similarly-named
+`events.json` files referred to as JSON sidecars.
+
+#### Text descriptions of events
+The BIDS JSON sidecar format accommodates text descriptions of the meanings
+and contents of various contents of various event file columns in the
+`Description` and `Levels` keys.
+At a minimum, good text descriptions of these is needed in order
+for users to correctly use the data.
+
+#### Machine actionable event annotation
+
+The difficulty with just providing text descriptions of the
+event file columns and their contents is that users will usually
+be required to write custom code to use your data.
+BIDS supports [Hierarchical Event Descriptors (HED)](https://hed-specification.readthedocs.io/en/latest/index.html)
+which is an infrastructure and a controlled vocabulary that allows you to 
+annotate your events in manner that can be used directly by tools.
+
+**Remember:** most users will not be able to work with your dataset
+without having meaningful information about the dataset events.
+
+#### Additional information
 (See [Task events](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/05-task-events.html) and
 [Appendex III: Hierarchical Event Descriptors](https://bids-specification.readthedocs.io/en/stable/99-appendices/03-hed.html) in the 
 [BIDS specification](https://bids-specification.readthedocs.io/en/stable/)
 for an overview of events before getting started with your own annotation.)
-
-**Remember:** most users will not be able to work with your dataset
-without having meaningful information about the dataset events.
 
 #### The event annotation process
 
@@ -87,7 +125,7 @@ where it is easy to find and update.
 
 There are several online tools available at
 [https://hedtools.ucsd.edu/hed](https://hedtools.ucsd.edu/hed)
-to help you in during this process:
+to help you during this process:
 
 1. You can extract a JSON sidecar template that is ready to fill in
 from a representative `events.tsv` file in your BIDS dataset.
@@ -97,18 +135,8 @@ A step-by-step tutorial for doing this can be found in the
 2. Once you have a template, you can start editing the template directory,
 or you can convert the template to a spreadsheet and edit your 
 annotations in Excel or other tool.
-Instructions for doing this are also available in the
+Instructions for doing this are available in the
 [Spreadsheet template tutorial](https://hed-examples.readthedocs.io/en/latest/EventAnnotationQuickStart.html#spreadsheet-templates).
 
 3. Guidance on the annotation process using HED tags is provided in
 a series of [HED tagging tutorials](https://hed-examples.readthedocs.io/en/latest/BasicHEDAnnotation.html).
-
-
-
-### Machine-actionable annotation
-
-The difficulty with the minimal event annotation is that the event descriptions
-are useful to readers of your data, but cannot be used in computation.
-BIDS supports [Hierarchical Event Descriptors (HED)](https://github.com/hed-standard)
-which is an infrastructure and a controlled vocabulary that allows you to annotate
-your events in manner that can be used directly by tools. 
