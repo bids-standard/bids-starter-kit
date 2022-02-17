@@ -1,9 +1,22 @@
 # Annotating a BIDS dataset
 
-Annotation refers to metadata that is directly associated with  data.
-Without adequate annotation, your valuable shared data may be of limited use to other researchers and to you in the future. 
+**Contents:** 
+* [What is annotation?](#what-is-annotation)
+* [Required BIDS annotation files](#required-bids-annotation-files)
+  * [Dataset sourcing](#dataset-sourcing-dataset_descriptionjson)
+  * [Dataset description](#dataset-description-readme)
+  * [Subject information](#subject-information-participantstsv-and-participantsjson)
+* [Event annotation](#event-annotation)
+  * [Why is event annotation necessary?](#why-is-event-annotation-necessary)
+  * [The event annotation process](#the-event-annotation-process)
 
-While the BIDS requirements for annotation are limited, 
+### What is annotation?
+
+Annotation refers to metadata that is directly associated with  data.
+Without adequate annotation, your valuable shared data may be of limited
+use to other researchers and to you in the future.
+
+While the BIDS requirements for annotation are limited,
 BIDS supports a framework for inserting comprehensive
 data annotation at several levels in the dataset.
 This tutorial provides a step-by-step process for data annotation in the BIDS framework.
@@ -12,38 +25,38 @@ This tutorial provides a step-by-step process for data annotation in the BIDS fr
 
 #### Dataset sourcing (`dataset_description.json`)
 
-> `dataset_description.json` is a top-level file that gives details about the source of the dataset, funding, and citation information.
-> This file does not provide any actual description of the data.
-> 
+`dataset_description.json` is a top-level file that gives details about the source of the dataset, funding, and citation information.
+This file does not provide any actual description of the data.
+
 > You can fill in this blank [dataset description template](../../templates/dataset_description.json) or use it as a guide.
 
 #### Dataset description (`README`)
-> `README` file is a top-level text file that gives the actual overview of the dataset.
-> A comprehensive `README` is essential for users of your data.
-> 
+`README` file is a top-level text file that gives the actual overview of the dataset.
+A comprehensive `README` is essential for users of your data.
+
 > You can edit the [README template](../../templates/README) with the vital information needed for others to analyze your dataset.
 
 
 #### Subject information (`participants.tsv` and `participants.json`)
->`participants.tsv` is a top-level tab-separated value file that provides subject information such as age, sex, and handedness.
+`participants.tsv` is a top-level tab-separated value file that provides subject information such as age, sex, and handedness.
 Each subject in the dataset should have a row in `participants.tsv`.
->
-> Each type of metadata is provided in a column in this file,
+
+Each type of metadata is provided in a column in this file,
 and the nature of the column data is described in the top-level
 `participant.json` file. 
->
-> Other subject information such as diagnosis or group may be provided
+
+Other subject information such as diagnosis or group may be provided
 in the `participants.tsv` and its corresponding `participants.json` files.
 Any such information makes your data more valuable to users. 
->
+
 > You can edit the [participants.tsv template](../../templates/participants.tsv) and the corresponding 
 [participants.json template](../../templates/participants.json)
 to provide this information.
 
 
+### Event annotation
 
-## Event annotation
-
+#### Why is event annotation necessary?
 Events provide the crucial linkage between what happens in the experiment
 and the data itself. 
 Without the information provided by the dataset events,
@@ -51,40 +64,46 @@ many types of datasets cannot be analyzed.
 Beyond marking experimental stimuli, participant responses, instructions,
 and feedback, events can also mark the initiation and termination of tasks and experimental conditions.
 
-Events are annotated, by providing `_events.tsv` files associated with
-data recordings. The tab-separated `_events.tsv` files have rows corresponding to the individual events and columns corresponding to
-information about the corresponding event. BIDS `_events.tsv` files require `onset`
-and `duration` columns, but users are free to include other columns.
-These additional columns may be critical for identifying what each event
-actually represents.
+Events are annotated by providing `events.tsv` files associated with
+data recordings.
+These tab-separated files have rows corresponding to the individual events and columns corresponding to
+information about the corresponding event.
+(See [Task events](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/05-task-events.html) and
+[Appendex III: Hierarchical Event Descriptors](https://bids-specification.readthedocs.io/en/stable/99-appendices/03-hed.html) in the 
+[BIDS specification](https://bids-specification.readthedocs.io/en/stable/)
+for an overview of events before getting started with your own annotation.)
 
-Associated with the `_events.tsv` file is a `_events.json` file that describes
-the meaning of the columns in the corresponding `_events.tsv` file.
+**Remember:** most users will not be able to work with your dataset
+without having meaningful information about the dataset events.
 
-It is generally recommended that the meanings of the events file columns and their
-contents should be the same for all the recordings in the dataset.
-If this is the case, you can create a single `_events.json` file and place
-it at the top level in the dataset.
-The single  `_events.json` file approach is not only easier,
-assures consistency in event annotation.
+#### The event annotation process
 
-### Basic event annotation
+The goal of event annotation is to provide the information about events
+needed for effective and correct analysis of the data.
 
-1. Create a `_events.json` sidecar in the correct form from your `_events.tsv` using an extraction tool.
-2. Fill in a descriptions of each element. 
+Ideally most of this information should be in a single `events.json` sidecar
+file located in the root directory of your dataset
+where it is easy to find and update.
 
-#### Step 1: Create a `_events.json`
+There are several online tools available at
+[https://hedtools.ucsd.edu/hed](https://hedtools.ucsd.edu/hed)
+to help you in during this process:
 
-There are several tools available to make event annotation easier.
-The **Extract sidecar tool** available online at 
-[https://hedtools.ucsd.edu/hed/events](https://hedtools.ucsd.edu/hed/events)
-allows you to upload an event file and produces a dummy `_events.json` file based on the
-contents of the event file.
-A step-by-step guide on how to use this tool is available at [not yet done link].
+1. You can extract a JSON sidecar template that is ready to fill in
+from a representative `events.tsv` file in your BIDS dataset.
+A step-by-step tutorial for doing this can be found in the
+[Event annotation quickstart](https://hed-examples.readthedocs.io/en/latest/EventAnnotationQuickStart.html).
 
-#### Step 2: Fill in the dummy `_events.json` file
+2. Once you have a template, you can start editing the template directory,
+or you can convert the template to a spreadsheet and edit your 
+annotations in Excel or other tool.
+Instructions for doing this are also available in the
+[Spreadsheet template tutorial](https://hed-examples.readthedocs.io/en/latest/EventAnnotationQuickStart.html#spreadsheet-templates).
 
-The description of each element in this file should be clear.
+3. Guidance on the annotation process using HED tags is provided in
+a series of [HED tagging tutorials](https://hed-examples.readthedocs.io/en/latest/BasicHEDAnnotation.html).
+
+
 
 ### Machine-actionable annotation
 
