@@ -66,6 +66,7 @@ Events provide the crucial linkage between what happens in the experiment
 and the data itself. 
 Without the information provided by the dataset events,
 many types of datasets cannot be analyzed.
+
 Beyond marking experimental stimuli, participant responses, instructions,
 and feedback, events can also mark the initiation and termination of tasks and experimental conditions.
 
@@ -82,17 +83,18 @@ of the correspondingly named data recording file.
 The `events.tsv` files must also have a `duration` column indicating
 the duration of the event in seconds.
 At the present time, many datasets model events as instantaneous
-and use `n\a` in the duration column.
+and use `n/a` in the duration column.
 
 Usually, `events.tsv` files have additional columns containing
 information about the events. Optional columns include `sample`,
 `trial_type`, `response_time`, `value`, and `HED`.
-The `events.tsv` files may contain an arbitrary number of additional columns.
-All of these optional columns are dataset-specific,
+
+The `events.tsv` files **may** contain an arbitrary number of additional columns.
+All the optional columns are dataset-specific,
 and without additional documentation will be meaningless to dataset users.
 
 BIDS **allows**, but **does not require** documentation about the meanings
-of the `events.tsv` file columns and their meanings in a similarly-named
+of the `events.tsv` file columns and their meanings in similarly-named
 `events.json` files referred to as JSON sidecars.
 
 #### Text descriptions of events
@@ -151,3 +153,6 @@ Instructions for doing this are available in the
 
 3. Guidance on the annotation process using HED tags is provided in
 a series of [HED tagging tutorials](https://hed-examples.readthedocs.io/en/latest/BasicHEDAnnotation.html).
+
+This process and templates make it convenient to provide basic
+descriptions as well as HED tags for your dataset events.
