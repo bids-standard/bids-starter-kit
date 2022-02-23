@@ -6,6 +6,8 @@
   * [Dataset sourcing](#dataset-sourcing-dataset_descriptionjson)
   * [Dataset description](#dataset-description-readme)
 * [Subject annotations](#subject-annotations)
+* [Session annotation in BIDS](#Session-annotation-in-BIDS)
+* [Scans/run annotation in BIDS](#Scans/run-annotation-in-BIDS)
 * [Event annotation in BIDS](#event-annotation-in-bids)
   * [Why is event annotation necessary?](#why-is-event-annotation-necessary)
   * [BIDS event infrastructure](#bids-event-infrastructure)
@@ -14,8 +16,7 @@
     * [Machine-actionable annotation with HED](#machine-actionable-annotation-with-hed)
     * [Additional information](#additional-information)
   * [The event annotation process](#the-event-annotation-process)
-* [Session annotation in BIDS](#Session-annotation-in-BIDS)
-* [Scans/run annotation in BIDS](#Scans/run-annotation-in-BIDS)
+
 
 ## What is annotation?
 
@@ -47,7 +48,8 @@ A comprehensive `README` is essential for users of your data.
 > You can edit the [README template](../../templates/README) with the vital information needed for others to analyze your dataset.
 
 ## Subject annotations
-Annotations at the subject level can be done in the `participants.tsv` file, which is a top-level tab-separated value file that provides
+Annotations at the subject level can be done in the `participants.tsv` file,
+which is a top-level tab-separated value file that provides
 subject information such as age, sex, and handedness.
 Each subject in the dataset should have a row in `participants.tsv`.
 
@@ -63,7 +65,18 @@ Any such information makes your data more valuable to users.
 [participants.json template](../../templates/participants.json)
 to provide this information.
 
-If the dataset includes multiple sets of participant level measurements see the BIDS guidelines for adding [phenotypic and assessment data](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#phenotypic-and-assessment-data).
+If the dataset includes multiple sets of participant level measurements see the BIDS guidelines
+for adding [phenotypic and assessment data](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#phenotypic-and-assessment-data).
+
+## Session annotation in BIDS
+
+At the session level, the optional `sessions.tsv` and `sessions.json` files can be used to add
+annotations that apply to an entire session.
+
+## Scans/run annotation in BIDS
+
+At the scans or run level, the optional `scans.tsv` and `scans.json` files can be used to add
+annotations that apply to an entire run.
 
 ## Event annotation in BIDS
 
@@ -165,13 +178,6 @@ Instructions for doing this are available in the
 This process and templates make it convenient to provide basic
 descriptions as well as HED tags for your dataset events.
 
-## Session annotation in BIDS
-
-At the session level, the optional sessions.tsv and sessions.json files can be used to add annotations that apply to an entire session.
-
-## Scans/run annotation in BIDS
-
-At the scans or run level, the optional scans.tsv and scans.json files can be used to add annotations that apply to an entire run.
 
 A [Basic HED Annotation Guide](https://hed-examples.readthedocs.io/en/latest/BasicHEDAnnotation.html)
 outlines a step-by-step process for selecting HED tags during the annotation process.
