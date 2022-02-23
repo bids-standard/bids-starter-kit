@@ -1,11 +1,11 @@
 # Annotating a BIDS dataset
 
-**Contents:** 
+**Contents:**
 * [What is annotation?](#what-is-annotation)
 * [Required BIDS annotation files](#required-bids-annotation-files)
   * [Dataset sourcing](#dataset-sourcing-dataset_descriptionjson)
   * [Dataset description](#dataset-description-readme)
-  * [Subject information](#subject-information-participantstsv-and-participantsjson)
+* [Subject annotations](#subject-annotations)
 * [Event annotation in BIDS](#event-annotation-in-bids)
   * [Why is event annotation necessary?](#why-is-event-annotation-necessary)
   * [BIDS event infrastructure](#bids-event-infrastructure)
@@ -14,6 +14,8 @@
     * [Machine-actionable annotation with HED](#machine-actionable-annotation-with-hed)
     * [Additional information](#additional-information)
   * [The event annotation process](#the-event-annotation-process)
+* [Session annotation in BIDS](#Session-annotation-in-BIDS)
+* [Scans/run annotation in BIDS](#Scans/run-annotation-in-BIDS)
 
 ## What is annotation?
 
@@ -26,11 +28,13 @@ BIDS supports a framework for inserting comprehensive
 data annotation at several levels in the dataset.
 This tutorial provides a step-by-step process for data annotation in the BIDS framework.
 
+Annotations in BIDS can be done at several levels including the dataset, subjects, sessions, scans and events.
+
 ## Required BIDS annotation files
 
 ### Dataset sourcing (`dataset_description.json`)
 
-`dataset_description.json` is a top-level file that gives details about the 
+`dataset_description.json` is a top-level file that gives details about the
 source of the dataset, funding, and citation information.
 This file does not provide any actual description of the data.
 
@@ -42,28 +46,30 @@ A comprehensive `README` is essential for users of your data.
 
 > You can edit the [README template](../../templates/README) with the vital information needed for others to analyze your dataset.
 
-### Subject information (`participants.tsv` and `participants.json`)
-`participants.tsv` is a top-level tab-separated value file that provides
+## Subject annotations
+Annotations at the subject level can be done in the `participants.tsv` file, which is a top-level tab-separated value file that provides
 subject information such as age, sex, and handedness.
 Each subject in the dataset should have a row in `participants.tsv`.
 
 Each type of metadata is provided in a column in this file,
 and the nature of the column data is described in the top-level
-`participant.json` file. 
+`participants.json` file.
 
 Other subject information such as diagnosis or group may be provided
 in the `participants.tsv` and its corresponding `participants.json` files.
-Any such information makes your data more valuable to users. 
+Any such information makes your data more valuable to users.
 
-> You can edit the [participants.tsv template](../../templates/participants.tsv) and the corresponding 
+> You can edit the [participants.tsv template](../../templates/participants.tsv) and the corresponding
 [participants.json template](../../templates/participants.json)
 to provide this information.
+
+If the dataset includes multiple sets of participant level measurements see the BIDS guidelines for adding [phenotypic and assessment data](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#phenotypic-and-assessment-data).
 
 ## Event annotation in BIDS
 
 ### Why is event annotation necessary?
 Events provide the crucial linkage between what happens in the experiment
-and the data itself. 
+and the data itself.
 Without the information provided by the dataset events,
 many types of datasets cannot be analyzed.
 
@@ -73,7 +79,7 @@ and feedback, events can also mark the initiation and termination of tasks and e
 ### BIDS event infrastructure
 
 Events in BIDS are marked by providing `events.tsv` files associated with data recordings.
-These tab-separated files have rows corresponding to the individual events and 
+These tab-separated files have rows corresponding to the individual events and
 columns corresponding to information about the corresponding event.
 
 #### BIDS minimum requirements
@@ -112,7 +118,7 @@ event file columns and their contents is that users will usually
 be required to write custom code to use your data.
 
 BIDS supports [Hierarchical Event Descriptors (HED)](https://hed-specification.readthedocs.io/en/latest/index.html)
-which is an infrastructure and a controlled vocabulary that allows you to 
+which is an infrastructure and a controlled vocabulary that allows you to
 annotate your events in manner that can be used directly by tools.
 
 **Remember:** most users will not be able to work with your dataset
@@ -150,10 +156,23 @@ A step-by-step tutorial for doing this can be found in the
 [Create a JSON template tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickStart.html#create-a-json-template).
 
 2. Once you have a template, you can start editing the template directory,
-or you can convert the template to a spreadsheet and edit your 
+or you can convert the template to a spreadsheet and edit your
 annotations in Excel or other tool.
 Instructions for doing this are available in the
 [Spreadsheet templates tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickStart.html#spreadsheet-templates).
 
+
+This process and templates make it convenient to provide basic
+descriptions as well as HED tags for your dataset events.
+
+## Session annotation in BIDS
+
+At the session level, the optional sessions.tsv and sessions.json files can be used to add annotations that apply to an entire session.
+
+## Scans/run annotation in BIDS
+
+At the scans or run level, the optional scans.tsv and scans.json files can be used to add annotations that apply to an entire run.
+
 A [Basic HED Annotation Guide](https://hed-examples.readthedocs.io/en/latest/BasicHEDAnnotation.html)
 outlines a step-by-step process for selecting HED tags during the annotation process.
+
