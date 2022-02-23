@@ -179,6 +179,6 @@ This process and templates make it convenient to provide basic
 descriptions as well as HED tags for your dataset events.
 
 
-A [Basic HED Annotation Guide](https://hed-examples.readthedocs.io/en/latest/BasicHEDAnnotation.html)
+A [Basic HED Annotation Guide](https://hed-examples.readthedocs.io/en/latest/BasicHedAnnotation.html)
 outlines a step-by-step process for selecting HED tags during the annotation process.
 
