@@ -136,6 +136,10 @@ Ideally most of this information should be in a single `events.json` sidecar
 file located in the root directory of your dataset
 where it is easy to find and update.
 
+An overview of how event annotation works in BIDS as well as tutorials
+about using available online tools to facilitate annotation can be found in the
+[BIDS annotation quickstart](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickStart.html).
+
 There are several online tools available at
 [https://hedtools.ucsd.edu/hed](https://hedtools.ucsd.edu/hed)
 to help you during this process:
@@ -143,16 +147,13 @@ to help you during this process:
 1. You can extract a JSON sidecar template that is ready to fill in
 from a representative `events.tsv` file in your BIDS dataset.
 A step-by-step tutorial for doing this can be found in the
-[Event annotation quickstart](https://hed-examples.readthedocs.io/en/latest/EventAnnotationQuickStart.html).
+[Create a JSON template tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickStart.html#create-a-json-template).
 
 2. Once you have a template, you can start editing the template directory,
 or you can convert the template to a spreadsheet and edit your 
 annotations in Excel or other tool.
 Instructions for doing this are available in the
-[Spreadsheet template tutorial](https://hed-examples.readthedocs.io/en/latest/EventAnnotationQuickStart.html#spreadsheet-templates).
+[Spreadsheet templates tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickStart.html#spreadsheet-templates).
 
-3. Guidance on the annotation process using HED tags is provided in
-a series of [HED tagging tutorials](https://hed-examples.readthedocs.io/en/latest/BasicHEDAnnotation.html).
-
-This process and templates make it convenient to provide basic
-descriptions as well as HED tags for your dataset events.
+A [Basic HED Annotation Guide](https://hed-examples.readthedocs.io/en/latest/BasicHEDAnnotation.html)
+outlines a step-by-step process for selecting HED tags during the annotation process.
