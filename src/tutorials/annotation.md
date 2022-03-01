@@ -6,9 +6,9 @@
   * [Dataset sourcing](#dataset-sourcing-dataset_descriptionjson)
   * [Dataset description](#dataset-description-readme)
 * [Subject annotations](#subject-annotations)
-* [Session annotation in BIDS](#Session-annotation-in-BIDS)
-* [Scans/run annotation in BIDS](#Scans/run-annotation-in-BIDS)
-* [Event annotation in BIDS](#event-annotation-in-bids)
+* [Session annotations](#Session-annotations)
+* [Scans/run annotation](#Scans/run-annotations)
+* [Event annotation](#event-annotations)
   * [Why is event annotation necessary?](#why-is-event-annotation-necessary)
   * [BIDS event infrastructure](#bids-event-infrastructure)
     * [BIDS minimum requirements](#bids-minimum-requirements)
@@ -68,17 +68,17 @@ to provide this information.
 If the dataset includes multiple sets of participant level measurements see the BIDS guidelines
 for adding [phenotypic and assessment data](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#phenotypic-and-assessment-data).
 
-## Session annotation in BIDS
+## Session annotations
 
 At the session level, the optional `sessions.tsv` and `sessions.json` files can be used to add
 annotations that apply to an entire session.
 
-## Scans/run annotation in BIDS
+## Scans/run annotations
 
 At the scans or run level, the optional `scans.tsv` and `scans.json` files can be used to add
 annotations that apply to an entire run.
 
-## Event annotation in BIDS
+## Event annotations
 
 ### Why is event annotation necessary?
 Events provide the crucial linkage between what happens in the experiment
@@ -92,7 +92,7 @@ and feedback, events can also mark the initiation and termination of tasks and e
 ### BIDS event infrastructure
 
 Events in BIDS are marked by providing `events.tsv` files associated with data recordings.
-These tab-separated files have rows corresponding to the individual events and
+These tab-separated files have rows corresponding to the individual event markers and
 columns corresponding to information about the corresponding event.
 
 #### BIDS minimum requirements
@@ -113,15 +113,15 @@ All the optional columns are dataset-specific,
 and without additional documentation will be meaningless to dataset users.
 
 BIDS **allows**, but **does not require** documentation about the meanings
-of the `events.tsv` file columns and their meanings in similarly-named
+of the `events.tsv` file columns in similarly-named
 `events.json` files referred to as JSON sidecars.
 
 #### Text descriptions of events
 The BIDS JSON sidecar format accommodates text descriptions of the meanings
-and contents of various contents of various event file columns in the
+and contents of event file columns in the
 `Description` and `Levels` keys.
 
-At a minimum, good text descriptions of these is needed in order
+At a minimum, good text descriptions of the event file columns is needed in order
 for users to correctly use the data.
 
 #### Machine actionable annotation with HED
@@ -130,7 +130,7 @@ The difficulty with just providing text descriptions of the
 event file columns and their contents is that users will usually
 be required to write custom code to use your data.
 
-BIDS supports [Hierarchical Event Descriptors (HED)](https://hed-specification.readthedocs.io/en/latest/index.html)
+BIDS supports [Hierarchical Event Descriptors (HED)](https://hed-examples.readthedocs.io/en/latest/index.html),
 which is an infrastructure and a controlled vocabulary that allows you to
 annotate your events in manner that can be used directly by tools.
 
@@ -166,13 +166,13 @@ to help you during this process:
 1. You can extract a JSON sidecar template that is ready to fill in
 from a representative `events.tsv` file in your BIDS dataset.
 A step-by-step tutorial for doing this can be found in the
-[Create a JSON template tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickStart.html#create-a-json-template).
+[Create a JSON template tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#create-a-json-template).
 
 2. Once you have a template, you can start editing the template directory,
 or you can convert the template to a spreadsheet and edit your
 annotations in Excel or other tool.
 Instructions for doing this are available in the
-[Spreadsheet templates tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickStart.html#spreadsheet-templates).
+[Spreadsheet templates tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#spreadsheet-templates).
 
 This process and templates make it convenient to provide basic
 descriptions as well as HED tags for your dataset events.
