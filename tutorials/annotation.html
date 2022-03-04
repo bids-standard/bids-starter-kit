@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annotating a BIDS dataset &#8212; BIDS starter kit</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome to the BIDS Starter Kit
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Folders and files
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folders_and_files/folders.html">
+   BIDS folders
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folders_and_files/files.html">
+   BIDS filenames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folders_and_files/metadata.html">
+   BIDS metadata and file formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">
+   BIDS files templates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folders_and_files/derivatives.html">
+   BIDS Derivatives
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials.html">
+   Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials_faq.html">
+   Tutorial FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ieeg.html">
+   iEEG data conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="asl.html">
+   ASL data conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pet.html">
+   PET data conversion
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dataset_examples.html">
+   BIDS data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../talks.html">
+   Talks and slides about BIDS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publications.html">
+   Publications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dependencies.html">
+   BIDS Dependencies List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../links.html">
+   Links and resources
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../validator.html">
+   BIDS validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apps.html">
+   What is a BIDS App?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   BIDS jargon busting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact.html">
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorials/annotation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bids-standard/bids-starter-kit"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ftutorials/annotation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/tutorials/annotation.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-annotation">
+   What is annotation?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#required-bids-annotation-files">
+   Required BIDS annotation files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-sourcing-dataset-description-json">
+     Dataset sourcing (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       dataset_description.json
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-description-readme">
+     Dataset description (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       README
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subject-annotations">
+   Subject annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#session-annotations">
+   Session annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scans-run-annotations">
+   Scans/run annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#event-annotations">
+   Event annotations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-is-event-annotation-necessary">
+     Why is event annotation necessary?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bids-event-infrastructure">
+     BIDS event infrastructure
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bids-minimum-requirements">
+       BIDS minimum requirements
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#text-descriptions-of-events">
+       Text descriptions of events
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#machine-actionable-annotation-with-hed">
+       Machine actionable annotation with HED
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#additional-information">
+       Additional information
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-event-annotation-process">
+     The event annotation process
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Annotating a BIDS dataset</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-annotation">
+   What is annotation?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#required-bids-annotation-files">
+   Required BIDS annotation files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-sourcing-dataset-description-json">
+     Dataset sourcing (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       dataset_description.json
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-description-readme">
+     Dataset description (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       README
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subject-annotations">
+   Subject annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#session-annotations">
+   Session annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scans-run-annotations">
+   Scans/run annotations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#event-annotations">
+   Event annotations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-is-event-annotation-necessary">
+     Why is event annotation necessary?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bids-event-infrastructure">
+     BIDS event infrastructure
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bids-minimum-requirements">
+       BIDS minimum requirements
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#text-descriptions-of-events">
+       Text descriptions of events
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#machine-actionable-annotation-with-hed">
+       Machine actionable annotation with HED
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#additional-information">
+       Additional information
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-event-annotation-process">
+     The event annotation process
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="annotating-a-bids-dataset">
+<h1>Annotating a BIDS dataset<a class="headerlink" href="#annotating-a-bids-dataset" title="Permalink to this headline">¶</a></h1>
+<p><strong>Contents:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#what-is-annotation">What is annotation?</a></p></li>
+<li><p><a class="reference external" href="#required-bids-annotation-files">Required BIDS annotation files</a></p>
+<ul>
+<li><p><a class="reference external" href="#dataset-sourcing-dataset_descriptionjson">Dataset sourcing</a></p></li>
+<li><p><a class="reference external" href="#dataset-description-readme">Dataset description</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#subject-annotations">Subject annotations</a></p></li>
+<li><p><a class="reference external" href="#Session-annotations">Session annotations</a></p></li>
+<li><p><a class="reference external" href="#Scans/run-annotations">Scans/run annotation</a></p></li>
+<li><p><a class="reference external" href="#event-annotations">Event annotation</a></p>
+<ul>
+<li><p><a class="reference external" href="#why-is-event-annotation-necessary">Why is event annotation necessary?</a></p></li>
+<li><p><a class="reference external" href="#bids-event-infrastructure">BIDS event infrastructure</a></p>
+<ul>
+<li><p><a class="reference external" href="#bids-minimum-requirements">BIDS minimum requirements</a></p></li>
+<li><p><a class="reference external" href="#text-descriptions-of-events">Text descriptions of events</a></p></li>
+<li><p><a class="reference external" href="#machine-actionable-annotation-with-hed">Machine-actionable annotation with HED</a></p></li>
+<li><p><a class="reference external" href="#additional-information">Additional information</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#the-event-annotation-process">The event annotation process</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="what-is-annotation">
+<h2>What is annotation?<a class="headerlink" href="#what-is-annotation" title="Permalink to this headline">¶</a></h2>
+<p>Annotation refers to metadata that is directly associated with  data.
+Without adequate annotation, your valuable shared data may be of limited
+use to other researchers and to you in the future.</p>
+<p>While the BIDS requirements for annotation are limited,
+BIDS supports a framework for inserting comprehensive
+data annotation at several levels in the dataset.
+This tutorial provides a step-by-step process for data annotation in the BIDS framework.</p>
+<p>Annotations in BIDS can be done at several levels including the dataset, subjects, sessions, scans and events.</p>
+</div>
+<div class="section" id="required-bids-annotation-files">
+<h2>Required BIDS annotation files<a class="headerlink" href="#required-bids-annotation-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dataset-sourcing-dataset-description-json">
+<h3>Dataset sourcing (<code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code>)<a class="headerlink" href="#dataset-sourcing-dataset-description-json" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> is a top-level file that gives details about the
+source of the dataset, funding, and citation information.
+This file does not provide any actual description of the data.</p>
+<blockquote>
+<div><p>You can fill in this blank <span class="xref myst">dataset description template</span> or use it as a guide.</p>
+</div></blockquote>
+</div>
+<div class="section" id="dataset-description-readme">
+<h3>Dataset description (<code class="docutils literal notranslate"><span class="pre">README</span></code>)<a class="headerlink" href="#dataset-description-readme" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">README</span></code> file is a top-level text file that gives the actual overview of the dataset.
+A comprehensive <code class="docutils literal notranslate"><span class="pre">README</span></code> is essential for users of your data.</p>
+<blockquote>
+<div><p>You can edit the <span class="xref myst">README template</span> with the vital information needed for others to analyze your dataset.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="subject-annotations">
+<h2>Subject annotations<a class="headerlink" href="#subject-annotations" title="Permalink to this headline">¶</a></h2>
+<p>Annotations at the subject level can be done in the <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code> file,
+which is a top-level tab-separated value file that provides
+subject information such as age, sex, and handedness.
+Each subject in the dataset should have a row in <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code>.</p>
+<p>Each type of metadata is provided in a column in this file,
+and the nature of the column data is described in the top-level
+<code class="docutils literal notranslate"><span class="pre">participants.json</span></code> file.</p>
+<p>Other subject information such as diagnosis or group may be provided
+in the <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code> and its corresponding <code class="docutils literal notranslate"><span class="pre">participants.json</span></code> files.
+Any such information makes your data more valuable to users.</p>
+<blockquote>
+<div><p>You can edit the <span class="xref myst">participants.tsv template</span> and the corresponding
+<span class="xref myst">participants.json template</span>
+to provide this information.</p>
+</div></blockquote>
+<p>If the dataset includes multiple sets of participant level measurements see the BIDS guidelines
+for adding <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#phenotypic-and-assessment-data">phenotypic and assessment data</a>.</p>
+</div>
+<div class="section" id="session-annotations">
+<h2>Session annotations<a class="headerlink" href="#session-annotations" title="Permalink to this headline">¶</a></h2>
+<p>At the session level, the optional <code class="docutils literal notranslate"><span class="pre">sessions.tsv</span></code> and <code class="docutils literal notranslate"><span class="pre">sessions.json</span></code> files can be used to add
+annotations that apply to an entire session.</p>
+</div>
+<div class="section" id="scans-run-annotations">
+<h2>Scans/run annotations<a class="headerlink" href="#scans-run-annotations" title="Permalink to this headline">¶</a></h2>
+<p>At the scans or run level, the optional <code class="docutils literal notranslate"><span class="pre">scans.tsv</span></code> and <code class="docutils literal notranslate"><span class="pre">scans.json</span></code> files can be used to add
+annotations that apply to an entire run.</p>
+</div>
+<div class="section" id="event-annotations">
+<h2>Event annotations<a class="headerlink" href="#event-annotations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="why-is-event-annotation-necessary">
+<h3>Why is event annotation necessary?<a class="headerlink" href="#why-is-event-annotation-necessary" title="Permalink to this headline">¶</a></h3>
+<p>Events provide the crucial linkage between what happens in the experiment
+and the data itself.
+Without the information provided by the dataset events,
+many types of datasets cannot be analyzed.</p>
+<p>Beyond marking experimental stimuli, participant responses, instructions,
+and feedback, events can also mark the initiation and termination of tasks and experimental conditions.</p>
+</div>
+<div class="section" id="bids-event-infrastructure">
+<h3>BIDS event infrastructure<a class="headerlink" href="#bids-event-infrastructure" title="Permalink to this headline">¶</a></h3>
+<p>Events in BIDS are marked by providing <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> files associated with data recordings.
+These tab-separated files have rows corresponding to the individual event markers and
+columns corresponding to information about the corresponding event.</p>
+<div class="section" id="bids-minimum-requirements">
+<h4>BIDS minimum requirements<a class="headerlink" href="#bids-minimum-requirements" title="Permalink to this headline">¶</a></h4>
+<p>BIDS requires that <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> files have an <code class="docutils literal notranslate"><span class="pre">onset</span></code> column marking the
+time of the time that the event occurred in seconds relative to the start
+of the correspondingly named data recording file.
+The <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> files must also have a <code class="docutils literal notranslate"><span class="pre">duration</span></code> column indicating
+the duration of the event in seconds.
+At the present time, many datasets model events as instantaneous
+and use <code class="docutils literal notranslate"><span class="pre">n/a</span></code> in the duration column.</p>
+<p>Usually, <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> files have additional columns containing
+information about the events. Optional columns include <code class="docutils literal notranslate"><span class="pre">sample</span></code>,
+<code class="docutils literal notranslate"><span class="pre">trial_type</span></code>, <code class="docutils literal notranslate"><span class="pre">response_time</span></code>, <code class="docutils literal notranslate"><span class="pre">value</span></code>, and <code class="docutils literal notranslate"><span class="pre">HED</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> files <strong>may</strong> contain an arbitrary number of additional columns.
+All the optional columns are dataset-specific,
+and without additional documentation will be meaningless to dataset users.</p>
+<p>BIDS <strong>allows</strong>, but <strong>does not require</strong> documentation about the meanings
+of the <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> file columns in similarly-named
+<code class="docutils literal notranslate"><span class="pre">events.json</span></code> files referred to as JSON sidecars.</p>
+</div>
+<div class="section" id="text-descriptions-of-events">
+<h4>Text descriptions of events<a class="headerlink" href="#text-descriptions-of-events" title="Permalink to this headline">¶</a></h4>
+<p>The BIDS JSON sidecar format accommodates text descriptions of the meanings
+and contents of event file columns in the
+<code class="docutils literal notranslate"><span class="pre">Description</span></code> and <code class="docutils literal notranslate"><span class="pre">Levels</span></code> keys.</p>
+<p>At a minimum, good text descriptions of the event file columns is needed in order
+for users to correctly use the data.</p>
+</div>
+<div class="section" id="machine-actionable-annotation-with-hed">
+<h4>Machine actionable annotation with HED<a class="headerlink" href="#machine-actionable-annotation-with-hed" title="Permalink to this headline">¶</a></h4>
+<p>The difficulty with just providing text descriptions of the
+event file columns and their contents is that users will usually
+be required to write custom code to use your data.</p>
+<p>BIDS supports <a class="reference external" href="https://hed-examples.readthedocs.io/en/latest/index.html">Hierarchical Event Descriptors (HED)</a>,
+which is an infrastructure and a controlled vocabulary that allows you to
+annotate your events in manner that can be used directly by tools.</p>
+<p><strong>Remember:</strong> most users will not be able to work with your dataset
+without having meaningful information about the dataset events.</p>
+</div>
+<div class="section" id="additional-information">
+<h4>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h4>
+<p>See <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/05-task-events.html">Task events</a> and
+<a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/99-appendices/03-hed.html">Appendix III: Hierarchical Event Descriptors</a>
+in the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/">BIDS specification</a>
+for an overview of events before getting started with your own annotation.</p>
+<p>The next section provides an overview of the event annotation process
+and links to helpful guides and tutorials with the details.</p>
+</div>
+</div>
+<div class="section" id="the-event-annotation-process">
+<h3>The event annotation process<a class="headerlink" href="#the-event-annotation-process" title="Permalink to this headline">¶</a></h3>
+<p>The goal of event annotation is to provide the information about events
+needed for effective and correct analysis of the data.</p>
+<p>Ideally most of this information should be in a single <code class="docutils literal notranslate"><span class="pre">events.json</span></code> sidecar
+file located in the root directory of your dataset
+where it is easy to find and update.</p>
+<p>An overview of how event annotation works in BIDS as well as tutorials
+about using available online tools to facilitate annotation can be found in the
+<a class="reference external" href="https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html">BIDS annotation quickstart</a>.</p>
+<p>There are several online tools available at
+<a class="reference external" href="https://hedtools.ucsd.edu/hed">https://hedtools.ucsd.edu/hed</a>
+to help you during this process:</p>
+<ol class="simple">
+<li><p>You can extract a JSON sidecar template that is ready to fill in
+from a representative <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> file in your BIDS dataset.
+A step-by-step tutorial for doing this can be found in the
+<a class="reference external" href="https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#create-a-json-template">Create a JSON template tutorial</a>.</p></li>
+<li><p>Once you have a template, you can start editing the template directory,
+or you can convert the template to a spreadsheet and edit your
+annotations in Excel or other tool.
+Instructions for doing this are available in the
+<a class="reference external" href="https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#spreadsheet-templates">Spreadsheet templates tutorial</a>.</p></li>
+</ol>
+<p>This process and templates make it convenient to provide basic
+descriptions as well as HED tags for your dataset events.</p>
+<p>A <a class="reference external" href="https://hed-examples.readthedocs.io/en/latest/HedAnnotationQuickstart.html">HED annotation quickstart</a>
+outlines a step-by-step process for selecting HED tags during the annotation process.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The BIDS community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
