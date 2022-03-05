@@ -13,6 +13,7 @@ parts:
   chapters:
   - file: tutorials/tutorials.md
   - file: tutorials/tutorials_faq.md
+  - file: tutorials/annotation.md
   - file: tutorials/ieeg.md
   - file: tutorials/asl.md
   - file: tutorials/pet.md
