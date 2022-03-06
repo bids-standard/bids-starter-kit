@@ -40,7 +40,7 @@ root_dir = ""
 project_label = "templates"
 
 dataset_json_folder = root_dir + project_label
-dataset_json_name = dataset_json_folder + "/" + "dataset_description.json"
+dataset_json_name = f"{dataset_json_folder}/dataset_description.json"
 
 with open(dataset_json_name, "w") as ff:
     json.dump(data, ff, sort_keys=False, indent=4)
