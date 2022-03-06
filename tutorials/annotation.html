@@ -53,6 +53,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="iEEG data conversion" href="ieeg.html" />
+    <link rel="prev" title="Tutorial FAQ" href="tutorials_faq.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -128,7 +130,7 @@
   Tutorials
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tutorials.html">
    Tutorials
@@ -137,6 +139,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="tutorials_faq.html">
    Tutorial FAQ
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Annotating a BIDS dataset
   </a>
  </li>
  <li class="toctree-l1">
@@ -570,7 +577,7 @@ This tutorial provides a step-by-step process for data annotation in the BIDS fr
 source of the dataset, funding, and citation information.
 This file does not provide any actual description of the data.</p>
 <blockquote>
-<div><p>You can fill in this blank <span class="xref myst">dataset description template</span> or use it as a guide.</p>
+<div><p>You can fill in this blank <a class="reference external" href="https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/dataset_description.json">dataset description template</a> or use it as a guide.</p>
 </div></blockquote>
 </div>
 <div class="section" id="dataset-description-readme">
@@ -578,7 +585,7 @@ This file does not provide any actual description of the data.</p>
 <p><code class="docutils literal notranslate"><span class="pre">README</span></code> file is a top-level text file that gives the actual overview of the dataset.
 A comprehensive <code class="docutils literal notranslate"><span class="pre">README</span></code> is essential for users of your data.</p>
 <blockquote>
-<div><p>You can edit the <span class="xref myst">README template</span> with the vital information needed for others to analyze your dataset.</p>
+<div><p>You can edit the <a class="reference external" href="https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/README">README template</a> with the vital information needed for others to analyze your dataset.</p>
 </div></blockquote>
 </div>
 </div>
@@ -595,8 +602,8 @@ and the nature of the column data is described in the top-level
 in the <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code> and its corresponding <code class="docutils literal notranslate"><span class="pre">participants.json</span></code> files.
 Any such information makes your data more valuable to users.</p>
 <blockquote>
-<div><p>You can edit the <span class="xref myst">participants.tsv template</span> and the corresponding
-<span class="xref myst">participants.json template</span>
+<div><p>You can edit the <a class="reference external" href="https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/participants.tsv">participants.tsv template</a> and the corresponding
+<a class="reference external" href="https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/participants.json">participants.json template</a>
 to provide this information.</p>
 </div></blockquote>
 <p>If the dataset includes multiple sets of participant level measurements see the BIDS guidelines
@@ -690,7 +697,7 @@ about using available online tools to facilitate annotation can be found in the
 <a class="reference external" href="https://hedtools.ucsd.edu/hed">https://hedtools.ucsd.edu/hed</a>
 to help you during this process:</p>
 <ol class="simple">
-<li><p>You can extract a JSON sidecar template that is ready to fill in
+<li><p>You can extract a ready-to-fill-in JSON sidecar template
 from a representative <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> file in your BIDS dataset.
 A step-by-step tutorial for doing this can be found in the
 <a class="reference external" href="https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#create-a-json-template">Create a JSON template tutorial</a>.</p></li>
@@ -732,7 +739,21 @@ outlines a step-by-step process for selecting HED tags during the annotation pro
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tutorials_faq.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tutorial FAQ</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ieeg.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">iEEG data conversion</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
