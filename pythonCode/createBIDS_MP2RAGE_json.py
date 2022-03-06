@@ -121,7 +121,7 @@ for f in file_ls:
     data_types = [data_inv_1, data_inv_2, data_MP2RAGE, data_T1, data_T1]
     out_files = zip(json_names, data_types)
 
-    for i, out_file in enumerate(out_files):
+    for out_file in out_files:
         json_name, data_type = out_file[0], out_file[1]
         with open(os.path.join(path, json_name.format(sid)), "w") as ff:
             json.dump(data_type, ff, sort_keys=False, indent=indent)
