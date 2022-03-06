@@ -39,13 +39,13 @@ Annotations in BIDS can be done at several levels including the dataset, subject
 source of the dataset, funding, and citation information.
 This file does not provide any actual description of the data.
 
-> You can fill in this blank [dataset description template](../../templates/dataset_description.json) or use it as a guide.
+> You can fill in this blank [dataset description template](https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/dataset_description.json) or use it as a guide.
 
 ### Dataset description (`README`)
 `README` file is a top-level text file that gives the actual overview of the dataset.
 A comprehensive `README` is essential for users of your data.
 
-> You can edit the [README template](../../templates/README) with the vital information needed for others to analyze your dataset.
+> You can edit the [README template](https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/README) with the vital information needed for others to analyze your dataset.
 
 ## Subject annotations
 Annotations at the subject level can be done in the `participants.tsv` file,
@@ -61,8 +61,8 @@ Other subject information such as diagnosis or group may be provided
 in the `participants.tsv` and its corresponding `participants.json` files.
 Any such information makes your data more valuable to users.
 
-> You can edit the [participants.tsv template](../../templates/participants.tsv) and the corresponding
-[participants.json template](../../templates/participants.json)
+> You can edit the [participants.tsv template](https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/participants.tsv) and the corresponding
+[participants.json template](https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/participants.json)
 to provide this information.
 
 If the dataset includes multiple sets of participant level measurements see the BIDS guidelines
@@ -163,7 +163,7 @@ There are several online tools available at
 [https://hedtools.ucsd.edu/hed](https://hedtools.ucsd.edu/hed)
 to help you during this process:
 
-1. You can extract a JSON sidecar template that is ready to fill in
+1. You can extract a ready-to-fill-in JSON sidecar template
 from a representative `events.tsv` file in your BIDS dataset.
 A step-by-step tutorial for doing this can be found in the
 [Create a JSON template tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#create-a-json-template).
