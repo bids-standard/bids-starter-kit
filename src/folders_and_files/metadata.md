@@ -193,22 +193,43 @@ For example when loading the `bad_keys.json`
 {
     "@foo": "@foo",
     "1": "1",
+    "x1": "x1",
+    "x_1": "x_1",
     "/t": "/t",
     "%f": "%f"
 }
 ```
 
-We get some quite different fieldnames:
+We get some quite different fieldnames when read with matlab:
 
 ```matlab
->> json_content = bids.util.jsondecode('bad_keys.json')
+>> jsondecode(fileread('bad_keys.json'))
 
-json_content =
+ans =
 
   struct with fields:
 
     x_foo: '@foo'
        x1: '1'
+     x1_1: 'x1'
+      x_1: 'x_1'
+      x_t: '/t'
+      x_f: '%f'
+```
+
+or with JSONio for Octave (though at least here we get a warning):
+
+```
+>> jsonread('bad_keys.json')
+Warning: Duplicate key.
+
+ans =
+
+  struct with fields:
+
+    x_foo: '@foo'
+       x1: 'x1'
+      x_1: 'x_1'
       x_t: '/t'
       x_f: '%f'
 ```
