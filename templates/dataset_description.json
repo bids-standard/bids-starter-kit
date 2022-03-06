@@ -1,7 +1,7 @@
 {
     "Name": "",
-    "BIDSVersion": "1.0.2",
-    "DatasetType": "",
+    "BIDSVersion": "1.7.0",
+    "DatasetType": "raw",
     "License": "",
     "Authors": [
         "",
@@ -15,7 +15,9 @@
         "",
         ""
     ],
-    "EthicsApprovals": "",
+    "EthicsApprovals": [
+        ""
+    ],
     "ReferencesAndLinks": [
         "",
         "",
