@@ -13,10 +13,15 @@ jupyter:
 
 # Welcome to the BIDS Starter Kit
 
-<div align="center">
+<!-- <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> -->
+
+<div align="center" style="padding:10px">
   <strong>How to get started with the Brain Imaging Data Structure</strong>
 </div>
-<div align="center">
+
+<div align="center" style="padding:10px">
   A community-curated collection of tutorials, wikis, and templates to get you started with creating BIDS compliant datasets.
 </div>
 
@@ -48,14 +53,13 @@ jupyter:
   </h3>
 </div>
 
-<h2 align="center">Click to view the intro video!</h2>
+<h2 align="center"> <i class='fa fa-youtube'></i> Click to view our youtube playlist! <i class="fa fa-youtube"></i> </h2>
 
 <div align="center">
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0"
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0&list=PLtJYlrqQ3YK896BF7SaDBMQhPTzb6DLxV&index=10"
    target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg"
    alt="BIDS Starter Kit Video"
-   width="480"
-   height="360"
+   width="90%"
    border="10" /></a>
 </div>
 
