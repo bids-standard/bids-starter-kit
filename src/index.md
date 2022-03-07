@@ -26,13 +26,9 @@ jupyter:
 </div>
 
 <div align="center">
-  <h3>
-    <a href="http://bids.neuroimaging.io/">
-      BIDS Homepage
-    </a>
-     <span> | </span>
+  <h4>
     <a href="http://bids-specification.readthedocs.io/">
-      Standard
+      Specification
     </a>
     <span> | </span>
     <a href="https://github.com/bids-standard/bids-starter-kit/src/tutorials">
@@ -50,17 +46,28 @@ jupyter:
     <a href=https://neurostars.org/tags/bids>
       Forum
     </a>
-  </h3>
+    <span> | </span>
+    <a href=https://neurostars.org/tags/bids>
+      Youtube
+    </a>
+    <span> | </span>
+    <a href=https://www.youtube.com/channel/UCxZUcYfd_nvIVWAbzRB1tlw>
+      Podcast
+    </a>
+  </h4>
 </div>
 
 <h2 align="center"> <i class='fa fa-youtube'></i> Click to view our youtube playlist! <i class="fa fa-youtube"></i> </h2>
 
 <div align="center">
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0&list=PLtJYlrqQ3YK896BF7SaDBMQhPTzb6DLxV&index=10"
-   target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg"
-   alt="BIDS Starter Kit Video"
-   width="90%"
-   border="10" /></a>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/-c4PUhTwmz4"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
 </div>
 
 ## Motivation
