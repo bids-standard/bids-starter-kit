@@ -173,7 +173,7 @@ json_content =
     key: 'value'
 ```
 
-There are however some strict rules for what makes a valid fieldnames in MATLAB
+There are however some strict rules for what makes a valid fieldname in MATLAB
 and octave.
 
 Fieldnames must:
@@ -280,7 +280,7 @@ If you do this, it will be much harder to work with that JSON file for anyone
 who uses MATLAB or Octave.
 
 ```{attention}
-So in general here are some suggestion on how to name your events:
+So in general here are some suggestions on how to name your events:
 -   start with a letter
 -   make sure they contain only letters, numbers, and/or the underscore character
 -   make sure they are must be no longer than currently 63 characters
