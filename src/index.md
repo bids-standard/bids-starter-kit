@@ -31,11 +31,7 @@ jupyter:
       Specification
     </a>
     <span> | </span>
-    <a href="https://github.com/bids-standard/bids-starter-kit/src/tutorials">
-      Tutorials
-    </a>
-    <span> | </span>
-    <a href="https://github.com/bids-standard/BIDS-Starter-Kit/src/faq.md">
+    <a href="https://bids-standard.github.io/bids-starter-kit/faq.html">
       FAQ
     </a>
     <span> | </span>
@@ -47,11 +43,11 @@ jupyter:
       Forum
     </a>
     <span> | </span>
-    <a href=https://neurostars.org/tags/bids>
+    <a href=https://www.youtube.com/channel/UCxZUcYfd_nvIVWAbzRB1tlw>
       Youtube
     </a>
     <span> | </span>
-    <a href=https://www.youtube.com/channel/UCxZUcYfd_nvIVWAbzRB1tlw>
+    <a href=https://anchor.fm/bids-maintenance>
       Podcast
     </a>
   </h4>
