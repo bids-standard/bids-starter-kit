@@ -53,8 +53,8 @@ it has
 [other interesting functions to help you with BIDS](https://en.wikibooks.org/wiki/SPM/BIDS).
 
 [bids-matlab](https://github.com/bids-standard/bids-matlab) has 2 functions
-(`bids.util.jsonencode` and `bids.util.decode`) that act as wrappers and will
-use whatever implementation (SPM, JSONio, MATLAB) is available.
+(`bids.util.jsonencode` and `bids.util.jsondecode`) that act as wrappers and
+will use whatever implementation (SPM, JSONio, MATLAB) is available.
 
 The examples below are for the
 [JSONio library](https://github.com/gllmflndn/JSONio):
@@ -145,6 +145,145 @@ https://github.com/jeroen/jsonlite
     library(jsonlite)
     data = '{"field1": "value1", "field2": 3, "field3": "field3"}'
     writeLines(data, file="myData.json")
+```
+
+## Interoperability issues
+
+Many parts of JSON files are often loaded as
+[`structures`](https://nl.mathworks.com/help/matlab/ref/struct.html) by MATLAB /
+Octave, where a `key` in a JSON file becomes `fieldname` in that structure.
+
+Here is an example with a simple `example.json`
+
+```json
+{
+    "key": "value"
+}
+```
+
+loaded with bids-matlab
+
+```matlab
+>> json_content = bids.util.jsondecode('example.json')
+
+json_content =
+
+  struct with fields:
+
+    key: 'value'
+```
+
+There are however some strict rules for what makes a valid fieldname in MATLAB
+and octave.
+
+Fieldnames must:
+
+-   start with a letter, otherwise assigning to that field will error
+-   contain only letters, numbers, and/or the underscore character, otherwise
+    assigning to that field will error, and
+-   must be no longer than `namelengthmax` (currently 63) characters, otherwise
+    you will receive a warning and the field name will be truncated
+
+If there are keys in your JSON that do not comply to those rules, they keys will
+be renamed when loading which can lead to some headaches down the line.
+
+For example when loading the `bad_keys.json`
+
+```json
+{
+    "@foo": "@foo",
+    "1": "1",
+    "x1": "x1",
+    "x_1": "x_1",
+    "/t": "/t",
+    "%f": "%f"
+}
+```
+
+We get some quite different fieldnames when read with matlab:
+
+```matlab
+>> jsondecode(fileread('bad_keys.json'))
+
+ans =
+
+  struct with fields:
+
+    x_foo: '@foo'
+       x1: '1'
+     x1_1: 'x1'
+      x_1: 'x_1'
+      x_t: '/t'
+      x_f: '%f'
+```
+
+or with JSONio for Octave (though at least here we get a warning):
+
+```
+>> jsonread('bad_keys.json')
+Warning: Duplicate key.
+
+ans =
+
+  struct with fields:
+
+    x_foo: '@foo'
+       x1: 'x1'
+      x_1: 'x_1'
+      x_t: '/t'
+      x_f: '%f'
+```
+
+This can lead to some unexpected behavior if you did not know about this.
+
+If you load this `collision.json`
+
+```json
+{
+    "1": "1",
+    "x1": "x1",
+    "x_1": "x_1"
+}
+```
+
+and try to retrieve the value associated to the `key` `x1`, you will in fact be
+getting the value for the key `1`.
+
+```matlab
+>> json_content = bids.util.jsondecode('collision.json');
+>> json_content.x1
+
+       x1: '1'
+```
+
+**Why and when does this matter for BIDS?**
+
+In most cases this will not be an issue, but this could be problem if in your
+`events.tsv` you have named some of your trial_type things like `1_face`,
+`2_sound` and then want to annotate those events in a side car JSON file like
+this.
+
+```json
+{
+    "trial_type": {
+        "LongName": "",
+        "Description": "image type",
+        "Levels": {
+            "1_face": "A face is displayed",
+            "2_sound": "A sound is played"
+        }
+    }
+}
+```
+
+If you do this, it will be much harder to work with that JSON file for anyone
+who uses MATLAB or Octave.
+
+```{attention}
+So in general here are some suggestions on how to name your events:
+-   start with a letter
+-   make sure they contain only letters, numbers, and/or the underscore character
+-   make sure they are must be no longer than currently 63 characters
 ```
 
 # TSV files
