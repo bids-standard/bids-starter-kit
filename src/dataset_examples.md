@@ -34,9 +34,12 @@ source data are converted to BIDS.
 
 ## Mother of unification studies
 
+<!-- markdown-link-check-disable -->
+
 -   a 204-subject multimodal (MEG, MRI, fMRI)
-    [dataset](https://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0)
-    to study language processing
+[dataset](http://data.donders.ru.nl/collections/di/dccn/DSC_3011020.09_236?0)
+to study language processing
+<!-- markdown-link-check-enable -->
 
 ## Other data that is not in BIDS format
 

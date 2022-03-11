@@ -1,23 +1,5 @@
 # Annotating a BIDS dataset
 
-**Contents:**
-* [What is annotation?](#what-is-annotation)
-* [Required BIDS annotation files](#required-bids-annotation-files)
-  * [Dataset sourcing](#dataset-sourcing-dataset_descriptionjson)
-  * [Dataset description](#dataset-description-readme)
-* [Subject annotations](#subject-annotations)
-* [Session annotations](#Session-annotations)
-* [Scans/run annotation](#Scans/run-annotations)
-* [Event annotation](#event-annotations)
-  * [Why is event annotation necessary?](#why-is-event-annotation-necessary)
-  * [BIDS event infrastructure](#bids-event-infrastructure)
-    * [BIDS minimum requirements](#bids-minimum-requirements)
-    * [Text descriptions of events](#text-descriptions-of-events)
-    * [Machine-actionable annotation with HED](#machine-actionable-annotation-with-hed)
-    * [Additional information](#additional-information)
-  * [The event annotation process](#the-event-annotation-process)
-
-
 ## What is annotation?
 
 Annotation refers to metadata that is directly associated with  data.
@@ -179,4 +161,3 @@ descriptions as well as HED tags for your dataset events.
 
 A [HED annotation quickstart](https://hed-examples.readthedocs.io/en/latest/HedAnnotationQuickstart.html)
 outlines a step-by-step process for selecting HED tags during the annotation process.
-
