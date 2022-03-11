@@ -53,8 +53,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tutorial FAQ" href="tutorials_faq.html" />
-    <link rel="prev" title="BIDS Derivatives" href="../folders_and_files/derivatives.html" />
+    <link rel="next" title="BIDS data" href="../dataset_examples.html" />
+    <link rel="prev" title="MRI data conversion" href="mri.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -131,16 +131,6 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Tutorials
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorials_faq.html">
-   Tutorial FAQ
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="annotation.html">
    Annotating a BIDS dataset
@@ -161,6 +151,16 @@
    PET data conversion
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mri.html">
+   MRI data conversion
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tutorials
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -175,7 +175,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../talks.html">
-   Talks and slides about BIDS
+   Talks and slides
   </a>
  </li>
  <li class="toctree-l1">
@@ -323,6 +323,30 @@
   <a class="reference internal nav-link" href="#other-tutorials">
    Other tutorials
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eeg">
+     EEG
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eeglab">
+       EEGLAB
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fieldtrip">
+       Fieldtrip
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mri">
+     MRI
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -353,6 +377,30 @@
   <a class="reference internal nav-link" href="#other-tutorials">
    Other tutorials
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eeg">
+     EEG
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eeglab">
+       EEGLAB
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fieldtrip">
+       Fieldtrip
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mri">
+     MRI
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -365,30 +413,54 @@
                 
   <div class="section" id="tutorials">
 <h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
-<!-- TODO add internal link -->
-<p>If you are having problems to download the dataset for this tutorial, see our Tutorial FAQ.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://reproducibility.stanford.edu/bids-tutorial-series-part-1a/">Part 1a: Introductory Walkthrough</a></p></li>
-<li><p><a class="reference external" href="http://reproducibility.stanford.edu/bids-tutorial-series-part-1b/">Part 1b: Automate the Introductory Walkthrough</a></p></li>
-<li><p><a class="reference external" href="http://reproducibility.stanford.edu/bids-tutorial-series-part-2a/">Part 2a: HeuDiConv Walkthrough</a></p></li>
-</ul>
 <div class="section" id="video-tutorials">
 <h2>Video tutorials<a class="headerlink" href="#video-tutorials" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=pAv9WuyyF3g">“DICOM to BIDS conversion” by “math et al”</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=O1kZAuR7E00">“Heudiconv Example” by James Kent</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/playlist?list=PLXc9qfVbMMN3II4EnVQNjOeVl-UprWlnM">Playlist on BIDS and EEG by Arnaud Delorme</a></p></li>
-</ul>
+<p>Check out the
+<a class="reference external" href="https://www.youtube.com/watch?v=pAv9WuyyF3g&amp;list=PLtJYlrqQ3YK_M4YgkUx6akJqlHF1R7A5g">Youtube BIDS conversion playlist</a>!</p>
+<!--
+<div align="center">
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/pAv9WuyyF3g"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+</div>
+-->
 </div>
 <div class="section" id="other-tutorials">
 <h2>Other tutorials<a class="headerlink" href="#other-tutorials" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>MRI and MEG BIDS conversion:
+<a class="reference external" href="https://www.youtube.com/watch?v=m7vEHGpqQIw">video</a> &amp;
+<a class="reference external" href="https://remi-gau.github.io/bids_cookbook">cookbook</a></p></li>
+</ul>
+<div class="section" id="eeg">
+<h3>EEG<a class="headerlink" href="#eeg" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="eeglab">
+<h4>EEGLAB<a class="headerlink" href="#eeglab" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
 <li><p><a class="reference external" href="https://eeglab.org/tutorials/11_Scripting/Analyzing_EEG_BIDS_data_in_EEGLAB.html">Importing/exporting EEG datasets with EEGLAB bids-matlab-tools plugin</a></p></li>
 <li><p><a class="reference external" href="https://github.com/sccn/bids-matlab-tools/wiki">Wiki page for bids-matlab-tools EEGLAB plugin for importing/exporting data</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/playlist?list=PLXc9qfVbMMN3II4EnVQNjOeVl-UprWlnM">Playlist on BIDS and EEG by Arnaud Delorme</a></p></li>
+</ul>
+</div>
+<div class="section" id="fieldtrip">
+<h4>Fieldtrip<a class="headerlink" href="#fieldtrip" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
 <li><p><a class="reference external" href="http://www.fieldtriptoolbox.org/example/bids_eeg/">Converting an example EEG dataset for sharing in BIDS using Fieldtrip</a></p></li>
-<li><p><a class="reference external" href="http://www.fieldtriptoolbox.org/workshop/madrid2019/bids_sedation/">Converting an EEG dataset from the University of Cambridge Repository to BIDS using Fieldtrip</a></p></li>
+<li><p><a class="reference external" href="http://www.fieldtriptoolbox.org/workshop/madrid2019/bids_sedation/">Converting an EEG dataset from the University of Cambridge Repository to BIDS</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="mri">
+<h3>MRI<a class="headerlink" href="#mri" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
 <li><p><a class="reference external" href="https://andysbrainbook.readthedocs.io/en/latest/OpenScience/OS/BIDS_Overview.html">Andy’s Brain Book: BIDS Overview</a></p></li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -417,17 +489,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../folders_and_files/derivatives.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="mri.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">BIDS Derivatives</p>
+            <p class="prev-next-title">MRI data conversion</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tutorials_faq.html" title="next page">
+    <a class='right-next' id="next-link" href="../dataset_examples.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial FAQ</p>
+        <p class="prev-next-title">BIDS data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

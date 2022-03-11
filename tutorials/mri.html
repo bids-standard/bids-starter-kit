@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorial FAQ &#8212; BIDS starter kit</title>
+    <title>MRI data conversion &#8212; BIDS starter kit</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Annotating a BIDS dataset" href="annotation.html" />
-    <link rel="prev" title="Tutorials" href="tutorials.html" />
+    <link rel="next" title="Tutorials" href="tutorials.html" />
+    <link rel="prev" title="PET data conversion" href="pet.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -132,16 +132,6 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="tutorials.html">
-   Tutorials
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Tutorial FAQ
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="annotation.html">
    Annotating a BIDS dataset
   </a>
@@ -161,6 +151,16 @@
    PET data conversion
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   MRI data conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials.html">
+   Tutorials
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -175,7 +175,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../talks.html">
-   Talks and slides about BIDS
+   Talks and slides
   </a>
  </li>
  <li class="toctree-l1">
@@ -266,7 +266,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/tutorials/tutorials_faq.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/tutorials/mri.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -286,10 +286,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ftutorials/tutorials_faq.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ftutorials/mri.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/tutorials/tutorials_faq.md"><button
+        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/tutorials/mri.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -309,6 +309,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faq">
+   FAQ
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -316,19 +329,39 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tutorial FAQ</h1>
+                <h1>MRI data conversion</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faq">
+   FAQ
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="section" id="tutorial-faq">
-<h1>Tutorial FAQ<a class="headerlink" href="#tutorial-faq" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="mri-data-conversion">
+<h1>MRI data conversion<a class="headerlink" href="#mri-data-conversion" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="http://reproducibility.stanford.edu/bids-tutorial-series-part-1a/">Part 1a: Introductory Walkthrough</a></p></li>
+<li><p><a class="reference external" href="http://reproducibility.stanford.edu/bids-tutorial-series-part-1b/">Part 1b: Automate the Introductory Walkthrough</a></p></li>
+<li><p><a class="reference external" href="http://reproducibility.stanford.edu/bids-tutorial-series-part-2a/">Part 2a: HeuDiConv Walkthrough</a></p></li>
+</ul>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>I’m getting this error when trying to download the “NKI Rockland Sample –
 Multiband Imaging Test-Retest Pilot Dataset” dataset from NITRC, what should I
@@ -340,6 +373,7 @@ do?</p>
 <p><img alt="" src="../_images/Pic_3.png" /></p>
 <p><img alt="" src="../_images/Pic_4.png" /></p>
 <p><img alt="" src="../_images/Pic_5.png" /></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -367,17 +401,17 @@ do?</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="tutorials.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="pet.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorials</p>
+            <p class="prev-next-title">PET data conversion</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="annotation.html" title="next page">
+    <a class='right-next' id="next-link" href="tutorials.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Annotating a BIDS dataset</p>
+        <p class="prev-next-title">Tutorials</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

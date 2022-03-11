@@ -13,28 +13,25 @@ jupyter:
 
 # Welcome to the BIDS Starter Kit
 
-<div align="center">
+<!-- <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> -->
+
+<div align="center" style="padding:10px">
   <strong>How to get started with the Brain Imaging Data Structure</strong>
 </div>
-<div align="center">
+
+<div align="center" style="padding:10px">
   A community-curated collection of tutorials, wikis, and templates to get you started with creating BIDS compliant datasets.
 </div>
 
 <div align="center">
-  <h3>
-    <a href="http://bids.neuroimaging.io/">
-      BIDS Homepage
-    </a>
-     <span> | </span>
+  <h4>
     <a href="http://bids-specification.readthedocs.io/">
-      Standard
+      Specification
     </a>
     <span> | </span>
-    <a href="https://github.com/bids-standard/bids-starter-kit/src/tutorials">
-      Tutorials
-    </a>
-    <span> | </span>
-    <a href="https://github.com/bids-standard/BIDS-Starter-Kit/src/faq.md">
+    <a href="https://bids-standard.github.io/bids-starter-kit/faq.html">
       FAQ
     </a>
     <span> | </span>
@@ -45,18 +42,28 @@ jupyter:
     <a href=https://neurostars.org/tags/bids>
       Forum
     </a>
-  </h3>
+    <span> | </span>
+    <a href=https://www.youtube.com/channel/UCxZUcYfd_nvIVWAbzRB1tlw>
+      Youtube
+    </a>
+    <span> | </span>
+    <a href=https://anchor.fm/bids-maintenance>
+      Podcast
+    </a>
+  </h4>
 </div>
 
-<h2 align="center">Click to view the intro video!</h2>
+<h2 align="center"> <i class='fa fa-youtube'></i> Click to view our youtube playlist! <i class="fa fa-youtube"></i> </h2>
 
 <div align="center">
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BYdhjVuBsG0"
-   target="_blank"><img src="http://img.youtube.com/vi/BYdhjVuBsG0/0.jpg"
-   alt="BIDS Starter Kit Video"
-   width="480"
-   height="360"
-   border="10" /></a>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/-c4PUhTwmz4"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
 </div>
 
 ## Motivation
