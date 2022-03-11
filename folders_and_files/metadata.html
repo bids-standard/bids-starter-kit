@@ -421,6 +421,11 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interoperability-issues">
+     Interoperability issues
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -661,6 +666,11 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interoperability-issues">
+     Interoperability issues
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -829,8 +839,8 @@ and write JSON files with matlab and octave (see examples below to use
 it has
 <a class="reference external" href="https://en.wikibooks.org/wiki/SPM/BIDS">other interesting functions to help you with BIDS</a>.</p>
 <p><a class="reference external" href="https://github.com/bids-standard/bids-matlab">bids-matlab</a> has 2 functions
-(<code class="docutils literal notranslate"><span class="pre">bids.util.jsonencode</span></code> and <code class="docutils literal notranslate"><span class="pre">bids.util.decode</span></code>) that act as wrappers and will
-use whatever implementation (SPM, JSONio, MATLAB) is available.</p>
+(<code class="docutils literal notranslate"><span class="pre">bids.util.jsonencode</span></code> and <code class="docutils literal notranslate"><span class="pre">bids.util.jsondecode</span></code>) that act as wrappers and
+will use whatever implementation (SPM, JSONio, MATLAB) is available.</p>
 <p>The examples below are for the
 <a class="reference external" href="https://github.com/gllmflndn/JSONio">JSONio library</a>:</p>
 <div class="section" id="reading-a-json-file">
@@ -918,6 +928,126 @@ before using it.</p>
     <span class="nf">writeLines</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s">&quot;myData.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="interoperability-issues">
+<h2>Interoperability issues<a class="headerlink" href="#interoperability-issues" title="Permalink to this headline">¶</a></h2>
+<p>Many parts of JSON files are often loaded as
+<a class="reference external" href="https://nl.mathworks.com/help/matlab/ref/struct.html"><code class="docutils literal notranslate"><span class="pre">structures</span></code></a> by MATLAB /
+Octave, where a <code class="docutils literal notranslate"><span class="pre">key</span></code> in a JSON file becomes <code class="docutils literal notranslate"><span class="pre">fieldname</span></code> in that structure.</p>
+<p>Here is an example with a simple <code class="docutils literal notranslate"><span class="pre">example.json</span></code></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>loaded with bids-matlab</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">jsondecode</span><span class="p">(</span><span class="s">&#39;example.json&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"></span>
+
+<span class="w">  </span><span class="nb">struct</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">fields</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;value&#39;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>There are however some strict rules for what makes a valid fieldname in MATLAB
+and octave.</p>
+<p>Fieldnames must:</p>
+<ul class="simple">
+<li><p>start with a letter, otherwise assigning to that field will error</p></li>
+<li><p>contain only letters, numbers, and/or the underscore character, otherwise
+assigning to that field will error, and</p></li>
+<li><p>must be no longer than <code class="docutils literal notranslate"><span class="pre">namelengthmax</span></code> (currently 63) characters, otherwise
+you will receive a warning and the field name will be truncated</p></li>
+</ul>
+<p>If there are keys in your JSON that do not comply to those rules, they keys will
+be renamed when loading which can lead to some headaches down the line.</p>
+<p>For example when loading the <code class="docutils literal notranslate"><span class="pre">bad_keys.json</span></code></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;@foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@foo&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;x1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;x_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x_1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;/t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/t&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;%f&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%f&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>We get some quite different fieldnames when read with matlab:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">jsondecode</span><span class="p">(</span><span class="nb">fileread</span><span class="p">(</span><span class="s">&#39;bad_keys.json&#39;</span><span class="p">))</span><span class="w"></span>
+
+<span class="nb">ans</span><span class="w"> </span><span class="p">=</span><span class="w"></span>
+
+<span class="w">  </span><span class="nb">struct</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">fields</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">x_foo</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;@foo&#39;</span><span class="w"></span>
+<span class="w">       </span><span class="n">x1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span><span class="w"></span>
+<span class="w">     </span><span class="n">x1_1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;x1&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="n">x_1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;x_1&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="n">x_t</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/t&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="n">x_f</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;%f&#39;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>or with JSONio for Octave (though at least here we get a warning):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">jsonread</span><span class="p">(</span><span class="s1">&#39;bad_keys.json&#39;</span><span class="p">)</span>
+<span class="ne">Warning</span><span class="p">:</span> <span class="n">Duplicate</span> <span class="n">key</span><span class="o">.</span>
+
+<span class="n">ans</span> <span class="o">=</span>
+
+  <span class="n">struct</span> <span class="k">with</span> <span class="n">fields</span><span class="p">:</span>
+
+    <span class="n">x_foo</span><span class="p">:</span> <span class="s1">&#39;@foo&#39;</span>
+       <span class="n">x1</span><span class="p">:</span> <span class="s1">&#39;x1&#39;</span>
+      <span class="n">x_1</span><span class="p">:</span> <span class="s1">&#39;x_1&#39;</span>
+      <span class="n">x_t</span><span class="p">:</span> <span class="s1">&#39;/t&#39;</span>
+      <span class="n">x_f</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>This can lead to some unexpected behavior if you did not know about this.</p>
+<p>If you load this <code class="docutils literal notranslate"><span class="pre">collision.json</span></code></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;x1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;x_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x_1&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and try to retrieve the value associated to the <code class="docutils literal notranslate"><span class="pre">key</span></code> <code class="docutils literal notranslate"><span class="pre">x1</span></code>, you will in fact be
+getting the value for the key <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">jsondecode</span><span class="p">(</span><span class="s">&#39;collision.json&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="p">.</span><span class="n">x1</span><span class="w"></span>
+
+<span class="w">       </span><span class="n">x1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Why and when does this matter for BIDS?</strong></p>
+<p>In most cases this will not be an issue, but this could be problem if in your
+<code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> you have named some of your trial_type things like <code class="docutils literal notranslate"><span class="pre">1_face</span></code>,
+<code class="docutils literal notranslate"><span class="pre">2_sound</span></code> and then want to annotate those events in a side car JSON file like
+this.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;trial_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;image type&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;1_face&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A face is displayed&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;2_sound&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A sound is played&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If you do this, it will be much harder to work with that JSON file for anyone
+who uses MATLAB or Octave.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>So in general here are some suggestions on how to name your events:</p>
+<ul class="simple">
+<li><p>start with a letter</p></li>
+<li><p>make sure they contain only letters, numbers, and/or the underscore character</p></li>
+<li><p>make sure they are must be no longer than currently 63 characters</p></li>
+</ul>
 </div>
 </div>
 </div>
