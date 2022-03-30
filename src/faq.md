@@ -67,6 +67,10 @@ If you want to keep track of what data was acquired when you can use the
 For some examples, see this
 [issue in the bids-starter kit](https://github.com/bids-standard/bids-starter-kit/issues/193).
 
+If you deal with EEG data, you may want to read this
+[comment in a different issue](https://github.com/bids-standard/bids-starter-kit/issues/265#issuecomment-1082240834)
+as well before considering combining within the same `session` folder
+recordings acquired on different occasions.
 ## MRI specific questions
 
 ### What defacing tools can I use?
