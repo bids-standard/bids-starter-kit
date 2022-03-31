@@ -63,7 +63,7 @@ sessions per subject if you collected data from them on several occasions.
 If there is only a single session per subject, this level of the hierarchy
 may be omitted.
 
-For more details, refer to this [section of the FAQ](/faq#i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant).
+For more details, refer to this [section of the FAQ](faq_session).
 
 ## datatype
 
