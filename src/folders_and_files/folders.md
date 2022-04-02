@@ -82,6 +82,69 @@ Represents different types of data. Must be one of:
 
 The name for the datatype depends on the recording modality.
 
+<!-- https://www.tablesgenerator.com/html_tables# -->
+
+<div align="center">
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-mri{border-color:#000000;color:var(--mri);font-size:18px; text-align:center;vertical-align:middle}
+.tg .tg-micr{border-color:#000000;color:var(--micr);font-size:18px; text-align:center;vertical-align:middle}
+.tg .tg-pet{border-color:#000000;color:var(--pet);font-size:18px; text-align:center;vertical-align:middle}
+.tg .tg-meeg{border-color:#000000;color:var(--meeg);font-size:18px;text-align:center;vertical-align:middle}
+.tg .tg-beh{border-color:#000000;color:var(--beh);font-size:18px; text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-va6w"></th>
+    <th class="tg-xuqq" colspan="5"><span style="font-weight:bold"><b>modality</b></span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-xuqq" rowspan="5"><span style="font-weight:bold"><b>datatype</b></span></td>
+    <td class="tg-mri"><b>mri</b></td>
+    <td class="tg-pet"><b>pet</b></td>
+    <td class="tg-meeg"><span style="font-style:normal;text-decoration:none"><b>meeg</b></span></td>
+    <td class="tg-beh"><b>behavioral</b></td>
+    <td class="tg-micr"><b>microscopy</b></td>
+  </tr>
+  <tr>
+    <td class="tg-mri">anat</td>
+    <td class="tg-pet">pet</td>
+    <td class="tg-meeg">eeg</td>
+    <td class="tg-beh">beh</td>
+    <td class="tg-micr">micr</td>
+  </tr>
+  <tr>
+    <td class="tg-mri">func<br></td>
+    <td class="tg-pet"></td>
+    <td class="tg-meeg">meg</td>
+    <td class="tg-beh"></td>
+    <td class="tg-micr"></td>
+  </tr>
+  <tr>
+    <td class="tg-mri">dwi</td>
+    <td class="tg-pet"></td>
+    <td class="tg-meeg">ieeg</td>
+    <td class="tg-beh"></td>
+    <td class="tg-micr"></td>
+  </tr>
+  <tr>
+    <td class="tg-mri">perf</td>
+    <td class="tg-pet"></td>
+    <td class="tg-meeg"></td>
+    <td class="tg-beh"></td>
+    <td class="tg-micr"></td>
+  </tr>
+</tbody>
+</table>
+</div>
+
 ## BIDS folder example
 
 Below is the folder hierarchy for one of the
