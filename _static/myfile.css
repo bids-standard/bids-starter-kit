@@ -1,0 +1,17 @@
+/* https://colorbrewer2.org/#type=qualitative&scheme=Paired&n=12 */
+:root {
+    --mri: #a6cee3;
+    --pet: #1f78b4;
+    --meeg: #6a3d9a;
+    --micr: #33a02c;
+    --beh: #fb9a99;
+    --key: #ff7f00;
+    --label: #fdbf6f;
+    --suffix: #e31a1c;
+    --ext: #b15928;
+    --underscore: #cab2d6;
+    --unused: #b2df8a;
+    --unused2: #ffff99;
+}
+
+p { text-align: justify; }
