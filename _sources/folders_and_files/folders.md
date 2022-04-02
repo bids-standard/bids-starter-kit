@@ -57,15 +57,19 @@ subject.
 
 Structure: `ses-<session label>`
 
-Represents a recording session. You might have multiple sessions per subject if
-you collected data from them on different days. If there is only a single
-session per subject, this level of the hierarchy may be omitted.
+In general, a `session` represents a recording session, and subjects will
+stay in the scanner or headset during that session. You might have multiple
+sessions per subject if you collected data from them on several occasions.
+If there is only a single session per subject, this level of the hierarchy
+may be omitted.
+
+For more details, refer to this [section of the FAQ](faq_session).
 
 ## datatype
 
 Represents different types of data. Must be one of:
 
--   `func `
+-   `func`
 -   `dwi`
 -   `fmap`
 -   `anat`

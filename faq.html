@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -33,22 +33,24 @@
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -93,7 +95,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Folders and files
  </span>
@@ -125,7 +127,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Tutorials
  </span>
@@ -162,7 +164,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Resources
  </span>
@@ -194,7 +196,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Others
  </span>
@@ -565,7 +567,7 @@
             
               <div>
                 
-  <div class="section" id="frequently-asked-questions">
+  <div class="tex2jax_ignore mathjax_ignore section" id="frequently-asked-questions">
 <h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
 <p>As this starter-kit grows it gets harder to know where to find information, so this
 page is a collection of frequently asked questions.</p>
@@ -605,7 +607,7 @@ found in the
 <a class="reference external" href="https://docs.google.com/document/d/1pWmEEY-1-WuwBPNy5tDAxVJYQ9Een4hZJM06tQZg8X4/edit">BIDS Extension Proposals Guide</a>.</p>
 <p>If only part of your data is covered under BIDS, an option to allow additional
 files currently not covered in BIDS to pass the validator is the
-<a class="reference external" href="https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md#bidsignore">.bidsignore</a> file,
+<a class="reference external" href="https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md">.bidsignore</a> file,
 which works just like <a class="reference external" href="https://git-scm.com/docs/gitignore">.gitignore</a>. It
 allows you to list all the files (or directories, with wildcards) that are not
 BIDS compliant and should be ignored by the validator. Of course you should
@@ -618,7 +620,7 @@ names and metadata where possible, but this gives a little extra flexibility.</p
 <a class="reference external" href="https://github.com/sccn/bids-matlab-tools/blob/master/bids_spreadsheet2participants.m">bids-matlab-tools</a></p>
 </div>
 <div class="section" id="i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">
-<h3>I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?<a class="headerlink" href="#i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant" title="Permalink to this headline">¶</a></h3>
+<span id="faq-session"></span><h3>I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?<a class="headerlink" href="#i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant" title="Permalink to this headline">¶</a></h3>
 <p>No. The <code class="docutils literal notranslate"><span class="pre">session</span></code> level in the BIDS folder hierarchy can be used to group data
 that go “logically” together: this means that you can put in the same <code class="docutils literal notranslate"><span class="pre">session</span></code>
 folder data that were acquired on different days, but that are “linked” to one
@@ -627,6 +629,10 @@ another in a way that make sense to how you want to organize your data.</p>
 <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#scans-file"><code class="docutils literal notranslate"><span class="pre">scans.tsv</span></code> files</a>.</p>
 <p>For some examples, see this
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/issues/193">issue in the bids-starter kit</a>.</p>
+<p>If you deal with EEG data, you may want to read this
+<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/issues/265#issuecomment-1082240834">comment in another issue</a>
+as well before considering combining within the same <code class="docutils literal notranslate"><span class="pre">session</span></code> folder
+recordings acquired on different occasions.</p>
 </div>
 </div>
 <div class="section" id="mri-specific-questions">

@@ -42,7 +42,7 @@ found in the
 
 If only part of your data is covered under BIDS, an option to allow additional
 files currently not covered in BIDS to pass the validator is the
-[.bidsignore](https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md#bidsignore) file,
+[.bidsignore](https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md) file,
 which works just like [.gitignore](https://git-scm.com/docs/gitignore). It
 allows you to list all the files (or directories, with wildcards) that are not
 BIDS compliant and should be ignored by the validator. Of course you should
@@ -54,6 +54,7 @@ names and metadata where possible, but this gives a little extra flexibility.
 See these bids tools to import and export a participants.tsv file:
 [bids-matlab-tools](https://github.com/sccn/bids-matlab-tools/blob/master/bids_spreadsheet2participants.m)
 
+(faq_session)=
 ### I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?
 
 No. The `session` level in the BIDS folder hierarchy can be used to group data
@@ -67,6 +68,10 @@ If you want to keep track of what data was acquired when you can use the
 For some examples, see this
 [issue in the bids-starter kit](https://github.com/bids-standard/bids-starter-kit/issues/193).
 
+If you deal with EEG data, you may want to read this
+[comment in another issue](https://github.com/bids-standard/bids-starter-kit/issues/265#issuecomment-1082240834)
+as well before considering combining within the same `session` folder
+recordings acquired on different occasions.
 ## MRI specific questions
 
 ### What defacing tools can I use?
