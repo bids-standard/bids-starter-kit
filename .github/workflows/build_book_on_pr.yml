@@ -14,17 +14,17 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python_version: [3.8, 3.9]
+        python_version: [3.8, 3.9, 3.10]
       fail-fast: false  # Don't cancel all jobs if one fails
 
     runs-on: ${{ matrix.os }}
 
     steps:
     - name: Checkout-repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Setup Python ${{ matrix.python_version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python_version }}
 
