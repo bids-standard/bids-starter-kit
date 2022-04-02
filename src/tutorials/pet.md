@@ -826,7 +826,7 @@ machine:NewBidsDataSet user$ tree
 The above structure is a valid bids dataset, however the bids-validator is a
 much more accurate and trustworthy method for making that determination. Follow
 the instructions
-[here](https://github.com/bids-standard/bids-validator#Quickstart) to collect
+[here](https://github.com/bids-standard/bids-validator) to collect
 and install the validator.
 
 #### Validating your new dataset

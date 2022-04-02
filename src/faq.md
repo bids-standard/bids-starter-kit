@@ -42,7 +42,7 @@ found in the
 
 If only part of your data is covered under BIDS, an option to allow additional
 files currently not covered in BIDS to pass the validator is the
-[.bidsignore](https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md#bidsignore) file,
+[.bidsignore](https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md) file,
 which works just like [.gitignore](https://git-scm.com/docs/gitignore). It
 allows you to list all the files (or directories, with wildcards) that are not
 BIDS compliant and should be ignored by the validator. Of course you should
