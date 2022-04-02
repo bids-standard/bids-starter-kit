@@ -21,5 +21,5 @@ You can also come chat on the
     [`~starter-kit`](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit)
 
 We'd love for you to join the mailing list (bids-discussion@googlegroups.com,
-click [here](https://groups.google.com/forum/#!forum/bids-discussion) to join).
+click [here](https://groups.google.com/g/bids-discussion) to join).
 You might find some helpful answers and discussions there.

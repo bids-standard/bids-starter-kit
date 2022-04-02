@@ -11,7 +11,7 @@ user preferences and use cases, those versions are:
 -   A python library installable via pip
 
 Instructions to install and use these versions can be found within the
-[quickstart guide](https://github.com/bids-standard/bids-validator#quickstart)
+[quickstart guide](https://github.com/bids-standard/bids-validator)
 at the BIDS Validator repository.
 
 **Data Privacy and Confidentiality**
@@ -66,7 +66,7 @@ This response indicates that your folder contains a valid BIDS Dataset!
 ### Verifying a BIDS compliant data set
 
 After
-[installation with npm](https://github.com/bids-standard/bids-validator#quickstart)
+[installation with npm](https://github.com/bids-standard/bids-validator)
 using the CLI is trivial. Locate a bids data set similar to the one below:
 
 ```bash
