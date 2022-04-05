@@ -3,7 +3,7 @@
 clean:
 	rm -fr src/_build/
 
-book:
+book: clean
 	jupyter-book build src
 
 test:

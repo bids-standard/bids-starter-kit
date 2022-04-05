@@ -19,7 +19,7 @@ to support a general BIDS workflow and some
 [bids-matlab](https://github.com/bids-standard/bids-matlab) - functions that
 allow you to crawl through your BIDS dataset and get info about it
 
-FieldTrip [data2bids](http://www.fieldtriptoolbox.org/reference/data2bids/)
+FieldTrip [data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)
 function to convert existing MEG, EEG, iEEG but also MRI datasets to BIDS. See
 [here](http://www.fieldtriptoolbox.org/example/bids/) for examples.
 
