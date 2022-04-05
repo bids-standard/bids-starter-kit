@@ -1,4 +1,4 @@
-# BIDS folders
+# Folders
 
 The BIDS format is essentially a way to structure your data / metadata within a
 hierarchy of folders. This makes it easy to browse from a computer, as well as

@@ -1,4 +1,4 @@
-# BIDS filenames
+# Filenames
 
 BIDS has a standardized way of naming files that tries to implement the
 following principles:
