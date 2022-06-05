@@ -1,0 +1,44 @@
+name: miss_hit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.m'
+  pull_request:
+    branches: ['*']
+    paths:
+      - '**.m'
+
+jobs:
+
+  miss_hit:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        command: ["mh_style", "mh_metric --ci && mh_lint"]
+      fail-fast: true  # cancel all jobs if one fails
+
+    steps:
+
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+        fetch-depth: 1
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools
+        pip3 install -r requirements_dev.txt
+
+    - name: ${{ matrix.command }}
+      run: |
+        ${{ matrix.command }}

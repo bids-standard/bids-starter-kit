@@ -9,8 +9,6 @@
   </h2>
 </div>
 
----
-
 ## Contributing
 
 There are many ways to get in touch with us! Please see our
@@ -25,7 +23,7 @@ resources to help you
 can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or
 how to make a change [using issues](CONTRIBUTING.md#where-to-start-issue-labels)
 (you can also check out GitHub's help on
-[issues](https://help.github.com/articles/about-issues)) and a
+[issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)) and a
 [pull request](CONTRIBUTING.md#making-a-change-with-a-pull-request).
 
 ## Contributors ✨

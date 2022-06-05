@@ -6,6 +6,7 @@
 # doi:10.5281/zenodo.3233853
 # https://github.com/alan-turing-institute/the-turing-way/blob/af98c94/tests/no-bad-latin.py
 import argparse
+import contextlib
 import os
 import re
 
@@ -70,10 +71,10 @@ def construct_error_message(files_dict: dict) -> str:
     """
     error_message = ["Bad latin found in the following files:\n"]
 
-    for file in files_dict.keys():
-        error_message.append(
-            f"{file}:\t{files_dict[file]['latin_type']}\tfound in line\t[{files_dict[file]['line']}]\n"
-        )
+    error_message.extend(
+        f"{file}:\t{value['latin_type']}\tfound in line\t[{files_dict[file]['line']}]\n"
+        for file, value in files_dict.items()
+    )
 
     return "\n".join(error_message)
 
@@ -96,7 +97,7 @@ def read_and_check_files(files: list) -> dict:
 
     for filename in files:
         if os.path.basename(filename) not in IGNORE_LIST:
-            try:
+            with contextlib.suppress(FileNotFoundError):
                 with open(
                     os.path.join(ABSOLUTE_HERE, filename),
                     encoding="utf8",
@@ -113,9 +114,6 @@ def read_and_check_files(files: list) -> dict:
                                     "latin_type": latin_type,
                                     "line": line,
                                 }
-            except FileNotFoundError:
-                pass
-
     return failing_files
 
 
@@ -132,9 +130,11 @@ def get_all_files(directory=os.path.join(ABSOLUTE_HERE, "src")) -> list:
     filetypes_to_ignore = (".png", ".jpg", ".js", ".css")
 
     for rootdir, _, filenames in os.walk(directory):
-        for filename in filenames:
-            if not filename.endswith(filetypes_to_ignore):
-                files.append(os.path.join(rootdir, filename))
+        files.extend(
+            os.path.join(rootdir, filename)
+            for filename in filenames
+            if not filename.endswith(filetypes_to_ignore)
+        )
 
     return files
 

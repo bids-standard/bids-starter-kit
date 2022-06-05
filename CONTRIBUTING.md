@@ -115,14 +115,14 @@ help you figure out any of the jargon or confusing instructions you encounter!
 
 In order to contribute via GitHub you'll need to set up a free account and sign
 in. Here are some
-[instructions](https://help.github.com/articles/signing-up-for-a-new-github-account/)
+[instructions](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 to help you get going. Remember that you can ask us any questions you need to
 along the way.
 
 ## Writing in markdown
 
 GitHub has a helpful page on
-[getting started with writing and formatting on GitHub](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github).
+[getting started with writing and formatting on GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github).
 
 Most of the writing that you'll do will be in [Markdown][markdown]. You can
 think of Markdown as a few little symbols around your text that will allow
@@ -359,19 +359,19 @@ _&mdash; Based on contributing guidelines from the
 [bids-starterkit-book]: https://bids-standard.github.io/bids-starter-kit/
 [brainhack-slack-starterkit]: https://brainhack.slack.com/messages/C8RG7F6PN
 [brainhack-slack-invite]: https://brainhack-slack-invite.herokuapp.com
-[intro-github-wiki]: https://help.github.com/articles/about-github-wikis
+[intro-github-wiki]: https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis
 [dont-push-pull-request]:
     https://www.igvita.com/2011/12/19/dont-push-your-pull-requests
 [git]: https://git-scm.com
 [github]: https://github.com
 [github-branches]:
-    https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
-[github-fork]: https://help.github.com/articles/fork-a-repo
+    https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository
+[github-fork]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
 [github-flow]: https://guides.github.com/introduction/flow
-[github-mergeconflicts]: https://help.github.com/articles/about-merge-conflicts
-[github-pullrequest]: https://help.github.com/articles/creating-a-pull-request
-[github-review]: https://help.github.com/articles/about-pull-request-reviews
-[github-syncfork]: https://help.github.com/articles/syncing-a-fork
+[github-mergeconflicts]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts
+[github-pullrequest]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+[github-review]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews
+[github-syncfork]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork
 [gitter]: https://gitter.im/INCF/bids-starter-kit
 [gsoc]: https://summerofcode.withgoogle.com
 [labels-link]: https://github.com/bids-standard/bids-starter-kit/labels
