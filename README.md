@@ -1,7 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-41-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-42-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -91,6 +89,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/alexvonlautz"><img src="https://avatars.githubusercontent.com/u/44004062?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex von Lautz</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=alexvonlautz" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/AlexandreHutton"><img src="https://avatars.githubusercontent.com/u/50920802?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lex</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/commits?author=AlexandreHutton" title="Documentation">📖</a></td>
     <td align="center"><a href="http://Abrren_Chen"><img src="https://avatars.githubusercontent.com/u/54808990?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abrren_C</b></sub></a><br /><a href="#maintenance-AbrrenC" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="http://gabrielabs.com"><img src="https://avatars.githubusercontent.com/u/21208915?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabriel Silveira</b></sub></a><br /><a href="https://github.com/bids-standard/bids-starter-kit/issues?q=author%3AGabomfim" title="Bug reports">🐛</a> <a href="https://github.com/bids-standard/bids-starter-kit/commits?author=Gabomfim" title="Code">💻</a></td>
   </tr>
 </table>
 
