@@ -27,7 +27,7 @@ This file does not provide any actual description of the data.
 `README` file is a top-level text file that gives the actual overview of the dataset.
 A comprehensive `README` is essential for users of your data.
 
-> You can edit the [README template](https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/README) with the vital information needed for others to analyze your dataset.
+> You can edit the [README template](https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/README.MD) with the vital information needed for others to analyze your dataset.
 
 ## Subject annotations
 Annotations at the subject level can be done in the `participants.tsv` file,
