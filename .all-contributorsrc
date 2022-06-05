@@ -411,6 +411,16 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Gabomfim",
+      "name": "Gabriel Silveira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21208915?v=4",
+      "profile": "http://gabrielabs.com",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
