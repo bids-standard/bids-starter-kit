@@ -377,8 +377,8 @@ df.head()
     3         sub-04   F   20           3
     4         sub-05   M   22           4
 
-# Save as a CSV file
-df.to_csv('my_new_file.csv', sep='\t')
+# Save as a .tsv file
+df.to_csv('my_new_file.tsv', sep='\t')
 ```
 
 ## Excel
