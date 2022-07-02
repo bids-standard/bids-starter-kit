@@ -3,12 +3,12 @@
 BIDS has a standardized way of naming files that tries to implement the
 following principles:
 
--   Do not white spaces in file names
+-   Do not includwe white spaces in file names
     -   They make scripting harder.
 -   Use only letters, numbers, hyphens, and underscores.
-    -   Some operating system cannot handle special characters.
+    -   Some operating systems cannot handle special characters.
 -   Do not rely on letter case (`UPPERCASE` and `lowercase`)
-    -   For some operating system `a` is the same as `A`.
+    -   For some operating systems `a` is the same as `A`.
 -   Use separators and case in a systematic and meaningful way.
     -   [`thisIsCamelCase`](https://en.wikipedia.org/wiki/Camel_case)
     -   [`this_is_snake_case`](https://en.wikipedia.org/wiki/Snake_case)
@@ -52,7 +52,7 @@ derivative data.</li>
 ## Modalities
 
 <!--
-Next we'll populate the first subject's folder with datatype folders. We'll have
+Next, we'll populate the first subject's folder with datatype folders. We'll have
 one per data modality. We'll include a number of different modalities to
 describe their associated metadata below, though most likely you won't have all
 of these for a single subject (if you do, please make sure to open-source your
@@ -95,7 +95,7 @@ Here's a list of these folders:
     -   Metadata:
         -   `sub-<>_ses-<>_acq-<>_run-<>_phasediff.json`
 
-#### `dwi`: Diffusion Weigted Imaging data
+#### `dwi`: Diffusion Weighted Imaging data
 
 `myProject/sub-01/ses-01/dwi/`
 
@@ -110,7 +110,7 @@ Here's a list of these folders:
 
 ### EEG / MEG / iEEG
 
-<!-- TODO  eeg -->
+<!-- TODO EEG -->
 
 #### `meg`: MEG data
 
@@ -121,16 +121,16 @@ Here's a list of these folders:
     -   Metadata:
         -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_meg.json`
     -   Channel information:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<> _proc-<>_channels.tsv`
+        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_channels.tsv`
     -   Events:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<> _proc-<>_events.tsv`
+        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_events.tsv`
     -   Sensor positions:
         -   `sub-<>_ses-<>_acq-<>_photo.jpg`
         -   `sub-<>_ses-<>_acq-<>_fid.json`
         -   `sub-<>_ses-<>_acq-<>_fidinfo.txt`
         -   `sub-<>_ses-<>_acq-<>_headshape.extension`
 
-#### `ieeg`: intracranial EEG data
+#### `ieeg`: Intracranial EEG data
 
 `myProject/sub-01/ses-01/ieeg/`
 
@@ -159,7 +159,4 @@ Here's a list of these folders:
         -   `sub-<>_ses-<>_recording-<>_blood.json`
         -   `sub-<>_ses-<>_recording-<>_blood.tsv`
 
-<!--
-TODO
-Microscopy
--->
+<!-- TODO Microscopy -->
