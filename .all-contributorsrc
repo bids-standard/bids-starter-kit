@@ -421,6 +421,15 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "1nathanliang",
+      "name": "nathan liang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36468637?v=4",
+      "profile": "http://1nathanliang.github.io",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
