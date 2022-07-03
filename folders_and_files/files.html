@@ -363,13 +363,13 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dwi-diffusion-weigted-imaging-data">
+      <a class="reference internal nav-link" href="#dwi-diffusion-weighted-imaging-data">
        <code class="docutils literal notranslate">
         <span class="pre">
          dwi
         </span>
        </code>
-       : Diffusion Weigted Imaging data
+       : Diffusion Weighted Imaging data
       </a>
      </li>
     </ul>
@@ -396,7 +396,7 @@ const thebe_selector_output = ".output, .cell_output"
          ieeg
         </span>
        </code>
-       : intracranial EEG data
+       : Intracranial EEG data
       </a>
      </li>
     </ul>
@@ -486,13 +486,13 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dwi-diffusion-weigted-imaging-data">
+      <a class="reference internal nav-link" href="#dwi-diffusion-weighted-imaging-data">
        <code class="docutils literal notranslate">
         <span class="pre">
          dwi
         </span>
        </code>
-       : Diffusion Weigted Imaging data
+       : Diffusion Weighted Imaging data
       </a>
      </li>
     </ul>
@@ -519,7 +519,7 @@ const thebe_selector_output = ".output, .cell_output"
          ieeg
         </span>
        </code>
-       : intracranial EEG data
+       : Intracranial EEG data
       </a>
      </li>
     </ul>
@@ -557,19 +557,19 @@ const thebe_selector_output = ".output, .cell_output"
 <p>BIDS has a standardized way of naming files that tries to implement the
 following principles:</p>
 <ul class="simple">
-<li><p>Do not white spaces in file names</p>
+<li><p>Do not includwe white spaces in file names</p>
 <ul>
 <li><p>They make scripting harder.</p></li>
 </ul>
 </li>
 <li><p>Use only letters, numbers, hyphens, and underscores.</p>
 <ul>
-<li><p>Some operating system cannot handle special characters.</p></li>
+<li><p>Some operating systems cannot handle special characters.</p></li>
 </ul>
 </li>
 <li><p>Do not rely on letter case (<code class="docutils literal notranslate"><span class="pre">UPPERCASE</span></code> and <code class="docutils literal notranslate"><span class="pre">lowercase</span></code>)</p>
 <ul>
-<li><p>For some operating system <code class="docutils literal notranslate"><span class="pre">a</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p></li>
+<li><p>For some operating systems <code class="docutils literal notranslate"><span class="pre">a</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p></li>
 </ul>
 </li>
 <li><p>Use separators and case in a systematic and meaningful way.</p>
@@ -615,7 +615,7 @@ derivative data.</li>
 <div class="section" id="modalities">
 <h2>Modalities<a class="headerlink" href="#modalities" title="Permalink to this headline">¶</a></h2>
 <!--
-Next we'll populate the first subject's folder with datatype folders. We'll have
+Next, we'll populate the first subject's folder with datatype folders. We'll have
 one per data modality. We'll include a number of different modalities to
 describe their associated metadata below, though most likely you won't have all
 of these for a single subject (if you do, please make sure to open-source your
@@ -660,8 +660,8 @@ Here's a list of these folders:
 </pre></div>
 </div>
 </div>
-<div class="section" id="dwi-diffusion-weigted-imaging-data">
-<h4><code class="docutils literal notranslate"><span class="pre">dwi</span></code>: Diffusion Weigted Imaging data<a class="headerlink" href="#dwi-diffusion-weigted-imaging-data" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="dwi-diffusion-weighted-imaging-data">
+<h4><code class="docutils literal notranslate"><span class="pre">dwi</span></code>: Diffusion Weighted Imaging data<a class="headerlink" href="#dwi-diffusion-weighted-imaging-data" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/dwi/</span></code></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-   Data:
     -   `sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_dwi.nii.gz`
@@ -676,7 +676,7 @@ Here's a list of these folders:
 </div>
 <div class="section" id="eeg-meg-ieeg">
 <h3>EEG / MEG / iEEG<a class="headerlink" href="#eeg-meg-ieeg" title="Permalink to this headline">¶</a></h3>
-<!-- TODO  eeg -->
+<!-- TODO EEG -->
 <div class="section" id="meg-meg-data">
 <h4><code class="docutils literal notranslate"><span class="pre">meg</span></code>: MEG data<a class="headerlink" href="#meg-meg-data" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/meg/</span></code></p>
@@ -685,9 +685,9 @@ Here's a list of these folders:
 -   Metadata:
     -   `sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_proc-&lt;&gt;_meg.json`
 -   Channel information:
-    -   `sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt; _proc-&lt;&gt;_channels.tsv`
+    -   `sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_proc-&lt;&gt;_channels.tsv`
 -   Events:
-    -   `sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt; _proc-&lt;&gt;_events.tsv`
+    -   `sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_proc-&lt;&gt;_events.tsv`
 -   Sensor positions:
     -   `sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_photo.jpg`
     -   `sub-&lt;&gt;_ses-&lt;&gt;_acq-&lt;&gt;_fid.json`
@@ -697,7 +697,7 @@ Here's a list of these folders:
 </div>
 </div>
 <div class="section" id="ieeg-intracranial-eeg-data">
-<h4><code class="docutils literal notranslate"><span class="pre">ieeg</span></code>: intracranial EEG data<a class="headerlink" href="#ieeg-intracranial-eeg-data" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">ieeg</span></code>: Intracranial EEG data<a class="headerlink" href="#ieeg-intracranial-eeg-data" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">myProject/sub-01/ses-01/ieeg/</span></code></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-   Data:
     -   `sub-&lt;&gt;_ses-&lt;&gt;_task-&lt;&gt;_acq-&lt;&gt;_run-&lt;&gt;_ieeg.extension`
@@ -727,10 +727,7 @@ Here's a list of these folders:
     -   `sub-&lt;&gt;_ses-&lt;&gt;_recording-&lt;&gt;_blood.tsv`
 </pre></div>
 </div>
-<!--
-TODO
-Microscopy
--->
+<!-- TODO Microscopy -->
 </div>
 </div>
 </div>
