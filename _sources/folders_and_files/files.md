@@ -3,7 +3,7 @@
 BIDS has a standardized way of naming files that tries to implement the
 following principles:
 
--   Do not includwe white spaces in file names
+-   Do not include white spaces in file names
     -   They make scripting harder.
 -   Use only letters, numbers, hyphens, and underscores.
     -   Some operating systems cannot handle special characters.
