@@ -4,11 +4,8 @@
 
 The PET modality is one of the newest additions to the BIDS standard with its
 introduction via BEP 009. If you're interested in seeing exactly what and how
-something gets added to BIDS see the pull request for BEP009
-[here](https://github.com/bids-standard/bids-specification/pull/633).
-The results of that extension proposal can be read
-[here](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#positron-emission-tomography)
-in the bids standard.
+something gets added to BIDS see the pull request for BEP009 [here](https://github.com/bids-standard/bids-specification/pull/633).
+The results of that extension proposal can be read [here](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#positron-emission-tomography) in the bids standard.
 
 ## PET image data file formats
 
@@ -24,9 +21,51 @@ Below we will show two ways of converting your PET data to BIDS: 1) using [PET2B
 
 ### 1) Conversion of PET data using PET2BIDS
 
-In Python:
+Download/Clone the  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) GitHub repository. For PET2BIDS to work there are also a couple of other tools. If you want to convert DICOM data, then you need to install  [dcm2niix](https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage) (Chris Rorden) . If you want to convert ECAT data ...
 
-Download/Clone the  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) GitHub repository. Open your terminal, either regular or anaconda terminal (In the following I will show installation and usage using an Anaconda terminal) and navigate to the folder where the repository is. 
+##### For MatLab:
+
+In principle  just follow the [MatLab README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md), in the following it is just describe dhow to convert dicom files. It's very similar and described in the  [MatLab README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md) how to handle ECAT files.
+
+The entire PET2BIDS repository or only the matlab subfolder (your choice) should be in your matlab path. 
+
+Defaults parameters should be set in (scannername).txt files to generate metadata easily (i.e. avoiding to pass all arguments in although this is also possible). You can find templates of such parameter file under /template_txt (SiemensHRRTparameters.txt, SiemensBiographparameters.txt, GEAdvanceparameters.txt, PhilipsVereosparameters.txt).
+
+Windows users must, in addition, indicate its full path in [dcm2niix4pet.m](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/dcm2niix4pet.m#L42).
+
+Now in order to convert a PET dataset on disk to PET BIDS,  just create a structure containing all the meta information and then point the function to the folder where your data resides *dcmfolder* and the folder where you want to output the PET BIDS formatted dataset *mynewfolder*:
+
+```
+meta = get_pet_metadata('Scanner','SiemensBiograph','TimeZero','ScanStart',...
+    'TracerName','CB36','TracerRadionuclide','C11', 'ModeOfAdministration',...
+    'infusion','SpecificRadioactivity', 605.3220,'InjectedMass', 1.5934,...
+    'MolarActivity', 107.66, 'InstitutionName','Rigshospitalet, NRU, DK',...
+    'AcquisitionMode','list mode','ImageDecayCorrected','true',...
+    'ImageDecayCorrectionTime' ,0,'ReconMethodName','OP-OSEM',...
+    'ReconMethodParameterLabels',{'subsets','iterations'},...
+    'ReconMethodParameterUnits',{'none','none'}, ...
+    'ReconMethodParameterValues',[21 3], 'ReconFilterType','XYZGAUSSIAN',...
+    'ReconFilterSize',2, 'AttenuationCorrection','CT-based attenuation correction');
+dcm2niix4pet(dcmfolder,meta,'o',mynewfolder);
+```
+
+*Note that get_pet_metadata can be called in a much simpler way if you have a `\*parameters.txt` seating on disk next to this function. The call would then looks like:*
+
+```
+% your SiemensBiographparameters.txt file is stored next to get_pet_metadata.m
+meta = get_pet_metadata('Scanner','SiemensBiograph','TimeZero','ScanStart','TracerName','CB36',...
+    'TracerRadionuclide','C11', ModeOfAdministration','infusion','SpecificRadioactivity', ...
+    605.3220, 'InjectedMass', 1.5934,'MolarActivity', 107.66);
+dcm2niix4pet(dcmfolder,meta,'o',mynewfolder);
+```
+
+Now you have 
+
+
+
+##### For Python:
+
+Open your terminal, either regular or anaconda terminal (In the following I will show installation and usage using an Anaconda terminal) and navigate to the folder where the repository is. 
 
 ```bash
 cd /path/to/PET2BIDS/pypet2bids
