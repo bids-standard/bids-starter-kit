@@ -59,9 +59,8 @@ meta = get_pet_metadata('Scanner','SiemensBiograph','TimeZero','ScanStart','Trac
 dcm2niix4pet(dcmfolder,meta,'o',mynewfolder);
 ```
 
-Now you have 
-
-
+Now you have a dataset in PET BIDS format. You will probably have gotten some warnings relating to the .json sidecar file. Carefully look at them, since they will help you to catch inconsistencies and missing required fields that you need to add in order for the dataset to pass the BIDS validator as well (see below how that's done). 
+You can always edit the .json file, by opening it in a text editor and manually fixing errors. Alternatively, adjust the meta structure you created above to correct the errors.
 
 ##### For Python:
 
