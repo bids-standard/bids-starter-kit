@@ -23,6 +23,31 @@ Below we will show two ways of converting your PET data to BIDS: 1) using [PET2B
 
 Download/Clone the  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) GitHub repository. For PET2BIDS to work there are also a couple of other tools. If you want to convert DICOM data, then you need to install  [dcm2niix](https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage) (Chris Rorden) . If you want to convert ECAT data ...
 
+##### For Python:
+
+Open your terminal, either regular or anaconda terminal and type. 
+
+```bash
+pip install pypet2bids 
+```
+
+Now you already have the converter installed and can go ahead and convert your first dataset! In this example, I am converting an image in DICOM format. 
+
+TODO - continue here after PET2BIDS issue has been fixed.
+
+
+
+```bash
+
+```
+
+
+
+
+
+Now you have a dataset in PET BIDS format. You will probably have gotten some warnings relating to the .json sidecar file. Carefully look at them, since they will help you to catch inconsistencies and missing required fields that you need to add in order for the dataset to pass the BIDS validator as well (see below how that's done). 
+You can always edit the .json file, by opening it in a text editor and manually fixing errors. Alternatively, adjust the meta structure you created above to correct the errors.
+
 ##### For MatLab:
 
 In principle  just follow the [MatLab README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md), in the following it is just describe dhow to convert dicom files. It's very similar and described in the  [MatLab README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md) how to handle ECAT files.
@@ -61,30 +86,6 @@ dcm2niix4pet(dcmfolder,meta,'o',mynewfolder);
 
 Now you have a dataset in PET BIDS format. You will probably have gotten some warnings relating to the .json sidecar file. Carefully look at them, since they will help you to catch inconsistencies and missing required fields that you need to add in order for the dataset to pass the BIDS validator as well (see below how that's done). 
 You can always edit the .json file, by opening it in a text editor and manually fixing errors. Alternatively, adjust the meta structure you created above to correct the errors.
-
-##### For Python:
-
-Open your terminal, either regular or anaconda terminal (In the following I will show installation and usage using an Anaconda terminal) and navigate to the folder where the repository is. 
-
-```bash
-cd /path/to/PET2BIDS/pypet2bids
-```
-
-Then follow the instructions given in the [Python README](https://github.com/openneuropet/PET2BIDS/blob/main/pypet2bids/pypet2bids/README.md) as shown below:
-
-```bash
-pip3 install -r requirements.txt
-```
-
-Now you already have the converter installed and can go ahead and convert your first dataset! In this example, I am converting an image in ecat format. By using the flag --nifti I can choose where my new BIDS converted image should be stored:
-
-```bash
-python3 cli.py /path/to/ecat/image.v --convert --nifti /path/to/new/nifti
-```
-
-TODO - continue here after PET2BIDS issue has bene fixed.
-
-
 
 ### 2) Manual conversion of PET data to PET BIDS
 
