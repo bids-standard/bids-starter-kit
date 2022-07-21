@@ -4,41 +4,57 @@
 
 The PET modality is one of the newest additions to the BIDS standard with its
 introduction via BEP 009. If you're interested in seeing exactly what and how
-something gets added to BIDS see the pull request for
-[BEP 009 here](https://github.com/bids-standard/bids-specification/pull/633).
+something gets added to BIDS see the pull request for BEP009
+[here](https://github.com/bids-standard/bids-specification/pull/633).
 The results of that extension proposal can be read
 [here](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#positron-emission-tomography)
 in the bids standard.
 
+## PET image data file formats
+
+Before we start to convert data we need to quickly mention that PET image data files come of the scanner in various different formats, some scanners provide DICOM files (.dcm) and others use proprietary formats e.g. Ecat format (.v) . In order to facilitate easy testing of data conversion across different PET file formats  the [OpenNeuroPET project](https://openneuropet.github.io/) has compiled a bunch of phantom data from different scanner types and is distributing them [here](https://drive.google.com/drive/folders/1yi2HPI3KloS-ZSB4Fr7K9RBtjbrL1jl3) . You can download them for testing purposes. Also if you have access to yet another PET image file format that is not yet covered, then please reach out to [OpenNeuroPET project](https://openneuropet.github.io/) in order to add a phantom scan in your format.
+
 ## Conversion
 
-Presently, PET does not have the same level of support when it comes to
-conversion from raw data into BIDS format like MR imaging. Much of the work in
-converting from a raw PET dataset into a bids PET dataset will be incumbent on
-the user. Some useful tools and resources that will be used in this document are
-as follows:
+The [OpenNeuroPET project](https://openneuropet.github.io/) has tried to develop tools for facilitating easy data conversion for PET. The main tool used for this is [PET2BIDS](https://github.com/openneuropet/PET2BIDS) freely available on the [OpenNeuroPET  GitHub repository](https://github.com/openneuropet). It is available for Python and MatLab. Eventually, [PET2BIDS](https://github.com/openneuropet/PET2BIDS) will also be wrapped inside other BIDS conversion tools such as [BIDScoin](https://github.com/Donders-Institute/bidscoin) or EASYBIDS, but this is work in progress at the moment. 
 
--   [BIDS Validator](https://github.com/bids-standard/bids-validator), which
-    fully supports PET
+Besides using  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) there is always the possibility to manually convert a data set to PET BIDS and an example will be shown below.
 
--   [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library
-    containing (among many others) PET tools such as `ecat2nii` that will be
-    used below to convert the imaging data from a PET dataset into nifti format.
-    The Turku PET Centre site can be found [here](https://turkupetcentre.fi/)
-    for additional information on anything PET.
--   a
-    [BIDS PET Template](https://github.com/bids-standard/bids-starter-kit/tree/main/templates)
-    from this starter kit to initially populate and translate
-    text/tabulature/csv blood data into BIDS PET compliant `.tsv` and `.json`
-    files.
--   [dcm2niix](https://github.com/rordenlab/dcm2niix) can be used if your raw
-    pet data happens to be in a dicom format. Additionally this opens up the use
-    of tools such as [dcmdump](https://support.dcmtk.org/docs/dcmdump.html) from
-    the [dcmtk](https://support.dcmtk.org/docs/) to help in your conversion.
+Below we will show two ways of converting your PET data to BIDS: 1) using [PET2BIDS](https://github.com/openneuropet/PET2BIDS) and 2) manually.
 
-### What we're starting with
+### 1) Conversion of PET data using PET2BIDS
 
-Here is the structure of our starting dataset:
+In Python:
+
+Download/Clone the  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) GitHub repository. Open your terminal, either regular or anaconda terminal (In the following I will show installation and usage using an Anaconda terminal) and navigate to the folder where the repository is. 
+
+```bash
+cd /path/to/PET2BIDS/pypet2bids
+```
+
+Then follow the instructions given in the [Python README](https://github.com/openneuropet/PET2BIDS/blob/main/pypet2bids/pypet2bids/README.md) as shown below:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+Now you already have the converter installed and can go ahead and convert your first dataset! In this example, I am converting an image in ecat format. By using the flag --nifti I can choose where my new BIDS converted image should be stored:
+
+```bash
+python3 cli.py /path/to/ecat/image.v --convert --nifti /path/to/new/nifti
+```
+
+TODO - continue here after PET2BIDS issue has bene fixed.
+
+
+
+### 2) Manual conversion of PET data to PET BIDS
+
+As stated above PET files come of the scanner in vearious formats. In the following manual data conversion is shown for an ECAT (.v) as well as a DICOM (.dcm) PET image dataset. 
+
+#### PET image data in ECAT format
+
+ Here is the structure of our starting dataset:
 
 ```bash
 OldNotBidsPETDataSet/
@@ -60,7 +76,7 @@ By the end of this document our starting dataset will be fully bids compliant
 and similar to the dataset seen
 [here](https://github.com/bids-standard/bids-examples/tree/master/pet001).
 
-### Setting the layout
+#### Setting the layout
 
 This starter kit provides several template/example files that can be a great
 starting place to help get set up for the conversion process. PET specific text
@@ -246,7 +262,7 @@ And there's at least 2 `.v` pet files shouldn't there be multiple sessions?
 Well yes, yes, and yes. but before we add more sessions/directories we're going
 to make sure we have images to place in them.
 
-### Collecting and installing TPCCLIB
+#### Collecting and installing TPCCLIB
 
 Since our raw imaging files are in ECAT format, we'll be using the ecat2nii tool
 it the TPCCLIIB as it's very handy at converting PET ECAT images into the more
@@ -782,13 +798,11 @@ having this final `*blood_.json`:
 }
 ```
 
-### Last Pass
+#### Last Pass
 
 If you're thinking that we failed to document or include our T1 image from the
 start you would be correct. There are many resources documenting that process
-see:
-
-_TODO_ add resources here
+[here](https://bids-standard.github.io/bids-starter-kit/tutorials/mri.html).
 
 Once you've handled converting your MR images into bids your directory should
 look like the following:
@@ -819,9 +833,9 @@ machine:NewBidsDataSet user$ tree
             └── sub-01_ses-testscan_pet.nii
 ```
 
-### Last Steps
+## Validating your converted PET BIDS data set
 
-#### Installing the validator
+### Installing the validator
 
 The above structure is a valid bids dataset, however the bids-validator is a
 much more accurate and trustworthy method for making that determination. Follow
@@ -829,7 +843,7 @@ the instructions
 [here](https://github.com/bids-standard/bids-validator) to collect
 and install the validator.
 
-#### Validating your new dataset
+### Validating your new dataset
 
 Using the validator installed above in the previous step point it at your data
 and check to see if your conversion was successful:
@@ -862,10 +876,38 @@ messages will guide you to the correct format; do not fear them. Running the
 validator during the conversion process will help to increase your familiarity
 with the specification and ensure that your data is properly formatted.
 
+## Tools and resources for PET conversion
+
+Some useful tools and resources that have been used in this document are
+as follows:
+
+- [BIDS Validator](https://github.com/bids-standard/bids-validator), which
+  fully supports PET
+
+-  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) is a Matlab and Python utility for converting your data to PET BIDS format
+
+- [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library
+  containing (among many others) PET tools such as `ecat2nii` that will be
+  used below to convert the imaging data from a PET dataset into nifti format.
+  The Turku PET Centre site can be found [here](https://turkupetcentre.fi/)
+  for additional information on anything PET.
+
+- a
+  [BIDS PET Template](https://github.com/bids-standard/bids-starter-kit/tree/main/templates)
+  from this starter kit to initially populate and translate
+  text/tabulature/csv blood data into BIDS PET compliant `.tsv` and `.json`
+  files.
+
+- [dcm2niix](https://github.com/rordenlab/dcm2niix) can be used if your raw
+  pet data happens to be in a dicom format. Additionally this opens up the use
+  of tools such as [dcmdump](https://support.dcmtk.org/docs/dcmdump.html) from
+  the [dcmtk](https://support.dcmtk.org/docs/) to help in your conversion.
+
+  
+
 ## Final thoughts
 
-If this seems like a daunting and tedious process to you, then you are correct
-in your observation. PET is new to the bids standard, but at this very moment
+As of now, PET is still quite new to the bids standard, but at this very moment
 there are people working on stream-lining data collection and conversion to help
-move PET into this standard. Heck, if you're reading this you've just become one
-of those people.
+move PET into this standard. If you're reading this you've just become one
+of those people. Feel free to reach out to the [OpenNeuroPET project](https://openneuropet.github.io/) 
