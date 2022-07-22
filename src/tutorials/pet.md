@@ -31,19 +31,39 @@ Open your terminal, either regular or anaconda terminal and type.
 pip install pypet2bids 
 ```
 
-Now you already have the converter installed and can go ahead and convert your first dataset! In this example, I am converting an image in DICOM format. 
+Now you already have the converter installed and can go ahead and convert your first dataset! 
+In this example, I am converting an image in DICOM format. It should be noted that pypet2bids 
+contains several different tools and is itself a part of the larger PET library PET2BIDS, the
+specific tool I will be using for the folliwing dicom conversion is dcm2niix4pet.
 
 TODO - continue here after PET2BIDS issue has been fixed.
 
-
-
 ```bash
-
+dcm2niix4pet OpenNeuroPET-Phantoms/source/SiemensBiographPETMR-NRU -d mynewfolder
 ```
 
+dcm2niix4pet will do it's best to extract as much information about radiological and blood data from the dicom files in the dcmfolder. However, dcm2niix4pet can't find information if it isn't there, it will often be up to you the user to provide some missing informationat the time of conversion. Additional information can be provided via the command line with the `--kwargs` argument in the form of key=pair values. For an idea of what this looks like see below:
 
-
-
+```bash
+/OpenNeuroPET-Phantoms/source/SiemensBiographPETMR-NRU -d mynewfolder --kwargs TimeZero=ScanStart 
+Manufacturer=Siemens 
+ManufacturersModelName=Biograph 
+InstitutionName="Rigshospitalet, NRU, DK"
+BodyPart=Phantom
+Units=Bq/mL
+TracerName=none
+TracerRadionuclide=F18
+InjectedRadioactivity=81.24
+SpecificRadioactivity=13019.23
+ModeOfAdministration=infusion
+FrameTimesStart=0
+AcquisitionMode="list mode"
+ImageDecayCorrected=true
+ImageDecayCorrectionTime=0
+AttenuationCorrection=MR-corrected
+FrameDuration=300
+FrameTimesStart=0
+```
 
 Now you have a dataset in PET BIDS format. You will probably have gotten some warnings relating to the .json sidecar file. Carefully look at them, since they will help you to catch inconsistencies and missing required fields that you need to add in order for the dataset to pass the BIDS validator as well (see below how that's done). 
 You can always edit the .json file, by opening it in a text editor and manually fixing errors. Alternatively, adjust the meta structure you created above to correct the errors.
