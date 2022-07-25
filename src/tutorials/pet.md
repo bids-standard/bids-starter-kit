@@ -6,7 +6,7 @@ The PET modality is one of the newest additions to the BIDS standard with its in
 
 ## PET image data file formats
 
-Before we start to convert data we need to quickly mention that PET image data files come of the scanner in various different formats, some scanners provide DICOM files (.dcm) and others use proprietary formats e.g. ECAT format (.v) . In order to facilitate easy testing of data conversion across different PET file formats  the [OpenNeuroPET project](https://openneuropet.github.io/) has compiled a bunch of phantom data from different scanner types and is distributing them [here](https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing) . You can download them for testing purposes either manually or in the terminal by typing 
+Before we start to convert data we need to quickly mention that PET image data files come of the scanner in various different formats, some scanners provide DICOM files (.dcm) and others use proprietary formats e.g. ECAT format (.v) . In order to facilitate easy testing of data conversion across different PET file formats  the [OpenNeuroPET project](https://openneuropet.github.io/) has compiled a bunch of phantom data from different scanner types and is distributing two examples [here](https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing) . You can download them for testing purposes either manually or in the terminal by typing 
 
 ```bash
 gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing --fuzzy
@@ -21,27 +21,42 @@ unzip OpenNeuroPET-Demo_raw.zip
 You can now look at the file tree:
 
 ```
-tree OpenNeuroPET-Demo_raw --filelimit 10
+tree OpenNeuroPET-Demo_raw 
 OpenNeuroPET-Demo_raw
-├── README
-├── code
-│   ├── README.md
-│   ├── matlab_conversions.m
-│   └── python_conversions.sh
-├── dataset_description.json
-├── source
-│   ├── SiemensBiographPETMR-NRU [127 entries exceeds filelimit, not opening dir]
-│   └── SiemensHRRT-NRU
-│       ├── XCal-Hrrt-2022.04.21.15.43.05_EM_3D.json
-│       └── XCal-Hrrt-2022.04.21.15.43.05_EM_3D.v
-├── sub-SiemensBiographNRU
-│   └── pet
-│       ├── sub-SiemensBiographNRU_pet.json
-│       └── sub-SiemensBiographNRU_pet.nii.gz
-└── sub-SiemensHRRT
-    └── pet
-        ├── sub-SiemensHRRT_pet.json
-        └── sub-SiemensHRRT_pet.nii.gz
+│   .bidsignore
+│   .DS_Store
+│   dataset_description.json
+│   README
+│
+├───code
+│       .python_conversions.sh.swp
+│       matlab_conversions.m
+│       python_conversions.sh
+│       README.md
+│
+├───source
+│   │   .DS_Store
+│   │
+│   ├───SiemensBiographPETMR-NRU
+│   │       X-CAL_7.PT.Kalibrering_xca.30003.1.2022.04.26.15.04.22.218.14689529.dcm
+│   │       X-CAL_7.PT.Kalibrering_xca.30003.10.2022.04.26.15.04.22.218.14689628.dcm
+│   │       X-CAL_7.PT.Kalibrering_xca.30003.100.2022.04.26.15.04.22.218.14690618.dcm
+│   │       X-CAL_7.PT.Kalibrering_xca.30003.101.2022.04.26.15.04.22.218.14690629.dcm
+│   │       ....
+│   │
+│   └───SiemensHRRT-NRU
+│           XCal-Hrrt-2022.04.21.15.43.05_EM_3D.json
+│           XCal-Hrrt-2022.04.21.15.43.05_EM_3D.v
+│
+├───sub-SiemensBiographNRU
+│   └───pet
+│           sub-SiemensBiographNRU_pet.json
+│           sub-SiemensBiographNRU_pet.nii.gz
+│
+└───sub-SiemensHRRT
+    └───pet
+            sub-SiemensHRRT_pet.json
+            sub-SiemensHRRT_pet.nii.gz
 ```
 
 Now you have an example dataset where you have source data (both for ECAT and DICOM PET image format) and the PET BIDS data sets constructed for it.
