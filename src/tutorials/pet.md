@@ -2,9 +2,10 @@
 
 ## History
 
-The PET modality is one of the newest additions to the BIDS standard with its introduction via BEP 009. If you're interested in seeing exactly what and how something gets added to BIDS see the pull request for BEP009 [here](https://github.com/bids-standard/bids-specification/pull/633). The results of that extension proposal can be read [here](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#positron-emission-tomography) in the bids standard.
+The PET modality is a recent addition to BIDS with its introduction via BEP 009. If you're interested in seeing exactly what and how something gets added to BIDS see the pull request for BEP009 [here](https://github.com/bids-standard/bids-specification/pull/633). The results of that extension proposal can be read [here](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#positron-emission-tomography) in the bids standard.
 
 ## PET image data file formats
+
 
 Before we start to convert data we need to quickly mention that PET image data files come of the scanner in various different formats, some scanners provide DICOM files (.dcm) and others use proprietary formats e.g. ECAT format (.v) . In order to facilitate easy testing of data conversion across different PET file formats  the [OpenNeuroPET project](https://openneuropet.github.io/) has compiled a bunch of phantom data from different scanner types and is distributing two examples [here](https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing) . You can download them for testing purposes either manually or in the terminal by typing 
 
@@ -61,19 +62,27 @@ OpenNeuroPET-Demo_raw
 
 Now you have an example dataset where you have source data (both for ECAT and DICOM PET image format) and the PET BIDS data sets constructed for it.
 
-Also if you have access to yet another PET image file format that is not yet covered, then please reach out to [OpenNeuroPET project](https://openneuropet.github.io/) in order to add a phantom scan in your format.
+Also if you have access to another PET image file format, or data from a scanner not tested, please reach out to [OpenNeuroPET project](https://openneuropet.github.io/) in order to add a phantom scan in your format.
 
 ## Conversion
 
-The [OpenNeuroPET project](https://openneuropet.github.io/) has tried to develop tools for facilitating easy data conversion for PET. The main tool used for this is [PET2BIDS](https://github.com/openneuropet/PET2BIDS) freely available on the [OpenNeuroPET  GitHub repository](https://github.com/openneuropet). It is available for Python and MatLab. Eventually, [PET2BIDS](https://github.com/openneuropet/PET2BIDS) will also be wrapped inside other BIDS conversion tools such as [BIDScoin](https://github.com/Donders-Institute/bidscoin) or EASYBIDS, but this is work in progress at the moment. 
+The [OpenNeuroPET project](https://openneuropet.github.io/) has tried to develop tools for facilitating easy data conversion for PET. The main tool used for this is [PET2BIDS](https://github.com/openneuropet/PET2BIDS) freely available on the [OpenNeuroPET  GitHub repository](https://github.com/openneuropet) along with other resources like altlases or pipelines. It is available for both Python and MatLab. Eventually, [PET2BIDS](https://github.com/openneuropet/PET2BIDS) will also be wrapped inside other BIDS conversion tools such as [BIDScoin](https://github.com/Donders-Institute/bidscoin) or [ezBIDS](https://brainlife.io/ezbids/), but this is work in progress at the moment. 
 
-Besides using  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) there is always the possibility to manually convert a data set to PET BIDS and an example will be shown below.
+Besides using  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) there is always the possibility to manually convert a data set to PET BIDS and an example will be shown below. In any case, for dicom data format, one relies on [dcm2niix](https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage).
 
 Below we will show two ways of converting your PET data to BIDS: 1) using [PET2BIDS](https://github.com/openneuropet/PET2BIDS) and 2) manually.
 
 ### 1) Conversion of PET data using PET2BIDS
 
 Detailed documentation for PET2BIDS can be found [here](https://pet2bids.readthedocs.io/en/latest/index.html#) or on the [Github repo](https://github.com/openneuropet/PET2BIDS/blob/main/README.md).
+
+##### get dcm2niix
+
+Download [dcm2niix](https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage), and for Mac and Linux users you can add it to your path, for instance it would could downloaded and unzipped into /bin.
+
+```bash
+export PATH="/home/$USER/bin:$PATH" 
+```
 
 ##### For Python:
 
@@ -123,15 +132,15 @@ You can always edit the .json file, by opening it in a text editor and manually 
 
 ##### For MatLab:
 
-Download/Clone the [PET2BIDS](https://github.com/openneuropet/PET2BIDS) GitHub repository. If you want to convert DICOM data, then you need to also install [dcm2niix](https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage) (Chris Rorden) . Windows users must, in addition, indicate its full path in [dcm2niix4pet.m](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/dcm2niix4pet.m#L42).
+Download/Clone the [PET2BIDS](https://github.com/openneuropet/PET2BIDS) GitHub repository. Windows users must, in addition, indicate the full path of where is the dcm2niix.exe in [dcm2niix4pet.m](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/dcm2niix4pet.m#L42).
 
 Then, just follow the [MatLab README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md). In the following it is just described how to convert DICOM files. It's very similar and described in the  [MatLab README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md) how to handle ECAT files.
 
 The entire PET2BIDS repository or only the matlab subfolder (your choice) should be in your matlab path. 
 
-Defaults parameters should be set in (scannername).txt files to generate metadata easily (i.e. avoiding to pass all arguments in although this is also possible). You can find templates of such parameter file under /template_txt (SiemensHRRTparameters.txt, SiemensBiographparameters.txt, GEAdvanceparameters.txt, PhilipsVereosparameters.txt).
+Defaults parameters can be set in (scannername).txt files to generate metadata easily (i.e. avoiding to pass all arguments in although this is also possible). You can find templates of such parameter file under /template_txt (SiemensHRRTparameters.txt, SiemensBiographparameters.txt, GEAdvanceparameters.txt, PhilipsVereosparameters.txt).
 
-Now in order to convert a PET dataset on disk to PET BIDS,  just create a structure containing all the meta information and then point the function to the folder where your data resides *dcmfolder* and the folder where you want to output the PET BIDS formatted dataset *mynewfolder*:
+Now in order to convert a PET dataset on disk to PET BIDS,  one creates a structure containing all the meta information (here passing on all arguments) and then point the function to the folder where your data resides *dcmfolder* and the folder where you want to output the PET BIDS formatted dataset *mynewfolder*:
 
 ```
 meta = get_pet_metadata('Scanner','SiemensBiograph','TimeZero','ScanStart',...
@@ -926,7 +935,7 @@ Some useful tools and resources that have been used in this document are as foll
 
 - [BIDS Validator](https://github.com/bids-standard/bids-validator), which fully supports PET
   
--  [PET2BIDS](https://github.com/openneuropet/PET2BIDS) is a Matlab and Python utility for converting your data to PET BIDS format
+- [PET2BIDS](https://github.com/openneuropet/PET2BIDS) is a Matlab and Python utility for converting your data to PET BIDS format
 
 - [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library containing (among many others) PET tools such as `ecat2nii` that will be used below to convert the imaging data from a PET dataset into nifti format. The Turku PET Centre site can be found [here](https://turkupetcentre.fi/) for additional information on anything PET.
   
