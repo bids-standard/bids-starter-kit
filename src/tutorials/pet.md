@@ -9,35 +9,39 @@ The PET modality is a recent addition to BIDS with its introduction via BEP 009.
 Before we start to convert data we need to quickly mention that PET image data files come of the scanner in various different formats, most scanners provide DICOM files (.dcm) but also alternative formats like the ECAT format (.v). In order to facilitate easy testing of data conversion across different PET file formats  the [OpenNeuroPET project](https://openneuropet.github.io/) has compiled a bunch of phantom data from different scanner types and is distributing them [here](https://drive.google.com/drive/folders/1yi2HPI3KloS-ZSB4Fr7K9RBtjbrL1jl3) . You can download them for testing purposes either manually or in the terminal by typing 
 
 ```bash
-gdown https://drive.google.com/file/d/1O1hDmJwR1xm6LemIbhPrLf9YkSYHC6Mq/view?usp=sharing --fuzzy 
+gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing --fuzzy
 ```
 
 And then unzipping the downloaded file:
 
 ```
-unzip OpenNeuroPET-Demo.zip
+unzip OpenNeuroPET-Demo_raw.zip
 ```
 
 You can now look at the file tree:
 
 ```
-tree OpenNeuroPET-Demo --filelimit 10
-OpenNeuroPET-Demo
+tree OpenNeuroPET-Demo_raw --filelimit 10
+OpenNeuroPET-Demo_raw
 ├── README
 ├── code
-│   └── matlab_conversions.m
+│   ├── README.md
+│   ├── matlab_conversions.m
+│   └── python_conversions.sh
 ├── dataset_description.json
 ├── source
-│   ├── SiemensBiographPETMR-NRU [127 entries exceeds filelimit, not opening dir]
-│   └── SiemensHRRT-NRU
-│       ├── XCal-Hrrt-2022.04.21.15.43.05_EM_3D.json
-│       └── XCal-Hrrt-2022.04.21.15.43.05_EM_3D.v
-└── sub-SiemensBiograph-NRU
+│   ├── SiemensBiographPETMR-NRU [127 entries exceeds filelimit, not opening dir]
+│   └── SiemensHRRT-NRU
+│       ├── XCal-Hrrt-2022.04.21.15.43.05_EM_3D.json
+│       └── XCal-Hrrt-2022.04.21.15.43.05_EM_3D.v
+├── sub-SiemensBiographNRU
+│   └── pet
+│       ├── sub-SiemensBiographNRU_pet.json
+│       └── sub-SiemensBiographNRU_pet.nii.gz
+└── sub-SiemensHRRT
     └── pet
-        ├── sub-SiemensBiograph-NRU_pet.json
-        └── sub-SiemensBiograph-NRU_pet.nii.gz
-
-6 directories, 7 files
+        ├── sub-SiemensHRRT_pet.json
+        └── sub-SiemensHRRT_pet.nii.gz
 ```
 
 Now you have an example dataset where you have source data (both for ECAT and DICOM PET image format) and the PET BIDS data sets constructed for it.
@@ -82,12 +86,12 @@ You just need to point dcm2niix4pet to the folder where your data resides, *dcmf
 dcm2niix4pet dcmfolder -d mynewfolder
 ```
 
-Note, dcm2niix4pet will do it's best to extract as much information about radiological and blood data from the DICOM files in the dcmfolder. However, dcm2niix4pet can't find information if it isn't there, hence it will often be up to you the user to provide some missing informationat the time of conversion. 
+Note, dcm2niix4pet will do it's best to extract as much information about radiological and blood data from the DICOM files in the dcmfolder. However, dcm2niix4pet can't find information if it isn't there, hence it will often be up to you the user to provide some missing information at the time of conversion. 
 
 Additional information can be provided via the command line with the `--kwargs` argument in the form of key=pair values. For an idea of what this looks like see below:
 
 ```bash
-/OpenNeuroPET-Phantoms/source/SiemensBiographPETMR-NRU -d mynewfolder --kwargs TimeZero=ScanStart 
+dcm2niix4pet /OpenNeuroPET-Demo_raw/source/SiemensBiographPETMR-NRU -d mynewfolder --kwargs TimeZero=ScanStart 
 Manufacturer=Siemens 
 ManufacturersModelName=Biograph 
 InstitutionName="Rigshospitalet, NRU, DK"
