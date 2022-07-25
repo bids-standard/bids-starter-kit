@@ -7,7 +7,7 @@ The PET modality is a recent addition to BIDS with its introduction via BEP 009.
 ## PET image data file formats
 
 
-Before we start to convert data we need to quickly mention that PET image data files come of the scanner in various different formats, some scanners provide DICOM files (.dcm) and others use proprietary formats e.g. ECAT format (.v) . In order to facilitate easy testing of data conversion across different PET file formats  the [OpenNeuroPET project](https://openneuropet.github.io/) has compiled a bunch of phantom data from different scanner types and is distributing two examples [here](https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing) . You can download them for testing purposes either manually or in the terminal by typing 
+Before we start to convert data we need to quickly mention that PET image data files come of the scanner in various different formats, some scanners provide DICOM files (.dcm) and others use proprietary formats for example ECAT format (.v) . In order to facilitate easy testing of data conversion across different PET file formats  the [OpenNeuroPET project](https://openneuropet.github.io/) has compiled a bunch of phantom data from different scanner types and is distributing two examples [here](https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing) . You can download them for testing purposes either manually or in the terminal by typing 
 
 ```bash
 gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing --fuzzy
