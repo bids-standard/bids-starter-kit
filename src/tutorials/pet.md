@@ -28,6 +28,13 @@ or in the terminal by typing:
 gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing --fuzzy
 ```
 
+You may need to install the python package [`gdown`](https://github.com/wkentaro/gdown)
+for this to work:
+
+```{code-block} bash
+pip install gdown
+```
+
 And then unzipping the downloaded file:
 
 ```{code-block} bash
