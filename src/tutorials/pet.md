@@ -29,7 +29,7 @@ gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp
 
 And then unzipping the downloaded file:
 
-```
+```bash
 unzip OpenNeuroPET-Demo_raw.zip
 ```
 
@@ -111,7 +111,7 @@ Detailed documentation for PET2BIDS can be found
 [here](https://pet2bids.readthedocs.io/en/latest/index.html#) or on the
 [Github repo](https://github.com/openneuropet/PET2BIDS/blob/main/README.md).
 
-##### get dcm2niix
+#### get dcm2niix
 
 Download
 [dcm2niix](https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage), and
@@ -122,7 +122,7 @@ downloaded and unzipped into `/bin`.
 export PATH="/home/$USER/bin:$PATH"
 ```
 
-##### For Python:
+#### For Python:
 
 Open your terminal, either regular or anaconda terminal and type.
 
@@ -158,24 +158,26 @@ argument in the form of key=pair values. For an idea of what this looks like see
 below:
 
 ```bash
-dcm2niix4pet /OpenNeuroPET-Demo_raw/source/SiemensBiographPETMR-NRU -d mynewfolder --kwargs TimeZero=ScanStart
-Manufacturer=Siemens
-ManufacturersModelName=Biograph
-InstitutionName="Rigshospitalet, NRU, DK"
-BodyPart=Phantom
-Units=Bq/mL
-TracerName=none
-TracerRadionuclide=F18
-InjectedRadioactivity=81.24
-SpecificRadioactivity=13019.23
-ModeOfAdministration=infusion
-FrameTimesStart=0
-AcquisitionMode="list mode"
-ImageDecayCorrected=true
-ImageDecayCorrectionTime=0
-AttenuationCorrection=MR-corrected
-FrameDuration=300
-FrameTimesStart=0
+dcm2niix4pet /OpenNeuroPET-Demo_raw/source/SiemensBiographPETMR-NRU \
+            -d mynewfolder \
+            --kwargs    TimeZero=ScanStart \
+                        Manufacturer=Siemens \
+                        ManufacturersModelName=Biograph \
+                        InstitutionName="Rigshospitalet, NRU, DK" \
+                        BodyPart=Phantom \
+                        Units=Bq/mL \
+                        TracerName=none \
+                        TracerRadionuclide=F18 \
+                        InjectedRadioactivity=81.24 \
+                        SpecificRadioactivity=13019.23 \
+                        ModeOfAdministration=infusion \
+                        FrameTimesStart=0 \
+                        AcquisitionMode="list mode" \
+                        ImageDecayCorrected=true \
+                        ImageDecayCorrectionTime=0 \
+                        AttenuationCorrection=MR-corrected \
+                        FrameDuration=300 \
+                        FrameTimesStart=0
 ```
 
 Now you have a dataset in PET BIDS format. You will probably have gotten some
@@ -186,7 +188,7 @@ below how that's done). You can always edit the `.json` file, by opening it in a
 text editor and manually fixing errors. Alternatively, adjust the meta structure
 you created above to correct the errors.
 
-##### For MatLab:
+#### For MatLab:
 
 Download/Clone the [PET2BIDS](https://github.com/openneuropet/PET2BIDS) GitHub
 repository. Windows users must, in addition, indicate the full path of where is
@@ -204,10 +206,14 @@ The entire PET2BIDS repository or only the matlab subfolder (your choice) should
 be in your matlab path.
 
 Defaults parameters can be set in (scannername).txt files to generate metadata
-easily (i.e. avoiding to pass all arguments in although this is also possible).
-You can find templates of such parameter file under `/template_txt`
-(SiemensHRRTparameters.txt, SiemensBiographparameters.txt,
-GEAdvanceparameters.txt, PhilipsVereosparameters.txt).
+easily (meaning to avoid passing all arguments in although this is also possible).
+You can find templates of such parameter file under
+[`/template_txt`](https://github.com/openneuropet/PET2BIDS/tree/main/matlab/template_txt):
+
+-   SiemensHRRTparameters.txt,
+-   SiemensBiographparameters.txt,
+-   GEAdvanceparameters.txt,
+-   PhilipsVereosparameters.txt).
 
 Now in order to convert a PET dataset on disk to PET BIDS, one creates a
 structure containing all the meta information (here passing on all arguments)
@@ -231,6 +237,7 @@ dcm2niix4pet(dcmfolder,meta,'o',mynewfolder);
 
 ```{note}
 `get_pet_metadata` can be called in a much simpler way if you have a `\*parameters.txt` seating on disk next to this function. The call would then looks like:
+```
 
 ```matlab
 % your SiemensBiographparameters.txt file is stored next to get_pet_metadata.m
@@ -420,11 +427,12 @@ That certainly looks less daunting, now let's change the filenames of the
 templates so that they make more sense for our data set (aka remove ShortExample
 from each filename).
 
-````{Note}
+```{Note}
 If you have multiple PET image files you can distinguish between them by creating a session folder with a unique name
 and then applying the `ses-<label>` label to each file therein.
 If there's a single pet scan you may omit the additional folder and corresponding label(s) from the filename.
 For more information on labeling see [this link](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#pet-recording-data).
+```
 
 ```bash
 # for those of you in bash land
@@ -433,7 +441,7 @@ machine:pet user$ for i in *ShortExample*; do mv "$i" "`echo $i | sed 's/ShortEx
 # Since we "don't" know if there are multiple PET image files we will omit the task label for our PET .json
 # file for now.
 machine:pet user$ mv sub-01_ses-01_task-_pet.json sub-01-ses-01_pet.json
-````
+```
 
 After you've renamed your files your directory should look something like:
 
@@ -875,7 +883,6 @@ machine:NewBidsDataSet user$ tree
             └── sub-01_ses-testscan_pet.nii
 
 5 directories, 16 files
-
 ```
 
 That looks better, but we need to do something about our tabular/text data.

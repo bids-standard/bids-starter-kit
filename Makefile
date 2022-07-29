@@ -35,5 +35,8 @@ book: clean ## build the book
 view: book ## view the book
 	$(BROWSER) $$PWD/src/_build/html/index.html
 
+latin_check:
+	cd tools && python no-bad-latin.py
+
 test: ## build the book and tests the links
 	jupyter-book build src -W --builder linkcheck
