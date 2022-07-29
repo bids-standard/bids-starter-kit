@@ -1,4 +1,11 @@
 {
-    "TaskName": "",
-    "RepetitionTime": ""
+  "TaskName": "",
+  "RepetitionTime": [],
+  "VolumeTiming": [],
+  "DelayTime": [],
+  "SliceTiming": "",
+  "AcquisitionDuration": [],
+  "PhaseEncodingDirection": "",
+  "EffectiveEchoSpacing": "",
+  "EchoTime": ""
 }
