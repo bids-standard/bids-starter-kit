@@ -185,10 +185,9 @@ name_spec.entities = struct('sub', sub_label, ...
                             'acq', acq_label, ...
                             'run', run_label, ...
                             'dir', dir_label);
-% using the bids 'schema to ensure that the entities will be in the correct order
-bids_file = bids.File(name_spec);
-bids_file = bids_file.use_schema();
-bids_file = bids_file.reorder_entities();
+% using the 'use_schema', true
+% ensures that the entities will be in the correct order
+bids_file = bids.File(name_spec, 'use_schema', true);
 
 % Contrust the fullpath version of the filename
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);

@@ -8,35 +8,53 @@
 % for example: CTF's .ds format, or 4D/BTi.
 % Please refer to Appendix VI for examples from a selection of MEG manufacturers
 %
-% Writing json files relies on the JSONio library
-% https://github.com/gllmflndn/JSONio
-% Make sure it is in the matab/octave path
-%
 % By Cofficer, Created 14/03/2018
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-root_dir = ['..' filesep '..'];
-project_label = 'templates';
-sub_id = '01';
-ses_id = '01';
-task_id = 'ShortExample';
-acq_id = 'CTF';
-run_id = '1';
+% Writing json files relies on the JSONio library
+% https://github.com/bids-standard/bids-matlab
+%
+% Make sure it is in the matab/octave path
+try
+    bids.bids_matlab_version;
+catch
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/bids-standard/bids-matlab');
+end
+
+this_dir = fileparts(mfilename('fullpath'));
+root_dir = fullfile(this_dir, '..', filesep, '..');
+
+project = 'templates';
+
+sub_label = '01';
+ses_label = '01';
+task_label = 'ShortExample';
+acq_label = 'CTF';
+run_label = '1';
 
 % A "proc" (processed) label has been added, especially useful for files coming from Maxfilter
 % (for example: sss, tsss, trans, quat, mc, etc.)
-proc_id = 'sss';
+proc_label = 'sss';
 
-acquisition = 'meg';
+name_spec.modality = 'meg';
+name_spec.suffix = 'meg';
+name_spec.ext = '.json';
+name_spec.entities = struct('sub', sub_label, ...
+                            'acq', acq_label, ...
+                            'ses', ses_label, ...
+                            'task', task_label, ...
+                            'run', run_label, ...
+                            'proc', proc_label);
 
-meg_json_name = fullfile(root_dir, project_label, ...
-                         ['sub-' sub_id], ...
-                         ['ses-' ses_id], acquisition, ...
-                         ['sub-' sub_id ...
-                          '_task-' task_id ...
-                          '_acq-' acq_id ...
-                          '_run-' run_id ...
-                          '_proc-' proc_id '_meg.json']);
+% using the 'use_schema', true
+% ensures that the entities will be in the correct order
+bids_file = bids.File(name_spec, 'use_schema', true);
+
+% Contrust the fullpath version of the filename
+json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
 % Assign the fields in the Matlab structure that can be saved as a json.
 % The following fields must be defined:
@@ -46,7 +64,7 @@ meg_json_name = fullfile(root_dir, project_label, ...
 % Tasks SHOULD NOT have the same name. The Task label is derived
 % from this field by removing all non alphanumeric ([a-zA-Z0-9])
 % characters:
-meg_json.TaskName = '';
+json.TaskName = '';
 
 %%
 
@@ -54,45 +72,33 @@ meg_json.TaskName = '';
 
 % Sampling frequency (in Hz) of all the data in the recording,
 % regardless of their type (for example: 2400):
-meg_json.SamplingFrequency = '';
+json.SamplingFrequency = '';
 
 % Frequency (in Hz) of the power grid at the geographical location of
 % the MEG instrument (for instance: 50 or 60):
-meg_json.PowerLineFrequency = '';
+json.PowerLineFrequency = '';
 
 % Position of the dewar during the MEG scan: "upright", "supine" or
 % "degrees" of angle from vertical: for example on CTF systems,
 % upright=15, supine = 90:
-meg_json.DewarPosition = '';
+json.DewarPosition = '';
 
 % List of temporal and/or spatial software filters applied, or ideally
 % key:value pairs of pre-applied software filters and their parameter
 % values: for example: {"SSS": {"frame": "head", "badlimit": 7}},
 % {"SpatialCompensation": {"GradientOrder": Order of the gradient
 % compensation}}. Write "n/a" if no software filters applied.
-meg_json.SoftwareFilters = '';
+json.SoftwareFilters = '';
 
 % Boolean ("true" or "false") value indicating whether anatomical
 % landmark points (for instance: fiducials) are contained within this recording.
-meg_json.DigitizedLandmarks = '';
+json.DigitizedLandmarks = '';
 
 % Boolean ("true" or "false") value indicating whether head points
 % outlining the scalp/face surface are contained within this recording
-meg_json.DigitizedHeadPoints = '';
+json.DigitizedHeadPoints = '';
 
-% this makes the json look prettier when opened in a txt editor
-json_options.indent = ' ';
-
-jsonSaveDir = fileparts(meg_json_name);
-if ~isdir(jsonSaveDir)
-    fprintf('Warning: directory to save json file does not exist, create: %s \n', jsonSaveDir);
-end
-
-try
-    jsonwrite(meg_json_name, meg_json, json_options);
-catch
-    warning('%s\n%s\n%s\n%s', ...
-            'Writing the JSON file seems to have failed.', ...
-            'Make sure that the following library is in the matlab/octave path:', ...
-            'https://github.com/gllmflndn/JSONio');
-end
+%% Write JSON
+% Make sure the directory exists
+bids.util.mkdir(fileparts(json_name));
+bids.util.jsonencode(json_name, json);
