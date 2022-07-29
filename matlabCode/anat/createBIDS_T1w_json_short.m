@@ -10,12 +10,12 @@
 %
 % Make sure it is in the matab/octave path
 try
-    bids.bids_matlab_version
+    bids.bids_matlab_version;
 catch
-  warning('%s\n%s\n%s\n%s', ...
-    'Writing the JSON file seems to have failed.', ...
-    'Make sure that the following library is in the matlab/octave path:', ...
-    'https://github.com/bids-standard/bids-matlab');
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/bids-standard/bids-matlab');
 end
 
 %%
@@ -45,15 +45,15 @@ name_spec.entities = struct('sub', sub_label, ...
                             'acq', acq_label, ...
                             'run', run_label);
 
-% using the 'use_schema', true 
+% using the 'use_schema', true
 % ensures that the entities will be in the correct order
 bids_file = bids.File(name_spec, 'use_schema', true);
 
 % Contrust the fullpath version of the filename
-anat_json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
+json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
 % Make sure the directory exists
-bids.util.mkdir(fileparts(anat_json_name))
+bids.util.mkdir(fileparts(json_name));
 
 %%
 % Assign the fields in the Matlab structure that can be saved as a json.
@@ -65,28 +65,26 @@ bids.util.mkdir(fileparts(anat_json_name))
 % runs with different phase encoding directions phaseEncodingDirection is
 % defined as the direction along which phase is was modulated which may
 % result in visible distortions.
-anat_json.PhaseEncodingDirection = ' ';
+json.PhaseEncodingDirection = ' ';
 
 % REQUIRED if corresponding fieldmap data is present. The effective sampling
 % interval, specified in seconds, between lines in the phase-encoding direction,
 % defined based on the size of the reconstructed image in the phase direction.
-anat_json.EffectiveEchoSpacing = ' ';
+json.EffectiveEchoSpacing = ' ';
 
 % REQUIRED if corresponding field/distortion maps acquired with opposing phase
 % encoding directions are present. This is actually the effective total
 % readout time , defined as the readout duration, specified in seconds,
 % that would have generated data with the given level of distortion.
 % It is NOT the actual, physical duration of the readout train
-anat_json.TotalReadoutTime = ' ';
+json.TotalReadoutTime = ' ';
 
 %% Timing Parameters metadata fields
 
 % REQUIRED if corresponding fieldmap data is present or the data comes from a multi echo sequence
 % The echo time (TE) for the acquisition, specified in seconds.
 % Corresponds to DICOM Tag 0018, 0081 "Echo Time"
-anat_json.EchoTime = ' ';
-
+json.EchoTime = ' ';
 
 %% Write JSON
-bids.util.jsonencode(anat_json_name, anat_json);
-
+bids.util.jsonencode(json_name, json);

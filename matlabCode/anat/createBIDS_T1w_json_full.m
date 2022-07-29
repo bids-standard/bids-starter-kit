@@ -10,19 +10,18 @@
 %
 % Make sure it is in the matab/octave path
 try
-    bids.bids_matlab_version
+    bids.bids_matlab_version;
 catch
-  warning('%s\n%s\n%s\n%s', ...
-    'Writing the JSON file seems to have failed.', ...
-    'Make sure that the following library is in the matlab/octave path:', ...
-    'https://github.com/bids-standard/bids-matlab');
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/bids-standard/bids-matlab');
 end
 
 %%
 clear;
 
 this_dir = fileparts(mfilename('fullpath'));
-
 root_dir = fullfile(this_dir, '..', filesep, '..');
 
 project = 'templates';
@@ -40,21 +39,20 @@ name_spec.modality = 'anat';
 name_spec.suffix = 'T1w';
 name_spec.ext = '.json';
 
-name_spec.entities = struct('sub', sub_label, ...
-                            'ses', ses_label, ...
+name_spec.entities = struct('ses', ses_label, ...
                             'acq', acq_label, ...
-                            'run', run_label);
+                            'run', run_label, ...
+                            'sub', sub_label);
 
-% using the 'use_schema', true 
+% using the 'use_schema', true
 % ensures that the entities will be in the correct order
 bids_file = bids.File(name_spec, 'use_schema', true);
+bids_file = bids_file.use_schema();
+bids_file = bids_file.reorder_entities();
 
 % Contrust the fullpath version of the filename
-anat_json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
+json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
-% Make sure the directory exists
-bids.util.mkdir(fileparts(anat_json_name))                         
-                         
 %%
 % Assign the fields in the Matlab structure that can be saved as a json.
 % all REQUIRED /RECOMMENDED /OPTIONAL metadata fields for Magnetic Resonance Imaging data
@@ -62,130 +60,130 @@ bids.util.mkdir(fileparts(anat_json_name))
 %% Scanner Hardware metadata fields
 
 % RECOMMENDED Manufacturer of the equipment that produced the composite instances.
-anat_json.Manufacturer = ' ';
+json.Manufacturer = ' ';
 
 % RECOMMENDED Manufacturer`s model name of the equipment that produced the
 % composite instances. Corresponds to DICOM Tag 0008, 1090 "Manufacturers Model Name".
-anat_json.ManufacturersModelName = ' ';
+json.ManufacturersModelName = ' ';
 
 % RECOMMENDED Nominal field strength of MR magnet in Tesla. Corresponds to
 % DICOM Tag 0018,0087 "Magnetic Field Strength".
-anat_json.MagneticFieldStrength = ' ';
+json.MagneticFieldStrength = ' ';
 
 % RECOMMENDED The serial number of the equipment that produced the composite
 % instances. Corresponds to DICOM Tag 0018, 1000 "DeviceSerialNumber".
-anat_json.DeviceSerialNumber = ' ';
+json.DeviceSerialNumber = ' ';
 
 % RECOMMENDED Institution defined name of the machine that produced the composite
 % instances. Corresponds to DICOM Tag 0008, 1010 "Station Name"
-anat_json.StationName = ' ';
+json.StationName = ' ';
 
 % RECOMMENDED Manufacturer's designation of software version of the equipment
 % that produced the composite instances. Corresponds to
 % DICOM Tag 0018, 1020 "Software Versions".
-anat_json.SoftwareVersions = ' ';
+json.SoftwareVersions = ' ';
 
 % RECOMMENDED (Deprecated) Manufacturer's designation of the software of the
 % device that created this Hardcopy Image (the printer). Corresponds to
 % DICOM Tag 0018, 101 "Hardcopy Device Software Version".
-anat_json.HardcopyDeviceSoftwareVersion = ' ';
+json.HardcopyDeviceSoftwareVersion = ' ';
 
 % RECOMMENDED Information describing the receiver coil
-anat_json.ReceiveCoilName = ' ';
+json.ReceiveCoilName = ' ';
 
 % RECOMMENDED Information describing the active/selected elements of the receiver coil.
-anat_json.ReceiveCoilActiveElements = ' ';
+json.ReceiveCoilActiveElements = ' ';
 
 % RECOMMENDED the specifications of the actual gradient coil from the scanner model
-anat_json.GradientSetType = ' ';
+json.GradientSetType = ' ';
 
 % RECOMMENDED This is a relevant field if a non-standard transmit coil is used.
 % Corresponds to DICOM Tag 0018, 9049 "MR Transmit Coil Sequence".
-anat_json.MRTransmitCoilSequence = ' ';
+json.MRTransmitCoilSequence = ' ';
 
 % RECOMMENDED A method for reducing the number of independent channels by
 % combining in analog the signals from multiple coil elements. There are
 % typically different default modes when using un-accelerated or accelerated
 % (for example: GRAPPA, SENSE) imaging
-anat_json.MatrixCoilMode = ' ';
+json.MatrixCoilMode = ' ';
 
 % RECOMMENDED Almost all fMRI studies using phased-array coils use
 % root-sum-of-squares (rSOS) combination, but other methods exist.
 % The image reconstruction is changed by the coil combination method
 % (as for the matrix coil mode above), so anything non-standard should be reported.
-anat_json.CoilCombinationMethod = ' ';
+json.CoilCombinationMethod = ' ';
 
 %% Sequence Specifics metadata fields
 
 % RECOMMENDED A general description of the pulse sequence used for the scan
 % (for instance: MPRAGE, Gradient Echo EPI, Spin Echo EPI, Multiband gradient echo EPI).
-anat_json.PulseSequenceType = ' ';
+json.PulseSequenceType = ' ';
 
 % RECOMMENDED Description of the type of data acquired. Corresponds to
 % DICOM Tag 0018, 0020 "Sequence Sequence".
-anat_json.ScanningSequence = ' ';
+json.ScanningSequence = ' ';
 
 % RECOMMENDED Variant of the ScanningSequence. Corresponds to
 % DICOM Tag 0018, 0021 "Sequence Variant".
-anat_json.SequenceVariant = ' ';
+json.SequenceVariant = ' ';
 
 % RECOMMENDED Parameters of ScanningSequence. Corresponds to
 % DICOM Tag 0018, 0022 "Scan Options".
-anat_json.ScanOptions = ' ';
+json.ScanOptions = ' ';
 
 % RECOMMENDED Manufacturer's designation of the sequence name. Corresponds
 % to DICOM Tag 0018, 0024 "Sequence Name".
-anat_json.SequenceName = ' ';
+json.SequenceName = ' ';
 
 % RECOMMENDED Information beyond pulse sequence type that identifies the
 % specific pulse sequence used
-anat_json.PulseSequenceDetails = ' ';
+json.PulseSequenceDetails = ' ';
 
 % RECOMMENDED Boolean stating if the image saved has been corrected for
 % gradient nonlinearities by the scanner sequence.
-anat_json.NonlinearGradientCorrection = ' ';
+json.NonlinearGradientCorrection = ' ';
 
 %% In-Plane Spatial Encoding metadata fields
 
 % RECOMMENDED The number of RF excitations need to reconstruct a slice or volume.
 % Please mind that this is not the same as Echo Train Length which denotes
 % the number of lines of k-space collected after an excitation.
-anat_json.NumberShots = ' ';
+json.NumberShots = ' ';
 
 % RECOMMENDED The parallel imaging (e.g, GRAPPA) factor. Use the denominator
 % of the fraction of k-space encoded for each slice.
-anat_json.ParallelReductionFactorInPlane = ' ';
+json.ParallelReductionFactorInPlane = ' ';
 
 % RECOMMENDED The type of parallel imaging used (for example: GRAPPA, SENSE).
 % Corresponds to DICOM Tag 0018, 9078 "Parallel Acquisition Technique".
-anat_json.ParallelAcquisitionTechnique = ' ';
+json.ParallelAcquisitionTechnique = ' ';
 
 % RECOMMENDED The fraction of partial Fourier information collected.
 % Corresponds to DICOM Tag 0018, 9081 "Partial Fourier".
-anat_json.PartialFourier = ' ';
+json.PartialFourier = ' ';
 
 % RECOMMENDED The direction where only partial Fourier information was collected.
 % Corresponds to DICOM Tag 0018, 9036 "Partial Fourier Direction"
-anat_json.PartialFourierDirection = ' ';
+json.PartialFourierDirection = ' ';
 
 % RECOMMENDED defined as the displacement of the water signal with respect to
 % fat signal in the image. Water-fat shift (WFS) is expressed in number of pixels
-anat_json.WaterFatShift = ' ';
+json.WaterFatShift = ' ';
 
 % RECOMMENDED Number of lines in k-space acquired per excitation per image.
-anat_json.EchoTrainLength = ' ';
+json.EchoTrainLength = ' ';
 
 %% Timing Parameters metadata fields
 
 % REQUIRED if corresponding fieldmap data is present or the data comes from
 % a multi echo sequence. The echo time (TE) for the acquisition, specified in seconds.
 % Corresponds to DICOM Tag 0018, 0081 "Echo Time"
-anat_json.EchoTime = ' ';
+json.EchoTime = ' ';
 
 % RECOMMENDED The inversion time (TI) for the acquisition, specified in seconds.
 % Inversion time is the time after the middle of inverting RF pulse to middle
 % of excitation pulse to detect the amount of longitudinal magnetization
-anat_json.InversionTime = ' ';
+json.InversionTime = ' ';
 
 % RECOMMENDED Possible values: "i", "j", "k", "i-", "j-", "k-" (the axis of the NIfTI data
 % along which slices were acquired, and the direction in which SliceTiming
@@ -193,47 +191,48 @@ anat_json.InversionTime = ' ';
 % first, second and third axis of the data in the NIfTI file. When present
 % ,the axis defined by SliceEncodingDirection needs to be consistent with
 % the slice_dim field in the NIfTI header.
-anat_json.SliceEncodingDirection = ' ';
+json.SliceEncodingDirection = ' ';
 
 % RECOMMENDED Actual dwell time (in seconds) of the receiver per point in the
 % readout direction, including any oversampling. For Siemens, this corresponds
 % to DICOM field (0019,1018) (in ns).
-anat_json.DwellTime = ' ';
+json.DwellTime = ' ';
 
 %% RF & Contrast metadata field
 
 % RECOMMENDED Flip angle for the acquisition, specified in degrees.
 % Corresponds to: DICOM Tag 0018, 1314 "Flip Angle".
-anat_json.FlipAngle = ' ';
+json.FlipAngle = ' ';
 
 %% Slice Acceleration metadata field
 
 % RECOMMENDED The multiband factor, for multiband acquisitions.
-anat_json.MultibandAccelerationFactor = ' ';
+json.MultibandAccelerationFactor = ' ';
 
 %% Anatomical landmarks metadata fields
 
 % RECOMMENDED Key:value pairs of any number of additional anatomical landmarks
 % and their coordinates in voxel units
-anat_json.AnatomicalLandmarkCoordinates = ' ';
+json.AnatomicalLandmarkCoordinates = ' ';
 
 %% Institution information metadata fields
 
 % RECOMMENDED The name of the institution in charge of the equipment that
 % produced the composite instances. Corresponds to
 % DICOM Tag 0008, 0080 "InstitutionName".
-anat_json.InstitutionName = ' ';
+json.InstitutionName = ' ';
 
 % RECOMMENDED The address of the institution in charge of the equipment that
 % produced the composite instances. Corresponds to
 % DICOM Tag 0008, 0081 "InstitutionAddress"
-anat_json.InstitutionAddress = ' ';
+json.InstitutionAddress = ' ';
 
 % RECOMMENDED The department in the institution in charge of the equipment
 % that produced the composite instances. Corresponds to
 % DICOM Tag 0008, 1040 "Institutional Department Name".
-anat_json.InstitutionalDepartmentName = ' ';
-
+json.InstitutionalDepartmentName = ' ';
 
 %% Write JSON
-bids.util.jsonencode(anat_json_name, anat_json);
+% Make sure the directory exists
+bids.util.mkdir(fileparts(json_name));
+bids.util.jsonencode(json_name, json);
