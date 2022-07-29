@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Detect Latin abbreviations that can be difficult for screenreaders and non-native English speakers
+# Detect Latin abbreviations that can be difficult for screen readers and non-native English speakers
 #
 # This script initially adopted from The Turing Way from in October 2020.
 # doi:10.5281/zenodo.3233853
@@ -127,7 +127,7 @@ def get_all_files(directory=os.path.join(ABSOLUTE_HERE, "src")) -> list:
         List of files to check
     """
     files = []
-    filetypes_to_ignore = (".png", ".jpg", ".js", ".css")
+    filetypes_to_ignore = (".png", ".jpg", ".js", ".css", ".html", ".doctree")
 
     for rootdir, _, filenames in os.walk(directory):
         files.extend(
@@ -153,6 +153,8 @@ def main():
     if bool(failing_files):
         error_message = construct_error_message(failing_files)
         raise Exception(error_message)
+    else:
+        print("No bad latin found")
 
 
 if __name__ == "__main__":
