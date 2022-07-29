@@ -52,7 +52,7 @@ json.EchoTime2 = '';
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The pathneeds to use forward slashes instead of backward slashes.
-json.IntendedFor = {'sub-01/ses-01/func/...';
+json.IntendedFor = {'sub-01/ses-01/func/...'
                     'sub-01/ses-01/func/...'};
 
 % Write JSON
@@ -96,8 +96,8 @@ fmap1_json.EchoTime = '';
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The pathneeds to use forward slashes instead of backward slashes.
-fmap1_json.IntendedFor = {'sub-01/ses-01/func/...';
-                    'sub-01/ses-01/func/...'};
+fmap1_json.IntendedFor = {'sub-01/ses-01/func/...'
+                          'sub-01/ses-01/func/...'};
 
 fmap2_json.EchoTime = '';
 
@@ -105,8 +105,8 @@ fmap2_json.EchoTime = '';
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The pathneeds to use forward slashes instead of backward slashes.
-fmap2_json.IntendedFor = {'sub-01/ses-01/func/...';
-                    'sub-01/ses-01/func/...'};
+fmap2_json.IntendedFor = {'sub-01/ses-01/func/...'
+                          'sub-01/ses-01/func/...'};
 
 % Write JSON
 % Make sure the directory exists
@@ -143,13 +143,13 @@ bids_file = bids.File(name_spec, 'use_schema', true);
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
 % The possible options are: Hz, rad/s, or Tesla.
-json.Units = ''; 
+json.Units = '';
 
 % Fieldmap data are linked to a specific scan(s)
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The pathneeds to use forward slashes instead of backward slashes.
-json.IntendedFor = {'sub-01/ses-01/func/...';
+json.IntendedFor = {'sub-01/ses-01/func/...'
                     'sub-01/ses-01/func/...'};
 
 % Write JSON
@@ -208,7 +208,7 @@ json.TotalReadoutTime = '';
 % it was acquired for by filling the IntendedFor field. The IntendedFor field
 % may contain one or more filenames with paths relative to the subject subfolder.
 % The path needs to use forward slashes instead of backward slashes.
-json.IntendedFor = {'sub-01/ses-01/func/...';
+json.IntendedFor = {'sub-01/ses-01/func/...'
                     'sub-01/ses-01/func/...'};
 
 % Write JSON

@@ -1,29 +1,29 @@
 {
-    "age": {
-        "LongName": "",
-        "Description": "age of the participant",
-        "Levels": [],
-        "Units": "years",
-        "TermURL": ""
+  "age": {
+    "LongName": "",
+    "Description": "age of the participant",
+    "Levels": [],
+    "Units": "years",
+    "TermURL": ""
+  },
+  "sex": {
+    "LongName": "",
+    "Description": "sex of the participant as reported by the participant",
+    "Levels": {
+      "m": "male",
+      "f": "female"
     },
-    "sex": {
-        "LongName": "",
-        "Description": "sex of the participant as reported by the participant",
-        "Levels": {
-            "m": "male",
-            "f": "female"
-        },
-        "Units": "",
-        "TermURL": ""
+    "Units": "",
+    "TermURL": ""
+  },
+  "handedness": {
+    "LongName": "",
+    "Description": "handedness of the participant as reported by the participant",
+    "Levels": {
+      "l": "left",
+      "r": "right"
     },
-    "handedness": {
-        "LongName": "",
-        "Description": "handedness of the participant as reported by the participant",
-        "Levels": {
-            "l": "left",
-            "r": "right"
-        },
-        "Units": "",
-        "TermURL": ""
-    }
+    "Units": "",
+    "TermURL": ""
+  }
 }

@@ -20,7 +20,7 @@ end
 
 %%
 
-clear
+clear;
 
 this_dir = fileparts(mfilename('fullpath'));
 root_dir = fullfile(this_dir, '..', filesep, '..');

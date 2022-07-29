@@ -4,24 +4,47 @@
 %
 % anushkab, 2018
 
+% Writing json files relies on the JSONio library
+% https://github.com/bids-standard/bids-matlab
+%
+% Make sure it is in the matab/octave path
+try
+    bids.bids_matlab_version;
+catch
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/bids-standard/bids-matlab');
+end
+
 %%
 clear;
-root_dir = ['..' filesep '..'];
-project_label = 'templates';
-sub_id = '01';
-ses_id = '01';
-task_id = 'FullExample';
 
-acquisition = 'func';
-run_id = '01';
+this_dir = fileparts(mfilename('fullpath'));
+root_dir = fullfile(this_dir, '..', filesep, '..');
 
-events_tsv_name = fullfile(root_dir, project_label, ...
-                           ['sub-' sub_id], ...
-                           ['ses-' ses_id], acquisition, ...
-                           ['sub-' sub_id ...
-                            '_ses-' ses_id ...
-                            '_task-' task_id ...
-                            '_run-' run_id '_events.tsv']);
+project = 'templates';
+
+sub_label = '01';
+ses_label = '01';
+task_label = 'FullExample';
+run_label = '01';
+
+name_spec.modality = 'func';
+name_spec.suffix = 'events';
+name_spec.ext = '.tsv';
+name_spec.entities = struct('sub', sub_label, ...
+                            'ses', ses_label, ...
+                            'task', task_label, ...
+                            'run', run_label);
+
+% using the 'use_schema', true
+% ensures that the entities will be in the correct order
+bids_file = bids.File(name_spec, 'use_schema', true);
+
+% Contrust the fullpath version of the filename
+events_tsv_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
+events_json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.json_filename);
 
 %% make an event table and save
 
@@ -31,72 +54,54 @@ events_tsv_name = fullfile(root_dir, project_label, ...
 % If any acquired scans have been discarded before forming the imaging data file,
 % ensure that a time of 0 corresponds to the first image stored. In other words
 % negative numbers in onset are allowed.
-onset = [0]';
+tsv.onset = 0;
 
 % REQUIRED. Duration of the event (measured from onset) in seconds.
 % Must always be either zero or positive. A "duration" value of zero implies
 % that the delta function or event is so short as to be effectively modeled as an impulse.
-duration = [0]';
+tsv.duration = 0;
 
 % OPTIONAL Primary categorisation of each trial to identify them as instances
 % of the experimental conditions
-trial_type = {'afraid'};
+tsv.trial_type = {'afraid'};
 
 % OPTIONAL. Response time measured in seconds. A negative response time can be
 % used to represent preemptive responses and n/a denotes a missed response.
-response_time = [0]';
+tsv.response_time = 0;
 
 % OPTIONAL Represents the location of the stimulus file (image, video, sound etc.)
 % presented at the given onset time
-stim_file = {' '};
+tsv.stim_file = {' '};
 
 % OPTIONAL Hierarchical Event Descriptor (HED) Tag.
-HED = {' '};
+tsv.HED = {' '};
 
 %% Save table
-t = table(onset, duration, trial_type, response_time, stim_file, HED);
-
-writetable(t, events_tsv_name, 'FileType', 'text', 'Delimiter', '\t');
+bids.util.tsvwrite(events_tsv_name, tsv);
 
 %% associated data dictionary
 
-template = struct( ...
-                  'LongName', '', ...
+template = struct('LongName', '', ...
                   'Description', '', ...
                   'Levels', [], ...
                   'Units', '', ...
                   'TermURL', '');
 
-dd_json.trial_type = template;
-dd_json.trial_type.Description = 'Emotion image type';
-dd_json.trial_type.Levels = struct( ...
-                                   'afraid', 'A face showing fear is displayed', ...
-                                   'angry', 'A face showing anger is displayed');
+json.trial_type = template;
+json.trial_type.Description = 'Emotion image type';
+json.trial_type.Levels = struct('afraid', 'A face showing fear is displayed', ...
+                                'angry', 'A face showing anger is displayed');
 
-dd_json.identifier.LongName = 'Unique identifier from Karolinska (KDEF) database';
-dd_json.identifier.Description = 'ID from KDEF database used to identify the displayed image';
+json.identifier.LongName = 'Unique identifier from Karolinska (KDEF) database';
+json.identifier.Description = 'ID from KDEF database used to identify the displayed image';
 
-dd_json.StimulusPresentation.OperatingSystem = 'Linux Ubuntu 18.04.5';
-dd_json.StimulusPresentation.SoftwareName = 'Psychtoolbox';
-dd_json.StimulusPresentation.SoftwareRRID = 'SCR_002881';
-dd_json.StimulusPresentation.SoftwareVersion = '3.0.14';
-dd_json.StimulusPresentation.Code = 'doi:10.5281/zenodo.3361717';
+json.StimulusPresentation.OperatingSystem = 'Linux Ubuntu 18.04.5';
+json.StimulusPresentation.SoftwareName = 'Psychtoolbox';
+json.StimulusPresentation.SoftwareRRID = 'SCR_002881';
+json.StimulusPresentation.SoftwareVersion = '3.0.14';
+json.StimulusPresentation.Code = 'doi:10.5281/zenodo.3361717';
 
 %% Write JSON
-
-json_options.indent = ' '; % this just makes the json file look prettier
-% when opened in a text editor
-
-jsonSaveDir = fileparts(events_tsv_name);
-if ~isdir(jsonSaveDir)
-    fprintf('Warning: directory to save json file does not exist: %s \n', jsonSaveDir);
-end
-
-try
-    jsonwrite(strrep(events_tsv_name, '.tsv', '.json'), dd_json, json_options);
-catch
-    warning('%s\n%s\n%s\n%s', ...
-            'Writing the JSON file seems to have failed.', ...
-            'Make sure that the following library is in the matlab/octave path:', ...
-            'https://github.com/gllmflndn/JSONio');
-end
+% Make sure the directory exists
+bids.util.mkdir(fileparts(events_json_name));
+bids.util.jsonencode(events_json_name, json);
