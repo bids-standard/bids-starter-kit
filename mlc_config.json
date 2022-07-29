@@ -5,6 +5,9 @@
         },
         {
             "pattern": "^https://guides.github.com/.*"
-        }
+        },
+        {
+            "pattern": "^https://github.com/.*"
+        }        
     ]
 }
