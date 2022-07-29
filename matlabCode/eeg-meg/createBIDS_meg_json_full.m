@@ -1,16 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Create JSON using MATLAB for MEG BIDS:
 %
-% This template is for MEG data of any kind, 
-% including but not limited to task-based, resting-state, and noise recordings. 
+% This template is for MEG data of any kind,
+% including but not limited to task-based, resting-state, and noise recordings.
 %
-% If multiple Tasks were performed within a single Run, 
-% the task description can be set to "task-multitask". 
+% If multiple Tasks were performed within a single Run,
+% the task description can be set to "task-multitask".
 %
-% The _meg.json SHOULD contain details on the Tasks. 
+% The _meg.json SHOULD contain details on the Tasks.
 %
 % Some manufacturers data storage
-% conventions use folders which contain data files of various nature: 
+% conventions use folders which contain data files of various nature:
 % for example: CTF's .ds format, or 4D/BTi.
 %
 % Please refer to Appendix VI for examples from a selection of MEG manufacturers
@@ -31,7 +31,7 @@ catch
             'https://github.com/bids-standard/bids-matlab');
 end
 
-clear
+clear;
 
 this_dir = fileparts(mfilename('fullpath'));
 root_dir = fullfile(this_dir, '..', filesep, '..');

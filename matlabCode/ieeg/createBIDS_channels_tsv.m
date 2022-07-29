@@ -5,21 +5,46 @@
 % DHermes, 2017
 % modified Jaap van der Aar 30.11.18
 
+% Writing json files relies on the JSONio library
+% https://github.com/bids-standard/bids-matlab
+%
+% Make sure it is in the matab/octave path
+try
+    bids.bids_matlab_version;
+catch
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/bids-standard/bids-matlab');
+end
+
 %%
 clear;
-root_dir = ['..' filesep '..'];
-project_label = 'templates';
-ieeg_sub = '01';
-ieeg_ses = '01';
-ieeg_task = 'LongExample';
-ieeg_run = '01';
 
-channels_tsv_name = fullfile(root_dir, project_label, ...
-                             ['sub-' ieeg_sub], ['ses-' ieeg_ses], 'ieeg', ...
-                             ['sub-' ieeg_sub ...
-                              '_ses-' ieeg_ses ...
-                              '_task-' ieeg_task ...
-                              '_run-' ieeg_run '_channels.tsv']);
+this_dir = fileparts(mfilename('fullpath'));
+root_dir = fullfile(this_dir, '..', filesep, '..');
+
+project = 'templates';
+
+sub_label = '01';
+ses_label = '01';
+task_label = 'LongExample';
+run_label = '01';
+
+name_spec.modality = 'ieeg';
+name_spec.suffix = 'channels';
+name_spec.ext = '.tsv';
+name_spec.entities = struct('sub', sub_label, ...
+                            'ses', ses_label, ...
+                            'task', task_label, ...
+                            'run', run_label);
+
+% using the 'use_schema', true
+% ensures that the entities will be in the correct order
+bids_file = bids.File(name_spec, 'use_schema', true);
+
+% Contrust the fullpath version of the filename
+channels_tsv_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
 %% make a participants table and save
 
