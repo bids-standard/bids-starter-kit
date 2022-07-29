@@ -323,48 +323,87 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pet-image-data-file-formats">
+   PET image data file formats
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conversion">
    Conversion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-we-re-starting-with">
-     What we’re starting with
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setting-the-layout">
-     Setting the layout
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#collecting-and-installing-tpcclib">
-     Collecting and installing TPCCLIB
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#last-pass">
-     Last Pass
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#last-steps">
-     Last Steps
+    <a class="reference internal nav-link" href="#conversion-of-pet-data-using-pet2bids">
+     1) Conversion of PET data using PET2BIDS
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#installing-the-validator">
-       Installing the validator
+      <a class="reference internal nav-link" href="#get-dcm2niix">
+       get dcm2niix
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#validating-your-new-dataset">
-       Validating your new dataset
+      <a class="reference internal nav-link" href="#for-python">
+       For Python
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-matlab">
+       For MATLAB
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-conversion-of-pet-data-to-pet-bids">
+     2) Manual conversion of PET data to PET BIDS
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pet-image-data-in-ecat-format">
+       PET image data in ECAT format
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-the-layout">
+       Setting the layout
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#collecting-and-installing-tpcclib">
+       Collecting and installing TPCCLIB
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#last-pass">
+       Last Pass
       </a>
      </li>
     </ul>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validating-your-converted-pet-bids-data-set">
+   Validating your converted PET BIDS data set
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-the-validator">
+     Installing the validator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validating-your-new-dataset">
+     Validating your new dataset
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools-and-resources-for-pet-conversion">
+   Tools and resources for PET conversion
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-thoughts">
@@ -397,48 +436,87 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pet-image-data-file-formats">
+   PET image data file formats
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conversion">
    Conversion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-we-re-starting-with">
-     What we’re starting with
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setting-the-layout">
-     Setting the layout
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#collecting-and-installing-tpcclib">
-     Collecting and installing TPCCLIB
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#last-pass">
-     Last Pass
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#last-steps">
-     Last Steps
+    <a class="reference internal nav-link" href="#conversion-of-pet-data-using-pet2bids">
+     1) Conversion of PET data using PET2BIDS
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#installing-the-validator">
-       Installing the validator
+      <a class="reference internal nav-link" href="#get-dcm2niix">
+       get dcm2niix
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#validating-your-new-dataset">
-       Validating your new dataset
+      <a class="reference internal nav-link" href="#for-python">
+       For Python
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-matlab">
+       For MATLAB
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-conversion-of-pet-data-to-pet-bids">
+     2) Manual conversion of PET data to PET BIDS
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pet-image-data-in-ecat-format">
+       PET image data in ECAT format
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-the-layout">
+       Setting the layout
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#collecting-and-installing-tpcclib">
+       Collecting and installing TPCCLIB
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#last-pass">
+       Last Pass
       </a>
      </li>
     </ul>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validating-your-converted-pet-bids-data-set">
+   Validating your converted PET BIDS data set
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-the-validator">
+     Installing the validator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validating-your-new-dataset">
+     Validating your new dataset
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools-and-resources-for-pet-conversion">
+   Tools and resources for PET conversion
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#final-thoughts">
@@ -458,41 +536,266 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>PET data conversion<a class="headerlink" href="#pet-data-conversion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="history">
 <h2>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
-<p>The PET modality is one of the newest additions to the BIDS standard with its
-introduction via BEP 009. If you’re interested in seeing exactly what and how
-something gets added to BIDS see the pull request for
-<a class="reference external" href="https://github.com/bids-standard/bids-specification/pull/633">BEP 009 here</a>.
+<p>The PET modality is an addition to BIDS with its introduction via BEP 009.
+If you’re interested in seeing exactly what and how something gets added to BIDS
+see the pull request for BEP009
+<a class="reference external" href="https://github.com/bids-standard/bids-specification/pull/633">here</a>.
 The results of that extension proposal can be read
 <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#positron-emission-tomography">here</a>
-in the bids standard.</p>
+in the BIDS standard.</p>
+</div>
+<div class="section" id="pet-image-data-file-formats">
+<h2>PET image data file formats<a class="headerlink" href="#pet-image-data-file-formats" title="Permalink to this headline">¶</a></h2>
+<p>Before we start to convert data we need to quickly mention
+that PET image data files come of the scanner in various different formats:
+some scanners provide DICOM files (.dcm)
+and others use proprietary formats for example ECAT format (.v).
+In order to facilitate easy testing of data conversion across different PET file formats
+the <a class="reference external" href="https://openneuropet.github.io/">OpenNeuroPET project</a> has compiled a bunch of phantom data
+from different scanner types and is distributing two examples
+<a class="reference external" href="https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing">here</a>.</p>
+<p>You can download them for testing purposes either manually
+or in the terminal by typing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp<span class="o">=</span>sharing --fuzzy
+</pre></div>
+</div>
+<p>You may need to install the python package <a class="reference external" href="https://github.com/wkentaro/gdown"><code class="docutils literal notranslate"><span class="pre">gdown</span></code></a>
+for this to work:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install gdown
+</pre></div>
+</div>
+<p>And then unzipping the downloaded file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip OpenNeuroPET-Demo_raw.zip
+</pre></div>
+</div>
+<p>You can now look at the file tree:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tree OpenNeuroPET-Demo_raw.
+
+OpenNeuroPET-Demo_raw
+│   .bidsignore
+│   .DS_Store
+│   dataset_description.json
+│   README
+│
+├───code
+│       .python_conversions.sh.swp
+│       matlab_conversions.m
+│       python_conversions.sh
+│       README.md
+│
+├───source
+│   │   .DS_Store
+│   │
+│   ├───SiemensBiographPETMR-NRU
+│   │       X-CAL_7.PT.Kalibrering_xca.30003.1.2022.04.26.15.04.22.218.14689529.dcm
+│   │       X-CAL_7.PT.Kalibrering_xca.30003.10.2022.04.26.15.04.22.218.14689628.dcm
+│   │       X-CAL_7.PT.Kalibrering_xca.30003.100.2022.04.26.15.04.22.218.14690618.dcm
+│   │       X-CAL_7.PT.Kalibrering_xca.30003.101.2022.04.26.15.04.22.218.14690629.dcm
+│   │       ....
+│   │
+│   └───SiemensHRRT-NRU
+│           XCal-Hrrt-2022.04.21.15.43.05_EM_3D.json
+│           XCal-Hrrt-2022.04.21.15.43.05_EM_3D.v
+│
+├───sub-SiemensBiographNRU
+│   └───pet
+│           sub-SiemensBiographNRU_pet.json
+│           sub-SiemensBiographNRU_pet.nii.gz
+│
+└───sub-SiemensHRRT
+    └───pet
+            sub-SiemensHRRT_pet.json
+            sub-SiemensHRRT_pet.nii.gz
+</pre></div>
+</div>
+<p>Now you have an example dataset where you have source data
+(both for ECAT and DICOM PET image format)
+and the PET BIDS data sets constructed for it.</p>
+<p>Also if you have access to another PET image file format,
+or data from a scanner not tested,
+please reach out to <a class="reference external" href="https://openneuropet.github.io/">OpenNeuroPET project</a>
+in order to add a phantom scan in your format.</p>
 </div>
 <div class="section" id="conversion">
 <h2>Conversion<a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h2>
-<p>Presently, PET does not have the same level of support when it comes to
-conversion from raw data into BIDS format like MR imaging. Much of the work in
-converting from a raw PET dataset into a bids PET dataset will be incumbent on
-the user. Some useful tools and resources that will be used in this document are
-as follows:</p>
+<p>The <a class="reference external" href="https://openneuropet.github.io/">OpenNeuroPET project</a> has tried to develop tools
+for facilitating easy data conversion for PET.
+The main tool used for this is <a class="reference external" href="https://github.com/openneuropet/PET2BIDS">PET2BIDS</a>
+freely available on the <a class="reference external" href="https://github.com/openneuropet">OpenNeuroPET GitHub repository</a>
+along with other resources like altlases or pipelines.</p>
+<p>It is available for both Python and MATLAB.
+Eventually, <a class="reference external" href="https://github.com/openneuropet/PET2BIDS">PET2BIDS</a> will also be wrapped inside other BIDS conversion tools
+such as <a class="reference external" href="https://github.com/Donders-Institute/bidscoin">BIDScoin</a> or
+<a class="reference external" href="https://brainlife.io/ezbids/">ezBIDS</a>,
+but this is work in progress at the moment.</p>
+<p>Besides using <a class="reference external" href="https://github.com/openneuropet/PET2BIDS">PET2BIDS</a> there is always the possibility to manually convert a data set
+to PET BIDS and an example will be shown below.
+In any case, for DICOM data format, one relies on
+<a class="reference external" href="https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage">dcm2niix</a>.</p>
+<p>Below we will show two ways of converting your PET data to BIDS:</p>
+<ol class="simple">
+<li><p>using <a class="reference external" href="https://github.com/openneuropet/PET2BIDS">PET2BIDS</a> and</p></li>
+<li><p>manually.</p></li>
+</ol>
+<div class="section" id="conversion-of-pet-data-using-pet2bids">
+<h3>1) Conversion of PET data using PET2BIDS<a class="headerlink" href="#conversion-of-pet-data-using-pet2bids" title="Permalink to this headline">¶</a></h3>
+<p>Detailed documentation for PET2BIDS can be found
+<a class="reference external" href="https://pet2bids.readthedocs.io/en/latest/index.html">here</a> or on the
+<a class="reference external" href="https://github.com/openneuropet/PET2BIDS/blob/main/README.md">Github repo</a>.</p>
+<div class="section" id="get-dcm2niix">
+<h4>get dcm2niix<a class="headerlink" href="#get-dcm2niix" title="Permalink to this headline">¶</a></h4>
+<p>Download <a class="reference external" href="https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage">dcm2niix</a>,
+and for Mac and Linux users you can add it to your path,
+for instance it would could downloaded and unzipped into <code class="docutils literal notranslate"><span class="pre">/bin</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USER</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for-python">
+<h4>For Python<a class="headerlink" href="#for-python" title="Permalink to this headline">¶</a></h4>
+<p>Open your terminal, either regular or anaconda terminal and type.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pypet2bids
+</pre></div>
+</div>
+<p>Now you already have the converter installed and can go ahead
+and convert your first dataset!</p>
+<p>In this example, we are converting an image in DICOM format.
+It should be noted that <code class="docutils literal notranslate"><span class="pre">pypet2bids</span></code> contains several different tools
+and is itself a part of the larger PET library <code class="docutils literal notranslate"><span class="pre">PET2BIDS</span></code>,
+the specific tool we will be using for the following DICOM conversion is <code class="docutils literal notranslate"><span class="pre">dcm2niix4pet</span></code>.</p>
+<p>You just need to point <code class="docutils literal notranslate"><span class="pre">dcm2niix4pet</span></code> to:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-validator">BIDS Validator</a>, which
-fully supports PET</p></li>
-<li><p><a class="reference external" href="https://gitlab.utu.fi/vesoik/tpcclib">TPCCLIIB</a> is a command line library
-containing (among many others) PET tools such as <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code> that will be
-used below to convert the imaging data from a PET dataset into nifti format.
-The Turku PET Centre site can be found <a class="reference external" href="https://turkupetcentre.fi/">here</a>
-for additional information on anything PET.</p></li>
-<li><p>a
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS PET Template</a>
-from this starter kit to initially populate and translate
-text/tabulature/csv blood data into BIDS PET compliant <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> and <code class="docutils literal notranslate"><span class="pre">.json</span></code>
-files.</p></li>
-<li><p><a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2niix</a> can be used if your raw
-pet data happens to be in a dicom format. Additionally this opens up the use
-of tools such as <a class="reference external" href="https://support.dcmtk.org/docs/dcmdump.html">dcmdump</a> from
-the <a class="reference external" href="https://support.dcmtk.org/docs/">dcmtk</a> to help in your conversion.</p></li>
+<li><p>the folder where your data resides, <code class="docutils literal notranslate"><span class="pre">dcmfolder</span></code>, and</p></li>
+<li><p>the folder where you want to output the PET BIDS formatted dataset, <code class="docutils literal notranslate"><span class="pre">mynewfolder</span></code>.</p></li>
 </ul>
-<div class="section" id="what-we-re-starting-with">
-<h3>What we’re starting with<a class="headerlink" href="#what-we-re-starting-with" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dcm2niix4pet dcmfolder -d mynewfolder
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">dcm2niix4pet</span></code> will do its best to extract as much information
+about radiological and blood data from the DICOM files in the <code class="docutils literal notranslate"><span class="pre">dcmfolder</span></code>.
+However, <code class="docutils literal notranslate"><span class="pre">dcm2niix4pet</span></code> can’t find information if it isn’t there,
+hence it will often be up to you the user
+to provide some missing information at the time of conversion.</p>
+</div>
+<p>Additional information can be provided via the command line
+with the <code class="docutils literal notranslate"><span class="pre">--kwargs</span></code> argument in the form of key=pair values.
+For an idea of what this looks like see below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dcm2niix4pet /OpenNeuroPET-Demo_raw/source/SiemensBiographPETMR-NRU <span class="se">\</span>
+            -d mynewfolder <span class="se">\</span>
+            --kwargs    <span class="nv">TimeZero</span><span class="o">=</span>ScanStart <span class="se">\</span>
+                        <span class="nv">Manufacturer</span><span class="o">=</span>Siemens <span class="se">\</span>
+                        <span class="nv">ManufacturersModelName</span><span class="o">=</span>Biograph <span class="se">\</span>
+                        <span class="nv">InstitutionName</span><span class="o">=</span><span class="s2">&quot;Rigshospitalet, NRU, DK&quot;</span> <span class="se">\</span>
+                        <span class="nv">BodyPart</span><span class="o">=</span>Phantom <span class="se">\</span>
+                        <span class="nv">Units</span><span class="o">=</span>Bq/mL <span class="se">\</span>
+                        <span class="nv">TracerName</span><span class="o">=</span>none <span class="se">\</span>
+                        <span class="nv">TracerRadionuclide</span><span class="o">=</span>F18 <span class="se">\</span>
+                        <span class="nv">InjectedRadioactivity</span><span class="o">=</span><span class="m">81</span>.24 <span class="se">\</span>
+                        <span class="nv">SpecificRadioactivity</span><span class="o">=</span><span class="m">13019</span>.23 <span class="se">\</span>
+                        <span class="nv">ModeOfAdministration</span><span class="o">=</span>infusion <span class="se">\</span>
+                        <span class="nv">FrameTimesStart</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
+                        <span class="nv">AcquisitionMode</span><span class="o">=</span><span class="s2">&quot;list mode&quot;</span> <span class="se">\</span>
+                        <span class="nv">ImageDecayCorrected</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+                        <span class="nv">ImageDecayCorrectionTime</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
+                        <span class="nv">AttenuationCorrection</span><span class="o">=</span>MR-corrected <span class="se">\</span>
+                        <span class="nv">FrameDuration</span><span class="o">=</span><span class="m">300</span> <span class="se">\</span>
+                        <span class="nv">FrameTimesStart</span><span class="o">=</span><span class="m">0</span>
+</pre></div>
+</div>
+<p>Now you have a dataset in PET BIDS format.
+You will probably have gotten some warnings relating to the <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecar file.
+Carefully look at them, since they will help you to catch inconsistencies
+and missing required fields that you need to add
+in order for the dataset to pass the BIDS validator as well (see below how that’s done).
+You can always edit the <code class="docutils literal notranslate"><span class="pre">.json</span></code> file, by opening it in a text editor and manually fixing errors.
+Alternatively, adjust the meta structure you created above to correct the errors.</p>
+</div>
+<div class="section" id="for-matlab">
+<h4>For MATLAB<a class="headerlink" href="#for-matlab" title="Permalink to this headline">¶</a></h4>
+<p>Download/Clone the <a class="reference external" href="https://github.com/openneuropet/PET2BIDS">PET2BIDS</a> GitHub repository.
+Windows users must, in addition, indicate the full path of where is the <code class="docutils literal notranslate"><span class="pre">dcm2niix.exe</span></code> in
+<a class="reference external" href="https://github.com/openneuropet/PET2BIDS/blob/main/matlab/dcm2niix4pet.m#L42">dcm2niix4pet.m</a>.</p>
+<p>Then, just follow the
+<a class="reference external" href="https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md">MATLAB README</a>.
+In the following it is just described how to convert DICOM files.
+It’s very similar and described in the
+<a class="reference external" href="https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md">MATLAB README</a>
+how to handle ECAT files.</p>
+<p>The entire PET2BIDS repository or only the MATLAB subfolder (your choice) should be in your MATLAB path.</p>
+<p>Defaults parameters can be set in <code class="docutils literal notranslate"><span class="pre">(scannername).txt</span></code> files to generate metadata easily
+(meaning to avoid passing all arguments in although this is also possible).
+You can find templates of such parameter file under
+<a class="reference external" href="https://github.com/openneuropet/PET2BIDS/tree/main/matlab/template_txt"><code class="docutils literal notranslate"><span class="pre">/template_txt</span></code></a>:</p>
+<ul class="simple">
+<li><p>SiemensHRRTparameters.txt,</p></li>
+<li><p>SiemensBiographparameters.txt,</p></li>
+<li><p>GEAdvanceparameters.txt,</p></li>
+<li><p>PhilipsVereosparameters.txt.</p></li>
+</ul>
+<p>Now in order to convert a PET dataset on disk to PET BIDS,
+one creates a structure containing all the meta information (here passing on all arguments)
+and then point the function to the folder where your data resides <code class="docutils literal notranslate"><span class="pre">dcmfolder</span></code>
+and the folder where you want to output the PET BIDS formatted dataset <code class="docutils literal notranslate"><span class="pre">mynewfolder</span></code>:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">meta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">get_pet_metadata</span><span class="p">(</span><span class="s">&#39;Scanner&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;SiemensBiograph&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;TimeZero&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;ScanStart&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;TracerName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CB36&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;TracerRadionuclide&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;C11&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ModeOfAdministration&#39;</span><span class="p">,</span><span class="w">  </span><span class="s">&#39;infusion&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;SpecificRadioactivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">605.3220</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;InjectedMass&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5934</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;MolarActivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">107.66</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;InstitutionName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Rigshospitalet, NRU, DK&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;AcquisitionMode&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;list mode&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ImageDecayCorrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;true&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ImageDecayCorrectionTime&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ReconMethodName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;OP-OSEM&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ReconMethodParameterLabels&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;subsets&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;iterations&#39;</span><span class="p">},</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ReconMethodParameterUnits&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">},</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ReconMethodParameterValues&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">21</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ReconFilterType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;XYZGAUSSIAN&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ReconFilterSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;AttenuationCorrection&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CT-based attenuation correction&#39;</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">dcm2niix4pet</span><span class="p">(</span><span class="n">dcmfolder</span><span class="p">,</span><span class="w"> </span><span class="n">meta</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mynewfolder</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">get_pet_metadata</span></code> can be called in a much simpler way
+if you have a <code class="docutils literal notranslate"><span class="pre">\*parameters.txt</span></code> seating on disk next to this function.
+The call would then looks like:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% your SiemensBiographparameters.txt file is stored next to get_pet_metadata.m</span><span class="w"></span>
+<span class="n">meta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">get_pet_metadata</span><span class="p">(</span><span class="s">&#39;Scanner&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;SiemensBiograph&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;TimeZero&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;ScanStart&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;TracerName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CB36&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;TracerRadionuclide&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;C11&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;ModeOfAdministration&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;infusion&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;SpecificRadioactivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">605.3220</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;InjectedMass&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5934</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">                        </span><span class="s">&#39;MolarActivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">107.66</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">dcm2niix4pet</span><span class="p">(</span><span class="n">dcmfolder</span><span class="p">,</span><span class="w"> </span><span class="n">meta</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mynewfolder</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Now you have a dataset in PET BIDS format.
+You will probably have gotten some warnings relating to the <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecar file.
+Carefully look at them, since they will help you to catch inconsistencies
+and missing required fields that you need to add
+in order for the dataset to pass the BIDS validator as well (see below how that’s done).</p>
+<p>You can always edit the <code class="docutils literal notranslate"><span class="pre">.json</span></code> file, by opening it in a text editor and manually fixing errors.</p>
+<p>Alternatively, adjust the meta structure you created above to correct the errors.</p>
+</div>
+</div>
+<div class="section" id="manual-conversion-of-pet-data-to-pet-bids">
+<h3>2) Manual conversion of PET data to PET BIDS<a class="headerlink" href="#manual-conversion-of-pet-data-to-pet-bids" title="Permalink to this headline">¶</a></h3>
+<p>As stated above PET files come of the scanner in various formats.
+In the following manual data conversion is shown for an ECAT (.v)
+as well as a DICOM (.dcm) PET image dataset.</p>
+<div class="section" id="pet-image-data-in-ecat-format">
+<h4>PET image data in ECAT format<a class="headerlink" href="#pet-image-data-in-ecat-format" title="Permalink to this headline">¶</a></h4>
 <p>Here is the structure of our starting dataset:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>OldNotBidsPETDataSet/
 ├── MR_image
@@ -509,28 +812,27 @@ the <a class="reference external" href="https://support.dcmtk.org/docs/">dcmtk</
 <span class="m">3</span> directories, <span class="m">7</span> files
 </pre></div>
 </div>
-<p>By the end of this document our starting dataset will be fully bids compliant
+<p>By the end of this document our starting dataset will be fully BIDS compliant
 and similar to the dataset seen
 <a class="reference external" href="https://github.com/bids-standard/bids-examples/tree/master/pet001">here</a>.</p>
 </div>
 <div class="section" id="setting-the-layout">
-<h3>Setting the layout<a class="headerlink" href="#setting-the-layout" title="Permalink to this headline">¶</a></h3>
-<p>This starter kit provides several template/example files that can be a great
-starting place to help get set up for the conversion process. PET specific text
-data files can be viewed at
+<h4>Setting the layout<a class="headerlink" href="#setting-the-layout" title="Permalink to this headline">¶</a></h4>
+<p>This starter kit provides several template/example files
+that can be a great starting place to help get set up for the conversion process.
+PET specific text data files can be viewed at
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/pet">this location</a>.
-And easily collected via this
+and easily collected via this
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/archive/refs/heads/main.zip">link</a>
 or be cloned and extracted via git at the command line via:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:bids-standard/bids-starter-kit.git
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">templates/</span></code> folder in <code class="docutils literal notranslate"><span class="pre">bids-starter-kit/</span></code> contains a single subject and
-examples of every BIDS modality text and <code class="docutils literal notranslate"><span class="pre">.json</span></code> file for that subject.
-Additionally, there exists a <code class="docutils literal notranslate"><span class="pre">Short</span></code> and a <code class="docutils literal notranslate"><span class="pre">Full</span></code> example for each text/json
-file. The <code class="docutils literal notranslate"><span class="pre">Short</span></code> files contain only the required BIDS fields for each modality
-and the <code class="docutils literal notranslate"><span class="pre">Full</span></code> example files contain <em>every</em> field included within the BIDS
-standard.</p>
+<p>The <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/pet"><code class="docutils literal notranslate"><span class="pre">templates/</span></code></a> folder in <code class="docutils literal notranslate"><span class="pre">bids-starter-kit/</span></code> contains a single subject
+and examples of every BIDS modality text and <code class="docutils literal notranslate"><span class="pre">.json</span></code> file for that subject.
+Additionally, there exists a <code class="docutils literal notranslate"><span class="pre">Short</span></code> and a <code class="docutils literal notranslate"><span class="pre">Full</span></code> example for each text/json file.
+The <code class="docutils literal notranslate"><span class="pre">Short</span></code> files contain only the required BIDS fields for each modality
+and the <code class="docutils literal notranslate"><span class="pre">Full</span></code> example files contain <em>every</em> field included within the BIDS standard.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>templates/
 ├── README
 ├── dataset_description.json
@@ -582,16 +884,15 @@ standard.</p>
 machine:bids-starter-kit user$
 </pre></div>
 </div>
-<p>For the purposes of this exercise we will only be focusing on obtaining the
-minimum required fields, thus we collect and copy the following to our own BIDS
-folder.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the new bids folder</span>
+<p>For the purposes of this exercise we will only be focusing on obtaining the minimum required fields,
+thus we collect and copy the following to our own BIDS folder.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the new BIDS folder</span>
 mkdir -p /NewBidsDataSet/sub-01/ses-01/pet
 cp -r /path/to/bids-starter-kit/templates/sub-01/ses-01/pet/* /NewBidsDataSet/sub-01/pet/
 </pre></div>
 </div>
-<p>Oops, we forgot to include our dataset specific files. Let’s make it easy on
-ourselves and include the templates for those too.</p>
+<p>Oops, we forgot to include our dataset specific files.
+Let’s make it easy on ourselves and include the templates for those too.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp /path/to/bids-starter-kit/templates/* /NewBidsDataSet/
 </pre></div>
 </div>
@@ -639,20 +940,23 @@ NewBidsDataSet/
 machine:Projects user$
 </pre></div>
 </div>
-<p>That certainly looks less daunting, now let’s change the filenames of the
-templates so that they make more sense for our data set (aka remove ShortExample
-from each filename).</p>
-<p><strong>Note:</strong> if you have multiple PET image files you can distinguish between them
-by creating a session folder with a unique name and then applying the
-<code class="docutils literal notranslate"><span class="pre">ses-&lt;label&gt;</span></code> label to each file therein. If there’s a single pet scan you may
-omit the additional folder and corresponding label(s) from the filename. For
-more information on labeling see
-<a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#pet-recording-data">this link</a>.</p>
+<p>That certainly looks less daunting, now let’s change the filenames of the templates
+so that they make more sense for our data set (by removing <code class="docutils literal notranslate"><span class="pre">ShortExample</span></code> from each filename).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have multiple PET image files you can distinguish between them
+by creating a session folder with a unique name
+and then applying the <code class="docutils literal notranslate"><span class="pre">ses-&lt;label&gt;</span></code> label to each file therein.
+If there’s a single pet scan you may omit the additional folder
+and corresponding label(s) from the filename.
+For more information on labeling see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#pet-recording-data">this link</a>.</p>
+</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for those of you in bash land</span>
 machine:Projects user$ <span class="nb">cd</span> NewBidsDataSet/sub-01/ses-01/pet
 machine:pet user$ <span class="k">for</span> i <span class="k">in</span> *ShortExample*<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span> <span class="s2">&quot;`echo </span><span class="nv">$i</span><span class="s2"> | sed &#39;s/ShortExample//&#39;`&quot;</span><span class="p">;</span> <span class="k">done</span>
-<span class="c1"># Since we &quot;don&#39;t&quot; know if there are multiple PET image files we will omit the task label for our PET .json</span>
-<span class="c1"># file for now.</span>
+
+<span class="c1"># Since we &quot;don&#39;t&quot; know if there are multiple PET image files </span>
+<span class="c1"># we will omit the task label for our PET .json file for now.</span>
 machine:pet user$ mv sub-01_ses-01_task-_pet.json sub-01-ses-01_pet.json
 </pre></div>
 </div>
@@ -676,38 +980,39 @@ NewBidsDataSet/
 machine:Projects user$
 </pre></div>
 </div>
-<p>Ok great, but where do the imaging files go? And what format should they be in?
+<p>Ok great, but where do the imaging files go?
+And what format should they be in?
 And there’s at least 2 <code class="docutils literal notranslate"><span class="pre">.v</span></code> pet files shouldn’t there be multiple sessions?</p>
-<p>Well yes, yes, and yes. but before we add more sessions/directories we’re going
-to make sure we have images to place in them.</p>
+<p>Well yes, yes, and yes. but before we add more sessions/directories
+we’re going to make sure we have images to place in them.</p>
 </div>
 <div class="section" id="collecting-and-installing-tpcclib">
-<h3>Collecting and installing TPCCLIB<a class="headerlink" href="#collecting-and-installing-tpcclib" title="Permalink to this headline">¶</a></h3>
-<p>Since our raw imaging files are in ECAT format, we’ll be using the ecat2nii tool
-it the TPCCLIIB as it’s very handy at converting PET ECAT images into the more
-bids friendly nifti format. If you’re imaging files are in <code class="docutils literal notranslate"><span class="pre">.IMG</span></code> you can use
-**&lt;\insert converter&gt;** or if they’re in dicom dcm2niix is an excellent tool
-to transform <code class="docutils literal notranslate"><span class="pre">.dcm</span></code> files into <code class="docutils literal notranslate"><span class="pre">.nii</span></code></p>
-<p>Before we proceed we will need to collect and install the ecat2nii tool from the
-TPCCLIIB (if you’re on a non-posix based OS, I suggest you use WSL (windows
-subsystem for linux), a container, or a VM if you want to continue following
-along.</p>
+<h4>Collecting and installing TPCCLIB<a class="headerlink" href="#collecting-and-installing-tpcclib" title="Permalink to this headline">¶</a></h4>
+<p>Since our raw imaging files are in ECAT format,
+we’ll be using the <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code> tool it the Turku PET Centre C library (<code class="docutils literal notranslate"><span class="pre">TPCCLIIB</span></code>)
+as it’s very handy at converting PET ECAT images into the more BIDS friendly nifti format.
+If you’re imaging files are in <code class="docutils literal notranslate"><span class="pre">.IMG</span></code> you can use **&lt;\insert converter&gt;**
+or if they’re in DICOM <code class="docutils literal notranslate"><span class="pre">dcm2niix</span></code> is an excellent tool to transform <code class="docutils literal notranslate"><span class="pre">.dcm</span></code> files into <code class="docutils literal notranslate"><span class="pre">.nii</span></code>.</p>
+<p>Before we proceed we will need to collect and install the <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code> tool from the <code class="docutils literal notranslate"><span class="pre">TPCCLIIB</span></code> a container,
+or a VM if you want to continue following along.</p>
+<p>If you’re on a non-posix based OS, we suggest you use WSL (windows subsystem for linux).</p>
 <ol class="simple">
 <li><p>Visit <a class="reference external" href="https://gitlab.utu.fi/vesoik/tpcclib">https://gitlab.utu.fi/vesoik/tpcclib</a></p></li>
 <li><p>Download tpcclib via your download link of choice, ours is
 <a class="reference external" href="https://gitlab.utu.fi/vesoik/tpcclib/-/archive/master/tpcclib-master.zip">here</a></p></li>
-<li><p>Once downloaded extract and place ecat2nii in an appropriate place</p></li>
+<li><p>Once downloaded extract and place <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code> in an appropriate place</p></li>
 </ol>
 <p>If you’re using bash/posix step 3 will resemble something like the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Downloads user$ unzip tpcclib-master.zip
-machine:Dowloads user$ mv tpcclib-master /some/directory/you/are/fond/of/ <span class="c1"># could be /usr/bin if you so choose</span>
+machine:Downloads user$ mv tpcclib-master /some/directory/you/are/fond/of/ <span class="c1"># could be /usr/bin if you so choose</span>
 </pre></div>
 </div>
-<p>Now you can choose to add <code class="docutils literal notranslate"><span class="pre">tpcclib</span></code> to your path or not, in bash land we do the
-following:</p>
+<p>Now you can choose to add <code class="docutils literal notranslate"><span class="pre">tpcclib</span></code> to your path or not, in bash land we do the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Downloads user$ <span class="nb">echo</span> <span class="s2">&quot;export PATH=</span><span class="nv">$PATH</span><span class="s2">:/some/directory/you/are/fond/of/tpcclib-master&quot;</span> &gt;&gt; ~/.bashrc
+
 <span class="c1"># reload bash shell and verify that library is available</span>
 machine:Downloads user$ <span class="nb">source</span> ~/.bashrc
+
 machine:Downloads user$ ecat2nii
   ecat2nii - tpcclib <span class="m">0</span>.7.6 <span class="o">(</span>c<span class="o">)</span> <span class="m">2020</span> by Turku PET Centre
 
@@ -754,19 +1059,20 @@ machine:Downloads user$ ecat2nii
   https://gitlab.utu.fi/vesoik/tpcclib.git
 </pre></div>
 </div>
-<p>Congrats, you’ve installed ecat2nii, you’re one step closer to bidsifying your
-dataset</p>
-<p>Now, let’s convert one of our PET ecat images and move it to its final
-destination with ecat2nii that we just installed.</p>
+<p>Congrats, you’ve installed <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code>, you’re one step closer to bidsifying your dataset</p>
+<p>Now, let’s convert one of our PET ECAT images
+and move it to its final destination with <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code> that we just installed.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># first create nifti&#39;s from the ecat images</span>
 machine:OldNotBidsPETDataSet user$ ecat2nii retest_scan_sub01/sub01_8_anon.v
 retest_scan_sub01/sub01_8_anon.v :
   processing retest_scan_sub01/sub01_8_anon.v
   <span class="m">45</span> frame<span class="o">(</span>s<span class="o">)</span> processed.
+
 machine:OldNotBidsPETDataSet user$ ecat2nii test_scan_sub01/sub01_7_anon.v
 test_scan_sub01/sub01_7_anon.v :
   processing test_scan_sub01/sub01_7_anon.v
   <span class="m">45</span> frame<span class="o">(</span>s<span class="o">)</span> processed.
+
 <span class="c1"># great success! let&#39;s see what we got</span>
 machine:OldNotBidsPETDataSet user$ tree
 .
@@ -784,8 +1090,10 @@ machine:OldNotBidsPETDataSet user$ tree
     └── sub01_7_anon.v
 
 <span class="m">3</span> directories, <span class="m">9</span> files
+
 <span class="c1"># not where we want those nifti&#39;s so let&#39;s move them</span>
 machine:OldNotBidsPETDataSet user$ mv *.nii ../NewBidsDataSet/sub-01/
+
 machine:NewBidsDataSet user$ tree
 .
 ├── README
@@ -806,18 +1114,18 @@ machine:NewBidsDataSet user$ tree
 <span class="m">3</span> directories, <span class="m">11</span> files
 </pre></div>
 </div>
-<p>Before we get too carried away, lets use populate our <code class="docutils literal notranslate"><span class="pre">*_pet.json</span></code> files with
-the relevant information from our ecat and dataset.</p>
-<p>This writer used a python tool specifically created to parse Ecat’s for header
-and subheader info <a class="reference external" href="https://github.com/bendhouseart/ecatdump">ecatdump</a>, all it
-does is use Python libraries Nibabel and Argparse to collect and spit out the
-header information from an Ecat file. If you prefer to use Matlab or create your
-own tool/reader I would direct you to the converter
-<a class="reference external" href="https://github.com/openneuropet/BIDS-converter">here</a> as an excellent resource.</p>
+<p>Before we get too carried away, lets use populate our <code class="docutils literal notranslate"><span class="pre">*_pet.json</span></code> files
+with the relevant information from our ECAT and dataset.</p>
+<p>This writer used a python tool specifically created to parse ECAT’s
+for header and subheader info <a class="reference external" href="https://github.com/bendhouseart/ecatdump">ecatdump</a>.
+All it does is use Python libraries Nibabel and Argparse
+to collect and spit out the header information from an ECAT file.</p>
 <p>You can use and install it via pip and use it on your command line like below:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install ecatdump
+
 <span class="c1"># use the --json argument to extract all metadata contained in the ecat including subheaders</span>
 ecatdump  anon_sub01_8.v --json &gt; sub01_8_anon.headerdata
+
 <span class="c1"># using it without the --json argument will produce this output</span>
 ecat dump anon_sub01_8.v
 magic_number: MATRIX72v
@@ -960,9 +1268,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 <span class="go">fill                      : b&#39;&#39;</span>
 </pre></div>
 </div>
-<p>Using your wits, the available tools, and data you should be able to produce a
-sidecar file like the following for your nifti image. Repeat this process for
-each image file/nifti you’re including while reusing the filename for each image
+<p>Using your wits, the available tools, and data you should be able
+to produce a sidecar file like the following for your nifti image.
+Repeat this process for each image file/nifti you’re including
+while reusing the filename for each image
 and while substituting the extention to <code class="docutils literal notranslate"><span class="pre">.json</span></code> instead of <code class="docutils literal notranslate"><span class="pre">.nii</span></code>.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;Manufacturer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Siemens&quot;</span><span class="p">,</span><span class="w"></span>
@@ -1042,14 +1351,17 @@ and while substituting the extention to <code class="docutils literal notranslat
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Alright, now we’re getting somewhere, let’s rename these nifti’s so that it’s
-easier to distinguish between them and so that they’re both bids compliant.</p>
+<p>Alright, now we’re getting somewhere, let’s rename these niftis
+so that it’s easier to distinguish between them
+and so that they’re both BIDS compliant.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># first lets divide the scans into their own sessions</span>
 machine:NewBidsDataSet user$ mv sub-01/ses-01/ sub-01/ses-testscan/
+
 <span class="c1"># and make a second session folder for the rescan</span>
 machine:NewBidsDataSet user$ cp -r sub-01/ses-testscan/ sub-01/ses-retestscan/
 machine:NewBidsDataSet user$ mv sub-01/sub01_7_anon.nii sub-01/ses-testscan/pet/sub-01_ses-testscan_pet.nii
 machine:NewBidsDataSet user$ mv sub-01/sub01_8_anon.nii sub-01/ses-retestscan/pet/sub-01_ses-retestscan_pet.nii
+
 <span class="c1"># some additional bash later and ......</span>
 machine:NewBidsDataSet user$ tree
 .
@@ -1104,13 +1416,13 @@ machine:NewBidsDataSet user$ tree
             └── sub-01_ses-testscan_run-testscan_pet.nii
 </pre></div>
 </div>
-<p>That looks better, now that we’ve got our nifti’s sorted let’s do something
-about filling out our <code class="docutils literal notranslate"><span class="pre">*_blood.tsv</span></code> files and our <code class="docutils literal notranslate"><span class="pre">*_blood.json</span></code> files.</p>
+<p>That looks better, now that we’ve got our nifti’s sorted
+let’s do something about filling out our <code class="docutils literal notranslate"><span class="pre">*_blood.tsv</span></code> files and our <code class="docutils literal notranslate"><span class="pre">*_blood.json</span></code> files.</p>
 <!-- TODO grab that image and add to the repo -->
 <p>Here’s are the contents of <code class="docutils literal notranslate"><span class="pre">sub01_7_PLASMA.txt</span></code>:
 <img alt="sub01_7_PLASMA.txt screenshot of excell" src="https://i.imgur.com/xBgDZcI.png" /></p>
-<p>Since our plasma data is available we need to indicate as such in our
-<code class="docutils literal notranslate"><span class="pre">*_blood.json</span></code> files so we do so now:</p>
+<p>Since our plasma data is available we need to indicate as such
+in our <code class="docutils literal notranslate"><span class="pre">*_blood.json</span></code> files so we do so now:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;PlasmaAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;MetaboliteAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span><span class="w"></span>
@@ -1133,19 +1445,22 @@ about filling out our <code class="docutils literal notranslate"><span class="pr
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Additionally, we can open our <code class="docutils literal notranslate"><span class="pre">*_blood.tsv</span></code> and add the plasma series of data to
-it from our base text file:</p>
+<p>Additionally, we can open our <code class="docutils literal notranslate"><span class="pre">*_blood.tsv</span></code>
+and add the plasma series of data to it from our base text file:</p>
 <!-- TODO grab that image and add to the repo -->
 <p><img alt="screenshot of unconverted sub-01_ses-testscan_recording-Manual_blood.tsv" src="https://i.imgur.com/VdFqh6H.png" /></p>
-<p>Whoops, these numbers aren’t in SI units, so we quickly convert time from
-minutes to seconds and Microcurie to Becquerel to conform to the spec. Note: if
-you’re wondering what method was used to determine what units these unlabeled
-columns were in I can only tell you that prior knowledge, access to the
-associated publishing, or experience/domain knowledge coupled with a bit of
-guesswork are required to make that determination. One of the aims of adding PET
-to BIDS is to help to avoid confusion at this level of the process and instead
-allow researchers to reserve that confusion for use at some other point during
-the research process.</p>
+<p>Whoops, these numbers aren’t in SI units, so we quickly convert time
+from minutes to seconds and Microcurie to Becquerel to conform to the spec.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re wondering what method was used to determine what units these unlabeled columns were in
+we can only tell you that prior knowledge, access to the associated publishing,
+or experience/domain knowledge coupled with a bit of guesswork
+are required to make that determination.
+One of the aims of adding PET to BIDS is to help to avoid confusion at this level of the process
+and instead allow researchers to reserve that confusion
+for use at some other point during the research process.</p>
+</div>
 <p>After a bit of conversion and the inclusion of the metabolite parent fraction
 (which if present is
 <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#blood-recording-data">recommended</a>
@@ -1153,9 +1468,9 @@ to be included):</p>
 <!-- TODO grab that image and add to the repo -->
 <p><img alt="screenshot of converted and minimally complete manual_blood.tsv" src="https://i.imgur.com/nWXcFsw.png" /></p>
 <p>Now just repeat this process for each required field in the <code class="docutils literal notranslate"><span class="pre">*_blood.json</span></code> file
-and/or for each recommended field that you wish to include from your non-bids
-dataset into this bidsified one. The final results of our efforts leads us to
-having this final <code class="docutils literal notranslate"><span class="pre">*blood_.json</span></code>:</p>
+and/or for each recommended field
+that you wish to include from your non-BIDS dataset into this bidsified one.
+The final results of our efforts leads us to having this final <code class="docutils literal notranslate"><span class="pre">*blood_.json</span></code>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;PlasmaAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;PlasmaFreeFraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">15.062331</span><span class="p">,</span><span class="w"></span>
@@ -1182,13 +1497,13 @@ having this final <code class="docutils literal notranslate"><span class="pre">*
 </div>
 </div>
 <div class="section" id="last-pass">
-<h3>Last Pass<a class="headerlink" href="#last-pass" title="Permalink to this headline">¶</a></h3>
-<p>If you’re thinking that we failed to document or include our T1 image from the
-start you would be correct. There are many resources documenting that process
-see:</p>
-<p><em>TODO</em> add resources here</p>
-<p>Once you’ve handled converting your MR images into bids your directory should
-look like the following:</p>
+<h4>Last Pass<a class="headerlink" href="#last-pass" title="Permalink to this headline">¶</a></h4>
+<p>If you’re thinking that we failed to document or include our T1 image
+from the start you would be correct.</p>
+<p>There are many resources documenting that process
+<a class="reference external" href="https://bids-standard.github.io/bids-starter-kit/tutorials/mri.html">here</a>.</p>
+<p>Once you’ve handled converting your MR images into BIDS
+your directory should look like the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:NewBidsDataSet user$ tree
 .
 ├── README
@@ -1214,18 +1529,20 @@ look like the following:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="last-steps">
-<h3>Last Steps<a class="headerlink" href="#last-steps" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="validating-your-converted-pet-bids-data-set">
+<h2>Validating your converted PET BIDS data set<a class="headerlink" href="#validating-your-converted-pet-bids-data-set" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="installing-the-validator">
-<h4>Installing the validator<a class="headerlink" href="#installing-the-validator" title="Permalink to this headline">¶</a></h4>
-<p>The above structure is a valid bids dataset, however the bids-validator is a
-much more accurate and trustworthy method for making that determination. Follow
-the instructions
-<a class="reference external" href="https://github.com/bids-standard/bids-validator">here</a> to collect
-and install the validator.</p>
+<h3>Installing the validator<a class="headerlink" href="#installing-the-validator" title="Permalink to this headline">¶</a></h3>
+<p>The above structure is a valid BIDS dataset,
+however the bids-validator is a much more accurate and trustworthy method
+for making that determination.
+Follow the instructions <a class="reference external" href="https://github.com/bids-standard/bids-validator">here</a>
+to collect and install the validator.</p>
 </div>
 <div class="section" id="validating-your-new-dataset">
-<h4>Validating your new dataset<a class="headerlink" href="#validating-your-new-dataset" title="Permalink to this headline">¶</a></h4>
+<h3>Validating your new dataset<a class="headerlink" href="#validating-your-new-dataset" title="Permalink to this headline">¶</a></h3>
 <p>Using the validator installed above in the previous step point it at your data
 and check to see if your conversion was successful:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Projects user$ bids-validator NewBidsDataSet/
@@ -1249,21 +1566,46 @@ bids-validator@1.7.2
  If you have any questions, please post on https://neurostars.org/tags/bids.
 </pre></div>
 </div>
-<p>Good enough! But, in all seriousness the error messages and output from the
-bids-validator are <strong>invaluable</strong> during the conversion process. The error
-messages will guide you to the correct format; do not fear them. Running the
-validator during the conversion process will help to increase your familiarity
+<p>Good enough! But, in all seriousness the error messages and output
+from the bids-validator are <strong>invaluable</strong> during the conversion process.
+The error messages will guide you to the correct format; do not fear them.
+Running the validator during the conversion process will help to increase your familiarity
 with the specification and ensure that your data is properly formatted.</p>
 </div>
 </div>
+<div class="section" id="tools-and-resources-for-pet-conversion">
+<h2>Tools and resources for PET conversion<a class="headerlink" href="#tools-and-resources-for-pet-conversion" title="Permalink to this headline">¶</a></h2>
+<p>Some useful tools and resources that have been used in this document are as
+follows:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/bids-standard/bids-validator">BIDS Validator</a>, which
+fully supports PET</p></li>
+<li><p><a class="reference external" href="https://github.com/openneuropet/PET2BIDS">PET2BIDS</a> is a MATLAB and Python utility
+for converting your data to PET BIDS format</p></li>
+<li><p><a class="reference external" href="https://gitlab.utu.fi/vesoik/tpcclib">TPCCLIIB</a> is a command line library
+containing (among many others) PET tools such as <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code>
+that will be used below to convert the imaging data from a PET dataset into nifti format.
+The Turku PET Centre site can be found <a class="reference external" href="https://turkupetcentre.fi/">here</a>
+for additional information on anything PET.</p></li>
+<li><p>a <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS PET Template</a>
+from this starter kit to initially populate
+and translate text/tabulature/csv blood data
+into BIDS PET compliant <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> and <code class="docutils literal notranslate"><span class="pre">.json</span></code> files.</p></li>
+<li><p><a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2niix</a> can be used
+if your raw pet data happens to be in a DICOM format.
+Additionally this opens up the use of tools
+such as <a class="reference external" href="https://support.dcmtk.org/docs/dcmdump.html">dcmdump</a>
+from the <a class="reference external" href="https://support.dcmtk.org/docs/">dcmtk</a> to help in your conversion.</p></li>
+</ul>
 </div>
 <div class="section" id="final-thoughts">
 <h2>Final thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this headline">¶</a></h2>
-<p>If this seems like a daunting and tedious process to you, then you are correct
-in your observation. PET is new to the bids standard, but at this very moment
-there are people working on stream-lining data collection and conversion to help
-move PET into this standard. Heck, if you’re reading this you’ve just become one
-of those people.</p>
+<p>As of now, PET is still quite new to the BIDS standard,
+but at this very moment there are people working on stream-lining data collection
+and conversion to help move PET into this standard.</p>
+<p>If you’re reading this you’ve just become one of those people.
+Feel free to reach out to the <a class="reference external" href="https://openneuropet.github.io/">OpenNeuroPET project</a></p>
+<!-- links -->
 </div>
 </div>
 
