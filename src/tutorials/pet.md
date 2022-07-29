@@ -23,20 +23,21 @@ distributing two examples
 You can download them for testing purposes either manually or in the terminal by
 typing
 
-```bash
+```{code-block} bash
 gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing --fuzzy
 ```
 
 And then unzipping the downloaded file:
 
-```bash
+```{code-block} bash
 unzip OpenNeuroPET-Demo_raw.zip
 ```
 
 You can now look at the file tree:
 
-```
-tree OpenNeuroPET-Demo_raw
+```{code-block}
+tree OpenNeuroPET-Demo_raw.
+
 OpenNeuroPET-Demo_raw
 │   .bidsignore
 │   .DS_Store
@@ -118,15 +119,15 @@ Download
 for Mac and Linux users you can add it to your path, for instance it would could
 downloaded and unzipped into `/bin`.
 
-```bash
+```{code-block} bash
 export PATH="/home/$USER/bin:$PATH"
 ```
 
-#### For Python:
+#### For Python
 
 Open your terminal, either regular or anaconda terminal and type.
 
-```bash
+```{code-block} bash
 pip install pypet2bids
 ```
 
@@ -144,20 +145,22 @@ You just need to point dcm2niix4pet to:
 -   the folder where you want to output the PET BIDS formatted dataset,
     `mynewfolder`.
 
-```bash
+```{code-block} bash
 dcm2niix4pet dcmfolder -d mynewfolder
 ```
 
-Note, `dcm2niix4pet` will do its best to extract as much information about
+```{note}
+`dcm2niix4pet` will do its best to extract as much information about
 radiological and blood data from the DICOM files in the `dcmfolder`. However,
 dcm2niix4pet can't find information if it isn't there, hence it will often be up
 to you the user to provide some missing information at the time of conversion.
+```
 
 Additional information can be provided via the command line with the `--kwargs`
 argument in the form of key=pair values. For an idea of what this looks like see
 below:
 
-```bash
+```{code-block} bash
 dcm2niix4pet /OpenNeuroPET-Demo_raw/source/SiemensBiographPETMR-NRU \
             -d mynewfolder \
             --kwargs    TimeZero=ScanStart \
@@ -188,32 +191,32 @@ below how that's done). You can always edit the `.json` file, by opening it in a
 text editor and manually fixing errors. Alternatively, adjust the meta structure
 you created above to correct the errors.
 
-#### For MatLab:
+#### For MATLAB
 
 Download/Clone the [PET2BIDS](https://github.com/openneuropet/PET2BIDS) GitHub
 repository. Windows users must, in addition, indicate the full path of where is
-the dcm2niix.exe in
+the `dcm2niix.exe` in
 [dcm2niix4pet.m](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/dcm2niix4pet.m#L42).
 
 Then, just follow the
-[MatLab README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md).
+[MATLAB README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md).
 In the following it is just described how to convert DICOM files. It's very
 similar and described in the
-[MatLab README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md)
+[MATLAB README](https://github.com/openneuropet/PET2BIDS/blob/main/matlab/Readme.md)
 how to handle ECAT files.
 
-The entire PET2BIDS repository or only the matlab subfolder (your choice) should
-be in your matlab path.
+The entire PET2BIDS repository or only the MATLAB subfolder (your choice) should
+be in your MATLAB path.
 
 Defaults parameters can be set in (scannername).txt files to generate metadata
-easily (meaning to avoid passing all arguments in although this is also possible).
-You can find templates of such parameter file under
+easily (meaning to avoid passing all arguments in although this is also
+possible). You can find templates of such parameter file under
 [`/template_txt`](https://github.com/openneuropet/PET2BIDS/tree/main/matlab/template_txt):
 
 -   SiemensHRRTparameters.txt,
 -   SiemensBiographparameters.txt,
 -   GEAdvanceparameters.txt,
--   PhilipsVereosparameters.txt).
+-   PhilipsVereosparameters.txt.
 
 Now in order to convert a PET dataset on disk to PET BIDS, one creates a
 structure containing all the meta information (here passing on all arguments)
@@ -221,31 +224,49 @@ and then point the function to the folder where your data resides `dcmfolder`
 and the folder where you want to output the PET BIDS formatted dataset
 `mynewfolder`:
 
-````matlab
-meta = get_pet_metadata('Scanner','SiemensBiograph','TimeZero','ScanStart',...
-    'TracerName','CB36','TracerRadionuclide','C11', 'ModeOfAdministration',...
-    'infusion','SpecificRadioactivity', 605.3220,'InjectedMass', 1.5934,...
-    'MolarActivity', 107.66, 'InstitutionName','Rigshospitalet, NRU, DK',...
-    'AcquisitionMode','list mode','ImageDecayCorrected','true',...
-    'ImageDecayCorrectionTime' ,0,'ReconMethodName','OP-OSEM',...
-    'ReconMethodParameterLabels',{'subsets','iterations'},...
-    'ReconMethodParameterUnits',{'none','none'}, ...
-    'ReconMethodParameterValues',[21 3], 'ReconFilterType','XYZGAUSSIAN',...
-    'ReconFilterSize',2, 'AttenuationCorrection','CT-based attenuation correction');
+```{code-block} matlab
+meta = get_pet_metadata('Scanner', 'SiemensBiograph', ...
+                        'TimeZero', 'ScanStart', ...
+                        'TracerName', 'CB36', ...
+                        'TracerRadionuclide', 'C11', ...
+                        'ModeOfAdministration',  'infusion', ...
+                        'SpecificRadioactivity', 605.3220, ...
+                        'InjectedMass', 1.5934, ...
+                        'MolarActivity', 107.66, ...
+                        'InstitutionName', 'Rigshospitalet, NRU, DK', ...
+                        'AcquisitionMode', 'list mode', ...
+                        'ImageDecayCorrected', 'true', ...
+                        'ImageDecayCorrectionTime', 0, ...
+                        'ReconMethodName', 'OP-OSEM', ...
+                        'ReconMethodParameterLabels', {'subsets', 'iterations'}, ...
+                        'ReconMethodParameterUnits', {'none', 'none'}, ...
+                        'ReconMethodParameterValues', [21 3], ...
+                        'ReconFilterType', 'XYZGAUSSIAN', ...
+                        'ReconFilterSize', 2, ...
+                        'AttenuationCorrection', 'CT-based attenuation correction');
 
-dcm2niix4pet(dcmfolder,meta,'o',mynewfolder);
-
-```{note}
-`get_pet_metadata` can be called in a much simpler way if you have a `\*parameters.txt` seating on disk next to this function. The call would then looks like:
+dcm2niix4pet(dcmfolder, meta, 'o', mynewfolder);
 ```
 
-```matlab
-% your SiemensBiographparameters.txt file is stored next to get_pet_metadata.m
-meta = get_pet_metadata('Scanner','SiemensBiograph','TimeZero','ScanStart','TracerName','CB36',...
-    'TracerRadionuclide','C11', ModeOfAdministration','infusion','SpecificRadioactivity', ...
-    605.3220, 'InjectedMass', 1.5934,'MolarActivity', 107.66);
-dcm2niix4pet(dcmfolder,meta,'o',mynewfolder);
-````
+```{eval-rst}
+.. note::
+
+    ``get_pet_metadata`` can be called in a much simpler way if you have a ``\*parameters.txt`` seating on disk next to this function. The call would then looks like:
+
+    .. code-block:: matlab
+
+        % your SiemensBiographparameters.txt file is stored next to get_pet_metadata.m
+        meta = get_pet_metadata('Scanner', 'SiemensBiograph', ...
+                                'TimeZero', 'ScanStart', ...
+                                'TracerName', 'CB36', ...
+                                'TracerRadionuclide', 'C11', ...
+                                'ModeOfAdministration', 'infusion', ...
+                                'SpecificRadioactivity', 605.3220, ...
+                                'InjectedMass', 1.5934, ...
+                                'MolarActivity', 107.66);
+
+        dcm2niix4pet(dcmfolder, meta, 'o', mynewfolder);
+```
 
 Now you have a dataset in PET BIDS format. You will probably have gotten some
 warnings relating to the `.json` sidecar file. Carefully look at them, since
@@ -257,7 +278,7 @@ you created above to correct the errors.
 
 ### 2) Manual conversion of PET data to PET BIDS
 
-As stated above PET files come of the scanner in vearious formats. In the
+As stated above PET files come of the scanner in various formats. In the
 following manual data conversion is shown for an ECAT (.v) as well as a DICOM
 (.dcm) PET image dataset.
 
@@ -265,7 +286,7 @@ following manual data conversion is shown for an ECAT (.v) as well as a DICOM
 
 Here is the structure of our starting dataset:
 
-```bash
+```{code-block} bash
 OldNotBidsPETDataSet/
 ├── MR_image
 │   ├── 24310.cropped.hdr
@@ -295,18 +316,18 @@ And easily collected via this
 [link](https://github.com/bids-standard/bids-starter-kit/archive/refs/heads/main.zip)
 or be cloned and extracted via git at the command line via:
 
-```bash
+```{code-block} bash
 git clone git@github.com:bids-standard/bids-starter-kit.git
 ```
 
-The `templates/` folder in `bids-starter-kit/` contains a single subject and
+The [`templates/`](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/pet) folder in `bids-starter-kit/` contains a single subject and
 examples of every BIDS modality text and `.json` file for that subject.
 Additionally, there exists a `Short` and a `Full` example for each text/json
 file. The `Short` files contain only the required BIDS fields for each modality
 and the `Full` example files contain _every_ field included within the BIDS
 standard.
 
-```bash
+```{code-block} bash
 templates/
 ├── README
 ├── dataset_description.json
@@ -362,7 +383,7 @@ For the purposes of this exercise we will only be focusing on obtaining the
 minimum required fields, thus we collect and copy the following to our own BIDS
 folder.
 
-```bash
+```{code-block} bash
 # create the new bids folder
 mkdir -p /NewBidsDataSet/sub-01/ses-01/pet
 cp -r /path/to/bids-starter-kit/templates/sub-01/ses-01/pet/* /NewBidsDataSet/sub-01/pet/
@@ -371,13 +392,13 @@ cp -r /path/to/bids-starter-kit/templates/sub-01/ses-01/pet/* /NewBidsDataSet/su
 Oops, we forgot to include our dataset specific files. Let's make it easy on
 ourselves and include the templates for those too.
 
-```bash
+```{code-block} bash
 cp /path/to/bids-starter-kit/templates/* /NewBidsDataSet/
 ```
 
 Our skeleton of a data set should now look like this:
 
-```bash
+```{code-block} bash
 machine: Projects user$ tree NewBidsDataSet/
 NewBidsDataSet/
 ├── README
@@ -402,7 +423,7 @@ machine:Projects user$
 
 Now let's do the bare minimum and focus only on the short files:
 
-```bash
+```{code-block} bash
 machine:Projects user$ rm -rf NewBidsDataSet/sub-01/ses-01/pet/*Full*
 machine:Projects user$ tree NewBidsDataSet
 NewBidsDataSet/
@@ -424,17 +445,19 @@ machine:Projects user$
 ```
 
 That certainly looks less daunting, now let's change the filenames of the
-templates so that they make more sense for our data set (aka remove ShortExample
+templates so that they make more sense for our data set (by removing ShortExample
 from each filename).
 
-```{Note}
-If you have multiple PET image files you can distinguish between them by creating a session folder with a unique name
+```{note}
+If you have multiple PET image files you can distinguish between them
+by creating a session folder with a unique name
 and then applying the `ses-<label>` label to each file therein.
-If there's a single pet scan you may omit the additional folder and corresponding label(s) from the filename.
+If there's a single pet scan you may omit the additional folder
+and corresponding label(s) from the filename.
 For more information on labeling see [this link](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#pet-recording-data).
 ```
 
-```bash
+```{code-block} bash
 # for those of you in bash land
 machine:Projects user$ cd NewBidsDataSet/sub-01/ses-01/pet
 machine:pet user$ for i in *ShortExample*; do mv "$i" "`echo $i | sed 's/ShortExample//'`"; done
@@ -445,7 +468,7 @@ machine:pet user$ mv sub-01_ses-01_task-_pet.json sub-01-ses-01_pet.json
 
 After you've renamed your files your directory should look something like:
 
-```bash
+```{code-block} bash
 machine:Projects user$ tree NewBidsDataSet/
 NewBidsDataSet/
 ├── README
@@ -491,7 +514,7 @@ along.
 
 If you're using bash/posix step 3 will resemble something like the following:
 
-```bash
+```{code-block} bash
 machine:Downloads user$ unzip tpcclib-master.zip
 machine:Dowloads user$ mv tpcclib-master /some/directory/you/are/fond/of/ # could be /usr/bin if you so choose
 ```
@@ -499,7 +522,7 @@ machine:Dowloads user$ mv tpcclib-master /some/directory/you/are/fond/of/ # coul
 Now you can choose to add `tpcclib` to your path or not, in bash land we do the
 following:
 
-```bash
+```{code-block} bash
 machine:Downloads user$ echo "export PATH=$PATH:/some/directory/you/are/fond/of/tpcclib-master" >> ~/.bashrc
 # reload bash shell and verify that library is available
 machine:Downloads user$ source ~/.bashrc
@@ -555,7 +578,7 @@ dataset
 Now, let's convert one of our PET ECAT images and move it to its final
 destination with ecat2nii that we just installed.
 
-```bash
+```{code-block} bash
 # first create nifti's from the ecat images
 machine:OldNotBidsPETDataSet user$ ecat2nii retest_scan_sub01/sub01_8_anon.v
 retest_scan_sub01/sub01_8_anon.v :
@@ -614,7 +637,7 @@ header information from an ECAT file.
 
 You can use and install it via pip and use it on your command line like below:
 
-```bash
+```{code-block} bash
 pip install ecatdump
 # use the --json argument to extract all metadata contained in the ecat including subheaders
 ecatdump  anon_sub01_8.v --json > sub01_8_anon.headerdata
@@ -691,7 +714,7 @@ Python 3.7.3 (default, Mar 27 2019, 09:23:15)
 Type "help", "copyright", "credits" or "license" for more information.
 -->
 
-```python
+```{code-block} python
 >>> import nibabel
 >>> ecat_file = nibabel.ecat.load('anon_sub01_8_43e5_1b831_de2_anon.v')
 >>> print(ecat_file.get_header())
@@ -768,7 +791,7 @@ sidecar file like the following for your nifti image. Repeat this process for
 each image file/nifti you're including while reusing the filename for each image
 and while substituting the extention to `.json` instead of `.nii`.
 
-```json
+```{code-block} json
 {
     "Manufacturer": "Siemens",
     "ManufacturersModelName": "HR+",
@@ -850,7 +873,7 @@ and while substituting the extention to `.json` instead of `.nii`.
 Alright, now we're getting somewhere, let's rename these niftis so that it's
 easier to distinguish between them and so that they're both bids compliant.
 
-```bash
+```{code-block} bash
 # first lets divide the scans into their own sessions
 machine:NewBidsDataSet user$ mv sub-01/ses-01/ sub-01/ses-testscan/
 # and make a second session folder for the rescan
@@ -889,7 +912,7 @@ That looks better, but we need to do something about our tabular/text data.
 Since we're only dealing with manual blood samples we can omit the autosampler
 files from our data structure.
 
-```bash
+```{code-block} bash
 machine:NewBidsDataSet user$ rm -rf sub-01/ses-retestscan/pet/*Auto*
 machine:NewBidsDataSet user$ rm -rf sub-01/ses-testscan/pet/*Auto*
 machine:NewBidsDataSet user$ tree
@@ -925,7 +948,7 @@ Here's are the contents of `sub01_7_PLASMA.txt`:
 Since our plasma data is available we need to indicate as such in our
 `*_blood.json` files so we do so now:
 
-```json
+```{code-block} json
 {
     "PlasmaAvail": "true",
     "MetaboliteAvail": "true",
@@ -956,14 +979,17 @@ it from our base text file:
 ![screenshot of unconverted sub-01_ses-testscan_recording-Manual_blood.tsv](https://i.imgur.com/VdFqh6H.png)
 
 Whoops, these numbers aren't in SI units, so we quickly convert time from
-minutes to seconds and Microcurie to Becquerel to conform to the spec. Note: if
-you're wondering what method was used to determine what units these unlabeled
+minutes to seconds and Microcurie to Becquerel to conform to the spec.
+
+```{note}
+if you're wondering what method was used to determine what units these unlabeled
 columns were in I can only tell you that prior knowledge, access to the
 associated publishing, or experience/domain knowledge coupled with a bit of
 guesswork are required to make that determination. One of the aims of adding PET
 to BIDS is to help to avoid confusion at this level of the process and instead
 allow researchers to reserve that confusion for use at some other point during
 the research process.
+```
 
 After a bit of conversion and the inclusion of the metabolite parent fraction
 (which if present is
@@ -979,7 +1005,7 @@ and/or for each recommended field that you wish to include from your non-bids
 dataset into this bidsified one. The final results of our efforts leads us to
 having this final `*blood_.json`:
 
-```json
+```{code-block} json
 {
     "PlasmaAvail": true,
     "PlasmaFreeFraction": 15.062331,
@@ -1013,7 +1039,7 @@ start you would be correct. There are many resources documenting that process
 Once you've handled converting your MR images into bids your directory should
 look like the following:
 
-```bash
+```{code-block} bash
 
 machine:NewBidsDataSet user$ tree
 .
@@ -1053,7 +1079,7 @@ collect and install the validator.
 Using the validator installed above in the previous step point it at your data
 and check to see if your conversion was successful:
 
-```bash
+```{code-block} bash
 machine:Projects user$ bids-validator NewBidsDataSet/
 bids-validator@1.7.2
 
@@ -1088,7 +1114,7 @@ follows:
 
 -   [BIDS Validator](https://github.com/bids-standard/bids-validator), which
     fully supports PET
--   [PET2BIDS](https://github.com/openneuropet/PET2BIDS) is a Matlab and Python
+-   [PET2BIDS](https://github.com/openneuropet/PET2BIDS) is a MATLAB and Python
     utility for converting your data to PET BIDS format
 
 -   [TPCCLIIB](https://gitlab.utu.fi/vesoik/tpcclib) is a command line library
