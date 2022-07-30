@@ -69,24 +69,30 @@ json.PlasmaFreeFraction = '';
 json.PlasmaFreeFractionMethod = '';
 json.MetaboliteMethod = '';
 json.MetaboliteRecoveryCorrectionApplied = '';
-json.time = struct('Description', ...
-                   'Time in relation to time zero defined by the _pet.json', ...
-                   'Units', 's');
-json.plasma_radioactivity = struct('Description', ...
-                                   'Radioactivity in plasma samples. Measured using COBRA counter.', ...
-                                   'Units', 'kBq/ml');
-json.metabolite_parent_fraction = struct('Description', ...
-                                         'Parent fraction of the radiotracer.', ...
-                                         'Units', 'unitless');
-json.metabolite_polar_fraction = struct('Description', ...
-                                        'Polar metabolite fraction of the radiotracer.', ...
-                                        'Units', 'unitless');
-json.hplc_recovery_fractions = struct('Description', ...
-                                      'The fraction of activity that get loaded onto the HPLC.', ...
-                                      'Units', 'unitless');
-json.whole_blood_radioactivity = struct('Description', ...
-                                        'Radioactivity in whole blood samples. Measured using COBRA counter.', ...
-                                        'Units', 'kBq/ml');
+
+% get the definition of several colums,
+% use the bids.Schema class from bids matlab
+schema = bids.Schema;
+
+columns = {'time'
+           'plasma_radioactivity'
+           'metabolite_parent_fraction'
+           'metabolite_polar_fraction'
+           'hplc_recovery_fractions'
+           'whole_blood_radioactivity'};
+
+for i = 1:numel(columns)
+    def = schema.get_definition(columns{i});
+    json.(columns{i}).Description = def.description;
+    if isfield(def, 'unit')
+        json.(columns{i}).Unit = def.unit;
+    end
+end
+
+json.plasma_radioactivity.unit = 'kBq/ml';
+json.whole_blood_radioactivity.unit = 'kBq/ml';
+json.metabolite_parent_fraction.unit = 'unitless';
+json.metabolite_polar_fraction.unit = 'unitless';
 
 %% Write JSON
 % Make sure the directory exists

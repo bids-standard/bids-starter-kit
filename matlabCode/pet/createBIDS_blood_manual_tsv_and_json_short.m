@@ -52,6 +52,13 @@ bids.util.tsvwrite(tsv_file_name, tsv);
 
 %% Write JSON
 
+% get the definition of each colum,
+% use the bids.Schema class from bids matlab
+% example:
+%
+% schema = bids.Schema;
+% def = schema.get_definition('metabolite_parent_fraction');
+
 json.PlasmaAvail = '';
 json.MetaboliteAvail = '';
 json.WholeBloodAvail = '';

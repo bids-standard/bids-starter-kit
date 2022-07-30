@@ -46,12 +46,17 @@ bids_file = bids.File(name_spec, 'use_schema', true);
 % Contrust the fullpath version of the filename
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
+%% Adding metadata
+% to get the definition of each metadata,
+% you can use the bids.Schema class from bids matlab
+
+% For example
+schema = bids.Schema;
+def = schema.get_definition('TaskName');
+fprintf(def.description);
+
 json.EchoTime1 = '';
 json.EchoTime2 = '';
-% Fieldmap data are linked to a specific scan(s)
-% it was acquired for by filling the IntendedFor field. The IntendedFor field
-% may contain one or more filenames with paths relative to the subject subfolder.
-% The pathneeds to use forward slashes instead of backward slashes.
 json.IntendedFor = {'sub-01/ses-01/func/...'
                     'sub-01/ses-01/func/...'};
 
@@ -91,20 +96,20 @@ name_spec.suffix = 'phase2';
 bids_file = bids.File(name_spec, 'use_schema', true);
 fmap2_json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
+%% Adding metadata
+% to get the definition of each metadata,
+% you can use the bids.Schema class from bids matlab
+
+% For example
+schema = bids.Schema;
+def = schema.get_definition('TaskName');
+fprintf(def.description);
+
 fmap1_json.EchoTime = '';
-% Fieldmap data are linked to a specific scan(s)
-% it was acquired for by filling the IntendedFor field. The IntendedFor field
-% may contain one or more filenames with paths relative to the subject subfolder.
-% The pathneeds to use forward slashes instead of backward slashes.
 fmap1_json.IntendedFor = {'sub-01/ses-01/func/...'
                           'sub-01/ses-01/func/...'};
 
 fmap2_json.EchoTime = '';
-
-% Fieldmap data are linked to a specific scan(s)
-% it was acquired for by filling the IntendedFor field. The IntendedFor field
-% may contain one or more filenames with paths relative to the subject subfolder.
-% The pathneeds to use forward slashes instead of backward slashes.
 fmap2_json.IntendedFor = {'sub-01/ses-01/func/...'
                           'sub-01/ses-01/func/...'};
 
@@ -142,13 +147,16 @@ bids_file = bids.File(name_spec, 'use_schema', true);
 % Contrust the fullpath version of the filename
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
-% The possible options are: Hz, rad/s, or Tesla.
-json.Units = '';
+%% Adding metadata
+% to get the definition of each metadata,
+% you can use the bids.Schema class from bids matlab
 
-% Fieldmap data are linked to a specific scan(s)
-% it was acquired for by filling the IntendedFor field. The IntendedFor field
-% may contain one or more filenames with paths relative to the subject subfolder.
-% The pathneeds to use forward slashes instead of backward slashes.
+% For example
+schema = bids.Schema;
+def = schema.get_definition('TaskName');
+fprintf(def.description);
+
+json.Units = '';
 json.IntendedFor = {'sub-01/ses-01/func/...'
                     'sub-01/ses-01/func/...'};
 
@@ -192,22 +200,17 @@ bids_file = bids.File(name_spec, 'use_schema', true);
 % Contrust the fullpath version of the filename
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
-% This technique combines two or more
-% Spin Echo EPI scans with different phase encoding directions. In such a case,
-% the phase encoding direction is specified in the corresponding JSON file as
-% one of: i, j, k, i-, j-, k-
+%% Adding metadata
+% to get the definition of each metadata,
+% you can use the bids.Schema class from bids matlab
+
+% For example
+schema = bids.Schema;
+def = schema.get_definition('TaskName');
+fprintf(def.description);
+
 json.PhaseEncodingDirection = '';
-
-% For these differentially phase encoded
-% sequences, one also needs to specify the Total Readout Time defined as
-% the time (in seconds) from the center of the first echo to the center
-% of the last echo
 json.TotalReadoutTime = '';
-
-% Fieldmap data are linked to a specific scan(s)
-% it was acquired for by filling the IntendedFor field. The IntendedFor field
-% may contain one or more filenames with paths relative to the subject subfolder.
-% The path needs to use forward slashes instead of backward slashes.
 json.IntendedFor = {'sub-01/ses-01/func/...'
                     'sub-01/ses-01/func/...'};
 

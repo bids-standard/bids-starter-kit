@@ -43,40 +43,26 @@ bids_file = bids.File(name_spec, 'use_schema', true);
 % Contrust the fullpath version of the filename
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
+%% Adding metadata
+% Assign the fields in the Matlab structure that can be saved as a json.
+% The following fields must be defined:
+
+% to get the definition of each metadata,
+% you can use the bids.Schema class from bids matlab
+% For example
+schema = bids.Schema;
+def = schema.get_definition('iEEGCoordinateSystem');
+fprintf(def.description);
+
 %% Required fields
-
-json.iEEGCoordinateSystem = ''; % Defines the coordinate system for the iEEG electrodes.
-% For example, "ACPC". See Appendix VIII: preferred names of Coordinate systems.
-% If "Other" (for example: individual subject MRI), provide definition of the coordinate system
-% in iEEGCoordinateSystemDescription.
-% If positions correspond to pixel indices in a 2D image (of either a volume-rendering,
-% surface-rendering, operative photo, or operative drawing), this must be "pixels".
-% See section 3.4.1: Electrode locations for more information on electrode locations.
-
-json.iEEGCoordinateUnits = ''; % Units of the _electrodes.tsv, MUST be "m", "mm", "cm" or "pixels".
+json.iEEGCoordinateSystem = '';
+json.iEEGCoordinateUnits = '';
 
 %% Recommended fields
-
-json.iEEGCoordinateProcessingDescripton = ''; % Freeform text description or link to document
-% describing the iEEG coordinate system system in detail (for example: "Coordinate system with the origin
-% at anterior commissure (AC), negative y-axis going through the posterior commissure (PC), z-axis
-% going to a mid-hemisperic point which lies superior to the AC-PC line, x-axis going to the right")
-
-json.IndendedFor = ''; % This can be an MRI/CT or a file containing the operative photo, x-ray
-% or drawing with path relative to the project folder. If only a surface reconstruction is available,
-% this should point to the surface reconstruction file. Note that this file should have the same coordinate
-% system specified in iEEGCoordinateSystem. (for example: "sub-<label>/ses-<label>/anat/sub-01_T1w.nii.gz")
-% for example
-% T1: "/sub-<label>/ses-<label>/anat/sub-01_T1w.nii.gz"
-% Surface: "/derivatives/surfaces/sub-<label>/ses-<label>/anat/sub-01_T1w_pial.R.surf.gii"
-% Operative photo: "/sub-<label>/ses-<label>/ieeg/sub-0001_ses-01_acq-photo1_photo.jpg"
-% Talairach: "/derivatives/surfaces/sub-Talairach/ses-01/anat/sub-Talairach_T1w_pial.R.surf.gii"
-
-json.iEEGCoordinateProcessingDescription = ''; % Has any projection been done on the electrode positions
-% (for example: "surface_projection", "none").
-
-json.iEEGCoordinateProcessingReference = ''; % A reference to a paper that defines in more detail
-% the method used to project or localize the electrodes
+json.iEEGCoordinateProcessingDescripton = '';
+json.IndendedFor = '';
+json.iEEGCoordinateProcessingDescription = '';
+json.iEEGCoordinateProcessingReference = '';
 
 %% Write JSON
 % Make sure the directory exists

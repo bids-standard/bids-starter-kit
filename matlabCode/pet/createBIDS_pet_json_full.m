@@ -42,6 +42,13 @@ bids_file = bids.File(name_spec, 'use_schema', true);
 % Contrust the fullpath version of the filename
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
+% get the definition of each colum,
+% use the bids.Schema class from bids matlab
+% example:
+%
+% schema = bids.Schema;
+% def = schema.get_definition('TaskName');
+
 json.TaskName = task_label;
 json.Manufacturer = '';
 json.ManufacturersModelName = '';
