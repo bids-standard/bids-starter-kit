@@ -1,7 +1,6 @@
 {
-    "PhaseEncodingDirection": " ",
-    "EffectiveEchoSpacing": " ",
-    "TotalReadoutTime": " ",
-    "EchoTime": " ",
-    "SliceTiming": " "
+  "PhaseEncodingDirection": " ",
+  "EffectiveEchoSpacing": " ",
+  "TotalReadoutTime": " ",
+  "EchoTime": " "
 }

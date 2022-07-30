@@ -3,68 +3,75 @@
 %   sub-01_ses-01_task-ShortExample_pet.json
 %
 % This example lists all REQUIRED fields.
-%
-% Writing json files relies on bids-matlab
+
+% Writing json files relies on the JSONio library
 % https://github.com/bids-standard/bids-matlab
+%
 % Make sure it is in the matab/octave path
-
-clear;
-root_dir = ['..' filesep '..'];
-project_label = 'templates';
-sub_id = '01';
-ses_id = '01';
-task_id = 'ShortExample';
-data_type = 'pet';
-
-% this makes the json look prettier when opened in a txt editor
-json_options.indent = '    ';
-
-json_name = fullfile(root_dir, project_label, ...
-                     ['sub-' sub_id], ...
-                     ['ses-' ses_id], ...
-                     data_type, ...
-                     ['sub-' sub_id '_ses-' ses_id '_task-' task_id '_pet.json']);
-
-content.Manufacturer =  '';
-content.ManufacturersModelName =  '';
-content.Units =  '';
-content.TracerName =  '';
-content.TracerRadionuclide =  '';
-content.InjectedRadioactivity =  '';
-content.InjectedRadioactivityUnits =  '';
-content.InjectedMass =  '';
-content.InjectedMassUnits =  '';
-content.SpecificRadioactivity =  '';
-content.SpecificRadioactivityUnits =  '';
-content.ModeOfAdministration =  '';
-content.TimeZero =  '';
-content.ScanStart =  '';
-content.InjectionStart =  '';
-content.FrameTimesStart =  [];
-content.FrameDuration =  [];
-content.AcquisitionMode =  '';
-content.ImageDecayCorrected =  '';
-content.ImageDecayCorrectionTime =  '';
-content.ReconMethodName =  '';
-content.ReconMethodParameterLabels =  [];
-content.ReconMethodParameterUnits =  [];
-content.ReconMethodParameterValues =  [];
-content.ReconFilterType =  [];
-content.ReconFilterSize =  [];
-content.AttenuationCorrection =  '';
-
-%% Write JSON
-
-jsonSaveDir = fileparts(json_name);
-if ~isdir(jsonSaveDir)
-    fprintf('Warning: directory to save json file does not exist, create: %s \n', jsonSaveDir);
-end
-
 try
-    bids.util.jsonencode(json_name, content, json_options);
+    bids.bids_matlab_version;
 catch
     warning('%s\n%s\n%s\n%s', ...
             'Writing the JSON file seems to have failed.', ...
             'Make sure that the following library is in the matlab/octave path:', ...
             'https://github.com/bids-standard/bids-matlab');
 end
+
+clear;
+
+this_dir = fileparts(mfilename('fullpath'));
+root_dir = fullfile(this_dir, '..', filesep, '..');
+
+project = 'templates';
+
+sub_label = '01';
+ses_label = '01';
+task_label = 'ShortExample';
+
+name_spec.modality = 'pet';
+name_spec.suffix = 'pet';
+name_spec.ext = '.json';
+name_spec.entities = struct('sub', sub_label, ...
+                            'ses', ses_label, ...
+                            'task', task_label);
+
+% using the 'use_schema', true
+% ensures that the entities will be in the correct order
+bids_file = bids.File(name_spec, 'use_schema', true);
+
+% Contrust the fullpath version of the filename
+json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
+
+json.TaskName = task_label;
+json.Manufacturer =  '';
+json.ManufacturersModelName =  '';
+json.Units =  '';
+json.TracerName =  '';
+json.TracerRadionuclide =  '';
+json.InjectedRadioactivity =  '';
+json.InjectedRadioactivityUnits =  '';
+json.InjectedMass =  '';
+json.InjectedMassUnits =  '';
+json.SpecificRadioactivity =  '';
+json.SpecificRadioactivityUnits =  '';
+json.ModeOfAdministration =  '';
+json.TimeZero =  '';
+json.ScanStart =  '';
+json.InjectionStart =  '';
+json.FrameTimesStart =  [];
+json.FrameDuration =  [];
+json.AcquisitionMode =  '';
+json.ImageDecayCorrected =  '';
+json.ImageDecayCorrectionTime =  '';
+json.ReconMethodName =  '';
+json.ReconMethodParameterLabels =  [];
+json.ReconMethodParameterUnits =  [];
+json.ReconMethodParameterValues =  [];
+json.ReconFilterType =  [];
+json.ReconFilterSize =  [];
+json.AttenuationCorrection =  '';
+
+%% Write JSON
+% Make sure the directory exists
+bids.util.mkdir(fileparts(json_name));
+bids.util.jsonencode(json_name, json);

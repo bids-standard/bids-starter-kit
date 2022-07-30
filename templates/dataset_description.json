@@ -1,27 +1,25 @@
 {
-    "Name": "",
-    "BIDSVersion": "1.7.0",
-    "DatasetType": "raw",
-    "License": "",
-    "Authors": [
-        "",
-        "",
-        ""
-    ],
-    "Acknowledgements": "",
-    "HowToAcknowledge": "",
-    "Funding": [
-        "",
-        "",
-        ""
-    ],
-    "EthicsApprovals": [
-        ""
-    ],
-    "ReferencesAndLinks": [
-        "",
-        "",
-        ""
-    ],
-    "DatasetDOI": ""
+  "Name": "",
+  "BIDSVersion": "1.7.0",
+  "DatasetType": "raw",
+  "License": "",
+  "Authors": [
+    "",
+    "",
+    ""
+  ],
+  "Acknowledgements": "",
+  "HowToAcknowledge": "",
+  "Funding": [
+    "",
+    "",
+    ""
+  ],
+  "EthicsApprovals": [""],
+  "ReferencesAndLinks": [
+    "",
+    "",
+    ""
+  ],
+  "DatasetDOI": "doi:"
 }

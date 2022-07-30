@@ -3,38 +3,55 @@
 % When adding additional metadata please use CamelCase
 % Use version of DICOM ontology terms whenever possible.
 %
-% Writing json files relies on the JSONio library
-% https://github.com/gllmflndn/JSONio
-% Make sure it is in the matab/octave path
-%
 % DHermes, 2017
+
+% Writing json files relies on the JSONio library
+% https://github.com/bids-standard/bids-matlab
+%
+% Make sure it is in the matab/octave path
+try
+    bids.bids_matlab_version;
+catch
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/bids-standard/bids-matlab');
+end
 
 %%
 
-root_dir = '../';
-project_label = 'templates';
+clear;
+
+this_dir = fileparts(mfilename('fullpath'));
+root_dir = fullfile(this_dir, '..', filesep, '..');
+
+project = 'templates';
+
 sub_label = '01';
 ses_label = '01';
 task_label = 'ShortExample';
 run_label = '01';
 
-% you can also have acq- and proc- fields, but these are optional
+name_spec.modality = 'func';
+name_spec.suffix = 'bold';
+name_spec.ext = '.json';
+name_spec.entities = struct('sub', sub_label, ...
+                            'ses', ses_label, ...
+                            'task', task_label, ...
+                            'run', run_label);
 
-bold_json_name = fullfile(root_dir, project_label, ['sub-' sub_label], ...
-                          ['ses-' ses_label], ...
-                          'func', ...
-                          ['sub-' sub_label ...
-                           '_ses-' ses_label ...
-                           '_task-' task_label ...
-                           '_run-' run_label '_bold.json']);
+% using the 'use_schema', true
+% ensures that the entities will be in the correct order
+bids_file = bids.File(name_spec, 'use_schema', true);
 
-%%
+% Contrust the fullpath version of the filename
+json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
 %% Required fields
 % REQUIRED Name of the task (for resting state use the "rest" prefix). No two tasks
 % should have the same name. Task label is derived from this field by
 % removing all non alphanumeric ([a-zA-Z0-9]) characters.
-bold_json.TaskName = '';
+json.TaskName = '';
 
 % REQUIRED The time in seconds between the beginning of an acquisition of
 % one volume and the beginning of acquisition of the volume following it
@@ -42,7 +59,7 @@ bold_json.TaskName = '';
 % (when no data has been acquired) in case of sparse acquisition schemes.
 % This value needs to be consistent with the pixdim[4] field
 % (after accounting for units stored in xyzt_units field) in the NIfTI header
-bold_json.RepetitionTime = [];
+json.RepetitionTime = [];
 
 % REQUIRED This field is mutually exclusive with RepetitionTime and DelayTime.
 % If defined, this requires acquisition time (TA) be defined via either SliceTiming
@@ -53,7 +70,7 @@ bold_json.RepetitionTime = [];
 % onset of each volume in the BOLD series. The list must have the same length
 % as the BOLD series, and the values must be non-negative and monotonically
 % increasing.
-bold_json.VolumeTiming = [];
+json.VolumeTiming = [];
 
 % RECOMMENDED This field is mutually exclusive with VolumeTiming.
 %
@@ -63,7 +80,7 @@ bold_json.VolumeTiming = [];
 % This field is REQUIRED for sparse sequences using the RepetitionTime field
 % that do not have the SliceTiming field set to allowed for accurate calculation
 % of "acquisition time".
-bold_json.DelayTime = [];
+json.DelayTime = [];
 
 % REQUIRED for sparse sequences that do not have the DelayTime field set.
 % This parameter is required for sparse sequences. In addition without this
@@ -77,7 +94,7 @@ bold_json.DelayTime = [];
 % described using a list of times (in JSON format) referring to the acquisition
 % time for each slice. The list goes through slices along the slice axis in the
 % slice encoding dimension.
-bold_json.SliceTiming = '';
+json.SliceTiming = '';
 
 % RECOMMENDED This field is REQUIRED for sequences that are described with
 % the VolumeTiming field and that not have the SliceTiming field set to allowed
@@ -86,40 +103,27 @@ bold_json.SliceTiming = '';
 %
 % Duration (in seconds) of volume acquisition. Corresponds to
 % DICOM Tag 0018,9073 "Acquisition Duration".
-bold_json.AcquisitionDuration = [];
+json.AcquisitionDuration = [];
 
 %% Required fields if using a fieldmap
 % REQUIRED if corresponding fieldmap data is present or when using multiple
 % runs with different phase encoding directions PhaseEncodingDirection is
 % defined as the direction along which phase is was modulated which may
 % result in visible distortions.
-bold_json.PhaseEncodingDirection = '';
+json.PhaseEncodingDirection = '';
 
 % REQUIRED if corresponding fieldmap data is present.
 % The effective sampling interval, specified in seconds, between lines in
 % the phase-encoding direction, defined based on the size of the reconstructed
 % image in the phase direction.
-bold_json.EffectiveEchoSpacing = '';
+json.EffectiveEchoSpacing = '';
 
 % REQUIRED if corresponding fieldmap data is present or the data comes from
 % a multi echo sequence. The echo time (TE) for the acquisition, specified in seconds.
 % Corresponds to DICOM Tag 0018, 0081 "Echo Time"
-bold_json.EchoTime = '';
+json.EchoTime = '';
 
-%% Write
-% this just makes the json file look prettier when opened in a text editor
-json_options.indent = ' ';
-
-jsonSaveDir = fileparts(bold_json_name);
-if ~isdir(jsonSaveDir)
-    fprintf('Warning: directory to save json file does not exist, first create: %s \n', jsonSaveDir);
-end
-
-try
-    jsonwrite(bold_json_name, bold_json, json_options);
-catch
-    warning('%s\n%s\n%s\n%s', ...
-            'Writing the JSON file seems to have failed.', ...
-            'Make sure that the following library is in the matlab/octave path:', ...
-            'https://github.com/gllmflndn/JSONio');
-end
+%% Write JSON
+% Make sure the directory exists
+bids.util.mkdir(fileparts(json_name));
+bids.util.jsonencode(json_name, json);

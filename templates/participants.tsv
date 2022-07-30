@@ -1,2 +1,3 @@
 participant_id	age	sex	handedness
-sub-01	20	m	l
+sub-01	0	m	l
+sub-epilepsy01	10	f	r

@@ -1,0 +1,3 @@
+name	x	y	z	size	seizure_zone
+TO1	0	0	0	5	NonSOZ
+TO2	0	0	0	5	SOZ, Resected
