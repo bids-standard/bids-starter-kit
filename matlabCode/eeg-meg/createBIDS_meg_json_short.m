@@ -1,11 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Create JSON using MATLAB for MEG BIDS:
+%
 % This template is for MEG data of any kind, including but not limited to task-based,
 % resting-state, and noise recordings.
-% If multiple Tasks were performed within a single Run, the task description can be set to "task-multitask".
+%
+% If multiple Tasks were performed within a single Run,
+% the task description can be set to "task-multitask".
+%
 % The _meg.json SHOULD contain details on the Tasks.
-% Some manufacturers data storage conventions use folders which contain data files of various nature:
+%
+% Some manufacturers data storage conventions use folders
+% which contain data files of various nature:
 % for example: CTF's .ds format, or 4D/BTi.
+%
 % Please refer to Appendix VI for examples from a selection of MEG manufacturers
 %
 % By Cofficer, Created 14/03/2018
@@ -56,46 +63,26 @@ bids_file = bids.File(name_spec, 'use_schema', true);
 % Contrust the fullpath version of the filename
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
+%% Adding metadata
 % Assign the fields in the Matlab structure that can be saved as a json.
 % The following fields must be defined:
 
+% to get the definition of each metadata,
+% you can use the bids.Schema class from bids matlab
+% For example
+schema = bids.Schema;
+def = schema.get_definition('TaskName');
+fprintf(def.description);
+
 %%
-
-% Tasks SHOULD NOT have the same name. The Task label is derived
-% from this field by removing all non alphanumeric ([a-zA-Z0-9])
-% characters:
-json.TaskName = '';
+json.TaskName = task_label;
 
 %%
-
-% The following MEG specific fields must also be defined:
-
-% Sampling frequency (in Hz) of all the data in the recording,
-% regardless of their type (for example: 2400):
-json.SamplingFrequency = '';
-
-% Frequency (in Hz) of the power grid at the geographical location of
-% the MEG instrument (for instance: 50 or 60):
-json.PowerLineFrequency = '';
-
-% Position of the dewar during the MEG scan: "upright", "supine" or
-% "degrees" of angle from vertical: for example on CTF systems,
-% upright=15, supine = 90:
+json.SamplingFrequency = [];
+json.PowerLineFrequency = [];
 json.DewarPosition = '';
-
-% List of temporal and/or spatial software filters applied, or ideally
-% key:value pairs of pre-applied software filters and their parameter
-% values: for example: {"SSS": {"frame": "head", "badlimit": 7}},
-% {"SpatialCompensation": {"GradientOrder": Order of the gradient
-% compensation}}. Write "n/a" if no software filters applied.
 json.SoftwareFilters = '';
-
-% Boolean ("true" or "false") value indicating whether anatomical
-% landmark points (for instance: fiducials) are contained within this recording.
 json.DigitizedLandmarks = '';
-
-% Boolean ("true" or "false") value indicating whether head points
-% outlining the scalp/face surface are contained within this recording
 json.DigitizedHeadPoints = '';
 
 %% Write JSON

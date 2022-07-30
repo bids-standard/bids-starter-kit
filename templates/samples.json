@@ -1,0 +1,14 @@
+{
+  "sample_id": {
+    "LongName": "Sample ID",
+    "Description": "A sample identifier of the form `sample-<label>`,\nmatching a sample entity found in the dataset.\n"
+  },
+  "participant_id": {
+    "LongName": "Participant ID",
+    "Description": "A participant identifier of the form `sub-<label>`,\nmatching a participant entity found in the dataset.\n"
+  },
+  "sample_type": {
+    "LongName": "Sample type",
+    "Description": "Biosample type defined by\n[ENCODE Biosample Type](https://www.encodeproject.org/profiles/biosample_type).\n"
+  }
+}

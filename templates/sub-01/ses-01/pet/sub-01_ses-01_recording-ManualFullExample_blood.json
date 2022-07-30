@@ -14,27 +14,27 @@
   "MetaboliteMethod": "",
   "MetaboliteRecoveryCorrectionApplied": "",
   "time": {
-    "Description": "Time in relation to time zero defined by the _pet.json",
-    "Units": "s"
+    "Description": "Time, in seconds, relative to `TimeZero` defined by the `*_pet.json`.\nFor example, 5.\n",
+    "Unit": "s"
   },
   "plasma_radioactivity": {
-    "Description": "Radioactivity in plasma samples. Measured using COBRA counter.",
-    "Units": "kBq/ml"
+    "Description": "Radioactivity in plasma, in unit of plasma radioactivity (for example, `kBq/mL`).\n",
+    "unit": "kBq/ml"
   },
   "metabolite_parent_fraction": {
-    "Description": "Parent fraction of the radiotracer.",
-    "Units": "unitless"
+    "Description": "Parent fraction of the radiotracer (0-1).\n",
+    "unit": "unitless"
   },
   "metabolite_polar_fraction": {
-    "Description": "Polar metabolite fraction of the radiotracer.",
-    "Units": "unitless"
+    "Description": "Polar metabolite fraction of the radiotracer (0-1).\n",
+    "unit": "unitless"
   },
   "hplc_recovery_fractions": {
-    "Description": "The fraction of activity that get loaded onto the HPLC.",
-    "Units": "unitless"
+    "Description": "HPLC recovery fractions (the fraction of activity that gets loaded onto the HPLC).\n",
+    "Unit": "arbitrary"
   },
   "whole_blood_radioactivity": {
-    "Description": "Radioactivity in whole blood samples. Measured using COBRA counter.",
-    "Units": "kBq/ml"
+    "Description": "Radioactivity in whole blood samples,\nin unit of radioactivity measurements in whole blood samples (for example, `kBq/mL`).\n",
+    "unit": "kBq/ml"
   }
 }

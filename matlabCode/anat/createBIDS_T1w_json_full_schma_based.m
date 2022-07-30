@@ -2,6 +2,9 @@
 % but relies on the BIDS schema to get a more updated version
 % of the list of metadata
 
+% This is work in progress but should become most useful when the BIDS
+% shcema is updated to include what are the required fields a given suffix
+
 %%
 clear;
 
@@ -18,7 +21,7 @@ run_label = '01';
 % The OPTIONAL acq-<label> key/value pair corresponds to a custom label
 % the user MAY use to distinguish a different set of parameters used for
 % acquiring the same modality.
-acq_label = 'FullExample';
+acq_label = 'SchemaBased';
 
 name_spec.modality = 'anat';
 name_spec.suffix = 'T1w';

@@ -59,31 +59,21 @@ bids.util.mkdir(fileparts(json_name));
 % Assign the fields in the Matlab structure that can be saved as a json.
 % all REQUIRED /RECOMMENDED /OPTIONAL metadata fields for Magnetic Resonance Imaging data
 
+%% Adding metadata
+% to get the definition of each metadata,
+% you can use the bids.Schema class from bids matlab
+
+% For example
+schema = bids.Schema;
+def = schema.get_definition('TaskName');
+fprintf(def.description);
+
 %% In-Plane Spatial Encoding metadata fields
-
-% REQUIRED if corresponding fieldmap data is present or when using multiple
-% runs with different phase encoding directions phaseEncodingDirection is
-% defined as the direction along which phase is was modulated which may
-% result in visible distortions.
 json.PhaseEncodingDirection = ' ';
-
-% REQUIRED if corresponding fieldmap data is present. The effective sampling
-% interval, specified in seconds, between lines in the phase-encoding direction,
-% defined based on the size of the reconstructed image in the phase direction.
 json.EffectiveEchoSpacing = ' ';
-
-% REQUIRED if corresponding field/distortion maps acquired with opposing phase
-% encoding directions are present. This is actually the effective total
-% readout time , defined as the readout duration, specified in seconds,
-% that would have generated data with the given level of distortion.
-% It is NOT the actual, physical duration of the readout train
 json.TotalReadoutTime = ' ';
 
 %% Timing Parameters metadata fields
-
-% REQUIRED if corresponding fieldmap data is present or the data comes from a multi echo sequence
-% The echo time (TE) for the acquisition, specified in seconds.
-% Corresponds to DICOM Tag 0018, 0081 "Echo Time"
 json.EchoTime = ' ';
 
 %% Write JSON

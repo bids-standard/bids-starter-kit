@@ -56,13 +56,18 @@ json.PlasmaAvail = false;
 json.WholeBloodAvail = true;
 json.MetaboliteMethod = false;
 json.DispersionCorrected = false;
-json.time = struct('Description', ...
-                   'Time in relation to time zero defined by the _pet.json', ...
-                   'Units', 's');
-json.whole_blood_radioactivity = struct('Description', ...
-                                        ['Radioactivity in uncorrected whole blood samples', ...
-                                         ' from Allogg autosampler.'], ...
-                                        'Units', 'kBq/ml');
+
+% get the definition of each colum,
+% use the bids.Schema class from bids matlab
+schema = bids.Schema;
+
+def = schema.get_definition('time');
+json.time.Description = def.description;
+json.time.Unit = def.unit;
+
+def = schema.get_definition('whole_blood_radioactivity');
+json.whole_blood_radioactivity.Description = def.description;
+json.whole_blood_radioactivity.Unit = def.unit;
 
 %% Write JSON
 % Make sure the directory exists
