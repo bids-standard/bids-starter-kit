@@ -18,86 +18,94 @@ catch
 end
 
 clear;
+
 this_dir = fileparts(mfilename('fullpath'));
 root_dir = fullfile(this_dir, '..', filesep, '..');
-project_label = 'templates';
-sub_id = '01';
-ses_id = '01';
-task_id = 'FullExample';
-data_type = 'pet';
 
-% this makes the json look prettier when opened in a txt editor
-json_options.indent = '    ';
+project = 'templates';
 
-json_name = fullfile(root_dir, project_label, ...
-                     ['sub-' sub_id], ...
-                     ['ses-' ses_id], ...
-                     data_type, ...
-                     ['sub-' sub_id '_ses-' ses_id '_task-' task_id '_pet.json']);
+sub_label = '01';
+ses_label = '01';
+task_label = 'FullExample';
 
-content.Manufacturer = '';
-content.ManufacturersModelName = '';
-content.Units = '';
-content.InstitutionName = '';
-content.InstitutionAddress = '';
-content.InstitutionalDepartmentName = '';
-content.BodyPart = '';
-content.TracerName = '';
-content.TracerRadionuclide = '';
-content.InjectedRadioactivity = '';
-content.InjectedRadioactivityUnits = '';
-content.InjectedMass = '';
-content.InjectedMassUnits = '';
-content.SpecificRadioactivity = '';
-content.SpecificRadioactivityUnits = '';
-content.ModeOfAdministration = '';
-content.TracerRadLex = '';
-content.TracerSNOMED = '';
-content.TracerMolecularWeight = '';
-content.TracerMolecularUnits = '';
-content.InjectedMassPerWeight = '';
-content.InjectedMassPerWeightUnits = '';
-content.SpecificRadioactivityMeasTime = '';
-content.MolarActivity = '';
-content.MolarActivityUnits = '';
-content.MolarActivityMeasTime = '';
-content.InfusionRadioActivity = '';
-content.InfusionStart = '';
-content.InfusionSpeed = '';
-content.InfusionSpeedUnits = '';
-content.InjectedVolume = '';
-content.Purity = '';
-content.PharamceuticalName = '';
-content.PharmaceuticalDoseAmount = [];
-content.PharmaceuticalDoseUnits = '';
-content.PharmaceuticalDoseRegimen = '';
-content.PharmaceuticalDoseTime = [];
-content.Anaesthesia = '';
-content.TimeZero = '';
-content.ScanStart = '';
-content.InjectionStart = '';
-content.FrameTimesStart = [];
-content.FrameDuration = [];
-content.ScanDate = '';
-content.InjectionEnd = '';
-content.AcquisitionMode = '';
-content.ImageDecayCorrected = '';
-content.ImageDecayCorrectionTime = '';
-content.ReconMethodName = '';
-content.ReconMethodParameterLabels = [];
-content.ReconMethodParameterUnits = [];
-content.ReconMethodParameterValues = [];
-content.ReconFilterType = [];
-content.ReconFilterSize = [];
-content.AttenuationCorrection = '';
-content.ReconMethodImplementationVersion = '';
-content.AttenuationCorrectionMethodReference = '';
-content.ScaleFactor = [];
-content.ScatterFraction = [];
-content.DecayCorrectionFactor = [];
-content.PromptRate = [];
-content.RandomRate = [];
-content.SinglesRate = [];
+name_spec.modality = 'pet';
+name_spec.suffix = 'pet';
+name_spec.ext = '.json';
+name_spec.entities = struct('sub', sub_label, ...
+                            'ses', ses_label, ...
+                            'task', task_label);
+
+% using the 'use_schema', true
+% ensures that the entities will be in the correct order
+bids_file = bids.File(name_spec, 'use_schema', true);
+
+% Contrust the fullpath version of the filename
+json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
+
+json.TaskName = task_label;
+json.Manufacturer = '';
+json.ManufacturersModelName = '';
+json.Units = '';
+json.InstitutionName = '';
+json.InstitutionAddress = '';
+json.InstitutionalDepartmentName = '';
+json.BodyPart = '';
+json.TracerName = '';
+json.TracerRadionuclide = '';
+json.InjectedRadioactivity = '';
+json.InjectedRadioactivityUnits = '';
+json.InjectedMass = '';
+json.InjectedMassUnits = '';
+json.SpecificRadioactivity = '';
+json.SpecificRadioactivityUnits = '';
+json.ModeOfAdministration = '';
+json.TracerRadLex = '';
+json.TracerSNOMED = '';
+json.TracerMolecularWeight = '';
+json.TracerMolecularUnits = '';
+json.InjectedMassPerWeight = '';
+json.InjectedMassPerWeightUnits = '';
+json.SpecificRadioactivityMeasTime = '';
+json.MolarActivity = '';
+json.MolarActivityUnits = '';
+json.MolarActivityMeasTime = '';
+json.InfusionRadioActivity = '';
+json.InfusionStart = '';
+json.InfusionSpeed = '';
+json.InfusionSpeedUnits = '';
+json.InjectedVolume = '';
+json.Purity = '';
+json.PharamceuticalName = '';
+json.PharmaceuticalDoseAmount = [];
+json.PharmaceuticalDoseUnits = '';
+json.PharmaceuticalDoseRegimen = '';
+json.PharmaceuticalDoseTime = [];
+json.Anaesthesia = '';
+json.TimeZero = '';
+json.ScanStart = '';
+json.InjectionStart = '';
+json.FrameTimesStart = [];
+json.FrameDuration = [];
+json.ScanDate = '';
+json.InjectionEnd = '';
+json.AcquisitionMode = '';
+json.ImageDecayCorrected = '';
+json.ImageDecayCorrectionTime = '';
+json.ReconMethodName = '';
+json.ReconMethodParameterLabels = [];
+json.ReconMethodParameterUnits = [];
+json.ReconMethodParameterValues = [];
+json.ReconFilterType = [];
+json.ReconFilterSize = [];
+json.AttenuationCorrection = '';
+json.ReconMethodImplementationVersion = '';
+json.AttenuationCorrectionMethodReference = '';
+json.ScaleFactor = [];
+json.ScatterFraction = [];
+json.DecayCorrectionFactor = [];
+json.PromptRate = [];
+json.RandomRate = [];
+json.SinglesRate = [];
 
 %% Write JSON
 % Make sure the directory exists

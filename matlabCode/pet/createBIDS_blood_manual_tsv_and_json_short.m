@@ -23,55 +23,49 @@ clear;
 this_dir = fileparts(mfilename('fullpath'));
 root_dir = fullfile(this_dir, '..', filesep, '..');
 
-project_label = 'templates';
+project = 'templates';
 
-sub_id = '01';
-ses_id = '01';
-recording = 'ManualShortExample';
-suffix = '_blood';
-data_type = 'pet';
-extension = '.tsv';
+sub_label = '01';
+ses_label = '01';
+recording_label = 'ManualShortExample';
 
-file_name = fullfile(root_dir, project_label, ...
-                     ['sub-' sub_id], ...
-                     ['ses-' ses_id], ...
-                     data_type, ...
-                     ['sub-' sub_id '_ses-' ses_id '_recording-' recording suffix extension]);
+name_spec.modality = 'pet';
+name_spec.suffix = 'blood';
+name_spec.ext = '.tsv';
+name_spec.entities = struct('sub', sub_label, ...
+                            'ses', ses_label, ...
+                            'recording', recording_label);
+
+% using the 'use_schema', true
+% ensures that the entities will be in the correct order
+bids_file = bids.File(name_spec, 'use_schema', true);
+
+% Contrust the fullpath version of the filename
+tsv_file_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
+json_file_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.json_filename);
 
 %% Write TSV
-content.time = 0;
-content.metabolite_parent_fraction = 0;
+tsv.time = 0;
+tsv.metabolite_parent_fraction = 0;
 
-bids.util.tsvwrite(file_name, content);
+bids.util.tsvwrite(tsv_file_name, tsv);
 
 %% Write JSON
-% this makes the json look prettier when opened in a txt editor
-json_options.indent = '    ';
 
-extension = '.json';
-
-file_name = fullfile(root_dir, project_label, ...
-                     ['sub-' sub_id], ...
-                     ['ses-' ses_id], ...
-                     data_type, ...
-                     ['sub-' sub_id '_ses-' ses_id '_recording-' recording suffix extension]);
-
-clear content;
-
-content.PlasmaAvail = '';
-content.MetaboliteAvail = '';
-content.WholeBloodAvail = '';
-content.DispersionCorrected = '';
-content.MetaboliteMethod = '';
-content.MetaboliteRecoveryCorrectionApplied = '';
-content.time = struct('Description', ...
-                      'Time in relation to time zero defined by the _pet.json', ...
-                      'Units', 's');
-content.metabolite_parent_fraction = struct('Description', ...
-                                            'Parent fraction of the radiotracer.', ...
-                                            'Units', 'unitless');
+json.PlasmaAvail = '';
+json.MetaboliteAvail = '';
+json.WholeBloodAvail = '';
+json.DispersionCorrected = '';
+json.MetaboliteMethod = '';
+json.MetaboliteRecoveryCorrectionApplied = '';
+json.time = struct('Description', ...
+                   'Time in relation to time zero defined by the _pet.json', ...
+                   'Units', 's');
+json.metabolite_parent_fraction = struct('Description', ...
+                                         'Parent fraction of the radiotracer.', ...
+                                         'Units', 'unitless');
 
 %% Write JSON
 % Make sure the directory exists
-bids.util.mkdir(fileparts(json_name));
-bids.util.jsonencode(json_name, json);
+bids.util.mkdir(fileparts(json_file_name));
+bids.util.jsonencode(json_file_name, json);
