@@ -3,13 +3,23 @@
 %   sub-01_ses-01_task-FullExample_pet.json
 %
 % This example lists all REQUIRED, RECOMMENDED and OPTIONAL fields.
-%
-% Writing json files relies on bids-matlab
+
+% Writing json files relies on the JSONio library
 % https://github.com/bids-standard/bids-matlab
+%
 % Make sure it is in the matab/octave path
+try
+    bids.bids_matlab_version;
+catch
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/bids-standard/bids-matlab');
+end
 
 clear;
-root_dir = ['..' filesep '..'];
+this_dir = fileparts(mfilename('fullpath'));
+root_dir = fullfile(this_dir, '..', filesep, '..');
 project_label = 'templates';
 sub_id = '01';
 ses_id = '01';
@@ -90,17 +100,6 @@ content.RandomRate = [];
 content.SinglesRate = [];
 
 %% Write JSON
-
-jsonSaveDir = fileparts(json_name);
-if ~isdir(jsonSaveDir)
-    fprintf('Warning: directory to save json file does not exist, create: %s \n', jsonSaveDir);
-end
-
-try
-    bids.util.jsonencode(json_name, content, json_options);
-catch
-    warning('%s\n%s\n%s\n%s', ...
-            'Writing the JSON file seems to have failed.', ...
-            'Make sure that the following library is in the matlab/octave path:', ...
-            'https://github.com/bids-standard/bids-matlab');
-end
+% Make sure the directory exists
+bids.util.mkdir(fileparts(json_name));
+bids.util.jsonencode(json_name, json);

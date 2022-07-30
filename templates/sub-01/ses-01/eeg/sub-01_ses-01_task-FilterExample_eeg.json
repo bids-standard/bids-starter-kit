@@ -5,5 +5,6 @@
             "Roll-off": "6dB/Octave"
         }
     },
-    "SoftwareFilters": "n/a"
+    "SoftwareFilters": "n/a",
+    "TaskName": "FilterExample"
 }

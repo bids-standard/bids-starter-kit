@@ -4,14 +4,24 @@
 %   sub-01_ses-01_recording-AutosamplerShortExample_blood.json
 %
 % This example lists all REQUIRED, RECOMMENDED and OPTIONAL fields.
-%
-% Writing json files relies on bids-matlab
+
+% Writing json files relies on the JSONio library
 % https://github.com/bids-standard/bids-matlab
+%
 % Make sure it is in the matab/octave path
+try
+    bids.bids_matlab_version;
+catch
+    warning('%s\n%s\n%s\n%s', ...
+            'Writing the JSON file seems to have failed.', ...
+            'Make sure that the following library is in the matlab/octave path:', ...
+            'https://github.com/bids-standard/bids-matlab');
+end
 
 clear;
 
-root_dir = ['..' filesep '..'];
+this_dir = fileparts(mfilename('fullpath'));
+root_dir = fullfile(this_dir, '..', filesep, '..');
 
 project_label = 'templates';
 
@@ -60,16 +70,7 @@ content.whole_blood_radioactivity = struct('Description', ...
                                             ' from Allogg autosampler.'], ...
                                            'Units', 'kBq/ml');
 
-jsonSaveDir = fileparts(file_name);
-if ~isdir(jsonSaveDir)
-    fprintf('Warning: directory to save json file does not exist, create: %s \n', jsonSaveDir);
-end
-
-try
-    bids.util.jsonencode(file_name, content, json_options);
-catch
-    warning('%s\n%s\n%s\n%s', ...
-            'Writing the JSON file seems to have failed.', ...
-            'Make sure that the following library is in the matlab/octave path:', ...
-            'https://github.com/bids-standard/bids-matlab');
-end
+%% Write JSON
+% Make sure the directory exists
+bids.util.mkdir(fileparts(json_name));
+bids.util.jsonencode(json_name, json);

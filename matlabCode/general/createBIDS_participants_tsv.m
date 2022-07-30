@@ -29,14 +29,12 @@ participants_tsv_name = fullfile(root_dir, project_label, 'participants.tsv');
 
 %% make a participants table and save
 
-participant_id = {'sub-01'};
-age = [0]';
-sex = {'m'};
-handedness = {'l'};
+tsv.participant_id = {'sub-01'; 'sub-epilepsy01'};
+tsv.age = [0; 10];
+tsv.sex = {'m'; 'f'};
+tsv.handedness = {'l'; 'r'};
 
-t = table(participant_id, age, sex);
-
-writetable(t, participants_tsv_name, 'FileType', 'text', 'Delimiter', '\t');
+bids.util.tsvwrite(participants_tsv_name, tsv);
 
 %% associated data dictionary
 

@@ -1,5 +1,5 @@
 {
-    "TaskName": "",
+    "TaskName": "FullExample",
     "TaskDescription": "",
     "Instructions": "",
     "CogAtlasID": "",
@@ -11,7 +11,7 @@
     "ManufacturersModelName": "",
     "DeviceSerialNumber": "",
     "SoftwareVersions": "",
-    "PowerLineFrequency": [],
+    "PowerLineFrequency": 50,
     "SamplingFrequency": [],
     "EEGChannelCount": [],
     "EOGChannelCount": [],
