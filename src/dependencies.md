@@ -16,8 +16,8 @@ vim(Linux).
 But there are some text-editors built specifically for coding that can help with
 some parts of programming.
 
-One that's free and easy to use is Atom: <https://atom.io/>. It'll work for all
-the languages below!
+One that's free and easy to use is [Visual studio code](https://code.visualstudio.com/). 
+It'll work for all the languages below!
 
 ## MATLAB / Octave (Free, open source equivalent)
 
@@ -27,7 +27,7 @@ the languages below!
 
 Required JSON package **JSONio**
 
-    Install Link: https://github.com/gllmflndn/JSONio
+Install Link: https://github.com/gllmflndn/JSONio
 
 ## Python
 
@@ -36,12 +36,12 @@ BIDS)
 
 **Anaconda** Recommended package to use for installing Python
 
-    Install Link: https://conda.io/docs/user-guide/install/download.html
+Install Link: https://conda.io/docs/user-guide/install/download.html
 
 **Pandas** Pandas is already included in Anaconda, but use the link below if you
 just want the data analysis library.
 
-    Install Link: https://pandas.pydata.org/
+Install Link: https://pandas.pydata.org/
 
 ## R
 
@@ -49,4 +49,4 @@ just want the data analysis library.
 
 **Jsonlite** package required to read and write JSON files
 
-    https://cran.r-project.org/web/packages/jsonlite/index.html
+https://cran.r-project.org/web/packages/jsonlite/index.html

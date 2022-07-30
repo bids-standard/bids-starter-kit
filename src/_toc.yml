@@ -27,7 +27,6 @@ parts:
 - caption: Others
   chapters:
   - file: validator.md
-  - file: apps.md
   - file: faq.md
   - file: glossary.md
   - file: contact.md
