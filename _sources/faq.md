@@ -11,6 +11,11 @@ and it should be in the repository.
 Ideally the questions will link to an answer elsewhere in the repository to
 maximise the different ways of finding out more about BIDS.
 
+```{note}
+For questions related to the BIDS apps, 
+please visit [the BIDS apps website](https://bids-apps.neuroimaging.io/dev_faq/).
+```
+
 ## General questions
 
 ### What is a `json` file?
@@ -48,6 +53,12 @@ allows you to list all the files (or directories, with wildcards) that are not
 BIDS compliant and should be ignored by the validator. Of course you should
 still try to adhere to upcoming BEPs and the general BIDS philosophy for file
 names and metadata where possible, but this gives a little extra flexibility.
+
+### How do I convert my data to BIDS?
+
+We strongly recommend you pick a BIDS converter to help you convert your data.
+
+A list of converters can be found [on the BIDS website](https://bids.neuroimaging.io/benefits.html#converters)
 
 ### How to import Excel files?
 
