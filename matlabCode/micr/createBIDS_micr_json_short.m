@@ -61,41 +61,41 @@ def = schema.get_definition('Manufacturer');
 fprintf(def.description);
 
 % Device Hardware
-json.Manufacturer = 'RECOMMENDED'; 
-json.ManufacturersModelName = 'RECOMMENDED'; 
-json.DeviceSerialNumber = 'RECOMMENDED'; 
-json.StationName = 'RECOMMENDED'; 
-json.SoftwareVersions = 'RECOMMENDED'; 
-json.InstitutionName = 'RECOMMENDED'; 
-json.InstitutionAddress = 'RECOMMENDED'; 
+json.Manufacturer = 'RECOMMENDED';
+json.ManufacturersModelName = 'RECOMMENDED';
+json.DeviceSerialNumber = 'RECOMMENDED';
+json.StationName = 'RECOMMENDED';
+json.SoftwareVersions = 'RECOMMENDED';
+json.InstitutionName = 'RECOMMENDED';
+json.InstitutionAddress = 'RECOMMENDED';
 json.InstitutionalDepartmentName = 'RECOMMENDED';
 
 % Image Acquisition
-json.PixelSize = 'REQUIRED'; 
-json.PixelSizeUnits = 'REQUIRED'; 
-json.Immersion = 'OPTIONAL'; 
-json.NumericalAperture = 'OPTIONAL'; 
-json.Magnification = 'OPTIONAL'; 
-json.ImageAcquisitionProtocol = 'OPTIONAL'; 
+json.PixelSize = 'REQUIRED';
+json.PixelSizeUnits = 'REQUIRED';
+json.Immersion = 'OPTIONAL';
+json.NumericalAperture = 'OPTIONAL';
+json.Magnification = 'OPTIONAL';
+json.ImageAcquisitionProtocol = 'OPTIONAL';
 json.OtherAcquisitionParameters = 'OPTIONAL';
 
 % Sample
 json.BodyPart = 'RECOMMENDED';
-json.BodyPartDetails = 'RECOMMENDED'; 
-json.SampleEnvironment = 'RECOMMENDED'; 
-json.SampleStaining = 'RECOMMENDED'; 
-json.SamplePrimaryAntibody = 'RECOMMENDED'; 
-json.SampleSecondaryAntibody = 'RECOMMENDED'; 
-json.BodyPartDetailsOntology = 'OPTIONAL'; 
-json.SampleEmbedding = 'OPTIONAL'; 
-json.SampleFixation = 'OPTIONAL'; 
-json.SliceThickness = 'OPTIONAL'; 
-json.TissueDeformationScaling = 'OPTIONAL'; 
-json.SampleExtractionProtocol = 'OPTIONAL'; 
+json.BodyPartDetails = 'RECOMMENDED';
+json.SampleEnvironment = 'RECOMMENDED';
+json.SampleStaining = 'RECOMMENDED';
+json.SamplePrimaryAntibody = 'RECOMMENDED';
+json.SampleSecondaryAntibody = 'RECOMMENDED';
+json.BodyPartDetailsOntology = 'OPTIONAL';
+json.SampleEmbedding = 'OPTIONAL';
+json.SampleFixation = 'OPTIONAL';
+json.SliceThickness = 'OPTIONAL';
+json.TissueDeformationScaling = 'OPTIONAL';
+json.SampleExtractionProtocol = 'OPTIONAL';
 json.SampleExtractionInstitution = 'OPTIONAL';
 
 % Chunk
-json.ChunkTransformationMatrix = 'RECOMMENDED if <chunk-index> is used in filenames'; 
+json.ChunkTransformationMatrix = 'RECOMMENDED if <chunk-index> is used in filenames';
 json.ChunkTransformationMatrixAxis = 'REQUIRED if ChunkTransformationMatrix is present';
 
 %% Write JSON

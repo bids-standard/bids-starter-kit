@@ -61,8 +61,8 @@ def = schema.get_definition('Manufacturer');
 fprintf(def.description);
 
 % Image Acquisition
-json.PixelSize = 'REQUIRED'; 
-json.PixelSizeUnits = 'REQUIRED'; 
+json.PixelSize = 'REQUIRED';
+json.PixelSizeUnits = 'REQUIRED';
 
 %% Write JSON
 % Make sure the directory exists
