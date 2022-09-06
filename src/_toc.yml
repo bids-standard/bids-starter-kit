@@ -8,7 +8,8 @@ parts:
   - file: folders_and_files/metadata.md
   - url: https://github.com/bids-standard/bids-starter-kit/tree/main/templates
     title: BIDS files templates
-  - file: folders_and_files/derivatives
+  - file: folders_and_files/readme_editor.rst
+  - file: folders_and_files/derivatives.md
 - caption: Tutorials
   chapters:
   - file: tutorials/annotation.md
