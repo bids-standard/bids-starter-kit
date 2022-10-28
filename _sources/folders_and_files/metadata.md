@@ -300,11 +300,10 @@ Below are ways to read / write TSV files in common languages.
 ### Reading a `.tsv` file:
 
 ```matlab
-readtable([filename],
-          'FileType', 'text',
-          'Delimiter', '\t',
-          'TreatAsEmpty', {'N/A','n/a'}
-          );
+table_content = readtable(filename, ...
+                            'FileType', 'text', ...
+                            'Delimiter', '\t', ...
+                            'TreatAsEmpty', {'N/A','n/a'});
 ```
 
 ### Writing a `.tsv` file:
@@ -312,18 +311,19 @@ readtable([filename],
 #### Matlab
 
 ```matlab
-root_dir = 'MyRootDir';
+root_dir = pwd;
 bidsProject = 'temp';
-bids_particpants_name = ['participants.tsv'];
+mkdir(fullfile(root_dir, bidsProject));
+bids_participants_name = 'participants.tsv';
 
-participant_id = ['sub-01'; 'sub-02']; % onsets in seconds
+participant_id = ['sub-01'; 'sub-02']; 
 age = [20 30]';
 sex = ['m';'f'];
 
 t = table(participant_id,age,sex);
-writetable(t, fullfile(root_dir, bidsProject, bids_particpants_name),
-              'FileType', 'text',
-              'Delimiter', '\t');
+writetable(t, fullfile(root_dir, bidsProject, bids_participants_name), ...
+              'FileType', 'text', ...
+              'Delimiter', '\t'); 
 ```
 
 #### Octave
