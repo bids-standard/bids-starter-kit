@@ -53,12 +53,8 @@ jupyter:
   </h4>
 </div>
 
-<h2 align="center"> <i class='fa fa-youtube'></i> Click to view our youtube playlist! <i class="fa fa-youtube"></i> </h2>
-
-<div align="center">
+<div class="iframe-container">
   <iframe
-    width="560"
-    height="315"
     src="https://www.youtube.com/embed/-c4PUhTwmz4"
     title="YouTube video player"
     frameborder="0"
