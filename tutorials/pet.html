@@ -551,16 +551,16 @@ from different scanner types and is distributing two examples
 <a class="reference external" href="https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing">here</a>.</p>
 <p>You can download them for testing purposes either manually
 or in the terminal by typing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp<span class="o">=</span>sharing --fuzzy
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gdown<span class="w"> </span>https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp<span class="o">=</span>sharing<span class="w"> </span>--fuzzy
 </pre></div>
 </div>
 <p>You may need to install the python package <a class="reference external" href="https://github.com/wkentaro/gdown"><code class="docutils literal notranslate"><span class="pre">gdown</span></code></a>
 for this to work:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install gdown
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>gdown
 </pre></div>
 </div>
 <p>And then unzipping the downloaded file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip OpenNeuroPET-Demo_raw.zip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip<span class="w"> </span>OpenNeuroPET-Demo_raw.zip
 </pre></div>
 </div>
 <p>You can now look at the file tree:</p>
@@ -642,14 +642,14 @@ In any case, for DICOM data format, one relies on
 <p>Download <a class="reference external" href="https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage">dcm2niix</a>,
 and for Mac and Linux users you can add it to your path,
 for instance it would could downloaded and unzipped into <code class="docutils literal notranslate"><span class="pre">/bin</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USER</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USER</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="for-python">
 <h4>For Python<a class="headerlink" href="#for-python" title="Permalink to this headline">¶</a></h4>
 <p>Open your terminal, either regular or anaconda terminal and type.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pypet2bids
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pypet2bids
 </pre></div>
 </div>
 <p>Now you already have the converter installed and can go ahead
@@ -663,7 +663,7 @@ the specific tool we will be using for the following DICOM conversion is <code c
 <li><p>the folder where your data resides, <code class="docutils literal notranslate"><span class="pre">dcmfolder</span></code>, and</p></li>
 <li><p>the folder where you want to output the PET BIDS formatted dataset, <code class="docutils literal notranslate"><span class="pre">mynewfolder</span></code>.</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dcm2niix4pet dcmfolder -d mynewfolder
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dcm2niix4pet<span class="w"> </span>dcmfolder<span class="w"> </span>-d<span class="w"> </span>mynewfolder
 </pre></div>
 </div>
 <div class="admonition note">
@@ -677,26 +677,26 @@ to provide some missing information at the time of conversion.</p>
 <p>Additional information can be provided via the command line
 with the <code class="docutils literal notranslate"><span class="pre">--kwargs</span></code> argument in the form of key=pair values.
 For an idea of what this looks like see below:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dcm2niix4pet /OpenNeuroPET-Demo_raw/source/SiemensBiographPETMR-NRU <span class="se">\</span>
-            -d mynewfolder <span class="se">\</span>
-            --kwargs    <span class="nv">TimeZero</span><span class="o">=</span>ScanStart <span class="se">\</span>
-                        <span class="nv">Manufacturer</span><span class="o">=</span>Siemens <span class="se">\</span>
-                        <span class="nv">ManufacturersModelName</span><span class="o">=</span>Biograph <span class="se">\</span>
-                        <span class="nv">InstitutionName</span><span class="o">=</span><span class="s2">&quot;Rigshospitalet, NRU, DK&quot;</span> <span class="se">\</span>
-                        <span class="nv">BodyPart</span><span class="o">=</span>Phantom <span class="se">\</span>
-                        <span class="nv">Units</span><span class="o">=</span>Bq/mL <span class="se">\</span>
-                        <span class="nv">TracerName</span><span class="o">=</span>none <span class="se">\</span>
-                        <span class="nv">TracerRadionuclide</span><span class="o">=</span>F18 <span class="se">\</span>
-                        <span class="nv">InjectedRadioactivity</span><span class="o">=</span><span class="m">81</span>.24 <span class="se">\</span>
-                        <span class="nv">SpecificRadioactivity</span><span class="o">=</span><span class="m">13019</span>.23 <span class="se">\</span>
-                        <span class="nv">ModeOfAdministration</span><span class="o">=</span>infusion <span class="se">\</span>
-                        <span class="nv">FrameTimesStart</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
-                        <span class="nv">AcquisitionMode</span><span class="o">=</span><span class="s2">&quot;list mode&quot;</span> <span class="se">\</span>
-                        <span class="nv">ImageDecayCorrected</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
-                        <span class="nv">ImageDecayCorrectionTime</span><span class="o">=</span><span class="m">0</span> <span class="se">\</span>
-                        <span class="nv">AttenuationCorrection</span><span class="o">=</span>MR-corrected <span class="se">\</span>
-                        <span class="nv">FrameDuration</span><span class="o">=</span><span class="m">300</span> <span class="se">\</span>
-                        <span class="nv">FrameTimesStart</span><span class="o">=</span><span class="m">0</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dcm2niix4pet<span class="w"> </span>/OpenNeuroPET-Demo_raw/source/SiemensBiographPETMR-NRU<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-d<span class="w"> </span>mynewfolder<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>--kwargs<span class="w">    </span><span class="nv">TimeZero</span><span class="o">=</span>ScanStart<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">Manufacturer</span><span class="o">=</span>Siemens<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">ManufacturersModelName</span><span class="o">=</span>Biograph<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">InstitutionName</span><span class="o">=</span><span class="s2">&quot;Rigshospitalet, NRU, DK&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">BodyPart</span><span class="o">=</span>Phantom<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">Units</span><span class="o">=</span>Bq/mL<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">TracerName</span><span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">TracerRadionuclide</span><span class="o">=</span>F18<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">InjectedRadioactivity</span><span class="o">=</span><span class="m">81</span>.24<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">SpecificRadioactivity</span><span class="o">=</span><span class="m">13019</span>.23<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">ModeOfAdministration</span><span class="o">=</span>infusion<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">FrameTimesStart</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">AcquisitionMode</span><span class="o">=</span><span class="s2">&quot;list mode&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">ImageDecayCorrected</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">ImageDecayCorrectionTime</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">AttenuationCorrection</span><span class="o">=</span>MR-corrected<span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">FrameDuration</span><span class="o">=</span><span class="m">300</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                        </span><span class="nv">FrameTimesStart</span><span class="o">=</span><span class="m">0</span>
 </pre></div>
 </div>
 <p>Now you have a dataset in PET BIDS format.
@@ -733,27 +733,27 @@ You can find templates of such parameter file under
 one creates a structure containing all the meta information (here passing on all arguments)
 and then point the function to the folder where your data resides <code class="docutils literal notranslate"><span class="pre">dcmfolder</span></code>
 and the folder where you want to output the PET BIDS formatted dataset <code class="docutils literal notranslate"><span class="pre">mynewfolder</span></code>:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">meta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">get_pet_metadata</span><span class="p">(</span><span class="s">&#39;Scanner&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;SiemensBiograph&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;TimeZero&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;ScanStart&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;TracerName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CB36&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;TracerRadionuclide&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;C11&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ModeOfAdministration&#39;</span><span class="p">,</span><span class="w">  </span><span class="s">&#39;infusion&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;SpecificRadioactivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">605.3220</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;InjectedMass&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5934</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;MolarActivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">107.66</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;InstitutionName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Rigshospitalet, NRU, DK&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;AcquisitionMode&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;list mode&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ImageDecayCorrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;true&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ImageDecayCorrectionTime&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ReconMethodName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;OP-OSEM&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ReconMethodParameterLabels&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;subsets&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;iterations&#39;</span><span class="p">},</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ReconMethodParameterUnits&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">},</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ReconMethodParameterValues&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">21</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ReconFilterType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;XYZGAUSSIAN&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ReconFilterSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;AttenuationCorrection&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CT-based attenuation correction&#39;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">meta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">get_pet_metadata</span><span class="p">(</span><span class="s">&#39;Scanner&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;SiemensBiograph&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;TimeZero&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;ScanStart&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;TracerName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CB36&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;TracerRadionuclide&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;C11&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ModeOfAdministration&#39;</span><span class="p">,</span><span class="w">  </span><span class="s">&#39;infusion&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;SpecificRadioactivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">605.3220</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;InjectedMass&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5934</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;MolarActivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">107.66</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;InstitutionName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Rigshospitalet, NRU, DK&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;AcquisitionMode&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;list mode&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ImageDecayCorrected&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;true&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ImageDecayCorrectionTime&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ReconMethodName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;OP-OSEM&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ReconMethodParameterLabels&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;subsets&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;iterations&#39;</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ReconMethodParameterUnits&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">},</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ReconMethodParameterValues&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">21</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ReconFilterType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;XYZGAUSSIAN&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ReconFilterSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;AttenuationCorrection&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CT-based attenuation correction&#39;</span><span class="p">);</span>
 
-<span class="n">dcm2niix4pet</span><span class="p">(</span><span class="n">dcmfolder</span><span class="p">,</span><span class="w"> </span><span class="n">meta</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mynewfolder</span><span class="p">);</span><span class="w"></span>
+<span class="n">dcm2niix4pet</span><span class="p">(</span><span class="n">dcmfolder</span><span class="p">,</span><span class="w"> </span><span class="n">meta</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mynewfolder</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -761,17 +761,17 @@ and the folder where you want to output the PET BIDS formatted dataset <code cla
 <p><code class="docutils literal notranslate"><span class="pre">get_pet_metadata</span></code> can be called in a much simpler way
 if you have a <code class="docutils literal notranslate"><span class="pre">\*parameters.txt</span></code> seating on disk next to this function.
 The call would then looks like:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% your SiemensBiographparameters.txt file is stored next to get_pet_metadata.m</span><span class="w"></span>
-<span class="n">meta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">get_pet_metadata</span><span class="p">(</span><span class="s">&#39;Scanner&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;SiemensBiograph&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;TimeZero&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;ScanStart&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;TracerName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CB36&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;TracerRadionuclide&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;C11&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;ModeOfAdministration&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;infusion&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;SpecificRadioactivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">605.3220</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;InjectedMass&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5934</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                        </span><span class="s">&#39;MolarActivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">107.66</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% your SiemensBiographparameters.txt file is stored next to get_pet_metadata.m</span>
+<span class="n">meta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">get_pet_metadata</span><span class="p">(</span><span class="s">&#39;Scanner&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;SiemensBiograph&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;TimeZero&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;ScanStart&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;TracerName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;CB36&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;TracerRadionuclide&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;C11&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;ModeOfAdministration&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;infusion&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;SpecificRadioactivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">605.3220</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;InjectedMass&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5934</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                        </span><span class="s">&#39;MolarActivity&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">107.66</span><span class="p">);</span>
 
-<span class="n">dcm2niix4pet</span><span class="p">(</span><span class="n">dcmfolder</span><span class="p">,</span><span class="w"> </span><span class="n">meta</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mynewfolder</span><span class="p">);</span><span class="w"></span>
+<span class="n">dcm2niix4pet</span><span class="p">(</span><span class="n">dcmfolder</span><span class="p">,</span><span class="w"> </span><span class="n">meta</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mynewfolder</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -793,18 +793,18 @@ as well as a DICOM (.dcm) PET image dataset.</p>
 <h4>PET image data in ECAT format<a class="headerlink" href="#pet-image-data-in-ecat-format" title="Permalink to this headline">¶</a></h4>
 <p>Here is the structure of our starting dataset:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>OldNotBidsPETDataSet/
-├── MR_image
-│   ├── <span class="m">24310</span>.cropped.hdr
-│   ├── <span class="m">24310</span>.cropped.img
-│   └── 24310_rois.mat
-├── retest_scan_sub01
-│   ├── sub01_8__PLASMA.txt
-│   └── sub01_8_anon.v
-└── test_scan_sub01
-    ├── sub01_7_PLASMA.txt
-    └── sub01_7_anon.v
+├──<span class="w"> </span>MR_image
+│<span class="w">   </span>├──<span class="w"> </span><span class="m">24310</span>.cropped.hdr
+│<span class="w">   </span>├──<span class="w"> </span><span class="m">24310</span>.cropped.img
+│<span class="w">   </span>└──<span class="w"> </span>24310_rois.mat
+├──<span class="w"> </span>retest_scan_sub01
+│<span class="w">   </span>├──<span class="w"> </span>sub01_8__PLASMA.txt
+│<span class="w">   </span>└──<span class="w"> </span>sub01_8_anon.v
+└──<span class="w"> </span>test_scan_sub01
+<span class="w">    </span>├──<span class="w"> </span>sub01_7_PLASMA.txt
+<span class="w">    </span>└──<span class="w"> </span>sub01_7_anon.v
 
-<span class="m">3</span> directories, <span class="m">7</span> files
+<span class="m">3</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">7</span><span class="w"> </span>files
 </pre></div>
 </div>
 <p>By the end of this document our starting dataset will be fully BIDS compliant
@@ -820,7 +820,7 @@ PET specific text data files can be viewed at
 and easily collected via this
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/archive/refs/heads/main.zip">link</a>
 or be cloned and extracted via git at the command line via:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:bids-standard/bids-starter-kit.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:bids-standard/bids-starter-kit.git
 </pre></div>
 </div>
 <p>The <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/pet"><code class="docutils literal notranslate"><span class="pre">templates/</span></code></a> folder in <code class="docutils literal notranslate"><span class="pre">bids-starter-kit/</span></code> contains a single subject
@@ -829,110 +829,110 @@ Additionally, there exists a <code class="docutils literal notranslate"><span cl
 The <code class="docutils literal notranslate"><span class="pre">Short</span></code> files contain only the required BIDS fields for each modality
 and the <code class="docutils literal notranslate"><span class="pre">Full</span></code> example files contain <em>every</em> field included within the BIDS standard.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>templates/
-├── README
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-├── phenotype
-│   ├── EpilepsyClassification.tsv
-│   └── EpilepsyClassification2017.json
-└── sub-01
-    └── ses-01
-        ├── anat
-        │   ├── sub-01_ses-01_acq-FullExample_run-01_T1w.json
-        │   └── sub-01_ses-01_acq-ShortExample_run-01_T1w.json
-        ├── eeg
-        │   ├── sub-01_ses-01_task-FilterExample_eeg.json
-        │   ├── sub-01_ses-01_task-FullExample_eeg.json
-        │   ├── sub-01_ses-01_task-MinimalExample_eeg.json
-        │   └── sub-01_ses-01_task-ReferenceExample_eeg.json
-        ├── fmap
-        │   ├── sub-01_ses-01_task-Case1_run-01_phasediff.json
-        │   ├── sub-01_ses-01_task-Case2_run-01_phase1.json
-        │   ├── sub-01_ses-01_task-Case2_run-01_phase2.json
-        │   ├── sub-01_ses-01_task-Case3_run-01_fieldmap.json
-        │   └── sub-01_ses-01_task-Case4_dir-LR_run-01_epi.json
-        ├── func
-        │   ├── sub-01_ses-01_task-FullExample_run-01_bold.json
-        │   ├── sub-01_ses-01_task-FullExample_run-01_events.json
-        │   ├── sub-01_ses-01_task-FullExample_run-01_events.tsv
-        │   └── sub-01_ses-01_task-ShortExample_run-01_bold.json
-        ├── ieeg
-        │   ├── sub-01_ses-01_coordsystem.json
-        │   ├── sub-01_ses-01_electrodes.tsv
-        │   ├── sub-01_ses-01_task-LongExample_run-01_channels.tsv
-        │   └── sub-01_ses-01_task-LongExample_run-01_ieeg.json
-        ├── meg
-        │   ├── sub-01_task-FullExample_acq-CTF_run-1_proc-sss_meg.json
-        │   └── sub-01_task-ShortExample_acq-CTF_run-1_proc-sss_meg.json
-        └── pet
-            ├── sub-01_ses-01_recording-AutosamplerShortExample_blood.json
-            ├── sub-01_ses-01_recording-AutosamplerShortExample_blood.tsv
-            ├── sub-01_ses-01_recording-ManualFullExample_blood.json
-            ├── sub-01_ses-01_recording-ManualFullExample_blood.tsv
-            ├── sub-01_ses-01_recording-ManualShortExample_blood.json
-            ├── sub-01_ses-01_recording-ManualShortExample_blood.tsv
-            ├── sub-01_ses-01_task-FullExample_pet.json
-            └── sub-01_ses-01_task-ShortExample_pet.json
+├──<span class="w"> </span>README
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+├──<span class="w"> </span>phenotype
+│<span class="w">   </span>├──<span class="w"> </span>EpilepsyClassification.tsv
+│<span class="w">   </span>└──<span class="w"> </span>EpilepsyClassification2017.json
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>└──<span class="w"> </span>ses-01
+<span class="w">        </span>├──<span class="w"> </span>anat
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_acq-FullExample_run-01_T1w.json
+<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-01_acq-ShortExample_run-01_T1w.json
+<span class="w">        </span>├──<span class="w"> </span>eeg
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-FilterExample_eeg.json
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-FullExample_eeg.json
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-MinimalExample_eeg.json
+<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-01_task-ReferenceExample_eeg.json
+<span class="w">        </span>├──<span class="w"> </span>fmap
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-Case1_run-01_phasediff.json
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-Case2_run-01_phase1.json
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-Case2_run-01_phase2.json
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-Case3_run-01_fieldmap.json
+<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-01_task-Case4_dir-LR_run-01_epi.json
+<span class="w">        </span>├──<span class="w"> </span>func
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-FullExample_run-01_bold.json
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-FullExample_run-01_events.json
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-FullExample_run-01_events.tsv
+<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-01_task-ShortExample_run-01_bold.json
+<span class="w">        </span>├──<span class="w"> </span>ieeg
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_coordsystem.json
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_electrodes.tsv
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-01_task-LongExample_run-01_channels.tsv
+<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-01_task-LongExample_run-01_ieeg.json
+<span class="w">        </span>├──<span class="w"> </span>meg
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_task-FullExample_acq-CTF_run-1_proc-sss_meg.json
+<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_task-ShortExample_acq-CTF_run-1_proc-sss_meg.json
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-AutosamplerShortExample_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-AutosamplerShortExample_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualFullExample_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualFullExample_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualShortExample_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualShortExample_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_task-FullExample_pet.json
+<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-01_task-ShortExample_pet.json
 
-<span class="m">10</span> directories, <span class="m">35</span> files
-machine:bids-starter-kit user$
+<span class="m">10</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">35</span><span class="w"> </span>files
+machine:bids-starter-kit<span class="w"> </span>user$
 </pre></div>
 </div>
 <p>For the purposes of this exercise we will only be focusing on obtaining the minimum required fields,
 thus we collect and copy the following to our own BIDS folder.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the new BIDS folder</span>
-mkdir -p /NewBidsDataSet/sub-01/ses-01/pet
-cp -r /path/to/bids-starter-kit/templates/sub-01/ses-01/pet/* /NewBidsDataSet/sub-01/pet/
+mkdir<span class="w"> </span>-p<span class="w"> </span>/NewBidsDataSet/sub-01/ses-01/pet
+cp<span class="w"> </span>-r<span class="w"> </span>/path/to/bids-starter-kit/templates/sub-01/ses-01/pet/*<span class="w"> </span>/NewBidsDataSet/sub-01/pet/
 </pre></div>
 </div>
 <p>Oops, we forgot to include our dataset specific files.
 Let’s make it easy on ourselves and include the templates for those too.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp /path/to/bids-starter-kit/templates/* /NewBidsDataSet/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>/path/to/bids-starter-kit/templates/*<span class="w"> </span>/NewBidsDataSet/
 </pre></div>
 </div>
 <p>Our skeleton of a data set should now look like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine: Projects user$ tree NewBidsDataSet/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:<span class="w"> </span>Projects<span class="w"> </span>user$<span class="w"> </span>tree<span class="w"> </span>NewBidsDataSet/
 NewBidsDataSet/
-├── README
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-└── sub-01
-    └── ses-01
-        └── pet
-            ├── sub-01_ses-01_recording-AutosamplerShortExample_blood.json
-            ├── sub-01_ses-01_recording-AutosamplerShortExample_blood.tsv
-            ├── sub-01_ses-01_recording-ManualFullExample_blood.json
-            ├── sub-01_ses-01_recording-ManualFullExample_blood.tsv
-            ├── sub-01_ses-01_recording-ManualShortExample_blood.json
-            ├── sub-01_ses-01_recording-ManualShortExample_blood.tsv
-            ├── sub-01_ses-01_task-FullExample_pet.json
-            └── sub-01_ses-01_task-ShortExample_pet.json
+├──<span class="w"> </span>README
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>└──<span class="w"> </span>ses-01
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-AutosamplerShortExample_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-AutosamplerShortExample_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualFullExample_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualFullExample_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualShortExample_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualShortExample_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_task-FullExample_pet.json
+<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-01_task-ShortExample_pet.json
 
-<span class="m">3</span> directories, <span class="m">12</span> files
-machine:Projects user$
+<span class="m">3</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">12</span><span class="w"> </span>files
+machine:Projects<span class="w"> </span>user$
 </pre></div>
 </div>
 <p>Now let’s do the bare minimum and focus only on the short files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Projects user$ rm -rf NewBidsDataSet/sub-01/ses-01/pet/*Full*
-machine:Projects user$ tree NewBidsDataSet
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Projects<span class="w"> </span>user$<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>NewBidsDataSet/sub-01/ses-01/pet/*Full*
+machine:Projects<span class="w"> </span>user$<span class="w"> </span>tree<span class="w"> </span>NewBidsDataSet
 NewBidsDataSet/
-├── README
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-└── sub-01
-    └── ses-01
-        └── pet
-            ├── sub-01_ses-01_recording-AutosamplerShortExample_blood.json
-            ├── sub-01_ses-01_recording-AutosamplerShortExample_blood.tsv
-            ├── sub-01_ses-01_recording-ManualShortExample_blood.json
-            ├── sub-01_ses-01_recording-ManualShortExample_blood.tsv
-            └── sub-01_ses-01_task-ShortExample_pet.json
+├──<span class="w"> </span>README
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>└──<span class="w"> </span>ses-01
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-AutosamplerShortExample_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-AutosamplerShortExample_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualShortExample_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-ManualShortExample_blood.tsv
+<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-01_task-ShortExample_pet.json
 
-<span class="m">3</span> directories, <span class="m">9</span> files
-machine:Projects user$
+<span class="m">3</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">9</span><span class="w"> </span>files
+machine:Projects<span class="w"> </span>user$
 </pre></div>
 </div>
 <p>That certainly looks less daunting, now let’s change the filenames of the templates
@@ -947,32 +947,32 @@ and corresponding label(s) from the filename.
 For more information on labeling see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/09-positron-emission-tomography.html#pet-recording-data">this link</a>.</p>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for those of you in bash land</span>
-machine:Projects user$ <span class="nb">cd</span> NewBidsDataSet/sub-01/ses-01/pet
-machine:pet user$ <span class="k">for</span> i <span class="k">in</span> *ShortExample*<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span> <span class="s2">&quot;`echo </span><span class="nv">$i</span><span class="s2"> | sed &#39;s/ShortExample//&#39;`&quot;</span><span class="p">;</span> <span class="k">done</span>
+machine:Projects<span class="w"> </span>user$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>NewBidsDataSet/sub-01/ses-01/pet
+machine:pet<span class="w"> </span>user$<span class="w"> </span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span>*ShortExample*<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>mv<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;`echo </span><span class="nv">$i</span><span class="s2"> | sed &#39;s/ShortExample//&#39;`&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 
 <span class="c1"># Since we &quot;don&#39;t&quot; know if there are multiple PET image files </span>
 <span class="c1"># we will omit the task label for our PET .json file for now.</span>
-machine:pet user$ mv sub-01_ses-01_task-_pet.json sub-01-ses-01_pet.json
+machine:pet<span class="w"> </span>user$<span class="w"> </span>mv<span class="w"> </span>sub-01_ses-01_task-_pet.json<span class="w"> </span>sub-01-ses-01_pet.json
 </pre></div>
 </div>
 <p>After you’ve renamed your files your directory should look something like:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Projects user$ tree NewBidsDataSet/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Projects<span class="w"> </span>user$<span class="w"> </span>tree<span class="w"> </span>NewBidsDataSet/
 NewBidsDataSet/
-├── README
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-└── sub-01
-    └── ses-01
-        └── pet
-            ├── sub-01_ses-01_pet.json
-            ├── sub-01_ses-01_recording-Autosampler_blood.json
-            ├── sub-01_ses-01_recording-Autosampler_blood.tsv
-            ├── sub-01_ses-01_recording-Manual_blood.json
-            └── sub-01_ses-01_recording-Manual_blood.tsv
+├──<span class="w"> </span>README
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>└──<span class="w"> </span>ses-01
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_pet.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-Autosampler_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-Autosampler_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-Manual_blood.json
+<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-01_recording-Manual_blood.tsv
 
-<span class="m">3</span> directories, <span class="m">9</span> files
-machine:Projects user$
+<span class="m">3</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">9</span><span class="w"> </span>files
+machine:Projects<span class="w"> </span>user$
 </pre></div>
 </div>
 <p>Ok great, but where do the imaging files go?
@@ -998,115 +998,115 @@ or a VM if you want to continue following along.</p>
 <li><p>Once downloaded extract and place <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code> in an appropriate place</p></li>
 </ol>
 <p>If you’re using bash/posix step 3 will resemble something like the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Downloads user$ unzip tpcclib-master.zip
-machine:Downloads user$ mv tpcclib-master /some/directory/you/are/fond/of/ <span class="c1"># could be /usr/bin if you so choose</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Downloads<span class="w"> </span>user$<span class="w"> </span>unzip<span class="w"> </span>tpcclib-master.zip
+machine:Downloads<span class="w"> </span>user$<span class="w"> </span>mv<span class="w"> </span>tpcclib-master<span class="w"> </span>/some/directory/you/are/fond/of/<span class="w"> </span><span class="c1"># could be /usr/bin if you so choose</span>
 </pre></div>
 </div>
 <p>Now you can choose to add <code class="docutils literal notranslate"><span class="pre">tpcclib</span></code> to your path or not, in bash land we do the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Downloads user$ <span class="nb">echo</span> <span class="s2">&quot;export PATH=</span><span class="nv">$PATH</span><span class="s2">:/some/directory/you/are/fond/of/tpcclib-master&quot;</span> &gt;&gt; ~/.bashrc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Downloads<span class="w"> </span>user$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export PATH=</span><span class="nv">$PATH</span><span class="s2">:/some/directory/you/are/fond/of/tpcclib-master&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
 
 <span class="c1"># reload bash shell and verify that library is available</span>
-machine:Downloads user$ <span class="nb">source</span> ~/.bashrc
+machine:Downloads<span class="w"> </span>user$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
 
-machine:Downloads user$ ecat2nii
-  ecat2nii - tpcclib <span class="m">0</span>.7.6 <span class="o">(</span>c<span class="o">)</span> <span class="m">2020</span> by Turku PET Centre
+machine:Downloads<span class="w"> </span>user$<span class="w"> </span>ecat2nii
+<span class="w">  </span>ecat2nii<span class="w"> </span>-<span class="w"> </span>tpcclib<span class="w"> </span><span class="m">0</span>.7.6<span class="w"> </span><span class="o">(</span>c<span class="o">)</span><span class="w"> </span><span class="m">2020</span><span class="w"> </span>by<span class="w"> </span>Turku<span class="w"> </span>PET<span class="w"> </span>Centre
 
-  Converts PET images from ECAT <span class="m">6</span>.3 or <span class="m">7</span> to NIfTI-1 format.
-  Conversion can also be <span class="k">done</span> using ImageConverter <span class="o">(</span>.NET application<span class="o">)</span>.
+<span class="w">  </span>Converts<span class="w"> </span>PET<span class="w"> </span>images<span class="w"> </span>from<span class="w"> </span>ECAT<span class="w"> </span><span class="m">6</span>.3<span class="w"> </span>or<span class="w"> </span><span class="m">7</span><span class="w"> </span>to<span class="w"> </span>NIfTI-1<span class="w"> </span>format.
+<span class="w">  </span>Conversion<span class="w"> </span>can<span class="w"> </span>also<span class="w"> </span>be<span class="w"> </span><span class="k">done</span><span class="w"> </span>using<span class="w"> </span>ImageConverter<span class="w"> </span><span class="o">(</span>.NET<span class="w"> </span>application<span class="o">)</span>.
 
-  Image byte order is determined by the computer where the program is run.
-  NIfTI image format does not contain information on the frame times.
-  Frame <span class="nb">times</span> can be retrieved from SIF file, which can be created optionally.
-  SIF can also be created later using other software.
+<span class="w">  </span>Image<span class="w"> </span>byte<span class="w"> </span>order<span class="w"> </span>is<span class="w"> </span>determined<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span>computer<span class="w"> </span>where<span class="w"> </span>the<span class="w"> </span>program<span class="w"> </span>is<span class="w"> </span>run.
+<span class="w">  </span>NIfTI<span class="w"> </span>image<span class="w"> </span>format<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>contain<span class="w"> </span>information<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>frame<span class="w"> </span>times.
+<span class="w">  </span>Frame<span class="w"> </span><span class="nb">times</span><span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>retrieved<span class="w"> </span>from<span class="w"> </span>SIF<span class="w"> </span>file,<span class="w"> </span>which<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>created<span class="w"> </span>optionally.
+<span class="w">  </span>SIF<span class="w"> </span>can<span class="w"> </span>also<span class="w"> </span>be<span class="w"> </span>created<span class="w"> </span>later<span class="w"> </span>using<span class="w"> </span>other<span class="w"> </span>software.
 
-  Usage: ecat2nii <span class="o">[</span>Options<span class="o">]</span> ecatfile<span class="o">(</span>s<span class="o">)</span>
+<span class="w">  </span>Usage:<span class="w"> </span>ecat2nii<span class="w"> </span><span class="o">[</span>Options<span class="o">]</span><span class="w"> </span>ecatfile<span class="o">(</span>s<span class="o">)</span>
 
-  Options:
-   -O<span class="o">=</span>&lt;output path&gt;
-       Data directory <span class="k">for</span> NIfTI files, <span class="k">if</span> other than the current working path.
-   -dual
-       Save the image <span class="k">in</span> dual file format <span class="o">(</span>the header and voxel data <span class="k">in</span>
-       separate files *.hdr and *.img<span class="o">)</span><span class="p">;</span> single file format <span class="o">(</span>*.nii<span class="o">)</span>
-       is the default.
-   -sif
-       SIF is saved with NIfTI<span class="p">;</span> note that existing SIF will be overwritten.
-   -h, --help
-       Display usage information on standard output and exit.
-   -v, --version
-       Display version and compile information on standard output and exit.
-   -d<span class="o">[</span>n<span class="o">]</span>, --debug<span class="o">[=</span>n<span class="o">]</span>, --verbose<span class="o">[=</span>n<span class="o">]</span>
-       Set the level <span class="o">(</span>n<span class="o">)</span> of debugging messages and listings.
-   -q, --quiet
-       Suppress displaying normal results on standard output.
-   -s, --silent
-       Suppress displaying anything except errors.
+<span class="w">  </span>Options:
+<span class="w">   </span>-O<span class="o">=</span>&lt;output<span class="w"> </span>path&gt;
+<span class="w">       </span>Data<span class="w"> </span>directory<span class="w"> </span><span class="k">for</span><span class="w"> </span>NIfTI<span class="w"> </span>files,<span class="w"> </span><span class="k">if</span><span class="w"> </span>other<span class="w"> </span>than<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>working<span class="w"> </span>path.
+<span class="w">   </span>-dual
+<span class="w">       </span>Save<span class="w"> </span>the<span class="w"> </span>image<span class="w"> </span><span class="k">in</span><span class="w"> </span>dual<span class="w"> </span>file<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>the<span class="w"> </span>header<span class="w"> </span>and<span class="w"> </span>voxel<span class="w"> </span>data<span class="w"> </span><span class="k">in</span>
+<span class="w">       </span>separate<span class="w"> </span>files<span class="w"> </span>*.hdr<span class="w"> </span>and<span class="w"> </span>*.img<span class="o">)</span><span class="p">;</span><span class="w"> </span>single<span class="w"> </span>file<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>*.nii<span class="o">)</span>
+<span class="w">       </span>is<span class="w"> </span>the<span class="w"> </span>default.
+<span class="w">   </span>-sif
+<span class="w">       </span>SIF<span class="w"> </span>is<span class="w"> </span>saved<span class="w"> </span>with<span class="w"> </span>NIfTI<span class="p">;</span><span class="w"> </span>note<span class="w"> </span>that<span class="w"> </span>existing<span class="w"> </span>SIF<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>overwritten.
+<span class="w">   </span>-h,<span class="w"> </span>--help
+<span class="w">       </span>Display<span class="w"> </span>usage<span class="w"> </span>information<span class="w"> </span>on<span class="w"> </span>standard<span class="w"> </span>output<span class="w"> </span>and<span class="w"> </span>exit.
+<span class="w">   </span>-v,<span class="w"> </span>--version
+<span class="w">       </span>Display<span class="w"> </span>version<span class="w"> </span>and<span class="w"> </span>compile<span class="w"> </span>information<span class="w"> </span>on<span class="w"> </span>standard<span class="w"> </span>output<span class="w"> </span>and<span class="w"> </span>exit.
+<span class="w">   </span>-d<span class="o">[</span>n<span class="o">]</span>,<span class="w"> </span>--debug<span class="o">[=</span>n<span class="o">]</span>,<span class="w"> </span>--verbose<span class="o">[=</span>n<span class="o">]</span>
+<span class="w">       </span>Set<span class="w"> </span>the<span class="w"> </span>level<span class="w"> </span><span class="o">(</span>n<span class="o">)</span><span class="w"> </span>of<span class="w"> </span>debugging<span class="w"> </span>messages<span class="w"> </span>and<span class="w"> </span>listings.
+<span class="w">   </span>-q,<span class="w"> </span>--quiet
+<span class="w">       </span>Suppress<span class="w"> </span>displaying<span class="w"> </span>normal<span class="w"> </span>results<span class="w"> </span>on<span class="w"> </span>standard<span class="w"> </span>output.
+<span class="w">   </span>-s,<span class="w"> </span>--silent
+<span class="w">       </span>Suppress<span class="w"> </span>displaying<span class="w"> </span>anything<span class="w"> </span>except<span class="w"> </span>errors.
 
-  Example:
-    ecat2nii *.v
+<span class="w">  </span>Example:
+<span class="w">    </span>ecat2nii<span class="w"> </span>*.v
 
-  See also: nii2ecat, nii_lhdr, ecat2ana, eframe, img2flat
+<span class="w">  </span>See<span class="w"> </span>also:<span class="w"> </span>nii2ecat,<span class="w"> </span>nii_lhdr,<span class="w"> </span>ecat2ana,<span class="w"> </span>eframe,<span class="w"> </span>img2flat
 
-  Keywords: image, format conversion, ECAT, NIfTI
+<span class="w">  </span>Keywords:<span class="w"> </span>image,<span class="w"> </span>format<span class="w"> </span>conversion,<span class="w"> </span>ECAT,<span class="w"> </span>NIfTI
 
-  This program comes with ABSOLUTELY NO WARRANTY.
-  This is free software, and you are welcome to redistribute it under
-  GNU General Public License. Source codes are available <span class="k">in</span>
-  https://gitlab.utu.fi/vesoik/tpcclib.git
+<span class="w">  </span>This<span class="w"> </span>program<span class="w"> </span>comes<span class="w"> </span>with<span class="w"> </span>ABSOLUTELY<span class="w"> </span>NO<span class="w"> </span>WARRANTY.
+<span class="w">  </span>This<span class="w"> </span>is<span class="w"> </span>free<span class="w"> </span>software,<span class="w"> </span>and<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>welcome<span class="w"> </span>to<span class="w"> </span>redistribute<span class="w"> </span>it<span class="w"> </span>under
+<span class="w">  </span>GNU<span class="w"> </span>General<span class="w"> </span>Public<span class="w"> </span>License.<span class="w"> </span>Source<span class="w"> </span>codes<span class="w"> </span>are<span class="w"> </span>available<span class="w"> </span><span class="k">in</span>
+<span class="w">  </span>https://gitlab.utu.fi/vesoik/tpcclib.git
 </pre></div>
 </div>
 <p>Congrats, you’ve installed <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code>, you’re one step closer to bidsifying your dataset</p>
 <p>Now, let’s convert one of our PET ECAT images
 and move it to its final destination with <code class="docutils literal notranslate"><span class="pre">ecat2nii</span></code> that we just installed.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># first create nifti&#39;s from the ecat images</span>
-machine:OldNotBidsPETDataSet user$ ecat2nii retest_scan_sub01/sub01_8_anon.v
-retest_scan_sub01/sub01_8_anon.v :
-  processing retest_scan_sub01/sub01_8_anon.v
-  <span class="m">45</span> frame<span class="o">(</span>s<span class="o">)</span> processed.
+machine:OldNotBidsPETDataSet<span class="w"> </span>user$<span class="w"> </span>ecat2nii<span class="w"> </span>retest_scan_sub01/sub01_8_anon.v
+retest_scan_sub01/sub01_8_anon.v<span class="w"> </span>:
+<span class="w">  </span>processing<span class="w"> </span>retest_scan_sub01/sub01_8_anon.v
+<span class="w">  </span><span class="m">45</span><span class="w"> </span>frame<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>processed.
 
-machine:OldNotBidsPETDataSet user$ ecat2nii test_scan_sub01/sub01_7_anon.v
-test_scan_sub01/sub01_7_anon.v :
-  processing test_scan_sub01/sub01_7_anon.v
-  <span class="m">45</span> frame<span class="o">(</span>s<span class="o">)</span> processed.
+machine:OldNotBidsPETDataSet<span class="w"> </span>user$<span class="w"> </span>ecat2nii<span class="w"> </span>test_scan_sub01/sub01_7_anon.v
+test_scan_sub01/sub01_7_anon.v<span class="w"> </span>:
+<span class="w">  </span>processing<span class="w"> </span>test_scan_sub01/sub01_7_anon.v
+<span class="w">  </span><span class="m">45</span><span class="w"> </span>frame<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>processed.
 
 <span class="c1"># great success! let&#39;s see what we got</span>
-machine:OldNotBidsPETDataSet user$ tree
+machine:OldNotBidsPETDataSet<span class="w"> </span>user$<span class="w"> </span>tree
 .
-├── MR_image
-│   ├── <span class="m">24310</span>.cropped.hdr
-│   ├── <span class="m">24310</span>.cropped.img
-│   └── 24310_rois.mat
-├── retest_scan_sub01
-│   ├── sub01_8_PLASMA.txt
-│   └── sub01_8_anon.v
-├── sub01_7_anon.nii
-├── sub01_8_anon.nii
-└── test_scan_sub01
-    ├── sub01_7_PLASMA.txt
-    └── sub01_7_anon.v
+├──<span class="w"> </span>MR_image
+│<span class="w">   </span>├──<span class="w"> </span><span class="m">24310</span>.cropped.hdr
+│<span class="w">   </span>├──<span class="w"> </span><span class="m">24310</span>.cropped.img
+│<span class="w">   </span>└──<span class="w"> </span>24310_rois.mat
+├──<span class="w"> </span>retest_scan_sub01
+│<span class="w">   </span>├──<span class="w"> </span>sub01_8_PLASMA.txt
+│<span class="w">   </span>└──<span class="w"> </span>sub01_8_anon.v
+├──<span class="w"> </span>sub01_7_anon.nii
+├──<span class="w"> </span>sub01_8_anon.nii
+└──<span class="w"> </span>test_scan_sub01
+<span class="w">    </span>├──<span class="w"> </span>sub01_7_PLASMA.txt
+<span class="w">    </span>└──<span class="w"> </span>sub01_7_anon.v
 
-<span class="m">3</span> directories, <span class="m">9</span> files
+<span class="m">3</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">9</span><span class="w"> </span>files
 
 <span class="c1"># not where we want those nifti&#39;s so let&#39;s move them</span>
-machine:OldNotBidsPETDataSet user$ mv *.nii ../NewBidsDataSet/sub-01/
+machine:OldNotBidsPETDataSet<span class="w"> </span>user$<span class="w"> </span>mv<span class="w"> </span>*.nii<span class="w"> </span>../NewBidsDataSet/sub-01/
 
-machine:NewBidsDataSet user$ tree
+machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>tree
 .
-├── README
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-└── sub-01
-    └── test_scan_sub01/sub01_7_anon.nii
-    └── test_scan_sub01/sub01_8_anon.nii
-    └── ses-01
-        └── pet
-            ├── sub-01_ses-01_pet.json
-            ├── sub-01_ses-01_recording-Autosampler_blood.json
-            ├── sub-01_ses-01_recording-Autosampler_blood.tsv
-            ├── sub-01_ses-01_recording-Manual_blood.json
-            ├── sub-01_ses-01_recording-Manual_blood.tsv
+├──<span class="w"> </span>README
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>└──<span class="w"> </span>test_scan_sub01/sub01_7_anon.nii
+<span class="w">    </span>└──<span class="w"> </span>test_scan_sub01/sub01_8_anon.nii
+<span class="w">    </span>└──<span class="w"> </span>ses-01
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_pet.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-Autosampler_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-Autosampler_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-Manual_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-01_recording-Manual_blood.tsv
 
-<span class="m">3</span> directories, <span class="m">11</span> files
+<span class="m">3</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">11</span><span class="w"> </span>files
 </pre></div>
 </div>
 <p>Before we get too carried away, lets use populate our <code class="docutils literal notranslate"><span class="pre">*_pet.json</span></code> files
@@ -1116,72 +1116,72 @@ for header and subheader info <a class="reference external" href="https://github
 All it does is use Python libraries Nibabel and Argparse
 to collect and spit out the header information from an ECAT file.</p>
 <p>You can use and install it via pip and use it on your command line like below:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install ecatdump
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ecatdump
 
 <span class="c1"># use the --json argument to extract all metadata contained in the ecat including subheaders</span>
-ecatdump  anon_sub01_8.v --json &gt; sub01_8_anon.headerdata
+ecatdump<span class="w">  </span>anon_sub01_8.v<span class="w"> </span>--json<span class="w"> </span>&gt;<span class="w"> </span>sub01_8_anon.headerdata
 
 <span class="c1"># using it without the --json argument will produce this output</span>
-ecat dump anon_sub01_8.v
-magic_number: MATRIX72v
-original_filename: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-sw_version: <span class="m">72</span>
-system_type: <span class="m">962</span>
-file_type: <span class="m">7</span>
-serial_number: hrplus
-scan_start_time: <span class="m">1111111111111</span>
-isotope_name: C-11
-isotope_halflife: <span class="m">1223</span>.0
-radiopharmaceutical: C-11 Flumazenil
-gantry_tilt: <span class="m">0</span>.0
-gantry_rotation: <span class="m">0</span>.0
-bed_elevation: <span class="m">82</span>.6520004272461
-intrinsic_tilt: <span class="m">0</span>.0
-wobble_speed: <span class="m">0</span>
-transm_source_type: <span class="m">2</span>
-distance_scanned: <span class="m">15</span>.520000457763672
-transaxial_fov: <span class="m">58</span>.29999923706055
-angular_compression: <span class="m">1</span>
-coin_samp_mode: <span class="m">0</span>
-axial_samp_mode: <span class="m">0</span>
-ecat_calibration_factor: <span class="m">9698905</span>.0
-calibration_unitS: <span class="m">1</span>
-calibration_units_type: <span class="m">1</span>
-compression_code: <span class="m">0</span>
-study_type: XXXXXXXXXXXX
-patient_id: <span class="m">0000000000000000</span>
-patient_name: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-patient_sex: F
-patient_dexterity: U
-patient_age: <span class="m">0</span>.0
-patient_height: <span class="m">0</span>.0
-patient_weight: <span class="m">0</span>.0
-patient_birth_date: <span class="m">0</span>
+ecat<span class="w"> </span>dump<span class="w"> </span>anon_sub01_8.v
+magic_number:<span class="w"> </span>MATRIX72v
+original_filename:<span class="w"> </span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+sw_version:<span class="w"> </span><span class="m">72</span>
+system_type:<span class="w"> </span><span class="m">962</span>
+file_type:<span class="w"> </span><span class="m">7</span>
+serial_number:<span class="w"> </span>hrplus
+scan_start_time:<span class="w"> </span><span class="m">1111111111111</span>
+isotope_name:<span class="w"> </span>C-11
+isotope_halflife:<span class="w"> </span><span class="m">1223</span>.0
+radiopharmaceutical:<span class="w"> </span>C-11<span class="w"> </span>Flumazenil
+gantry_tilt:<span class="w"> </span><span class="m">0</span>.0
+gantry_rotation:<span class="w"> </span><span class="m">0</span>.0
+bed_elevation:<span class="w"> </span><span class="m">82</span>.6520004272461
+intrinsic_tilt:<span class="w"> </span><span class="m">0</span>.0
+wobble_speed:<span class="w"> </span><span class="m">0</span>
+transm_source_type:<span class="w"> </span><span class="m">2</span>
+distance_scanned:<span class="w"> </span><span class="m">15</span>.520000457763672
+transaxial_fov:<span class="w"> </span><span class="m">58</span>.29999923706055
+angular_compression:<span class="w"> </span><span class="m">1</span>
+coin_samp_mode:<span class="w"> </span><span class="m">0</span>
+axial_samp_mode:<span class="w"> </span><span class="m">0</span>
+ecat_calibration_factor:<span class="w"> </span><span class="m">9698905</span>.0
+calibration_unitS:<span class="w"> </span><span class="m">1</span>
+calibration_units_type:<span class="w"> </span><span class="m">1</span>
+compression_code:<span class="w"> </span><span class="m">0</span>
+study_type:<span class="w"> </span>XXXXXXXXXXXX
+patient_id:<span class="w"> </span><span class="m">0000000000000000</span>
+patient_name:<span class="w"> </span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+patient_sex:<span class="w"> </span>F
+patient_dexterity:<span class="w"> </span>U
+patient_age:<span class="w"> </span><span class="m">0</span>.0
+patient_height:<span class="w"> </span><span class="m">0</span>.0
+patient_weight:<span class="w"> </span><span class="m">0</span>.0
+patient_birth_date:<span class="w"> </span><span class="m">0</span>
 physician_name:
 operator_name:
-study_description: C-11 Dynamic-1
-acquisition_type: <span class="m">4</span>
-patient_orientation: <span class="m">3</span>
-facility_name: ECAT
-num_planes: <span class="m">63</span>
-num_frames: <span class="m">20</span>
-num_gates: <span class="m">1</span>
-num_bed_pos: <span class="m">0</span>
-init_bed_position: <span class="m">50</span>.617000579833984
-bed_position: <span class="o">[</span><span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0, <span class="m">0</span>.0<span class="o">]</span>
-plane_separation: <span class="m">0</span>.24250000715255737
-lwr_sctr_thres: <span class="m">0</span>
-lwr_true_thres: <span class="m">350</span>
-upr_true_thres: <span class="m">650</span>
+study_description:<span class="w"> </span>C-11<span class="w"> </span>Dynamic-1
+acquisition_type:<span class="w"> </span><span class="m">4</span>
+patient_orientation:<span class="w"> </span><span class="m">3</span>
+facility_name:<span class="w"> </span>ECAT
+num_planes:<span class="w"> </span><span class="m">63</span>
+num_frames:<span class="w"> </span><span class="m">20</span>
+num_gates:<span class="w"> </span><span class="m">1</span>
+num_bed_pos:<span class="w"> </span><span class="m">0</span>
+init_bed_position:<span class="w"> </span><span class="m">50</span>.617000579833984
+bed_position:<span class="w"> </span><span class="o">[</span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0,<span class="w"> </span><span class="m">0</span>.0<span class="o">]</span>
+plane_separation:<span class="w"> </span><span class="m">0</span>.24250000715255737
+lwr_sctr_thres:<span class="w"> </span><span class="m">0</span>
+lwr_true_thres:<span class="w"> </span><span class="m">350</span>
+upr_true_thres:<span class="w"> </span><span class="m">650</span>
 user_process_code:
-acquisition_mode: <span class="m">0</span>
-bin_size: <span class="m">0</span>.22499999403953552
-branching_fraction: <span class="m">1</span>.0
-dose_start_time: <span class="m">111111111111</span>
-dosage: <span class="m">0</span>.0
-well_counter_corr_factor: <span class="m">1</span>.0
+acquisition_mode:<span class="w"> </span><span class="m">0</span>
+bin_size:<span class="w"> </span><span class="m">0</span>.22499999403953552
+branching_fraction:<span class="w"> </span><span class="m">1</span>.0
+dose_start_time:<span class="w"> </span><span class="m">111111111111</span>
+dosage:<span class="w"> </span><span class="m">0</span>.0
+well_counter_corr_factor:<span class="w"> </span><span class="m">1</span>.0
 data_units:
-septa_state: <span class="m">1</span>
+septa_state:<span class="w"> </span><span class="m">1</span>
 fill:
 </pre></div>
 </div>
@@ -1268,147 +1268,147 @@ to produce a sidecar file like the following for your nifti image.
 Repeat this process for each image file/nifti you’re including
 while reusing the filename for each image
 and while substituting the extention to <code class="docutils literal notranslate"><span class="pre">.json</span></code> instead of <code class="docutils literal notranslate"><span class="pre">.nii</span></code>.</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;Manufacturer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Siemens&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ManufacturersModelName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HR+&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bq/mL&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;BodyPart&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Brain&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;TracerName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DASB&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;TracerRadionuclide&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C11&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;TracerMolecularWeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">282.39</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;TracerMolecularWeightUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;g/mol&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;InjectedRadioactivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">629.74</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;InjectedRadioactivityUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MBq&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;MolarActivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">55.5</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;MolarActivityUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MBq/nmol&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;SpecificRadioactivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">196.53670455752683</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;SpecificRadioactivityUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MBq/ug&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;Purity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ModeOfAdministration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bolus&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;InjectedMass&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.2041852</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;InjectedMassUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ug&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;AcquisitionMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;list mode&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ImageDecayCorrected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ImageDecayCorrectionTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;TimeZero&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;17:28:40&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ScanStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;InjectionStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;FrameDuration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mf">300.066</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;FrameTimesStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">360</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">900</span><span class="p">,</span><span class="w"> </span><span class="mf">1200.066</span><span class="p">,</span><span class="w"> </span><span class="mf">1800.066</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">2400.066</span><span class="p">,</span><span class="w"> </span><span class="mf">3000.066</span><span class="p">,</span><span class="w"> </span><span class="mf">3600.066</span><span class="p">,</span><span class="w"> </span><span class="mf">4200.066</span><span class="p">,</span><span class="w"> </span><span class="mf">4800.066</span><span class="p">,</span><span class="w"> </span><span class="mf">5400.066</span><span class="p">,</span><span class="w"> </span><span class="mf">6000.066</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">6600.066</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ReconMethodParameterLabels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;lower_threshold&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;upper_threshold&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;recon_zoom&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ReconMethodParameterUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;keV&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;keV&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ReconMethodParameterValues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">350</span><span class="p">,</span><span class="w"> </span><span class="mi">650</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ScaleFactor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="mf">8.548972374455843e-8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.7544691388593492e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">1.3221580275057931e-7</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">1.2703590357432404e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1155360368775291e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2050951997698576e-7</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">2.184752503353593e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">1.7056818535365892e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">1.6606901453997125e-7</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">1.5532630470715958e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.19175134930083e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0248222654117853e-7</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">2.277063231304055e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.425933018912474e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.3802238047210267e-7</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">2.514642005735368e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.802861729378492e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.797820570776821e-7</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">3.5299004252919985e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">4.6313422785715375e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">4.904185857412813e-7</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ScatterFraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;DecayCorrectionFactor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="mf">1.0056782960891724</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0171427726745605</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0287377834320068</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">1.0522810220718384</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0886797904968262</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1263376474380493</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">1.1851094961166382</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2685142755508423</span><span class="p">,</span><span class="w"> </span><span class="mf">1.3577889204025269</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">1.5278561115264893</span><span class="p">,</span><span class="w"> </span><span class="mf">1.811025857925415</span><span class="p">,</span><span class="w"> </span><span class="mf">2.328737735748291</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">3.271937131881714</span><span class="p">,</span><span class="w"> </span><span class="mf">4.597157001495361</span><span class="p">,</span><span class="w"> </span><span class="mf">6.459125518798828</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">9.075239181518555</span><span class="p">,</span><span class="w"> </span><span class="mf">12.750947952270508</span><span class="p">,</span><span class="w"> </span><span class="mf">17.915414810180664</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="mf">25.1716251373291</span><span class="p">,</span><span class="w"> </span><span class="mf">35.36678695678711</span><span class="p">,</span><span class="w"> </span><span class="mf">49.69125747680664</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;PromptRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;RandomRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;SinglesRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ReconMethodName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vendor&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ReconFilterType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Shepp 0.5&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;All-pass 0.4&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ReconFilterSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;AttenuationCorrection&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transmission scan&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Manufacturer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Siemens&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ManufacturersModelName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HR+&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bq/mL&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;BodyPart&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Brain&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;TracerName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DASB&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;TracerRadionuclide&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C11&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;TracerMolecularWeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">282.39</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;TracerMolecularWeightUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;g/mol&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;InjectedRadioactivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">629.74</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;InjectedRadioactivityUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MBq&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;MolarActivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">55.5</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;MolarActivityUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MBq/nmol&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;SpecificRadioactivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">196.53670455752683</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;SpecificRadioactivityUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MBq/ug&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Purity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ModeOfAdministration&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bolus&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;InjectedMass&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.2041852</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;InjectedMassUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ug&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;AcquisitionMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;list mode&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ImageDecayCorrected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ImageDecayCorrectionTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;TimeZero&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;17:28:40&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ScanStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;InjectionStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;FrameDuration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mf">300.066</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span>
+<span class="w">        </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;FrameTimesStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="mi">360</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">900</span><span class="p">,</span><span class="w"> </span><span class="mf">1200.066</span><span class="p">,</span><span class="w"> </span><span class="mf">1800.066</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">2400.066</span><span class="p">,</span><span class="w"> </span><span class="mf">3000.066</span><span class="p">,</span><span class="w"> </span><span class="mf">3600.066</span><span class="p">,</span><span class="w"> </span><span class="mf">4200.066</span><span class="p">,</span><span class="w"> </span><span class="mf">4800.066</span><span class="p">,</span><span class="w"> </span><span class="mf">5400.066</span><span class="p">,</span><span class="w"> </span><span class="mf">6000.066</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">6600.066</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;ReconMethodParameterLabels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;lower_threshold&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;upper_threshold&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;recon_zoom&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;ReconMethodParameterUnits&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;keV&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;keV&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;ReconMethodParameterValues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">350</span><span class="p">,</span><span class="w"> </span><span class="mi">650</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;ScaleFactor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mf">8.548972374455843e-8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.7544691388593492e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">1.3221580275057931e-7</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">1.2703590357432404e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1155360368775291e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2050951997698576e-7</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">2.184752503353593e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">1.7056818535365892e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">1.6606901453997125e-7</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">1.5532630470715958e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.19175134930083e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0248222654117853e-7</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">2.277063231304055e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.425933018912474e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.3802238047210267e-7</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">2.514642005735368e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.802861729378492e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">2.797820570776821e-7</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">3.5299004252919985e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">4.6313422785715375e-7</span><span class="p">,</span><span class="w"> </span><span class="mf">4.904185857412813e-7</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;ScatterFraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;DecayCorrectionFactor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mf">1.0056782960891724</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0171427726745605</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0287377834320068</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">1.0522810220718384</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0886797904968262</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1263376474380493</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">1.1851094961166382</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2685142755508423</span><span class="p">,</span><span class="w"> </span><span class="mf">1.3577889204025269</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">1.5278561115264893</span><span class="p">,</span><span class="w"> </span><span class="mf">1.811025857925415</span><span class="p">,</span><span class="w"> </span><span class="mf">2.328737735748291</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">3.271937131881714</span><span class="p">,</span><span class="w"> </span><span class="mf">4.597157001495361</span><span class="p">,</span><span class="w"> </span><span class="mf">6.459125518798828</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">9.075239181518555</span><span class="p">,</span><span class="w"> </span><span class="mf">12.750947952270508</span><span class="p">,</span><span class="w"> </span><span class="mf">17.915414810180664</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">25.1716251373291</span><span class="p">,</span><span class="w"> </span><span class="mf">35.36678695678711</span><span class="p">,</span><span class="w"> </span><span class="mf">49.69125747680664</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;PromptRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;RandomRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;SinglesRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;ReconMethodName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vendor&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ReconFilterType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Shepp 0.5&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;All-pass 0.4&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;ReconFilterSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;AttenuationCorrection&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transmission scan&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Alright, now we’re getting somewhere, let’s rename these niftis
 so that it’s easier to distinguish between them
 and so that they’re both BIDS compliant.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># first lets divide the scans into their own sessions</span>
-machine:NewBidsDataSet user$ mv sub-01/ses-01/ sub-01/ses-testscan/
+machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>mv<span class="w"> </span>sub-01/ses-01/<span class="w"> </span>sub-01/ses-testscan/
 
 <span class="c1"># and make a second session folder for the rescan</span>
-machine:NewBidsDataSet user$ cp -r sub-01/ses-testscan/ sub-01/ses-retestscan/
-machine:NewBidsDataSet user$ mv sub-01/sub01_7_anon.nii sub-01/ses-testscan/pet/sub-01_ses-testscan_pet.nii
-machine:NewBidsDataSet user$ mv sub-01/sub01_8_anon.nii sub-01/ses-retestscan/pet/sub-01_ses-retestscan_pet.nii
+machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>sub-01/ses-testscan/<span class="w"> </span>sub-01/ses-retestscan/
+machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>mv<span class="w"> </span>sub-01/sub01_7_anon.nii<span class="w"> </span>sub-01/ses-testscan/pet/sub-01_ses-testscan_pet.nii
+machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>mv<span class="w"> </span>sub-01/sub01_8_anon.nii<span class="w"> </span>sub-01/ses-retestscan/pet/sub-01_ses-retestscan_pet.nii
 
 <span class="c1"># some additional bash later and ......</span>
-machine:NewBidsDataSet user$ tree
+machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>tree
 .
-├── README
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-└── sub-01
-    ├── ses-retestscan
-    │   └── pet
-    │       ├── sub-01_ses-retestscan_pet.json
-    │       ├── sub-01_ses-retestscan_recording-Autosampler_blood.json
-    │       ├── sub-01_ses-retestscan_recording-Autosampler_blood.tsv
-    │       ├── sub-01_ses-retestscan_recording-Manual_blood.json
-    │       ├── sub-01_ses-retestscan_recording-Manual_blood.tsv
-    │       └── sub-01_ses-retestscan_pet.nii
-    └── ses-testscan
-        └── pet
-            ├── sub-01_ses-testscan_pet.json
-            ├── sub-01_ses-testscan_recording-Autosampler_blood.json
-            ├── sub-01_ses-testscan_recording-Autosampler_blood.tsv
-            ├── sub-01_ses-testscan_recording-Manual_blood.json
-            ├── sub-01_ses-testscan_recording-Manual_blood.tsv
-            └── sub-01_ses-testscan_pet.nii
+├──<span class="w"> </span>README
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>├──<span class="w"> </span>ses-retestscan
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>pet
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_pet.json
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_recording-Autosampler_blood.json
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_recording-Autosampler_blood.tsv
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_recording-Manual_blood.json
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_recording-Manual_blood.tsv
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>sub-01_ses-retestscan_pet.nii
+<span class="w">    </span>└──<span class="w"> </span>ses-testscan
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_pet.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_recording-Autosampler_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_recording-Autosampler_blood.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_recording-Manual_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_recording-Manual_blood.tsv
+<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-testscan_pet.nii
 
-<span class="m">5</span> directories, <span class="m">16</span> files
+<span class="m">5</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">16</span><span class="w"> </span>files
 </pre></div>
 </div>
 <p>That looks better, but we need to do something about our tabular/text data.
 Since we’re only dealing with manual blood samples we can omit the autosampler
 files from our data structure.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:NewBidsDataSet user$ rm -rf sub-01/ses-retestscan/pet/*Auto*
-machine:NewBidsDataSet user$ rm -rf sub-01/ses-testscan/pet/*Auto*
-machine:NewBidsDataSet user$ tree
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>sub-01/ses-retestscan/pet/*Auto*
+machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>sub-01/ses-testscan/pet/*Auto*
+machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>tree
 .
-├── README
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-└── sub-01
-    ├── ses-retestscan
-    │   └── pet
-    │       ├── sub-01_ses-retestscan_pet.json
-    │       ├── sub-01_ses-retestscan_recording-Manual_blood.json
-    │       ├── sub-01_ses-retestscan_recording-Manual_blood.tsv
-    │       └── sub-01_ses-retestscan_pet.nii
-    └── ses-testscan
-        └── pet
-            ├── sub-01_ses-testscan_pet.json
-            ├── sub-01_ses-testscan_recording-Manual_blood.json
-            ├── sub-01_ses-testscan_recording-Manual_blood.tsv
-            └── sub-01_ses-testscan_run-testscan_pet.nii
+├──<span class="w"> </span>README
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>├──<span class="w"> </span>ses-retestscan
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>pet
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_pet.json
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_recording-Manual_blood.json
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_recording-Manual_blood.tsv
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>sub-01_ses-retestscan_pet.nii
+<span class="w">    </span>└──<span class="w"> </span>ses-testscan
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_pet.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_recording-Manual_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_recording-Manual_blood.tsv
+<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-testscan_run-testscan_pet.nii
 </pre></div>
 </div>
 <p>That looks better, now that we’ve got our nifti’s sorted
@@ -1418,26 +1418,26 @@ let’s do something about filling out our <code class="docutils literal notrans
 <img alt="sub01_7_PLASMA.txt screenshot of excell" src="https://i.imgur.com/xBgDZcI.png" /></p>
 <p>Since our plasma data is available we need to indicate as such
 in our <code class="docutils literal notranslate"><span class="pre">*_blood.json</span></code> files so we do so now:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;PlasmaAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;MetaboliteAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;WholeBloodAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;DispersionCorrected&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;MetaboliteMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HPLC&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;MetaboliteRecoveryCorrectionApplied&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Time in relation to time zero defined by the _pet.json&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;plasma_radioactivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Radioactivity in plasma samples&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bq/mL&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;metabolite_parent_fraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parent fraction of the radiotracer.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unitless&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;PlasmaAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;MetaboliteAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;WholeBloodAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;DispersionCorrected&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;MetaboliteMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HPLC&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;MetaboliteRecoveryCorrectionApplied&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Time in relation to time zero defined by the _pet.json&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;plasma_radioactivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Radioactivity in plasma samples&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bq/mL&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;metabolite_parent_fraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parent fraction of the radiotracer.&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unitless&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Additionally, we can open our <code class="docutils literal notranslate"><span class="pre">*_blood.tsv</span></code>
@@ -1466,28 +1466,28 @@ to be included):</p>
 and/or for each recommended field
 that you wish to include from your non-BIDS dataset into this bidsified one.
 The final results of our efforts leads us to having this final <code class="docutils literal notranslate"><span class="pre">*blood_.json</span></code>:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;PlasmaAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;PlasmaFreeFraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">15.062331</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;PlasmaFreeFractionMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ultrafiltration&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;WholeBloodAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;DispersionCorrected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;MetaboliteAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;MetaboliteMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HPLC&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;MetaboliteRecoveryCorrectionApplied&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Time in relation to time zero defined by the _pet.json&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;plasma_radioactivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Radioactivity in plasma samples&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bq/mL&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;metabolite_parent_fraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parent fraction of the radiotracer&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arbitrary&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;PlasmaAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;PlasmaFreeFraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">15.062331</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;PlasmaFreeFractionMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ultrafiltration&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;WholeBloodAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;DispersionCorrected&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;MetaboliteAvail&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;MetaboliteMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HPLC&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;MetaboliteRecoveryCorrectionApplied&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Time in relation to time zero defined by the _pet.json&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;plasma_radioactivity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Radioactivity in plasma samples&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bq/mL&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;metabolite_parent_fraction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parent fraction of the radiotracer&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arbitrary&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -1499,28 +1499,28 @@ from the start you would be correct.</p>
 <a class="reference external" href="https://bids-standard.github.io/bids-starter-kit/tutorials/mri.html">here</a>.</p>
 <p>Once you’ve handled converting your MR images into BIDS
 your directory should look like the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:NewBidsDataSet user$ tree
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:NewBidsDataSet<span class="w"> </span>user$<span class="w"> </span>tree
 .
-├── README
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-└── sub-01
-    ├── ses-retestscan
-    │   └── pet
-    │       ├── sub-01_ses-retestscan_pet.json
-    │       ├── sub-01_ses-retestscan_recording-Manual_blood.json
-    │       ├── sub-01_ses-retestscan_recording-Manual_blood.tsv
-    │       └── sub-01_ses-retestscan_pet.nii
-    └── ses-testscan
-        ├── anat
-        │   ├── sub-01_ses-testscan_T1w.json
-        │   └── sub-01_ses-testscan_T1w.nii
-        └── pet
-            ├── sub-01_ses-testscan_pet.json
-            ├── sub-01_ses-testscan_recording-Manual_blood.json
-            ├── sub-01_ses-testscan_recording-Manual_blood.tsv
-            └── sub-01_ses-testscan_pet.nii
+├──<span class="w"> </span>README
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>├──<span class="w"> </span>ses-retestscan
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>pet
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_pet.json
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_recording-Manual_blood.json
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-retestscan_recording-Manual_blood.tsv
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>sub-01_ses-retestscan_pet.nii
+<span class="w">    </span>└──<span class="w"> </span>ses-testscan
+<span class="w">        </span>├──<span class="w"> </span>anat
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-testscan_T1w.json
+<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-testscan_T1w.nii
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_pet.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_recording-Manual_blood.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-testscan_recording-Manual_blood.tsv
+<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-testscan_pet.nii
 </pre></div>
 </div>
 </div>
@@ -1540,25 +1540,25 @@ to collect and install the validator.</p>
 <h3>Validating your new dataset<a class="headerlink" href="#validating-your-new-dataset" title="Permalink to this headline">¶</a></h3>
 <p>Using the validator installed above in the previous step point it at your data
 and check to see if your conversion was successful:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Projects user$ bids-validator NewBidsDataSet/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine:Projects<span class="w"> </span>user$<span class="w"> </span>bids-validator<span class="w"> </span>NewBidsDataSet/
 bids-validator@1.7.2
 
- <span class="m">1</span>: <span class="o">[</span>ERR<span class="o">]</span> Invalid JSON file. The file is not formatted according the schema. <span class="o">(</span>code: <span class="m">55</span> - JSON_SCHEMA_VALIDATION_ERROR<span class="o">)</span>
-  ./dataset_description.json
-   Evidence: .DatasetType should be equal to one of the allowed values
-  ./dataset_description.json
-   Evidence: .EthicsApprovals should be array
+<span class="w"> </span><span class="m">1</span>:<span class="w"> </span><span class="o">[</span>ERR<span class="o">]</span><span class="w"> </span>Invalid<span class="w"> </span>JSON<span class="w"> </span>file.<span class="w"> </span>The<span class="w"> </span>file<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>formatted<span class="w"> </span>according<span class="w"> </span>the<span class="w"> </span>schema.<span class="w"> </span><span class="o">(</span>code:<span class="w"> </span><span class="m">55</span><span class="w"> </span>-<span class="w"> </span>JSON_SCHEMA_VALIDATION_ERROR<span class="o">)</span>
+<span class="w">  </span>./dataset_description.json
+<span class="w">   </span>Evidence:<span class="w"> </span>.DatasetType<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>equal<span class="w"> </span>to<span class="w"> </span>one<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>allowed<span class="w"> </span>values
+<span class="w">  </span>./dataset_description.json
+<span class="w">   </span>Evidence:<span class="w"> </span>.EthicsApprovals<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>array
 
- Please visit https://neurostars.org/search?q<span class="o">=</span>DATASET_DESCRIPTION_JSON_MISSING <span class="k">for</span> existing conversations about this issue.
-
-
-        Summary:               Available Tasks:        Available Modalities:
-        <span class="m">13</span> Files, <span class="m">4</span>.55GB                               pet
-        <span class="m">1</span> - Subject                                    blood
-        <span class="m">2</span> - Sessions                                   anat
+<span class="w"> </span>Please<span class="w"> </span>visit<span class="w"> </span>https://neurostars.org/search?q<span class="o">=</span>DATASET_DESCRIPTION_JSON_MISSING<span class="w"> </span><span class="k">for</span><span class="w"> </span>existing<span class="w"> </span>conversations<span class="w"> </span>about<span class="w"> </span>this<span class="w"> </span>issue.
 
 
- If you have any questions, please post on https://neurostars.org/tags/bids.
+<span class="w">        </span>Summary:<span class="w">               </span>Available<span class="w"> </span>Tasks:<span class="w">        </span>Available<span class="w"> </span>Modalities:
+<span class="w">        </span><span class="m">13</span><span class="w"> </span>Files,<span class="w"> </span><span class="m">4</span>.55GB<span class="w">                               </span>pet
+<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Subject<span class="w">                                    </span>blood
+<span class="w">        </span><span class="m">2</span><span class="w"> </span>-<span class="w"> </span>Sessions<span class="w">                                   </span>anat
+
+
+<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>any<span class="w"> </span>questions,<span class="w"> </span>please<span class="w"> </span>post<span class="w"> </span>on<span class="w"> </span>https://neurostars.org/tags/bids.
 </pre></div>
 </div>
 <p>Good enough! But, in all seriousness the error messages and output

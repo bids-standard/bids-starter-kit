@@ -530,34 +530,34 @@ participants)</p>
 <p>After
 <a class="reference external" href="https://github.com/bids-standard/bids-validator">installation with npm</a>
 using the CLI is trivial. Locate a bids data set similar to the one below:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$ tree sub001/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>tree<span class="w"> </span>sub001/
 sub001/
-├── dataset_description.json
-├── participants.json
-├── participants.tsv
-├── README
-└── sub-01
-    ├── ses-baseline
-    │   ├── anat
-    │   │   ├── sub-01_ses-baseline_T1w.json
-    │   │   └── sub-01_ses-baseline_T1w.nii.gz
-    │   └── pet
-    │       ├── sub-01_ses-baseline_pet.json
-    │       └── sub-01_ses-baseline_pet.nii.gz
-    └── ses-intervention
-        ├── anat
-        │   ├── sub-01_ses-intervention_T1w.json
-        │   └── sub-01_ses-intervention_T1w.nii.gz
-        └── pet
-            ├── sub-01_ses-intervention_task-eyes_events.json
-            ├── sub-01_ses-intervention_task-eyes_events.tsv
-            ├── sub-01_ses-intervention_task-eyes_pet.json
-            └── sub-01_ses-intervention_task-eyes_pet.nii.gz
+├──<span class="w"> </span>dataset_description.json
+├──<span class="w"> </span>participants.json
+├──<span class="w"> </span>participants.tsv
+├──<span class="w"> </span>README
+└──<span class="w"> </span>sub-01
+<span class="w">    </span>├──<span class="w"> </span>ses-baseline
+<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>anat
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-baseline_T1w.json
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-baseline_T1w.nii.gz
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>pet
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-baseline_pet.json
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>sub-01_ses-baseline_pet.nii.gz
+<span class="w">    </span>└──<span class="w"> </span>ses-intervention
+<span class="w">        </span>├──<span class="w"> </span>anat
+<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-intervention_T1w.json
+<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-intervention_T1w.nii.gz
+<span class="w">        </span>└──<span class="w"> </span>pet
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-intervention_task-eyes_events.json
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-intervention_task-eyes_events.tsv
+<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-intervention_task-eyes_pet.json
+<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-intervention_task-eyes_pet.nii.gz
 </pre></div>
 </div>
 <p>Now simply point the bids validator at the folder path of the subject(s) in
 question:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$ bids-validator sub001
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001
 </pre></div>
 </div>
 </div>
@@ -567,28 +567,28 @@ question:</p>
 <h4>Error<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>As is the case w/ the browser or any version of the validator follow the <code class="docutils literal notranslate"><span class="pre">[ERR]</span></code>
 messages and correct until bids-validator returns 0 errors after running.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$ bids-validator sub001
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001
 bids-validator@1.7.1
 
- <span class="m">1</span>: <span class="o">[</span>ERR<span class="o">]</span> Invalid JSON file. The file is not formatted according the schema. <span class="o">(</span>code: <span class="m">55</span> - JSON_SCHEMA_VALIDATION_ERROR<span class="o">)</span>
-  ./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
-   Evidence:  should have property InjectedRadioactivityUnits when property InjectedRadioactivity is present
-  ./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
-   Evidence:  should have required property <span class="s1">&#39;InjectedMassUnits&#39;</span>
-  ...
-                ...
-  ... and <span class="m">3</span> more files having this issue <span class="o">(</span>Use --verbose to see them all<span class="o">)</span>.
+<span class="w"> </span><span class="m">1</span>:<span class="w"> </span><span class="o">[</span>ERR<span class="o">]</span><span class="w"> </span>Invalid<span class="w"> </span>JSON<span class="w"> </span>file.<span class="w"> </span>The<span class="w"> </span>file<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>formatted<span class="w"> </span>according<span class="w"> </span>the<span class="w"> </span>schema.<span class="w"> </span><span class="o">(</span>code:<span class="w"> </span><span class="m">55</span><span class="w"> </span>-<span class="w"> </span>JSON_SCHEMA_VALIDATION_ERROR<span class="o">)</span>
+<span class="w">  </span>./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
+<span class="w">   </span>Evidence:<span class="w">  </span>should<span class="w"> </span>have<span class="w"> </span>property<span class="w"> </span>InjectedRadioactivityUnits<span class="w"> </span>when<span class="w"> </span>property<span class="w"> </span>InjectedRadioactivity<span class="w"> </span>is<span class="w"> </span>present
+<span class="w">  </span>./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
+<span class="w">   </span>Evidence:<span class="w">  </span>should<span class="w"> </span>have<span class="w"> </span>required<span class="w"> </span>property<span class="w"> </span><span class="s1">&#39;InjectedMassUnits&#39;</span>
+<span class="w">  </span>...
+<span class="w">                </span>...
+<span class="w">  </span>...<span class="w"> </span>and<span class="w"> </span><span class="m">3</span><span class="w"> </span>more<span class="w"> </span>files<span class="w"> </span>having<span class="w"> </span>this<span class="w"> </span>issue<span class="w"> </span><span class="o">(</span>Use<span class="w"> </span>--verbose<span class="w"> </span>to<span class="w"> </span>see<span class="w"> </span>them<span class="w"> </span>all<span class="o">)</span>.
 
- Please visit https://neurostars.org/search?q<span class="o">=</span>JSON_SCHEMA_VALIDATION_ERROR <span class="k">for</span> existing conversations about this issue.
-
-
-        Summary:                Available Tasks:        Available Modalities:
-        <span class="m">14</span> Files, <span class="m">5</span>.72MB                                T1w
-        <span class="m">1</span> - Subject                                     pet
-        <span class="m">2</span> - Sessions                                    events
+<span class="w"> </span>Please<span class="w"> </span>visit<span class="w"> </span>https://neurostars.org/search?q<span class="o">=</span>JSON_SCHEMA_VALIDATION_ERROR<span class="w"> </span><span class="k">for</span><span class="w"> </span>existing<span class="w"> </span>conversations<span class="w"> </span>about<span class="w"> </span>this<span class="w"> </span>issue.
 
 
- If you have any questions, please post on https://neurostars.org/tags/bids.
+<span class="w">        </span>Summary:<span class="w">                </span>Available<span class="w"> </span>Tasks:<span class="w">        </span>Available<span class="w"> </span>Modalities:
+<span class="w">        </span><span class="m">14</span><span class="w"> </span>Files,<span class="w"> </span><span class="m">5</span>.72MB<span class="w">                                </span>T1w
+<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Subject<span class="w">                                     </span>pet
+<span class="w">        </span><span class="m">2</span><span class="w"> </span>-<span class="w"> </span>Sessions<span class="w">                                    </span>events
+
+
+<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>any<span class="w"> </span>questions,<span class="w"> </span>please<span class="w"> </span>post<span class="w"> </span>on<span class="w"> </span>https://neurostars.org/tags/bids.
 </pre></div>
 </div>
 </div>
@@ -598,44 +598,44 @@ bids-validator@1.7.1
 the information provided via the validator should help to pinpoint where and how
 to resolve some of these warnings. When in doubt consult the
 <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/">BIDS Spec</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$ bids-validator sub001/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001/
 bids-validator@1.7.1
 
-<span class="m">1</span>: <span class="o">[</span>WARN<span class="o">]</span> Tabular file contains custom columns not described <span class="k">in</span> a data dictionary <span class="o">(</span>code: <span class="m">82</span> - CUSTOM_COLUMN_WITHOUT_DESCRIPTION<span class="o">)</span>
-  ./sub-01/func/sub-01_task-balloonanalogrisktask_run-01_events.tsv
-                ...
-                ...
-... and <span class="m">38</span> more files having this issue <span class="o">(</span>Use --verbose to see them all<span class="o">)</span>.
+<span class="m">1</span>:<span class="w"> </span><span class="o">[</span>WARN<span class="o">]</span><span class="w"> </span>Tabular<span class="w"> </span>file<span class="w"> </span>contains<span class="w"> </span>custom<span class="w"> </span>columns<span class="w"> </span>not<span class="w"> </span>described<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>data<span class="w"> </span>dictionary<span class="w"> </span><span class="o">(</span>code:<span class="w"> </span><span class="m">82</span><span class="w"> </span>-<span class="w"> </span>CUSTOM_COLUMN_WITHOUT_DESCRIPTION<span class="o">)</span>
+<span class="w">  </span>./sub-01/func/sub-01_task-balloonanalogrisktask_run-01_events.tsv
+<span class="w">                </span>...
+<span class="w">                </span>...
+...<span class="w"> </span>and<span class="w"> </span><span class="m">38</span><span class="w"> </span>more<span class="w"> </span>files<span class="w"> </span>having<span class="w"> </span>this<span class="w"> </span>issue<span class="w"> </span><span class="o">(</span>Use<span class="w"> </span>--verbose<span class="w"> </span>to<span class="w"> </span>see<span class="w"> </span>them<span class="w"> </span>all<span class="o">)</span>.
 
- Please visit https://neurostars.org/search?q<span class="o">=</span>CUSTOM_COLUMN_WITHOUT_DESCRIPTION <span class="k">for</span> existing conversations about this issue.
-
-
-        Summary:                   Available Tasks:                Available Modalities:
-        <span class="m">134</span> Files, <span class="m">411</span>.53KB        balloon analog risk task        T1w
-        <span class="m">16</span> - Subjects                                              inplaneT2
-        <span class="m">1</span> - Session                                                bold
-                                                                   events
+<span class="w"> </span>Please<span class="w"> </span>visit<span class="w"> </span>https://neurostars.org/search?q<span class="o">=</span>CUSTOM_COLUMN_WITHOUT_DESCRIPTION<span class="w"> </span><span class="k">for</span><span class="w"> </span>existing<span class="w"> </span>conversations<span class="w"> </span>about<span class="w"> </span>this<span class="w"> </span>issue.
 
 
- If you have any questions, please post on https://neurostars.org/tags/bids.
+<span class="w">        </span>Summary:<span class="w">                   </span>Available<span class="w"> </span>Tasks:<span class="w">                </span>Available<span class="w"> </span>Modalities:
+<span class="w">        </span><span class="m">134</span><span class="w"> </span>Files,<span class="w"> </span><span class="m">411</span>.53KB<span class="w">        </span>balloon<span class="w"> </span>analog<span class="w"> </span>risk<span class="w"> </span>task<span class="w">        </span>T1w
+<span class="w">        </span><span class="m">16</span><span class="w"> </span>-<span class="w"> </span>Subjects<span class="w">                                              </span>inplaneT2
+<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Session<span class="w">                                                </span>bold
+<span class="w">                                                                   </span>events
+
+
+<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>any<span class="w"> </span>questions,<span class="w"> </span>please<span class="w"> </span>post<span class="w"> </span>on<span class="w"> </span>https://neurostars.org/tags/bids.
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
 <h4>Success<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p>Pass go and collect 200 dollars, the data set in question passes validation.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$ bids-validator sub001
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001
 bids-validator@1.7.1
 
-This dataset appears to be BIDS compatible.
+This<span class="w"> </span>dataset<span class="w"> </span>appears<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>BIDS<span class="w"> </span>compatible.
 
-        Summary:                  Available Tasks:        Available Modalities:
-        <span class="m">12</span> Files, <span class="m">218</span>.75KB                                T1w
-        <span class="m">1</span> - Subject                                       pet
-        <span class="m">1</span> - Session                                       blood
+<span class="w">        </span>Summary:<span class="w">                  </span>Available<span class="w"> </span>Tasks:<span class="w">        </span>Available<span class="w"> </span>Modalities:
+<span class="w">        </span><span class="m">12</span><span class="w"> </span>Files,<span class="w"> </span><span class="m">218</span>.75KB<span class="w">                                </span>T1w
+<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Subject<span class="w">                                       </span>pet
+<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Session<span class="w">                                       </span>blood
 
 
- If you have any questions, please post on https://neurostars.org/tags/bids
+<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>any<span class="w"> </span>questions,<span class="w"> </span>please<span class="w"> </span>post<span class="w"> </span>on<span class="w"> </span>https://neurostars.org/tags/bids
 </pre></div>
 </div>
 </div>

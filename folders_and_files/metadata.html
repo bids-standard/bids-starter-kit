@@ -807,13 +807,13 @@ to help you generate some of those files.</p>
 <div class="section" id="json-files">
 <h2>JSON Files<a class="headerlink" href="#json-files" title="Permalink to this headline">¶</a></h2>
 <p>JSON files are text files that take the following structure:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;key2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value2&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;key3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;subkey1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;subvalue1&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;key2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;key3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;subkey1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;subvalue1&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Note that they can be nested (curly brackets within curly brackets). Here are
@@ -843,32 +843,32 @@ will use whatever implementation (SPM, JSONio, MATLAB) is available.</p>
 <a class="reference external" href="https://github.com/gllmflndn/JSONio">JSONio library</a>:</p>
 <div class="section" id="reading-a-json-file">
 <h3>Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#reading-a-json-file" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">jsonread</span><span class="p">([</span><span class="n">filename</span><span class="p">])</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">jsonread</span><span class="p">([</span><span class="n">filename</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="writing-a-json-file">
 <h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#writing-a-json-file" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;./&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">project</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">sub_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">ses_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">acquisition</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;anat&#39;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;./&#39;</span><span class="p">;</span>
+<span class="n">project</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span>
+<span class="n">sub_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span>
+<span class="n">ses_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span>
+<span class="n">acquisition</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;anat&#39;</span><span class="p">;</span>
 
-<span class="n">anat_json_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="n">project</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
-<span class="w">                            </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
-<span class="w">                            </span><span class="p">[</span><span class="s">&#39;ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="p">],</span><span class="k">...</span><span class="w"></span>
-<span class="w">                            </span><span class="n">acquisition</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
-<span class="w">                            </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="w"> </span><span class="s">&#39;_ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="w"> </span><span class="s">&#39;_T1W.json&#39;</span><span class="p">]);</span><span class="w"></span>
+<span class="n">anat_json_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="n">project</span><span class="p">,</span><span class="k">...</span>
+<span class="w">                            </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="p">],</span><span class="k">...</span>
+<span class="w">                            </span><span class="p">[</span><span class="s">&#39;ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="p">],</span><span class="k">...</span>
+<span class="w">                            </span><span class="n">acquisition</span><span class="p">,</span><span class="k">...</span>
+<span class="w">                            </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="w"> </span><span class="s">&#39;_ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="w"> </span><span class="s">&#39;_T1W.json&#39;</span><span class="p">]);</span>
 
-<span class="c">% Assign the fields in the Matlab structure that can be saved as a json:</span><span class="w"></span>
-<span class="n">anat_json</span><span class="p">.</span><span class="n">Manufacturer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;GE&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">anat_json</span><span class="p">.</span><span class="n">ManufacturersModelName</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="s">&#39;Discovery MR750&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">anat_json</span><span class="p">.</span><span class="n">MagneticFieldStrength</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="n">anat_json</span><span class="p">.</span><span class="n">PulseSequence</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;T1 weighted SPGR&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="c">% Assign the fields in the Matlab structure that can be saved as a json:</span>
+<span class="n">anat_json</span><span class="p">.</span><span class="n">Manufacturer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;GE&#39;</span><span class="p">;</span>
+<span class="n">anat_json</span><span class="p">.</span><span class="n">ManufacturersModelName</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="s">&#39;Discovery MR750&#39;</span><span class="p">;</span>
+<span class="n">anat_json</span><span class="p">.</span><span class="n">MagneticFieldStrength</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="n">anat_json</span><span class="p">.</span><span class="n">PulseSequence</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;T1 weighted SPGR&#39;</span><span class="p">;</span>
 
-<span class="n">json_options</span><span class="p">.</span><span class="n">indent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;    &#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% this makes the json look pretier when opened in a txt editor</span><span class="w"></span>
-<span class="n">jsonwrite</span><span class="p">(</span><span class="n">loc_json_name</span><span class="p">,</span><span class="n">anat_json</span><span class="p">,</span><span class="n">json_options</span><span class="p">)</span><span class="w"></span>
+<span class="n">json_options</span><span class="p">.</span><span class="n">indent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;    &#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% this makes the json look pretier when opened in a txt editor</span>
+<span class="n">jsonwrite</span><span class="p">(</span><span class="n">loc_json_name</span><span class="p">,</span><span class="n">anat_json</span><span class="p">,</span><span class="n">json_options</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -908,22 +908,22 @@ before using it.</p>
 <p><a class="reference external" href="https://github.com/jeroen/jsonlite">https://github.com/jeroen/jsonlite</a></p>
 <div class="section" id="installing-required-package">
 <h3>Installing required package<a class="headerlink" href="#installing-required-package" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span>    <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;jsonlite&#39;</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;jsonlite&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
 <h3>Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span>    <span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="nf">fromJSON</span><span class="p">(</span><span class="s">&#39;myfile.json&#39;</span><span class="p">,</span> <span class="n">pretty</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">fromJSON</span><span class="p">(</span><span class="s">&#39;myfile.json&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">pretty</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
 <h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span>    <span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="s">&#39;{&quot;field1&quot;: &quot;value1&quot;, &quot;field2&quot;: 3, &quot;field3&quot;: &quot;field3&quot;}&#39;</span>
-    <span class="nf">writeLines</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s">&quot;myData.json&quot;</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
+<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;{&quot;field1&quot;: &quot;value1&quot;, &quot;field2&quot;: 3, &quot;field3&quot;: &quot;field3&quot;}&#39;</span>
+<span class="w">    </span><span class="nf">writeLines</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">=</span><span class="s">&quot;myData.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -934,19 +934,19 @@ before using it.</p>
 <a class="reference external" href="https://nl.mathworks.com/help/matlab/ref/struct.html"><code class="docutils literal notranslate"><span class="pre">structures</span></code></a> by MATLAB /
 Octave, where a <code class="docutils literal notranslate"><span class="pre">key</span></code> in a JSON file becomes <code class="docutils literal notranslate"><span class="pre">fieldname</span></code> in that structure.</p>
 <p>Here is an example with a simple <code class="docutils literal notranslate"><span class="pre">example.json</span></code></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>loaded with bids-matlab</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">jsondecode</span><span class="p">(</span><span class="s">&#39;example.json&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">jsondecode</span><span class="p">(</span><span class="s">&#39;example.json&#39;</span><span class="p">)</span>
 
-<span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"></span>
+<span class="n">json_content</span><span class="w"> </span><span class="p">=</span>
 
-<span class="w">  </span><span class="nb">struct</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">fields</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nb">struct</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">fields</span><span class="p">:</span>
 
-<span class="w">    </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;value&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;value&#39;</span>
 </pre></div>
 </div>
 <p>There are however some strict rules for what makes a valid fieldname in MATLAB
@@ -962,29 +962,29 @@ you will receive a warning and the field name will be truncated</p></li>
 <p>If there are keys in your JSON that do not comply to those rules, they keys will
 be renamed when loading which can lead to some headaches down the line.</p>
 <p>For example when loading the <code class="docutils literal notranslate"><span class="pre">bad_keys.json</span></code></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;@foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@foo&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;x1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;x_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x_1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;/t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/t&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;%f&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%f&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;@foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@foo&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;x1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;x_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x_1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;/t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/t&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;%f&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%f&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>We get some quite different fieldnames when read with matlab:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">jsondecode</span><span class="p">(</span><span class="nb">fileread</span><span class="p">(</span><span class="s">&#39;bad_keys.json&#39;</span><span class="p">))</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">jsondecode</span><span class="p">(</span><span class="nb">fileread</span><span class="p">(</span><span class="s">&#39;bad_keys.json&#39;</span><span class="p">))</span>
 
-<span class="nb">ans</span><span class="w"> </span><span class="p">=</span><span class="w"></span>
+<span class="nb">ans</span><span class="w"> </span><span class="p">=</span>
 
-<span class="w">  </span><span class="nb">struct</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">fields</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nb">struct</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">fields</span><span class="p">:</span>
 
-<span class="w">    </span><span class="n">x_foo</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;@foo&#39;</span><span class="w"></span>
-<span class="w">       </span><span class="n">x1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span><span class="w"></span>
-<span class="w">     </span><span class="n">x1_1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;x1&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="n">x_1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;x_1&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="n">x_t</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/t&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="n">x_f</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;%f&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">x_foo</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;@foo&#39;</span>
+<span class="w">       </span><span class="n">x1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+<span class="w">     </span><span class="n">x1_1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;x1&#39;</span>
+<span class="w">      </span><span class="n">x_1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;x_1&#39;</span>
+<span class="w">      </span><span class="n">x_t</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/t&#39;</span>
+<span class="w">      </span><span class="n">x_f</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;%f&#39;</span>
 </pre></div>
 </div>
 <p>or with JSONio for Octave (though at least here we get a warning):</p>
@@ -1004,19 +1004,19 @@ be renamed when loading which can lead to some headaches down the line.</p>
 </div>
 <p>This can lead to some unexpected behavior if you did not know about this.</p>
 <p>If you load this <code class="docutils literal notranslate"><span class="pre">collision.json</span></code></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;x1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;x_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x_1&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;x1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;x_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x_1&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>and try to retrieve the value associated to the <code class="docutils literal notranslate"><span class="pre">key</span></code> <code class="docutils literal notranslate"><span class="pre">x1</span></code>, you will in fact be
 getting the value for the key <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">jsondecode</span><span class="p">(</span><span class="s">&#39;collision.json&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="p">.</span><span class="n">x1</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">jsondecode</span><span class="p">(</span><span class="s">&#39;collision.json&#39;</span><span class="p">);</span>
+<span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="p">.</span><span class="n">x1</span>
 
-<span class="w">       </span><span class="n">x1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span><span class="w"></span>
+<span class="w">       </span><span class="n">x1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
 </pre></div>
 </div>
 <p><strong>Why and when does this matter for BIDS?</strong></p>
@@ -1024,16 +1024,16 @@ getting the value for the key <code class="docutils literal notranslate"><span c
 <code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> you have named some of your trial_type things like <code class="docutils literal notranslate"><span class="pre">1_face</span></code>,
 <code class="docutils literal notranslate"><span class="pre">2_sound</span></code> and then want to annotate those events in a side car JSON file like
 this.</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;trial_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;image type&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;1_face&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A face is displayed&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;2_sound&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A sound is played&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;trial_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;image type&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;1_face&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A face is displayed&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;2_sound&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A sound is played&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>If you do this, it will be much harder to work with that JSON file for anyone
@@ -1060,10 +1060,10 @@ datapoint.</p>
 <h2>Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="reading-a-tsv-file">
 <h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#reading-a-tsv-file" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">table_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readtable</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                            </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                            </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">                            </span><span class="s">&#39;TreatAsEmpty&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;N/A&#39;</span><span class="p">,</span><span class="s">&#39;n/a&#39;</span><span class="p">});</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">table_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readtable</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                            </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                            </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+<span class="w">                            </span><span class="s">&#39;TreatAsEmpty&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;N/A&#39;</span><span class="p">,</span><span class="s">&#39;n/a&#39;</span><span class="p">});</span>
 </pre></div>
 </div>
 </div>
@@ -1071,18 +1071,18 @@ datapoint.</p>
 <h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#writing-a-tsv-file" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id5">
 <h4>Matlab<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">pwd</span><span class="p">;</span><span class="w"></span>
-<span class="n">bidsProject</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="nb">mkdir</span><span class="p">(</span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="w"> </span><span class="n">bidsProject</span><span class="p">));</span><span class="w"></span>
-<span class="n">bids_participants_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;participants.tsv&#39;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">pwd</span><span class="p">;</span>
+<span class="n">bidsProject</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span>
+<span class="nb">mkdir</span><span class="p">(</span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="w"> </span><span class="n">bidsProject</span><span class="p">));</span>
+<span class="n">bids_participants_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;participants.tsv&#39;</span><span class="p">;</span>
 
 <span class="n">participant_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;sub-01&#39;</span><span class="p">;</span><span class="w"> </span><span class="s">&#39;sub-02&#39;</span><span class="p">];</span><span class="w"> </span>
-<span class="n">age</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">20</span><span class="w"> </span><span class="mi">30</span><span class="p">]</span><span class="o">&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">sex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;m&#39;</span><span class="p">;</span><span class="s">&#39;f&#39;</span><span class="p">];</span><span class="w"></span>
+<span class="n">age</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">20</span><span class="w"> </span><span class="mi">30</span><span class="p">]</span><span class="o">&#39;</span><span class="p">;</span>
+<span class="n">sex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;m&#39;</span><span class="p">;</span><span class="s">&#39;f&#39;</span><span class="p">];</span>
 
-<span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">table</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">sex</span><span class="p">);</span><span class="w"></span>
-<span class="nb">writetable</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="w"> </span><span class="n">bidsProject</span><span class="p">,</span><span class="w"> </span><span class="n">bids_participants_name</span><span class="p">),</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
-<span class="w">              </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">table</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">sex</span><span class="p">);</span>
+<span class="nb">writetable</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="w"> </span><span class="n">bidsProject</span><span class="p">,</span><span class="w"> </span><span class="n">bids_participants_name</span><span class="p">),</span><span class="w"> </span><span class="k">...</span>
+<span class="w">              </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
 <span class="w">              </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">);</span><span class="w"> </span>
 </pre></div>
 </div>
@@ -1163,7 +1163,7 @@ packages.</p>
 <h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>In this example, we assume the .tsv includes column names (headers), and
 explicitly set column separator (delimitor) to tab (‘\t’)</p>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;myFile.tsv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;\t&#39;</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;myFile.tsv&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;\t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1171,13 +1171,13 @@ explicitly set column separator (delimitor) to tab (‘\t’)</p>
 <h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <p>When writing files, column and row names are always saved, we remove row names,
 and quotes from the outpur explicitly by setting them to FALSE.</p>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="nf">cbind.data.frame</span><span class="p">(</span>
-  <span class="n">participant_id</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;sub-01&#39;</span><span class="p">,</span> <span class="s">&#39;sub-02&#39;</span><span class="p">),</span>
-  <span class="n">age</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">30</span><span class="p">),</span>
-  <span class="n">sex</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;m&#39;</span><span class="p">,</span><span class="s">&#39;f&#39;</span><span class="p">))</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">cbind.data.frame</span><span class="p">(</span>
+<span class="w">  </span><span class="n">participant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;sub-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;sub-02&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">30</span><span class="p">),</span>
+<span class="w">  </span><span class="n">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;m&#39;</span><span class="p">,</span><span class="s">&#39;f&#39;</span><span class="p">))</span>
 
-<span class="nf">write.table</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s">&#39;myData.tsv&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;\t&#39;</span><span class="p">,</span>
-  <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">quote</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="nf">write.table</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">=</span><span class="s">&#39;myData.tsv&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;\t&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
