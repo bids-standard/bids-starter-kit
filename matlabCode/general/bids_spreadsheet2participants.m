@@ -56,7 +56,7 @@ function files_out = bids_spreadsheet2participants(varargin)
         if exist(fullfile(fileparts(which('bids_spreadsheet2participants.m')), 'JSONio'), 'dir')
             addpath(fullfile(fileparts(which('bids_spreadsheet2participants.m')), 'JSONio'));
         else
-            error(['JSONio library needed, avaiable with EEGLAB bids-matlab-tools or', ...
+            error(['JSONio library needed, available with EEGLAB bids-matlab-tools or', ...
                    'at https://github.com/gllmflndn/JSONio']);
         end
     end
@@ -176,7 +176,7 @@ function files_out = bids_spreadsheet2participants(varargin)
 
     % last check variable values (also useful for metadata)
     if any(~contains(Data.participant_id, 'sub-'))
-        disp('participant_id should incude ''sub-'', adding it to curent IDs');
+        disp('participant_id should include ''sub-'', adding it to current IDs');
         for sub = 1:length(Data.participant_id)
             if ~contains(Data.participant_id{sub}, 'sub-')
                 Data.participant_id{sub} = ['sub-' Data.participant_id{sub}];
@@ -280,7 +280,7 @@ function files_out = bids_spreadsheet2participants(varargin)
     % prepare json variables from worksheet 1
     % 'values' are the unique values read on the data
     % 'value_types' gives an indication if we want to use Level or Unit
-    % we can complement with GivenMetaData.Descrition, GivenMetaData.Levels and GivenMetaData.Units
+    % we can complement with GivenMetaData.Description, GivenMetaData.Levels and GivenMetaData.Units
     % using 'matched_var' for instance: variables names match between worksheet
 
     json = struct;

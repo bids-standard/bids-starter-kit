@@ -399,7 +399,7 @@ packages.
 ### Reading a `.tsv` file:
 
 In this example, we assume the .tsv includes column names (headers), and
-explicitly set column separator (delimitor) to tab ('\t')
+explicitly set column separator (delimiter) to tab ('\t')
 
 ```R
 data = read.table('myFile.tsv', header=TRUE, sep='\t')

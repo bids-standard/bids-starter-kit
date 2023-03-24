@@ -44,7 +44,7 @@ electrodes_tsv_name = fullfile(root_dir, project, bids_file.bids_path, bids_file
 
 %% make a participants table and save
 
-% to get the definition of each colum,
+% to get the definition of each column,
 % you can use the bids.Schema class from bids matlab
 % For example
 schema = bids.Schema;

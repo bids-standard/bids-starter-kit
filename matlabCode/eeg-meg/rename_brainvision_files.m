@@ -21,7 +21,7 @@ function rename_brainvision_files(varargin)
     if nargin >= 3
         if strcmpi(varargin{3}, 'rmf')
             if nargin == 3
-                disp('no value associated to the remove file option, assumning off');
+                disp('no value associated to the remove file option, assuming off');
             else
                 rmf = varargin{4};
             end

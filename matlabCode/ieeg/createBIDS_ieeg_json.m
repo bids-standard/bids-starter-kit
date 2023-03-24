@@ -49,7 +49,7 @@ json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename)
 
 %% General fields, shared with MRI BIDS and MEG BIDS
 
-% to get the definition of each colum,
+% to get the definition of each column,
 % you can use the bids.Schema class from bids matlab
 % For example
 schema = bids.Schema;
