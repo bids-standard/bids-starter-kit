@@ -104,6 +104,10 @@ easy to learn</strong> and more adopted. Since BIDS is platform independent and
 still an adapting, growing tool, the greater the community, the better it will
 be.
 
+Another part is that BIDS is striving to not reinventing other standards and metadata ontologies but reuse them:
+
+![BIDS-minder](./images/BIDS-minder.svg)
+
 ## Benefits
 
 ### For the public good
