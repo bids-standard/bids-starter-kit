@@ -8,6 +8,6 @@
         },
         {
             "pattern": "^https://github.com/.*"
-        }        
+        }
     ]
 }
