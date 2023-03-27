@@ -12,7 +12,7 @@ Ideally the questions will link to an answer elsewhere in the repository to
 maximise the different ways of finding out more about BIDS.
 
 ```{note}
-For questions related to the BIDS apps, 
+For questions related to the BIDS apps,
 please visit [the BIDS apps website](https://bids-apps.neuroimaging.io/dev_faq/).
 ```
 
