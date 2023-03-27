@@ -1,4 +1,6 @@
----
+# update pre-commit hooks every Monday
+# also runs all hooks on all files
+# and creates a PR with the changes
 name: Update precommit hooks
 
 
