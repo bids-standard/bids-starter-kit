@@ -16,7 +16,7 @@ vim(Linux).
 But there are some text-editors built specifically for coding that can help with
 some parts of programming.
 
-One that's free and easy to use is [Visual studio code](https://code.visualstudio.com/). 
+One that's free and easy to use is [Visual studio code](https://code.visualstudio.com/).
 It'll work for all the languages below!
 
 ## MATLAB / Octave (Free, open source equivalent)

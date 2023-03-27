@@ -316,14 +316,14 @@ bidsProject = 'temp';
 mkdir(fullfile(root_dir, bidsProject));
 bids_participants_name = 'participants.tsv';
 
-participant_id = ['sub-01'; 'sub-02']; 
+participant_id = ['sub-01'; 'sub-02'];
 age = [20 30]';
 sex = ['m';'f'];
 
 t = table(participant_id,age,sex);
 writetable(t, fullfile(root_dir, bidsProject, bids_participants_name), ...
               'FileType', 'text', ...
-              'Delimiter', '\t'); 
+              'Delimiter', '\t');
 ```
 
 #### Octave

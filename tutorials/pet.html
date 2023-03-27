@@ -950,7 +950,7 @@ For more information on labeling see <a class="reference external" href="https:/
 machine:Projects<span class="w"> </span>user$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>NewBidsDataSet/sub-01/ses-01/pet
 machine:pet<span class="w"> </span>user$<span class="w"> </span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span>*ShortExample*<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>mv<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;`echo </span><span class="nv">$i</span><span class="s2"> | sed &#39;s/ShortExample//&#39;`&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 
-<span class="c1"># Since we &quot;don&#39;t&quot; know if there are multiple PET image files </span>
+<span class="c1"># Since we &quot;don&#39;t&quot; know if there are multiple PET image files</span>
 <span class="c1"># we will omit the task label for our PET .json file for now.</span>
 machine:pet<span class="w"> </span>user$<span class="w"> </span>mv<span class="w"> </span>sub-01_ses-01_task-_pet.json<span class="w"> </span>sub-01-ses-01_pet.json
 </pre></div>
