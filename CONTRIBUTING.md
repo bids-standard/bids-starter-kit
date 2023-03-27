@@ -175,7 +175,7 @@ BIDS sidecar file:
 If possible try to provide a script (python, octave, matlab) to generate those
 templates.
 
-Try to name your scrip as follow: `createBIDS_<suffix>_<extension>_*.[py|m]`
+Try to name your script as follow: `createBIDS_<suffix>_<extension>_*.[py|m]`
 
 ```
 createBIDS_T1w_json_short.m

@@ -42,7 +42,7 @@ bids_file = bids.File(name_spec, 'use_schema', true);
 % Contrust the fullpath version of the filename
 json_name = fullfile(root_dir, project, bids_file.bids_path, bids_file.filename);
 
-% get the definition of each colum,
+% get the definition of each column,
 % use the bids.Schema class from bids matlab
 % example:
 %

@@ -1,7 +1,7 @@
 # Code of Conduct
 
 We value the participation of every member of our community and want to ensure
-an that every contributer has an enjoyable and fulfilling experience.
+an that every contributor has an enjoyable and fulfilling experience.
 Accordingly, everyone who participates in the BIDS Starter Kit project is
 expected to show respect and courtesy to other community members at all time.
 
@@ -83,7 +83,7 @@ offensive, or harmful.
 Members of the community who violate these rules - no matter how much they have
 contributed to the BIDS Starter Kit, or how specialised their skill set - will
 be approached by Kirstie Whitaker. If inappropriate behaviour persists after a
-discussion with Kirstie, the contributer will be asked to discontinue their
+discussion with Kirstie, the contributor will be asked to discontinue their
 participation in the BIDS Starter Kit project.
 
 **To report an issue you have with community interactions** please contact

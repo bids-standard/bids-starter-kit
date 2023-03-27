@@ -70,7 +70,7 @@ json.PlasmaFreeFractionMethod = '';
 json.MetaboliteMethod = '';
 json.MetaboliteRecoveryCorrectionApplied = '';
 
-% get the definition of several colums,
+% get the definition of several columns,
 % use the bids.Schema class from bids matlab
 schema = bids.Schema;
 

@@ -52,7 +52,7 @@ bids.util.tsvwrite(tsv_file_name, tsv);
 
 %% Write JSON
 
-% get the definition of each colum,
+% get the definition of each column,
 % use the bids.Schema class from bids matlab
 % example:
 %

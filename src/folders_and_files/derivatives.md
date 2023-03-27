@@ -115,7 +115,7 @@ localizer/
       sub-01_task-loc_space-individual_label-FFA_mask.json
 ```
 
-BIDS Derivatives introduces "discrete segmentations" and "probabilisitic
+BIDS Derivatives introduces "discrete segmentations" and "probabilistic
 segmentations".
 
 A _segmentation_ is a labeling of regions of an image such that each location

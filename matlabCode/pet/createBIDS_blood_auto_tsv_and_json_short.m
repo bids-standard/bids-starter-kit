@@ -57,7 +57,7 @@ json.WholeBloodAvail = true;
 json.MetaboliteMethod = false;
 json.DispersionCorrected = false;
 
-% get the definition of each colum,
+% get the definition of each column,
 % use the bids.Schema class from bids matlab
 schema = bids.Schema;
 

@@ -1,0 +1,7 @@
+[codespell]
+skip = .git,*.pdf,*.svg,*.min.js
+# TE -- echo time
+# nin -- \nin - deficiency in codespell
+# ans -- there is matlab involved
+# dentifier -- used in **I**dentifier and codespell is not aware of markdown modifiers
+ignore-words-list = te,nin,ans,dentifier

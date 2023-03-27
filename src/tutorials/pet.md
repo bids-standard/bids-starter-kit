@@ -805,7 +805,7 @@ Using your wits, the available tools, and data you should be able
 to produce a sidecar file like the following for your nifti image. 
 Repeat this process for each image file/nifti you're including 
 while reusing the filename for each image 
-and while substituting the extention to `.json` instead of `.nii`.
+and while substituting the extension to `.json` instead of `.nii`.
 
 ```{code-block} json
 {
@@ -962,7 +962,7 @@ let's do something about filling out our `*_blood.tsv` files and our `*_blood.js
 <!-- TODO grab that image and add to the repo -->
 
 Here's are the contents of `sub01_7_PLASMA.txt`:
-![sub01_7_PLASMA.txt screenshot of excell](https://i.imgur.com/xBgDZcI.png)
+![sub01_7_PLASMA.txt screenshot of excel](https://i.imgur.com/xBgDZcI.png)
 
 Since our plasma data is available we need to indicate as such 
 in our `*_blood.json` files so we do so now:
