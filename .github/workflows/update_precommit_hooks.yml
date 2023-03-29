@@ -50,7 +50,7 @@ jobs:
         with:
           commit-message: pre-commit hooks auto-update
           base: main
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PR_TOKEN }}
           delete-branch: true
           title: '[BOT] update pre-commit hooks'
           body: 'done via this [GitHub Action](https://github.com/${{ github.repository_owner }}/nilearn/blob/main/.github/workflows/update_precommit_hooks.yml)'
