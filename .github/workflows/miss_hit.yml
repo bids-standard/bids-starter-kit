@@ -1,15 +1,16 @@
+---
 name: miss_hit
 
 on:
   push:
     branches:
-      - main
+    - main
     paths:
-      - '**.m'
+    - '**.m'
   pull_request:
     branches: ['*']
     paths:
-      - '**.m'
+    - '**.m'
 
 jobs:
 
@@ -19,20 +20,20 @@ jobs:
 
     strategy:
       matrix:
-        command: ["mh_style", "mh_metric --ci && mh_lint"]
+        command: [mh_style, mh_metric --ci && mh_lint]
       fail-fast: true  # cancel all jobs if one fails
 
     steps:
 
     - uses: actions/checkout@v3
       with:
-        submodules: true
-        fetch-depth: 1
+        submodules: recursive
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9
+        python-version: '3.11'
 
     - name: Install dependencies
       run: |

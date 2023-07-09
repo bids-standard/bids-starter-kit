@@ -1,3 +1,4 @@
+---
 #######################################################################################
 # A default configuration that will be loaded for all jupyter books
 # Users are expected to override these values in their own `_config.yml` file.
@@ -5,33 +6,33 @@
 
 #######################################################################################
 # Book settings
-title                       : "BIDS starter kit"  # The title of the book. Will be placed in the left navbar.
-author                      :  The BIDS community  # The author of the book
-copyright                   : "2021"  # Copyright year to be placed in the footer
+title: BIDS starter kit                           # The title of the book. Will be placed in the left navbar.
+author: The BIDS community                         # The author of the book
+copyright: '2021'                     # Copyright year to be placed in the footer
 # logo                        : "static/brainhack-logo.png"  # A path to the book logo
-exclude_patterns            : ["**README.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
+exclude_patterns: ['**README.md']              # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
 
 #######################################################################################
 # Execution settings
 execute:
-  execute_notebooks         : auto  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
-  cache                     : ""  # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
-  exclude_patterns          : []  # A list of patterns to *skip* in execution (for example a notebook that takes a really long time)
+  execute_notebooks: auto           # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  cache: ''                       # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
+  exclude_patterns: []            # A list of patterns to *skip* in execution (for example a notebook that takes a really long time)
 
 #######################################################################################
 # Parse and render settings
 parse:
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
     # - amsmath
-    - colon_fence
+  - colon_fence
     # - deflist
-    - dollarmath
+  - dollarmath
     # - html_admonition
     # - html_image
-    - linkify
+  - linkify
     # - replacements
     # - smartquotes
-    - substitution
+  - substitution
     # - tasklist
   myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
   myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
@@ -39,41 +40,41 @@ parse:
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon                   : "images/favicon.ico"  # A path to a favicon image
-  use_edit_page_button      : True  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
-  use_repository_button     : True  # Whether to add a link to your repository button
-  use_issues_button         : True  # Whether to add an "open an issue" button
-  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
-  extra_footer              : ""  # Will be displayed underneath the footer.
-  google_analytics_id       : "G-VZJHGNQV6D"  # A GA id that can be used to track book views.
-  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
-  baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links.for example: https://mypage.com/mybook/
+  favicon: images/favicon.ico                       # A path to a favicon image
+  use_edit_page_button: true        # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button: true       # Whether to add a link to your repository button
+  use_issues_button: true           # Whether to add an "open an issue" button
+  extra_navbar: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>                # Will be displayed underneath the left navbar.
+  extra_footer: ''                # Will be displayed underneath the footer.
+  google_analytics_id: 'G-VZJHGNQV6D'         # A GA id that can be used to track book views.
+  home_page_in_navbar: true         # Whether to include your home page in the left Navigation Bar
+  baseurl: ''                     # The base URL where your book will be hosted. Used for creating image previews and social links.for example: https://mypage.com/mybook/
   comments:
     hypothesis: true
 #######################################################################################
 # Launch button settings
 launch_buttons:
-  notebook_interface        : "classic"  # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url             : "https://mybinder.org"  # The URL of the BinderHub (for example, https://mybinder.org)
-  thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+  notebook_interface: classic            # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url: https://mybinder.org                 # The URL of the BinderHub (for example, https://mybinder.org)
+  thebe: false                       # Add a thebe button to pages (requires the repository to run on Binder)
 
 repository:
-  url                       : https://github.com/bids-standard/bids-starter-kit  # The URL to your book's repository
-  path_to_book              : "src"  # A path to your book's folder, relative to the repository root.
-  branch                    : main  # Which branch of the repository should be used when creating links
+  url: https://github.com/bids-standard/bids-starter-kit                         # The URL to your book's repository
+  path_to_book: src                  # A path to your book's folder, relative to the repository root.
+  branch: main                      # Which branch of the repository should be used when creating links
 
 #######################################################################################
 # Advanced and power-user settings
 sphinx:
   extra_extensions:
-    - sphinxcontrib.bibtex
-    - IPython.sphinxext.ipython_console_highlighting
+  - sphinxcontrib.bibtex
+  - IPython.sphinxext.ipython_console_highlighting
   config:
     bibtex_bibfiles:
-      - references.bib
+    - references.bib
     linkcheck_ignore:
-      - .*/10.1186/s13742-016-0121-x  # for some reason, it returns forbidden
-      - .*/10.1093/gigascience/giy082  # for some reason, it returns forbidden
-      - https?://brainhack.org/LA  # need to fix to "LA2016" in OSF
+    - .*/10.1186/s13742-016-0121-x    # for some reason, it returns forbidden
+    - .*/10.1093/gigascience/giy082    # for some reason, it returns forbidden
+    - https?://brainhack.org/LA    # need to fix to "LA2016" in OSF
     suppress_warnings:
-      - myst.domains  # domain method not implemented for `cite`
+    - myst.domains    # domain method not implemented for `cite`
