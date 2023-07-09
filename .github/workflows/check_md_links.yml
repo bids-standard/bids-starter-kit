@@ -22,5 +22,7 @@ jobs:
     - uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         config-file: ./mlc_config.json
-        folder-path: ./src/
+        folder-path: ./src/, templates
+        use-verbose-mode: yes
         max-depth: -1
+        file-path: ./README.md, ./CONTRIBUTING.md, ./CODE_OF_CONDUCT.md
