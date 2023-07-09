@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python_version: ['3.9', '3.10']
+        python_version: ['3.9', '3.10', '3.11']
       fail-fast: false  # Don't cancel all jobs if one fails
 
     runs-on: ${{ matrix.os }}
@@ -36,5 +36,4 @@ jobs:
 
     # Build the book
     - name: Build the book
-      run: |
-        jupyter-book build src
+      run: make book

@@ -32,10 +32,10 @@ jobs:
     # Checkout the repository. Relies on another GH-Action.
     - uses: actions/checkout@v3
     # Set up the Python version. Relies on another GH-Action.
-    - name: Setup Python 3.9
+    - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9
+        python-version: '3.11'
     # Install Python dependencies
     - name: Install dependencies
       working-directory: ./tools

@@ -21,7 +21,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9
+        python-version: '3.11'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip setuptools wheel
@@ -29,8 +29,7 @@ jobs:
 
     # Build the book
     - name: Build the book
-      run: |
-        jupyter-book build src
+      run: make book
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
