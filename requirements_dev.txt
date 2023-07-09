@@ -1,3 +1,5 @@
 pre-commit
 black
 miss_hit
+faqtory
+requirements.txt

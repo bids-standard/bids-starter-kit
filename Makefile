@@ -29,10 +29,13 @@ help:
 clean:
 	rm -fr src/_build/
 
+update_faq:
+	faqtory build
+
 update_filename_templates:
 	python tools/print_filename_templates.py
 
-book: clean update_filename_templates ## build the book
+book: clean update_faq update_filename_templates ## build the book
 	jupyter-book build src
 
 view: book ## view the book
