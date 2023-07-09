@@ -1,4 +1,5 @@
 jupyter-book==0.12.2
 Jinja2
 faqtory
+ruamel.yaml
 tools/bids-specification/tools/schemacode[render]
