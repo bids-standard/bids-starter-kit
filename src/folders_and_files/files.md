@@ -61,94 +61,65 @@ derivative data.</li>
 
 ### MRI
 
-#### `anat`: Anatomical MRI data
+#### `anat`: Anatomical MRI
 
 <!-- ANAT TEMPLATE STARTS HERE: do not edit manually -->
 <!-- ANAT TEMPLATE ENDS HERE -->
 
-#### `func`: Functional MRI data
+#### `func`: Functional MRI
 
-`myProject/sub-01/ses-01/func/`
+<!-- FUNC TEMPLATE STARTS HERE: do not edit manually -->
+<!-- FUNC TEMPLATE ENDS HERE -->
 
-    -   Data:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_bold.nii.gz`
-    -   Metadata:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_bold.json`
-    -   Events:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_events.tsv`
+#### `fmap`: Fieldmap
 
-#### `fmap`: Fieldmap MRI data
+<!-- FMAP TEMPLATE STARTS HERE: do not edit manually -->
+<!-- FMAP TEMPLATE ENDS HERE -->
 
-`myProject/sub-01/ses-01/fmap/`
+#### `dwi`: Diffusion weighted
 
-    -   Data:
-        -   `sub-<>_ses-<>_acq-<>_run-<>_phasediff.nii.gz`
-        -   `sub-<>_ses-<>_acq-<>_run-<>_magnitude1.nii.gz`
-    -   Metadata:
-        -   `sub-<>_ses-<>_acq-<>_run-<>_phasediff.json`
+<!-- DWI TEMPLATE STARTS HERE: do not edit manually -->
+<!-- DWI TEMPLATE ENDS HERE -->
 
-#### `dwi`: Diffusion Weighted Imaging data
+#### `perf`: Arterial spin labeling
 
-`myProject/sub-01/ses-01/dwi/`
+<!-- PERF TEMPLATE STARTS HERE: do not edit manually -->
+<!-- PERF TEMPLATE ENDS HERE -->
 
-    -   Data:
-        -   `sub-<>_ses-<>_acq-<>_run-<>_dwi.nii.gz`
-        -   `sub-<>_ses-<>_acq-<>_run-<>_dwi.bval`
-        -   `sub-<>_ses-<>_acq-<>_run-<>_dwi.bvec`
-    -   Metadata:
-        -   `sub-<>_ses-<>_acq-<>_run-<>_dwi.json`
+### MEEG
 
-<!-- TODO perf -->
+#### `eeg`: EEG data
 
-### EEG / MEG / iEEG
-
-<!-- TODO EEG -->
+<!-- EEG TEMPLATE STARTS HERE: do not edit manually -->
+<!-- EEG TEMPLATE ENDS HERE -->
 
 #### `meg`: MEG data
 
-`myProject/sub-01/ses-01/meg/`
-
-    -   Data:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_meg.extension`
-    -   Metadata:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_meg.json`
-    -   Channel information:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_channels.tsv`
-    -   Events:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_events.tsv`
-    -   Sensor positions:
-        -   `sub-<>_ses-<>_acq-<>_photo.jpg`
-        -   `sub-<>_ses-<>_acq-<>_fid.json`
-        -   `sub-<>_ses-<>_acq-<>_fidinfo.txt`
-        -   `sub-<>_ses-<>_acq-<>_headshape.extension`
+<!-- MEG TEMPLATE STARTS HERE: do not edit manually -->
+<!-- MEG TEMPLATE ENDS HERE -->
 
 #### `ieeg`: Intracranial EEG data
 
-`myProject/sub-01/ses-01/ieeg/`
+<!-- IEEG TEMPLATE STARTS HERE: do not edit manually -->
+<!-- IEEG TEMPLATE ENDS HERE -->
 
-    -   Data:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_ieeg.extension`
-    -   Metadata:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_ieeg.json`
-    -   Channel information:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_channels.tsv`
-    -   Events:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_events.tsv`
-    -   Electrode locations:
-        -   `sub-<>_ses-<>_acq-<>_electrodes.tsv` _electrode xyz coordinates_
-        -   `sub-<>_ses-<>_acq-<>_coordsystem.json` _coordinate metadata_
-        -   `sub-<>_ses-<>_acq-<>_photo.jpg` _operative photo_
+### Positron emission tomography
 
-### PET
+<!-- PET TEMPLATE STARTS HERE: do not edit manually -->
+<!-- PET TEMPLATE ENDS HERE -->
 
-#### `pet`: Positron Emission Tomography data
+### Microscopy
 
-`myProject/sub-01/pet/`
+<!-- MICR TEMPLATE STARTS HERE: do not edit manually -->
+<!-- MICR TEMPLATE ENDS HERE -->
 
-    -   Data:
-        -   `sub-<>_ses-<>_pet.json`
-        -   `sub-<>_ses-<>_pet.nii.gz`
-        -   `sub-<>_ses-<>_recording-<>_blood.json`
-        -   `sub-<>_ses-<>_recording-<>_blood.tsv`
 
-<!-- TODO Microscopy -->
+### Near-infrared spectroscopy
+
+<!-- NIRS TEMPLATE STARTS HERE: do not edit manually -->
+<!-- NIRS TEMPLATE ENDS HERE -->
+
+### Motion
+
+<!-- MOTION TEMPLATE STARTS HERE: do not edit manually -->
+<!-- MOTION TEMPLATE ENDS HERE -->

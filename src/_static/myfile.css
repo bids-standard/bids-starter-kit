@@ -2,16 +2,21 @@
 :root {
     --mri: #a6cee3;
     --pet: #1f78b4;
-    --meeg: #6a3d9a;
     --micr: #33a02c;
+    --meeg: #6a3d9a;
     --beh: #fb9a99;
-    --key: #ff7f00;
-    --label: #fdbf6f;
-    --suffix: #e31a1c;
-    --ext: #b15928;
-    --underscore: #cab2d6;
-    --unused: #b2df8a;
-    --unused2: #ffff99;
+    --nirs: #b2df8a;
+    --motion: #e31a1c;
+    --unused: #fdbf6f;
+    --unused2: #ff7f00;
+    --unused3: #cab2d6;
+    --unused4: #ffff99;
+    --unused5: #b15928;
+    --key: #e41a1c;
+    --label: #377eb8;
+    --suffix: #4daf4a;
+    --ext: #984ea3;
+    --underscore: #ff7f00;
 }
 
 p { text-align: justify; }

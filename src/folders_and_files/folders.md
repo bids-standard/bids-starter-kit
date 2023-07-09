@@ -63,16 +63,19 @@ For more details, refer to this {ref}`section of the FAQ <faq_session>`.
 
 Represents different types of data. Must be one of:
 
--   `func`
--   `dwi`
--   `fmap`
--   `anat`
--   `meg`
--   `eeg`
--   `ieeg`
--   `beh`
--   `pet`
--   `micr`
+-   `anat`: anatomical MRI data
+-   `func`: functional MRI data
+-   `fmap`: fieldmap data
+-   `dwi`: diffusion MRI data
+-   `perf`: arterial spin labeling data
+-   `eeg`: electroencephalography data
+-   `meg`: magnetoencephalography data
+-   `ieeg`: intracranial EEG data
+-   `beh`: behavioral data
+-   `pet`: positron emission tomography data
+-   `micr`: microscopy data
+-   `nirs`: near-infrared spectroscopy data
+-   `motion`: motion capture data
 
 The name for the datatype depends on the recording modality.
 
@@ -90,22 +93,26 @@ The name for the datatype depends on the recording modality.
 .tg .tg-pet{border-color:#000000;color:var(--pet);font-size:18px; text-align:center;vertical-align:middle}
 .tg .tg-meeg{border-color:#000000;color:var(--meeg);font-size:18px;text-align:center;vertical-align:middle}
 .tg .tg-beh{border-color:#000000;color:var(--beh);font-size:18px; text-align:center;vertical-align:middle}
+.tg .tg-nirs{border-color:#000000;color:var(--nirs);font-size:18px; text-align:center;vertical-align:middle}
+.tg .tg-motion{border-color:#000000;color:var(--motion);font-size:18px; text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
   <tr>
     <th class="tg-va6w"></th>
-    <th class="tg-xuqq" colspan="5"><span style="font-weight:bold"><b>modality</b></span></th>
+    <th class="tg-xuqq" colspan="7"><span style="font-weight:bold"><b>modality</b></span></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-xuqq" rowspan="5"><span style="font-weight:bold"><b>datatype</b></span></td>
-    <td class="tg-mri"><b>mri</b></td>
-    <td class="tg-pet"><b>pet</b></td>
+    <td class="tg-xuqq" rowspan="7"><span style="font-weight:bold"><b>datatype</b></span></td>
+    <td class="tg-mri"><b>MRI</b></td>
+    <td class="tg-pet"><b>PET</b></td>
     <td class="tg-meeg"><span style="font-style:normal;text-decoration:none"><b>meeg</b></span></td>
     <td class="tg-beh"><b>behavioral</b></td>
     <td class="tg-micr"><b>microscopy</b></td>
+    <td class="tg-nirs"><b>NIRS</b></td>
+    <td class="tg-motion"><b>motion</b></td>
   </tr>
   <tr>
     <td class="tg-mri">anat</td>
@@ -113,6 +120,8 @@ The name for the datatype depends on the recording modality.
     <td class="tg-meeg">eeg</td>
     <td class="tg-beh">beh</td>
     <td class="tg-micr">micr</td>
+    <td class="tg-nirs">nirs</td>
+    <td class="tg-motion">motion</td>
   </tr>
   <tr>
     <td class="tg-mri">func<br></td>
@@ -120,6 +129,8 @@ The name for the datatype depends on the recording modality.
     <td class="tg-meeg">meg</td>
     <td class="tg-beh"></td>
     <td class="tg-micr"></td>
+    <td class="tg-micr"></td>
+    <td class="tg-motion"></td>
   </tr>
   <tr>
     <td class="tg-mri">dwi</td>
@@ -127,6 +138,8 @@ The name for the datatype depends on the recording modality.
     <td class="tg-meeg">ieeg</td>
     <td class="tg-beh"></td>
     <td class="tg-micr"></td>
+    <td class="tg-micr"></td>
+    <td class="tg-motion"></td>
   </tr>
   <tr>
     <td class="tg-mri">perf</td>
@@ -134,6 +147,8 @@ The name for the datatype depends on the recording modality.
     <td class="tg-meeg"></td>
     <td class="tg-beh"></td>
     <td class="tg-micr"></td>
+    <td class="tg-micr"></td>
+    <td class="tg-motion"></td>
   </tr>
 </tbody>
 </table>
