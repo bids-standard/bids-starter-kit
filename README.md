@@ -11,18 +11,18 @@
 
 ## Contributing
 
-There are many ways to get in touch with us! Please see our [Contact Page](./src/contact.md)
+There are many ways to get in touch with us!
+Please see our [Contact Page](https://bids-standard.github.io/bids-starter-kit/contact.html)
 for all the details.
 
-To find out more about all the different ways to contribute to the BIDS Starter
-Kit, check out our [**contributing guidelines**](CONTRIBUTING.md).
-They'll tell you how to [get in touch](CONTRIBUTING.md/#get-in-touch),
-give you some usefulresources to help you
-[contribute via GitHub](CONTRIBUTING.md/#contributing-through-github),
-how to make a change [using issues](CONTRIBUTING.md#where-to-start-issue-labels)
+To find out more about all the different ways to contribute to the BIDS Starter Kit,
+check out our [**contributing guidelines**](https://bids-standard.github.io/bids-starter-kit/CONTRIBUTING.html).
+They'll tell help you figure out how to
+[contribute via GitHub](https://bids-standard.github.io/bids-starter-kit/CONTRIBUTING.html#contributing-through-github),
+how to make a change [using issues](https://bids-standard.github.io/bids-starter-kit/CONTRIBUTING.html#where-to-start-issue-labels)
 (you can also check out GitHub's help on
 [issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)) and a
-[pull request](CONTRIBUTING.md#making-a-change-with-a-pull-request).
+[pull request](https://bids-standard.github.io/bids-starter-kit/CONTRIBUTING.html#making-a-change-with-a-pull-request).
 
 ## Contributors ✨
 

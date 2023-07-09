@@ -27,8 +27,8 @@ parts:
   - file: links.md
 - caption: Others
   chapters:
+  - file: FAQ.md
   - file: validator.md
-  - file: faq.md
   - file: glossary.md
   - file: contact.md
   - file: CONTRIBUTING.md

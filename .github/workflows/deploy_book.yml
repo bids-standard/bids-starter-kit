@@ -1,6 +1,10 @@
 ---
 name: deploy-book
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # Only run this when the master branch changes
 
 on:

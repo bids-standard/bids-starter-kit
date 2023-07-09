@@ -137,7 +137,7 @@ If you're updating the [code](#code) or the [templates](#templates),
 the following steps are a guide to help you contribute in a way that will be easy
 for everyone to review and accept with ease 😎.
 
-## Requirements
+### Requirements
 
 To make a contribution you will need to have:
 
@@ -241,7 +241,7 @@ You don't need to submit a new pull request when you make a change in response t
 GitHub has a [nice introduction][github-flow] to the pull request workflow,
 but please [get in touch](#get-in-touch) if you have any questions 🎈.
 
-## Example pull request
+### Example pull request
 
 <img align="right" src="https://i.imgur.com/s8yELfK.png" alt="Example-Contribution"/>
 
@@ -249,7 +249,7 @@ but please [get in touch](#get-in-touch) if you have any questions 🎈.
 
 <br>
 
-### Code ([link][bids-starterkit-repo])
+## Code ([link][bids-starterkit-repo])
 
 This repository is under development,
 but we hope that it becomes a useful place for people to share
@@ -263,7 +263,7 @@ In general if you are contributing some code that requires some inputs,
 either provide that input or a link on how to access it,
 and an example on how to run that code.
 
-#### Matlab / Octave
+### Matlab / Octave
 
 We are using the Miss_hit linter to help us keep out matlab "clean".
 You can find more information on how to set it up and use it on the bids-matlab

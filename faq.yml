@@ -1,0 +1,8 @@
+---
+# FAQtory settings
+
+faq_url: https://bids-standard.github.io/bids-starter-kit/faq.html   # Replace this with the URL to your FAQ.md!
+
+questions_path: ./questions   # Where questions should be stored
+output_path: ./src/FAQ.md   # Where FAQ.md should be generated
+templates_path: .faq   # Path to templates
