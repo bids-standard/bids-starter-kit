@@ -31,6 +31,9 @@ jobs:
     steps:
     # Checkout the repository. Relies on another GH-Action.
     - uses: actions/checkout@v3
+      with:
+        submodules: recursive
+        fetch-depth: 0
     # Set up the Python version. Relies on another GH-Action.
     - name: Setup Python
       uses: actions/setup-python@v4
