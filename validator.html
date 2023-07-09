@@ -231,6 +231,16 @@ const thebe_selector_output = ".output, .cell_output"
    Contact
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CONTRIBUTING.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CODE_OF_CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -478,28 +488,27 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="bids-validation">
 <h1>BIDS validation<a class="headerlink" href="#bids-validation" title="Permalink to this headline">¶</a></h1>
 <p>The <a class="reference external" href="https://github.com/bids-standard/bids-validator">BIDS Validator</a> is a tool
-that checks if a dataset is compliant with the BIDS standard. The validator is
-available for use within several different environments to best suit individual
-user preferences and use cases, those versions are:</p>
+that checks if a dataset is compliant with the BIDS standard.
+The validator is available for use within several different environments
+to best suit individual user preferences and use cases, those versions are:</p>
 <ul class="simple">
 <li><p>A web browser based version</p></li>
 <li><p>Command line version</p></li>
 <li><p>Docker based version</p></li>
 <li><p>A python library installable via pip</p></li>
 </ul>
-<p>Instructions to install and use these versions can be found within the
-<a class="reference external" href="https://github.com/bids-standard/bids-validator">quickstart guide</a>
+<p>Instructions to install and use these versions can be found
+within the <a class="reference external" href="https://github.com/bids-standard/bids-validator">quickstart guide</a>
 at the BIDS Validator repository.</p>
 <p><strong>Data Privacy and Confidentiality</strong></p>
-<p>Please note that the web app is entirely browser(not server) based. As such,
-there is no file uploading as part of the validation.</p>
+<p>Please note that the web app is entirely browser(not server) based.
+As such, there is no file uploading as part of the validation.</p>
 <div class="section" id="browser-version">
 <h2>Browser Version<a class="headerlink" href="#browser-version" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>The BIDS Validator can be found at
-<a class="reference external" href="http://bids-standard.github.io/bids-validator/">http://bids-standard.github.io/bids-validator/</a>. It requires that you use
-the Chrome or Firefox browser, since those are the only ones in which you can
-select a whole folder rather than individual files.</p></li>
+<li><p>The BIDS Validator can be found at <a class="reference external" href="http://bids-standard.github.io/bids-validator/">http://bids-standard.github.io/bids-validator/</a>.
+It requires that you use the Chrome or Firefox browser,
+since those are the only ones in which you can select a whole folder rather than individual files.</p></li>
 </ol>
 <!-- TODO grab that image and add to the repo -->
 <p><img alt="home" src="https://i.imgur.com/YD38eTE.png" /></p>
@@ -510,16 +519,16 @@ select a whole folder rather than individual files.</p></li>
 <h3>Types of Feedback<a class="headerlink" href="#types-of-feedback" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="error">
 <h4>Error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h4>
-<p>This response indicates that your dataset is not BIDS compliant. Try following
-the suggestions listed to make the appropriate corrections</p>
+<p>This response indicates that your dataset is not BIDS compliant.
+Try following the suggestions listed to make the appropriate corrections</p>
 <!-- TODO grab that image and add to the repo -->
 <p><img alt="Error" src="https://i.imgur.com/PEz9hbd.png" /></p>
 </div>
 <div class="section" id="warning">
 <h4>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h4>
-<p>This response indicates that your dataset is BIDS compliant, but there are some
-non-critical problems (such as optional fields missing, or differences between
-participants)</p>
+<p>This response indicates that your dataset is BIDS compliant,
+but there are some non-critical problems
+(such as optional fields missing, or differences between participants)</p>
 <!-- TODO grab that image and add to the repo -->
 <p><img alt="Warning" src="https://i.imgur.com/Gqwc1q9.png" /></p>
 </div>
@@ -535,10 +544,11 @@ participants)</p>
 <h2>Command Line Version<a class="headerlink" href="#command-line-version" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="verifying-a-bids-compliant-data-set">
 <h3>Verifying a BIDS compliant data set<a class="headerlink" href="#verifying-a-bids-compliant-data-set" title="Permalink to this headline">¶</a></h3>
-<p>After
-<a class="reference external" href="https://github.com/bids-standard/bids-validator">installation with npm</a>
-using the CLI is trivial. Locate a bids data set similar to the one below:</p>
+<p>After <a class="reference external" href="https://github.com/bids-standard/bids-validator">installation with npm</a>
+using the CLI is relatively simple.
+Locate a bids data set similar to the one below:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>tree<span class="w"> </span>sub001/
+
 sub001/
 ├──<span class="w"> </span>dataset_description.json
 ├──<span class="w"> </span>participants.json
@@ -573,9 +583,10 @@ question:</p>
 <h3>Types of Feedback<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id2">
 <h4>Error<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
-<p>As is the case w/ the browser or any version of the validator follow the <code class="docutils literal notranslate"><span class="pre">[ERR]</span></code>
-messages and correct until bids-validator returns 0 errors after running.</p>
+<p>As is the case w/ the browser or any version of the validator follow
+the <code class="docutils literal notranslate"><span class="pre">[ERR]</span></code> messages and correct until bids-validator returns 0 errors after running.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001
+
 bids-validator@1.7.1
 
 <span class="w"> </span><span class="m">1</span>:<span class="w"> </span><span class="o">[</span>ERR<span class="o">]</span><span class="w"> </span>Invalid<span class="w"> </span>JSON<span class="w"> </span>file.<span class="w"> </span>The<span class="w"> </span>file<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>formatted<span class="w"> </span>according<span class="w"> </span>the<span class="w"> </span>schema.<span class="w"> </span><span class="o">(</span>code:<span class="w"> </span><span class="m">55</span><span class="w"> </span>-<span class="w"> </span>JSON_SCHEMA_VALIDATION_ERROR<span class="o">)</span>
@@ -602,11 +613,12 @@ bids-validator@1.7.1
 </div>
 <div class="section" id="id3">
 <h4>Warning<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
-<p>As stated with the browser version above, one may elect to ignore warnings, but
-the information provided via the validator should help to pinpoint where and how
-to resolve some of these warnings. When in doubt consult the
-<a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/">BIDS Spec</a></p>
+<p>As stated with the browser version above, one may elect to ignore warnings,
+but the information provided via the validator should help to pinpoint
+where and how to resolve some of these warnings.
+When in doubt consult the <a class="reference external" href="https://bids-specification.readthedocs.io/en/latest/">BIDS Spec</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001/
+
 bids-validator@1.7.1
 
 <span class="m">1</span>:<span class="w"> </span><span class="o">[</span>WARN<span class="o">]</span><span class="w"> </span>Tabular<span class="w"> </span>file<span class="w"> </span>contains<span class="w"> </span>custom<span class="w"> </span>columns<span class="w"> </span>not<span class="w"> </span>described<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>data<span class="w"> </span>dictionary<span class="w"> </span><span class="o">(</span>code:<span class="w"> </span><span class="m">82</span><span class="w"> </span>-<span class="w"> </span>CUSTOM_COLUMN_WITHOUT_DESCRIPTION<span class="o">)</span>

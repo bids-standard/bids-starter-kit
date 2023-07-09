@@ -231,6 +231,16 @@ const thebe_selector_output = ".output, .cell_output"
    Contact
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CONTRIBUTING.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CODE_OF_CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -411,8 +421,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="ieeg-data-conversion">
 <h1>iEEG data conversion<a class="headerlink" href="#ieeg-data-conversion" title="Permalink to this headline">¶</a></h1>
-<p>Here, we briefly describe the first steps in creating an iEEG dataset in BIDS
-format. The process can be summarized by the following main steps:</p>
+<p>Here, we briefly describe the first steps in creating an iEEG dataset in BIDS format.
+The process can be summarized by the following main steps:</p>
 <ol class="simple">
 <li><p>structure your files in the proper folder hierarchy</p></li>
 <li><p>rename files such that they adhere to the BIDS naming specification,</p></li>
@@ -421,25 +431,28 @@ format. The process can be summarized by the following main steps:</p>
 </ol>
 <div class="section" id="step-1-folder-structure">
 <h2>Step 1: Folder structure<a class="headerlink" href="#step-1-folder-structure" title="Permalink to this headline">¶</a></h2>
-<p>At the highest level, BIDS is a specification for how to structure your files in
-folders, and how to name files such that one can easily infer their contents.
-Thus, the first step is to create the proper folder/file hierarchies, which
-looks like this:</p>
+<p>At the highest level, BIDS is a specification for how to structure your files in folders,
+and how to name files such that one can easily infer their contents.
+Thus, the first step is to create the proper folder/file hierarchies,
+which looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 └── subject
     └── session
         └── acquisition
 </pre></div>
 </div>
-<p>The top level (project) of a BIDS folder must contain a dataset_description.json
-file, a README, and a CHANGES file. In addition, there are a set of sub-folders,
-one per subject, that contain all data from a given subject. These must be named
-according to the convention <code class="docutils literal notranslate"><span class="pre">sub-&lt;label&gt;</span></code>. Within these folders there is an
-optional “session” folder (called <code class="docutils literal notranslate"><span class="pre">ses-&lt;label&gt;</span></code>) and finally a collection of
-“acquisition folders” that correspond to datasets from different modalities
-(such as functional imaging, EEG, and iEEG data) that corresponds to this
-dataset. In our example, there is a folder called <code class="docutils literal notranslate"><span class="pre">ieeg</span></code> that stores all iEEG
-data for the subject, for example:</p>
+<p>The top level (project) of a BIDS folder must contain
+a dataset_description.json file, a README, and a CHANGES file.
+In addition, there are a set of sub-folders,
+one per subject, that contain all data from a given subject.
+These must be named according to the convention <code class="docutils literal notranslate"><span class="pre">sub-&lt;label&gt;</span></code>.
+Within these folders there is an optional “session” folder (called <code class="docutils literal notranslate"><span class="pre">ses-&lt;label&gt;</span></code>)
+and finally a collection of “acquisition folders”
+that correspond to datasets from different modalities
+(such as functional imaging, EEG, and iEEG data)
+that corresponds to this dataset.
+In our example, there is a folder called <code class="docutils literal notranslate"><span class="pre">ieeg</span></code> that stores all iEEG data
+for the subject, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>iEEGProject
 ├── dataset_description.json
 ├── participants.tsv
@@ -472,37 +485,40 @@ data for the subject, for example:</p>
 </div>
 <div class="section" id="step-2-add-raw-ieeg-data">
 <h2>Step 2. Add raw iEEG data<a class="headerlink" href="#step-2-add-raw-ieeg-data" title="Permalink to this headline">¶</a></h2>
-<p>Once a folder hierarchy is defined, the folders can be populated with the
-correct files. Here we focus on the files relevant for iEEG data. Within the
-<code class="docutils literal notranslate"><span class="pre">ieeg</span></code> folder, we first copy the raw iEEG data and renamed such that they adhere
-to the BIDS file naming scheme. For example:</p>
+<p>Once a folder hierarchy is defined, the folders can be populated
+with the correct files.
+Here we focus on the files relevant for iEEG data.
+Within the <code class="docutils literal notranslate"><span class="pre">ieeg</span></code> folder, we first copy the raw iEEG data and renamed such
+that they adhere to the BIDS file naming scheme.
+For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">subjectlabel</span><span class="o">&gt;</span><span class="n">_ses</span><span class="o">-&lt;</span><span class="n">sessionlabel</span><span class="o">&gt;</span><span class="n">_task</span><span class="o">-&lt;</span><span class="n">tasklabel</span><span class="o">&gt;</span><span class="n">_run</span><span class="o">-&lt;</span><span class="n">runlabel</span><span class="o">&gt;</span><span class="n">_ieeg</span><span class="o">.&lt;</span><span class="n">extension</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>These data are unprocessed and can have one of several file formats (for
-example: BrainVision and EDF formats are supported, NWB, EEGLab and MEF3 formats
-are allowed).</p>
+<p>These data are unprocessed and can have one of several file formats
+(for example: BrainVision and EDF formats are supported, NWB, EEGLab and MEF3 formats are allowed).</p>
 </div>
 <div class="section" id="step-3-add-ieeg-amplifier-metadata">
 <h2>Step 3. Add iEEG amplifier metadata<a class="headerlink" href="#step-3-add-ieeg-amplifier-metadata" title="Permalink to this headline">¶</a></h2>
 <p>BIDS datasets should specify all of the metadata needed to analyze and
-understand a dataset, and these are all contained within text-based JavaScript
-Object Notation (JSON, field-value) and Tab Separated Value (TSV) metadata
-files. The iEEG amplifier metadata are stored for each run in a JSON file with
-the same name structure as the raw data (<code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_ieeg.json</span></code>) and a
-TSV file with amplifier metadata (<code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_channels.tsv</span></code>).</p>
+understand a dataset, and these are all contained within text-based
+JavaScript  Object Notation (JSON, field-value)
+and Tab Separated Value (TSV) metadata files.
+The iEEG amplifier metadata are stored for each run in a JSON file
+with the same name structure as the raw data (<code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_ieeg.json</span></code>)
+and a TSV file with amplifier metadata (<code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_channels.tsv</span></code>).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_ieeg.json</span></code>: contains the metadata that are the same for
-all the data in this run, such as the task name and description, the
-amplifier brand, and where the experiments were performed. Download a
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_ieeg.json</span></code>: contains the metadata
+that are the same for all the data in this run,
+such as the task name and description, the amplifier brand,
+and where the experiments were performed. Download a
 template in the bids-starter-kit
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_ieeg.json">here</a>
 or find the Matlab script to more automatically populate the required fields
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_ieeg_json.m">here</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;raw-data-filename&gt;_channels.tsv</span></code>: The TSV file contains all the settings
 that differ between iEEG channels such as the units and type of channel
-(ECOG, SEEG, ECG, EMG, EOG and so on). Download a template in the
-bids-starter-kit
+(ECOG, SEEG, ECG, EMG, EOG and so on).
+Download a template in the bids-starter-kit
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_task-LongExample_run-01_channels.tsv">here</a>
 or find the Matlab script to more automatically populate the required fields
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode/ieeg/createBIDS_channels_tsv.m">here</a>.</p></li>
@@ -511,18 +527,20 @@ or find the Matlab script to more automatically populate the required fields
 <div class="section" id="step-4-add-electrode-specific-metadata">
 <h2>Step 4. Add electrode-specific metadata<a class="headerlink" href="#step-4-add-electrode-specific-metadata" title="Permalink to this headline">¶</a></h2>
 <p>In iEEG recordings, each channel in the amplifier is sampled from a specific
-electrode implanted in the brain. The metadata on the type of electrodes and
-their coordinates is stored in a TSV file with a row for each metallic electrode
-contact (<code class="docutils literal notranslate"><span class="pre">_electrodes.tsv</span></code>). The names of each electrode are used in the
-amplifier metadata to specify the recorded channel and reference to link these
-two files. In order to interpret the position of each electrode, the coordinate
-system is defined in a JSON file (<code class="docutils literal notranslate"><span class="pre">_coordsystem.json</span></code>). The <code class="docutils literal notranslate"><span class="pre">_coordsystem.json</span></code>
-file specifies a reference image file, which can be an MRI, surface rendering,
-standard space (for example: MNI) or operative photo, such that electrode
-positions can be displayed. In addition, any raw data collected for the purpose
-of localizing electrodes is stored in a corresponding anatomy folder (called
-<code class="docutils literal notranslate"><span class="pre">anat</span></code>) that lives at the same folder level as the <code class="docutils literal notranslate"><span class="pre">ieeg</span></code> folder. This can
-contain files like structural volume data or electrode placement photos.</p>
+electrode implanted in the brain.
+The metadata on the type of electrodes and their coordinates is stored
+in a TSV file with a row for each metallic electrode contact (<code class="docutils literal notranslate"><span class="pre">_electrodes.tsv</span></code>).
+The names of each electrode are used in the amplifier metadata
+to specify the recorded channel and reference to link these two files.
+In order to interpret the position of each electrode,
+the coordinate system is defined in a JSON file (<code class="docutils literal notranslate"><span class="pre">_coordsystem.json</span></code>).
+The <code class="docutils literal notranslate"><span class="pre">_coordsystem.json</span></code> file specifies a reference image file,
+which can be an MRI, surface rendering, standard space (for example: MNI)
+or operative photo, such that electrode positions can be displayed.
+In addition, any raw data collected for the purpose of localizing electrodes
+is stored in a corresponding anatomy folder (called <code class="docutils literal notranslate"><span class="pre">anat</span></code>)
+that lives at the same folder level as the <code class="docutils literal notranslate"><span class="pre">ieeg</span></code> folder.
+This can contain files like structural volume data or electrode placement photos.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">_electrodes.tsv</span></code>: Download a template in the bids-starter-kit
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/ieeg/sub-01_ses-01_electrodes.tsv">here</a>
@@ -536,12 +554,14 @@ or find the Matlab script to more automatically populate the required fields
 </div>
 <div class="section" id="step-5-add-optional-metadata">
 <h2>Step 5. Add optional metadata<a class="headerlink" href="#step-5-add-optional-metadata" title="Permalink to this headline">¶</a></h2>
-<p>There are several optional data types that can be stored in BIDS. The way in
-which events, stimuli, continuous physiology data, and participant information
-are stored is the same as for BIDS MRI data. These optional metadata are stored
-within TSV and JSON files as well as any task-specific stimulation files (for
-example: photos or sounds that were presented to the subject during the task, or
-videos of the subject and experimental setup). Some examples are shown here:</p>
+<p>There are several optional data types that can be stored in BIDS.
+The way in which events, stimuli, continuous physiology data, and participant information
+are stored is the same as for BIDS MRI data.
+These optional metadata are stored
+within TSV and JSON files as well as any task-specific stimulation files
+(for example: photos or sounds that were presented to the subject during the task,
+or videos of the subject and experimental setup).
+Some examples are shown here:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>iEEGProject
 ├── dataset_description.json
 ├── participants.tsv
@@ -563,12 +583,12 @@ videos of the subject and experimental setup). Some examples are shown here:</p>
 </div>
 <div class="section" id="step-6-validate-the-ieeg-bids-data">
 <h2>Step 6. Validate the iEEG-BIDS data<a class="headerlink" href="#step-6-validate-the-ieeg-bids-data" title="Permalink to this headline">¶</a></h2>
-<p>In order to verify that a dataset adheres to the BIDS specification, we need to
-validate the structure, naming conventions, and information inside the dataset.
-The <a class="reference external" href="https://github.com/bids-standard/bids-validator">BIDS validator</a> is a web-
-and command line-based tool that can validate whether a dataset is BIDS
-compliant. As a part of the iEEG extension to the BIDS specification, this
-validator has been updated to check for new conventions related to iEEG data.</p>
+<p>In order to verify that a dataset adheres to the BIDS specification,
+we need to validate the structure, naming conventions, and information inside the dataset.
+The <a class="reference external" href="https://github.com/bids-standard/bids-validator">BIDS validator</a>
+is a web- and command line-based tool that can validate whether a dataset is BIDS compliant.
+As a part of the iEEG extension to the BIDS specification,
+this validator has been updated to check for new conventions related to iEEG data.</p>
 </div>
 </div>
 

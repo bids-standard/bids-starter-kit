@@ -231,6 +231,16 @@ const thebe_selector_output = ".output, .cell_output"
    Contact
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CONTRIBUTING.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CODE_OF_CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -405,22 +415,19 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="derivatives">
 <h1>Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this headline">¶</a></h1>
-<p>Derivatives are outputs of (pre-)processing pipelines, capturing data and
-meta-data sufficient for a researcher to understand and (critically) reuse those
-outputs in subsequent processing. Standardizing derivatives is motivated by use
-cases where formalized machine-readable access to processed data enables higher
-level processing.</p>
-<p>A derivative dataset is a collection of derivatives, or files that have been
-generated from the data. Broadly, a derivative can be considered to be
-preprocessed or processed, such that the data type is unchanged or changed,
-respectively, from that of the source data file(s).</p>
+<p>Derivatives are outputs of (pre-)processing pipelines, capturing data
+and meta-data sufficient for a researcher to understand
+and (critically) reuse those outputs in subsequent processing.
+Standardizing derivatives is motivated by use cases where formalized machine-readable access
+to processed data enables higher level processing.</p>
+<p>A derivative dataset is a collection of derivatives, or files that have been generated from the data.
+Broadly, a derivative can be considered to be preprocessed or processed,
+such that the data type is unchanged or changed, respectively, from that of the source data file(s).</p>
 <p>BIDS Derivatives was finalized in version 1.4.0 of the BIDS specification.</p>
 <div class="section" id="tour-of-a-bids-derivative">
 <h2>Tour of a BIDS Derivative<a class="headerlink" href="#tour-of-a-bids-derivative" title="Permalink to this headline">¶</a></h2>
-<p>As with BIDS datasets, all conformant derivative datasets contain a
-<code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code>.</p>
-<p>New fields include <code class="docutils literal notranslate"><span class="pre">DatasetType</span></code>, which distinguishes <code class="docutils literal notranslate"><span class="pre">&quot;derivative&quot;</span></code> datasets
-from <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot;</span></code>:</p>
+<p>As with BIDS datasets, all conformant derivative datasets contain a <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code>.</p>
+<p>New fields include <code class="docutils literal notranslate"><span class="pre">DatasetType</span></code>, which distinguishes <code class="docutils literal notranslate"><span class="pre">&quot;derivative&quot;</span></code> datasets from <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot;</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">GeneratedBy</span></code>, a list of processes that generated the data</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">SourceDatasets</span></code>, a list of datasets used to generate the derivative.</p></li>
@@ -455,11 +462,10 @@ from <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot
 </div>
 <div class="section" id="preprocessed-data">
 <h3>Preprocessed data<a class="headerlink" href="#preprocessed-data" title="Permalink to this headline">¶</a></h3>
-<p>Data is considered to be <em>preprocessed</em> if it is fundamentally similar to the
-source data. Artifact removal, motion correction and resampling to a template
-space are examples of preprocessing.</p>
-<p>An example of a subject with simultaneous EEG/fMRI resting state scan, aligned
-along with a T1w image to the MNI305 template:</p>
+<p>Data is considered to be <em>preprocessed</em> if it is fundamentally similar to the source data.
+Artifact removal, motion correction and resampling to a template space are examples of preprocessing.</p>
+<p>An example of a subject with simultaneous EEG/fMRI resting state scan,
+aligned along with a T1w image to the MNI305 template:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipeline1/
 <span class="w">  </span>sub-01/
 <span class="w">    </span>anat/
@@ -473,23 +479,22 @@ along with a T1w image to the MNI305 template:</p>
 <span class="w">      </span>sub-01_task-rest_space-MNI305_desc-preproc_bold.json
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">space</span></code> entity indicates that a file is aligned to some reference space. For
-standard templates, this is sufficient. For custom templates (for example:
-individual or study-specific), additional <code class="docutils literal notranslate"><span class="pre">SpatialReference</span></code> metadata is
-required in the JSON sidecar files.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">desc</span></code> (description) entity allows for unrestricted alphanumeric labels, in
-the absence of a more appropriate entity to distinguish one file from another.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">space</span></code> entity indicates that a file is aligned to some reference space.
+For standard templates, this is sufficient.
+For custom templates (for example: individual or study-specific),
+additional <code class="docutils literal notranslate"><span class="pre">SpatialReference</span></code> metadata is required in the JSON sidecar files.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">desc</span></code> (description) entity allows for unrestricted alphanumeric labels,
+in the absence of a more appropriate entity to distinguish one file from another.</p>
 </div>
 <div class="section" id="derivative-data-types">
 <h3>Derivative data types<a class="headerlink" href="#derivative-data-types" title="Permalink to this headline">¶</a></h3>
-<p>Data is considered to be <em>processed</em> if it is fundamentally different to the
-source data. Processed data may differ substantially in BIDS datatypes from the
-original input data.</p>
+<p>Data is considered to be <em>processed</em> if it is fundamentally different to the source data.
+Processed data may differ substantially in BIDS datatypes from the original input data.</p>
 <p>The initial offering of BIDS Derivatives only specifies anatomical derivatives
 that are of general use: masks and segmentations.</p>
-<p>Mask images are binary images with 1 representing the region of interest and all
-other voxels containing 0. The following example shows a manually constructed
-lesion mask:</p>
+<p>Mask images are binary images with 1 representing the region of interest
+and all other voxels containing 0.
+The following example shows a manually constructed lesion mask:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>manual_masks/
 <span class="w">  </span>sub-01/
 <span class="w">    </span>anat/
@@ -505,20 +510,19 @@ lesion mask:</p>
 <span class="w">      </span>sub-01_task-loc_space-individual_label-FFA_mask.json
 </pre></div>
 </div>
-<p>BIDS Derivatives introduces “discrete segmentations” and “probabilistic
-segmentations”.</p>
+<p>BIDS Derivatives introduces “discrete segmentations” and “probabilistic segmentations”.</p>
 <p>A <em>segmentation</em> is a labeling of regions of an image such that each location
-(for example, a voxel or a surface vertex) is identified with a label or a
-combination of labels. Labeled regions may include anatomical structures (such
-as tissue class, Brodmann area or white matter tract), discontiguous,
+(for example, a voxel or a surface vertex) is identified with a label or a combination of labels.
+Labeled regions may include anatomical structures
+(such as tissue class, Brodmann area or white matter tract), discontiguous,
 functionally-defined networks, tumors or lesions.</p>
-<p>A <em>discrete segmentation</em> represents each region with a unique integer label. A
-<em>probabilistic segmentation</em> represents each region as values between 0 and 1
+<p>A <em>discrete segmentation</em> represents each region with a unique integer label.
+A <em>probabilistic segmentation</em> represents each region as values between 0 and 1
 (inclusive) at each location in the image, and one volume/frame per structure
 may be concatenated in a single file.</p>
 <p>A BIDS App that calculates ROIs in BOLD space from the automated anatomical
-labeling (AAL, doi:[10.1006/nimg.2001.0978]) could store discrete and
-probabilistic (or partial volume) segmentations as follows:</p>
+labeling (AAL, doi:[10.1006/nimg.2001.0978]) could store discrete
+and probabilistic (or partial volume) segmentations as follows:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tissue_segmentation/
 <span class="w">  </span>desc-AAL_dseg.tsv
 <span class="w">  </span>desc-AAL_probseg.json
@@ -529,27 +533,26 @@ probabilistic (or partial volume) segmentations as follows:</p>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">dseg.tsv</span></code> file is a lookup table for interpreting a discrete segmentation
-and <code class="docutils literal notranslate"><span class="pre">probseg.json</span></code> contains a list identifying the labels for each consecutive
-volume.</p>
+and <code class="docutils literal notranslate"><span class="pre">probseg.json</span></code> contains a list identifying the labels for each consecutive volume.</p>
 </div>
 <div class="section" id="unspecified-data-types">
 <h3>Unspecified data types<a class="headerlink" href="#unspecified-data-types" title="Permalink to this headline">¶</a></h3>
-<p>Derivatives can never be fully specified, as new methods can always be
-developed, requiring new data representations. BIDS recognizes this and
-encourages adopting “BIDS-style naming conventions”.</p>
-<p>Additional files and folders containing raw data MAY be added as needed for
-special cases. All non-standard file entities SHOULD conform to BIDS-style
-naming conventions, including alphabetic entities and suffixes and alphanumeric
-labels/indices. Non-standard suffixes SHOULD reflect the nature of the data, and
-existing entities SHOULD be used when appropriate.</p>
-<p>This recommendation remains in force for derivatives datasets. Additionally,
-BIDS Derivatives acknowledges that it may be desirable to distribute derivatives
-generated by non-compliant applications, for the sake of reproducibility and
-non-duplication of effort. Therefore, if a BIDS dataset contains a
-<code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> sub-directory, the contents of that directory may be a
-heterogeneous mix of BIDS Derivatives datasets and non-compliant derivatives.</p>
-<p>One example of such a non-compliant derivative dataset would be FreeSurfer
-reconstructions of subject surfaces:</p>
+<p>Derivatives can never be fully specified, as new methods can always be developed,
+requiring new data representations.
+BIDS recognizes this and encourages adopting “BIDS-style naming conventions”.</p>
+<p>Additional files and folders containing raw data MAY be added as needed for special cases.
+All non-standard file entities SHOULD conform to BIDS-style naming conventions,
+including alphabetic entities and suffixes and alphanumeric labels/indices.
+Non-standard suffixes SHOULD reflect the nature of the data,
+and existing entities SHOULD be used when appropriate.</p>
+<p>This recommendation remains in force for derivatives datasets.
+Additionally, BIDS Derivatives acknowledges that it may be desirable
+to distribute derivatives generated by non-compliant applications,
+for the sake of reproducibility and non-duplication of effort.
+Therefore, if a BIDS dataset contains a <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> sub-directory,
+the contents of that directory may be a heterogeneous mix of BIDS Derivatives datasets
+and non-compliant derivatives.</p>
+<p>One example of such a non-compliant derivative dataset would be FreeSurfer reconstructions of subject surfaces:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bids-root/
 <span class="w">  </span>derivatives/
 <span class="w">    </span>freesurfer/
@@ -564,21 +567,20 @@ reconstructions of subject surfaces:</p>
 <span class="w">  </span>...
 </pre></div>
 </div>
-<p>Note that subject directory names conform to BIDS conventions, but contents are
-determined by the generating application, in this case, FreeSurfer.</p>
+<p>Note that subject directory names conform to BIDS conventions,
+but contents are determined by the generating application, in this case, FreeSurfer.</p>
 </div>
 <div class="section" id="organizing-datasets-and-their-derivatives">
 <h3>Organizing datasets and their derivatives<a class="headerlink" href="#organizing-datasets-and-their-derivatives" title="Permalink to this headline">¶</a></h3>
 <p>BIDS Derivatives datasets are intended to be interpretable and distributable
-with or without the datasets used to generate them. This is necessary for
-storage and bandwidth constraints, as well as to permit the distribution of
-derivatives when the source data are restricted.</p>
+with or without the datasets used to generate them.
+This is necessary for storage and bandwidth constraints,
+as well as to permit the distribution of derivatives when the source data are restricted.</p>
 <p>This independence affords flexibility in the relative organization of datasets.
-The following examples show three ways to organize, relative to each other, a
-raw BIDS dataset, a preprocessed derivative dataset, and an analysis that uses
-both as inputs.</p>
-<p>A collection of derivative datasets may be stored in the <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code>
-subdirectory of a BIDS (or BIDS Derivatives) dataset:</p>
+The following examples show three ways to organize, relative to each other,
+a raw BIDS dataset, a preprocessed derivative dataset, and an analysis that uses both as inputs.</p>
+<p>A collection of derivative datasets may be stored in the <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> subdirectory
+of a BIDS (or BIDS Derivatives) dataset:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>my_dataset/
 <span class="w">  </span>derivatives/
 <span class="w">    </span>preprocessed/
@@ -587,8 +589,8 @@ subdirectory of a BIDS (or BIDS Derivatives) dataset:</p>
 <span class="w">  </span>...
 </pre></div>
 </div>
-<p>A BIDS Derivatives dataset may contain references to its input datasets in the
-<code class="docutils literal notranslate"><span class="pre">sourcedata/</span></code> subdirectory:</p>
+<p>A BIDS Derivatives dataset may contain references to its input datasets
+in the <code class="docutils literal notranslate"><span class="pre">sourcedata/</span></code> subdirectory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>my_analysis/
 <span class="w">  </span>sourcedata/
 <span class="w">    </span>raw/
@@ -597,10 +599,9 @@ subdirectory of a BIDS (or BIDS Derivatives) dataset:</p>
 <span class="w">  </span>...
 </pre></div>
 </div>
-<p>Note that the <code class="docutils literal notranslate"><span class="pre">sourcedata/</span></code> and <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> subdirectories constitute dataset
-boundaries. Any contents of these directories may be validated independently,
-but their contents must not affect the interpretation of the nested or
-containing datasets.</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">sourcedata/</span></code> and <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> subdirectories constitute dataset boundaries.
+Any contents of these directories may be validated independently,
+but their contents must not affect the interpretation of the nested or containing datasets.</p>
 <p>Unnested datasets are also possible. For example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>my_study/
 <span class="w">  </span>raw_data/

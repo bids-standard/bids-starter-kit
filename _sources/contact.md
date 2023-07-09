@@ -5,11 +5,16 @@ We have lots of different ways of staying in touch!
 **Our preferred way to answer questions** is via our forum
 [Neurostars](https://neurostars.org/tags/bids) (we have a 90%+ answer rate!)
 
-We understand that posting a question on a forum can seem a bit uncertain and
-intimidating. However, if _you_ have a question it's almost certain that
-somebody else will too, and this way we can avoid answering the same question
-multiple times. Even if your question is not well-defined, just post what you
-have so far and we will be able to point you in the right direction!
+We understand that posting a question on a forum can seem a bit uncertain and intimidating.
+However, if _you_ have a question it's almost certain that somebody else will too,
+and this way we can avoid answering the same question multiple times.
+Even if your question is not well-defined,
+just post what you have so far and we will be able to point you in the right direction!
+
+Some example questions that have already been answered include:
+
+-   [BIDS file naming specifications](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
+-   [BIDS beginner - convert data to BIDS format](https://neurostars.org/t/bids-beginner-convert-data-to-bids-format/1364)
 
 You can also come chat on the
 [Brainhack mattermost](https://mattermost.brainhack.org/):

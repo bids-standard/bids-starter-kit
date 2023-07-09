@@ -231,6 +231,16 @@ const thebe_selector_output = ".output, .cell_output"
    Contact
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CONTRIBUTING.html">
+   Contributing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CODE_OF_CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -422,66 +432,68 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="scaling">
 <h1>Scaling<a class="headerlink" href="#scaling" title="Permalink to this headline">¶</a></h1>
-<p>This paragraph discusses the specific scaling issues for GE, Philips, and
-Siemens. Beware that these issues are occurring at the time of the release of
-<a class="reference external" href="https://bids-specification.readthedocs.io/en/v1.5.0/">version 1.5.0</a>, and might
-be resolved in the future.</p>
+<p>This paragraph discusses the specific scaling issues for GE, Philips, and Siemens.
+Beware that these issues are occurring
+at the time of the release of <a class="reference external" href="https://bids-specification.readthedocs.io/en/v1.5.0/">version 1.5.0</a>,
+and might be resolved in the future.</p>
 <div class="section" id="ge">
 <h2>GE<a class="headerlink" href="#ge" title="Permalink to this headline">¶</a></h2>
-<p>GE applies an RF amplifier factor that should be multiplied by the number of
-signal averages (NSA) as GE sums instead of averages them.</p>
+<p>GE applies an RF amplifier factor that should be multiplied
+by the number of signal averages (NSA) as GE sums instead of averages them.</p>
 </div>
 <div class="section" id="philips">
 <h2>Philips<a class="headerlink" href="#philips" title="Permalink to this headline">¶</a></h2>
-<p>Typically, Philips ASL datasets use the standard DICOM rescale tags only to
-rescale data for viewing, whereas private rescale tags are used for scaling to
-acquisition values needed for proper quantification.</p>
-<p>The procedure for using both the scaling types is described previously
-[<strong>reference required</strong>], although the authors did not mention that three DICOM
-fields are typically used for this purpose - <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">100e)</span></code>, <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code>, or
-<code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code>.</p>
-<p>It may also occur that the RescaleSlope <code class="docutils literal notranslate"><span class="pre">(0028,</span> <span class="pre">1053)</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1</span></code> and
-RescaleSlopeOriginal <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">140a)</span></code> needs to be used instead. Note that DICOM to
-NIfTI conversion software may omit the private slopes, in which cases the
-private slope needs to be applied after running the conversion.</p>
+<p>Typically, Philips ASL datasets use the standard DICOM rescale tags only
+to rescale data for viewing, whereas private rescale tags are used for scaling
+to acquisition values needed for proper quantification.</p>
+<p>The procedure for using both the scaling types is described previously [<strong>reference required</strong>],
+although the authors did not mention that three DICOM fields are typically used for this purpose</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">100e)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code></p></li>
+<li><p>or <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code>.</p></li>
+</ul>
+<p>It may also occur that the RescaleSlope <code class="docutils literal notranslate"><span class="pre">(0028,</span> <span class="pre">1053)</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1</span></code>
+and RescaleSlopeOriginal <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">140a)</span></code> needs to be used instead.
+Note that DICOM to NIfTI conversion software may omit the private slopes,
+in which cases the private slope needs to be applied after running the conversion.</p>
 <p>An exception is the <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> software
-that does take private scale slopes into account in most cases. The
-<a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> versions released between
-2018 and 2019-09-02 can correctly scale the NIfTI according to the private scale
-slopes - if run with parameter <code class="docutils literal notranslate"><span class="pre">-p</span></code> - and indicates this by setting
-<code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code> in the accompanying json file.</p>
-<p>Two exceptions apply, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> does
-not support DICOM tags <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code> and <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code> that still need to be
-read and applied additionally. Furthermore, the field RealWorldValueSlope
-<code class="docutils literal notranslate"><span class="pre">(0040,9225)</span></code> is sometimes provided as an alternative to RescaleSlope
-<code class="docutils literal notranslate"><span class="pre">(0028,1053)</span></code>. In this case, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a>
-outputs a field <code class="docutils literal notranslate"><span class="pre">PhilipsRWVSlope</span></code> and sets
-<code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code>. This is deceiving because the standard
-RescaleSlope is applied instead of private-field scale slopes and this still
-needs to be corrected manually.</p>
-<p>Note that this last-mentioned behavior is corrected in the newest dcm2nii
-version and general caution is recommended when dealing with Philips scale
-slopes. Also, Philips has recently implemented the option to apply these scaling
-factors upon export. The scaling of acquired/reconstructed ASL images may differ
-between control, label, and M0 images.</p>
+that does take private scale slopes into account in most cases.
+The <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> versions released between 2018 and 2019-09-02
+can correctly scale the NIfTI according to the private scale slopes</p>
+<ul class="simple">
+<li><p>if run with parameter <code class="docutils literal notranslate"><span class="pre">-p</span></code> - and indicates this by setting <code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code>
+in the accompanying json file.</p></li>
+</ul>
+<p>Two exceptions apply, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a>
+does not support DICOM tags <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code> and <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code>
+that still need to be read and applied additionally.
+Furthermore, the field RealWorldValueSlope <code class="docutils literal notranslate"><span class="pre">(0040,9225)</span></code> is sometimes provided
+as an alternative to RescaleSlope <code class="docutils literal notranslate"><span class="pre">(0028,1053)</span></code>.
+In this case, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> outputs a field <code class="docutils literal notranslate"><span class="pre">PhilipsRWVSlope</span></code>
+and sets <code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code>.
+This is deceiving because the standard RescaleSlope is applied
+instead of private-field scale slopes and this still needs to be corrected manually.</p>
+<p>Note that this last-mentioned behavior is corrected in the newest dcm2nii version
+and general caution is recommended when dealing with Philips scale slopes.
+Also, Philips has recently implemented the option to apply these scaling factors upon export.
+The scaling of acquired/reconstructed ASL images may differ between control, label, and M0 images.</p>
 </div>
 <div class="section" id="siemens">
 <h2>Siemens<a class="headerlink" href="#siemens" title="Permalink to this headline">¶</a></h2>
 <p>Several implementations of Siemens ASL WIP have a scaling between ASL and M0.
-This can be only modified and obtained at the scanner console and it is set to
-<code class="docutils literal notranslate"><span class="pre">10</span></code> by default.</p>
+This can be only modified and obtained at the scanner console and it is set to <code class="docutils literal notranslate"><span class="pre">10</span></code> by default.</p>
 <div class="section" id="pixdim">
 <h3>PIXDIM<a class="headerlink" href="#pixdim" title="Permalink to this headline">¶</a></h3>
-<p>The so-called PIXDIM error appears to be specific for files with a single
-repetition, more specifically the separately acquired <code class="docutils literal notranslate"><span class="pre">m0scan</span></code>. In the NIfTI
-header, <code class="docutils literal notranslate"><span class="pre">dim[0]</span></code> defines the number of dimensions, <code class="docutils literal notranslate"><span class="pre">dim[i]</span></code> defines the length
-of the i’th dimension, <code class="docutils literal notranslate"><span class="pre">pixdim[i]</span></code> specifies the voxel width along dimension
-<code class="docutils literal notranslate"><span class="pre">i</span></code>. For images with a single repetition, where <code class="docutils literal notranslate"><span class="pre">pixdim[4]</span></code> specifies the
-temporal width, the BIDS validator requires that the image is defined as 4D with
-<code class="docutils literal notranslate"><span class="pre">dim[0]</span> <span class="pre">==</span> <span class="pre">4</span></code>, even though the image has a single repetition <code class="docutils literal notranslate"><span class="pre">dim[4]</span> <span class="pre">==</span> <span class="pre">1</span></code>.
-Defining (<code class="docutils literal notranslate"><span class="pre">dim[0]</span> <span class="pre">==</span> <span class="pre">3</span></code>) for a 44D volume with a single repetition (for
-instance: a 3D image) is common and correct, however, it is considered invalid
-by the validator.</p>
+<p>The so-called PIXDIM error appears to be specific for files with a single repetition,
+more specifically the separately acquired <code class="docutils literal notranslate"><span class="pre">m0scan</span></code>.
+In the NIfTI header, <code class="docutils literal notranslate"><span class="pre">dim[0]</span></code> defines the number of dimensions, <code class="docutils literal notranslate"><span class="pre">dim[i]</span></code>
+defines the length of the i’th dimension, <code class="docutils literal notranslate"><span class="pre">pixdim[i]</span></code> specifies the voxel width along dimension <code class="docutils literal notranslate"><span class="pre">i</span></code>.
+For images with a single repetition, where <code class="docutils literal notranslate"><span class="pre">pixdim[4]</span></code> specifies the temporal width,
+the BIDS validator requires that the image is defined as 4D with <code class="docutils literal notranslate"><span class="pre">dim[0]</span> <span class="pre">==</span> <span class="pre">4</span></code>,
+even though the image has a single repetition <code class="docutils literal notranslate"><span class="pre">dim[4]</span> <span class="pre">==</span> <span class="pre">1</span></code>.
+Defining (<code class="docutils literal notranslate"><span class="pre">dim[0]</span> <span class="pre">==</span> <span class="pre">3</span></code>) for a 44D volume with a single repetition
+(for instance: a 3D image) is common and correct, however, it is considered invalid by the validator.</p>
 </div>
 </div>
 </div>
