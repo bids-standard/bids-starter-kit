@@ -1,6 +1,10 @@
 ---
 name: build-book
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # run on pushes and pull requests to main
 on:
   pull_request:
