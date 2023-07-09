@@ -1,30 +1,29 @@
 # BIDS validation
 
 The [BIDS Validator](https://github.com/bids-standard/bids-validator) is a tool
-that checks if a dataset is compliant with the BIDS standard. The validator is
-available for use within several different environments to best suit individual
-user preferences and use cases, those versions are:
+that checks if a dataset is compliant with the BIDS standard.
+The validator is available for use within several different environments
+to best suit individual user preferences and use cases, those versions are:
 
 -   A web browser based version
 -   Command line version
 -   Docker based version
 -   A python library installable via pip
 
-Instructions to install and use these versions can be found within the
-[quickstart guide](https://github.com/bids-standard/bids-validator)
+Instructions to install and use these versions can be found
+within the [quickstart guide](https://github.com/bids-standard/bids-validator)
 at the BIDS Validator repository.
 
 **Data Privacy and Confidentiality**
 
-Please note that the web app is entirely browser(not server) based. As such,
-there is no file uploading as part of the validation.
+Please note that the web app is entirely browser(not server) based.
+As such, there is no file uploading as part of the validation.
 
 ## Browser Version
 
-1. The BIDS Validator can be found at
-   <http://bids-standard.github.io/bids-validator/>. It requires that you use
-   the Chrome or Firefox browser, since those are the only ones in which you can
-   select a whole folder rather than individual files.
+1. The BIDS Validator can be found at <http://bids-standard.github.io/bids-validator/>.
+   It requires that you use the Chrome or Firefox browser,
+   since those are the only ones in which you can select a whole folder rather than individual files.
 
 <!-- TODO grab that image and add to the repo -->
 
@@ -36,8 +35,8 @@ there is no file uploading as part of the validation.
 
 #### Error
 
-This response indicates that your dataset is not BIDS compliant. Try following
-the suggestions listed to make the appropriate corrections
+This response indicates that your dataset is not BIDS compliant.
+Try following the suggestions listed to make the appropriate corrections
 
 <!-- TODO grab that image and add to the repo -->
 
@@ -45,9 +44,9 @@ the suggestions listed to make the appropriate corrections
 
 #### Warning
 
-This response indicates that your dataset is BIDS compliant, but there are some
-non-critical problems (such as optional fields missing, or differences between
-participants)
+This response indicates that your dataset is BIDS compliant,
+but there are some non-critical problems
+(such as optional fields missing, or differences between participants)
 
 <!-- TODO grab that image and add to the repo -->
 
@@ -65,12 +64,13 @@ This response indicates that your folder contains a valid BIDS Dataset!
 
 ### Verifying a BIDS compliant data set
 
-After
-[installation with npm](https://github.com/bids-standard/bids-validator)
-using the CLI is trivial. Locate a bids data set similar to the one below:
+After [installation with npm](https://github.com/bids-standard/bids-validator)
+using the CLI is relatively simple.
+Locate a bids data set similar to the one below:
 
 ```bash
 user@host:~/bids-examples$ tree sub001/
+
 sub001/
 ├── dataset_description.json
 ├── participants.json
@@ -106,11 +106,12 @@ user@host:~/bids-examples$ bids-validator sub001
 
 #### Error
 
-As is the case w/ the browser or any version of the validator follow the `[ERR]`
-messages and correct until bids-validator returns 0 errors after running.
+As is the case w/ the browser or any version of the validator follow
+the `[ERR]` messages and correct until bids-validator returns 0 errors after running.
 
 ```bash
 user@host:~/bids-examples$ bids-validator sub001
+
 bids-validator@1.7.1
 
  1: [ERR] Invalid JSON file. The file is not formatted according the schema. (code: 55 - JSON_SCHEMA_VALIDATION_ERROR)
@@ -136,13 +137,14 @@ bids-validator@1.7.1
 
 #### Warning
 
-As stated with the browser version above, one may elect to ignore warnings, but
-the information provided via the validator should help to pinpoint where and how
-to resolve some of these warnings. When in doubt consult the
-[BIDS Spec](https://bids-specification.readthedocs.io/en/stable/)
+As stated with the browser version above, one may elect to ignore warnings,
+but the information provided via the validator should help to pinpoint
+where and how to resolve some of these warnings.
+When in doubt consult the [BIDS Spec](https://bids-specification.readthedocs.io/en/latest/)
 
 ```bash
 user@host:~/bids-examples$ bids-validator sub001/
+
 bids-validator@1.7.1
 
 1: [WARN] Tabular file contains custom columns not described in a data dictionary (code: 82 - CUSTOM_COLUMN_WITHOUT_DESCRIPTION)

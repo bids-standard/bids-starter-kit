@@ -8,31 +8,30 @@ Make sure to also check the
 [official glossary](https://bids-specification.readthedocs.io/en/latest/99-appendices/14-glossary.html)
 that lists all the terms of the BIDS specification.
 
-We know that when you're getting started with something new there are often
-jargon-y words that make understanding everything that's going on kinda hard.
+We know that when you're getting started with something new there are often jargon-y words
+that make understanding everything that's going on kinda hard.
 
-The point of this list is to give you a place to go to figure out some of those
-terms that "everyone" seems to know.
+The point of this list is to give you a place to go
+to figure out some of those terms that "everyone" seems to know.
 
-Please add to this list! It will always be :construction: **in construction**
-:construction: and we really encourage everyone to update it to be more useful.
-If there's a word you don't know, there's almost certainly someone else who
-doesn't know what it means either.
+Please add to this list! It will always be 👷 **in construction** 🚧
+and we really encourage everyone to update it to be more useful.
+If there's a word you don't know,
+there's almost certainly someone else who doesn't know what it means either.
 
-**If you are unsure about a term/definition that you are adding, please add it
-anyway and add an asterix(\*) to signal that you want it reviewed.**
+**If you are unsure about a term/definition that you are adding, please add it anyway and add an asterix(\*) to signal that you want it reviewed.**
 
 ## General resources
 
 ## BIDS Terms
 
-### 0-9
+<!-- ### 0-9 -->
 
 ### A
 
 #### **acquisition**:
 
-one continuous block of a scan
+One continuous block of a scan.
 
 ### B
 
@@ -47,46 +46,46 @@ data.
 
 #### **channel**:
 
-the combination of the differential amplifier and the analog-to-digital
-converter that results in the potential different (for EEG and iEEG) or magnetic
-field or gradient (for MEG) to end up on disk. This should not be confused with
-**electrode** (see below).
+The combination of the differential amplifier and the analog-to-digital converter
+that results in the potential different (for EEG and iEEG)
+or magnetic field or gradient (for MEG) to end up on disk.
+This should not be confused with [**electrode**](#electrode).
 
 #### **container**:
 
-A container is a file which packages all the software and instructions required
-to perform a series of tasks.
+A container is a file which packages all the software
+and instructions required to perform a series of tasks.
 
 ### D
 
 #### **derivatives**:
 
-processed (for instance: non-raw) data
+Processed (for instance: non-raw) data.
 
-#### **dataset**: a
+#### **dataset**:
 
-collection of data that can include many subjects or sessions
+Collection of data that can include many subjects or sessions.
 
 ### E
 
 #### **electrode**:
 
-the small metal disk that is in contact with the scalp (EEG) or directly
-touching the brain (iEEG). This should not be confused with the EEG or iEGG
-**channel** (see above).
+The small metal disk that is in contact with the scalp (EEG)
+or directly touching the brain (iEEG).
+This should not be confused with the EEG or iEGG [**channel**](#channel).
 
 #### **extensions**:
 
-branches of BIDS that are for specific types of data (for instance: PET)
+Branches of BIDS that are for specific types of data (for instance: PET).
 
 ### F
 
 #### **file extension**:
 
-A file extension is the suffix following the last `.` in a filename, for example
-the `.jpeg` in `dog.jpeg`. These exist to give us instructions on how to
-interpret files. File extensions that are important in BIDS are [`.json`](#j),
-`.nii`, [`.tsv`](#t)
+A file extension is the suffix following the last `.` in a filename,
+for example the `.jpeg` in `dog.jpeg`.
+These exist to give us instructions on how to interpret files.
+File extensions that are important in BIDS are [`.json`](#JSON), `.nii`, [`.tsv`](#TSV)
 
 ### H
 
@@ -107,14 +106,14 @@ unless they are overridden by a file at the lower level.
 #### **JSON**:
 
 A JSON file can be thought of as a form or as a list of name-value pairs.
-Example: {"firstName": "John", "lastName": "Smith"}.
+Example:
 
--   You can find more information about `json` files in the [Metadata file
-    formats] (TODO: ADD INTERNAL LINK) wiki page.
+```json
+{"firstName": "John", "lastName": "Smith"}
+```
 
-### L
-
-#### **library**:
+-   You can find more information about `json` files
+    in the [Metadata file formats](./folders_and_files/metadata.md#json-files) page.
 
 ### M
 
@@ -122,9 +121,8 @@ Example: {"firstName": "John", "lastName": "Smith"}.
 
 Supporting data that describes your main data (for instance: data about data).
 For example if your main data is an MRI image your metadata might be information
-about the date and time of imaging, the image type, the machine serial number
-and so on. An example: "Scan Date" would be metadata that describes the date at
-which you acquired the actual data.
+about the date and time of imaging, the image type, the machine serial number and so on.
+An example: "Scan Date" would be metadata that describes the date at which you acquired the actual data.
 
 ### O
 
@@ -137,62 +135,68 @@ from.
 
 #### **parameter**:
 
-generally speaking, a parameter is numerical variable that we (scientists,
-computer programs, and so on) are able to manipulate in order to change
-outcomes.
+Generally speaking, a parameter is numerical variable
+that we (scientists, computer programs, and so on)
+are able to manipulate in order to change outcomes.
 
 ### R
 
 #### **README**:
 
-A readme is a text file. The readme's purpose is to provide explanation and
-documentation for the contents of the folder it lives in.
+A readme is a text file.
+The readme's purpose is to provide explanation
+and documentation for the contents of the folder it lives in.
 
 ### S
 
 #### **subject**:
 
-a person / animal / object participating in a study
+A person / animal / object participating in a study.
 
 #### **session**:
 
-an uninterrupted period that a subject is in a specific lab. This often
-corresponds to a lab visit. See also this
+An uninterrupted period that a subject is in a specific lab.
+This often corresponds to a lab visit.
+See also this
 [definition](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#definitions).
 
 #### **sequence**:
 
-a combination of settings on the MR scanner that determine the way the MR data
-is acquired. This includes the TE, TR, FOV, in-plane resolution, slice spacing,
-and so on.
+A combination of settings on the MR scanner that determine the way the MR data is acquired.
+This includes the TE, TR, FOV, in-plane resolution, slice spacing, and so on.
 
 #### **sidecar** (as in json sidecar):
 
-A json file associated to a nii file (usually by having the same name preceding
-the [file extension](#f)). Together these make up an acquisition; the nii file
-contains the image and the json contains various [metadata](#m).
+A json file associated to a nii file
+(usually by having the same name preceding the [file extension](#f)).
+Together these make up an acquisition;
+the nii file contains the image and the json contains various [metadata](#m).
 
 #### **sourcedata**:
 
-raw data (or metadata) in its original format prior to conversion to BIDS, for
-example: images in DICOM format, EEG data in a proprietary format or
-presentation log files.
+Raw data (or metadata) in its original format prior to conversion to BIDS,
+for example: images in DICOM format,
+EEG data in a proprietary format or presentation log files.
 
 ### T
 
 #### **tsv**:
 
-tsv stands for **t**ab **s**eparated **v**alues. A .tsv file contains a table
-(like a simple excel spreadsheet) containing text. Table values are separated by
-tabs.
+TSV stands for **t**ab **s**eparated **v**alues.
+A .tsv file contains a table (like a simple excel spreadsheet) containing text.
+Table values are separated by tabs.
+
+-   You can find more information about `TSV` files
+    in the [Metadata file formats](./folders_and_files/metadata.md#tsv-files) page.
 
 ### U
 
 #### **URI**:
 
-stands for **U**niform **R**esource **I**dentifier. It is a very general term to
-describe the "address" of an "object" on the web. A type of URI many of us are
-familiar with is an URL (Uniform Resource Locator) that points to a webpage, an
-image... Another very common type is a DOI (Digital Object Identifiers) that can
-be used to point to a scientific article, a data or code archive (for example on
-Zenodo, figshare...)
+Stands for **U**niform **R**esource **I**dentifier.
+It is a very general term to describe the "address" of an "object" on the web.
+A type of URI many of us are familiar with is an URL (Uniform Resource Locator)
+that points to a webpage, an image...
+Another very common type is a DOI (Digital Object Identifiers)
+that can be used to point to a scientific article,
+a data or code archive (for example on Zenodo, figshare...)

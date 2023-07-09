@@ -48,7 +48,6 @@ tree OpenNeuroPET-Demo_raw.
 
 OpenNeuroPET-Demo_raw
 │   .bidsignore
-│   .DS_Store
 │   dataset_description.json
 │   README
 │
@@ -59,7 +58,6 @@ OpenNeuroPET-Demo_raw
 │       README.md
 │
 ├───source
-│   │   .DS_Store
 │   │
 │   ├───SiemensBiographPETMR-NRU
 │   │       X-CAL_7.PT.Kalibrering_xca.30003.1.2022.04.26.15.04.22.218.14689529.dcm
@@ -330,7 +328,8 @@ or be cloned and extracted via git at the command line via:
 git clone git@github.com:bids-standard/bids-starter-kit.git
 ```
 
-The [`templates/`](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/pet) folder in `bids-starter-kit/` contains a single subject
+The [`templates/`](https://github.com/bids-standard/bids-starter-kit/tree/main/templates/sub-01/ses-01/pet)
+folder in `bids-starter-kit/` contains a single subject
 and examples of every BIDS modality text and `.json` file for that subject.
 Additionally, there exists a `Short` and a `Full` example for each text/json file.
 The `Short` files contain only the required BIDS fields for each modality
