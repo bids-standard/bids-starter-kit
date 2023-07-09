@@ -1,15 +1,16 @@
+---
 name: miss_hit
 
 on:
   push:
     branches:
-      - main
+    - main
     paths:
-      - '**.m'
+    - '**.m'
   pull_request:
     branches: ['*']
     paths:
-      - '**.m'
+    - '**.m'
 
 jobs:
 
@@ -19,7 +20,7 @@ jobs:
 
     strategy:
       matrix:
-        command: ["mh_style", "mh_metric --ci && mh_lint"]
+        command: [mh_style, mh_metric --ci && mh_lint]
       fail-fast: true  # cancel all jobs if one fails
 
     steps:
