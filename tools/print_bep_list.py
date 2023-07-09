@@ -1,7 +1,7 @@
+# update the list of BEPs in the general BEP question
 from pathlib import Path
 
 import ruamel.yaml
-from rich import print
 
 yaml = ruamel.yaml.YAML()
 yaml.indent(mapping=2, sequence=4, offset=2)
