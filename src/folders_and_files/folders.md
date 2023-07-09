@@ -105,7 +105,7 @@ The name for the datatype depends on the recording modality.
 </thead>
 <tbody>
   <tr>
-    <td class="tg-xuqq" rowspan="7"><span style="font-weight:bold"><b>datatype</b></span></td>
+    <td class="tg-xuqq" rowspan="5"><span style="font-weight:bold"><b>datatype</b></span></td>
     <td class="tg-mri"><b>MRI</b></td>
     <td class="tg-pet"><b>PET</b></td>
     <td class="tg-meeg"><span style="font-style:normal;text-decoration:none"><b>meeg</b></span></td>
