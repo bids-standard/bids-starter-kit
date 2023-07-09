@@ -14,6 +14,8 @@ repos:
   rev: 23.3.0
   hooks:
   - id: black
+    name: black
+    args: [--config, pyproject.toml, --verbose]
 
 - repo: https://github.com/ikamensh/flynt/
   rev: '0.78'
