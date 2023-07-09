@@ -1,5 +1,12 @@
 # Filenames
 
+These are the three main types of files you'll find in a BIDS dataset:
+
+1. `.json` files that contain `key: value` metadata
+2. `.tsv` files that contain tables of metadata
+3. Raw data files (for example: `.jpg` files for images or `.nii.gz` files for
+   fMRI data.)
+
 BIDS has a standardized way of naming files that tries to implement the
 following principles:
 
@@ -51,28 +58,13 @@ derivative data.</li>
 
 ## Modalities
 
-<!--
-Next, we'll populate the first subject's folder with datatype folders. We'll have
-one per data modality. We'll include a number of different modalities to
-describe their associated metadata below, though most likely you won't have all
-of these for a single subject (if you do, please make sure to open-source your
-data ;-) ).
-
-**NOTE** all `run-` and `echo-` labels must only contain integers
-
-Here's a list of these folders:
--->
 
 ### MRI
 
 #### `anat`: Anatomical MRI data
 
-`myProject/sub-01/ses-01/anat/`
-
-    -   Data:
-        -   `sub-<>[_ses-<>]_T1w.nii.gz`
-    -   Metadata:
-        -   `sub-<>[_ses-<>]_T1w.json`
+<!-- ANAT TEMPLATE STARTS HERE: do not edit manually -->
+<!-- ANAT TEMPLATE ENDS HERE -->
 
 #### `func`: Functional MRI data
 

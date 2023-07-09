@@ -6,16 +6,10 @@ to automatically parse a BIDS folder with a program. The BIDS structure makes
 minimal assumptions about the tools needed to interact with the data that's
 inside.
 
-These are the three main types of files you'll find in a BIDS dataset:
+The files in present in BIDS dataset are organized into a hierarchy of folders
+that have specific naming conventions.
 
-1. `.json` files that contain `key: value` metadata
-2. `.tsv` files that contain tables of metadata
-3. Raw data files (for example: `.jpg` files for images or `.nii.gz` files for
-   fMRI data.)
-
-These three types of files are organized into a hierarchy of folders that have
-specific naming conventions. The rest of this page describes how these folders
-are structured.
+The rest of this page describes how these folders are structured.
 
 ## Overview
 
@@ -184,23 +178,3 @@ ds001
 ...
 └── task-balloonanalogrisktask_bold.json
 ```
-
-## Creating a BIDS folder hierarchy
-
-Next we'll step through a sample process one might follow when creating a BIDS
-hierarchy for a new dataset.
-
-### Create the folder hierarchy and top-level metadata file
-
-First we'll create the folder hierarchy to be used in this format.
-
--   Create the top-level project folder (`myProject/`)
--   Create a top-level metadata files (`myProject/participants.tsv` and
-    `myProject/task-mytask.json`)
-
-### Create a subject's folder
-
-Next we'll add the folder hierarchy for one subject:
-
--   Create the `<Project>/<Subject>/<Session>/` folder
-    (`myProject/sub-01/ses-01/`)
