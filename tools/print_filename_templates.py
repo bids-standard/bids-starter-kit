@@ -1,3 +1,4 @@
+# add filename templates to the documentation
 from pathlib import Path
 
 from bidsschematools import render

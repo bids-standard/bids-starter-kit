@@ -29,7 +29,10 @@ help:
 clean:
 	rm -fr src/_build/
 
-update_faq:
+update_bep_list:
+	python tools/print_bep_list.py
+
+update_faq: update_bep_list
 	faqtory build
 
 update_filename_templates:
