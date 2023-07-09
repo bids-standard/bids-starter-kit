@@ -386,6 +386,28 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">
    General: Is your data type not covered in the current BIDS specification?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#raw">
+     raw
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derivative">
+     derivative
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metadata">
+     metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-format">
+     file format
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-what-does-this-word-mean">
@@ -492,6 +514,28 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">
    General: Is your data type not covered in the current BIDS specification?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#raw">
+     raw
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derivative">
+     derivative
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metadata">
+     metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-format">
+     file format
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-what-does-this-word-mean">
@@ -713,18 +757,67 @@ within the same <code class="docutils literal notranslate"><span class="pre">ses
 <h2>General: Is your data type not covered in the current BIDS specification?<a class="headerlink" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification" title="Permalink to this headline">¶</a></h2>
 <p>BIDS extensions proposals <a class="reference external" href="https://bids.neuroimaging.io/get_involved.html#extending-the-bids-specification">(BEPs)</a>
 aim to extend the BIDS specification to new data types.
-A list of extensions proposals can be found <a class="reference external" href="https://bids.neuroimaging.io/">on the main BIDS webpage</a>
-under <a class="reference external" href="https://bids.neuroimaging.io/get_involved.html#extending-the-bids-specification">Get Involved</a>.
-Guidelines for contributing to these extensions or starting your own can be found
+A list of extensions proposals can be found below.</p>
+<p>Guidelines for contributing to these extensions or starting your own can be found
 in the <a class="reference external" href="https://bids-extensions.readthedocs.io/en/latest/">BIDS Extension Proposals Guide</a>.</p>
 <p>If only part of your data is covered under BIDS, an option to allow additional files
 currently not covered in BIDS to pass the validator is
 the <a class="reference external" href="https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md">.bidsignore</a> file,
 which works just like <a class="reference external" href="https://git-scm.com/docs/gitignore">.gitignore</a>.
-It allows you to list all the files (or directories, with wildcards) that are not
-BIDS compliant and should be ignored by the validator. Of course you should
-still try to adhere to upcoming BEPs and the general BIDS philosophy for file
-names and metadata where possible, but this gives a little extra flexibility.</p>
+It allows you to list all the files (or directories, with wildcards)
+that are not BIDS compliant and should be ignored by the validator.
+Of course you should still try to adhere to upcoming BEPs
+and the general BIDS philosophy for file names and metadata where possible,
+but this gives a little extra flexibility.</p>
+<!-- TEMPLATE STARTS -->
+<div class="section" id="raw">
+<h3>raw<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>BEP004: <a class="reference external" href="https://bids.neuroimaging.io/bep004">Susceptibility Weighted Imaging (SWI)</a></p></li>
+<li><p>BEP020: <a class="reference external" href="https://bids.neuroimaging.io/bep020">Eye Tracking including Gaze Position and Pupil Size</a></p></li>
+<li><p>BEP022: <a class="reference external" href="https://bids.neuroimaging.io/bep022">Magnetic Resonance Spectroscopy (MRS)</a></p></li>
+<li><p>BEP024: <a class="reference external" href="https://bids.neuroimaging.io/bep024">Computed Tomography scan (CT)</a></p></li>
+<li><p>BEP025: <a class="reference external" href="https://bids.neuroimaging.io/bep025">Medical Imaging Data structure (MIDS)</a></p></li>
+<li><p>BEP026: <a class="reference external" href="https://bids.neuroimaging.io/bep026">Microelectrode Recordings</a></p></li>
+<li><p>BEP029: <a class="reference external" href="https://bids.neuroimaging.io/bep029">Virtual and physical motion data</a></p></li>
+<li><p>BEP032: <a class="reference external" href="https://bids.neuroimaging.io/bep032">Animal electrophysiology</a></p></li>
+<li><p>BEP033: <a class="reference external" href="https://bids.neuroimaging.io/bep033">Advanced Diffusion Weighted Imaging (aDWI)</a></p></li>
+<li><p>BEP036: <a class="reference external" href="https://bids.neuroimaging.io/bep036">Phenotypic Data Guidelines</a></p></li>
+<li><p>BEP037: <a class="reference external" href="https://bids.neuroimaging.io/bep037">Non-Invasive Brain Stimulation (NIBS)</a></p></li>
+<li><p>BEP038: <a class="reference external" href="https://bids.neuroimaging.io/bep038">Atlases</a></p></li>
+<li><p>BEP039: <a class="reference external" href="https://bids.neuroimaging.io/bep039">Dimensionality reduction-based networks</a></p></li>
+<li><p>BEP040: <a class="reference external" href="https://bids.neuroimaging.io/bep040">Functional Ultrasound (fUS)</a></p></li>
+</ul>
+</div>
+<div class="section" id="derivative">
+<h3>derivative<a class="headerlink" href="#derivative" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>BEP011: <a class="reference external" href="https://bids.neuroimaging.io/bep011">Structural preprocessing derivatives</a></p></li>
+<li><p>BEP012: <a class="reference external" href="https://bids.neuroimaging.io/bep012">Functional preprocessing derivatives</a></p></li>
+<li><p>BEP014: <a class="reference external" href="https://bids.neuroimaging.io/bep014">Affine transformations and nonlinear field warps</a></p></li>
+<li><p>BEP016: <a class="reference external" href="https://bids.neuroimaging.io/bep016">Diffusion weighted imaging derivatives</a></p></li>
+<li><p>BEP017: <a class="reference external" href="https://bids.neuroimaging.io/bep017">Generic BIDS connectivity data schema</a></p></li>
+<li><p>BEP021: <a class="reference external" href="https://bids.neuroimaging.io/bep021">Common Electrophysiological Derivatives</a></p></li>
+<li><p>BEP023: <a class="reference external" href="https://bids.neuroimaging.io/bep023">PET Preprocessing derivatives</a></p></li>
+<li><p>BEP034: <a class="reference external" href="https://bids.neuroimaging.io/bep034">Computational modeling</a></p></li>
+<li><p>BEP035: <a class="reference external" href="https://bids.neuroimaging.io/bep035">Modular extensions for individual participant data mega-analyses with non-compliant derivatives</a></p></li>
+</ul>
+</div>
+<div class="section" id="metadata">
+<h3>metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>BEP019: <a class="reference external" href="https://bids.neuroimaging.io/bep019">DICOM Metadata</a></p></li>
+<li><p>BEP027: <a class="reference external" href="https://bids.neuroimaging.io/bep027">BIDS Applications 2.0</a></p></li>
+<li><p>BEP028: <a class="reference external" href="https://bids.neuroimaging.io/bep028">Provenance</a></p></li>
+<li><p>BEP034: <a class="reference external" href="https://bids.neuroimaging.io/bep034">Computational modeling</a></p></li>
+</ul>
+</div>
+<div class="section" id="file-format">
+<h3>file format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>BEP002: <a class="reference external" href="https://bids.neuroimaging.io/bep002">BIDS Models Specification</a></p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="general-what-does-this-word-mean">
 <h2>General: What does [this word] mean?<a class="headerlink" href="#general-what-does-this-word-mean" title="Permalink to this headline">¶</a></h2>
