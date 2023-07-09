@@ -29,7 +29,10 @@ help:
 clean:
 	rm -fr src/_build/
 
-book: clean ## build the book
+update_filename_templates:
+	python tools/print_filename_templates.py
+
+book: clean update_filename_templates ## build the book
 	jupyter-book build src
 
 view: book ## view the book

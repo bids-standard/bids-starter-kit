@@ -1,5 +1,12 @@
 # Filenames
 
+These are the three main types of files you'll find in a BIDS dataset:
+
+1. `.json` files that contain `key: value` metadata
+2. `.tsv` files that contain tables of metadata
+3. Raw data files (for example: `.jpg` files for images or `.nii.gz` files for
+   fMRI data.)
+
 BIDS has a standardized way of naming files that tries to implement the
 following principles:
 
@@ -51,112 +58,73 @@ derivative data.</li>
 
 ## Modalities
 
-<!--
-Next, we'll populate the first subject's folder with datatype folders. We'll have
-one per data modality. We'll include a number of different modalities to
-describe their associated metadata below, though most likely you won't have all
-of these for a single subject (if you do, please make sure to open-source your
-data ;-) ).
-
-**NOTE** all `run-` and `echo-` labels must only contain integers
-
-Here's a list of these folders:
--->
 
 ### MRI
 
-#### `anat`: Anatomical MRI data
+#### `anat`: Anatomical MRI
 
-`myProject/sub-01/ses-01/anat/`
+<!-- ANAT TEMPLATE STARTS HERE: do not edit manually -->
+<!-- ANAT TEMPLATE ENDS HERE -->
 
-    -   Data:
-        -   `sub-<>[_ses-<>]_T1w.nii.gz`
-    -   Metadata:
-        -   `sub-<>[_ses-<>]_T1w.json`
+#### `func`: Functional MRI
 
-#### `func`: Functional MRI data
+<!-- FUNC TEMPLATE STARTS HERE: do not edit manually -->
+<!-- FUNC TEMPLATE ENDS HERE -->
 
-`myProject/sub-01/ses-01/func/`
+#### `fmap`: Fieldmap
 
-    -   Data:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_bold.nii.gz`
-    -   Metadata:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_bold.json`
-    -   Events:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_events.tsv`
+<!-- FMAP TEMPLATE STARTS HERE: do not edit manually -->
+<!-- FMAP TEMPLATE ENDS HERE -->
 
-#### `fmap`: Fieldmap MRI data
+#### `dwi`: Diffusion weighted
 
-`myProject/sub-01/ses-01/fmap/`
+<!-- DWI TEMPLATE STARTS HERE: do not edit manually -->
+<!-- DWI TEMPLATE ENDS HERE -->
 
-    -   Data:
-        -   `sub-<>_ses-<>_acq-<>_run-<>_phasediff.nii.gz`
-        -   `sub-<>_ses-<>_acq-<>_run-<>_magnitude1.nii.gz`
-    -   Metadata:
-        -   `sub-<>_ses-<>_acq-<>_run-<>_phasediff.json`
+#### `perf`: Arterial spin labeling
 
-#### `dwi`: Diffusion Weighted Imaging data
+<!-- PERF TEMPLATE STARTS HERE: do not edit manually -->
+<!-- PERF TEMPLATE ENDS HERE -->
 
-`myProject/sub-01/ses-01/dwi/`
+### MEEG
 
-    -   Data:
-        -   `sub-<>_ses-<>_acq-<>_run-<>_dwi.nii.gz`
-        -   `sub-<>_ses-<>_acq-<>_run-<>_dwi.bval`
-        -   `sub-<>_ses-<>_acq-<>_run-<>_dwi.bvec`
-    -   Metadata:
-        -   `sub-<>_ses-<>_acq-<>_run-<>_dwi.json`
+#### `eeg`: EEG data
 
-<!-- TODO perf -->
-
-### EEG / MEG / iEEG
-
-<!-- TODO EEG -->
+<!-- EEG TEMPLATE STARTS HERE: do not edit manually -->
+<!-- EEG TEMPLATE ENDS HERE -->
 
 #### `meg`: MEG data
 
-`myProject/sub-01/ses-01/meg/`
-
-    -   Data:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_meg.extension`
-    -   Metadata:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_meg.json`
-    -   Channel information:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_channels.tsv`
-    -   Events:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_proc-<>_events.tsv`
-    -   Sensor positions:
-        -   `sub-<>_ses-<>_acq-<>_photo.jpg`
-        -   `sub-<>_ses-<>_acq-<>_fid.json`
-        -   `sub-<>_ses-<>_acq-<>_fidinfo.txt`
-        -   `sub-<>_ses-<>_acq-<>_headshape.extension`
+<!-- MEG TEMPLATE STARTS HERE: do not edit manually -->
+<!-- MEG TEMPLATE ENDS HERE -->
 
 #### `ieeg`: Intracranial EEG data
 
-`myProject/sub-01/ses-01/ieeg/`
+<!-- IEEG TEMPLATE STARTS HERE: do not edit manually -->
+<!-- IEEG TEMPLATE ENDS HERE -->
 
-    -   Data:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_ieeg.extension`
-    -   Metadata:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_ieeg.json`
-    -   Channel information:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_channels.tsv`
-    -   Events:
-        -   `sub-<>_ses-<>_task-<>_acq-<>_run-<>_events.tsv`
-    -   Electrode locations:
-        -   `sub-<>_ses-<>_acq-<>_electrodes.tsv` _electrode xyz coordinates_
-        -   `sub-<>_ses-<>_acq-<>_coordsystem.json` _coordinate metadata_
-        -   `sub-<>_ses-<>_acq-<>_photo.jpg` _operative photo_
+### Positron emission tomography
 
-### PET
+<!-- PET TEMPLATE STARTS HERE: do not edit manually -->
+<!-- PET TEMPLATE ENDS HERE -->
 
-#### `pet`: Positron Emission Tomography data
+### Microscopy
 
-`myProject/sub-01/pet/`
+<!-- MICR TEMPLATE STARTS HERE: do not edit manually -->
+<!-- MICR TEMPLATE ENDS HERE -->
 
-    -   Data:
-        -   `sub-<>_ses-<>_pet.json`
-        -   `sub-<>_ses-<>_pet.nii.gz`
-        -   `sub-<>_ses-<>_recording-<>_blood.json`
-        -   `sub-<>_ses-<>_recording-<>_blood.tsv`
 
-<!-- TODO Microscopy -->
+### Near-infrared spectroscopy
+
+<!-- NIRS TEMPLATE STARTS HERE: do not edit manually -->
+<!-- NIRS TEMPLATE ENDS HERE -->
+
+### Motion
+
+<!-- MOTION TEMPLATE STARTS HERE: do not edit manually -->
+<!-- MOTION TEMPLATE ENDS HERE -->
+
+### Behavioral
+
+<!-- MOTION TEMPLATE STARTS HERE: do not edit manually -->
+<!-- MOTION TEMPLATE ENDS HERE -->
