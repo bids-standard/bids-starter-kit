@@ -7,12 +7,10 @@ expected to show respect and courtesy to other community members at all time.
 
 The lead maintainers of the BIDS Starter Kit:
 
--   [Chris Gorgolewski][chrisg-github],
--   [Chris Holdgraf][chrish-github],
+-   [Remi Gau][remi-github]
 -   [Dora Hermes][dora-github],
 -   [Elizabeth DuPre][elizabeth-github],
--   [Kirstie Whitaker][kirstie-github]),
--   [Remi Gau][remi-github]
+-   [Kirstie Whitaker][kirstie-github],
 
 are dedicated to a **_harassment-free experience for everyone_**, regardless of
 gender, gender identity and expression, sexual orientation, disability, physical
@@ -111,8 +109,6 @@ without seeking additional permission, so long as it is attributed back to the
 [contributor-covenant-version]: http://contributor-covenant.org/version/1/4
 [ccby-link]: https://creativecommons.org/licenses/by/4.0
 [cc0-link]: https://creativecommons.org/publicdomain/zero/1.0
-[chrisg-github]: https://github.com/chrisgorgo
-[chrish-github]: https://github.com/choldgraf
 [dora-github]: https://github.com/dorahermes
 [elizabeth-github]: https://github.com/emdupre
 [kirstie-github]: https://github.com/kirstiejane

@@ -31,3 +31,5 @@ parts:
   - file: faq.md
   - file: glossary.md
   - file: contact.md
+  - file: CONTRIBUTING.md
+  - file: CODE_OF_CONDUCT.md
