@@ -11,16 +11,14 @@
 
 ## Contributing
 
-There are many ways to get in touch with us! Please see our
-[Contact Page](https://github.com/bids-standard/bids-starter-kit/wiki/Contact)
+There are many ways to get in touch with us! Please see our [Contact Page](./src/contact.md)
 for all the details.
 
 To find out more about all the different ways to contribute to the BIDS Starter
-Kit, check out our [**contributing guidelines**](CONTRIBUTING.md). They'll tell
-you how to [get in touch](CONTRIBUTING.md/#get-in-touch), give you some useful
-resources to help you
-[contribute via GitHub](CONTRIBUTING.md/#contributing-through-github), how you
-can [edit the wiki](CONTRIBUTING.md/#where-to-start-wiki-code-and-templates) or
+Kit, check out our [**contributing guidelines**](CONTRIBUTING.md).
+They'll tell you how to [get in touch](CONTRIBUTING.md/#get-in-touch),
+give you some usefulresources to help you
+[contribute via GitHub](CONTRIBUTING.md/#contributing-through-github),
 how to make a change [using issues](CONTRIBUTING.md#where-to-start-issue-labels)
 (you can also check out GitHub's help on
 [issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)) and a

@@ -84,7 +84,6 @@ The list of labels for current issues can be found
 
     There are [lots of ways to ask questions](#get-in-touch)
     but opening an issue is a great way to start a conversation and get your answer.
-    Ideally, we'll close it out by **_[adding the answer to the wiki][bids-starterkit-book]!_**
 
 -   [![good-first-issue](https://img.shields.io/badge/-good%20first%20issue-1b3487.svg)][labels-firstissue]
     _These issues are particularly appropriate if it is your first contribution to the BIDS Starter Kit, or to GitHub overall._

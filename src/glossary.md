@@ -106,10 +106,14 @@ unless they are overridden by a file at the lower level.
 #### **JSON**:
 
 A JSON file can be thought of as a form or as a list of name-value pairs.
-Example: {"firstName": "John", "lastName": "Smith"}.
+Example:
 
--   You can find more information about `json` files in the [Metadata file
-    formats] (TODO: ADD INTERNAL LINK) wiki page.
+```json
+{"firstName": "John", "lastName": "Smith"}
+```
+
+-   You can find more information about `json` files
+    in the [Metadata file formats](./folders_and_files/metadata.md#json-files) page.
 
 ### M
 
@@ -117,9 +121,8 @@ Example: {"firstName": "John", "lastName": "Smith"}.
 
 Supporting data that describes your main data (for instance: data about data).
 For example if your main data is an MRI image your metadata might be information
-about the date and time of imaging, the image type, the machine serial number
-and so on. An example: "Scan Date" would be metadata that describes the date at
-which you acquired the actual data.
+about the date and time of imaging, the image type, the machine serial number and so on.
+An example: "Scan Date" would be metadata that describes the date at which you acquired the actual data.
 
 ### O
 
@@ -132,9 +135,9 @@ from.
 
 #### **parameter**:
 
-generally speaking, a parameter is numerical variable that we (scientists,
-computer programs, and so on) are able to manipulate in order to change
-outcomes.
+Generally speaking, a parameter is numerical variable
+that we (scientists, computer programs, and so on)
+are able to manipulate in order to change outcomes.
 
 ### R
 
@@ -182,6 +185,9 @@ EEG data in a proprietary format or presentation log files.
 TSV stands for **t**ab **s**eparated **v**alues.
 A .tsv file contains a table (like a simple excel spreadsheet) containing text.
 Table values are separated by tabs.
+
+-   You can find more information about `TSV` files
+    in the [Metadata file formats](./folders_and_files/metadata.md#tsv-files) page.
 
 ### U
 
