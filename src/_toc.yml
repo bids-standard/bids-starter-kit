@@ -32,3 +32,5 @@ parts:
   - file: epilepsy_phenotype.rst
   - file: glossary.md
   - file: contact.md
+  - file: CONTRIBUTING.md
+  - file: CODE_OF_CONDUCT.md

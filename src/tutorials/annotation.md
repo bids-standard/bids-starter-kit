@@ -17,8 +17,8 @@ Annotations in BIDS can be done at several levels including the dataset, subject
 
 ### Dataset sourcing (`dataset_description.json`)
 
-`dataset_description.json` is a top-level file that gives details about the
-source of the dataset, funding, and citation information.
+`dataset_description.json` is a top-level file that gives details about the source of the dataset,
+funding, and citation information.
 This file does not provide any actual description of the data.
 
 > You can fill in this blank [dataset description template](https://raw.githubusercontent.com/bids-standard/bids-starter-kit/main/templates/dataset_description.json) or use it as a guide.
@@ -133,8 +133,8 @@ and links to helpful guides and tutorials with the details.
 The goal of event annotation is to provide the information about events
 needed for effective and correct analysis of the data.
 
-Ideally most of this information should be in a single `events.json` sidecar
-file located in the root directory of your dataset
+Ideally most of this information should be in a single `events.json` sidecar file
+located in the root directory of your dataset
 where it is easy to find and update.
 
 An overview of how event annotation works in BIDS as well as tutorials
