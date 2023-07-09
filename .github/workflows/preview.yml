@@ -35,3 +35,7 @@ jobs:
       uses: rossjrw/pr-preview-action@v1
       with:
         source-dir: src/_build/html
+        token: ${{ secrets.GITHUB_TOKEN }}
+        preview-branch: gh-pages
+        umbrella-dir: pr-preview
+        action: auto
