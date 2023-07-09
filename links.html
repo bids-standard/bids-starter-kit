@@ -44,6 +44,8 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="_static/js/treeFunctions.js"></script>
+    <script src="_static/js/treeData.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -56,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="BIDS validation" href="validator.html" />
+    <link rel="next" title="Frequently Asked Questions" href="FAQ.html" />
     <link rel="prev" title="BIDS Dependencies List" href="dependencies.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -87,6 +89,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
@@ -212,13 +219,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="validator.html">
-   BIDS validation
+  <a class="reference internal" href="FAQ.html">
+   Frequently Asked Questions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="faq.html">
-   Frequently Asked Questions
+  <a class="reference internal" href="validator.html">
+   BIDS validation
   </a>
  </li>
  <li class="toctree-l1">
@@ -339,6 +346,18 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#python-tools">
    Python tools
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#converting-your-data-to-bids">
+     Converting your data to BIDS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyzing-your-bids-datasets">
+     Analyzing your BIDS datasets
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matlab-tools">
@@ -381,6 +400,18 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#python-tools">
    Python tools
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#converting-your-data-to-bids">
+     Converting your data to BIDS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyzing-your-bids-datasets">
+     Analyzing your BIDS datasets
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matlab-tools">
@@ -412,11 +443,32 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="python-tools">
 <h2>Python tools<a class="headerlink" href="#python-tools" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/bids-standard/pybids">Pybids</a> - Python tools for querying
-and manipulating BIDS datasets.</p>
+<p>The BIDS format has several tools in the Python ecosystem. These are broadly
+split into two groups: one for converting and storing data in the BIDS format,
+and another for analyzing and manipulating pre-existing BIDS datasets.</p>
+<div class="section" id="converting-your-data-to-bids">
+<h3>Converting your data to BIDS<a class="headerlink" href="#converting-your-data-to-bids" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/mne-tools/mne-bids">mne-bids</a> is a collection of tools
+for converting magnetoencephalography (MEG) data into BIDS format, as well
+as some helper functions for creating the folders and metadata needed for a
+BIDS dataset. Check out their
+<a class="reference external" href="http://mne-tools.github.io/mne-bids/">online documentation</a> and the
+<a class="reference external" href="https://mne.tools/mne-bids/stable/index.html">examples gallery</a> to learn
+how to use this package.</p></li>
+</ul>
+</div>
+<div class="section" id="analyzing-your-bids-datasets">
+<h3>Analyzing your BIDS datasets<a class="headerlink" href="#analyzing-your-bids-datasets" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/INCF/pybids">pybids</a> is a tool for quickly parsing /
+searching the components of a BIDS dataset. It also contains functionality
+for running analyses on your data.</p></li>
+</ul>
 <p><a class="reference external" href="https://github.com/robertoostenveld/bids">BIDS tools</a> - some command-line tools
 to support a general BIDS workflow and some
 <a class="reference external" href="https://www.ru.nl/donders/">Donders</a> specific documentation</p>
+</div>
 </div>
 <div class="section" id="matlab-tools">
 <h2>MATLAB tools<a class="headerlink" href="#matlab-tools" title="Permalink to this headline">¶</a></h2>
@@ -465,10 +517,10 @@ function to convert existing MEG, EEG, iEEG but also MRI datasets to BIDS. See
             <p class="prev-next-title">BIDS Dependencies List</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="validator.html" title="next page">
+    <a class='right-next' id="next-link" href="FAQ.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">BIDS validation</p>
+        <p class="prev-next-title">Frequently Asked Questions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

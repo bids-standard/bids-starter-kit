@@ -44,6 +44,8 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="_static/js/treeFunctions.js"></script>
+    <script src="_static/js/treeData.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -87,6 +89,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
@@ -212,13 +219,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="validator.html">
-   BIDS validation
+  <a class="reference internal" href="FAQ.html">
+   Frequently Asked Questions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="faq.html">
-   Frequently Asked Questions
+  <a class="reference internal" href="validator.html">
+   BIDS validation
   </a>
  </li>
  <li class="toctree-l1">
@@ -384,6 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>See the specification website for the
 <a class="reference external" href="https://bids-specification.readthedocs.io/en/latest/01-introduction.html#citing-bids">main publications</a>
 related to BIDS and its extensions.</p>
+<p>BIDS references are centralized in a <a class="reference external" href="https://www.zotero.org/groups/5111637/bids">zotero group</a></p>
 <div class="section" id="id1">
 <h2>2018<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">doi:10.1177/2515245917746500</span><span class="p">,</span>

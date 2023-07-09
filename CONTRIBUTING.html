@@ -44,6 +44,8 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="_static/js/treeFunctions.js"></script>
+    <script src="_static/js/treeData.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -87,6 +89,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
@@ -212,13 +219,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="validator.html">
-   BIDS validation
+  <a class="reference internal" href="FAQ.html">
+   Frequently Asked Questions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="faq.html">
-   Frequently Asked Questions
+  <a class="reference internal" href="validator.html">
+   BIDS validation
   </a>
  </li>
  <li class="toctree-l1">
@@ -361,12 +368,12 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#making-a-change-with-a-pull-request">
    Making a change with a pull request
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#requirements">
-   Requirements
-  </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requirements">
+     Requirements
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fork-the-bids-starter-kit-repository-to-your-profile">
      Fork the BIDS Starter Kit repository to your profile
@@ -407,24 +414,22 @@ const thebe_selector_output = ".output, .cell_output"
      Submit a pull request
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-pull-request">
+     Example pull request
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-pull-request">
-   Example pull request
+  <a class="reference internal nav-link" href="#code-link">
+   Code (link)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-link">
-     Code (link)
+    <a class="reference internal nav-link" href="#matlab-octave">
+     Matlab / Octave
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matlab-octave">
-       Matlab / Octave
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#templates-link">
@@ -494,12 +499,12 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#making-a-change-with-a-pull-request">
    Making a change with a pull request
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#requirements">
-   Requirements
-  </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requirements">
+     Requirements
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fork-the-bids-starter-kit-repository-to-your-profile">
      Fork the BIDS Starter Kit repository to your profile
@@ -540,24 +545,22 @@ const thebe_selector_output = ".output, .cell_output"
      Submit a pull request
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-pull-request">
+     Example pull request
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-pull-request">
-   Example pull request
+  <a class="reference internal nav-link" href="#code-link">
+   Code (link)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-link">
-     Code (link)
+    <a class="reference internal nav-link" href="#matlab-octave">
+     Matlab / Octave
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matlab-octave">
-       Matlab / Octave
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#templates-link">
@@ -706,9 +709,8 @@ this work in up front is so useful to everyone involved.</p>
 <p>If you’re updating the <a class="reference external" href="#code">code</a> or the <a class="reference external" href="#templates">templates</a>,
 the following steps are a guide to help you contribute in a way that will be easy
 for everyone to review and accept with ease 😎.</p>
-</div>
 <div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
 <p>To make a contribution you will need to have:</p>
 <ul class="simple">
 <li><p>a github account (see above)</p></li>
@@ -729,6 +731,7 @@ for everyone to review and accept with ease 😎.</p>
 - explain how to install python
 
 -->
+</div>
 <div class="section" id="fork-the-bids-starter-kit-repository-to-your-profile">
 <h3><a class="reference external" href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">Fork</a> the <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit">BIDS Starter Kit repository</a> to your profile<a class="headerlink" href="#fork-the-bids-starter-kit-repository-to-your-profile" title="Permalink to this headline">¶</a></h3>
 <p>This is now your own unique copy of the BIDS Starter Kit.
@@ -802,14 +805,15 @@ You don’t need to submit a new pull request when you make a change in response
 <p>GitHub has a <a class="reference external" href="https://guides.github.com/introduction/flow">nice introduction</a> to the pull request workflow,
 but please <a class="reference external" href="#get-in-touch">get in touch</a> if you have any questions 🎈.</p>
 </div>
-</div>
 <div class="section" id="example-pull-request">
-<h2>Example pull request<a class="headerlink" href="#example-pull-request" title="Permalink to this headline">¶</a></h2>
+<h3>Example pull request<a class="headerlink" href="#example-pull-request" title="Permalink to this headline">¶</a></h3>
 <img align="right" src="https://i.imgur.com/s8yELfK.png" alt="Example-Contribution"/>
 <br>
 <br>
+</div>
+</div>
 <div class="section" id="code-link">
-<h3>Code (<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit">link</a>)<a class="headerlink" href="#code-link" title="Permalink to this headline">¶</a></h3>
+<h2>Code (<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit">link</a>)<a class="headerlink" href="#code-link" title="Permalink to this headline">¶</a></h2>
 <p>This repository is under development,
 but we hope that it becomes a useful place for people to share
 and find small snippets of code that are useful
@@ -820,11 +824,10 @@ Check out our <a class="reference external" href="#making-a-change-with-a-pull-r
 either provide that input or a link on how to access it,
 and an example on how to run that code.</p>
 <div class="section" id="matlab-octave">
-<h4>Matlab / Octave<a class="headerlink" href="#matlab-octave" title="Permalink to this headline">¶</a></h4>
+<h3>Matlab / Octave<a class="headerlink" href="#matlab-octave" title="Permalink to this headline">¶</a></h3>
 <p>We are using the Miss_hit linter to help us keep out matlab “clean”.
 You can find more information on how to set it up and use it on the bids-matlab
 <a class="reference external" href="https://github.com/bids-standard/bids-matlab/blob/master/CONTRIBUTING.md#matlab-code-style-guide-and-quality">contributing guidelines</a>.</p>
-</div>
 </div>
 <div class="section" id="templates-link">
 <h3>Templates (<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit">link</a>)<a class="headerlink" href="#templates-link" title="Permalink to this headline">¶</a></h3>

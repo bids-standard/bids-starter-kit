@@ -44,6 +44,8 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="_static/js/treeFunctions.js"></script>
+    <script src="_static/js/treeData.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -56,8 +58,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Frequently Asked Questions" href="faq.html" />
-    <link rel="prev" title="Links and resources" href="links.html" />
+    <link rel="next" title="BIDS jargon busting" href="glossary.html" />
+    <link rel="prev" title="Frequently Asked Questions" href="FAQ.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -87,6 +89,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
@@ -211,14 +218,14 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAQ.html">
+   Frequently Asked Questions
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    BIDS validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="faq.html">
-   Frequently Asked Questions
   </a>
  </li>
  <li class="toctree-l1">
@@ -688,17 +695,17 @@ This<span class="w"> </span>dataset<span class="w"> </span>appears<span class="w
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="links.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="FAQ.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Links and resources</p>
+            <p class="prev-next-title">Frequently Asked Questions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="faq.html" title="next page">
+    <a class='right-next' id="next-link" href="glossary.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Frequently Asked Questions</p>
+        <p class="prev-next-title">BIDS jargon busting</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
