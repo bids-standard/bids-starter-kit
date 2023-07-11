@@ -11,18 +11,18 @@ repos:
   - id: check-json
 
 - repo: https://github.com/psf/black
-  rev: 23.3.0
+  rev: 23.7.0
   hooks:
   - id: black
     name: black
     args: [--config, pyproject.toml, --verbose]
 
 - repo: https://github.com/ikamensh/flynt/
-  rev: '0.78'
+  rev: 1.0.0
   hooks:
   - id: flynt
 
-- repo: https://github.com/asottile/reorder_python_imports
+- repo: https://github.com/asottile/reorder-python-imports
   rev: v3.10.0
   hooks:
   - id: reorder-python-imports
