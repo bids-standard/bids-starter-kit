@@ -3,7 +3,7 @@ title: "General: Is there a machine readable version of the BIDS specification?"
 ---
 
 Yes. The BIDS specification exist as a schema.
-The BIDS schema is a machine readable representation of the BIDS Standard written in .
+The BIDS schema is a machine readable representation of the BIDS Standard.
 It is (by and large) the BIDS Specification, but written in a declarative form.
 
 The BIDS schema is available in two machine readable formats:
