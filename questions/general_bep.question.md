@@ -27,7 +27,6 @@ but this gives a little extra flexibility.
 - BEP020: [Eye Tracking including Gaze Position and Pupil Size](https://bids.neuroimaging.io/bep020)
 - BEP022: [Magnetic Resonance Spectroscopy (MRS)](https://bids.neuroimaging.io/bep022)
 - BEP024: [Computed Tomography scan (CT)](https://bids.neuroimaging.io/bep024)
-- BEP025: [Medical Imaging Data structure (MIDS)](https://bids.neuroimaging.io/bep025)
 - BEP026: [Microelectrode Recordings](https://bids.neuroimaging.io/bep026)
 - BEP029: [Virtual and physical motion data](https://bids.neuroimaging.io/bep029)
 - BEP032: [Animal electrophysiology](https://bids.neuroimaging.io/bep032)

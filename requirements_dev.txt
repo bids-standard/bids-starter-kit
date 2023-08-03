@@ -1,4 +1,4 @@
 pre-commit
 black
 miss_hit
-requirements.txt
+-r requirements.txt
