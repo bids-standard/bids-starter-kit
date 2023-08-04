@@ -198,6 +198,23 @@ If you deal with EEG data, you may want to read this
 as well before considering combining recordings acquired on different occasions
 within the same `session` folder.
 
+## General: Is there a machine readable version of the BIDS specification?
+
+Yes. The BIDS specification exist as a schema.
+The BIDS schema is a machine readable representation of the BIDS Standard written in .
+It is (by and large) the BIDS Specification, but written in a declarative form.
+
+The BIDS schema is available in two machine readable formats:
+
+- as a set of [YAML](https://en.wikipedia.org/wiki/YAML) files in the [BIDS specifiation repository](https://github.com/bids-standard/bids-specification/src/schema)
+- as a [single json file](https://bids-specification.readthedocs.io/en/stable/schema.json)
+
+A light-weight introduction to the schema can be found [here](https://bids-extensions.readthedocs.io/en/latest/schema/).
+
+A full description of the schema can be found on this [website](https://bidsschematools.readthedocs.io/en/latest/?badge=latest)
+where you will also find the documentation for the python package
+to interact with the schema, [bidsschematools](https://pypi.org/project/bidsschematools/).
+
 ## General: Is your data type not covered in the current BIDS specification?
 
 BIDS extensions proposals [(BEPs)](https://bids.neuroimaging.io/get_involved.html#extending-the-bids-specification)
@@ -225,7 +242,6 @@ but this gives a little extra flexibility.
 - BEP020: [Eye Tracking including Gaze Position and Pupil Size](https://bids.neuroimaging.io/bep020)
 - BEP022: [Magnetic Resonance Spectroscopy (MRS)](https://bids.neuroimaging.io/bep022)
 - BEP024: [Computed Tomography scan (CT)](https://bids.neuroimaging.io/bep024)
-- BEP025: [Medical Imaging Data structure (MIDS)](https://bids.neuroimaging.io/bep025)
 - BEP026: [Microelectrode Recordings](https://bids.neuroimaging.io/bep026)
 - BEP029: [Virtual and physical motion data](https://bids.neuroimaging.io/bep029)
 - BEP032: [Animal electrophysiology](https://bids.neuroimaging.io/bep032)
