@@ -44,8 +44,8 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script src="_static/js/treeFunctions.js"></script>
     <script src="_static/js/treeData.js"></script>
+    <script src="_static/js/treeFunctions.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -383,6 +383,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">
+   General: Is there a machine readable version of the BIDS specification?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">
    General: Is your data type not covered in the current BIDS specification?
   </a>
@@ -508,6 +513,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">
    General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">
+   General: Is there a machine readable version of the BIDS specification?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -752,6 +762,21 @@ but that are “linked” to one another in a way that make sense to how you wan
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/issues/265#issuecomment-1082240834">comment in another issue</a>
 as well before considering combining recordings acquired on different occasions
 within the same <code class="docutils literal notranslate"><span class="pre">session</span></code> folder.</p>
+</div>
+<div class="section" id="general-is-there-a-machine-readable-version-of-the-bids-specification">
+<h2>General: Is there a machine readable version of the BIDS specification?<a class="headerlink" href="#general-is-there-a-machine-readable-version-of-the-bids-specification" title="Permalink to this headline">¶</a></h2>
+<p>Yes. The BIDS specification exist as a schema.
+The BIDS schema is a machine readable representation of the BIDS Standard.
+It is (by and large) the BIDS Specification, but written in a declarative form.</p>
+<p>The BIDS schema is available in two machine readable formats:</p>
+<ul class="simple">
+<li><p>as a set of <a class="reference external" href="https://en.wikipedia.org/wiki/YAML">YAML</a> files in the <a class="reference external" href="https://github.com/bids-standard/bids-specification/src/schema">BIDS specifiation repository</a></p></li>
+<li><p>as a <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/schema.json">single json file</a></p></li>
+</ul>
+<p>A light-weight introduction to the schema can be found <a class="reference external" href="https://bids-extensions.readthedocs.io/en/latest/schema/">here</a>.</p>
+<p>A full description of the schema can be found on this <a class="reference external" href="https://bidsschematools.readthedocs.io/en/latest/?badge=latest">website</a>
+where you will also find the documentation for the python package
+to interact with the schema, <a class="reference external" href="https://pypi.org/project/bidsschematools/">bidsschematools</a>.</p>
 </div>
 <div class="section" id="general-is-your-data-type-not-covered-in-the-current-bids-specification">
 <h2>General: Is your data type not covered in the current BIDS specification?<a class="headerlink" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification" title="Permalink to this headline">¶</a></h2>
