@@ -1,6 +1,7 @@
 {
   "Name": "",
-  "BIDSVersion": "1.7.0",
+  "BIDSVersion": "1.8.0",
+  "HEDVersion": "8.2.0",
   "DatasetType": "raw",
   "License": "",
   "Authors": [

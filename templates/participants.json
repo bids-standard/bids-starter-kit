@@ -5,7 +5,8 @@
     "Levels": {
     },
     "Units": "years",
-    "TermURL": "http://www.todo.com/fixme"
+    "TermURL": "https://www.todo.com/fixme",
+    "HED": "Age/#"
   },
   "sex": {
     "LongName": "",
@@ -14,8 +15,11 @@
       "m": "male",
       "f": "female"
     },
-    "Units": "",
-    "TermURL": "http://www.todo.com/fixme"
+    "HED": {
+      "m": "Male",
+      "f": "Female"
+    },
+    "TermURL": "https://www.todo.com/fixme"
   },
   "handedness": {
     "LongName": "",
@@ -24,7 +28,10 @@
       "l": "left",
       "r": "right"
     },
-    "Units": "",
-    "TermURL": "http://www.todo.com/fixme"
+    "TermURL": "https://www.todo.com/fixme", 
+    "HED": {
+      "l": "Left-handed",
+      "r": "Right-handed"
+    }
   }
 }
