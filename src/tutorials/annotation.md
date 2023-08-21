@@ -145,6 +145,3 @@ The HED standard schema contains basic terms that are common across most human n
 
 Additional details about particular schemas can be found on the [HED schemas](https://hed-schemas.readthedocs.io/en/latest/index.html) documentation page.
 See [HED schema developer’s guide](https://www.hed-resources.org/en/latest/HedSchemaDevelopersGuide.html) to begin developing your own library schema or contribute to existing HED vocabularies.
-
-
-
