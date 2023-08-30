@@ -144,7 +144,7 @@ where it is easy to find and update.
 
 An overview of how event annotation works in BIDS as well as tutorials
 about using available online tools to facilitate annotation can be found in the
-[BIDS annotation quickstart](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html).
+[BIDS annotation quickstart](https://www.hed-resources.org/en/latest/BidsAnnotationQuickstart.html).
 
 There are several online tools available at
 [HED Tools Online](https://hedtools.org)
@@ -159,12 +159,12 @@ A step-by-step tutorial for doing this can be found in the
 or you can convert the template to a spreadsheet and edit your
 annotations in Excel or another tool.
 Instructions for doing this are available in the
-[Spreadsheet templates tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#spreadsheet-templates).
+[Spreadsheet templates tutorial](https://www.hed-resources.org/en/latest/BidsAnnotationQuickstart.html#spreadsheet-templates).
 
 This process and templates make it convenient to provide basic
 descriptions, as well as HED tags for your dataset events.
 
-A [HED annotation quickstart](https://hed-examples.readthedocs.io/en/latest/HedAnnotationQuickstart.html)
+A [HED annotation quickstart](https://www.hed-resources.org/en/latest/HedAnnotationQuickstart.html)
 outlines a step-by-step process for selecting HED tags during the annotation process.
 
 #### HED schemas
