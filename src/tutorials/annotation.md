@@ -175,7 +175,7 @@ The rules for HED schema vocabularies and HED-compliant tools can be found in th
 
 #### HED library schemas
 
-The HED standard schema contains basic terms that are common across most human neuroimaging, behavioral, and physiological experiments. The HED ecosystem schema libraries extend the standard HED schema with structured vocabulary, including terms unique to specific research fields. This allows the expansion of the HED vocabulary in a scalable manner to support specialized data annotations, for instance, electrophysiological events or language stimuli.
+The HED standard schema contains basic terms that are common across most human neuroimaging, behavioral, and physiological experiments. The HED ecosystem schema libraries extend the standard HED schema with structured vocabularies, including terms unique to specific research fields. This allows the expansion of the HED vocabulary in a scalable manner to support specialized data annotations, for instance, electrophysiological events or language stimuli.
 
 Additional details about particular schemas can be found on the [HED schemas](https://hed-schemas.readthedocs.io/en/latest/index.html) documentation page.
 See [HED schema developer’s guide](https://www.hed-resources.org/en/latest/HedSchemaDevelopersGuide.html) to begin developing your own library schema or contribute to existing HED vocabularies.
