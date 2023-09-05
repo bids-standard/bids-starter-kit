@@ -170,13 +170,22 @@ outlines a step-by-step process for selecting HED tags during the annotation pro
 
 #### HED schemas
 
-The HED tags used to annotate data come from a controlled vocabulary called a HED schema. A HED schema is a structured vocabulary of terms consisting of top-level tags representing general categories in this vocabulary. Each top-level tag is the root of a tree containing tags falling into that category. This structure allows detailed and accurate annotation of events, machine validation of the annotations, and event description-based search across data collected in various studies.
+The HED tags used to annotate data come from a controlled vocabulary called a HED schema.
+A HED schema is a structured vocabulary of terms consisting of top-level tags representing general categories in this vocabulary.
+Each top-level tag is the root of a tree containing tags falling into that category.
+This structure allows detailed and accurate annotation of events,
+machine validation of the annotations,
+and event description-based search across data collected in various studies.
 
 The rules for HED schema vocabularies and HED-compliant tools can be found in the [HED Specification](https://hed-specification.readthedocs.io/en/latest/).
 
 #### HED library schemas
 
-The HED standard schema contains basic terms that are common across most human neuroimaging, behavioral, and physiological experiments. The HED ecosystem schema libraries extend the standard HED schema with structured vocabularies, including terms unique to specific research fields. This allows the expansion of the HED vocabulary in a scalable manner to support specialized data annotations, for instance, electrophysiological events ([HED-SCORE](https://github.com/hed-standard/hed-schemas/tree/main/library_schemas/score)) or language stimuli ([LISA](https://github.com/hed-standard/hed-schemas/tree/main/library_schemas/lisa)).
+The HED standard schema contains basic terms that are common across most human neuroimaging, behavioral, and physiological experiments.
+The HED ecosystem schema libraries extend the standard HED schema with structured vocabularies, including terms unique to specific research fields.
+This allows the expansion of the HED vocabulary in a scalable manner to support specialized data annotations,
+for instance, electrophysiological events ([HED-SCORE](https://github.com/hed-standard/hed-schemas/tree/main/library_schemas/score)) or language stimuli ([LISA](https://github.com/hed-standard/hed-schemas/tree/main/library_schemas/lisa)).
 
 Additional details about particular schemas can be found on the [HED schemas](https://hed-schemas.readthedocs.io/en/latest/index.html) documentation page.
-See [HED schema developer’s guide](https://www.hed-resources.org/en/latest/HedSchemaDevelopersGuide.html) to begin developing your own library schema or contribute to existing HED vocabularies.
+See [HED schema developer’s guide](https://www.hed-resources.org/en/latest/HedSchemaDevelopersGuide.html)
+to begin developing your own library schema or contribute to existing HED vocabularies.
