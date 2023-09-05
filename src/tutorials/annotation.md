@@ -9,10 +9,11 @@ use to other researchers and to you in the future.
 While the BIDS requirements for annotation are limited,
 BIDS supports a framework for inserting comprehensive
 data annotation at several levels in the dataset.
-In addition, BIDS supports annotations of events and subject characteristics using
+For example, BIDS supports annotations of events and subject characteristics using
 [Hierarchical Event Descriptors (HED)](https://hed-examples.readthedocs.io/en/latest/index.html),
 an infrastructure and controlled vocabulary for
 producing standardized machine-actionable annotations.
+
 This tutorial provides a step-by-step process for data annotation in the BIDS framework.
 
 Annotations in BIDS can be done at several levels, including the dataset, subjects, sessions, scans, and events.
@@ -175,7 +176,7 @@ The rules for HED schema vocabularies and HED-compliant tools can be found in th
 
 #### HED library schemas
 
-The HED standard schema contains basic terms that are common across most human neuroimaging, behavioral, and physiological experiments. The HED ecosystem schema libraries extend the standard HED schema with structured vocabularies, including terms unique to specific research fields. This allows the expansion of the HED vocabulary in a scalable manner to support specialized data annotations, for instance, electrophysiological events or language stimuli.
+The HED standard schema contains basic terms that are common across most human neuroimaging, behavioral, and physiological experiments. The HED ecosystem schema libraries extend the standard HED schema with structured vocabularies, including terms unique to specific research fields. This allows the expansion of the HED vocabulary in a scalable manner to support specialized data annotations, for instance, electrophysiological events ([HED-SCORE](https://github.com/hed-standard/hed-schemas/tree/main/library_schemas/score)) or language stimuli ([LISA](https://github.com/hed-standard/hed-schemas/tree/main/library_schemas/lisa)).
 
 Additional details about particular schemas can be found on the [HED schemas](https://hed-schemas.readthedocs.io/en/latest/index.html) documentation page.
 See [HED schema developer’s guide](https://www.hed-resources.org/en/latest/HedSchemaDevelopersGuide.html) to begin developing your own library schema or contribute to existing HED vocabularies.
