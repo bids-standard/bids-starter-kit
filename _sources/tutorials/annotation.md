@@ -1,17 +1,22 @@
 # Annotating a BIDS dataset
 
-## What is annotation?
+## What is an annotation?
 
-Annotation refers to metadata that is directly associated with  data.
+Annotation refers to metadata that is directly associated with data.
 Without adequate annotation, your valuable shared data may be of limited
 use to other researchers and to you in the future.
 
 While the BIDS requirements for annotation are limited,
 BIDS supports a framework for inserting comprehensive
 data annotation at several levels in the dataset.
+For example, BIDS supports annotations of events and subject characteristics using
+[Hierarchical Event Descriptors (HED)](https://hed-examples.readthedocs.io/en/latest/index.html),
+an infrastructure and controlled vocabulary for
+producing standardized machine-actionable annotations.
+
 This tutorial provides a step-by-step process for data annotation in the BIDS framework.
 
-Annotations in BIDS can be done at several levels including the dataset, subjects, sessions, scans and events.
+Annotations in BIDS can be done at several levels, including the dataset, subjects, sessions, scans, and events.
 
 ## Required BIDS annotation files
 
@@ -91,8 +96,9 @@ information about the events. Optional columns include `sample`,
 `trial_type`, `response_time`, `value`, and `HED`.
 
 The `events.tsv` files **may** contain an arbitrary number of additional columns.
-All the optional columns are dataset-specific,
-and without additional documentation will be meaningless to dataset users.
+All the optional columns are dataset-specific
+and will be meaningless to dataset users
+without additional documentation.
 
 BIDS **allows**, but **does not require** documentation about the meanings
 of the `events.tsv` file columns in similarly-named
@@ -103,8 +109,8 @@ The BIDS JSON sidecar format accommodates text descriptions of the meanings
 and contents of event file columns in the
 `Description` and `Levels` keys.
 
-At a minimum, good text descriptions of the event file columns is needed in order
-for users to correctly use the data.
+At a minimum, good text descriptions of the event file columns are needed in order
+for users to use the data correctly.
 
 #### Machine actionable annotation with HED
 
@@ -112,11 +118,11 @@ The difficulty with just providing text descriptions of the
 event file columns and their contents is that users will usually
 be required to write custom code to use your data.
 
-BIDS supports [Hierarchical Event Descriptors (HED)](https://hed-examples.readthedocs.io/en/latest/index.html),
+BIDS supports [Hierarchical Event Descriptors (HED)](https://www.hed-resources.org),
 which is an infrastructure and a controlled vocabulary that allows you to
-annotate your events in manner that can be used directly by tools.
+annotate your events in a manner that can be used directly by tools.
 
-**Remember:** most users will not be able to work with your dataset
+**Remember:** Most users will not be able to work with your dataset
 without having meaningful information about the dataset events.
 
 #### Additional information
@@ -130,34 +136,56 @@ and links to helpful guides and tutorials with the details.
 
 ### The event annotation process
 
-The goal of event annotation is to provide the information about events
-needed for effective and correct analysis of the data.
+The goal of event annotation is to provide information about
+events needed for effective and correct data analysis.
 
-Ideally most of this information should be in a single `events.json` sidecar file
-located in the root directory of your dataset
+Ideally, most of this information should be in a single `events.json` sidecar file
+located in the root directory of your dataset,
 where it is easy to find and update.
 
 An overview of how event annotation works in BIDS as well as tutorials
 about using available online tools to facilitate annotation can be found in the
-[BIDS annotation quickstart](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html).
+[BIDS annotation quickstart](https://www.hed-resources.org/en/latest/BidsAnnotationQuickstart.html).
 
 There are several online tools available at
-[https://hedtools.ucsd.edu/hed](https://hedtools.ucsd.edu/hed)
+[HED Tools Online](https://hedtools.org)
 to help you during this process:
 
 1. You can extract a ready-to-fill-in JSON sidecar template
 from a representative `events.tsv` file in your BIDS dataset.
 A step-by-step tutorial for doing this can be found in the
-[Create a JSON template tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#create-a-json-template).
+[Create a JSON template tutorial](https://www.hed-resources.org/en/latest/BidsAnnotationQuickstart.html#create-a-json-template).
 
 2. Once you have a template, you can start editing the template directory,
 or you can convert the template to a spreadsheet and edit your
-annotations in Excel or other tool.
+annotations in Excel or another tool.
 Instructions for doing this are available in the
-[Spreadsheet templates tutorial](https://hed-examples.readthedocs.io/en/latest/BidsAnnotationQuickstart.html#spreadsheet-templates).
+[Spreadsheet templates tutorial](https://www.hed-resources.org/en/latest/BidsAnnotationQuickstart.html#spreadsheet-templates).
 
 This process and templates make it convenient to provide basic
-descriptions as well as HED tags for your dataset events.
+descriptions, as well as HED tags for your dataset events.
 
-A [HED annotation quickstart](https://hed-examples.readthedocs.io/en/latest/HedAnnotationQuickstart.html)
+A [HED annotation quickstart](https://www.hed-resources.org/en/latest/HedAnnotationQuickstart.html)
 outlines a step-by-step process for selecting HED tags during the annotation process.
+
+#### HED schemas
+
+The HED tags used to annotate data come from a controlled vocabulary called a HED schema.
+A HED schema is a structured vocabulary of terms consisting of top-level tags representing general categories in this vocabulary.
+Each top-level tag is the root of a tree containing tags falling into that category.
+This structure allows detailed and accurate annotation of events,
+machine validation of the annotations,
+and event description-based search across data collected in various studies.
+
+The rules for HED schema vocabularies and HED-compliant tools can be found in the [HED Specification](https://hed-specification.readthedocs.io/en/latest/).
+
+#### HED library schemas
+
+The HED standard schema contains basic terms that are common across most human neuroimaging, behavioral, and physiological experiments.
+The HED ecosystem schema libraries extend the standard HED schema with structured vocabularies, including terms unique to specific research fields.
+This allows the expansion of the HED vocabulary in a scalable manner to support specialized data annotations,
+for instance, electrophysiological events ([HED-SCORE](https://github.com/hed-standard/hed-schemas/tree/main/library_schemas/score)) or language stimuli ([LISA](https://github.com/hed-standard/hed-schemas/tree/main/library_schemas/lisa)).
+
+Additional details about particular schemas can be found on the [HED schemas](https://hed-schemas.readthedocs.io/en/latest/index.html) documentation page.
+See [HED schema developer’s guide](https://www.hed-resources.org/en/latest/HedSchemaDevelopersGuide.html)
+to begin developing your own library schema or contribute to existing HED vocabularies.
