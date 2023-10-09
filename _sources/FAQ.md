@@ -262,6 +262,7 @@ but this gives a little extra flexibility.
 - BEP023: [PET Preprocessing derivatives](https://bids.neuroimaging.io/bep023)
 - BEP034: [Computational modeling](https://bids.neuroimaging.io/bep034)
 - BEP035: [Modular extensions for individual participant data mega-analyses with non-compliant derivatives](https://bids.neuroimaging.io/bep035)
+- BEP041: [Statistical Model Derivatives](https://bids.neuroimaging.io/bep041)
 ### metadata
 
 - BEP027: [BIDS Applications 2.0](https://bids.neuroimaging.io/bep027)
