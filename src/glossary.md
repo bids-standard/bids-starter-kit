@@ -182,7 +182,7 @@ EEG data in a proprietary format or presentation log files.
 
 #### **tsv**:
 
-TSV stands for **t**ab **s**eparated **v**alues.
+TSV stands for Tab Separated Values.
 A .tsv file contains a table (like a simple excel spreadsheet) containing text.
 Table values are separated by tabs.
 
