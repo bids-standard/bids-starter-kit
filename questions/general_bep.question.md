@@ -49,10 +49,7 @@ but this gives a little extra flexibility.
 - BEP035: [Modular extensions for individual participant data mega-analyses with non-compliant derivatives](https://bids.neuroimaging.io/bep035)
 ### metadata
 
-- BEP019: [DICOM Metadata](https://bids.neuroimaging.io/bep019)
 - BEP027: [BIDS Applications 2.0](https://bids.neuroimaging.io/bep027)
 - BEP028: [Provenance](https://bids.neuroimaging.io/bep028)
 - BEP034: [Computational modeling](https://bids.neuroimaging.io/bep034)
 ### file format
-
-- BEP002: [BIDS Models Specification](https://bids.neuroimaging.io/bep002)
