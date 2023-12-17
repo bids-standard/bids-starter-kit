@@ -201,7 +201,7 @@ within the same `session` folder.
 ## General: Is there a machine readable version of the BIDS specification?
 
 Yes. The BIDS specification exist as a schema.
-The BIDS schema is a machine readable representation of the BIDS Standard written in .
+The BIDS schema is a machine readable representation of the BIDS Standard.
 It is (by and large) the BIDS Specification, but written in a declarative form.
 
 The BIDS schema is available in two machine readable formats:
@@ -243,7 +243,6 @@ but this gives a little extra flexibility.
 - BEP022: [Magnetic Resonance Spectroscopy (MRS)](https://bids.neuroimaging.io/bep022)
 - BEP024: [Computed Tomography scan (CT)](https://bids.neuroimaging.io/bep024)
 - BEP026: [Microelectrode Recordings](https://bids.neuroimaging.io/bep026)
-- BEP029: [Virtual and physical motion data](https://bids.neuroimaging.io/bep029)
 - BEP032: [Animal electrophysiology](https://bids.neuroimaging.io/bep032)
 - BEP033: [Advanced Diffusion Weighted Imaging (aDWI)](https://bids.neuroimaging.io/bep033)
 - BEP036: [Phenotypic Data Guidelines](https://bids.neuroimaging.io/bep036)
@@ -262,15 +261,12 @@ but this gives a little extra flexibility.
 - BEP023: [PET Preprocessing derivatives](https://bids.neuroimaging.io/bep023)
 - BEP034: [Computational modeling](https://bids.neuroimaging.io/bep034)
 - BEP035: [Modular extensions for individual participant data mega-analyses with non-compliant derivatives](https://bids.neuroimaging.io/bep035)
+- BEP041: [Statistical Model Derivatives](https://bids.neuroimaging.io/bep041)
 ### metadata
 
-- BEP019: [DICOM Metadata](https://bids.neuroimaging.io/bep019)
-- BEP027: [BIDS Applications 2.0](https://bids.neuroimaging.io/bep027)
 - BEP028: [Provenance](https://bids.neuroimaging.io/bep028)
 - BEP034: [Computational modeling](https://bids.neuroimaging.io/bep034)
 ### file format
-
-- BEP002: [BIDS Models Specification](https://bids.neuroimaging.io/bep002)
 
 ## General: What does [this word] mean?
 
