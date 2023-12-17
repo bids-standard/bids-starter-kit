@@ -31,7 +31,7 @@ jupyter:
       Specification
     </a>
     <span> | </span>
-    <a href="https://bids-standard.github.io/bids-starter-kit/faq.html">
+    <a href="https://bids-standard.github.io/bids-starter-kit/FAQ.html">
       FAQ
     </a>
     <span> | </span>

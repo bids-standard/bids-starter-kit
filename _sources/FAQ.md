@@ -264,7 +264,6 @@ but this gives a little extra flexibility.
 - BEP041: [Statistical Model Derivatives](https://bids.neuroimaging.io/bep041)
 ### metadata
 
-- BEP027: [BIDS Applications 2.0](https://bids.neuroimaging.io/bep027)
 - BEP028: [Provenance](https://bids.neuroimaging.io/bep028)
 - BEP034: [Computational modeling](https://bids.neuroimaging.io/bep034)
 ### file format
