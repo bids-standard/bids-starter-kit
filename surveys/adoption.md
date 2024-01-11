@@ -14,4 +14,3 @@ on the adoption of BIDS.
   - no
 
 - Are there tools to assist converting all data you work with to BIDS?
-
