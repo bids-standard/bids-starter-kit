@@ -14,3 +14,9 @@ on the adoption of BIDS.
   - no
 
 - Are there tools to assist converting all data you work with to BIDS?
+
+
+# Audience
+
+- Heavy users of `.bidsignore` in OpenNeuro
+- Local neuro* people known for avoiding using or improving BIDS to be a good fit for their use case
