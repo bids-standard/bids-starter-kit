@@ -9,7 +9,7 @@
   </h2>
 </div>
 
-## Contributing
+## Contributing 
 
 There are many ways to get in touch with us!
 Please see our [Contact Page](https://bids-standard.github.io/bids-starter-kit/contact.html)
