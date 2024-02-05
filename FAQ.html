@@ -1,599 +1,490 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="./" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Frequently Asked Questions &#8212; BIDS starter kit</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=a4f16d0d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
-
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/js/treeFunctions.js"></script>
-    <script src="_static/js/treeData.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-VZJHGNQV6D');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <script async="async" src="_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-VZJHGNQV6D');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'FAQ';</script>
+    <script src="_static/js/treeFunctions.js?v=c27fbc45"></script>
+    <script src="_static/js/treeData.js?v=32dc3fce"></script>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="BIDS validation" href="validator.html" />
     <link rel="prev" title="Links and resources" href="links.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-VZJHGNQV6D');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">BIDS starter kit</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   Welcome to the BIDS Starter Kit
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Folders and files
- </span>
-</p>
+    
+    
+    <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
+    <script>document.write(`<img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Welcome to the BIDS Starter Kit
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Folders and files</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="folders_and_files/folders.html">
-   Folders
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="folders_and_files/files.html">
-   Filenames
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="folders_and_files/metadata.html">
-   Metadata and file formats
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">
-   BIDS files templates
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="folders_and_files/derivatives.html">
-   Derivatives
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="folders_and_files/folders.html">Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="folders_and_files/files.html">Filenames</a></li>
+<li class="toctree-l1"><a class="reference internal" href="folders_and_files/metadata.html">Metadata and file formats</a></li>
+
+<li class="toctree-l1"><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS files templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="folders_and_files/derivatives.html">Derivatives</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Tutorials
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/annotation.html">
-   Annotating a BIDS dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/ieeg.html">
-   iEEG data conversion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/asl.html">
-   ASL data conversion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/pet.html">
-   PET data conversion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/mri.html">
-   MRI data conversion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tutorials/tutorials.html">
-   Tutorials
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/annotation.html">Annotating a BIDS dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/ieeg.html">iEEG data conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/asl.html">ASL data conversion</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="tutorials/pet.html">PET data conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/mri.html">MRI data conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">Tutorials</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Resources
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="dataset_examples.html">
-   BIDS data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="talks.html">
-   Talks and slides
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="publications.html">
-   Publications
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dependencies.html">
-   BIDS Dependencies List
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="links.html">
-   Links and resources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="dataset_examples.html">BIDS data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="talks.html">Talks and slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dependencies.html">BIDS Dependencies List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">Links and resources</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Others
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Frequently Asked Questions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="validator.html">
-   BIDS validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="glossary.html">
-   BIDS jargon busting
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="contact.html">
-   Contact
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="CONTRIBUTING.html">
-   Contributing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="CODE_OF_CONDUCT.html">
-   Code of Conduct
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="validator.html">BIDS validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">BIDS jargon busting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/FAQ.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-</div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-            <!-- Source interaction buttons -->
+<div class="article-header-buttons">
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/bids-standard/bids-starter-kit"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2FFAQ.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/FAQ.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/bids-standard/bids-starter-kit" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">
-   EEG: How to format Hardware and Software filter fields in a .json?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">
-   EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb">
-   General: Can I combine BIDS and neurodata without border (NWB)?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-can-i-cite-bids">
-   General: How can I cite BIDS?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-do-i-convert-my-data-to-bids">
-   General: How do I convert my data to BIDS?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-should-i-organize-data-for-hyperscanning-data">
-   General: How should I organize data for hyperscanning data?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-to-import-excel-files-to-tsv-file">
-   General: How to import Excel files to TSV file?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-to-specify-the-micro-sign-in-matlab">
-   General: How to specify the micro sign in MATLAB?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">
-   General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">
-   General: Is there a machine readable version of the BIDS specification?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">
-   General: Is your data type not covered in the current BIDS specification?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#raw">
-     raw
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#derivative">
-     derivative
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#metadata">
-     metadata
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#file-format">
-     file format
-    </a>
-   </li>
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/FAQ.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2FFAQ.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-what-does-this-word-mean">
-   General: What does [this word] mean?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-what-is-a-json-file">
-   General: What is a
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     json
-    </span>
-   </code>
-   file?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-what-liense-should-i-choose-for-my-dataset">
-   General: What liense should I choose for my dataset?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mri-what-defacing-tools-can-i-use">
-   MRI: What defacing tools can I use?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#phenotype-how-can-i-store-subject-phenotypic-data">
-   Phenotype: How can I store subject phenotypic data?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes">
-   Phenotype: Is there a standard for epilepsy phenotypes?
-  </a>
- </li>
-</ul>
+</div>
 
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/FAQ.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Frequently Asked Questions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">EEG: How to format Hardware and Software filter fields in a .json?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb">General: Can I combine BIDS and neurodata without border (NWB)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-can-i-cite-bids">General: How can I cite BIDS?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-do-i-convert-my-data-to-bids">General: How do I convert my data to BIDS?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-should-i-organize-data-for-hyperscanning-data">General: How should I organize data for hyperscanning data?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-import-excel-files-to-tsv-file">General: How to import Excel files to TSV file?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-specify-the-micro-sign-in-matlab">General: How to specify the micro sign in MATLAB?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">General: Is there a machine readable version of the BIDS specification?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">General: Is your data type not covered in the current BIDS specification?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">raw</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">derivative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">file format</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-does-this-word-mean">General: What does [this word] mean?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-is-a-json-file">General: What is a <code class="docutils literal notranslate"><span class="pre">json</span></code> file?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-liense-should-i-choose-for-my-dataset">General: What liense should I choose for my dataset?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-what-defacing-tools-can-i-use">MRI: What defacing tools can I use?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotype-how-can-i-store-subject-phenotypic-data">Phenotype: How can I store subject phenotypic data?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes">Phenotype: Is there a standard for epilepsy phenotypes?</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Frequently Asked Questions</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">
-   EEG: How to format Hardware and Software filter fields in a .json?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">
-   EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb">
-   General: Can I combine BIDS and neurodata without border (NWB)?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-can-i-cite-bids">
-   General: How can I cite BIDS?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-do-i-convert-my-data-to-bids">
-   General: How do I convert my data to BIDS?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-should-i-organize-data-for-hyperscanning-data">
-   General: How should I organize data for hyperscanning data?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-to-import-excel-files-to-tsv-file">
-   General: How to import Excel files to TSV file?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-how-to-specify-the-micro-sign-in-matlab">
-   General: How to specify the micro sign in MATLAB?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">
-   General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">
-   General: Is there a machine readable version of the BIDS specification?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">
-   General: Is your data type not covered in the current BIDS specification?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#raw">
-     raw
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#derivative">
-     derivative
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#metadata">
-     metadata
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#file-format">
-     file format
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-what-does-this-word-mean">
-   General: What does [this word] mean?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-what-is-a-json-file">
-   General: What is a
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     json
-    </span>
-   </code>
-   file?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-what-liense-should-i-choose-for-my-dataset">
-   General: What liense should I choose for my dataset?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mri-what-defacing-tools-can-i-use">
-   MRI: What defacing tools can I use?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#phenotype-how-can-i-store-subject-phenotypic-data">
-   Phenotype: How can I store subject phenotypic data?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes">
-   Phenotype: Is there a standard for epilepsy phenotypes?
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="frequently-asked-questions">
-<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading">#</a></h1>
 <p>As this starter-kit grows it gets harder to know where to find information,
 so this page is a collection of frequently asked questions.</p>
 <p>Please add to this list!</p>
@@ -616,12 +507,12 @@ If you want to modify the questions:
 - run `faqtory build` from the root of the repository.
 
 -->
-<div class="section" id="eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">
-<h2>EEG: How to format Hardware and Software filter fields in a .json?<a class="headerlink" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json" title="Permalink to this headline">¶</a></h2>
+<section id="eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">
+<h2>EEG: How to format Hardware and Software filter fields in a .json?<a class="headerlink" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json" title="Link to this heading">#</a></h2>
 <p>In the modality specific sidecar file <code class="docutils literal notranslate"><span class="pre">_eeg.json</span></code>, we can specify the software
 and hardware filters that were applied during the collection or processing of the data.
 Generally, there are two accepted formats for that:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>a string containing <code class="docutils literal notranslate"><span class="pre">&quot;n/a&quot;</span></code>, to show that no filter was used or the
 information on the filter is not available.</p></li>
 <li><p>a json object containing one object per filter. This filter-specific object
@@ -635,9 +526,9 @@ specified as:</p></li>
 <p>For a formatted example on how to deal with this in the BIDS context, please see
 this
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/blob/main/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-FilterExample_eeg.json">template</a>.</p>
-</div>
-<div class="section" id="eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">
-<h2>EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?<a class="headerlink" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">
+<h2>EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?<a class="headerlink" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme" title="Link to this heading">#</a></h2>
 <p>Reference and ground electrodes for EEG data can usually be specified
 using the <code class="docutils literal notranslate"><span class="pre">EEGReference</span></code> and <code class="docutils literal notranslate"><span class="pre">EEGGround</span></code> fields
 in the modality specific sidecar file <code class="docutils literal notranslate"><span class="pre">_eeg.json</span></code>.
@@ -645,13 +536,13 @@ Both fields accept a string value such as <code class="docutils literal notransl
 <p>However, some manufacturers use special referencing schemes
 such as the combination of a “Common Mode Sense” (CMS) and a “Driven Right Leg” (DRL) electrode.
 This is the case for Biosemi, as further documented on
-<a class="reference external" href="https://www.biosemi.com/faq/cms&amp;drl.htm">their website</a>.</p>
+<a class="reference external" href="https://www.biosemi.com/faq/cms&amp;amp;drl.htm">their website</a>.</p>
 <p>For a formatted example on how to deal with this in the BIDS context,
 please see this
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/blob/main/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-ReferenceExample_eeg.json">template</a>.</p>
-</div>
-<div class="section" id="general-can-i-combine-bids-and-neurodata-without-border-nwb">
-<h2>General: Can I combine BIDS and neurodata without border (NWB)?<a class="headerlink" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="general-can-i-combine-bids-and-neurodata-without-border-nwb">
+<h2>General: Can I combine BIDS and neurodata without border (NWB)?<a class="headerlink" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb" title="Link to this heading">#</a></h2>
 <p>BIDS and <a class="reference external" href="https://www.nwb.org/">NWB</a> are compatible.</p>
 <p>An NWB data file is an allowed format in the iEEG-BIDS data structure.
 This means that one subject (AAA) with a session (BBB)
@@ -663,22 +554,22 @@ can have a BIDS folder with raw iEEG data in NWB format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="n">AAA</span><span class="o">/</span><span class="n">ses</span><span class="o">-</span><span class="n">CCC</span><span class="o">/</span><span class="n">func</span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="n">AAA_ses</span><span class="o">-</span><span class="n">CCC_task</span><span class="o">-</span><span class="n">rest_bold</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="general-how-can-i-cite-bids">
-<h2>General: How can I cite BIDS?<a class="headerlink" href="#general-how-can-i-cite-bids" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="general-how-can-i-cite-bids">
+<h2>General: How can I cite BIDS?<a class="headerlink" href="#general-how-can-i-cite-bids" title="Link to this heading">#</a></h2>
 <p>See the specification website for the
 <a class="reference external" href="https://bids-specification.readthedocs.io/en/latest/01-introduction.html#citing-bids">main publications</a>
 related to BIDS and its extensions.</p>
 <p>BIDS references are centralized in a <a class="reference external" href="https://www.zotero.org/groups/5111637/bids">zotero group</a>.</p>
-</div>
-<div class="section" id="general-how-do-i-convert-my-data-to-bids">
-<h2>General: How do I convert my data to BIDS?<a class="headerlink" href="#general-how-do-i-convert-my-data-to-bids" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="general-how-do-i-convert-my-data-to-bids">
+<h2>General: How do I convert my data to BIDS?<a class="headerlink" href="#general-how-do-i-convert-my-data-to-bids" title="Link to this heading">#</a></h2>
 <p>We strongly recommend you pick a BIDS converter to help you convert your data.</p>
 <p>A list of converters can be found <a class="reference external" href="https://bids.neuroimaging.io/benefits.html#converters">on the BIDS website</a></p>
-<p>Also look at <a class="reference internal" href="tutorials/tutorials.html"><span class="doc std std-doc">the list of tutorials and information about conversions</span></a>.</p>
-</div>
-<div class="section" id="general-how-should-i-organize-data-for-hyperscanning-data">
-<h2>General: How should I organize data for hyperscanning data?<a class="headerlink" href="#general-how-should-i-organize-data-for-hyperscanning-data" title="Permalink to this headline">¶</a></h2>
+<p>Also look at <a class="reference internal" href="tutorials/tutorials.html"><span class="std std-doc">the list of tutorials and information about conversions</span></a>.</p>
+</section>
+<section id="general-how-should-i-organize-data-for-hyperscanning-data">
+<h2>General: How should I organize data for hyperscanning data?<a class="headerlink" href="#general-how-should-i-organize-data-for-hyperscanning-data" title="Link to this heading">#</a></h2>
 <p>Hyperscanning is simultaneous fMRI with multiple subjects (see this <a class="reference external" href="https://doi.org/10.1006/nimg.2002.1150">paper</a>).</p>
 <ul class="simple">
 <li><p>See this <a class="reference external" href="https://github.com/bids-standard/bids-specification/issues/402">issue</a>
@@ -728,15 +619,15 @@ for hyperscanning longitunal data.</p></li>
 <ul class="simple">
 <li><p>See this <a class="reference external" href="https://groups.google.com/g/bids-discussion/c/v660DuzOf3w/m/q-0PLHt5BgAJ">thread on the bids discussion forum</a></p></li>
 </ul>
-</div>
-<div class="section" id="general-how-to-import-excel-files-to-tsv-file">
-<h2>General: How to import Excel files to TSV file?<a class="headerlink" href="#general-how-to-import-excel-files-to-tsv-file" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference external" href="./folders_and_files/metadata.md#tsv-files">our sections on TSV files</a> for more information.</p>
+</section>
+<section id="general-how-to-import-excel-files-to-tsv-file">
+<h2>General: How to import Excel files to TSV file?<a class="headerlink" href="#general-how-to-import-excel-files-to-tsv-file" title="Link to this heading">#</a></h2>
+<p>See <a class="reference internal" href="folders_and_files/metadata.html#tsv-files"><span class="std std-ref">our sections on TSV files</span></a> for more information.</p>
 <p>See also this bids tool to import and export a <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code> file:
 <a class="reference external" href="https://github.com/sccn/bids-matlab-tools/blob/master/bids_spreadsheet2participants.m">bids-matlab-tools</a></p>
-</div>
-<div class="section" id="general-how-to-specify-the-micro-sign-in-matlab">
-<h2>General: How to specify the micro sign in MATLAB?<a class="headerlink" href="#general-how-to-specify-the-micro-sign-in-matlab" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="general-how-to-specify-the-micro-sign-in-matlab">
+<h2>General: How to specify the micro sign in MATLAB?<a class="headerlink" href="#general-how-to-specify-the-micro-sign-in-matlab" title="Link to this heading">#</a></h2>
 <p>BIDS requires physical units to be specified according to the SI unit symbol and
 possibly prefix symbol (for example: mV, μV for milliVolt and microVolt).</p>
 <p>The symbol used to indicate <code class="docutils literal notranslate"><span class="pre">µ</span></code> has unicode U+00B5, which is in MATLAB:</p>
@@ -747,9 +638,9 @@ possibly prefix symbol (for example: mV, μV for milliVolt and microVolt).</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">native2unicode</span><span class="p">(</span><span class="mi">181</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;latin1&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">
-<h2>General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?<a class="headerlink" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">
+<h2>General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?<a class="headerlink" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant" title="Link to this heading">#</a></h2>
 <p id="faq-session">No. The <code class="docutils literal notranslate"><span class="pre">session</span></code> level in the BIDS folder hierarchy can be used to group data
 that go “logically” together: this means that you can put in the same <code class="docutils literal notranslate"><span class="pre">session</span></code> folder
 data that were acquired on different days,
@@ -762,9 +653,9 @@ but that are “linked” to one another in a way that make sense to how you wan
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/issues/265#issuecomment-1082240834">comment in another issue</a>
 as well before considering combining recordings acquired on different occasions
 within the same <code class="docutils literal notranslate"><span class="pre">session</span></code> folder.</p>
-</div>
-<div class="section" id="general-is-there-a-machine-readable-version-of-the-bids-specification">
-<h2>General: Is there a machine readable version of the BIDS specification?<a class="headerlink" href="#general-is-there-a-machine-readable-version-of-the-bids-specification" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="general-is-there-a-machine-readable-version-of-the-bids-specification">
+<h2>General: Is there a machine readable version of the BIDS specification?<a class="headerlink" href="#general-is-there-a-machine-readable-version-of-the-bids-specification" title="Link to this heading">#</a></h2>
 <p>Yes. The BIDS specification exist as a schema.
 The BIDS schema is a machine readable representation of the BIDS Standard.
 It is (by and large) the BIDS Specification, but written in a declarative form.</p>
@@ -777,9 +668,9 @@ It is (by and large) the BIDS Specification, but written in a declarative form.<
 <p>A full description of the schema can be found on this <a class="reference external" href="https://bidsschematools.readthedocs.io/en/latest/?badge=latest">website</a>
 where you will also find the documentation for the python package
 to interact with the schema, <a class="reference external" href="https://pypi.org/project/bidsschematools/">bidsschematools</a>.</p>
-</div>
-<div class="section" id="general-is-your-data-type-not-covered-in-the-current-bids-specification">
-<h2>General: Is your data type not covered in the current BIDS specification?<a class="headerlink" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="general-is-your-data-type-not-covered-in-the-current-bids-specification">
+<h2>General: Is your data type not covered in the current BIDS specification?<a class="headerlink" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification" title="Link to this heading">#</a></h2>
 <p>BIDS extensions proposals <a class="reference external" href="https://bids.neuroimaging.io/get_involved.html#extending-the-bids-specification">(BEPs)</a>
 aim to extend the BIDS specification to new data types.
 A list of extensions proposals can be found below.</p>
@@ -795,8 +686,8 @@ Of course you should still try to adhere to upcoming BEPs
 and the general BIDS philosophy for file names and metadata where possible,
 but this gives a little extra flexibility.</p>
 <!-- TEMPLATE STARTS -->
-<div class="section" id="raw">
-<h3>raw<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h3>
+<section id="raw">
+<h3>raw<a class="headerlink" href="#raw" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>BEP004: <a class="reference external" href="https://bids.neuroimaging.io/bep004">Susceptibility Weighted Imaging (SWI)</a></p></li>
 <li><p>BEP020: <a class="reference external" href="https://bids.neuroimaging.io/bep020">Eye Tracking including Gaze Position and Pupil Size</a></p></li>
@@ -811,9 +702,9 @@ but this gives a little extra flexibility.</p>
 <li><p>BEP039: <a class="reference external" href="https://bids.neuroimaging.io/bep039">Dimensionality reduction-based networks</a></p></li>
 <li><p>BEP040: <a class="reference external" href="https://bids.neuroimaging.io/bep040">Functional Ultrasound (fUS)</a></p></li>
 </ul>
-</div>
-<div class="section" id="derivative">
-<h3>derivative<a class="headerlink" href="#derivative" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="derivative">
+<h3>derivative<a class="headerlink" href="#derivative" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>BEP011: <a class="reference external" href="https://bids.neuroimaging.io/bep011">Structural preprocessing derivatives</a></p></li>
 <li><p>BEP012: <a class="reference external" href="https://bids.neuroimaging.io/bep012">Functional preprocessing derivatives</a></p></li>
@@ -826,38 +717,38 @@ but this gives a little extra flexibility.</p>
 <li><p>BEP035: <a class="reference external" href="https://bids.neuroimaging.io/bep035">Modular extensions for individual participant data mega-analyses with non-compliant derivatives</a></p></li>
 <li><p>BEP041: <a class="reference external" href="https://bids.neuroimaging.io/bep041">Statistical Model Derivatives</a></p></li>
 </ul>
-</div>
-<div class="section" id="metadata">
-<h3>metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="metadata">
+<h3>metadata<a class="headerlink" href="#metadata" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>BEP028: <a class="reference external" href="https://bids.neuroimaging.io/bep028">Provenance</a></p></li>
 <li><p>BEP034: <a class="reference external" href="https://bids.neuroimaging.io/bep034">Computational modeling</a></p></li>
 </ul>
-</div>
-<div class="section" id="file-format">
-<h3>file format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="general-what-does-this-word-mean">
-<h2>General: What does [this word] mean?<a class="headerlink" href="#general-what-does-this-word-mean" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="file-format">
+<h3>file format<a class="headerlink" href="#file-format" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="general-what-does-this-word-mean">
+<h2>General: What does [this word] mean?<a class="headerlink" href="#general-what-does-this-word-mean" title="Link to this heading">#</a></h2>
 <p>We’re building a glossary to de-jargonise some of the terms you need to know to
-work with data in BIDS format. Check it out <a class="reference internal" href="glossary.html"><span class="doc std std-doc">here</span></a>.</p>
-</div>
-<div class="section" id="general-what-is-a-json-file">
-<h2>General: What is a <code class="docutils literal notranslate"><span class="pre">json</span></code> file?<a class="headerlink" href="#general-what-is-a-json-file" title="Permalink to this headline">¶</a></h2>
+work with data in BIDS format. Check it out <a class="reference internal" href="glossary.html"><span class="std std-doc">here</span></a>.</p>
+</section>
+<section id="general-what-is-a-json-file">
+<h2>General: What is a <code class="docutils literal notranslate"><span class="pre">json</span></code> file?<a class="headerlink" href="#general-what-is-a-json-file" title="Link to this heading">#</a></h2>
 <p>You can find more information about <code class="docutils literal notranslate"><span class="pre">json</span></code> (and <code class="docutils literal notranslate"><span class="pre">tsv</span></code>) files in the
-<a class="reference external" href="./folders_and_files/metadata.md#json">Metadata-file-formats</a> page.</p>
-</div>
-<div class="section" id="general-what-liense-should-i-choose-for-my-dataset">
-<h2>General: What liense should I choose for my dataset?<a class="headerlink" href="#general-what-liense-should-i-choose-for-my-dataset" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal" href="folders_and_files/metadata.html#json"><span class="std std-ref">Metadata-file-formats</span></a> page.</p>
+</section>
+<section id="general-what-liense-should-i-choose-for-my-dataset">
+<h2>General: What liense should I choose for my dataset?<a class="headerlink" href="#general-what-liense-should-i-choose-for-my-dataset" title="Link to this heading">#</a></h2>
 <p>If you want to know more about what license to choose for your dataset,
 see the <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-data.html#data-licenses">turing way</a>
 page dedicated to this topic.</p>
 <p>If you plan to put your dataset on <a class="reference external" href="https://openneuro.org/">openneuro</a>,
 you should use a CC0 or a PDDL license as explained in their <a class="reference external" href="https://openneuro.org/faq">FAQ</a>.</p>
-</div>
-<div class="section" id="mri-what-defacing-tools-can-i-use">
-<h2>MRI: What defacing tools can I use?<a class="headerlink" href="#mri-what-defacing-tools-can-i-use" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="mri-what-defacing-tools-can-i-use">
+<h2>MRI: What defacing tools can I use?<a class="headerlink" href="#mri-what-defacing-tools-can-i-use" title="Link to this heading">#</a></h2>
 <p>If you want to share your BIDS data set, chances are that you will have to anonymize it
 and therefore prevent identification of the participants from their anatomical scans.
 You will need to de-identification (or deface) the anatomical images.
@@ -881,9 +772,9 @@ under matlab can do it.</p></li>
 <li><p>SPM8 and SPM12: when in the batch editor go to:
 <code class="docutils literal notranslate"><span class="pre">SPM</span> <span class="pre">menu</span> <span class="pre">--&gt;</span> <span class="pre">Util</span> <span class="pre">--&gt;</span> <span class="pre">Deface</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="phenotype-how-can-i-store-subject-phenotypic-data">
-<h2>Phenotype: How can I store subject phenotypic data?<a class="headerlink" href="#phenotype-how-can-i-store-subject-phenotypic-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="phenotype-how-can-i-store-subject-phenotypic-data">
+<h2>Phenotype: How can I store subject phenotypic data?<a class="headerlink" href="#phenotype-how-can-i-store-subject-phenotypic-data" title="Link to this heading">#</a></h2>
 <p>In the phenotype folder, according to the details provided for
 <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#phenotypic-and-assessment-data">phenotypes</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bids</span><span class="o">-</span><span class="n">root</span>
@@ -892,17 +783,17 @@ under matlab can do it.</p></li>
 </div>
 <p>Please the see work on the <a class="reference external" href="https://bids.neuroimaging.io/bep036">BIDS extension proposal for phenotypes</a>
 for more guidelines.</p>
-</div>
-<div class="section" id="phenotype-is-there-a-standard-for-epilepsy-phenotypes">
-<h2>Phenotype: Is there a standard for epilepsy phenotypes?<a class="headerlink" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="phenotype-is-there-a-standard-for-epilepsy-phenotypes">
+<h2>Phenotype: Is there a standard for epilepsy phenotypes?<a class="headerlink" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes" title="Link to this heading">#</a></h2>
 <p>Yes, open this
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/blob/main/interactiveTreeVisualization/epilepsyClassification2017/tree.html">epilepsyClassification2017</a>
 and follow the examples in the
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/phenotype">phenotype templates</a>.</p>
 <hr>
 <p>Generated by <a class="reference external" href="https://github.com/willmcgugan/faqtory">FAQtory</a></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -916,7 +807,7 @@ and follow the examples in the
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -924,44 +815,125 @@ and follow the examples in the
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="links.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Links and resources</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="links.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Links and resources</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="validator.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="validator.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">BIDS validation</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By The BIDS community<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">EEG: How to format Hardware and Software filter fields in a .json?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb">General: Can I combine BIDS and neurodata without border (NWB)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-can-i-cite-bids">General: How can I cite BIDS?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-do-i-convert-my-data-to-bids">General: How do I convert my data to BIDS?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-should-i-organize-data-for-hyperscanning-data">General: How should I organize data for hyperscanning data?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-import-excel-files-to-tsv-file">General: How to import Excel files to TSV file?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-specify-the-micro-sign-in-matlab">General: How to specify the micro sign in MATLAB?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">General: Is there a machine readable version of the BIDS specification?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">General: Is your data type not covered in the current BIDS specification?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">raw</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">derivative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">metadata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">file format</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-does-this-word-mean">General: What does [this word] mean?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-is-a-json-file">General: What is a <code class="docutils literal notranslate"><span class="pre">json</span></code> file?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-liense-should-i-choose-for-my-dataset">General: What liense should I choose for my dataset?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-what-defacing-tools-can-i-use">MRI: What defacing tools can I use?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotype-how-can-i-store-subject-phenotypic-data">Phenotype: How can I store subject phenotypic data?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes">Phenotype: Is there a standard for epilepsy phenotypes?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By The BIDS community
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
