@@ -1,8 +1,7 @@
 # add filename templates to the documentation
 from pathlib import Path
 
-from bidsschematools import render
-from bidsschematools import schema
+from bidsschematools import render, schema
 
 datatypes = [
     "anat",
