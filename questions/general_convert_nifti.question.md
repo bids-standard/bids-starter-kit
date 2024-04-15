@@ -6,6 +6,7 @@ In theory yes, but it is possible that you will be missing some metadata that is
 
 A couple of BIDS converters can work with nifti files:
 
+- bidscoin
 - bidsme
 - explore asl
 - data2bids
