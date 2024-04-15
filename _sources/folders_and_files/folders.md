@@ -16,18 +16,18 @@ The rest of this page describes how these folders are structured.
 There are four main levels of the folder hierarchy, these are:
 
 ```
-project/
+dataset/
 └── subject
     └── session
         └── datatype
 ```
 
-With the exception of the top-level `project` folder, all sub-folders have a
+With the exception of the top-level `dataset/` folder, all sub-folders have a
 specific structure to their name (described below). Here's an example of how
 this hierarchy looks:
 
 ```
-myProject/
+myDataset/
 └── sub-01
     └── ses-01
         └── anat
@@ -35,7 +35,7 @@ myProject/
 
 Here is the folder name structure of each level:
 
-## project
+## dataset
 
 Can have any name, this should be descriptive for the dataset contained in the
 folder.
