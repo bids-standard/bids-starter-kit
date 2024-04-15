@@ -450,6 +450,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-import-excel-files-to-tsv-file">General: How to import Excel files to TSV file?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-specify-the-micro-sign-in-matlab">General: How to specify the micro sign in MATLAB?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-only-have-nifti-files-and-no-dicom-can-i-still-create-a-bids-dataset">General: I only have nifti files and no dicom. Can I still create a BIDS dataset?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regarding-the-missing-json-files">Regarding the “missing” JSON files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">General: Is there a machine readable version of the BIDS specification?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">General: Is your data type not covered in the current BIDS specification?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">raw</a></li>
@@ -645,6 +650,58 @@ but that are “linked” to one another in a way that make sense to how you wan
 <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/issues/265#issuecomment-1082240834">comment in another issue</a>
 as well before considering combining recordings acquired on different occasions
 within the same <code class="docutils literal notranslate"><span class="pre">session</span></code> folder.</p>
+</section>
+<section id="general-i-only-have-nifti-files-and-no-dicom-can-i-still-create-a-bids-dataset">
+<h2>General: I only have nifti files and no dicom. Can I still create a BIDS dataset?<a class="headerlink" href="#general-i-only-have-nifti-files-and-no-dicom-can-i-still-create-a-bids-dataset" title="Link to this heading">#</a></h2>
+<p>In theory yes, but it is possible that you will be missing some metadata that is required by the BIDS specification.</p>
+<p>A couple of BIDS converters can work with nifti files:</p>
+<ul class="simple">
+<li><p>bidscoin</p></li>
+<li><p>bidsme</p></li>
+<li><p>explore asl</p></li>
+<li><p>data2bids</p></li>
+</ul>
+<p>See the list of converters <a class="reference external" href="https://bids.neuroimaging.io/benefits.html#mri-and-pet-converters">here</a>.</p>
+<p><strong>However</strong>…</p>
+<ul class="simple">
+<li><p>They may not work with the datatype you have
+(for example not sure that explore ASL can deal with <code class="docutils literal notranslate"><span class="pre">func</span></code> data).</p></li>
+<li><p>Many of them still expect that you have a json side car for each nifti
+(BIDSme for example - from the top of my head).</p></li>
+<li><p>They may expect a certain input structure to work efficiently,
+so we may have to move files around.</p></li>
+</ul>
+<!-- Not played with it but, from the README, data2bids sounds pretty flexible
+but may require you to play with python and json files for configuration.
+
+https://github.com/SIMEXP/Data2Bids -->
+<section id="regarding-the-missing-json-files">
+<h3>Regarding the “missing” JSON files<a class="headerlink" href="#regarding-the-missing-json-files" title="Link to this heading">#</a></h3>
+<p>Depending on the datatype you are dealing with this can be more of less annoying.</p>
+<p>2 examples:</p>
+<p>For the most typical <code class="docutils literal notranslate"><span class="pre">anat</span></code> files,
+they don’t have any REQUIRED metadata,
+so you could have just the data files without any accompanying JSON.
+If you get into more exotic anat files (like for quantitative MRI)
+then this may become a problem.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">func</span></code> files you only need <code class="docutils literal notranslate"><span class="pre">TaskName</span></code> and <code class="docutils literal notranslate"><span class="pre">RepetitionTime</span></code>
+and the former you can decide what it is and the latter should be in the Nifti header.
+So you should be OKish there too.</p>
+<p>Obviously you will be missing some metadata that would be required
+for some type of preprocessing (like slice timing info).</p>
+</section>
+<section id="tips">
+<h3>Tips<a class="headerlink" href="#tips" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>If you have the PDF with the details of acquisition sequence or a method section
+from a paper with that data, you could “recover” some extra metadata.</p></li>
+<li><p>SPM dicom import tool usually leaves a couple of metadata in a description field of the nifti header.
+That can be a problem for data anonymisation but may help you in your case if this is the tool that was used.
+See an example <a class="reference external" href="https://github.com/PeerHerholz/BIDSonym/issues/41#issue-768636869">here</a></p></li>
+<li><p>If you have to script tings manually rather than using a converter,
+remember to use pybids <a class="reference external" href="https://bids-standard.github.io/pybids/examples/pybids_tutorial.html#path-construction">path construction tools</a> or the <a class="reference external" href="https://github.com/bids-standard/bids-matlab/blob/master/examples/03_BIDS-Matlab_filenames_and_metadata.ipynb">bids matlab equivalent</a> to make your life easier when constructing bids valid filenames.</p></li>
+</ul>
+</section>
 </section>
 <section id="general-is-there-a-machine-readable-version-of-the-bids-specification">
 <h2>General: Is there a machine readable version of the BIDS specification?<a class="headerlink" href="#general-is-there-a-machine-readable-version-of-the-bids-specification" title="Link to this heading">#</a></h2>
@@ -860,6 +917,11 @@ and follow the examples in the
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-import-excel-files-to-tsv-file">General: How to import Excel files to TSV file?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-specify-the-micro-sign-in-matlab">General: How to specify the micro sign in MATLAB?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-only-have-nifti-files-and-no-dicom-can-i-still-create-a-bids-dataset">General: I only have nifti files and no dicom. Can I still create a BIDS dataset?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regarding-the-missing-json-files">Regarding the “missing” JSON files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">General: Is there a machine readable version of the BIDS specification?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">General: Is your data type not covered in the current BIDS specification?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">raw</a></li>
