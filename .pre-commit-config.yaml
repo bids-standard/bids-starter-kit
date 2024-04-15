@@ -2,7 +2,7 @@
 repos:
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.4.0
+  rev: v4.6.0
   hooks:
   - id: trailing-whitespace
   - id: end-of-file-fixer
@@ -11,7 +11,7 @@ repos:
   - id: check-json
 
 - repo: https://github.com/psf/black
-  rev: 23.9.1
+  rev: 24.3.0
   hooks:
   - id: black
     name: black
@@ -22,13 +22,14 @@ repos:
   hooks:
   - id: flynt
 
-- repo: https://github.com/asottile/reorder-python-imports
-  rev: v3.11.0
+- repo: https://github.com/pycqa/isort
+  rev: 5.13.2
   hooks:
-  - id: reorder-python-imports
+  - id: isort
+    args: [--profile, black, --settings-path, pyproject.toml]
 
 - repo: https://github.com/codespell-project/codespell
-  rev: v2.2.5
+  rev: v2.2.6
   hooks:
   - id: codespell
 

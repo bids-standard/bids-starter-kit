@@ -33,7 +33,7 @@ jobs:
         path: ./suggest.md
 
     - name: Suggest FAQ
-      uses: peter-evans/create-or-update-comment@c6c9a1a66007646a28c153e2a8580a5bad27bcfa
+      uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043
       with:
         issue-number: ${{ github.event.issue.number }}
         body: ${{ steps.suggest.outputs.content }}

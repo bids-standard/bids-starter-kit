@@ -261,7 +261,7 @@ It is (by and large) the BIDS Specification, but written in a declarative form.
 
 The BIDS schema is available in two machine readable formats:
 
-- as a set of [YAML](https://en.wikipedia.org/wiki/YAML) files in the [BIDS specifiation repository](https://github.com/bids-standard/bids-specification/src/schema)
+- as a set of [YAML](https://en.wikipedia.org/wiki/YAML) files in the [BIDS specification repository](https://github.com/bids-standard/bids-specification/src/schema)
 - as a [single json file](https://bids-specification.readthedocs.io/en/stable/schema.json)
 
 A light-weight introduction to the schema can be found [here](https://bids-extensions.readthedocs.io/en/latest/schema/).
@@ -298,7 +298,6 @@ but this gives a little extra flexibility.
 - BEP022: [Magnetic Resonance Spectroscopy (MRS)](https://bids.neuroimaging.io/bep022)
 - BEP024: [Computed Tomography scan (CT)](https://bids.neuroimaging.io/bep024)
 - BEP026: [Microelectrode Recordings](https://bids.neuroimaging.io/bep026)
-- BEP029: [Virtual and physical motion data](https://bids.neuroimaging.io/bep029)
 - BEP032: [Animal electrophysiology](https://bids.neuroimaging.io/bep032)
 - BEP033: [Advanced Diffusion Weighted Imaging (aDWI)](https://bids.neuroimaging.io/bep033)
 - BEP036: [Phenotypic Data Guidelines](https://bids.neuroimaging.io/bep036)
@@ -317,9 +316,9 @@ but this gives a little extra flexibility.
 - BEP023: [PET Preprocessing derivatives](https://bids.neuroimaging.io/bep023)
 - BEP034: [Computational modeling](https://bids.neuroimaging.io/bep034)
 - BEP035: [Modular extensions for individual participant data mega-analyses with non-compliant derivatives](https://bids.neuroimaging.io/bep035)
+- BEP041: [Statistical Model Derivatives](https://bids.neuroimaging.io/bep041)
 ### metadata
 
-- BEP027: [BIDS Applications 2.0](https://bids.neuroimaging.io/bep027)
 - BEP028: [Provenance](https://bids.neuroimaging.io/bep028)
 - BEP034: [Computational modeling](https://bids.neuroimaging.io/bep034)
 ### file format

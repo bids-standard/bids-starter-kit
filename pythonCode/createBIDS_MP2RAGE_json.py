@@ -12,6 +12,7 @@ with '_inv-1_part-mag_MPRAGE.nii.gz'.
 
 Created by RG 2018-10-03
 """
+
 import glob
 import json
 import os
