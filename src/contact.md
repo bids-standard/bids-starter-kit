@@ -28,3 +28,15 @@ You can also come chat on the
 We'd love for you to join the mailing list (bids-discussion@googlegroups.com,
 click [here](https://groups.google.com/g/bids-discussion) to join).
 You might find some helpful answers and discussions there.
+
+## Communication channels
+
+If you are interested in receiving occasional updates around BIDS, feel free to join one of the communication channels that we use regularly:
+
+- The `bids-discussions` Google Group for [updates via email](https://groups.google.com/g/bids-discussion)
+- Follow BIDS on:
+  - [x](https://x.com/BIDSstandard)
+  - [Mastodon](https://fosstodon.org/@bidsstandard/)
+  - [Bluesky](https://bsky.app/profile/bidsstandard.bsky.social/)
+- Join the [Brainhack Mattermost](https://mattermost.brainhack.org/) for a number of BIDS-related channels
+- Have a look at the [Neurostars forum with the BIDS tag](https://neurostars.org/tag/bids)
