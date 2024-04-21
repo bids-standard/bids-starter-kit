@@ -1,5 +1,4 @@
 jupyter-book
 Jinja2
-faqtory
 ruamel.yaml
 tools/bids-specification/tools/schemacode[render]
