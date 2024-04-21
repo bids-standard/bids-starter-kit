@@ -32,13 +32,10 @@ clean:
 update_bep_list:
 	python tools/print_bep_list.py
 
-update_faq: update_bep_list
-	faqtory build
-
 update_filename_templates:
 	python tools/print_filename_templates.py
 
-book: clean update_faq update_filename_templates ## build the book
+book: clean update_filename_templates ## build the book
 	jupyter-book build src
 
 view: book ## view the book
