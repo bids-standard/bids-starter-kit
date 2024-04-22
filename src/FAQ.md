@@ -1,4 +1,4 @@
 
 # Frequently Asked Questions
 
-moved
+moved to docs/FAQ/index.md
