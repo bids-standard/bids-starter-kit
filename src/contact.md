@@ -25,11 +25,8 @@ Some example questions that have already been answered include:
 You can also come chat on the
 [Brainhack mattermost](https://mattermost.brainhack.org/):
 
--   on the
-    [`~bids_general`](https://mattermost.brainhack.org/brainhack/channels/bids_general)
-    channel
--   or on the
-    [`~starter-kit`](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit)
+-   on the [`~bids_general`](https://mattermost.brainhack.org/brainhack/channels/bids_general) channel
+-   or on the [`~starter-kit`](https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit) 
 
 We'd love for you to join the mailing list (bids-discussion@googlegroups.com,
 click [here](https://groups.google.com/g/bids-discussion) to join).
@@ -39,10 +36,13 @@ You might find some helpful answers and discussions there.
 
 If you are interested in receiving occasional updates around BIDS, feel free to join one of the communication channels that we use regularly:
 
-- The `bids-discussions` Google Group for [updates via email](https://groups.google.com/g/bids-discussion)
-- Follow BIDS on:
-  - [x](https://x.com/BIDSstandard)
-  - [Mastodon](https://fosstodon.org/@bidsstandard/)
-  - [Bluesky](https://bsky.app/profile/bidsstandard.bsky.social/)
-- Join the [Brainhack Mattermost](https://mattermost.brainhack.org/) for a number of BIDS-related channels
-- Have a look at the [Neurostars forum with the BIDS tag](https://neurostars.org/tag/bids)
+-   The `bids-discussions` Google Group for [updates via email](https://groups.google.com/g/bids-discussion)
+
+-   Follow BIDS on:
+    -   [x](https://x.com/BIDSstandard)
+    -   [Mastodon](https://fosstodon.org/@bidsstandard/)
+    -   [Bluesky](https://bsky.app/profile/bidsstandard.bsky.social/)
+
+-   Join the [Brainhack Mattermost](https://mattermost.brainhack.org/) for a number of BIDS-related channels
+
+-   Have a look at the [Neurostars forum with the BIDS tag](https://neurostars.org/tag/bids)
