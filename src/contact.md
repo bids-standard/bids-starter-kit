@@ -43,6 +43,17 @@ If you are interested in receiving occasional updates around BIDS, feel free to 
     -   [Mastodon](https://fosstodon.org/@bidsstandard/)
     -   [Bluesky](https://bsky.app/profile/bidsstandard.bsky.social/)
 
+    - youtube
+
+<div class="iframe-container">
+  <iframe
+    src="https://www.youtube.com/embed/-c4PUhTwmz4"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+</div>
+
 -   Join the [Brainhack Mattermost](https://mattermost.brainhack.org/) for a number of BIDS-related channels
 
 -   Have a look at the [Neurostars forum with the BIDS tag](https://neurostars.org/tag/bids)
