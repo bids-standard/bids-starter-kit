@@ -11,11 +11,8 @@ jupyter:
         url: https://github.com/bids-standard/BIDS-Starter-Kit
 ---
 
-# Welcome to the BIDS Starter Kit
+# Getting started with BIDS
 
-<!-- <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head> -->
 
 <div align="center" style="padding:10px">
   <strong>How to get started with the Brain Imaging Data Structure</strong>
@@ -27,13 +24,6 @@ jupyter:
 
 <div align="center">
   <h4>
-    <a href="http://bids-specification.readthedocs.io/">
-      Specification
-    </a>
-    <span> | </span>
-    <a href="https://bids-standard.github.io/bids-starter-kit/FAQ.html">
-      FAQ
-    </a>
     <span> | </span>
     <a href="https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit">
       Chat
@@ -51,15 +41,6 @@ jupyter:
       Podcast
     </a>
   </h4>
-</div>
-
-<div class="iframe-container">
-  <iframe
-    src="https://www.youtube.com/embed/-c4PUhTwmz4"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-  </iframe>
 </div>
 
 ## Motivation
