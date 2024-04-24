@@ -18,31 +18,6 @@ jupyter:
   <strong>How to get started with the Brain Imaging Data Structure</strong>
 </div>
 
-<div align="center" style="padding:10px">
-  A community-curated collection of tutorials, wikis, and templates to get you started with creating BIDS compliant datasets.
-</div>
-
-<div align="center">
-  <h4>
-    <span> | </span>
-    <a href="https://mattermost.brainhack.org/brainhack/channels/bids-starter-kit">
-      Chat
-    </a>
-    <span> | </span>
-    <a href=https://neurostars.org/tags/bids>
-      Forum
-    </a>
-    <span> | </span>
-    <a href=https://www.youtube.com/channel/UCxZUcYfd_nvIVWAbzRB1tlw>
-      Youtube
-    </a>
-    <span> | </span>
-    <a href=https://anchor.fm/bids-maintenance>
-      Podcast
-    </a>
-  </h4>
-</div>
-
 ## Motivation
 
 The primary goal of this project is to simplify the process of learning about

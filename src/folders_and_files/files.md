@@ -54,10 +54,9 @@ Source:
         <li>Some entities <span style="color: var(--key)">key</span><span style="color: black">-</span><span style="color: var(--label)">value</span> can only be used for
 derivative data.</li>
     </ul>
-<p>
+</p>
 
 ## Modalities
-
 
 ### MRI
 
