@@ -52,43 +52,11 @@ Finally, for more advanced knowledge that may pertain to specific use cases for
 your data, please refer to the full
 [BIDS Specification](https://bids-specification.readthedocs.io/en/stable/)
 
-## Philosophy
-
-The most important part of BIDS are the users: if more people use it, more data
-will be shared and the more powerful it will become. <strong>We want to make it
-easy to learn</strong> and more adopted. Since BIDS is platform independent and
-still an adapting, growing tool, the greater the community, the better it will
-be.
-
-Another part is that BIDS is striving to not reinventing other standards and metadata ontologies but reuse them:
-
-![BIDS-minder](./images/BIDS-minder.svg)
-
-## Benefits
-
-### For the public good
-
--   Lowers scientific waste
--   Gives opportunity to less-funded researchers
--   Improves efficiency
--   Spurs innovation
-
-### For yourself
-
--   You are likely the future user of the data and data analysis pipelines
-    you’ve developed
--   Enables and simplifies collaboration
--   Reviewers and funding agencies like to see reproducible results
--   Open-science based funding opportunities and awards available (for instance:
-    OHBM Replication Award, Mozilla Open Science Fellowship, Google Summer of
-    Code, and so on.)
-
 ## Users
 
 BIDS is for everyone! Programming is not required, it simply makes some
 processes more efficient. All users can take part in the benefits such as
 organized data, reproducible research, and data sharing.
-![users](https://i.imgur.com/0iAMuJ8.png)
 
 <br>
 
