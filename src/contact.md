@@ -1,1 +1,1 @@
-Moved to docs/contact.md
+Moved [here](https://bids-website.readthedocs.io/en/latest/contact/)

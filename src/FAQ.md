@@ -1,4 +1,4 @@
 
 # Frequently Asked Questions
 
-moved to docs/FAQ/index.md
+Moved [here](https://bids-website.readthedocs.io/en/latest/faq/)
