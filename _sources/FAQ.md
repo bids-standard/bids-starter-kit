@@ -306,6 +306,7 @@ but this gives a little extra flexibility.
 - BEP038: [Atlases](https://bids.neuroimaging.io/bep038)
 - BEP039: [Dimensionality reduction-based networks](https://bids.neuroimaging.io/bep039)
 - BEP040: [Functional Ultrasound (fUS)](https://bids.neuroimaging.io/bep040)
+- BEP042: [Electromyography (EMG)](https://bids.neuroimaging.io/bep042)
 ### derivative
 
 - BEP011: [Structural preprocessing derivatives](https://bids.neuroimaging.io/bep011)
@@ -322,6 +323,7 @@ but this gives a little extra flexibility.
 
 - BEP028: [Provenance](https://bids.neuroimaging.io/bep028)
 - BEP034: [Computational modeling](https://bids.neuroimaging.io/bep034)
+- BEP043: [BIDS Term Mapping](https://bids.neuroimaging.io/bep043)
 ### file format
 
 ## General: What does [this word] mean?
