@@ -29,20 +29,11 @@ help:
 clean:
 	rm -fr src/_build/
 
-update_bep_list:
-	python tools/print_bep_list.py
-
-update_filename_templates:
-	python tools/print_filename_templates.py
-
-book: clean update_filename_templates ## build the book
+book: clean ## build the book
 	jupyter-book build src
 
 view: book ## view the book
 	$(BROWSER) $$PWD/src/_build/html/index.html
-
-latin_check:
-	cd tools && python no-bad-latin.py
 
 test: ## build the book and tests the links
 	jupyter-book build src -W --builder linkcheck
