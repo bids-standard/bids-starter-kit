@@ -5,7 +5,7 @@
 The point of this starter kit is to **welcome new users and contributors to the BIDS community**.
 We hope that these guidelines are designed to make it as easy as possible to get involved.
 If you have any questions that aren't discussed below,
-please let us know through one of the many ways to [get in touch](#get-in-touch).
+please let us know through one of the many ways to [get in touch](./contact.md).
 
 ## Joining the community
 
@@ -55,7 +55,7 @@ The list of labels for current issues can be found
 -   [![Question](https://img.shields.io/badge/-question-cc317c.svg)][labels-question]
     _These issues contain a question that you'd like to have answered._
 
-    There are [lots of ways to ask questions](#get-in-touch)
+    There are [lots of ways to ask questions](./contact.md)
     but opening an issue is a great way to start a conversation and get your answer.
 
 -   [![good-first-issue](https://img.shields.io/badge/-good%20first%20issue-1b3487.svg)][labels-firstissue]
@@ -133,7 +133,7 @@ We appreciate all contributions to the BIDS Starter Kit.
 
 **THANK YOU** for helping us build this useful resource. ✨ 🌟 💫
 
-If you're updating the [code](#code) or the [templates](#templates),
+If you're updating the [code](./#code) or the [templates](#templates),
 the following steps are a guide to help you contribute in a way that will be easy
 for everyone to review and accept with ease 😎.
 
@@ -249,7 +249,7 @@ but please [get in touch](#get-in-touch) if you have any questions 🎈.
 
 <br>
 
-## Code ([link][bids-starterkit-repo])
+## Code
 
 This repository is under development,
 but we hope that it becomes a useful place for people to share
@@ -269,7 +269,7 @@ We are using the Miss_hit linter to help us keep out matlab "clean".
 You can find more information on how to set it up and use it on the bids-matlab
 [contributing guidelines](https://github.com/bids-standard/bids-matlab/blob/master/CONTRIBUTING.md#matlab-code-style-guide-and-quality).
 
-### Templates ([link][bids-starterkit-repo])
+### Templates
 
 This repository is under development, but we aim to have two templates for each
 BIDS sidecar file:
