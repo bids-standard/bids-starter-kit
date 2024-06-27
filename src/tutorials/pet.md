@@ -19,13 +19,13 @@ and others use proprietary formats for example ECAT format (.v).
 In order to facilitate easy testing of data conversion across different PET file formats
 the [OpenNeuroPET project][OpenNeuroPET project] has compiled a bunch of phantom data
 from different scanner types and is distributing two examples
-[here](https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing).
+[here](https://drive.google.com/file/d/1O1hDmJwR1xm6LemIbhPrLf9YkSYHC6Mq/view?usp=sharing).
 
 You can download them for testing purposes either manually
 or in the terminal by typing:
 
 ```{code-block} bash
-gdown https://drive.google.com/file/d/10S0H7HAnMmxHNpZLlifR14ykIuiXcBAD/view?usp=sharing --fuzzy
+gdown https://drive.google.com/file/d/1O1hDmJwR1xm6LemIbhPrLf9YkSYHC6Mq/view?usp=sharing --fuzzy
 ```
 
 You may need to install the python package [`gdown`](https://github.com/wkentaro/gdown)
