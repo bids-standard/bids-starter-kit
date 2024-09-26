@@ -4,12 +4,16 @@ root: index.md
 parts:
 - caption: Folders and files
   chapters:
-  - file: folders_and_files/folders.md
-  - file: folders_and_files/files.md
-  - file: folders_and_files/metadata.md
-  - url: https://github.com/bids-standard/bids-starter-kit/tree/main/templates
-    title: BIDS files templates
-  - file: folders_and_files/derivatives
+  - file: Folders
+    url: https://bids-website.readthedocs.io/en/latest/starter_kit/src/folders_and_files/folders.html
+  - file: Filenames
+    url: https://bids-website.readthedocs.io/en/latest/starter_kit/src/folders_and_files/files.html
+  - file: Metadata and file formats
+    url: https://bids-website.readthedocs.io/en/latest/starter_kit/src/folders_and_files/metadata.html
+  - title: BIDS files templates
+    url: https://github.com/bids-standard/bids-starter-kit/tree/main/templates
+  - file: Derivatives
+    url: https://bids-website.readthedocs.io/en/latest/starter_kit/src/folders_and_files/derivatives.html
 - caption: Tutorials
   chapters:
   - file: tutorials/annotation.md
@@ -20,16 +24,25 @@ parts:
   - file: tutorials/tutorials.md
 - caption: Resources
   chapters:
-  - file: dataset_examples.md
-  - file: talks.md
-  - file: publications.md
-  - file: dependencies.md
-  - file: links.md
+  - file: Dataset examples
+    url: https://bids-website.readthedocs.io/en/latest/datasets/
+  - title: Talks
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html
+  - title: Publications
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html
+  - title: Dependencies
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html
+  - title: Links
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html
 - caption: Others
   chapters:
-  - file: FAQ.md
-  - file: validator.md
-  - file: glossary.md
-  - file: contact.md
+  - title: FAQ
+    url: https://bids-website.readthedocs.io/en/latest/faq/
+  - title: Validator
+    url: https://bids-website.readthedocs.io/en/latest/tools/validator.html
+  - title: Glossary
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html
+  - title: Contact
+    url: https://bids-website.readthedocs.io/en/latest/contact/
   - file: CONTRIBUTING.md
   - file: CODE_OF_CONDUCT.md

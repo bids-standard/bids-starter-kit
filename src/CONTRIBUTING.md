@@ -137,28 +137,6 @@ If you're updating the [code](./#code) or the [templates](#templates),
 the following steps are a guide to help you contribute in a way that will be easy
 for everyone to review and accept with ease 😎.
 
-### Requirements
-
-To make a contribution you will need to have:
-
--  a github account (see above)
--  python 3.8 or higher
--  a code editor like vs-code
-
-To make edits you will need to:
-
-- fork the bids-starter-kit repository
-- clone your fork to your computer
-- install the dependencies
-- make changes
-- push your changes to your fork
-- submit a pull request
-
-<!-- TODO
-
-- explain how to install python
-
--->
 
 ### [Fork][github-fork] the [BIDS Starter Kit repository][bids-starterkit-repo] to your profile
 
@@ -168,19 +146,6 @@ so it's a safe space to explore edits to the code!
 
 Make sure to [keep your fork up to date][github-syncfork] with the upstream repository,
 otherwise you can end up with lots of dreaded [merge conflicts][github-mergeconflicts].
-
-### Clone your fork to your computer
-
-```bash
-git clone --recurse-submodules https://github.com/YOUR_USER_NAME/BIDS-Starter-Kit.git
-```
-
-### Install the dependencies and set up pre-commit hooks
-
-```bash
-pip install -r requirements_dev.txt
-pre-commit install
-```
 
 ### Make the changes you've discussed
 
@@ -212,17 +177,6 @@ to another webpage.
 git add .
 git commit -m "your commit message"
 ```
-
-<!-- TODO explain how to deal with pre-commit -->
-
-### view your changes
-
-```bash
-jupyter-book build src
-```
-
-This will build the book in the `src/_build` folder.
-You can then open the `src/_build/html/index.html` file in your browser to view the changes.
 
 ### Submit a [pull request][github-pullrequest]
 

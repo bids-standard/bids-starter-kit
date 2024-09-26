@@ -1,4 +1,0 @@
-pre-commit
-black
-miss_hit
--r requirements.txt

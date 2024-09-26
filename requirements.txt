@@ -1,4 +1,1 @@
 jupyter-book
-Jinja2
-ruamel.yaml
-tools/bids-specification/tools/schemacode[render]

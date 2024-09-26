@@ -8,8 +8,8 @@
 # Book settings
 title: BIDS starter kit                           # The title of the book. Will be placed in the left navbar.
 author: The BIDS community                         # The author of the book
-copyright: '2021-2024'                     # Copyright year to be placed in the footer
-logo: ../tools/bids-specification/BIDS_logo/BIDS_logo_black_transparent_background_crop.png    # A path to the book logo
+copyright: ''                     # Copyright year to be placed in the footer
+logo: https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png    # A path to the book logo
 exclude_patterns: ['**README.md', epilepsy_phenotype.rst, questions]                  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
 
 #######################################################################################
@@ -54,7 +54,7 @@ html:
   announcement: |
     <div style="display: flex: flex-direction: column; text-align: center">
       <h3>
-        The Starter-kit is moving to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+        The Starter-kit has movedd to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
       </h3>
       <p style="text-align: center">Go and check it out and let us know what you think.</p>
     </div>
@@ -77,8 +77,6 @@ sphinx:
   - sphinxcontrib.bibtex
   - IPython.sphinxext.ipython_console_highlighting
   config:
-    bibtex_bibfiles:
-    - references.bib
     linkcheck_ignore:
     - .*/10.1186/s13742-016-0121-x    # for some reason, it returns forbidden
     - .*/10.1093/gigascience/giy082    # for some reason, it returns forbidden
