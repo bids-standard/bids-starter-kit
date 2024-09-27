@@ -13,7 +13,7 @@ parts:
   - title: BIDS files templates
     url: https://github.com/bids-standard/bids-starter-kit/tree/main/templates
   - title: Derivatives
-    url: https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/derivatives.html
 - caption: Tutorials
   chapters:
   - title: Annotating a BIDS dataset

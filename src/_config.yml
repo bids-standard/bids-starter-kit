@@ -73,15 +73,42 @@ repository:
 #######################################################################################
 # Advanced and power-user settings
 sphinx:
+
   extra_extensions:
   - sphinxcontrib.bibtex
   - IPython.sphinxext.ipython_console_highlighting
+  - sphinxext.rediraffe
+
   config:
     bibtex_bibfiles:
     - references.bib
+    
     linkcheck_ignore:
     - .*/10.1186/s13742-016-0121-x    # for some reason, it returns forbidden
     - .*/10.1093/gigascience/giy082    # for some reason, it returns forbidden
     - https?://brainhack.org/LA    # need to fix to "LA2016" in OSF
+    
     suppress_warnings:
     - myst.domains    # domain method not implemented for `cite`
+    
+    rediraffe_redirects:
+      contact.md: https://bids-website.readthedocs.io/en/latest/contact/
+      dataset_examples.md: https://bids-website.readthedocs.io/en/latest/datasets/
+      folders_and_files/folders.md: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html
+      folders_and_files/files.md: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html
+      folders_and_files/metadata.md: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html
+      folders_and_files/derivatives.md: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/derivatives.html
+      tutorials/annotations.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html
+      tutorials/ieeg.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html 
+      tutorials/asl.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html
+      tutorials/pet.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html
+      tutorials/mri.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html
+      tutorials/tutorials.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html
+      datasets.md: https://bids-website.readthedocs.io/en/latest/datasets/
+      talks.md: https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html
+      publications.md: https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html
+      dependencies.md: https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html
+      links: https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html
+      FAQ.md: https://bids-website.readthedocs.io/en/latest/faq/
+      validator.md: https://bids-website.readthedocs.io/en/latest/tools/validator.html
+      glossary.md: https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html
