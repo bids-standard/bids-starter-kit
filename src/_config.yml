@@ -77,7 +77,6 @@ sphinx:
   extra_extensions:
   - sphinxcontrib.bibtex
   - IPython.sphinxext.ipython_console_highlighting
-  - sphinxext.rediraffe
   - sphinx_reredirects
 
   config:
@@ -92,9 +91,6 @@ sphinx:
     suppress_warnings:
     - myst.domains    # domain method not implemented for `cite`
     
-    # rediraffe_branch: main
-    # rediraffe_template: template.html
-    # rediraffe_redirects:
     redirects:
       contact.md: https://bids-website.readthedocs.io/en/latest/contact/
       dataset_examples.md: https://bids-website.readthedocs.io/en/latest/datasets/
