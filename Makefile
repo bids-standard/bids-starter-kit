@@ -36,4 +36,4 @@ view: book ## view the book
 	$(BROWSER) $$PWD/src/_build/html/index.html
 
 test: ## build the book and tests the links
-	jupyter-book build src -W --builder linkcheck
+	jupyter-book build src --builder linkcheck

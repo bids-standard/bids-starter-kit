@@ -4,27 +4,33 @@ root: index.md
 parts:
 - caption: Folders and files
   chapters:
-  - file: Folders
-    url: https://bids-website.readthedocs.io/en/latest/starter_kit/src/folders_and_files/folders.html
-  - file: Filenames
-    url: https://bids-website.readthedocs.io/en/latest/starter_kit/src/folders_and_files/files.html
-  - file: Metadata and file formats
-    url: https://bids-website.readthedocs.io/en/latest/starter_kit/src/folders_and_files/metadata.html
+  - title: Folders
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html
+  - title: Filenames
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html
+  - title: Metadata and file formats
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html
   - title: BIDS files templates
     url: https://github.com/bids-standard/bids-starter-kit/tree/main/templates
-  - file: Derivatives
-    url: https://bids-website.readthedocs.io/en/latest/starter_kit/src/folders_and_files/derivatives.html
+  - title: Derivatives
+    url: https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html
 - caption: Tutorials
   chapters:
-  - file: tutorials/annotation.md
-  - file: tutorials/ieeg.md
-  - file: tutorials/asl.md
-  - file: tutorials/pet.md
-  - file: tutorials/mri.md
-  - file: tutorials/tutorials.md
+  - title: Annotating a BIDS dataset
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html
+  - title: iEEG data conversion
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html 
+  - title: ASL data conversion
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html
+  - title: PET data conversion
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html
+  - title: MRI data conversion
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html
+  - title: Tutorials
+    url: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html
 - caption: Resources
   chapters:
-  - file: Dataset examples
+  - title: Dataset examples
     url: https://bids-website.readthedocs.io/en/latest/datasets/
   - title: Talks
     url: https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html

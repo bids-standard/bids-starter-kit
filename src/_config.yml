@@ -54,7 +54,7 @@ html:
   announcement: |
     <div style="display: flex: flex-direction: column; text-align: center">
       <h3>
-        The Starter-kit has movedd to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+        The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
       </h3>
       <p style="text-align: center">Go and check it out and let us know what you think.</p>
     </div>
@@ -77,6 +77,8 @@ sphinx:
   - sphinxcontrib.bibtex
   - IPython.sphinxext.ipython_console_highlighting
   config:
+    bibtex_bibfiles:
+    - references.bib
     linkcheck_ignore:
     - .*/10.1186/s13742-016-0121-x    # for some reason, it returns forbidden
     - .*/10.1093/gigascience/giy082    # for some reason, it returns forbidden
