@@ -92,23 +92,23 @@ sphinx:
     - myst.domains    # domain method not implemented for `cite`
     
     redirects:
-      contact.md: https://bids-website.readthedocs.io/en/latest/contact/
-      dataset_examples.md: https://bids-website.readthedocs.io/en/latest/datasets/
-      folders_and_files/folders.md: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html
-      folders_and_files/files.md: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html
-      folders_and_files/metadata.md: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html
-      folders_and_files/derivatives.md: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/derivatives.html
-      tutorials/annotations.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html
-      tutorials/ieeg.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html 
-      tutorials/asl.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html
-      tutorials/pet.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html
-      tutorials/mri.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html
-      tutorials/tutorials.md: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html
-      datasets.md: https://bids-website.readthedocs.io/en/latest/datasets/
-      talks.md: https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html
-      publications.md: https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html
-      dependencies.md: https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html
+      contact: https://bids-website.readthedocs.io/en/latest/contact/
+      dataset_examples: https://bids-website.readthedocs.io/en/latest/datasets/
+      folders_and_files/folders: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html
+      folders_and_files/files: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html
+      folders_and_files/metadata: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html
+      folders_and_files/derivatives: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/derivatives.html
+      tutorials/annotations: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html
+      tutorials/ieeg: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html 
+      tutorials/asl: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html
+      tutorials/pet: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html
+      tutorials/mri: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html
+      tutorials/tutorials: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html
+      datasets: https://bids-website.readthedocs.io/en/latest/datasets/
+      talks: https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html
+      publications: https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html
+      dependencies: https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html
       links: https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html
-      FAQ.md: https://bids-website.readthedocs.io/en/latest/faq/
-      validator.md: https://bids-website.readthedocs.io/en/latest/tools/validator.html
-      glossary.md: https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html
+      FAQ: https://bids-website.readthedocs.io/en/latest/faq/
+      validator: https://bids-website.readthedocs.io/en/latest/tools/validator.html
+      glossary: https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html
