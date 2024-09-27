@@ -5,7 +5,7 @@
 The point of this starter kit is to **welcome new users and contributors to the BIDS community**.
 We hope that these guidelines are designed to make it as easy as possible to get involved.
 If you have any questions that aren't discussed below,
-please let us know through one of the many ways to [get in touch](./contact.md).
+please let us know through one of the many ways to [get in touch](https://bids-website.readthedocs.io/en/latest/contact/).
 
 ## Joining the community
 
@@ -23,7 +23,7 @@ It's THAT easy! Welcome! 🙌 😂
 
 ## Get in touch
 
-See out [contact page](contact.md) for all the ways to get in touch.
+See out [contact page](https://bids-website.readthedocs.io/en/latest/contact/) for all the ways to get in touch.
 
 ## Contributing through GitHub
 
@@ -55,7 +55,7 @@ The list of labels for current issues can be found
 -   [![Question](https://img.shields.io/badge/-question-cc317c.svg)][labels-question]
     _These issues contain a question that you'd like to have answered._
 
-    There are [lots of ways to ask questions](./contact.md)
+    There are [lots of ways to ask questions](https://bids-website.readthedocs.io/en/latest/contact/)
     but opening an issue is a great way to start a conversation and get your answer.
 
 -   [![good-first-issue](https://img.shields.io/badge/-good%20first%20issue-1b3487.svg)][labels-firstissue]
@@ -133,7 +133,7 @@ We appreciate all contributions to the BIDS Starter Kit.
 
 **THANK YOU** for helping us build this useful resource. ✨ 🌟 💫
 
-If you're updating the [code](./#code) or the [templates](#templates),
+If you're updating the [code](#code) or the [templates](#templates),
 the following steps are a guide to help you contribute in a way that will be easy
 for everyone to review and accept with ease 😎.
 
