@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ASL data conversion &#8212; BIDS starter kit</title>
+    <title>&lt;no title&gt; &#8212; BIDS starter kit</title>
   
   
   
@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=a4f16d0d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +51,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
@@ -78,8 +76,6 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PET data conversion" href="pet.html" />
-    <link rel="prev" title="iEEG data conversion" href="ieeg.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,6 +127,15 @@
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><div style="display: flex: flex-direction: column; text-align: center">
+  <h3>
+    The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+  </h3>
+  <p style="text-align: center">Go and check it out and let us know what you think.</p>
+</div>
+</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -141,6 +146,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -171,8 +178,8 @@
       
     
     
-    <img src="../_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
-    <script>document.write(`<img src="../_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
+    <img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
+    <script>document.write(`<img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
   
   
 </a></div>
@@ -193,43 +200,41 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    Welcome to the BIDS Starter Kit
+                    Getting started with BIDS
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Folders and files</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../folders_and_files/folders.html">Folders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../folders_and_files/files.html">Filenames</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../folders_and_files/metadata.html">Metadata and file formats</a></li>
-
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html">Folders</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html">Filenames</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html">Metadata and file formats</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS files templates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../folders_and_files/derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html">Derivatives</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="annotation.html">Annotating a BIDS dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ieeg.html">iEEG data conversion</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">ASL data conversion</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="pet.html">PET data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mri.html">MRI data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html">Annotating a BIDS dataset</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html">iEEG data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html">ASL data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html">PET data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html">MRI data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html">Tutorials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../dataset_examples.html">BIDS data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../talks.html">Talks and slides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dependencies.html">BIDS Dependencies List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../links.html">Links and resources</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/datasets/">Dataset examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html">Talks</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html">Links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../validator.html">BIDS validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">BIDS jargon busting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/faq/">FAQ</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/tools/validator.html">Validator</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
@@ -273,70 +278,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/tutorials/asl.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ftutorials/asl.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -434,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ASL data conversion</h1>
+    <h1><no title></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -443,17 +384,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ASL data conversion</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling">Scaling</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ge">GE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#philips">Philips</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#siemens">Siemens</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pixdim">PIXDIM</a></li>
-</ul>
-</li>
-</ul>
-</li>
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
 
             </nav>
@@ -466,76 +397,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="asl-data-conversion">
-<h1>ASL data conversion<a class="headerlink" href="#asl-data-conversion" title="Link to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="scaling">
-<h1>Scaling<a class="headerlink" href="#scaling" title="Link to this heading">#</a></h1>
-<p>This paragraph discusses the specific scaling issues for GE, Philips, and Siemens.
-Beware that these issues are occurring
-at the time of the release of <a class="reference external" href="https://bids-specification.readthedocs.io/en/v1.5.0/">version 1.5.0</a>,
-and might be resolved in the future.</p>
-<section id="ge">
-<h2>GE<a class="headerlink" href="#ge" title="Link to this heading">#</a></h2>
-<p>GE applies an RF amplifier factor that should be multiplied
-by the number of signal averages (NSA) as GE sums instead of averages them.</p>
-</section>
-<section id="philips">
-<h2>Philips<a class="headerlink" href="#philips" title="Link to this heading">#</a></h2>
-<p>Typically, Philips ASL datasets use the standard DICOM rescale tags only
-to rescale data for viewing, whereas private rescale tags are used for scaling
-to acquisition values needed for proper quantification.</p>
-<p>The procedure for using both the scaling types is described previously [<strong>reference required</strong>],
-although the authors did not mention that three DICOM fields are typically used for this purpose</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">100e)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code></p></li>
-<li><p>or <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code>.</p></li>
-</ul>
-<p>It may also occur that the RescaleSlope <code class="docutils literal notranslate"><span class="pre">(0028,</span> <span class="pre">1053)</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1</span></code>
-and RescaleSlopeOriginal <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">140a)</span></code> needs to be used instead.
-Note that DICOM to NIfTI conversion software may omit the private slopes,
-in which cases the private slope needs to be applied after running the conversion.</p>
-<p>An exception is the <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> software
-that does take private scale slopes into account in most cases.
-The <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> versions released between 2018 and 2019-09-02
-can correctly scale the NIfTI according to the private scale slopes</p>
-<ul class="simple">
-<li><p>if run with parameter <code class="docutils literal notranslate"><span class="pre">-p</span></code> - and indicates this by setting <code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code>
-in the accompanying json file.</p></li>
-</ul>
-<p>Two exceptions apply, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a>
-does not support DICOM tags <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">110e)</span></code> and <code class="docutils literal notranslate"><span class="pre">(2005,</span> <span class="pre">120e)</span></code>
-that still need to be read and applied additionally.
-Furthermore, the field RealWorldValueSlope <code class="docutils literal notranslate"><span class="pre">(0040,9225)</span></code> is sometimes provided
-as an alternative to RescaleSlope <code class="docutils literal notranslate"><span class="pre">(0028,1053)</span></code>.
-In this case, <a class="reference external" href="https://github.com/rordenlab/dcm2niix">dcm2nii(X)</a> outputs a field <code class="docutils literal notranslate"><span class="pre">PhilipsRWVSlope</span></code>
-and sets <code class="docutils literal notranslate"><span class="pre">UsePhilipsFloatNotDisplayScaling==1</span></code>.
-This is deceiving because the standard RescaleSlope is applied
-instead of private-field scale slopes and this still needs to be corrected manually.</p>
-<p>Note that this last-mentioned behavior is corrected in the newest dcm2nii version
-and general caution is recommended when dealing with Philips scale slopes.
-Also, Philips has recently implemented the option to apply these scaling factors upon export.
-The scaling of acquired/reconstructed ASL images may differ between control, label, and M0 images.</p>
-</section>
-<section id="siemens">
-<h2>Siemens<a class="headerlink" href="#siemens" title="Link to this heading">#</a></h2>
-<p>Several implementations of Siemens ASL WIP have a scaling between ASL and M0.
-This can be only modified and obtained at the scanner console and it is set to <code class="docutils literal notranslate"><span class="pre">10</span></code> by default.</p>
-<section id="pixdim">
-<h3>PIXDIM<a class="headerlink" href="#pixdim" title="Link to this heading">#</a></h3>
-<p>The so-called PIXDIM error appears to be specific for files with a single repetition,
-more specifically the separately acquired <code class="docutils literal notranslate"><span class="pre">m0scan</span></code>.
-In the NIfTI header, <code class="docutils literal notranslate"><span class="pre">dim[0]</span></code> defines the number of dimensions, <code class="docutils literal notranslate"><span class="pre">dim[i]</span></code>
-defines the length of the i’th dimension, <code class="docutils literal notranslate"><span class="pre">pixdim[i]</span></code> specifies the voxel width along dimension <code class="docutils literal notranslate"><span class="pre">i</span></code>.
-For images with a single repetition, where <code class="docutils literal notranslate"><span class="pre">pixdim[4]</span></code> specifies the temporal width,
-the BIDS validator requires that the image is defined as 4D with <code class="docutils literal notranslate"><span class="pre">dim[0]</span> <span class="pre">==</span> <span class="pre">4</span></code>,
-even though the image has a single repetition <code class="docutils literal notranslate"><span class="pre">dim[4]</span> <span class="pre">==</span> <span class="pre">1</span></code>.
-Defining (<code class="docutils literal notranslate"><span class="pre">dim[0]</span> <span class="pre">==</span> <span class="pre">3</span></code>) for a 44D volume with a single repetition
-(for instance: a 3D image) is common and correct, however, it is considered invalid by the validator.</p>
-</section>
-</section>
-</section>
+  <p>Moved <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html">here</a></p>
 
     <script type="text/x-thebe-config">
     {
@@ -567,24 +429,6 @@ Defining (<code class="docutils literal notranslate"><span class="pre">dim[0]</s
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="ieeg.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">iEEG data conversion</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="pet.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">PET data conversion</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -600,17 +444,7 @@ Defining (<code class="docutils literal notranslate"><span class="pre">dim[0]</s
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ASL data conversion</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling">Scaling</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ge">GE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#philips">Philips</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#siemens">Siemens</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pixdim">PIXDIM</a></li>
-</ul>
-</li>
-</ul>
-</li>
+    <ul class="simple visible nav section-nav flex-column">
 </ul>
 
   </nav></div>
@@ -633,13 +467,6 @@ By The BIDS community
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2021-2024.
-      <br/>
-    
-  </p>
 
   </div>
   

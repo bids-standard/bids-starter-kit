@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=a4f16d0d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +51,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
@@ -78,8 +76,6 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="BIDS validation" href="validator.html" />
-    <link rel="prev" title="Links and resources" href="links.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,6 +127,15 @@
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><div style="display: flex: flex-direction: column; text-align: center">
+  <h3>
+    The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+  </h3>
+  <p style="text-align: center">Go and check it out and let us know what you think.</p>
+</div>
+</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -141,6 +146,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -171,8 +178,8 @@
       
     
     
-    <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
-    <script>document.write(`<img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
+    <img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
+    <script>document.write(`<img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
   
   
 </a></div>
@@ -193,43 +200,41 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Welcome to the BIDS Starter Kit
+                    Getting started with BIDS
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Folders and files</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/folders.html">Folders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/files.html">Filenames</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/metadata.html">Metadata and file formats</a></li>
-
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html">Folders</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html">Filenames</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html">Metadata and file formats</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS files templates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html">Derivatives</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tutorials/annotation.html">Annotating a BIDS dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/ieeg.html">iEEG data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/asl.html">ASL data conversion</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="tutorials/pet.html">PET data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/mri.html">MRI data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html">Annotating a BIDS dataset</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html">iEEG data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html">ASL data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html">PET data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html">MRI data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html">Tutorials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="dataset_examples.html">BIDS data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="talks.html">Talks and slides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dependencies.html">BIDS Dependencies List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="links.html">Links and resources</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/datasets/">Dataset examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html">Talks</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html">Links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Others</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="validator.html">BIDS validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">BIDS jargon busting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/faq/">FAQ</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/tools/validator.html">Validator</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
@@ -273,70 +278,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/FAQ.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2FFAQ.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -421,9 +362,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -439,41 +378,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">EEG: How to format Hardware and Software filter fields in a .json?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb">General: Can I combine BIDS and neurodata without border (NWB)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-can-i-cite-bids">General: How can I cite BIDS?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-do-i-convert-my-data-to-bids">General: How do I convert my data to BIDS?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-should-i-organize-data-for-hyperscanning-data">General: How should I organize data for hyperscanning data?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-import-excel-files-to-tsv-file">General: How to import Excel files to TSV file?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-specify-the-micro-sign-in-matlab">General: How to specify the micro sign in MATLAB?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-only-have-nifti-files-and-no-dicom-can-i-still-create-a-bids-dataset">General: I only have nifti files and no dicom. Can I still create a BIDS dataset?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regarding-the-missing-json-files">Regarding the “missing” JSON files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">General: Is there a machine readable version of the BIDS specification?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">General: Is your data type not covered in the current BIDS specification?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">raw</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">derivative</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">metadata</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">file format</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-does-this-word-mean">General: What does [this word] mean?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-is-a-json-file">General: What is a <code class="docutils literal notranslate"><span class="pre">json</span></code> file?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-liense-should-i-choose-for-my-dataset">General: What liense should I choose for my dataset?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-what-defacing-tools-can-i-use">MRI: What defacing tools can I use?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotype-how-can-i-store-subject-phenotypic-data">Phenotype: How can I store subject phenotypic data?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes">Phenotype: Is there a standard for epilepsy phenotypes?</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -485,368 +389,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="frequently-asked-questions">
 <h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading">#</a></h1>
-<p>As this starter-kit grows it gets harder to know where to find information,
-so this page is a collection of frequently asked questions.</p>
-<p>Please add to this list!</p>
-<p>It will always be 🚧 <strong>in construction</strong> 🚧
-and we really encourage everyone to update it to be more useful.
-If there’s a question you’ve asked or answered more than twice
-then it’s an FAQ and it should be in the repository.</p>
-<p>Ideally the questions will link to an answer elsewhere in the repository
-to maximise the different ways of finding out more about BIDS.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For questions related to the BIDS apps,
-please visit <a class="reference external" href="https://bids-apps.neuroimaging.io/dev_faq/">the BIDS apps website</a>.</p>
-</div>
-<hr class="docutils" />
-<!-- the section below is automatically generated.
-
-If you want to modify the questions:
-- please edit the files in the `src/questions` folder.
-- run `faqtory build` from the root of the repository.
-
--->
-<section id="eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">
-<h2>EEG: How to format Hardware and Software filter fields in a .json?<a class="headerlink" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json" title="Link to this heading">#</a></h2>
-<p>In the modality specific sidecar file <code class="docutils literal notranslate"><span class="pre">_eeg.json</span></code>, we can specify the software
-and hardware filters that were applied during the collection or processing of the data.
-Generally, there are two accepted formats for that:</p>
-<ol class="arabic simple">
-<li><p>a string containing <code class="docutils literal notranslate"><span class="pre">&quot;n/a&quot;</span></code>, to show that no filter was used or the
-information on the filter is not available.</p></li>
-<li><p>a json object containing one object per filter. This filter-specific object
-contains key-value pairs to describe filter parameters. As per BIDS, all
-frequencies SHOULD be in Hz. For example a single hardware filter could be
-specified as:</p></li>
-</ol>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HardwareFilters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;HighpassFilter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;CutoffFrequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">}}</span>
-</pre></div>
-</div>
-<p>For a formatted example on how to deal with this in the BIDS context, please see
-this
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/blob/main/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-FilterExample_eeg.json">template</a>.</p>
-</section>
-<section id="eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">
-<h2>EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?<a class="headerlink" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme" title="Link to this heading">#</a></h2>
-<p>Reference and ground electrodes for EEG data can usually be specified
-using the <code class="docutils literal notranslate"><span class="pre">EEGReference</span></code> and <code class="docutils literal notranslate"><span class="pre">EEGGround</span></code> fields
-in the modality specific sidecar file <code class="docutils literal notranslate"><span class="pre">_eeg.json</span></code>.
-Both fields accept a string value such as <code class="docutils literal notranslate"><span class="pre">&quot;Placed</span> <span class="pre">on</span> <span class="pre">Cz&quot;</span></code>.</p>
-<p>However, some manufacturers use special referencing schemes
-such as the combination of a “Common Mode Sense” (CMS) and a “Driven Right Leg” (DRL) electrode.
-This is the case for Biosemi, as further documented on
-<a class="reference external" href="https://www.biosemi.com/faq/cms&amp;amp;drl.htm">their website</a>.</p>
-<p>For a formatted example on how to deal with this in the BIDS context,
-please see this
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/blob/main/templates/sub-01/ses-01/eeg/sub-01_ses-01_task-ReferenceExample_eeg.json">template</a>.</p>
-</section>
-<section id="general-can-i-combine-bids-and-neurodata-without-border-nwb">
-<h2>General: Can I combine BIDS and neurodata without border (NWB)?<a class="headerlink" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb" title="Link to this heading">#</a></h2>
-<p>BIDS and <a class="reference external" href="https://www.nwb.org/">NWB</a> are compatible.</p>
-<p>An NWB data file is an allowed format in the iEEG-BIDS data structure.
-This means that one subject (AAA) with a session (BBB)
-can have a BIDS folder with raw iEEG data in NWB format:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="n">AAA</span><span class="o">/</span><span class="n">ses</span><span class="o">-</span><span class="n">BBB</span><span class="o">/</span><span class="n">ieeg</span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="n">AAA_ses</span><span class="o">-</span><span class="n">BBB_task</span><span class="o">-</span><span class="n">rest_ieeg</span><span class="o">.</span><span class="n">nwb</span>
-</pre></div>
-</div>
-<p>The same subject can have another session (CCC) with raw fMRI data in BIDS:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="n">AAA</span><span class="o">/</span><span class="n">ses</span><span class="o">-</span><span class="n">CCC</span><span class="o">/</span><span class="n">func</span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="n">AAA_ses</span><span class="o">-</span><span class="n">CCC_task</span><span class="o">-</span><span class="n">rest_bold</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
-</pre></div>
-</div>
-</section>
-<section id="general-how-can-i-cite-bids">
-<h2>General: How can I cite BIDS?<a class="headerlink" href="#general-how-can-i-cite-bids" title="Link to this heading">#</a></h2>
-<p>See the specification website for the
-<a class="reference external" href="https://bids-specification.readthedocs.io/en/latest/01-introduction.html#citing-bids">main publications</a>
-related to BIDS and its extensions.</p>
-<p>BIDS references are centralized in a <a class="reference external" href="https://www.zotero.org/groups/5111637/bids">zotero group</a>.</p>
-</section>
-<section id="general-how-do-i-convert-my-data-to-bids">
-<h2>General: How do I convert my data to BIDS?<a class="headerlink" href="#general-how-do-i-convert-my-data-to-bids" title="Link to this heading">#</a></h2>
-<p>We strongly recommend you pick a BIDS converter to help you convert your data.</p>
-<p>A list of converters can be found <a class="reference external" href="https://bids.neuroimaging.io/benefits.html#converters">on the BIDS website</a></p>
-<p>Also look at <a class="reference internal" href="tutorials/tutorials.html"><span class="std std-doc">the list of tutorials and information about conversions</span></a>.</p>
-</section>
-<section id="general-how-should-i-organize-data-for-hyperscanning-data">
-<h2>General: How should I organize data for hyperscanning data?<a class="headerlink" href="#general-how-should-i-organize-data-for-hyperscanning-data" title="Link to this heading">#</a></h2>
-<p>Hyperscanning is simultaneous fMRI with multiple subjects (see this <a class="reference external" href="https://doi.org/10.1006/nimg.2002.1150">paper</a>).</p>
-<ul class="simple">
-<li><p>See this <a class="reference external" href="https://github.com/bids-standard/bids-specification/issues/402">issue</a>
-in the bids specification repository for typical hyperscanning data.</p></li>
-</ul>
-<p>See an example below with fMRI data:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span>
-    <span class="n">ses</span><span class="o">-</span><span class="n">dyadic1</span><span class="o">/</span>
-        <span class="n">func</span><span class="o">/</span>
-            <span class="n">sub</span><span class="o">-</span><span class="mi">01</span><span class="n">_ses</span><span class="o">-</span><span class="n">dyadic1_</span><span class="o">*</span>
-<span class="n">sub</span><span class="o">-</span><span class="mi">02</span><span class="o">/</span>
-    <span class="n">ses</span><span class="o">-</span><span class="n">dyadic1</span><span class="o">/</span>
-        <span class="n">func</span><span class="o">/</span>
-            <span class="n">sub</span><span class="o">-</span><span class="mi">02</span><span class="n">_ses</span><span class="o">-</span><span class="n">dyadic1_</span><span class="o">*</span>
-<span class="n">sub</span><span class="o">-</span><span class="mi">03</span><span class="o">/</span>
-    <span class="n">ses</span><span class="o">-</span><span class="n">dyadic2</span><span class="o">/</span>
-        <span class="n">func</span><span class="o">/</span>
-            <span class="n">sub</span><span class="o">-</span><span class="mi">03</span><span class="n">_ses</span><span class="o">-</span><span class="n">dyadic2_</span><span class="o">*</span>
-<span class="n">sub</span><span class="o">-</span><span class="mi">04</span><span class="o">/</span>
-    <span class="n">ses</span><span class="o">-</span><span class="n">dyadic2</span><span class="o">/</span>
-        <span class="n">func</span><span class="o">/</span>
-            <span class="n">sub</span><span class="o">-</span><span class="mi">04</span><span class="n">_ses</span><span class="o">-</span><span class="n">dyadic2_</span><span class="o">*</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>See this <a class="reference external" href="https://neurostars.org/t/bids-structure-for-longitudinal-dyadic-data/26173">post on neurostars</a>
-for hyperscanning longitunal data.</p></li>
-</ul>
-<p>See an example below with fMRI data:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="n">S001</span><span class="o">/</span>
-    <span class="n">ses</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span>
-        <span class="n">func</span><span class="o">/</span>
-            <span class="n">sub</span><span class="o">-</span><span class="n">S001_ses</span><span class="o">-</span><span class="mi">1</span><span class="n">_task</span><span class="o">-</span><span class="n">video_acq</span><span class="o">-</span><span class="n">dyad001_bold</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
-    <span class="n">ses</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span>
-<span class="n">sub</span><span class="o">-</span><span class="n">S002</span><span class="o">/</span>
-    <span class="n">ses</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span>
-        <span class="n">func</span><span class="o">/</span>
-            <span class="n">sub</span><span class="o">-</span><span class="n">S002_ses</span><span class="o">-</span><span class="mi">1</span><span class="n">_task</span><span class="o">-</span><span class="n">video_acq</span><span class="o">-</span><span class="n">dyad001_bold</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
-    <span class="n">ses</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span>
-<span class="n">sub</span><span class="o">-</span><span class="n">S003</span><span class="o">/</span>
-    <span class="n">ses</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span>
-        <span class="n">func</span><span class="o">/</span>
-            <span class="n">sub</span><span class="o">-</span><span class="n">S003_ses</span><span class="o">-</span><span class="mi">1</span><span class="n">_task</span><span class="o">-</span><span class="n">video_acq</span><span class="o">-</span><span class="n">dyad002_bold</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
-    <span class="n">ses</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>See this <a class="reference external" href="https://groups.google.com/g/bids-discussion/c/v660DuzOf3w/m/q-0PLHt5BgAJ">thread on the bids discussion forum</a></p></li>
-</ul>
-</section>
-<section id="general-how-to-import-excel-files-to-tsv-file">
-<h2>General: How to import Excel files to TSV file?<a class="headerlink" href="#general-how-to-import-excel-files-to-tsv-file" title="Link to this heading">#</a></h2>
-<p>See <a class="reference internal" href="folders_and_files/metadata.html#tsv-files"><span class="std std-ref">our sections on TSV files</span></a> for more information.</p>
-<p>See also this bids tool to import and export a <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code> file:
-<a class="reference external" href="https://github.com/sccn/bids-matlab-tools/blob/master/bids_spreadsheet2participants.m">bids-matlab-tools</a></p>
-</section>
-<section id="general-how-to-specify-the-micro-sign-in-matlab">
-<h2>General: How to specify the micro sign in MATLAB?<a class="headerlink" href="#general-how-to-specify-the-micro-sign-in-matlab" title="Link to this heading">#</a></h2>
-<p>BIDS requires physical units to be specified according to the SI unit symbol and
-possibly prefix symbol (for example: mV, μV for milliVolt and microVolt).</p>
-<p>The symbol used to indicate <code class="docutils literal notranslate"><span class="pre">µ</span></code> has unicode U+00B5, which is in MATLAB:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">char</span><span class="p">(</span><span class="mi">181</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>or</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">native2unicode</span><span class="p">(</span><span class="mi">181</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;latin1&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">
-<h2>General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?<a class="headerlink" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant" title="Link to this heading">#</a></h2>
-<p id="faq-session">No. The <code class="docutils literal notranslate"><span class="pre">session</span></code> level in the BIDS folder hierarchy can be used to group data
-that go “logically” together: this means that you can put in the same <code class="docutils literal notranslate"><span class="pre">session</span></code> folder
-data that were acquired on different days,
-but that are “linked” to one another in a way that make sense to how you want to organize your data.</p>
-<p>If you want to keep track of what data was acquired when you can use the
-<a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#scans-file"><code class="docutils literal notranslate"><span class="pre">scans.tsv</span></code> files</a>.</p>
-<p>For some examples, see this
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/issues/193">issue in the bids-starter kit</a>.</p>
-<p>If you deal with EEG data, you may want to read this
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/issues/265#issuecomment-1082240834">comment in another issue</a>
-as well before considering combining recordings acquired on different occasions
-within the same <code class="docutils literal notranslate"><span class="pre">session</span></code> folder.</p>
-</section>
-<section id="general-i-only-have-nifti-files-and-no-dicom-can-i-still-create-a-bids-dataset">
-<h2>General: I only have nifti files and no dicom. Can I still create a BIDS dataset?<a class="headerlink" href="#general-i-only-have-nifti-files-and-no-dicom-can-i-still-create-a-bids-dataset" title="Link to this heading">#</a></h2>
-<p>In theory yes, but it is possible that you will be missing some metadata that is required by the BIDS specification.</p>
-<p>A couple of BIDS converters can work with nifti files:</p>
-<ul class="simple">
-<li><p>bidscoin</p></li>
-<li><p>bidsme</p></li>
-<li><p>explore asl</p></li>
-<li><p>data2bids</p></li>
-</ul>
-<p>See the list of converters <a class="reference external" href="https://bids.neuroimaging.io/benefits.html#mri-and-pet-converters">here</a>.</p>
-<p><strong>However</strong>…</p>
-<ul class="simple">
-<li><p>They may not work with the datatype you have
-(for example not sure that explore ASL can deal with <code class="docutils literal notranslate"><span class="pre">func</span></code> data).</p></li>
-<li><p>Many of them still expect that you have a json side car for each nifti
-(BIDSme for example - from the top of my head).</p></li>
-<li><p>They may expect a certain input structure to work efficiently,
-so we may have to move files around.</p></li>
-</ul>
-<!-- Not played with it but, from the README, data2bids sounds pretty flexible
-but may require you to play with python and json files for configuration.
-
-https://github.com/SIMEXP/Data2Bids -->
-<section id="regarding-the-missing-json-files">
-<h3>Regarding the “missing” JSON files<a class="headerlink" href="#regarding-the-missing-json-files" title="Link to this heading">#</a></h3>
-<p>Depending on the datatype you are dealing with this can be more of less annoying.</p>
-<p>2 examples:</p>
-<p>For the most typical <code class="docutils literal notranslate"><span class="pre">anat</span></code> files,
-they don’t have any REQUIRED metadata,
-so you could have just the data files without any accompanying JSON.
-If you get into more exotic anat files (like for quantitative MRI)
-then this may become a problem.</p>
-<p>For <code class="docutils literal notranslate"><span class="pre">func</span></code> files you only need <code class="docutils literal notranslate"><span class="pre">TaskName</span></code> and <code class="docutils literal notranslate"><span class="pre">RepetitionTime</span></code>
-and the former you can decide what it is and the latter should be in the Nifti header.
-So you should be OKish there too.</p>
-<p>Obviously you will be missing some metadata that would be required
-for some type of preprocessing (like slice timing info).</p>
-</section>
-<section id="tips">
-<h3>Tips<a class="headerlink" href="#tips" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>If you have the PDF with the details of acquisition sequence or a method section
-from a paper with that data, you could “recover” some extra metadata.</p></li>
-<li><p>SPM dicom import tool usually leaves a couple of metadata in a description field of the nifti header.
-That can be a problem for data anonymisation but may help you in your case if this is the tool that was used.
-See an example <a class="reference external" href="https://github.com/PeerHerholz/BIDSonym/issues/41#issue-768636869">here</a></p></li>
-<li><p>If you have to script tings manually rather than using a converter,
-remember to use pybids <a class="reference external" href="https://bids-standard.github.io/pybids/examples/pybids_tutorial.html#path-construction">path construction tools</a> or the <a class="reference external" href="https://github.com/bids-standard/bids-matlab/blob/master/examples/03_BIDS-Matlab_filenames_and_metadata.ipynb">bids matlab equivalent</a> to make your life easier when constructing bids valid filenames.</p></li>
-</ul>
-</section>
-</section>
-<section id="general-is-there-a-machine-readable-version-of-the-bids-specification">
-<h2>General: Is there a machine readable version of the BIDS specification?<a class="headerlink" href="#general-is-there-a-machine-readable-version-of-the-bids-specification" title="Link to this heading">#</a></h2>
-<p>Yes. The BIDS specification exist as a schema.
-The BIDS schema is a machine readable representation of the BIDS Standard.
-It is (by and large) the BIDS Specification, but written in a declarative form.</p>
-<p>The BIDS schema is available in two machine readable formats:</p>
-<ul class="simple">
-<li><p>as a set of <a class="reference external" href="https://en.wikipedia.org/wiki/YAML">YAML</a> files in the <a class="reference external" href="https://github.com/bids-standard/bids-specification/src/schema">BIDS specification repository</a></p></li>
-<li><p>as a <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/schema.json">single json file</a></p></li>
-</ul>
-<p>A light-weight introduction to the schema can be found <a class="reference external" href="https://bids-extensions.readthedocs.io/en/latest/schema/">here</a>.</p>
-<p>A full description of the schema can be found on this <a class="reference external" href="https://bidsschematools.readthedocs.io/en/latest/?badge=latest">website</a>
-where you will also find the documentation for the python package
-to interact with the schema, <a class="reference external" href="https://pypi.org/project/bidsschematools/">bidsschematools</a>.</p>
-</section>
-<section id="general-is-your-data-type-not-covered-in-the-current-bids-specification">
-<h2>General: Is your data type not covered in the current BIDS specification?<a class="headerlink" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification" title="Link to this heading">#</a></h2>
-<p>BIDS extensions proposals <a class="reference external" href="https://bids.neuroimaging.io/get_involved.html#extending-the-bids-specification">(BEPs)</a>
-aim to extend the BIDS specification to new data types.
-A list of extensions proposals can be found below.</p>
-<p>Guidelines for contributing to these extensions or starting your own can be found
-in the <a class="reference external" href="https://bids-extensions.readthedocs.io/en/latest/">BIDS Extension Proposals Guide</a>.</p>
-<p>If only part of your data is covered under BIDS, an option to allow additional files
-currently not covered in BIDS to pass the validator is
-the <a class="reference external" href="https://github.com/bids-standard/bids-validator/blob/master/bids-validator/README.md">.bidsignore</a> file,
-which works just like <a class="reference external" href="https://git-scm.com/docs/gitignore">.gitignore</a>.
-It allows you to list all the files (or directories, with wildcards)
-that are not BIDS compliant and should be ignored by the validator.
-Of course you should still try to adhere to upcoming BEPs
-and the general BIDS philosophy for file names and metadata where possible,
-but this gives a little extra flexibility.</p>
-<!-- TEMPLATE STARTS -->
-<section id="raw">
-<h3>raw<a class="headerlink" href="#raw" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>BEP004: <a class="reference external" href="https://bids.neuroimaging.io/bep004">Susceptibility Weighted Imaging (SWI)</a></p></li>
-<li><p>BEP020: <a class="reference external" href="https://bids.neuroimaging.io/bep020">Eye Tracking including Gaze Position and Pupil Size</a></p></li>
-<li><p>BEP022: <a class="reference external" href="https://bids.neuroimaging.io/bep022">Magnetic Resonance Spectroscopy (MRS)</a></p></li>
-<li><p>BEP024: <a class="reference external" href="https://bids.neuroimaging.io/bep024">Computed Tomography scan (CT)</a></p></li>
-<li><p>BEP026: <a class="reference external" href="https://bids.neuroimaging.io/bep026">Microelectrode Recordings</a></p></li>
-<li><p>BEP032: <a class="reference external" href="https://bids.neuroimaging.io/bep032">Animal electrophysiology</a></p></li>
-<li><p>BEP033: <a class="reference external" href="https://bids.neuroimaging.io/bep033">Advanced Diffusion Weighted Imaging (aDWI)</a></p></li>
-<li><p>BEP036: <a class="reference external" href="https://bids.neuroimaging.io/bep036">Phenotypic Data Guidelines</a></p></li>
-<li><p>BEP037: <a class="reference external" href="https://bids.neuroimaging.io/bep037">Non-Invasive Brain Stimulation (NIBS)</a></p></li>
-<li><p>BEP038: <a class="reference external" href="https://bids.neuroimaging.io/bep038">Atlases</a></p></li>
-<li><p>BEP039: <a class="reference external" href="https://bids.neuroimaging.io/bep039">Dimensionality reduction-based networks</a></p></li>
-<li><p>BEP040: <a class="reference external" href="https://bids.neuroimaging.io/bep040">Functional Ultrasound (fUS)</a></p></li>
-<li><p>BEP042: <a class="reference external" href="https://bids.neuroimaging.io/bep042">Electromyography (EMG)</a></p></li>
-</ul>
-</section>
-<section id="derivative">
-<h3>derivative<a class="headerlink" href="#derivative" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>BEP011: <a class="reference external" href="https://bids.neuroimaging.io/bep011">Structural preprocessing derivatives</a></p></li>
-<li><p>BEP012: <a class="reference external" href="https://bids.neuroimaging.io/bep012">Functional preprocessing derivatives</a></p></li>
-<li><p>BEP014: <a class="reference external" href="https://bids.neuroimaging.io/bep014">Affine transformations and nonlinear field warps</a></p></li>
-<li><p>BEP016: <a class="reference external" href="https://bids.neuroimaging.io/bep016">Diffusion weighted imaging derivatives</a></p></li>
-<li><p>BEP017: <a class="reference external" href="https://bids.neuroimaging.io/bep017">Generic BIDS connectivity data schema</a></p></li>
-<li><p>BEP021: <a class="reference external" href="https://bids.neuroimaging.io/bep021">Common Electrophysiological Derivatives</a></p></li>
-<li><p>BEP023: <a class="reference external" href="https://bids.neuroimaging.io/bep023">PET Preprocessing derivatives</a></p></li>
-<li><p>BEP034: <a class="reference external" href="https://bids.neuroimaging.io/bep034">Computational modeling</a></p></li>
-<li><p>BEP035: <a class="reference external" href="https://bids.neuroimaging.io/bep035">Modular extensions for individual participant data mega-analyses with non-compliant derivatives</a></p></li>
-<li><p>BEP041: <a class="reference external" href="https://bids.neuroimaging.io/bep041">Statistical Model Derivatives</a></p></li>
-</ul>
-</section>
-<section id="metadata">
-<h3>metadata<a class="headerlink" href="#metadata" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>BEP028: <a class="reference external" href="https://bids.neuroimaging.io/bep028">Provenance</a></p></li>
-<li><p>BEP034: <a class="reference external" href="https://bids.neuroimaging.io/bep034">Computational modeling</a></p></li>
-<li><p>BEP043: <a class="reference external" href="https://bids.neuroimaging.io/bep043">BIDS Term Mapping</a></p></li>
-</ul>
-</section>
-<section id="file-format">
-<h3>file format<a class="headerlink" href="#file-format" title="Link to this heading">#</a></h3>
-</section>
-</section>
-<section id="general-what-does-this-word-mean">
-<h2>General: What does [this word] mean?<a class="headerlink" href="#general-what-does-this-word-mean" title="Link to this heading">#</a></h2>
-<p>We’re building a glossary to de-jargonise some of the terms you need to know to
-work with data in BIDS format. Check it out <a class="reference internal" href="glossary.html"><span class="std std-doc">here</span></a>.</p>
-</section>
-<section id="general-what-is-a-json-file">
-<h2>General: What is a <code class="docutils literal notranslate"><span class="pre">json</span></code> file?<a class="headerlink" href="#general-what-is-a-json-file" title="Link to this heading">#</a></h2>
-<p>You can find more information about <code class="docutils literal notranslate"><span class="pre">json</span></code> (and <code class="docutils literal notranslate"><span class="pre">tsv</span></code>) files in the
-<a class="reference internal" href="folders_and_files/metadata.html#json"><span class="std std-ref">Metadata-file-formats</span></a> page.</p>
-</section>
-<section id="general-what-liense-should-i-choose-for-my-dataset">
-<h2>General: What liense should I choose for my dataset?<a class="headerlink" href="#general-what-liense-should-i-choose-for-my-dataset" title="Link to this heading">#</a></h2>
-<p>If you want to know more about what license to choose for your dataset,
-see the <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/licensing/licensing-data.html#data-licenses">turing way</a>
-page dedicated to this topic.</p>
-<p>If you plan to put your dataset on <a class="reference external" href="https://openneuro.org/">openneuro</a>,
-you should use a CC0 or a PDDL license as explained in their <a class="reference external" href="https://openneuro.org/faq">FAQ</a>.</p>
-</section>
-<section id="mri-what-defacing-tools-can-i-use">
-<h2>MRI: What defacing tools can I use?<a class="headerlink" href="#mri-what-defacing-tools-can-i-use" title="Link to this heading">#</a></h2>
-<p>If you want to share your BIDS data set, chances are that you will have to anonymize it
-and therefore prevent identification of the participants from their anatomical scans.
-You will need to de-identification (or deface) the anatomical images.
-There are several options to do that</p>
-<ul class="simple">
-<li><p>If you already have a valid BIDS data set you can simply use the
-<a class="reference external" href="https://github.com/PeerHerholz/BIDSonym">BIDSonym BIDS app</a> on it. To do
-that it relies on several tools that you can also use before you have
-finalized your BIDS data set</p>
-<ul>
-<li><p><a class="reference external" href="https://github.com/poldracklab/pydeface">Pydeface</a></p></li>
-<li><p><a class="reference external" href="https://surfer.nmr.mgh.harvard.edu/fswiki/mri_deface">MRI deface</a></p></li>
-<li><p><a class="reference external" href="https://github.com/nipy/quickshear">Quickshear</a></p></li>
-</ul>
-</li>
-</ul>
-<p>Otherwise you can also use:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://www.fieldtriptoolbox.org/faq/how_can_i_anonymize_an_anatomical_mri/">Fieldtrip</a>
-under matlab can do it.</p></li>
-<li><p>SPM8 and SPM12: when in the batch editor go to:
-<code class="docutils literal notranslate"><span class="pre">SPM</span> <span class="pre">menu</span> <span class="pre">--&gt;</span> <span class="pre">Util</span> <span class="pre">--&gt;</span> <span class="pre">Deface</span></code></p></li>
-</ul>
-</section>
-<section id="phenotype-how-can-i-store-subject-phenotypic-data">
-<h2>Phenotype: How can I store subject phenotypic data?<a class="headerlink" href="#phenotype-how-can-i-store-subject-phenotypic-data" title="Link to this heading">#</a></h2>
-<p>In the phenotype folder, according to the details provided for
-<a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#phenotypic-and-assessment-data">phenotypes</a>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bids</span><span class="o">-</span><span class="n">root</span>
-    <span class="n">phenotype</span>
-</pre></div>
-</div>
-<p>Please the see work on the <a class="reference external" href="https://bids.neuroimaging.io/bep036">BIDS extension proposal for phenotypes</a>
-for more guidelines.</p>
-</section>
-<section id="phenotype-is-there-a-standard-for-epilepsy-phenotypes">
-<h2>Phenotype: Is there a standard for epilepsy phenotypes?<a class="headerlink" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes" title="Link to this heading">#</a></h2>
-<p>Yes, open this
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/blob/main/interactiveTreeVisualization/epilepsyClassification2017/tree.html">epilepsyClassification2017</a>
-and follow the examples in the
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates/phenotype">phenotype templates</a>.</p>
-<hr>
-<p>Generated by <a class="reference external" href="https://github.com/willmcgugan/faqtory">FAQtory</a></p>
-</section>
+<p>Moved <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/faq/">here</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -879,72 +422,12 @@ and follow the examples in the
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="links.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Links and resources</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="validator.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">BIDS validation</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-how-to-format-hardware-and-software-filter-fields-in-a-json">EEG: How to format Hardware and Software filter fields in a .json?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-how-to-specify-eegreference-and-eegground-for-biosemi-referencing-scheme">EEG: How to specify EEGReference and EEGGround for Biosemi referencing scheme?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-can-i-combine-bids-and-neurodata-without-border-nwb">General: Can I combine BIDS and neurodata without border (NWB)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-can-i-cite-bids">General: How can I cite BIDS?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-do-i-convert-my-data-to-bids">General: How do I convert my data to BIDS?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-should-i-organize-data-for-hyperscanning-data">General: How should I organize data for hyperscanning data?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-import-excel-files-to-tsv-file">General: How to import Excel files to TSV file?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-how-to-specify-the-micro-sign-in-matlab">General: How to specify the micro sign in MATLAB?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-had-to-split-the-testing-of-one-of-my-participants-across-2-days-should-i-use-2-different-session-folders-to-organize-the-data-of-that-participant">General: I had to split the testing of one of my participants across 2 days, should I use 2 different session folders to organize the data of that participant?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-i-only-have-nifti-files-and-no-dicom-can-i-still-create-a-bids-dataset">General: I only have nifti files and no dicom. Can I still create a BIDS dataset?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regarding-the-missing-json-files">Regarding the “missing” JSON files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-there-a-machine-readable-version-of-the-bids-specification">General: Is there a machine readable version of the BIDS specification?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-is-your-data-type-not-covered-in-the-current-bids-specification">General: Is your data type not covered in the current BIDS specification?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">raw</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">derivative</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">metadata</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">file format</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-does-this-word-mean">General: What does [this word] mean?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-is-a-json-file">General: What is a <code class="docutils literal notranslate"><span class="pre">json</span></code> file?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-what-liense-should-i-choose-for-my-dataset">General: What liense should I choose for my dataset?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-what-defacing-tools-can-i-use">MRI: What defacing tools can I use?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotype-how-can-i-store-subject-phenotypic-data">Phenotype: How can I store subject phenotypic data?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotype-is-there-a-standard-for-epilepsy-phenotypes">Phenotype: Is there a standard for epilepsy phenotypes?</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
@@ -962,13 +445,6 @@ By The BIDS community
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2021-2024.
-      <br/>
-    
-  </p>
 
   </div>
   

@@ -33,7 +33,6 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=a4f16d0d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -50,7 +49,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
@@ -130,6 +128,15 @@
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><div style="display: flex: flex-direction: column; text-align: center">
+  <h3>
+    The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+  </h3>
+  <p style="text-align: center">Go and check it out and let us know what you think.</p>
+</div>
+</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -172,8 +179,8 @@
       
     
     
-    <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
-    <script>document.write(`<img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
+    <img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
+    <script>document.write(`<img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
   
   
 </a></div>
@@ -194,43 +201,41 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Welcome to the BIDS Starter Kit
+                    Getting started with BIDS
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Folders and files</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/folders.html">Folders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/files.html">Filenames</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/metadata.html">Metadata and file formats</a></li>
-
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html">Folders</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html">Filenames</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html">Metadata and file formats</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS files templates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html">Derivatives</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tutorials/annotation.html">Annotating a BIDS dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/ieeg.html">iEEG data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/asl.html">ASL data conversion</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="tutorials/pet.html">PET data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/mri.html">MRI data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html">Annotating a BIDS dataset</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html">iEEG data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html">ASL data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html">PET data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html">MRI data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html">Tutorials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="dataset_examples.html">BIDS data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="talks.html">Talks and slides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dependencies.html">BIDS Dependencies List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="links.html">Links and resources</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/datasets/">Dataset examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html">Talks</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html">Links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="validator.html">BIDS validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">BIDS jargon busting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/faq/">FAQ</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/tools/validator.html">Validator</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
@@ -274,53 +279,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Fsearch.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -433,13 +391,6 @@ By The BIDS community
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2021-2024.
-      <br/>
-    
-  </p>
 
   </div>
   

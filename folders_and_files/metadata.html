@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=a4f16d0d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +51,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
@@ -78,8 +76,6 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Derivatives" href="derivatives.html" />
-    <link rel="prev" title="Filenames" href="files.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,6 +127,15 @@
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><div style="display: flex: flex-direction: column; text-align: center">
+  <h3>
+    The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+  </h3>
+  <p style="text-align: center">Go and check it out and let us know what you think.</p>
+</div>
+</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -141,6 +146,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -171,8 +178,8 @@
       
     
     
-    <img src="../_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
-    <script>document.write(`<img src="../_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
+    <img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
+    <script>document.write(`<img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
   
   
 </a></div>
@@ -193,43 +200,41 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    Welcome to the BIDS Starter Kit
+                    Getting started with BIDS
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Folders and files</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="folders.html">Folders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files.html">Filenames</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Metadata and file formats</a></li>
-
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html">Folders</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html">Filenames</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html">Metadata and file formats</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS files templates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html">Derivatives</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/annotation.html">Annotating a BIDS dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/ieeg.html">iEEG data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/asl.html">ASL data conversion</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/pet.html">PET data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/mri.html">MRI data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html">Annotating a BIDS dataset</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html">iEEG data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html">ASL data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html">PET data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html">MRI data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html">Tutorials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../dataset_examples.html">BIDS data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../talks.html">Talks and slides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dependencies.html">BIDS Dependencies List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../links.html">Links and resources</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/datasets/">Dataset examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html">Talks</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html">Links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../validator.html">BIDS validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">BIDS jargon busting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/faq/">FAQ</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/tools/validator.html">Validator</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
@@ -273,70 +278,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/folders_and_files/metadata.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ffolders_and_files/metadata.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -421,9 +362,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -439,59 +378,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Metadata and file formats</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json-files">JSON Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online">Online</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-octave">Matlab / Octave</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-a-json-file">Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-json-file">Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r">R</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-required-package">Installing required package</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interoperability-issues">Interoperability issues</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tsv-files">TSV files</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab">Matlab</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-a-tsv-file">Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-tsv-file">Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Matlab</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#octave">Octave</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">Excel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">R</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -503,395 +389,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="metadata-and-file-formats">
 <h1>Metadata and file formats<a class="headerlink" href="#metadata-and-file-formats" title="Link to this heading">#</a></h1>
-<p>Metadata are stored in .json and .tsv files. These files are language-agnostic,
-meaning you can work with them in, for example: Python, Matlab, or R. This page
-covers common ways to read/write these files in common languages for
-neuroscience analysis.</p>
-<p>More extensive example templates can be found
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">here</a>,
-well as
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/matlabCode">MATLAB / Octave code</a>
-and
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/pythonCode">Python code</a>
-to help you generate some of those files.</p>
-<section id="json-files">
-<h2>JSON Files<a class="headerlink" href="#json-files" title="Link to this heading">#</a></h2>
-<p>JSON files are text files that take the following structure:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;key2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value2&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;key3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;subkey1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;subvalue1&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Note that they can be nested (curly brackets within curly brackets). Here are
-some common ways to read / write these files.</p>
-</section>
-<section id="online">
-<h2>Online<a class="headerlink" href="#online" title="Link to this heading">#</a></h2>
-<p>To read/write JSON online, we recommend the following website:</p>
-<p><a class="reference external" href="http://jsoneditoronline.org/">http://jsoneditoronline.org/</a></p>
-</section>
-<section id="matlab-octave">
-<h2>Matlab / Octave<a class="headerlink" href="#matlab-octave" title="Link to this heading">#</a></h2>
-<p>There are many toolboxes in Matlab for reading / writing JSON files.</p>
-<p>Since MATLAB R2016b, you can use the built-in functions <code class="docutils literal notranslate"><span class="pre">jsonencode</span></code> (to write)
-and <code class="docutils literal notranslate"><span class="pre">jsondecode</span></code> (to read) JSON files. Hopefully they should be available in
-Octave 6.1 next year.</p>
-<p>The <a class="reference external" href="https://github.com/gllmflndn/JSONio">JSONio library</a> will allow you to read
-and write JSON files with matlab and octave (see examples below to use
-<code class="docutils literal notranslate"><span class="pre">jsonwrite</span></code> and <code class="docutils literal notranslate"><span class="pre">jsonread</span></code>).</p>
-<p>SPM12 uses the JSONio library by calling <code class="docutils literal notranslate"><span class="pre">spm_jsonwrite</span></code> and <code class="docutils literal notranslate"><span class="pre">spm_jsonread</span></code> and
-it has
-<a class="reference external" href="https://en.wikibooks.org/wiki/SPM/BIDS">other interesting functions to help you with BIDS</a>.</p>
-<p><a class="reference external" href="https://github.com/bids-standard/bids-matlab">bids-matlab</a> has 2 functions
-(<code class="docutils literal notranslate"><span class="pre">bids.util.jsonencode</span></code> and <code class="docutils literal notranslate"><span class="pre">bids.util.jsondecode</span></code>) that act as wrappers and
-will use whatever implementation (SPM, JSONio, MATLAB) is available.</p>
-<p>The examples below are for the
-<a class="reference external" href="https://github.com/gllmflndn/JSONio">JSONio library</a>:</p>
-<section id="reading-a-json-file">
-<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#reading-a-json-file" title="Link to this heading">#</a></h3>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">jsonread</span><span class="p">([</span><span class="n">filename</span><span class="p">])</span>
-</pre></div>
-</div>
-</section>
-<section id="writing-a-json-file">
-<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#writing-a-json-file" title="Link to this heading">#</a></h3>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;./&#39;</span><span class="p">;</span>
-<span class="n">project</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span>
-<span class="n">sub_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span>
-<span class="n">ses_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;01&#39;</span><span class="p">;</span>
-<span class="n">acquisition</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;anat&#39;</span><span class="p">;</span>
-
-<span class="n">anat_json_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="n">project</span><span class="p">,</span><span class="k">...</span>
-<span class="w">                            </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="p">],</span><span class="k">...</span>
-<span class="w">                            </span><span class="p">[</span><span class="s">&#39;ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="p">],</span><span class="k">...</span>
-<span class="w">                            </span><span class="n">acquisition</span><span class="p">,</span><span class="k">...</span>
-<span class="w">                            </span><span class="p">[</span><span class="s">&#39;sub-&#39;</span><span class="w"> </span><span class="n">sub_id</span><span class="w"> </span><span class="s">&#39;_ses-&#39;</span><span class="w"> </span><span class="n">ses_id</span><span class="w"> </span><span class="s">&#39;_T1W.json&#39;</span><span class="p">]);</span>
-
-<span class="c">% Assign the fields in the Matlab structure that can be saved as a json:</span>
-<span class="n">anat_json</span><span class="p">.</span><span class="n">Manufacturer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;GE&#39;</span><span class="p">;</span>
-<span class="n">anat_json</span><span class="p">.</span><span class="n">ManufacturersModelName</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="s">&#39;Discovery MR750&#39;</span><span class="p">;</span>
-<span class="n">anat_json</span><span class="p">.</span><span class="n">MagneticFieldStrength</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="n">anat_json</span><span class="p">.</span><span class="n">PulseSequence</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;T1 weighted SPGR&#39;</span><span class="p">;</span>
-
-<span class="n">json_options</span><span class="p">.</span><span class="n">indent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;    &#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% this makes the json look pretier when opened in a txt editor</span>
-<span class="n">jsonwrite</span><span class="p">(</span><span class="n">loc_json_name</span><span class="p">,</span><span class="n">anat_json</span><span class="p">,</span><span class="n">json_options</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="python">
-<h2>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
-<p>In Python, JSON support is built into the core library, meaning you don’t need
-to install anything to read/write JSON files. In addition, the structure of JSON
-is almost identical to that of Python dictionaries (assuming you are only
-storing text / numbers in the dictionary). To that extent.</p>
-<section id="id1">
-<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;myfile.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ff</span><span class="p">:</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">ff</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="id2">
-<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;field1&#39;</span><span class="p">:</span> <span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;field2&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;field3&#39;</span><span class="p">:</span> <span class="s1">&#39;field3&#39;</span><span class="p">}</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_output_file.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ff</span><span class="p">:</span>
-    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ff</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="r">
-<h2>R<a class="headerlink" href="#r" title="Link to this heading">#</a></h2>
-<p>There is a new package to help intract with BIDS datasets:
-<a class="github reference external" href="https://github.com/bbuchsbaum/bidser">bbuchsbaum/bidser</a></p>
-<p>There are several packages for reading and writing JSON files from R. In this
-example, we will be using jsonlite. Remember to install and call a package
-before using it.</p>
-<p><a class="github reference external" href="https://github.com/jeroen/jsonlite">jeroen/jsonlite</a></p>
-<section id="installing-required-package">
-<h3>Installing required package<a class="headerlink" href="#installing-required-package" title="Link to this heading">#</a></h3>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;jsonlite&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="id3">
-<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
-<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">fromJSON</span><span class="p">(</span><span class="s">&#39;myfile.json&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">pretty</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="id4">
-<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
-<span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;{&quot;field1&quot;: &quot;value1&quot;, &quot;field2&quot;: 3, &quot;field3&quot;: &quot;field3&quot;}&#39;</span>
-<span class="w">    </span><span class="nf">writeLines</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">=</span><span class="s">&quot;myData.json&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="interoperability-issues">
-<h2>Interoperability issues<a class="headerlink" href="#interoperability-issues" title="Link to this heading">#</a></h2>
-<p>Many parts of JSON files are often loaded as
-<a class="reference external" href="https://nl.mathworks.com/help/matlab/ref/struct.html"><code class="docutils literal notranslate"><span class="pre">structures</span></code></a> by MATLAB /
-Octave, where a <code class="docutils literal notranslate"><span class="pre">key</span></code> in a JSON file becomes <code class="docutils literal notranslate"><span class="pre">fieldname</span></code> in that structure.</p>
-<p>Here is an example with a simple <code class="docutils literal notranslate"><span class="pre">example.json</span></code></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>loaded with bids-matlab</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">jsondecode</span><span class="p">(</span><span class="s">&#39;example.json&#39;</span><span class="p">)</span>
-
-<span class="n">json_content</span><span class="w"> </span><span class="p">=</span>
-
-<span class="w">  </span><span class="nb">struct</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">fields</span><span class="p">:</span>
-
-<span class="w">    </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;value&#39;</span>
-</pre></div>
-</div>
-<p>There are however some strict rules for what makes a valid fieldname in MATLAB
-and octave.</p>
-<p>Fieldnames must:</p>
-<ul class="simple">
-<li><p>start with a letter, otherwise assigning to that field will error</p></li>
-<li><p>contain only letters, numbers, and/or the underscore character, otherwise
-assigning to that field will error, and</p></li>
-<li><p>must be no longer than <code class="docutils literal notranslate"><span class="pre">namelengthmax</span></code> (currently 63) characters, otherwise
-you will receive a warning and the field name will be truncated</p></li>
-</ul>
-<p>If there are keys in your JSON that do not comply to those rules, they keys will
-be renamed when loading which can lead to some headaches down the line.</p>
-<p>For example when loading the <code class="docutils literal notranslate"><span class="pre">bad_keys.json</span></code></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;@foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;@foo&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;x1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;x_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x_1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;/t&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/t&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;%f&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%f&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>We get some quite different fieldnames when read with matlab:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">jsondecode</span><span class="p">(</span><span class="nb">fileread</span><span class="p">(</span><span class="s">&#39;bad_keys.json&#39;</span><span class="p">))</span>
-
-<span class="nb">ans</span><span class="w"> </span><span class="p">=</span>
-
-<span class="w">  </span><span class="nb">struct</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">fields</span><span class="p">:</span>
-
-<span class="w">    </span><span class="n">x_foo</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;@foo&#39;</span>
-<span class="w">       </span><span class="n">x1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
-<span class="w">     </span><span class="n">x1_1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;x1&#39;</span>
-<span class="w">      </span><span class="n">x_1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;x_1&#39;</span>
-<span class="w">      </span><span class="n">x_t</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/t&#39;</span>
-<span class="w">      </span><span class="n">x_f</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;%f&#39;</span>
-</pre></div>
-</div>
-<p>or with JSONio for Octave (though at least here we get a warning):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">jsonread</span><span class="p">(</span><span class="s1">&#39;bad_keys.json&#39;</span><span class="p">)</span>
-<span class="ne">Warning</span><span class="p">:</span> <span class="n">Duplicate</span> <span class="n">key</span><span class="o">.</span>
-
-<span class="n">ans</span> <span class="o">=</span>
-
-  <span class="n">struct</span> <span class="k">with</span> <span class="n">fields</span><span class="p">:</span>
-
-    <span class="n">x_foo</span><span class="p">:</span> <span class="s1">&#39;@foo&#39;</span>
-       <span class="n">x1</span><span class="p">:</span> <span class="s1">&#39;x1&#39;</span>
-      <span class="n">x_1</span><span class="p">:</span> <span class="s1">&#39;x_1&#39;</span>
-      <span class="n">x_t</span><span class="p">:</span> <span class="s1">&#39;/t&#39;</span>
-      <span class="n">x_f</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span>
-</pre></div>
-</div>
-<p>This can lead to some unexpected behavior if you did not know about this.</p>
-<p>If you load this <code class="docutils literal notranslate"><span class="pre">collision.json</span></code></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;x1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;x_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;x_1&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>and try to retrieve the value associated to the <code class="docutils literal notranslate"><span class="pre">key</span></code> <code class="docutils literal notranslate"><span class="pre">x1</span></code>, you will in fact be
-getting the value for the key <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bids</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">jsondecode</span><span class="p">(</span><span class="s">&#39;collision.json&#39;</span><span class="p">);</span>
-<span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">json_content</span><span class="p">.</span><span class="n">x1</span>
-
-<span class="w">       </span><span class="n">x1</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
-</pre></div>
-</div>
-<p><strong>Why and when does this matter for BIDS?</strong></p>
-<p>In most cases this will not be an issue, but this could be problem if in your
-<code class="docutils literal notranslate"><span class="pre">events.tsv</span></code> you have named some of your trial_type things like <code class="docutils literal notranslate"><span class="pre">1_face</span></code>,
-<code class="docutils literal notranslate"><span class="pre">2_sound</span></code> and then want to annotate those events in a side car JSON file like
-this.</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;trial_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;image type&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1_face&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A face is displayed&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;2_sound&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A sound is played&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>If you do this, it will be much harder to work with that JSON file for anyone
-who uses MATLAB or Octave.</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>So in general here are some suggestions on how to name your events:</p>
-<ul class="simple">
-<li><p>start with a letter</p></li>
-<li><p>make sure they contain only letters, numbers, and/or the underscore character</p></li>
-<li><p>make sure they are must be no longer than currently 63 characters</p></li>
-</ul>
-</div>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="tsv-files">
-<h1>TSV files<a class="headerlink" href="#tsv-files" title="Link to this heading">#</a></h1>
-<p>A Tab-Separate Values (TSV) file is a text file where tab characters (<code class="docutils literal notranslate"><span class="pre">\t</span></code>)
-separate fields that are in the file. It is structured as a table, with each
-column representing a field of interest, and each row representing a single
-datapoint.</p>
-<p>Below are ways to read / write TSV files in common languages.</p>
-<section id="matlab">
-<h2>Matlab<a class="headerlink" href="#matlab" title="Link to this heading">#</a></h2>
-<section id="reading-a-tsv-file">
-<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#reading-a-tsv-file" title="Link to this heading">#</a></h3>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">table_content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readtable</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
-<span class="w">                            </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
-<span class="w">                            </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
-<span class="w">                            </span><span class="s">&#39;TreatAsEmpty&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;N/A&#39;</span><span class="p">,</span><span class="s">&#39;n/a&#39;</span><span class="p">});</span>
-</pre></div>
-</div>
-</section>
-<section id="writing-a-tsv-file">
-<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#writing-a-tsv-file" title="Link to this heading">#</a></h3>
-<section id="id5">
-<h4>Matlab<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">pwd</span><span class="p">;</span>
-<span class="n">bidsProject</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;temp&#39;</span><span class="p">;</span>
-<span class="nb">mkdir</span><span class="p">(</span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="w"> </span><span class="n">bidsProject</span><span class="p">));</span>
-<span class="n">bids_participants_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;participants.tsv&#39;</span><span class="p">;</span>
-
-<span class="n">participant_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;sub-01&#39;</span><span class="p">;</span><span class="w"> </span><span class="s">&#39;sub-02&#39;</span><span class="p">];</span>
-<span class="n">age</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">20</span><span class="w"> </span><span class="mi">30</span><span class="p">]</span><span class="o">&#39;</span><span class="p">;</span>
-<span class="n">sex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;m&#39;</span><span class="p">;</span><span class="s">&#39;f&#39;</span><span class="p">];</span>
-
-<span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">table</span><span class="p">(</span><span class="n">participant_id</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">sex</span><span class="p">);</span>
-<span class="nb">writetable</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span><span class="w"> </span><span class="n">bidsProject</span><span class="p">,</span><span class="w"> </span><span class="n">bids_participants_name</span><span class="p">),</span><span class="w"> </span><span class="k">...</span>
-<span class="w">              </span><span class="s">&#39;FileType&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
-<span class="w">              </span><span class="s">&#39;Delimiter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\t&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
-<section id="octave">
-<h4>Octave<a class="headerlink" href="#octave" title="Link to this heading">#</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">writetable</span></code> function is not implemented in older version of Octave (e.g
-4.2.2) and the <code class="docutils literal notranslate"><span class="pre">table</span></code> function differs from its matlab counterpart. These are
-still in development for future
-<a class="reference external" href="https://github.com/apjanke/octave-tablicious">releases</a> so some of the scripts
-provided in the BIDS starter-kit repository in the matlab code folder to create
-.tsv might not work with octave because of that reason.</p>
-</section>
-</section>
-</section>
-<section id="id6">
-<h2>Python<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
-<p>In Python, the easiest way to work with TSV files is to use the Pandas library.
-This provides a high-level structure to organize, manipulate, clean, and
-visualize tabular data. You can install <code class="docutils literal notranslate"><span class="pre">pandas</span></code> with the following command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
-<section id="id7">
-<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
-<p>There are many ways to read a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file in Pandas. One option is the
-following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./ds001/participants.tsv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note that this function will default to using <code class="docutils literal notranslate"><span class="pre">,</span></code> as a delimiter, so we
-explicitly give it the tab character.</p>
-</section>
-<section id="id8">
-<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
-<p>You can write to a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file using the <code class="docutils literal notranslate"><span class="pre">to_csv</span></code> method of a pandas DataFrame:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./ds001/participants.tsv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="c1"># Add an extra column for demonstration</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;subject_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
-
-<span class="c1"># Show contents of the dataframe</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-    <span class="n">Out</span><span class="p">:</span>
-          <span class="n">participant_id</span> <span class="n">sex</span>  <span class="n">age</span>  <span class="n">subject_id</span>
-    <span class="mi">0</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">01</span>   <span class="n">F</span>   <span class="mi">26</span>           <span class="mi">0</span>
-    <span class="mi">1</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">02</span>   <span class="n">M</span>   <span class="mi">24</span>           <span class="mi">1</span>
-    <span class="mi">2</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">03</span>   <span class="n">F</span>   <span class="mi">27</span>           <span class="mi">2</span>
-    <span class="mi">3</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">04</span>   <span class="n">F</span>   <span class="mi">20</span>           <span class="mi">3</span>
-    <span class="mi">4</span>         <span class="n">sub</span><span class="o">-</span><span class="mi">05</span>   <span class="n">M</span>   <span class="mi">22</span>           <span class="mi">4</span>
-
-<span class="c1"># Save as a .tsv file</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;my_new_file.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="excel">
-<h2>Excel<a class="headerlink" href="#excel" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Create a file with the following columns (at least, for other values see
-paragraph the
-<a class="reference external" href="https://bids-specification.readthedocs.io/en/latest/03-modality-agnostic-files.html#participants-file">BIDS spec</a>)</p>
-<ul>
-<li><p>participant_id</p></li>
-<li><p>age</p></li>
-<li><p>sex</p></li>
-</ul>
-</li>
-<li><p>Save as tab separated <code class="docutils literal notranslate"><span class="pre">.txt</span></code> and change extension to <code class="docutils literal notranslate"><span class="pre">.tsv</span></code></p></li>
-</ul>
-</section>
-<section id="id9">
-<h2>R<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
-<p>Reading and writing tab separated files comes natively in R, no need for extra
-packages.</p>
-<section id="id10">
-<h3>Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
-<p>In this example, we assume the .tsv includes column names (headers), and
-explicitly set column separator (delimiter) to tab (‘\t’)</p>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;myFile.tsv&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;\t&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="id11">
-<h3>Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
-<p>When writing files, column and row names are always saved, we remove row names,
-and quotes from the outpur explicitly by setting them to FALSE.</p>
-<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">cbind.data.frame</span><span class="p">(</span>
-<span class="w">  </span><span class="n">participant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;sub-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;sub-02&#39;</span><span class="p">),</span>
-<span class="w">  </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">30</span><span class="p">),</span>
-<span class="w">  </span><span class="n">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;m&#39;</span><span class="p">,</span><span class="s">&#39;f&#39;</span><span class="p">))</span>
-
-<span class="nf">write.table</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">=</span><span class="s">&#39;myData.tsv&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;\t&#39;</span><span class="p">,</span>
-<span class="w">  </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
+<p>Moved <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html">here</a>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -924,90 +422,12 @@ and quotes from the outpur explicitly by setting them to FALSE.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="files.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Filenames</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="derivatives.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Derivatives</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Metadata and file formats</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json-files">JSON Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online">Online</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-octave">Matlab / Octave</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-a-json-file">Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-json-file">Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r">R</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-required-package">Installing required package</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Reading a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Writing a <code class="docutils literal notranslate"><span class="pre">.json</span></code> file:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interoperability-issues">Interoperability issues</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tsv-files">TSV files</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab">Matlab</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-a-tsv-file">Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-tsv-file">Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Matlab</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#octave">Octave</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">Excel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">R</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Reading a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Writing a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file:</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
@@ -1025,13 +445,6 @@ By The BIDS community
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2021-2024.
-      <br/>
-    
-  </p>
 
   </div>
   

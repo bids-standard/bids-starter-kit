@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>BIDS validation &#8212; BIDS starter kit</title>
+    <title>Validator &#8212; BIDS starter kit</title>
   
   
   
@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=a4f16d0d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +51,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
@@ -78,8 +76,6 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="BIDS jargon busting" href="glossary.html" />
-    <link rel="prev" title="Frequently Asked Questions" href="FAQ.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,6 +127,15 @@
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><div style="display: flex: flex-direction: column; text-align: center">
+  <h3>
+    The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+  </h3>
+  <p style="text-align: center">Go and check it out and let us know what you think.</p>
+</div>
+</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -141,6 +146,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -171,8 +178,8 @@
       
     
     
-    <img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
-    <script>document.write(`<img src="_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
+    <img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
+    <script>document.write(`<img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
   
   
 </a></div>
@@ -193,43 +200,41 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    Welcome to the BIDS Starter Kit
+                    Getting started with BIDS
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Folders and files</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/folders.html">Folders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/files.html">Filenames</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/metadata.html">Metadata and file formats</a></li>
-
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html">Folders</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html">Filenames</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html">Metadata and file formats</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS files templates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="folders_and_files/derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html">Derivatives</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tutorials/annotation.html">Annotating a BIDS dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/ieeg.html">iEEG data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/asl.html">ASL data conversion</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="tutorials/pet.html">PET data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/mri.html">MRI data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html">Annotating a BIDS dataset</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html">iEEG data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html">ASL data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html">PET data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html">MRI data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html">Tutorials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="dataset_examples.html">BIDS data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="talks.html">Talks and slides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dependencies.html">BIDS Dependencies List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="links.html">Links and resources</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/datasets/">Dataset examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html">Talks</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html">Links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Others</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">BIDS validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">BIDS jargon busting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/faq/">FAQ</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/tools/validator.html">Validator</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
@@ -273,70 +278,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/validator.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Fvalidator.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -421,9 +362,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -434,37 +373,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>BIDS validation</h1>
+    <h1>Validator</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-version">Browser Version</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-feedback">Types of Feedback</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error">Error</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#warning">Warning</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#success">Success</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-version">Command Line Version</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verifying-a-bids-compliant-data-set">Verifying a BIDS compliant data set</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Types of Feedback</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Error</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Warning</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Success</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -474,182 +387,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="bids-validation">
-<h1>BIDS validation<a class="headerlink" href="#bids-validation" title="Link to this heading">#</a></h1>
-<p>The <a class="reference external" href="https://github.com/bids-standard/bids-validator">BIDS Validator</a> is a tool
-that checks if a dataset is compliant with the BIDS standard.
-The validator is available for use within several different environments
-to best suit individual user preferences and use cases, those versions are:</p>
-<ul class="simple">
-<li><p>A web browser based version</p></li>
-<li><p>Command line version</p></li>
-<li><p>Docker based version</p></li>
-<li><p>A python library installable via pip</p></li>
-</ul>
-<p>Instructions to install and use these versions can be found
-within the <a class="reference external" href="https://github.com/bids-standard/bids-validator">quickstart guide</a>
-at the BIDS Validator repository.</p>
-<p><strong>Data Privacy and Confidentiality</strong></p>
-<p>Please note that the web app is entirely browser(not server) based.
-As such, there is no file uploading as part of the validation.</p>
-<section id="browser-version">
-<h2>Browser Version<a class="headerlink" href="#browser-version" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>The BIDS Validator can be found at <a class="reference external" href="http://bids-standard.github.io/bids-validator/">http://bids-standard.github.io/bids-validator/</a>.
-It requires that you use the Chrome or Firefox browser,
-since those are the only ones in which you can select a whole folder rather than individual files.</p></li>
-</ol>
-<!-- TODO grab that image and add to the repo -->
-<p><img alt="home" src="https://i.imgur.com/YD38eTE.png" /></p>
-<ol class="arabic simple" start="2">
-<li><p>You can then choose the <strong>folder</strong> that you wish to validate</p></li>
-</ol>
-<section id="types-of-feedback">
-<h3>Types of Feedback<a class="headerlink" href="#types-of-feedback" title="Link to this heading">#</a></h3>
-<section id="error">
-<h4>Error<a class="headerlink" href="#error" title="Link to this heading">#</a></h4>
-<p>This response indicates that your dataset is not BIDS compliant.
-Try following the suggestions listed to make the appropriate corrections</p>
-<!-- TODO grab that image and add to the repo -->
-<p><img alt="Error" src="https://i.imgur.com/PEz9hbd.png" /></p>
-</section>
-<section id="warning">
-<h4>Warning<a class="headerlink" href="#warning" title="Link to this heading">#</a></h4>
-<p>This response indicates that your dataset is BIDS compliant,
-but there are some non-critical problems
-(such as optional fields missing, or differences between participants)</p>
-<!-- TODO grab that image and add to the repo -->
-<p><img alt="Warning" src="https://i.imgur.com/Gqwc1q9.png" /></p>
-</section>
-<section id="success">
-<h4>Success<a class="headerlink" href="#success" title="Link to this heading">#</a></h4>
-<p>This response indicates that your folder contains a valid BIDS Dataset!</p>
-<!-- TODO grab that image and add to the repo -->
-<p><img alt="Valid" src="https://i.imgur.com/DPFVXOR.png" /></p>
-</section>
-</section>
-</section>
-<section id="command-line-version">
-<h2>Command Line Version<a class="headerlink" href="#command-line-version" title="Link to this heading">#</a></h2>
-<section id="verifying-a-bids-compliant-data-set">
-<h3>Verifying a BIDS compliant data set<a class="headerlink" href="#verifying-a-bids-compliant-data-set" title="Link to this heading">#</a></h3>
-<p>After <a class="reference external" href="https://github.com/bids-standard/bids-validator">installation with npm</a>
-using the CLI is relatively simple.
-Locate a bids data set similar to the one below:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>tree<span class="w"> </span>sub001/
-
-sub001/
-├──<span class="w"> </span>dataset_description.json
-├──<span class="w"> </span>participants.json
-├──<span class="w"> </span>participants.tsv
-├──<span class="w"> </span>README
-└──<span class="w"> </span>sub-01
-<span class="w">    </span>├──<span class="w"> </span>ses-baseline
-<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>anat
-<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-baseline_T1w.json
-<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-baseline_T1w.nii.gz
-<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>pet
-<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>sub-01_ses-baseline_pet.json
-<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>sub-01_ses-baseline_pet.nii.gz
-<span class="w">    </span>└──<span class="w"> </span>ses-intervention
-<span class="w">        </span>├──<span class="w"> </span>anat
-<span class="w">        </span>│<span class="w">   </span>├──<span class="w"> </span>sub-01_ses-intervention_T1w.json
-<span class="w">        </span>│<span class="w">   </span>└──<span class="w"> </span>sub-01_ses-intervention_T1w.nii.gz
-<span class="w">        </span>└──<span class="w"> </span>pet
-<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-intervention_task-eyes_events.json
-<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-intervention_task-eyes_events.tsv
-<span class="w">            </span>├──<span class="w"> </span>sub-01_ses-intervention_task-eyes_pet.json
-<span class="w">            </span>└──<span class="w"> </span>sub-01_ses-intervention_task-eyes_pet.nii.gz
-</pre></div>
-</div>
-<p>Now simply point the bids validator at the folder path of the subject(s) in
-question:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001
-</pre></div>
-</div>
-</section>
-<section id="id1">
-<h3>Types of Feedback<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<section id="id2">
-<h4>Error<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
-<p>As is the case w/ the browser or any version of the validator follow
-the <code class="docutils literal notranslate"><span class="pre">[ERR]</span></code> messages and correct until bids-validator returns 0 errors after running.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001
-
-bids-validator@1.7.1
-
-<span class="w"> </span><span class="m">1</span>:<span class="w"> </span><span class="o">[</span>ERR<span class="o">]</span><span class="w"> </span>Invalid<span class="w"> </span>JSON<span class="w"> </span>file.<span class="w"> </span>The<span class="w"> </span>file<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>formatted<span class="w"> </span>according<span class="w"> </span>the<span class="w"> </span>schema.<span class="w"> </span><span class="o">(</span>code:<span class="w"> </span><span class="m">55</span><span class="w"> </span>-<span class="w"> </span>JSON_SCHEMA_VALIDATION_ERROR<span class="o">)</span>
-<span class="w">  </span>./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
-<span class="w">   </span>Evidence:<span class="w">  </span>should<span class="w"> </span>have<span class="w"> </span>property<span class="w"> </span>InjectedRadioactivityUnits<span class="w"> </span>when<span class="w"> </span>property<span class="w"> </span>InjectedRadioactivity<span class="w"> </span>is<span class="w"> </span>present
-<span class="w">  </span>./sub-01/ses-baseline/pet/sub-01_ses-baseline_pet.json
-<span class="w">   </span>Evidence:<span class="w">  </span>should<span class="w"> </span>have<span class="w"> </span>required<span class="w"> </span>property<span class="w"> </span><span class="s1">&#39;InjectedMassUnits&#39;</span>
-<span class="w">  </span>...
-<span class="w">                </span>...
-<span class="w">  </span>...<span class="w"> </span>and<span class="w"> </span><span class="m">3</span><span class="w"> </span>more<span class="w"> </span>files<span class="w"> </span>having<span class="w"> </span>this<span class="w"> </span>issue<span class="w"> </span><span class="o">(</span>Use<span class="w"> </span>--verbose<span class="w"> </span>to<span class="w"> </span>see<span class="w"> </span>them<span class="w"> </span>all<span class="o">)</span>.
-
-<span class="w"> </span>Please<span class="w"> </span>visit<span class="w"> </span>https://neurostars.org/search?q<span class="o">=</span>JSON_SCHEMA_VALIDATION_ERROR<span class="w"> </span><span class="k">for</span><span class="w"> </span>existing<span class="w"> </span>conversations<span class="w"> </span>about<span class="w"> </span>this<span class="w"> </span>issue.
-
-
-<span class="w">        </span>Summary:<span class="w">                </span>Available<span class="w"> </span>Tasks:<span class="w">        </span>Available<span class="w"> </span>Modalities:
-<span class="w">        </span><span class="m">14</span><span class="w"> </span>Files,<span class="w"> </span><span class="m">5</span>.72MB<span class="w">                                </span>T1w
-<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Subject<span class="w">                                     </span>pet
-<span class="w">        </span><span class="m">2</span><span class="w"> </span>-<span class="w"> </span>Sessions<span class="w">                                    </span>events
-
-
-<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>any<span class="w"> </span>questions,<span class="w"> </span>please<span class="w"> </span>post<span class="w"> </span>on<span class="w"> </span>https://neurostars.org/tags/bids.
-</pre></div>
-</div>
-</section>
-<section id="id3">
-<h4>Warning<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<p>As stated with the browser version above, one may elect to ignore warnings,
-but the information provided via the validator should help to pinpoint
-where and how to resolve some of these warnings.
-When in doubt consult the <a class="reference external" href="https://bids-specification.readthedocs.io/en/latest/">BIDS Spec</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001/
-
-bids-validator@1.7.1
-
-<span class="m">1</span>:<span class="w"> </span><span class="o">[</span>WARN<span class="o">]</span><span class="w"> </span>Tabular<span class="w"> </span>file<span class="w"> </span>contains<span class="w"> </span>custom<span class="w"> </span>columns<span class="w"> </span>not<span class="w"> </span>described<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>data<span class="w"> </span>dictionary<span class="w"> </span><span class="o">(</span>code:<span class="w"> </span><span class="m">82</span><span class="w"> </span>-<span class="w"> </span>CUSTOM_COLUMN_WITHOUT_DESCRIPTION<span class="o">)</span>
-<span class="w">  </span>./sub-01/func/sub-01_task-balloonanalogrisktask_run-01_events.tsv
-<span class="w">                </span>...
-<span class="w">                </span>...
-...<span class="w"> </span>and<span class="w"> </span><span class="m">38</span><span class="w"> </span>more<span class="w"> </span>files<span class="w"> </span>having<span class="w"> </span>this<span class="w"> </span>issue<span class="w"> </span><span class="o">(</span>Use<span class="w"> </span>--verbose<span class="w"> </span>to<span class="w"> </span>see<span class="w"> </span>them<span class="w"> </span>all<span class="o">)</span>.
-
-<span class="w"> </span>Please<span class="w"> </span>visit<span class="w"> </span>https://neurostars.org/search?q<span class="o">=</span>CUSTOM_COLUMN_WITHOUT_DESCRIPTION<span class="w"> </span><span class="k">for</span><span class="w"> </span>existing<span class="w"> </span>conversations<span class="w"> </span>about<span class="w"> </span>this<span class="w"> </span>issue.
-
-
-<span class="w">        </span>Summary:<span class="w">                   </span>Available<span class="w"> </span>Tasks:<span class="w">                </span>Available<span class="w"> </span>Modalities:
-<span class="w">        </span><span class="m">134</span><span class="w"> </span>Files,<span class="w"> </span><span class="m">411</span>.53KB<span class="w">        </span>balloon<span class="w"> </span>analog<span class="w"> </span>risk<span class="w"> </span>task<span class="w">        </span>T1w
-<span class="w">        </span><span class="m">16</span><span class="w"> </span>-<span class="w"> </span>Subjects<span class="w">                                              </span>inplaneT2
-<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Session<span class="w">                                                </span>bold
-<span class="w">                                                                   </span>events
-
-
-<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>any<span class="w"> </span>questions,<span class="w"> </span>please<span class="w"> </span>post<span class="w"> </span>on<span class="w"> </span>https://neurostars.org/tags/bids.
-</pre></div>
-</div>
-</section>
-<section id="id4">
-<h4>Success<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<p>Pass go and collect 200 dollars, the data set in question passes validation.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user@host:~/bids-examples$<span class="w"> </span>bids-validator<span class="w"> </span>sub001
-bids-validator@1.7.1
-
-This<span class="w"> </span>dataset<span class="w"> </span>appears<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>BIDS<span class="w"> </span>compatible.
-
-<span class="w">        </span>Summary:<span class="w">                  </span>Available<span class="w"> </span>Tasks:<span class="w">        </span>Available<span class="w"> </span>Modalities:
-<span class="w">        </span><span class="m">12</span><span class="w"> </span>Files,<span class="w"> </span><span class="m">218</span>.75KB<span class="w">                                </span>T1w
-<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Subject<span class="w">                                       </span>pet
-<span class="w">        </span><span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Session<span class="w">                                       </span>blood
-
-
-<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>have<span class="w"> </span>any<span class="w"> </span>questions,<span class="w"> </span>please<span class="w"> </span>post<span class="w"> </span>on<span class="w"> </span>https://neurostars.org/tags/bids
-</pre></div>
-</div>
-</section>
-</section>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="validator">
+<h1>Validator<a class="headerlink" href="#validator" title="Link to this heading">#</a></h1>
+<p>Moved <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/tools/validator.html">here</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -682,63 +422,12 @@ This<span class="w"> </span>dataset<span class="w"> </span>appears<span class="w
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="FAQ.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Frequently Asked Questions</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="glossary.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">BIDS jargon busting</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-version">Browser Version</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-feedback">Types of Feedback</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error">Error</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#warning">Warning</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#success">Success</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-version">Command Line Version</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verifying-a-bids-compliant-data-set">Verifying a BIDS compliant data set</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Types of Feedback</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Error</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Warning</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Success</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
@@ -756,13 +445,6 @@ By The BIDS community
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2021-2024.
-      <br/>
-    
-  </p>
 
   </div>
   

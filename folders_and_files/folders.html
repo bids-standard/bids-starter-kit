@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=a4f16d0d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +51,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
@@ -78,8 +76,6 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Filenames" href="files.html" />
-    <link rel="prev" title="Welcome to the BIDS Starter Kit" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,6 +127,15 @@
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><div style="display: flex: flex-direction: column; text-align: center">
+  <h3>
+    The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+  </h3>
+  <p style="text-align: center">Go and check it out and let us know what you think.</p>
+</div>
+</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -141,6 +146,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -171,8 +178,8 @@
       
     
     
-    <img src="../_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
-    <script>document.write(`<img src="../_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
+    <img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
+    <script>document.write(`<img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
   
   
 </a></div>
@@ -193,43 +200,41 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    Welcome to the BIDS Starter Kit
+                    Getting started with BIDS
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Folders and files</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Folders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files.html">Filenames</a></li>
-<li class="toctree-l1"><a class="reference internal" href="metadata.html">Metadata and file formats</a></li>
-
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html">Folders</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html">Filenames</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html">Metadata and file formats</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS files templates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html">Derivatives</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/annotation.html">Annotating a BIDS dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/ieeg.html">iEEG data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/asl.html">ASL data conversion</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/pet.html">PET data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/mri.html">MRI data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html">Annotating a BIDS dataset</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html">iEEG data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html">ASL data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html">PET data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html">MRI data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html">Tutorials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../dataset_examples.html">BIDS data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../talks.html">Talks and slides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dependencies.html">BIDS Dependencies List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../links.html">Links and resources</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/datasets/">Dataset examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html">Talks</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html">Links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../validator.html">BIDS validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">BIDS jargon busting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/faq/">FAQ</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/tools/validator.html">Validator</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
@@ -273,70 +278,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/folders_and_files/folders.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ffolders_and_files/folders.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -421,9 +362,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -439,19 +378,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">project</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subject">subject</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#session">session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datatype">datatype</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bids-folder-example">BIDS folder example</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -463,186 +389,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="folders">
 <h1>Folders<a class="headerlink" href="#folders" title="Link to this heading">#</a></h1>
-<p>The BIDS format is essentially a way to structure your data / metadata within a
-hierarchy of folders. This makes it easy to browse from a computer, as well as
-to automatically parse a BIDS folder with a program. The BIDS structure makes
-minimal assumptions about the tools needed to interact with the data that’s
-inside.</p>
-<p>The files in present in BIDS dataset are organized into a hierarchy of folders
-that have specific naming conventions.</p>
-<p>The rest of this page describes how these folders are structured.</p>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>There are four main levels of the folder hierarchy, these are:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
-└── subject
-    └── session
-        └── datatype
-</pre></div>
-</div>
-<p>With the exception of the top-level <code class="docutils literal notranslate"><span class="pre">project</span></code> folder, all sub-folders have a
-specific structure to their name (described below). Here’s an example of how
-this hierarchy looks:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>myProject/
-└── sub-01
-    └── ses-01
-        └── anat
-</pre></div>
-</div>
-<p>Here is the folder name structure of each level:</p>
-</section>
-<section id="project">
-<h2>project<a class="headerlink" href="#project" title="Link to this heading">#</a></h2>
-<p>Can have any name, this should be descriptive for the dataset contained in the
-folder.</p>
-</section>
-<section id="subject">
-<h2>subject<a class="headerlink" href="#subject" title="Link to this heading">#</a></h2>
-<p>Structure: <code class="docutils literal notranslate"><span class="pre">sub-&lt;participant</span> <span class="pre">label&gt;</span></code></p>
-<p>One folder per subject in this dataset. Labels should be unique for each
-subject.</p>
-</section>
-<section id="session">
-<h2>session<a class="headerlink" href="#session" title="Link to this heading">#</a></h2>
-<p>Structure: <code class="docutils literal notranslate"><span class="pre">ses-&lt;session</span> <span class="pre">label&gt;</span></code></p>
-<p>In general, a <code class="docutils literal notranslate"><span class="pre">session</span></code> represents a recording session, and subjects will
-stay in the scanner or headset during that session. You might have multiple
-sessions per subject if you collected data from them on several occasions.
-If there is only a single session per subject, this level of the hierarchy
-may be omitted.</p>
-<p>For more details, refer to this <a class="reference internal" href="../FAQ.html#faq-session"><span class="std std-ref">section of the FAQ</span></a>.</p>
-</section>
-<section id="datatype">
-<h2>datatype<a class="headerlink" href="#datatype" title="Link to this heading">#</a></h2>
-<p>Represents different types of data. Must be one of:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">anat</span></code>: anatomical MRI data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">func</span></code>: functional MRI data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fmap</span></code>: fieldmap data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dwi</span></code>: diffusion MRI data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">perf</span></code>: arterial spin labeling data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">eeg</span></code>: electroencephalography data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">meg</span></code>: magnetoencephalography data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ieeg</span></code>: intracranial EEG data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">beh</span></code>: behavioral data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pet</span></code>: positron emission tomography data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">micr</span></code>: microscopy data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nirs</span></code>: near-infrared spectroscopy data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">motion</span></code>: motion capture data</p></li>
-</ul>
-<p>The name for the datatype depends on the recording modality.</p>
-<!-- https://www.tablesgenerator.com/html_tables# -->
-<div align="center">
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-mri{border-color:#000000;color:var(--mri);font-size:18px; text-align:center;vertical-align:middle}
-.tg .tg-micr{border-color:#000000;color:var(--micr);font-size:18px; text-align:center;vertical-align:middle}
-.tg .tg-pet{border-color:#000000;color:var(--pet);font-size:18px; text-align:center;vertical-align:middle}
-.tg .tg-meeg{border-color:#000000;color:var(--meeg);font-size:18px;text-align:center;vertical-align:middle}
-.tg .tg-beh{border-color:#000000;color:var(--beh);font-size:18px; text-align:center;vertical-align:middle}
-.tg .tg-nirs{border-color:#000000;color:var(--nirs);font-size:18px; text-align:center;vertical-align:middle}
-.tg .tg-motion{border-color:#000000;color:var(--motion);font-size:18px; text-align:center;vertical-align:middle}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-va6w"></th>
-    <th class="tg-xuqq" colspan="7"><span style="font-weight:bold"><b>modality</b></span></th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-xuqq" rowspan="5"><span style="font-weight:bold"><b>datatype</b></span></td>
-    <td class="tg-mri"><b>MRI</b></td>
-    <td class="tg-pet"><b>PET</b></td>
-    <td class="tg-meeg"><span style="font-style:normal;text-decoration:none"><b>meeg</b></span></td>
-    <td class="tg-beh"><b>behavioral</b></td>
-    <td class="tg-micr"><b>microscopy</b></td>
-    <td class="tg-nirs"><b>NIRS</b></td>
-    <td class="tg-motion"><b>motion</b></td>
-  </tr>
-  <tr>
-    <td class="tg-mri">anat</td>
-    <td class="tg-pet">pet</td>
-    <td class="tg-meeg">eeg</td>
-    <td class="tg-beh">beh</td>
-    <td class="tg-micr">micr</td>
-    <td class="tg-nirs">nirs</td>
-    <td class="tg-motion">motion</td>
-  </tr>
-  <tr>
-    <td class="tg-mri">func<br></td>
-    <td class="tg-pet"></td>
-    <td class="tg-meeg">meg</td>
-    <td class="tg-beh"></td>
-    <td class="tg-micr"></td>
-    <td class="tg-micr"></td>
-    <td class="tg-motion"></td>
-  </tr>
-  <tr>
-    <td class="tg-mri">dwi</td>
-    <td class="tg-pet"></td>
-    <td class="tg-meeg">ieeg</td>
-    <td class="tg-beh"></td>
-    <td class="tg-micr"></td>
-    <td class="tg-micr"></td>
-    <td class="tg-motion"></td>
-  </tr>
-  <tr>
-    <td class="tg-mri">perf</td>
-    <td class="tg-pet"></td>
-    <td class="tg-meeg"></td>
-    <td class="tg-beh"></td>
-    <td class="tg-micr"></td>
-    <td class="tg-micr"></td>
-    <td class="tg-motion"></td>
-  </tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="bids-folder-example">
-<h2>BIDS folder example<a class="headerlink" href="#bids-folder-example" title="Link to this heading">#</a></h2>
-<p>Below is the folder hierarchy for one of the
-<a class="reference external" href="https://github.com/INCF/BIDS-examples">BIDS example datasets</a>. It has multiple
-subjects of data, and includes metadata files (<code class="docutils literal notranslate"><span class="pre">.tsv</span></code> and <code class="docutils literal notranslate"><span class="pre">.json</span></code>) both between-
-and within-subjects.</p>
-<p>Note that it has one session per subject, so this level is omitted.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ds001
-├── dataset_description.json
-├── participants.tsv
-├── sub-01
-│   ├── anat
-│   │   ├── sub-01_inplaneT2.nii.gz
-│   │   └── sub-01_T1w.nii.gz
-│   └── func
-│       ├── sub-01_task-balloonanalogrisktask_run-01_bold.nii.gz
-│       ├── sub-01_task-balloonanalogrisktask_run-01_events.tsv
-│       ├── sub-01_task-balloonanalogrisktask_run-02_bold.nii.gz
-│       ├── sub-01_task-balloonanalogrisktask_run-02_events.tsv
-│       ├── sub-01_task-balloonanalogrisktask_run-03_bold.nii.gz
-│       └── sub-01_task-balloonanalogrisktask_run-03_events.tsv
-├── sub-02
-│   ├── anat
-│   │   ├── sub-02_inplaneT2.nii.gz
-│   │   └── sub-02_T1w.nii.gz
-│   └── func
-│       ├── sub-02_task-balloonanalogrisktask_run-01_bold.nii.gz
-│       ├── sub-02_task-balloonanalogrisktask_run-01_events.tsv
-│       ├── sub-02_task-balloonanalogrisktask_run-02_bold.nii.gz
-│       ├── sub-02_task-balloonanalogrisktask_run-02_events.tsv
-│       ├── sub-02_task-balloonanalogrisktask_run-03_bold.nii.gz
-│       └── sub-02_task-balloonanalogrisktask_run-03_events.tsv
-...
-...
-└── task-balloonanalogrisktask_bold.json
-</pre></div>
-</div>
-</section>
+<p>Moved <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html">here</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -675,50 +422,12 @@ and within-subjects.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../index.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to the BIDS Starter Kit</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="files.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Filenames</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">project</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subject">subject</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#session">session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datatype">datatype</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bids-folder-example">BIDS folder example</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
@@ -736,13 +445,6 @@ By The BIDS community
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2021-2024.
-      <br/>
-    
-  </p>
 
   </div>
   

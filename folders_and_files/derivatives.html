@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=a4f16d0d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +51,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-VZJHGNQV6D"></script>
@@ -78,8 +76,6 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Annotating a BIDS dataset" href="../tutorials/annotation.html" />
-    <link rel="prev" title="Metadata and file formats" href="metadata.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,6 +127,15 @@
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><div style="display: flex: flex-direction: column; text-align: center">
+  <h3>
+    The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+  </h3>
+  <p style="text-align: center">Go and check it out and let us know what you think.</p>
+</div>
+</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -141,6 +146,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -171,8 +178,8 @@
       
     
     
-    <img src="../_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
-    <script>document.write(`<img src="../_static/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
+    <img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-light" alt="BIDS starter kit - Home"/>
+    <script>document.write(`<img src="https://github.com/bids-standard/bids-specification/blob/master/BIDS_logo/BIDS_logo_black_transparent_background_crop.png" class="logo__image only-dark" alt="BIDS starter kit - Home"/>`);</script>
   
   
 </a></div>
@@ -193,43 +200,41 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    Welcome to the BIDS Starter Kit
+                    Getting started with BIDS
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Folders and files</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="folders.html">Folders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files.html">Filenames</a></li>
-<li class="toctree-l1"><a class="reference internal" href="metadata.html">Metadata and file formats</a></li>
-
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html">Folders</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html">Filenames</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html">Metadata and file formats</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/tree/main/templates">BIDS files templates</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_startedfolders_and_files/derivatives.html">Derivatives</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/annotation.html">Annotating a BIDS dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/ieeg.html">iEEG data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/asl.html">ASL data conversion</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/pet.html">PET data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/mri.html">MRI data conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html">Annotating a BIDS dataset</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html">iEEG data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html">ASL data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html">PET data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html">MRI data conversion</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html">Tutorials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../dataset_examples.html">BIDS data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../talks.html">Talks and slides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dependencies.html">BIDS Dependencies List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../links.html">Links and resources</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/datasets/">Dataset examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html">Talks</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html">Links</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Others</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../validator.html">BIDS validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">BIDS jargon busting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/faq/">FAQ</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/tools/validator.html">Validator</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
 </ul>
@@ -273,70 +278,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/edit/main/src/folders_and_files/derivatives.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/bids-standard/bids-starter-kit/issues/new?title=Issue%20on%20page%20%2Ffolders_and_files/derivatives.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -421,9 +362,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -439,20 +378,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tour-of-a-bids-derivative">Tour of a BIDS Derivative</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessed-data">Preprocessed data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-data-types">Derivative data types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unspecified-data-types">Unspecified data types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#organizing-datasets-and-their-derivatives">Organizing datasets and their derivatives</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -464,206 +389,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="derivatives">
 <h1>Derivatives<a class="headerlink" href="#derivatives" title="Link to this heading">#</a></h1>
-<p>Derivatives are outputs of (pre-)processing pipelines, capturing data
-and meta-data sufficient for a researcher to understand
-and (critically) reuse those outputs in subsequent processing.
-Standardizing derivatives is motivated by use cases where formalized machine-readable access
-to processed data enables higher level processing.</p>
-<p>A derivative dataset is a collection of derivatives, or files that have been generated from the data.
-Broadly, a derivative can be considered to be preprocessed or processed,
-such that the data type is unchanged or changed, respectively, from that of the source data file(s).</p>
-<p>BIDS Derivatives was finalized in version 1.4.0 of the BIDS specification.</p>
-<section id="tour-of-a-bids-derivative">
-<h2>Tour of a BIDS Derivative<a class="headerlink" href="#tour-of-a-bids-derivative" title="Link to this heading">#</a></h2>
-<p>As with BIDS datasets, all conformant derivative datasets contain a <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code>.</p>
-<p>New fields include <code class="docutils literal notranslate"><span class="pre">DatasetType</span></code>, which distinguishes <code class="docutils literal notranslate"><span class="pre">&quot;derivative&quot;</span></code> datasets from <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot;</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">GeneratedBy</span></code>, a list of processes that generated the data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SourceDatasets</span></code>, a list of datasets used to generate the derivative.</p></li>
-</ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FMRIPREP Outputs&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.4.0&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;DatasetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;derivative&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fmriprep&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.4.1&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Container&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;docker&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;Tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;poldracklab/fmriprep:1.4.1&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Re-added RepetitionTime metadata to bold.json files&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;SourceDatasets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;DOI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.18112/openneuro.ds000114.v1.0.1&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://openneuro.org/datasets/ds000114/versions/1.0.1&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.1&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<section id="preprocessed-data">
-<h3>Preprocessed data<a class="headerlink" href="#preprocessed-data" title="Link to this heading">#</a></h3>
-<p>Data is considered to be <em>preprocessed</em> if it is fundamentally similar to the source data.
-Artifact removal, motion correction and resampling to a template space are examples of preprocessing.</p>
-<p>An example of a subject with simultaneous EEG/fMRI resting state scan,
-aligned along with a T1w image to the MNI305 template:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipeline1/
-<span class="w">  </span>sub-01/
-<span class="w">    </span>anat/
-<span class="w">      </span>sub-01_space-MNI305_T1w.nii.gz
-<span class="w">      </span>sub-01_space-MNI305_T1w.json
-<span class="w">    </span>eeg/
-<span class="w">      </span>sub-01_task-rest_desc-filtered_eeg.edf
-<span class="w">      </span>sub-01_task-rest_desc-filtered_eeg.json
-<span class="w">    </span>func/
-<span class="w">      </span>sub-01_task-rest_space-MNI305_desc-preproc_bold.nii.gz
-<span class="w">      </span>sub-01_task-rest_space-MNI305_desc-preproc_bold.json
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">space</span></code> entity indicates that a file is aligned to some reference space.
-For standard templates, this is sufficient.
-For custom templates (for example: individual or study-specific),
-additional <code class="docutils literal notranslate"><span class="pre">SpatialReference</span></code> metadata is required in the JSON sidecar files.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">desc</span></code> (description) entity allows for unrestricted alphanumeric labels,
-in the absence of a more appropriate entity to distinguish one file from another.</p>
-</section>
-<section id="derivative-data-types">
-<h3>Derivative data types<a class="headerlink" href="#derivative-data-types" title="Link to this heading">#</a></h3>
-<p>Data is considered to be <em>processed</em> if it is fundamentally different to the source data.
-Processed data may differ substantially in BIDS datatypes from the original input data.</p>
-<p>The initial offering of BIDS Derivatives only specifies anatomical derivatives
-that are of general use: masks and segmentations.</p>
-<p>Mask images are binary images with 1 representing the region of interest
-and all other voxels containing 0.
-The following example shows a manually constructed lesion mask:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>manual_masks/
-<span class="w">  </span>sub-01/
-<span class="w">    </span>anat/
-<span class="w">      </span>sub-01_desc-lesion_mask.nii.gz
-<span class="w">      </span>sub-01_desc-lesion_mask.json
-</pre></div>
-</div>
-<p>A mask of the functionally-defined area fusiform face area could be encoded:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>localizer/
-<span class="w">  </span>sub-01/
-<span class="w">    </span>func/
-<span class="w">      </span>sub-01_task-loc_space-individual_label-FFA_mask.nii.gz
-<span class="w">      </span>sub-01_task-loc_space-individual_label-FFA_mask.json
-</pre></div>
-</div>
-<p>BIDS Derivatives introduces “discrete segmentations” and “probabilistic segmentations”.</p>
-<p>A <em>segmentation</em> is a labeling of regions of an image such that each location
-(for example, a voxel or a surface vertex) is identified with a label or a combination of labels.
-Labeled regions may include anatomical structures
-(such as tissue class, Brodmann area or white matter tract), discontiguous,
-functionally-defined networks, tumors or lesions.</p>
-<p>A <em>discrete segmentation</em> represents each region with a unique integer label.
-A <em>probabilistic segmentation</em> represents each region as values between 0 and 1
-(inclusive) at each location in the image, and one volume/frame per structure
-may be concatenated in a single file.</p>
-<p>A BIDS App that calculates ROIs in BOLD space from the automated anatomical
-labeling (AAL, doi:[10.1006/nimg.2001.0978]) could store discrete
-and probabilistic (or partial volume) segmentations as follows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tissue_segmentation/
-<span class="w">  </span>desc-AAL_dseg.tsv
-<span class="w">  </span>desc-AAL_probseg.json
-<span class="w">  </span>sub-01/
-<span class="w">    </span>func/
-<span class="w">      </span>sub-01_task-rest_desc-AAL_dseg.nii.gz
-<span class="w">      </span>sub-01_task-rest_desc-AAL_probseg.nii.gz
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">dseg.tsv</span></code> file is a lookup table for interpreting a discrete segmentation
-and <code class="docutils literal notranslate"><span class="pre">probseg.json</span></code> contains a list identifying the labels for each consecutive volume.</p>
-</section>
-<section id="unspecified-data-types">
-<h3>Unspecified data types<a class="headerlink" href="#unspecified-data-types" title="Link to this heading">#</a></h3>
-<p>Derivatives can never be fully specified, as new methods can always be developed,
-requiring new data representations.
-BIDS recognizes this and encourages adopting “BIDS-style naming conventions”.</p>
-<p>Additional files and folders containing raw data MAY be added as needed for special cases.
-All non-standard file entities SHOULD conform to BIDS-style naming conventions,
-including alphabetic entities and suffixes and alphanumeric labels/indices.
-Non-standard suffixes SHOULD reflect the nature of the data,
-and existing entities SHOULD be used when appropriate.</p>
-<p>This recommendation remains in force for derivatives datasets.
-Additionally, BIDS Derivatives acknowledges that it may be desirable
-to distribute derivatives generated by non-compliant applications,
-for the sake of reproducibility and non-duplication of effort.
-Therefore, if a BIDS dataset contains a <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> sub-directory,
-the contents of that directory may be a heterogeneous mix of BIDS Derivatives datasets
-and non-compliant derivatives.</p>
-<p>One example of such a non-compliant derivative dataset would be FreeSurfer reconstructions of subject surfaces:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bids-root/
-<span class="w">  </span>derivatives/
-<span class="w">    </span>freesurfer/
-<span class="w">      </span>sub-01/
-<span class="w">         </span>label/
-<span class="w">         </span>mri/
-<span class="w">         </span>...
-<span class="w">      </span>...
-<span class="w">  </span>sub-01/
-<span class="w">    </span>anat/
-<span class="w">      </span>sub-01_T1w.nii.gz
-<span class="w">  </span>...
-</pre></div>
-</div>
-<p>Note that subject directory names conform to BIDS conventions,
-but contents are determined by the generating application, in this case, FreeSurfer.</p>
-</section>
-<section id="organizing-datasets-and-their-derivatives">
-<h3>Organizing datasets and their derivatives<a class="headerlink" href="#organizing-datasets-and-their-derivatives" title="Link to this heading">#</a></h3>
-<p>BIDS Derivatives datasets are intended to be interpretable and distributable
-with or without the datasets used to generate them.
-This is necessary for storage and bandwidth constraints,
-as well as to permit the distribution of derivatives when the source data are restricted.</p>
-<p>This independence affords flexibility in the relative organization of datasets.
-The following examples show three ways to organize, relative to each other,
-a raw BIDS dataset, a preprocessed derivative dataset, and an analysis that uses both as inputs.</p>
-<p>A collection of derivative datasets may be stored in the <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> subdirectory
-of a BIDS (or BIDS Derivatives) dataset:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>my_dataset/
-<span class="w">  </span>derivatives/
-<span class="w">    </span>preprocessed/
-<span class="w">    </span>analysis/
-<span class="w">  </span>sub-01/
-<span class="w">  </span>...
-</pre></div>
-</div>
-<p>A BIDS Derivatives dataset may contain references to its input datasets
-in the <code class="docutils literal notranslate"><span class="pre">sourcedata/</span></code> subdirectory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>my_analysis/
-<span class="w">  </span>sourcedata/
-<span class="w">    </span>raw/
-<span class="w">    </span>preprocessed/
-<span class="w">  </span>sub-01/
-<span class="w">  </span>...
-</pre></div>
-</div>
-<p>Note that the <code class="docutils literal notranslate"><span class="pre">sourcedata/</span></code> and <code class="docutils literal notranslate"><span class="pre">derivatives/</span></code> subdirectories constitute dataset boundaries.
-Any contents of these directories may be validated independently,
-but their contents must not affect the interpretation of the nested or containing datasets.</p>
-<p>Unnested datasets are also possible. For example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>my_study/
-<span class="w">  </span>raw_data/
-<span class="w">    </span>sub-01/
-<span class="w">    </span>...
-<span class="w">  </span>derivatives/
-<span class="w">    </span>preprocessed/
-<span class="w">    </span>analysis/
-</pre></div>
-</div>
-<!-- TODO derivatives JSON -->
-</section>
-</section>
+<p>Moved <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/derivatives.html">here</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -696,51 +422,12 @@ but their contents must not affect the interpretation of the nested or containin
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="metadata.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Metadata and file formats</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../tutorials/annotation.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Annotating a BIDS dataset</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tour-of-a-bids-derivative">Tour of a BIDS Derivative</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessed-data">Preprocessed data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-data-types">Derivative data types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unspecified-data-types">Unspecified data types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#organizing-datasets-and-their-derivatives">Organizing datasets and their derivatives</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
@@ -758,13 +445,6 @@ By The BIDS community
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2021-2024.
-      <br/>
-    
-  </p>
 
   </div>
   
