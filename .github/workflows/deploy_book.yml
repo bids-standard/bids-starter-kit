@@ -30,7 +30,7 @@ jobs:
       with:
         python-version: '3.12'
     - name: Install dependencies
-      run: pip install jupyter-book sphinxext-rediraffe
+      run: pip install jupyter-book sphinx-reredirects
 
     # Build the book
     - name: Build the book
