@@ -91,6 +91,7 @@ sphinx:
     suppress_warnings:
     - myst.domains    # domain method not implemented for `cite`
     
+    rediraffe_branch: main
     rediraffe_redirects:
       contact.md: https://bids-website.readthedocs.io/en/latest/contact/
       dataset_examples.md: https://bids-website.readthedocs.io/en/latest/datasets/
