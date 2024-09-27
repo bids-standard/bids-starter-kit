@@ -5,7 +5,7 @@
 The point of this starter kit is to **welcome new users and contributors to the BIDS community**.
 We hope that these guidelines are designed to make it as easy as possible to get involved.
 If you have any questions that aren't discussed below,
-please let us know through one of the many ways to [get in touch](#get-in-touch).
+please let us know through one of the many ways to [get in touch](./contact.md).
 
 ## Joining the community
 
@@ -55,7 +55,7 @@ The list of labels for current issues can be found
 -   [![Question](https://img.shields.io/badge/-question-cc317c.svg)][labels-question]
     _These issues contain a question that you'd like to have answered._
 
-    There are [lots of ways to ask questions](#get-in-touch)
+    There are [lots of ways to ask questions](./contact.md)
     but opening an issue is a great way to start a conversation and get your answer.
 
 -   [![good-first-issue](https://img.shields.io/badge/-good%20first%20issue-1b3487.svg)][labels-firstissue]
@@ -133,32 +133,10 @@ We appreciate all contributions to the BIDS Starter Kit.
 
 **THANK YOU** for helping us build this useful resource. ✨ 🌟 💫
 
-If you're updating the [code](#code) or the [templates](#templates),
+If you're updating the [code](./#code) or the [templates](#templates),
 the following steps are a guide to help you contribute in a way that will be easy
 for everyone to review and accept with ease 😎.
 
-### Requirements
-
-To make a contribution you will need to have:
-
--  a github account (see above)
--  python 3.8 or higher
--  a code editor like vs-code
-
-To make edits you will need to:
-
-- fork the bids-starter-kit repository
-- clone your fork to your computer
-- install the dependencies
-- make changes
-- push your changes to your fork
-- submit a pull request
-
-<!-- TODO
-
-- explain how to install python
-
--->
 
 ### [Fork][github-fork] the [BIDS Starter Kit repository][bids-starterkit-repo] to your profile
 
@@ -168,19 +146,6 @@ so it's a safe space to explore edits to the code!
 
 Make sure to [keep your fork up to date][github-syncfork] with the upstream repository,
 otherwise you can end up with lots of dreaded [merge conflicts][github-mergeconflicts].
-
-### Clone your fork to your computer
-
-```bash
-git clone --recurse-submodules https://github.com/YOUR_USER_NAME/BIDS-Starter-Kit.git
-```
-
-### Install the dependencies and set up pre-commit hooks
-
-```bash
-pip install -r requirements_dev.txt
-pre-commit install
-```
 
 ### Make the changes you've discussed
 
@@ -213,17 +178,6 @@ git add .
 git commit -m "your commit message"
 ```
 
-<!-- TODO explain how to deal with pre-commit -->
-
-### view your changes
-
-```bash
-jupyter-book build src
-```
-
-This will build the book in the `src/_build` folder.
-You can then open the `src/_build/html/index.html` file in your browser to view the changes.
-
 ### Submit a [pull request][github-pullrequest]
 
 A member of the BIDS Starter Kit team will review your changes
@@ -249,7 +203,7 @@ but please [get in touch](#get-in-touch) if you have any questions 🎈.
 
 <br>
 
-## Code ([link][bids-starterkit-repo])
+## Code
 
 This repository is under development,
 but we hope that it becomes a useful place for people to share
@@ -269,7 +223,7 @@ We are using the Miss_hit linter to help us keep out matlab "clean".
 You can find more information on how to set it up and use it on the bids-matlab
 [contributing guidelines](https://github.com/bids-standard/bids-matlab/blob/master/CONTRIBUTING.md#matlab-code-style-guide-and-quality).
 
-### Templates ([link][bids-starterkit-repo])
+### Templates
 
 This repository is under development, but we aim to have two templates for each
 BIDS sidecar file:

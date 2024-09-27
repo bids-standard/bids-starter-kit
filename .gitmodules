@@ -1,8 +1,0 @@
-[submodule "tools/bids-specification"]
-	path = tools/bids-specification
-	url = https://github.com/bids-standard/bids-specification.git
-	datalad-url = https://github.com/bids-standard/bids-specification.git
-[submodule "tools/bids-website"]
-	path = tools/bids-website
-	url = https://github.com/bids-standard/bids-website.git
-	datalad-url = https://github.com/bids-standard/bids-website.git

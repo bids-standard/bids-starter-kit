@@ -2,27 +2,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-<div align="center">
-  <h1>The BIDS starter-kit</h1>
-  <h2><a href="https://bids-standard.github.io/bids-starter-kit/">
-               https://bids-standard.github.io/bids-starter-kit/</a>
-  </h2>
-</div>
-
-## Contributing
-
-There are many ways to get in touch with us!
-Please see our [Contact Page](https://bids-standard.github.io/bids-starter-kit/contact.html)
-for all the details.
-
-To find out more about all the different ways to contribute to the BIDS Starter Kit,
-check out our [**contributing guidelines**](https://bids-standard.github.io/bids-starter-kit/CONTRIBUTING.html).
-They'll tell help you figure out how to
-[contribute via GitHub](https://bids-standard.github.io/bids-starter-kit/CONTRIBUTING.html#contributing-through-github),
-how to make a change [using issues](https://bids-standard.github.io/bids-starter-kit/CONTRIBUTING.html#where-to-start-issue-labels)
-(you can also check out GitHub's help on
-[issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)) and a
-[pull request](https://bids-standard.github.io/bids-starter-kit/CONTRIBUTING.html#making-a-change-with-a-pull-request).
+# The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/getting_started/" target="_blank">new BIDS website</a>.
 
 ## Contributors ✨
 
