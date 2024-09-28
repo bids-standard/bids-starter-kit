@@ -385,27 +385,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-the-community">Joining the community</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-in-touch">Get in touch</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-through-github">Contributing through GitHub</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-labels">Issue labels</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-on-an-existing-issue-or-open-a-new-issue-referencing-your-addition">Comment on an existing issue or open a new issue referencing your addition</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-change-with-a-pull-request">Making a change with a pull request</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fork-the-bids-starter-kit-repository-to-your-profile">Fork the BIDS Starter Kit repository to your profile</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-the-changes-you-ve-discussed">Make the changes you’ve discussed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-in-markdown">Writing in markdown</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-your-changes">Commit your changes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-pull-request">Submit a pull request</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-pull-request">Example pull request</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-octave">Matlab / Octave</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-in-markdown">Writing in markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-octave">Matlab / Octave</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recognizing-contributions">Recognizing contributions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thank-you">Thank you</a></li>
 </ul>
@@ -426,140 +408,8 @@ document.write(`
 We hope that these guidelines are designed to make it as easy as possible to get involved.
 If you have any questions that aren’t discussed below,
 please let us know through one of the many ways to <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">get in touch</a>.</p>
-<section id="joining-the-community">
-<h2>Joining the community<a class="headerlink" href="#joining-the-community" title="Link to this heading">#</a></h2>
-<p>BIDS - the <a class="reference external" href="http://bids.neuroimaging.io">Brain Imaging Data Structure</a> - is a growing community of neuroimaging enthusiasts,
-and we want to make our resources accessible to and engaging for as many researchers as possible.</p>
-<p>We therefore require that all contributions
-<strong>adhere to our <a class="reference internal" href="CODE_OF_CONDUCT.html"><span class="std std-doc">Code of Conduct</span></a></strong>.</p>
-<p>How do you know that you’re a member of the BIDS community?
-You’re here!
-You know that BIDS exists!
-You’re officially a member of the community.
-It’s THAT easy! Welcome! 🙌 😂</p>
-</section>
-<section id="get-in-touch">
-<h2>Get in touch<a class="headerlink" href="#get-in-touch" title="Link to this heading">#</a></h2>
-<p>See out <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">contact page</a> for all the ways to get in touch.</p>
-</section>
-<section id="contributing-through-github">
-<h2>Contributing through GitHub<a class="headerlink" href="#contributing-through-github" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://git-scm.com">git</a> is a really useful tool for version control.
-<a class="reference external" href="https://github.com">GitHub</a> sits on top of git and supports collaborative and distributed working.</p>
-<p>We know that it can be daunting to start using git and GitHub
-if you haven’t worked with them in the past,
-but the BIDS Starter Kit maintainers are here to help you figure out
-any of the jargon or confusing instructions you encounter! 💕</p>
-<p>In order to contribute via GitHub you’ll need to set up a free account and sign in.
-Here are some
-<a class="reference external" href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account">instructions</a>
-to help you get going.
-Remember that you can ask us any questions you need to along the way.</p>
-<section id="issue-labels">
-<h3>Issue labels<a class="headerlink" href="#issue-labels" title="Link to this heading">#</a></h3>
-<p>The list of labels for current issues can be found
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels">here</a> and includes:</p>
-<ul>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/help%20wanted"><img alt="help-wanted" src="https://img.shields.io/badge/-help%20wanted-159818.svg" /></a>
-<em>These issues contain a task that a member of the team has determined we need additional help with.</em></p>
-<p>If you feel that you can contribute to one of these issues,
-we especially encourage you to do so!</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/question"><img alt="Question" src="https://img.shields.io/badge/-question-cc317c.svg" /></a>
-<em>These issues contain a question that you’d like to have answered.</em></p>
-<p>There are <a class="reference external" href="https://bids-website.readthedocs.io/en/latest/contact/">lots of ways to ask questions</a>
-but opening an issue is a great way to start a conversation and get your answer.</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/good%20first%20issue"><img alt="good-first-issue" src="https://img.shields.io/badge/-good%20first%20issue-1b3487.svg" /></a>
-<em>These issues are particularly appropriate if it is your first contribution to the BIDS Starter Kit, or to GitHub overall.</em></p>
-<p>If you’re not sure about how to go about contributing,
-these are good places to start.
-You’ll be mentored through the process by the maintainers team.
-If you’re a seasoned contributor, please select a different issue
-to work from and keep these available for the newer
-and potentially more anxious team members.</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/enhancement"><img alt="Enhancement" src="https://img.shields.io/badge/-enhancement-84b6eb.svg" /></a>
-<em>These issues are suggesting new features that can be added to the project.</em></p>
-<p>If you want to ask for something new,
-please try to make sure that your request is distinct from any others
-that are already in the queue (or part of the starter kit!).
-If you find one that’s similar but there are subtle differences
-please reference the other enhancement in your issue.</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/documentation"><img alt="Documentation" src="https://img.shields.io/badge/-documentation-ffd700.svg" /></a>
-<em>These issues relate to improving or updating the documentation.</em></p>
-<p>These are usually really great issues to help out with:
-our goal is to make it easy to understand BIDS
-without having to ask anyone any questions!
-Documentation is the ultimate solution 🏆</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/community"><img alt="Community" src="https://img.shields.io/badge/-community-8605c1.svg" /></a>
-<em>These issues relate to building and supporting the BIDS community.</em></p>
-<p>BIDS won’t work if people don’t use the standard!
-YOU are the BIDS community, and we want to know how best to support you.</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/bug"><img alt="Bug" src="https://img.shields.io/badge/-bug-ee0701.svg" /></a> <em>These
-issues are reporting a problem or a mistake in the project.</em></p>
-<p>The more details you can provide the better! If you know how to fix the bug,
-please open an issue first and then
-<a class="reference internal" href="#making-a-change-with-a-pull-request"><span class="xref myst">submit a pull request</span></a> ✨</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/closing%20soon"><img alt="Closing Soon" src="https://img.shields.io/badge/-closing%20soon-ed6186.svg" /></a>
-<em>These issues are closing soon…get your opinions in asap!</em></p>
-<p>This label is mostly used to indicate that an old issue is about to be closed,
-or that a final decision is going to be made on a long running discussion.
-Speak now….or open a new issue when this one is gone. 😜</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/funding"><img alt="Funding" src="https://img.shields.io/badge/-funding-55e0c2.svg" /></a>
-<em>These issues relate to finding money money money to keep building the project</em></p>
-<p>We’d love to hear about any opportunities for funding
-to keep building the BIDS Starter Kit 💰</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/labels/logistics"><img alt="Logistics" src="https://img.shields.io/badge/-logistics-deaefc.svg" /></a>
-<em>These issues relate to project management for the BIDS starter kit</em></p>
-<p>We like to model best practice, so the BIDS Starter Kit itself is managed
-through these issues.
-We may occasionally have some to coordinate some logistics.</p>
-</li>
-</ul>
-</section>
-<section id="comment-on-an-existing-issue-or-open-a-new-issue-referencing-your-addition">
-<h3>Comment on an existing issue or open a new issue referencing your addition<a class="headerlink" href="#comment-on-an-existing-issue-or-open-a-new-issue-referencing-your-addition" title="Link to this heading">#</a></h3>
-<p>This allows other members of the BIDS Starter Kit team to confirm
-that you aren’t overlapping with work that’s currently underway
-and that everyone is on the same page with the goal of the work you’re going to carry out.</p>
-<p><a class="reference external" href="https://www.igvita.com/2011/12/19/dont-push-your-pull-requests">This blog</a> is a nice explanation of why putting
-this work in up front is so useful to everyone involved.</p>
-</section>
-</section>
-<section id="making-a-change-with-a-pull-request">
-<h2>Making a change with a pull request<a class="headerlink" href="#making-a-change-with-a-pull-request" title="Link to this heading">#</a></h2>
-<p>We appreciate all contributions to the BIDS Starter Kit.</p>
-<p><strong>THANK YOU</strong> for helping us build this useful resource. ✨ 🌟 💫</p>
-<p>If you’re updating the <a class="reference internal" href="#code"><span class="xref myst">code</span></a> or the <a class="reference internal" href="#templates"><span class="xref myst">templates</span></a>,
-the following steps are a guide to help you contribute in a way that will be easy
-for everyone to review and accept with ease 😎.</p>
-<section id="fork-the-bids-starter-kit-repository-to-your-profile">
-<h3><a class="reference external" href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">Fork</a> the <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit">BIDS Starter Kit repository</a> to your profile<a class="headerlink" href="#fork-the-bids-starter-kit-repository-to-your-profile" title="Link to this heading">#</a></h3>
-<p>This is now your own unique copy of the BIDS Starter Kit.
-Changes here won’t affect anyone else’s work,
-so it’s a safe space to explore edits to the code!</p>
-<p>Make sure to <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">keep your fork up to date</a> with the upstream repository,
-otherwise you can end up with lots of dreaded <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts">merge conflicts</a>.</p>
-</section>
-<section id="make-the-changes-you-ve-discussed">
-<h3>Make the changes you’ve discussed<a class="headerlink" href="#make-the-changes-you-ve-discussed" title="Link to this heading">#</a></h3>
-<p>Try to keep the changes focused.
-If you submit a large amount of work in all in one go
-it will be much more work for whomever is reviewing your pull request.
-<a class="reference external" href="https://media.giphy.com/media/uRb2p09vY8lEs/giphy.gif">Help them help you</a> 😉</p>
-<p>If you feel tempted to “branch out” then please make
-a <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">new branch</a> and a <a class="reference external" href="https://github.com/bids-standard/bids-starter-kit/issues">new issue</a>
-to go with it.</p>
-</section>
 <section id="writing-in-markdown">
-<h3>Writing in markdown<a class="headerlink" href="#writing-in-markdown" title="Link to this heading">#</a></h3>
+<h2>Writing in markdown<a class="headerlink" href="#writing-in-markdown" title="Link to this heading">#</a></h2>
 <p>GitHub has a helpful page on
 <a class="reference external" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github">getting started with writing and formatting on GitHub</a>.</p>
 <p>Most of the writing that you’ll do will be in <a class="reference external" href="https://daringfireball.net/projects/markdown">Markdown</a>.
@@ -570,53 +420,14 @@ or in italics (<code class="docutils literal notranslate"><span class="pre">*ita
 or as a <a class="reference external" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a> (<code class="docutils literal notranslate"><span class="pre">[link](https://https://youtu.be/dQw4w9WgXcQ)</span></code>)
 to another webpage.</p>
 </section>
-<section id="commit-your-changes">
-<h3>Commit your changes<a class="headerlink" href="#commit-your-changes" title="Link to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;your commit message&quot;</span>
-</pre></div>
-</div>
-</section>
-<section id="submit-a-pull-request">
-<h3>Submit a <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">pull request</a><a class="headerlink" href="#submit-a-pull-request" title="Link to this heading">#</a></h3>
-<p>A member of the BIDS Starter Kit team will review your changes
-to confirm that they can be merged into the main codebase.</p>
-<p>A <a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews">review</a> will probably consist of a few questions to help
-clarify the work you’ve done.
-Keep an eye on your github notifications and be prepared to join in that conversation.</p>
-<p>You can update your <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> of the BIDS Starter Kit
-<a class="reference external" href="https://github.com/bids-standard/bids-starter-kit">repository</a> and the pull request will automatically
-update with those changes.
-You don’t need to submit a new pull request when you make a change in response to a review.</p>
-<p>GitHub has a <a class="reference external" href="https://guides.github.com/introduction/flow">nice introduction</a> to the pull request workflow,
-but please <a class="reference internal" href="#get-in-touch"><span class="xref myst">get in touch</span></a> if you have any questions 🎈.</p>
-</section>
-<section id="example-pull-request">
-<h3>Example pull request<a class="headerlink" href="#example-pull-request" title="Link to this heading">#</a></h3>
-<img align="right" src="https://i.imgur.com/s8yELfK.png" alt="Example-Contribution"/>
-<br>
-<br>
-</section>
-</section>
-<section id="code">
-<h2>Code<a class="headerlink" href="#code" title="Link to this heading">#</a></h2>
-<p>This repository is under development,
-but we hope that it becomes a useful place for people to share
-and find small snippets of code that are useful
-for getting started with BIDS.</p>
-<p>To contribute to the codebase you’ll need to submit a pull request.
-Check out our <a class="reference internal" href="#making-a-change-with-a-pull-request"><span class="xref myst">guidelines</span></a> below.</p>
-<p>In general if you are contributing some code that requires some inputs,
-either provide that input or a link on how to access it,
-and an example on how to run that code.</p>
 <section id="matlab-octave">
-<h3>Matlab / Octave<a class="headerlink" href="#matlab-octave" title="Link to this heading">#</a></h3>
+<h2>Matlab / Octave<a class="headerlink" href="#matlab-octave" title="Link to this heading">#</a></h2>
 <p>We are using the Miss_hit linter to help us keep out matlab “clean”.
 You can find more information on how to set it up and use it on the bids-matlab
 <a class="reference external" href="https://github.com/bids-standard/bids-matlab/blob/master/CONTRIBUTING.md#matlab-code-style-guide-and-quality">contributing guidelines</a>.</p>
 </section>
 <section id="templates">
-<h3>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h3>
+<h2>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h2>
 <p>This repository is under development, but we aim to have two templates for each
 BIDS sidecar file:</p>
 <ul class="simple">
@@ -631,7 +442,6 @@ to generate those templates.</p>
 </div>
 <p>To contribute a template you’ll need to submit a pull request.
 Check out our <a class="reference internal" href="#making-a-change-with-a-pull-request"><span class="xref myst">guidelines</span></a> below.</p>
-</section>
 </section>
 <section id="recognizing-contributions">
 <h2>Recognizing contributions<a class="headerlink" href="#recognizing-contributions" title="Link to this heading">#</a></h2>
@@ -713,27 +523,9 @@ You can see a list of current contributors in the <a class="reference external" 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#joining-the-community">Joining the community</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-in-touch">Get in touch</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-through-github">Contributing through GitHub</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-labels">Issue labels</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-on-an-existing-issue-or-open-a-new-issue-referencing-your-addition">Comment on an existing issue or open a new issue referencing your addition</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-change-with-a-pull-request">Making a change with a pull request</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fork-the-bids-starter-kit-repository-to-your-profile">Fork the BIDS Starter Kit repository to your profile</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-the-changes-you-ve-discussed">Make the changes you’ve discussed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-in-markdown">Writing in markdown</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-your-changes">Commit your changes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-pull-request">Submit a pull request</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-pull-request">Example pull request</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-octave">Matlab / Octave</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-in-markdown">Writing in markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-octave">Matlab / Octave</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recognizing-contributions">Recognizing contributions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thank-you">Thank you</a></li>
 </ul>
