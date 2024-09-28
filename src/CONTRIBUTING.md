@@ -44,24 +44,8 @@ createBIDS_T1w_json_short.m
 ```
 
 To contribute a template you'll need to submit a pull request.
-Check out our [guidelines](#making-a-change-with-a-pull-request) below.
-
-
-## Recognizing contributions
-
-BIDS follows the [all-contributors][all-contributors] specification,
-so we welcome and recognize all contributions from documentation
-to testing to code development.
-You can see a list of current contributors in the [BIDS specification][bids-specification].
-
-## Thank you
-
-You're awesome. 👋 😄
 
 <br>
-
-_&mdash; Based on contributing guidelines from the
-[STEMMRoleModels][stemm-role-models] project._
 
 [all-contributors]: https://github.com/kentcdodds/all-contributors#emoji-key
 [bids]: http://bids.neuroimaging.io
