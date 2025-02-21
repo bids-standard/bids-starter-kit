@@ -2,7 +2,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/getting_started/" target="_blank">new BIDS website</a>.
+# The Starter-kit has moved to the <a href="https://bids.neuroimaging.io/getting_started/" target="_blank">new BIDS website</a>.
 
 ## Contributors ✨
 

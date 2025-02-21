@@ -54,7 +54,7 @@ html:
   announcement: |
     <div style="display: flex: flex-direction: column; text-align: center">
       <h3>
-        The Starter-kit has moved to the <a href="https://bids-website.readthedocs.io/en/latest/?badge=latest" target="_blank">new BIDS website</a>.
+        The Starter-kit has moved to the <a href="bids.neuroimaging.io" target="_blank">new BIDS website</a>.
       </h3>
       <p style="text-align: center">Go and check it out and let us know what you think.</p>
     </div>
@@ -92,23 +92,23 @@ sphinx:
     - myst.domains    # domain method not implemented for `cite`
     
     redirects:
-      contact: https://bids-website.readthedocs.io/en/latest/contact/
-      dataset_examples: https://bids-website.readthedocs.io/en/latest/datasets/
-      folders_and_files/folders: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/folders.html
-      folders_and_files/files: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/files.html
-      folders_and_files/metadata: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/metadata.html
-      folders_and_files/derivatives: https://bids-website.readthedocs.io/en/latest/getting_started/folders_and_files/derivatives.html
-      tutorials/annotations: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/annotation.html
-      tutorials/ieeg: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/ieeg.html 
-      tutorials/asl: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/asl.html
-      tutorials/pet: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/pet.html
-      tutorials/mri: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/conversion/mri.html
-      tutorials/tutorials: https://bids-website.readthedocs.io/en/latest/getting_started/tutorials/index.html
-      datasets: https://bids-website.readthedocs.io/en/latest/datasets/
-      talks: https://bids-website.readthedocs.io/en/latest/getting_started/resources/talks.html
-      publications: https://bids-website.readthedocs.io/en/latest/getting_started/resources/publications.html
-      dependencies: https://bids-website.readthedocs.io/en/latest/getting_started/resources/dependencies.html
-      links: https://bids-website.readthedocs.io/en/latest/getting_started/resources/links.html
-      FAQ: https://bids-website.readthedocs.io/en/latest/faq/
-      validator: https://bids-website.readthedocs.io/en/latest/tools/validator.html
-      glossary: https://bids-website.readthedocs.io/en/latest/getting_started/resources/glossary.html
+      contact: https://bids.neuroimaging.io/contact/
+      dataset_examples: https://bids.neuroimaging.io/datasets/
+      folders_and_files/folders: https://bids.neuroimaging.io/getting_started/folders_and_files/folders.html
+      folders_and_files/files: https://bids.neuroimaging.io/getting_started/folders_and_files/files.html
+      folders_and_files/metadata: https://bids.neuroimaging.io/getting_started/folders_and_files/metadata.html
+      folders_and_files/derivatives: https://bids.neuroimaging.io/getting_started/folders_and_files/derivatives.html
+      tutorials/annotations: https://bids.neuroimaging.io/getting_started/tutorials/annotation.html
+      tutorials/ieeg: https://bids.neuroimaging.io/getting_started/tutorials/conversion/ieeg.html 
+      tutorials/asl: https://bids.neuroimaging.io/getting_started/tutorials/conversion/asl.html
+      tutorials/pet: https://bids.neuroimaging.io/getting_started/tutorials/conversion/pet.html
+      tutorials/mri: https://bids.neuroimaging.io/getting_started/tutorials/conversion/mri.html
+      tutorials/tutorials: https://bids.neuroimaging.io/getting_started/tutorials/index.html
+      datasets: https://bids.neuroimaging.io/datasets/
+      talks: https://bids.neuroimaging.io/getting_started/resources/talks.html
+      publications: https://bids.neuroimaging.io/getting_started/resources/publications.html
+      dependencies: https://bids.neuroimaging.io/getting_started/resources/dependencies.html
+      links: https://bids.neuroimaging.io/getting_started/resources/links.html
+      FAQ: https://bids.neuroimaging.io/faq/
+      validator: https://bids.neuroimaging.io/tools/validator.html
+      glossary: https://bids.neuroimaging.io/getting_started/resources/glossary.html
