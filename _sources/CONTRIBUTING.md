@@ -5,7 +5,7 @@
 The point of this starter kit is to **welcome new users and contributors to the BIDS community**.
 We hope that these guidelines are designed to make it as easy as possible to get involved.
 If you have any questions that aren't discussed below,
-please let us know through one of the many ways to [get in touch](https://bids-website.readthedocs.io/en/latest/contact/).
+please let us know through one of the many ways to [get in touch](https://bids.neuroimaging.io/contact/).
 
 ### Writing in markdown
 
